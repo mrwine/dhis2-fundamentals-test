@@ -100,5 +100,59 @@
         "date": "January 25, 2018", 
         "id": 17, 
         "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear Learners,</p>\n<p>428 of you have earned your certificate in 2018. Congratulations to you all!<br/>For all the ones of you who are currently going through this course, keep up with the good work :).</p>\n<p>To allow more learners to learn about DHIS2 and earn their certificates, we are extending the end date of the course til end of June</p>\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "February 26, 2019", 
+        "id": 18, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>we are pleased to announce that the course has been extended to <strong>February 29th, 2020</strong>. We can do that only once every 4 years, so we had to take the opportunity, right?</p>\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "December 11, 2019", 
+        "id": 19, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>Our DHIS2 Customisation is currently down, meaning that you temporarily cannot access it. This is preventing you from creating your account and from logging in to go through the assignments of the Module 4. We are investigating and will come back to you as DHIS2 Customization is ready to be used  again.<p>\n\n<p>Sorry for the inconvenience and thanks in advance for your understanding.</p>\n\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "December 18, 2019", 
+        "id": 20, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>Good news -> <b>DHIS2 Customisation is up again</b> :).You are now able to both create your account and do the assignment of Module 4<p>\n<p>Happy active learning to you all!</p>\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "December 19, 2019", 
+        "id": 21, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>we are pleased to let you know that the course is still running. The previous deadline of Feb 29th has been pushed away, so no worries, you have time to go through the material and earn your certificate.</p>\n<p>Wishing you a fruitful learning experience</p>\n<p>Cheers,<br />Matthieu</p>", 
+        "date": "February 28, 2020", 
+        "id": 22, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>Please note that our <strong>DHIS2 Customisation</strong> is currently down, meaning that you temporarily cannot access it. This is unfortunaltely  preventing you from creating your account and from logging in to go through the assignments of the Module 4.</p>\n<p>We are investigating and will come back to you as DHIS2 Customization is ready to be used  again.<p>\n<p>Sorry for the inconvenience and thanks in advance for your understanding.</p>\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "March 28, 2020", 
+        "id": 23, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>Good news -> <b>DHIS2 Customisation is up again</b> :).You are now able to both create your account and do the assignment of Module 4<p>\n<p>Happy active learning to you all!</p>\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "March 30, 2020", 
+        "id": 24, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>We are currently experiencing some problems on <strong>DHIS2 Customisation</strong>. This is temporarlily preventing you from creating your account and from logging in to go through the assignments of the Module 4.</p>\n<p>We are working on it and will let you know when it is up again.<p>\n<p>Sorry for the inconvenience and thanks in advance for your understanding.</p>\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "April 15, 2020", 
+        "id": 25, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<p>Dear learners,</p>\n<p>As you may have noticed, <b>DHIS2 Customisation has been up again</b> since yesterday :).You are now able to both create your account and do the assignment of Module 4<p>\n<p>Happy active learning to you all!</p>\n<p>Cheers,<br/>Matthieu</p>", 
+        "date": "April 16, 2020", 
+        "id": 26, 
+        "status": "visible"
     }
 ]

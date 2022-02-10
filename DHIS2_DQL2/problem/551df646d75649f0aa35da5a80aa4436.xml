@@ -1,0 +1,26 @@
+<problem display_name="Pre-Course Check" markdown="null">
+<p>The DHIS2 Data Quality Academy contains a number of complex and advanced level concepts.</p>
+<p>To successfully complete this course, you will need to have a good understanding of how DHIS2 works, including (but not limited to):</p>
+<ul>
+<li>How to use Data Element and Indicator Groups to find associated Data Elements and Indicators</li>
+    <li>How to navigate the Maintenance app</li>
+   <li>How to create aggregate Data Elements</li>
+    <li>How to create aggregate Data Sets</li>
+    <li>How to review descriptions of Data Elements and Indicators</li>
+    <li>How the DHIS2 category model functions</li>
+    <li>How the process of analytics works in DHIS2</li>
+    <li>Understand what a CSV file is</li>
+</ul>
+
+
+<p>In order to access the course, you will need to acknowledge that this is an advanced level course and use the drop-down box below to respond yes or no to the statement below. If you answer "Yes," you will be granted access to the remaining course material. <i>Note: You may need to refresh this page in your browser after clicking "Submit" in order for the additional course modules to appear.</i></p>
+
+<label><b>I am aware that the DHIS2 Data Quality Academy is for advanced level users, and believe I have sufficient knowledge of DHIS2 to complete the course material. </b></label>
+<optionresponse>
+  <optioninput>
+    <option correct="False">No</option>
+    <option correct="True">Yes</option>
+  </optioninput>
+</optionresponse>
+
+</problem>

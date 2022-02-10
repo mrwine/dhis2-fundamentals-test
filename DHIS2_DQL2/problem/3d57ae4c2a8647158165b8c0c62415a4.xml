@@ -1,0 +1,20 @@
+<problem display_name="Standard Deviation Predictors Question 1" markdown="Which is not a potential example where you would need to use a predictor to calculate?&#10;&#10;&gt;&gt;Select the most appropriate choice: (2 attempts)&lt;&lt;&#10;&#10;( ) A. Average Malaria incidence over the last 6 months.&#10;(x) B. Sum all malaria positive cases to national level in a single month.&#10;( ) C. If this value is 0 then count 1 – Count the number of facilities that reported some value.&#10;( ) D. Average ANC 1 Visits with 3 standard deviations for the last 12 months – ANC 1 Outlier Threshold.       &#10;&#10;[explanation]&#10;Sum all malaria positive cases to national level in a single month is correct.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Which is not a potential example where you would need to use a predictor to calculate?</p>
+<label>Select the most appropriate choice: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Average Malaria incidence over the last 6 months.</choice>
+    <choice correct="true">B. Sum all malaria positive cases to national level in a single month.</choice>
+    <choice correct="false">C. If this value is 0 then count 1 – Count the number of facilities that reported some value.</choice>
+    <choice correct="false">D. Average ANC 1 Visits with 3 standard deviations for the last 12 months – ANC 1 Outlier Threshold.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Sum all malaria positive cases to national level in a single month is correct.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

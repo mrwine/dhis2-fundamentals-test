@@ -1,0 +1,20 @@
+<problem display_name="Question 3" markdown="A user has a quarterly data set assigned to a regional level and would like to import aggregated facility level tracker data into this dataset for the past 3 years. Which of the following statements are correct?&#10;&#10;&gt;&gt;Select all answers that apply. &lt;&lt;&#10;&#10;[ ] A. Data transfer is not possible in this case, because Tracker data and Aggregate data are entered at different levels. (Facility for tracker, region for aggregate)&#10;[ ] B. Data transfer is only possible for daily data sets because tracker data is based on enrollment and event dates.&#10;[x] C. Data transfer is possible if the organisation unit hierarchy in Tracker and Aggregate instances is the same and the user specifies OU level dimension that corresponds to “Region” when fetching tracker data.&#10;[x] D. The transfer is possible if data entry for the data set is not closed for past periods (expiry periods and data input periods are set up).&#10;&#10;[explanation]&#10;C and D are correct. It is possible to aggregate tracker data to the desired level and relative period using the ou and pe dimensions. In order to transfer data for past periods, it is important to make sure that the data set is open for data entry for those specific periods.&#10;[explanation]">
+<choiceresponse>
+  <p>A user has a quarterly data set assigned to a regional level and would like to import aggregated facility level tracker data into this dataset for the past 3 years. Which of the following statements are correct?</p>
+<label>Select all answers that apply. </label>
+<checkboxgroup>
+    <choice correct="false">A. Data transfer is not possible in this case, because Tracker data and Aggregate data are entered at different levels. (Facility for tracker, region for aggregate)</choice>
+    <choice correct="false">B. Data transfer is only possible for daily data sets because tracker data is based on enrollment and event dates.</choice>
+    <choice correct="true">C. Data transfer is possible if the organisation unit hierarchy in Tracker and Aggregate instances is the same and the user specifies OU level dimension that corresponds to “Region” when fetching tracker data.</choice>
+    <choice correct="true">D. The transfer is possible if data entry for the data set is not closed for past periods (expiry periods and data input periods are set up).</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>C and D are correct. It is possible to aggregate tracker data to the desired level and relative period using the ou and pe dimensions. In order to transfer data for past periods, it is important to make sure that the data set is open for data entry for those specific periods.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

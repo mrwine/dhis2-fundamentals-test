@@ -1,0 +1,4896 @@
+0
+00:00:00,070 --> 00:00:00,903
+- [Instructor] All right.
+
+1
+00:00:00,903 --> 00:00:03,920
+So today our first session before our break
+
+2
+00:00:03,920 --> 00:00:07,970
+is going over DHIS2 Data Quality Validation Rules
+
+3
+00:00:07,970 --> 00:00:09,313
+and Notifications.
+
+4
+00:00:10,240 --> 00:00:12,250
+Again, this is gonna be fairly technical.
+
+5
+00:00:12,250 --> 00:00:15,460
+I&#39;m going to have to go quite quickly through this.
+
+6
+00:00:15,460 --> 00:00:20,080
+So if you fall behind, please ask a question on Slack.
+
+7
+00:00:20,080 --> 00:00:23,500
+List of video will be posted later today, hopefully,
+
+8
+00:00:23,500 --> 00:00:25,130
+maybe tomorrow.
+
+9
+00:00:25,130 --> 00:00:27,760
+And so you are certainly invited to rewatch it.
+
+10
+00:00:27,760 --> 00:00:29,460
+You can slow it down if you&#39;d like
+
+11
+00:00:31,219 --> 00:00:34,000
+and make sure that you&#39;re capturing everything
+
+12
+00:00:34,000 --> 00:00:35,960
+if this is something that you wanna implement
+
+13
+00:00:35,960 --> 00:00:37,310
+in your country or project.
+
+14
+00:00:38,150 --> 00:00:40,410
+What are the objectives of the presentation?
+
+15
+00:00:40,410 --> 00:00:42,060
+Well, essentially we wanna understand
+
+16
+00:00:42,060 --> 00:00:44,600
+the logic behind validation rules.
+
+17
+00:00:44,600 --> 00:00:46,330
+We also wanna give you a quick overview
+
+18
+00:00:46,330 --> 00:00:49,080
+on how to build validation rules.
+
+19
+00:00:49,080 --> 00:00:51,080
+This may be a recap for some of you.
+
+20
+00:00:51,080 --> 00:00:52,500
+I know many countries already have
+
+21
+00:00:52,500 --> 00:00:54,758
+a lot of validation rules.
+
+22
+00:00:54,758 --> 00:00:57,180
+I think we&#39;re gonna expand your appreciation
+
+23
+00:00:57,180 --> 00:01:00,003
+of what validation rules could actually be used for.
+
+24
+00:01:00,990 --> 00:01:05,517
+But the key message is that we need
+
+25
+00:01:06,380 --> 00:01:09,810
+to have data quality coming to the user.
+
+26
+00:01:09,810 --> 00:01:14,700
+So right now all of you are using your email
+
+27
+00:01:14,700 --> 00:01:16,890
+more than you&#39;re using DHIS2.
+
+28
+00:01:16,890 --> 00:01:17,870
+I certainly do.
+
+29
+00:01:17,870 --> 00:01:21,473
+And I&#39;m one of the DHIS2 product managers.
+
+30
+00:01:21,473 --> 00:01:24,880
+I&#39;m looking at my email every day, almost all day.
+
+31
+00:01:24,880 --> 00:01:29,170
+And we need to start to build in processes
+
+32
+00:01:29,170 --> 00:01:33,232
+where data quality and even just alerts for data,
+
+33
+00:01:33,232 --> 00:01:35,250
+start to come to people&#39;s emails.
+
+34
+00:01:35,250 --> 00:01:36,540
+That&#39;s where they&#39;re spending their time.
+
+35
+00:01:36,540 --> 00:01:40,640
+They&#39;re not spending their time so much on DHS2 dashboards.
+
+36
+00:01:40,640 --> 00:01:42,340
+And there&#39;s just two little jokes here.
+
+37
+00:01:42,340 --> 00:01:44,120
+You can look at these yourself,
+
+38
+00:01:44,120 --> 00:01:47,790
+but the whole point being is we need to start sending data
+
+39
+00:01:47,790 --> 00:01:49,850
+to where people are spending their time.
+
+40
+00:01:49,850 --> 00:01:52,090
+Certainly we need to start sending notifications
+
+41
+00:01:52,090 --> 00:01:54,420
+for any kind of major data quality problems
+
+42
+00:01:54,420 --> 00:01:56,580
+to where people will actually see them quickly,
+
+43
+00:01:56,580 --> 00:01:58,680
+which is probably going to be their email.
+
+44
+00:02:02,740 --> 00:02:06,515
+Again, send data quality issues to the user.
+
+45
+00:02:06,515 --> 00:02:07,960
+Over the last couple of days,
+
+46
+00:02:07,960 --> 00:02:10,070
+we&#39;ve been looking at the various data quality apps,
+
+47
+00:02:10,070 --> 00:02:13,420
+the WHO data quality app in particular.
+
+48
+00:02:13,420 --> 00:02:16,570
+And we appreciate that there&#39;s a lot of functionality there
+
+49
+00:02:16,570 --> 00:02:18,623
+if you go into the application.
+
+50
+00:02:19,570 --> 00:02:22,700
+But we also have to appreciate the fact that many people
+
+51
+00:02:22,700 --> 00:02:25,573
+are not going to go into that application very often.
+
+52
+00:02:27,890 --> 00:02:31,340
+Many people are going to not feel compelled
+
+53
+00:02:31,340 --> 00:02:35,130
+to dig through the data, to find the data quality issues.
+
+54
+00:02:35,130 --> 00:02:37,480
+This is where we assist Administrators,
+
+55
+00:02:37,480 --> 00:02:41,150
+as DHS2 managers, as health information system managers
+
+56
+00:02:41,150 --> 00:02:42,500
+have to be proactive.
+
+57
+00:02:42,500 --> 00:02:44,400
+We have to set up the system to be able
+
+58
+00:02:44,400 --> 00:02:47,290
+to push data quality alerts and notifications
+
+59
+00:02:47,290 --> 00:02:49,400
+to where people again are spending their time,
+
+60
+00:02:49,400 --> 00:02:50,820
+which is probably their email.
+
+61
+00:02:50,820 --> 00:02:53,620
+You can even set it up to send it via SMS.
+
+62
+00:02:53,620 --> 00:02:56,310
+We know that data use is low.
+
+63
+00:02:56,310 --> 00:02:57,630
+And we talked about on Monday,
+
+64
+00:02:57,630 --> 00:02:59,990
+how one of the driving reasons for this
+
+65
+00:02:59,990 --> 00:03:01,810
+is because data trust is low.
+
+66
+00:03:01,810 --> 00:03:04,370
+There&#39;s actually a whole lot of research out there
+
+67
+00:03:04,370 --> 00:03:06,750
+that makes this point very, very clear.
+
+68
+00:03:06,750 --> 00:03:08,640
+And that people just don&#39;t trust the data
+
+69
+00:03:08,640 --> 00:03:11,503
+because they&#39;re not able to see the data quality issues.
+
+70
+00:03:12,750 --> 00:03:15,920
+And what are some things that we can do?
+
+71
+00:03:15,920 --> 00:03:18,240
+Well, again, data quality issues
+
+72
+00:03:18,240 --> 00:03:20,610
+are not a failure of the system.
+
+73
+00:03:20,610 --> 00:03:21,920
+They&#39;re a feature of the system.
+
+74
+00:03:21,920 --> 00:03:25,700
+Any kind of large project that is using DHS2,
+
+75
+00:03:25,700 --> 00:03:27,940
+will have data quality issues.
+
+76
+00:03:27,940 --> 00:03:31,150
+The failure is not being able to do something about it.
+
+77
+00:03:31,150 --> 00:03:34,690
+The failure is to keep people unable to see
+
+78
+00:03:34,690 --> 00:03:36,083
+the data quality issue.
+
+79
+00:03:37,735 --> 00:03:40,630
+And so how do we do that again,
+
+80
+00:03:40,630 --> 00:03:42,660
+probably for the fifth time already this morning?
+
+81
+00:03:42,660 --> 00:03:44,910
+We need to start sending the data quality alerts
+
+82
+00:03:44,910 --> 00:03:47,650
+and notifications directly to the folks.
+
+83
+00:03:47,650 --> 00:03:51,130
+DHIS2 is smart enough to actually send people,
+
+84
+00:03:51,130 --> 00:03:52,730
+alerts and notifications directly
+
+85
+00:03:52,730 --> 00:03:53,890
+to where they&#39;re spending their time,
+
+86
+00:03:53,890 --> 00:03:56,433
+email, SMS, even WhatsApp.
+
+87
+00:03:56,433 --> 00:03:59,590
+And the point of this presentation today
+
+88
+00:03:59,590 --> 00:04:03,350
+is to start to train you on how to configure DHIS2,
+
+89
+00:04:03,350 --> 00:04:06,573
+to actually do this, and also introduce some best practices.
+
+90
+00:04:07,410 --> 00:04:11,273
+The final point here to make is that the alerts
+
+91
+00:04:11,273 --> 00:04:13,730
+and notifications that you actually send to people,
+
+92
+00:04:13,730 --> 00:04:16,690
+need to be based upon some standard operating procedures.
+
+93
+00:04:16,690 --> 00:04:19,840
+We saw in the case that (indistinct) presented in Sri Lanka,
+
+94
+00:04:19,839 --> 00:04:21,080
+they have very clearly defined,
+
+95
+00:04:21,079 --> 00:04:22,584
+standard operating procedures.
+
+96
+00:04:22,584 --> 00:04:26,940
+On Monday, Andrew from Rwanda is going to present
+
+97
+00:04:26,940 --> 00:04:28,950
+on the Rwandan standard operating procedures.
+
+98
+00:04:28,950 --> 00:04:30,920
+Many countries have very good
+
+99
+00:04:30,920 --> 00:04:32,490
+defined standard operating procedures.
+
+100
+00:04:32,490 --> 00:04:34,720
+Many countries also have very poorly defined
+
+101
+00:04:34,720 --> 00:04:36,810
+or don&#39;t even have data quality,
+
+102
+00:04:36,810 --> 00:04:38,450
+standard operating procedures.
+
+103
+00:04:38,450 --> 00:04:40,810
+You need to have the standard operating procedures in place.
+
+104
+00:04:40,810 --> 00:04:42,420
+And the notifications and alerts
+
+105
+00:04:42,420 --> 00:04:44,080
+that you start to send from the system,
+
+106
+00:04:44,080 --> 00:04:45,923
+need to be in agreement or in alignment
+
+107
+00:04:45,923 --> 00:04:49,370
+with your existing standard operating procedures.
+
+108
+00:04:49,370 --> 00:04:52,630
+You don&#39;t need to have people guess what they need to do
+
+109
+00:04:52,630 --> 00:04:54,540
+when they receive an alert.
+
+110
+00:04:54,540 --> 00:04:57,180
+The alert should tell them what they need to do.
+
+111
+00:04:57,180 --> 00:04:59,060
+And if they are confused,
+
+112
+00:04:59,060 --> 00:05:00,020
+then they can refer back
+
+113
+00:05:00,020 --> 00:05:01,240
+to their standard operating procedures
+
+114
+00:05:01,240 --> 00:05:03,190
+that should make everything very clear.
+
+115
+00:05:06,280 --> 00:05:08,650
+So how do we start to send the alerts?
+
+116
+00:05:08,650 --> 00:05:13,000
+Well, the best way to do it is through validation rules.
+
+117
+00:05:13,000 --> 00:05:15,960
+So quick intro to validation rules,
+
+118
+00:05:15,960 --> 00:05:19,300
+validation rules are a way to assess the data
+
+119
+00:05:19,300 --> 00:05:21,380
+that has been entered in DHIS2.
+
+120
+00:05:21,380 --> 00:05:22,770
+And it&#39;s very based sense.
+
+121
+00:05:22,770 --> 00:05:26,070
+They&#39;re based on predefined rules.
+
+122
+00:05:26,070 --> 00:05:28,707
+You define the rules in the system,
+
+123
+00:05:28,707 --> 00:05:31,610
+and we&#39;re gonna show you how to do that, just a minute.
+
+124
+00:05:31,610 --> 00:05:35,480
+Validation rules though do not fully allow you
+
+125
+00:05:35,480 --> 00:05:38,480
+to check whether the data that is reported
+
+126
+00:05:38,480 --> 00:05:40,633
+is complete or accurate.
+
+127
+00:05:43,221 --> 00:05:44,350
+It&#39;s just going to tell you,
+
+128
+00:05:44,350 --> 00:05:47,323
+does it fit this rule that you have defined?
+
+129
+00:05:48,210 --> 00:05:51,590
+So the data could still be wrong and not trigger
+
+130
+00:05:51,590 --> 00:05:54,290
+a validation rule, just to make that point very clear.
+
+131
+00:05:55,730 --> 00:06:00,730
+But we&#39;re asked quite often to do various HMI assessments.
+
+132
+00:06:02,580 --> 00:06:04,690
+And one of the first things that we usually look at
+
+133
+00:06:04,690 --> 00:06:07,000
+is do the countries, or do the projects
+
+134
+00:06:07,000 --> 00:06:09,803
+have clearly defined validation rules?
+
+135
+00:06:11,450 --> 00:06:13,930
+And are they being used routinely?
+
+136
+00:06:13,930 --> 00:06:17,420
+And if they are, and they do then typically what that means
+
+137
+00:06:17,420 --> 00:06:20,890
+is the country is taking data quality very seriously.
+
+138
+00:06:20,890 --> 00:06:21,780
+If they&#39;re doing that,
+
+139
+00:06:21,780 --> 00:06:24,300
+then we can hopefully make a little bit of an assumption
+
+140
+00:06:24,300 --> 00:06:26,240
+that there is some data use
+
+141
+00:06:26,240 --> 00:06:29,430
+or data use is actually happening in the country.
+
+142
+00:06:29,430 --> 00:06:30,870
+If countries or projects
+
+143
+00:06:30,870 --> 00:06:33,760
+do not have clearly defined validation rules,
+
+144
+00:06:33,760 --> 00:06:35,800
+if they&#39;re not using them routinely
+
+145
+00:06:36,790 --> 00:06:38,590
+or they just don&#39;t have them at all.
+
+146
+00:06:40,380 --> 00:06:41,910
+It&#39;s fairly safe to say
+
+147
+00:06:41,910 --> 00:06:46,910
+that they are not taking data quality various seriously,
+
+148
+00:06:47,090 --> 00:06:49,160
+and that they do not probably
+
+149
+00:06:49,160 --> 00:06:51,200
+have very much data use going on.
+
+150
+00:06:51,200 --> 00:06:52,340
+And again, why is that?
+
+151
+00:06:52,340 --> 00:06:54,930
+Because people are not able to see the data quality issues.
+
+152
+00:06:54,930 --> 00:06:58,680
+There&#39;s no transparency, there&#39;s no data trust.
+
+153
+00:06:58,680 --> 00:07:00,850
+And these are things that the validation rules
+
+154
+00:07:00,850 --> 00:07:01,900
+can really help with.
+
+155
+00:07:02,800 --> 00:07:05,720
+All right, let&#39;s get in a little bit more technical here.
+
+156
+00:07:05,720 --> 00:07:07,470
+What exactly is a validation rule?
+
+157
+00:07:07,470 --> 00:07:10,100
+It&#39;s an expression that defines a relationship
+
+158
+00:07:10,100 --> 00:07:13,273
+between a number of data elements essentially.
+
+159
+00:07:14,150 --> 00:07:15,930
+The expression has a left side,
+
+160
+00:07:15,930 --> 00:07:18,600
+a right side and an operator in between.
+
+161
+00:07:18,600 --> 00:07:21,660
+We can think back to our grade school math days here,
+
+162
+00:07:21,660 --> 00:07:23,900
+we have a left side, we have a right side,
+
+163
+00:07:23,900 --> 00:07:26,040
+and then we have an equals greater than,
+
+164
+00:07:26,040 --> 00:07:28,293
+or less than in between those.
+
+165
+00:07:29,230 --> 00:07:31,800
+You create validation rules,
+
+166
+00:07:31,800 --> 00:07:34,360
+based on what you know to be true.
+
+167
+00:07:34,360 --> 00:07:35,440
+This is very, very important.
+
+168
+00:07:35,440 --> 00:07:36,690
+And I&#39;ll say it again.
+
+169
+00:07:36,690 --> 00:07:38,360
+You create validation rules,
+
+170
+00:07:38,360 --> 00:07:40,433
+based upon what you know to be true.
+
+171
+00:07:41,770 --> 00:07:44,360
+The reason that you need to appreciate this and DHI2S
+
+172
+00:07:44,360 --> 00:07:47,360
+is because in other statistical analysis software
+
+173
+00:07:47,360 --> 00:07:50,837
+that maybe you&#39;re using, this is the opposite
+
+174
+00:07:50,837 --> 00:07:52,810
+where you make validation rules based
+
+175
+00:07:52,810 --> 00:07:55,140
+upon what you know to not be true.
+
+176
+00:07:55,140 --> 00:07:57,747
+But in DHIS2, you define validation rules,
+
+177
+00:07:57,747 --> 00:08:00,703
+what you know to be true, what should be happening?
+
+178
+00:08:02,170 --> 00:08:05,450
+The example here is, Malaria RDT positive.
+
+179
+00:08:05,450 --> 00:08:07,550
+The number of positive malaria tests
+
+180
+00:08:07,550 --> 00:08:09,540
+should always be less than
+
+181
+00:08:09,540 --> 00:08:13,600
+the number of malaria RDT tested done.
+
+182
+00:08:13,600 --> 00:08:15,893
+How can you have more positive case tests,
+
+183
+00:08:15,893 --> 00:08:20,023
+than you have total number of tests completed?
+
+184
+00:08:21,690 --> 00:08:23,330
+If you have more positive tests,
+
+185
+00:08:23,330 --> 00:08:25,630
+then you actually have total number of tested.
+
+186
+00:08:26,520 --> 00:08:28,620
+There&#39;s an issue, there&#39;s a problem there.
+
+187
+00:08:29,480 --> 00:08:31,410
+It&#39;s either a problem with the malaria positive,
+
+188
+00:08:31,410 --> 00:08:32,850
+the number of positive tests
+
+189
+00:08:32,850 --> 00:08:35,750
+or an issue with the number of malaria tested.
+
+190
+00:08:35,750 --> 00:08:37,090
+But clearly there&#39;s an issue,
+
+191
+00:08:37,090 --> 00:08:39,670
+&#39;cause you know that you can&#39;t have more positives
+
+192
+00:08:39,669 --> 00:08:40,780
+than you have tested.
+
+193
+00:08:40,780 --> 00:08:42,500
+So this is a very simple example.
+
+194
+00:08:45,240 --> 00:08:47,160
+When to use validation rules.
+
+195
+00:08:47,160 --> 00:08:49,430
+Now, Nora is also going to talk about this
+
+196
+00:08:49,430 --> 00:08:51,000
+a little bit later.
+
+197
+00:08:51,000 --> 00:08:53,523
+I believe either tomorrow or next week,
+
+198
+00:08:55,560 --> 00:08:57,910
+but validation rules can essentially be used
+
+199
+00:08:57,910 --> 00:08:59,883
+in three different times.
+
+200
+00:09:00,730 --> 00:09:03,920
+They can be used during aggregate data entry.
+
+201
+00:09:03,920 --> 00:09:05,633
+So data set, data entry.
+
+202
+00:09:07,550 --> 00:09:08,660
+I think we&#39;ll be able to show you
+
+203
+00:09:08,660 --> 00:09:10,830
+an example of this a little bit later in the week.
+
+204
+00:09:10,830 --> 00:09:13,140
+But validation rules can be triggered
+
+205
+00:09:13,140 --> 00:09:14,380
+while data is being entered.
+
+206
+00:09:14,380 --> 00:09:18,120
+So for example, if I enter more malaria positives
+
+207
+00:09:18,120 --> 00:09:22,900
+than malaria tested during...
+
+208
+00:09:22,900 --> 00:09:25,770
+If I&#39;m at a clinic and I&#39;m putting that into my dataset,
+
+209
+00:09:25,770 --> 00:09:27,720
+a validation rule can be triggered,
+
+210
+00:09:27,720 --> 00:09:29,450
+and saying, &quot;Hey, you&#39;ve entered data.
+
+211
+00:09:29,450 --> 00:09:30,370
+that should not be possible.
+
+212
+00:09:30,370 --> 00:09:32,120
+You should go back and check this.&quot;
+
+213
+00:09:33,970 --> 00:09:37,010
+They can also be used to block data entry altogether.
+
+214
+00:09:37,010 --> 00:09:41,053
+So we can say that if they enter
+
+215
+00:09:41,053 --> 00:09:43,160
+more positive than the tested,
+
+216
+00:09:43,160 --> 00:09:46,290
+don&#39;t allow them to submit that data.
+
+217
+00:09:46,290 --> 00:09:47,800
+Now that can be a good thing.
+
+218
+00:09:47,800 --> 00:09:49,203
+It can also be a bad thing.
+
+219
+00:09:51,730 --> 00:09:53,740
+The general rule of thumb is,
+
+220
+00:09:53,740 --> 00:09:56,223
+allow users to get their data into the system.
+
+221
+00:09:57,120 --> 00:10:00,450
+Send them alerts and notifications during data entry,
+
+222
+00:10:00,450 --> 00:10:01,810
+if necessary.
+
+223
+00:10:01,810 --> 00:10:03,890
+But typically you want people to be able to put
+
+224
+00:10:03,890 --> 00:10:05,140
+their data in the system.
+
+225
+00:10:06,000 --> 00:10:09,450
+Only for probably the most highly trained users,
+
+226
+00:10:09,450 --> 00:10:12,690
+maybe folks at regional or national level,
+
+227
+00:10:12,690 --> 00:10:15,980
+should you disallow data to be entered
+
+228
+00:10:15,980 --> 00:10:17,400
+that does not pass.
+
+229
+00:10:17,400 --> 00:10:20,663
+That&#39;s the best practice or rule of thumb.
+
+230
+00:10:22,750 --> 00:10:23,740
+Second bullet point here,
+
+231
+00:10:23,740 --> 00:10:26,660
+validation rules can also be run manually.
+
+232
+00:10:26,660 --> 00:10:31,660
+So you can run data validation, rule analysis at any point,
+
+233
+00:10:32,366 --> 00:10:35,260
+you can do this before you do a supervision visit
+
+234
+00:10:35,260 --> 00:10:37,440
+for an individual health facility
+
+235
+00:10:37,440 --> 00:10:38,740
+or a group of health facilities,
+
+236
+00:10:38,740 --> 00:10:40,823
+or a group of community health workers.
+
+237
+00:10:42,000 --> 00:10:43,410
+When you run it manually,
+
+238
+00:10:43,410 --> 00:10:46,160
+it can also trigger emails or SMS alerts
+
+239
+00:10:46,160 --> 00:10:47,500
+that can be sent out to those
+
+240
+00:10:47,500 --> 00:10:50,300
+who are assigned to the organizational unit
+
+241
+00:10:50,300 --> 00:10:54,683
+that has prompted or resulted in the validation alert.
+
+242
+00:10:56,200 --> 00:11:00,810
+So we&#39;ll cover that a little bit today as well.
+
+243
+00:11:00,810 --> 00:11:03,180
+The last point is that validation rules
+
+244
+00:11:03,180 --> 00:11:04,907
+can be scheduled to run automatically.
+
+245
+00:11:04,907 --> 00:11:08,924
+And this is probably the most useful functionality
+
+246
+00:11:08,924 --> 00:11:10,770
+of validation rules is that,
+
+247
+00:11:10,770 --> 00:11:13,510
+you can schedule validation rules to run periodically,
+
+248
+00:11:13,510 --> 00:11:16,190
+say weekly monthly.
+
+249
+00:11:16,190 --> 00:11:21,190
+And then those can send again, alerts, emails, SMS messages,
+
+250
+00:11:23,305 --> 00:11:26,683
+to the various users who can actually go in and correct it.
+
+251
+00:11:29,930 --> 00:11:34,390
+All right, sorry, go ahead.
+
+252
+00:11:34,390 --> 00:11:35,390
+Is there a question?
+
+253
+00:11:37,420 --> 00:11:39,720
+Nope, just unmute the microphone for a second.
+
+254
+00:11:41,310 --> 00:11:42,760
+All right, so let&#39;s talk about
+
+255
+00:11:42,760 --> 00:11:45,430
+how we can make a simple validation rule.
+
+256
+00:11:45,430 --> 00:11:49,253
+Now I&#39;m gonna show you this through PowerPoint slides,
+
+257
+00:11:50,820 --> 00:11:53,980
+but you can in the exercise, go in and do it yourself.
+
+258
+00:11:53,980 --> 00:11:57,150
+These PowerPoint slides are just direct screenshots
+
+259
+00:11:57,150 --> 00:11:58,293
+from DHIS2.
+
+260
+00:12:00,320 --> 00:12:04,173
+So let&#39;s make a simple validation rule.
+
+261
+00:12:05,370 --> 00:12:07,870
+Here, we&#39;re looking at a bar chart
+
+262
+00:12:07,870 --> 00:12:11,950
+that&#39;s showing ANC1 visits, ANC2 visits, that&#39;s blue,
+
+263
+00:12:11,950 --> 00:12:16,223
+ANC3 that&#39;s red and ANC4 visits, that&#39;s orange.
+
+264
+00:12:17,510 --> 00:12:20,293
+And if you&#39;re not familiar with anti-natal care,
+
+265
+00:12:20,293 --> 00:12:25,000
+then essentially there are four visits
+
+266
+00:12:25,000 --> 00:12:28,090
+to the clinic that every pregnant woman should make.
+
+267
+00:12:28,090 --> 00:12:31,590
+And these are to receive different clinical services,
+
+268
+00:12:31,590 --> 00:12:34,490
+vitamins, minerals, checkups, that kind of stuff,
+
+269
+00:12:34,490 --> 00:12:36,503
+while the woman is pregnant.
+
+270
+00:12:37,460 --> 00:12:41,820
+And typically we have relatively high ANC1 visits.
+
+271
+00:12:41,820 --> 00:12:44,490
+Most women go to their first ANC1 visit,
+
+272
+00:12:44,490 --> 00:12:46,600
+but over time throughout their pregnancy,
+
+273
+00:12:46,600 --> 00:12:49,220
+they go to fewer and fewer of the visits.
+
+274
+00:12:49,220 --> 00:12:51,770
+And by the point we get to ANC4,
+
+275
+00:12:51,770 --> 00:12:54,910
+we typically see much fewer women going
+
+276
+00:12:54,910 --> 00:12:58,183
+to the fourth visit than went to the first visit.
+
+277
+00:13:01,020 --> 00:13:03,710
+Folks out there who work in maternal in child health,
+
+278
+00:13:03,710 --> 00:13:06,040
+you&#39;re saying, &quot;Wait a minute, these are different cohorts.&quot;
+
+279
+00:13:06,040 --> 00:13:07,960
+Well, yes, that is true.
+
+280
+00:13:07,960 --> 00:13:12,010
+But the model does play itself out fairly consistently
+
+281
+00:13:13,036 --> 00:13:14,980
+and only in certain countries do you have
+
+282
+00:13:14,980 --> 00:13:17,903
+which may have more seasonal pregnancies.
+
+283
+00:13:20,279 --> 00:13:22,220
+This model doesn&#39;t hold true.
+
+284
+00:13:22,220 --> 00:13:23,053
+But for the most part,
+
+285
+00:13:23,053 --> 00:13:27,362
+we almost always see that there are fewer ANC4 visits
+
+286
+00:13:27,362 --> 00:13:30,040
+than there are ANC1 visits.
+
+287
+00:13:30,040 --> 00:13:31,500
+So let&#39;s make a simple validation rule
+
+288
+00:13:31,500 --> 00:13:32,630
+that we check for this.
+
+289
+00:13:32,630 --> 00:13:37,630
+So we&#39;re gonna say that ANC4 should be less than
+
+290
+00:13:38,320 --> 00:13:42,413
+or equal to ANC1.
+
+291
+00:13:44,400 --> 00:13:47,440
+So what are the steps to build this validation rule?
+
+292
+00:13:47,440 --> 00:13:48,840
+And more importantly,
+
+293
+00:13:48,840 --> 00:13:50,650
+what are the steps to actually get
+
+294
+00:13:50,650 --> 00:13:53,530
+this elevation rural built into a notification
+
+295
+00:13:53,530 --> 00:13:55,070
+and pushed out to people?
+
+296
+00:13:55,070 --> 00:13:56,980
+Well, there&#39;s essentially six steps.
+
+297
+00:13:56,980 --> 00:13:59,070
+One of which is optional though.
+
+298
+00:13:59,070 --> 00:14:00,690
+The first one is you need to make the validation rule.
+
+299
+00:14:00,690 --> 00:14:02,510
+I&#39;m gonna show you how to do that just now.
+
+300
+00:14:02,510 --> 00:14:04,370
+Then we need to assign the validation rule
+
+301
+00:14:04,370 --> 00:14:06,540
+to a validation rule group.
+
+302
+00:14:06,540 --> 00:14:08,250
+Just like we assigned data elements
+
+303
+00:14:08,250 --> 00:14:11,890
+or indicators to various groups.
+
+304
+00:14:11,890 --> 00:14:14,040
+We need to of course test the validation rule.
+
+305
+00:14:14,040 --> 00:14:15,690
+Testing is so important
+
+306
+00:14:15,690 --> 00:14:17,510
+that I&#39;ve seen some several countries
+
+307
+00:14:17,510 --> 00:14:20,300
+that did not adequately test the validation rules.
+
+308
+00:14:20,300 --> 00:14:21,870
+And it was a disaster.
+
+309
+00:14:21,870 --> 00:14:23,600
+You need to make sure that you&#39;re testing these
+
+310
+00:14:23,600 --> 00:14:26,940
+before you actually start to push them out to everyone.
+
+311
+00:14:26,940 --> 00:14:30,100
+You need to make the validation rule notification step four,
+
+312
+00:14:30,100 --> 00:14:32,500
+make the validation rule notification.
+
+313
+00:14:32,500 --> 00:14:34,700
+Step five, which is again, optional,
+
+314
+00:14:34,700 --> 00:14:37,230
+but highly encouraged is you need to schedule
+
+315
+00:14:37,230 --> 00:14:40,050
+the validation rule group to run automatically.
+
+316
+00:14:40,050 --> 00:14:40,887
+This has done in the scheduler app.
+
+317
+00:14:40,887 --> 00:14:43,540
+I&#39;m gonna show you how to do that.
+
+318
+00:14:43,540 --> 00:14:46,560
+The step six, which is not optional.
+
+319
+00:14:46,560 --> 00:14:47,690
+You definitely need to do this,
+
+320
+00:14:47,690 --> 00:14:50,600
+is you need to write a protocol and guidelines
+
+321
+00:14:50,600 --> 00:14:53,220
+on how use the validation rule group.
+
+322
+00:14:53,220 --> 00:14:55,890
+You need to make sure that every step of the process
+
+323
+00:14:55,890 --> 00:14:58,030
+of performing these data quality checks,
+
+324
+00:14:58,030 --> 00:15:00,420
+how to run them, when to run them,
+
+325
+00:15:00,420 --> 00:15:02,260
+who receives what notifications?
+
+326
+00:15:02,260 --> 00:15:04,270
+You&#39;ve defined, all of that.
+
+327
+00:15:04,270 --> 00:15:08,743
+So that if you have maybe turnover in the organization,
+
+328
+00:15:09,880 --> 00:15:12,480
+whoever comes after the person who made the validation rules
+
+329
+00:15:12,480 --> 00:15:14,950
+is able to update, modify and follow
+
+330
+00:15:14,950 --> 00:15:17,330
+what&#39;s been done previously.
+
+331
+00:15:17,330 --> 00:15:19,990
+And you also need to have control over this process.
+
+332
+00:15:19,990 --> 00:15:22,850
+You don&#39;t want to have just dozens of validation rules
+
+333
+00:15:22,850 --> 00:15:25,210
+that no one is using that are completely useless,
+
+334
+00:15:25,210 --> 00:15:26,313
+that are not tested.
+
+335
+00:15:27,200 --> 00:15:29,640
+As system administrators, as DHIS2 managers
+
+336
+00:15:29,640 --> 00:15:32,700
+or HMEs managers, you need to have a fair amount
+
+337
+00:15:32,700 --> 00:15:35,777
+of control and very clear documentation
+
+338
+00:15:35,777 --> 00:15:38,143
+of the validation rules.
+
+339
+00:15:40,340 --> 00:15:41,173
+All right.
+
+340
+00:15:41,173 --> 00:15:44,000
+If you want to start making validation rules,
+
+341
+00:15:44,000 --> 00:15:46,430
+again, I&#39;m gonna go through the slides,
+
+342
+00:15:46,430 --> 00:15:47,980
+but the slides I&#39;m gonna show you
+
+343
+00:15:47,980 --> 00:15:52,320
+are just step-by-step screenshots of the actual process.
+
+344
+00:15:52,320 --> 00:15:53,410
+But if you did wanna go in
+
+345
+00:15:53,410 --> 00:15:56,500
+and make validation rules yourself, this is the link.
+
+346
+00:15:56,500 --> 00:15:58,070
+It&#39;s a separate instance
+
+347
+00:15:58,070 --> 00:16:01,830
+than what you&#39;ve been working in so far, and you need to go.
+
+348
+00:16:01,830 --> 00:16:06,527
+So it&#39;s academy.demos.dhs.org/dqapp-config.
+
+349
+00:16:09,890 --> 00:16:11,690
+So you can copy and paste this link directly
+
+350
+00:16:11,690 --> 00:16:13,000
+into your web browser.
+
+351
+00:16:13,000 --> 00:16:14,520
+We recommend that you use Chrome
+
+352
+00:16:14,520 --> 00:16:17,653
+and you&#39;ll be able to start building your validation rules.
+
+353
+00:16:19,020 --> 00:16:19,853
+All right.
+
+354
+00:16:19,853 --> 00:16:22,320
+So what&#39;s the first step to making a validation rule?
+
+355
+00:16:22,320 --> 00:16:24,400
+Well, we&#39;re gonna go to the maintenance app
+
+356
+00:16:24,400 --> 00:16:26,489
+and in the maintenance app,
+
+357
+00:16:26,489 --> 00:16:30,210
+we can click on the validation on the top header bar.
+
+358
+00:16:30,210 --> 00:16:32,760
+So you see that&#39;s underlined in orange
+
+359
+00:16:32,760 --> 00:16:35,230
+at the top of the screenshot.
+
+360
+00:16:35,230 --> 00:16:36,570
+If we wanna make a new one,
+
+361
+00:16:36,570 --> 00:16:39,150
+we just go down to the add new button,
+
+362
+00:16:39,150 --> 00:16:40,740
+which is that blue button right
+
+363
+00:16:40,740 --> 00:16:42,873
+at the bottom right corner of the screen.
+
+364
+00:16:48,060 --> 00:16:49,390
+Let&#39;s go step-by-step here.
+
+365
+00:16:49,390 --> 00:16:51,680
+You see the steps are numbered on the right.
+
+366
+00:16:51,680 --> 00:16:54,580
+All right, so follow with me as I speak through the steps.
+
+367
+00:16:55,640 --> 00:16:56,650
+If you&#39;re following along,
+
+368
+00:16:56,650 --> 00:16:59,010
+you&#39;re actually building this validation rule
+
+369
+00:16:59,010 --> 00:17:00,803
+as I&#39;m going through it right now,
+
+370
+00:17:01,760 --> 00:17:03,760
+what you need to do is you need to give
+
+371
+00:17:03,760 --> 00:17:06,273
+the validation rule a very clear name.
+
+372
+00:17:08,369 --> 00:17:09,203
+And this example,
+
+373
+00:17:09,203 --> 00:17:11,720
+we&#39;re calling it ANC1 greater than ANC4.
+
+374
+00:17:14,359 --> 00:17:18,120
+And then if you are building this validation rule
+
+375
+00:17:18,119 --> 00:17:19,830
+in the demo database,
+
+376
+00:17:19,829 --> 00:17:22,180
+recommend that you put hyphen your name
+
+377
+00:17:22,180 --> 00:17:25,106
+so that you can go in and you can remember
+
+378
+00:17:25,106 --> 00:17:27,433
+which validation rule is yours.
+
+379
+00:17:28,730 --> 00:17:30,990
+Then it&#39;s not necessary.
+
+380
+00:17:30,990 --> 00:17:31,860
+It&#39;s not compulsory,
+
+381
+00:17:31,860 --> 00:17:34,310
+but we recommend that you do give it a short name.
+
+382
+00:17:34,310 --> 00:17:37,890
+And then of course we do recommend that all data is coded
+
+383
+00:17:37,890 --> 00:17:39,760
+or all metadata is coded.
+
+384
+00:17:39,760 --> 00:17:41,410
+So that&#39;s the third step here,
+
+385
+00:17:41,410 --> 00:17:42,920
+not again necessary,
+
+386
+00:17:42,920 --> 00:17:45,448
+but it is strongly recommended that you have
+
+387
+00:17:45,448 --> 00:17:48,760
+some kind of coding procedure or coding methodology
+
+388
+00:17:48,760 --> 00:17:50,780
+for all of your metadata items
+
+389
+00:17:50,780 --> 00:17:54,610
+so that it helps keep your metadata more organized
+
+390
+00:17:54,610 --> 00:17:58,410
+and allows you to certainly system administrators,
+
+391
+00:17:58,410 --> 00:18:02,500
+to query the database more quickly and easily
+
+392
+00:18:02,500 --> 00:18:05,550
+to pull up any kinds of issues that you may have.
+
+393
+00:18:05,550 --> 00:18:07,100
+Anyways, not compulsory,
+
+394
+00:18:07,100 --> 00:18:09,363
+but we do recommend short names and codes.
+
+395
+00:18:10,650 --> 00:18:11,660
+Then the description.
+
+396
+00:18:11,660 --> 00:18:13,290
+Now, the description is very important.
+
+397
+00:18:13,290 --> 00:18:14,383
+This is step two.
+
+398
+00:18:15,390 --> 00:18:20,156
+You need to provide a clear description of what it is,
+
+399
+00:18:20,156 --> 00:18:21,510
+what they&#39;re actually looking at.
+
+400
+00:18:21,510 --> 00:18:23,260
+So in this one, it says ANC4
+
+401
+00:18:23,260 --> 00:18:26,503
+should not be greater than ANC1.
+
+402
+00:18:27,610 --> 00:18:29,010
+Then after the description,
+
+403
+00:18:29,010 --> 00:18:31,493
+we can provide some instructions.
+
+404
+00:18:32,520 --> 00:18:33,850
+Again, not compulsory,
+
+405
+00:18:33,850 --> 00:18:35,740
+but highly recommended that you put
+
+406
+00:18:35,740 --> 00:18:37,290
+in some clear instructions.
+
+407
+00:18:37,290 --> 00:18:39,650
+You see, in this one, we have ANC4
+
+408
+00:18:39,650 --> 00:18:42,340
+should be greater than ANC1.
+
+409
+00:18:42,340 --> 00:18:46,463
+Please check these two values and correct.
+
+410
+00:18:47,380 --> 00:18:51,490
+So imagine the situation where this validation is triggered.
+
+411
+00:18:51,490 --> 00:18:56,490
+Someone has put in the ANC4 is greater than ANC1,
+
+412
+00:18:58,290 --> 00:19:00,360
+what should you tell them to do?
+
+413
+00:19:00,360 --> 00:19:03,830
+Then you need to provide them very clear instructions.
+
+414
+00:19:03,830 --> 00:19:07,970
+And then that&#39;s the place to put it here
+
+415
+00:19:07,970 --> 00:19:08,803
+in the instructions.
+
+416
+00:19:08,803 --> 00:19:09,970
+Again, don&#39;t make people guess
+
+417
+00:19:09,970 --> 00:19:11,450
+what they need to do about their problems.
+
+418
+00:19:11,450 --> 00:19:13,047
+Tell them specifically.
+
+419
+00:19:14,550 --> 00:19:19,370
+Step four is to assign an importance.
+
+420
+00:19:19,370 --> 00:19:21,340
+And let me tell you a little bit about what this means.
+
+421
+00:19:21,340 --> 00:19:23,140
+So this is completely up to you.
+
+422
+00:19:23,140 --> 00:19:28,140
+We have a high, a medium and a low option for importance.
+
+423
+00:19:29,550 --> 00:19:33,170
+And the default is medium,
+
+424
+00:19:33,170 --> 00:19:35,400
+but you could use this importance
+
+425
+00:19:35,400 --> 00:19:37,340
+for a couple of different reasons.
+
+426
+00:19:37,340 --> 00:19:40,273
+And I&#39;ll tell you two different examples right now.
+
+427
+00:19:42,670 --> 00:19:44,960
+There are some countries and projects
+
+428
+00:19:45,858 --> 00:19:48,980
+that give validation rules at high importance
+
+429
+00:19:48,980 --> 00:19:53,980
+if that validation triggers an alert for something
+
+430
+00:19:54,112 --> 00:19:57,430
+that they know to be wrong.
+
+431
+00:19:57,430 --> 00:20:01,393
+For example, if you have more tested than treated,
+
+432
+00:20:03,110 --> 00:20:06,812
+you know that one of those numbers is wrong.
+
+433
+00:20:06,812 --> 00:20:11,240
+There&#39;s no way physically that you can have more...
+
+434
+00:20:12,260 --> 00:20:14,150
+If you&#39;re monitoring just those
+
+435
+00:20:14,150 --> 00:20:16,830
+who are treated after receiving tests,
+
+436
+00:20:16,830 --> 00:20:20,860
+there&#39;s no way that you can have more treated than tested.
+
+437
+00:20:20,860 --> 00:20:22,610
+Now, I know some of you epidemiologists
+
+438
+00:20:22,610 --> 00:20:23,443
+are out there saying,
+
+439
+00:20:23,443 --> 00:20:24,540
+&quot;Well, what about clinical malaria,
+
+440
+00:20:24,540 --> 00:20:25,720
+People who aren&#39;t tested?&quot;
+
+441
+00:20:25,720 --> 00:20:28,403
+But if you just bear with me,
+
+442
+00:20:30,760 --> 00:20:34,490
+what I&#39;m saying is those who are treated after tested,
+
+443
+00:20:34,490 --> 00:20:37,173
+if you have more treated who weren&#39;t tested,
+
+444
+00:20:38,090 --> 00:20:40,400
+you know that&#39;s not something
+
+445
+00:20:40,400 --> 00:20:42,390
+that can actually possibly happen.
+
+446
+00:20:42,390 --> 00:20:45,070
+So you give that validation rule, high importance,
+
+447
+00:20:45,070 --> 00:20:47,550
+because you know one of those numbers is wrong.
+
+448
+00:20:47,550 --> 00:20:51,817
+And then whoever receives that notification knows that,
+
+449
+00:20:51,817 --> 00:20:54,610
+&quot;Hey, this is high priority.
+
+450
+00:20:54,610 --> 00:20:56,220
+One of these numbers is wrong.
+
+451
+00:20:56,220 --> 00:20:58,430
+Something needs to be corrected.&quot;
+
+452
+00:20:58,430 --> 00:21:00,120
+That&#39;s one way of doing it.
+
+453
+00:21:00,120 --> 00:21:02,770
+The other way of doing it is setting
+
+454
+00:21:02,770 --> 00:21:05,040
+the high priority validation rules
+
+455
+00:21:05,040 --> 00:21:07,795
+for disease outbreak monitoring.
+
+456
+00:21:07,795 --> 00:21:10,300
+Now, this is a little bit of a different concept
+
+457
+00:21:10,300 --> 00:21:11,490
+to what we&#39;ve been talking about.
+
+458
+00:21:11,490 --> 00:21:14,950
+You can use validation rules for disease surveillance.
+
+459
+00:21:14,950 --> 00:21:18,180
+For example, you could say the number of Ebola cases
+
+460
+00:21:18,180 --> 00:21:20,653
+should always be equal to zero.
+
+461
+00:21:21,988 --> 00:21:23,080
+What happens?
+
+462
+00:21:23,080 --> 00:21:25,550
+As soon as one health facility reports
+
+463
+00:21:25,550 --> 00:21:30,240
+a single case of Ebola, it will trigger a validation alert.
+
+464
+00:21:30,240 --> 00:21:33,453
+People receive SMS, just people receive emails.
+
+465
+00:21:35,370 --> 00:21:37,697
+And then all of a sudden, everybody knows,
+
+466
+00:21:37,697 --> 00:21:40,340
+&quot;Hey, there was a case of Ebola reported,
+
+467
+00:21:40,340 --> 00:21:43,120
+we need to go out and do something about it.&quot;
+
+468
+00:21:43,120 --> 00:21:47,010
+Several countries in west Africa use validation rules
+
+469
+00:21:47,010 --> 00:21:49,470
+and high importance validation rules,
+
+470
+00:21:49,470 --> 00:21:52,620
+specifically for disease outbreak and monitoring
+
+471
+00:21:52,620 --> 00:21:53,453
+in this way.
+
+472
+00:21:54,530 --> 00:21:56,870
+Then you need to define your period.
+
+473
+00:21:56,870 --> 00:21:59,950
+And your period, step five here,
+
+474
+00:21:59,950 --> 00:22:04,620
+should be set to at least the same as the frequency
+
+475
+00:22:04,620 --> 00:22:05,870
+in which the data is captured.
+
+476
+00:22:05,870 --> 00:22:08,130
+So if your data&#39;s captured monthly,
+
+477
+00:22:08,130 --> 00:22:11,500
+then you should set your period to at least a monthly.
+
+478
+00:22:11,500 --> 00:22:12,760
+You can&#39;t set it to weekly.
+
+479
+00:22:12,760 --> 00:22:13,860
+You can&#39;t set it to daily.
+
+480
+00:22:13,860 --> 00:22:15,020
+That would not work.
+
+481
+00:22:15,020 --> 00:22:16,610
+You need to at least set it to monthly.
+
+482
+00:22:16,610 --> 00:22:20,027
+However, you could set it to like quarterly or annually.
+
+483
+00:22:20,027 --> 00:22:22,460
+And what would happen is that this validation rule
+
+484
+00:22:22,460 --> 00:22:26,080
+would aggregate that data from those months to that quarter,
+
+485
+00:22:26,080 --> 00:22:29,350
+in which you&#39;re doing the analysis, if that makes sense.
+
+486
+00:22:29,350 --> 00:22:31,760
+But the general rule of thumb is that you just set
+
+487
+00:22:31,760 --> 00:22:34,010
+the validation rule to the same period
+
+488
+00:22:34,010 --> 00:22:35,760
+at which you&#39;re capturing the data.
+
+489
+00:22:39,130 --> 00:22:40,660
+After you go through those steps,
+
+490
+00:22:40,660 --> 00:22:45,070
+you need to define the left side and the right side.
+
+491
+00:22:45,070 --> 00:22:49,530
+Here, I&#39;m going to just quickly show you.
+
+492
+00:22:49,530 --> 00:22:52,363
+This is the left side generator.
+
+493
+00:22:55,349 --> 00:22:57,220
+And how about this?
+
+494
+00:22:57,220 --> 00:22:59,530
+I think I&#39;ve stretched that a lot.
+
+495
+00:22:59,530 --> 00:23:01,303
+Let me just go in and...
+
+496
+00:23:11,750 --> 00:23:12,640
+I&#39;m just gonna show you,
+
+497
+00:23:12,640 --> 00:23:15,430
+this is a little bit easier to show it to you
+
+498
+00:23:15,430 --> 00:23:19,093
+than to present it on a slide.
+
+499
+00:23:22,490 --> 00:23:25,420
+The left side and the right side.
+
+500
+00:23:25,420 --> 00:23:27,191
+So I&#39;ve gone into the maintenance app.
+
+501
+00:23:27,191 --> 00:23:29,620
+I&#39;m gonna go to my validations.
+
+502
+00:23:29,620 --> 00:23:32,490
+I&#39;m going to list my validation rules
+
+503
+00:23:32,490 --> 00:23:34,720
+and yeah, great, looks like some folks
+
+504
+00:23:34,720 --> 00:23:37,310
+are already in here doing this.
+
+505
+00:23:37,310 --> 00:23:39,170
+I&#39;m gonna click on one validation rule here,
+
+506
+00:23:39,170 --> 00:23:42,433
+which is ANC2 should be less than or equal to ANC1.
+
+507
+00:23:45,370 --> 00:23:47,090
+And I&#39;m going to...
+
+508
+00:23:47,090 --> 00:23:48,490
+so I&#39;ve defined my period.
+
+509
+00:23:48,490 --> 00:23:49,570
+I&#39;ve defined my importance.
+
+510
+00:23:49,570 --> 00:23:50,920
+Now I&#39;m gonna go into my left side.
+
+511
+00:23:50,920 --> 00:23:54,220
+I&#39;m gonna zoom in a little bit for you here.
+
+512
+00:23:54,220 --> 00:23:55,570
+That&#39;s a little bit bigger.
+
+513
+00:23:56,420 --> 00:23:57,763
+If I go into my left side,
+
+514
+00:23:58,660 --> 00:24:03,230
+then the first thing is you needed to find
+
+515
+00:24:03,230 --> 00:24:05,130
+is your value missed...
+
+516
+00:24:05,130 --> 00:24:06,080
+Oh, sorry, excuse me.
+
+517
+00:24:06,080 --> 00:24:09,030
+Missing value strategy.
+
+518
+00:24:09,030 --> 00:24:10,410
+So you have three options.
+
+519
+00:24:10,410 --> 00:24:13,280
+You can say skip if any value is missing,
+
+520
+00:24:13,280 --> 00:24:17,190
+skip if all values are missing or never skip.
+
+521
+00:24:17,190 --> 00:24:20,810
+All right, this depends upon which one you choose.
+
+522
+00:24:20,810 --> 00:24:23,890
+Depends upon the different data elements
+
+523
+00:24:23,890 --> 00:24:26,403
+that you&#39;ve included in your expression.
+
+524
+00:24:28,470 --> 00:24:32,410
+Typically I would say more often than not.
+
+525
+00:24:32,410 --> 00:24:34,410
+You want to probably have skip
+
+526
+00:24:34,410 --> 00:24:37,160
+if all values are missing or skip if any values are missing,
+
+527
+00:24:37,160 --> 00:24:39,940
+you don&#39;t want validation rules to be triggered
+
+528
+00:24:39,940 --> 00:24:41,933
+if there&#39;s no values there.
+
+529
+00:24:43,030 --> 00:24:44,290
+It&#39;s not usually good practice
+
+530
+00:24:44,290 --> 00:24:45,860
+if they&#39;re just missing values,
+
+531
+00:24:45,860 --> 00:24:49,703
+so DHIS2 will stand in a zero value.
+
+532
+00:24:51,340 --> 00:24:53,087
+So I&#39;m actually gonna change this.
+
+533
+00:24:53,087 --> 00:24:58,087
+I&#39;m gonna say skip, if all values are missing.
+
+534
+00:24:58,731 --> 00:25:00,585
+&#39;Cause why did I do that?
+
+535
+00:25:00,585 --> 00:25:05,168
+Well, I actually have two different data elements here,
+
+536
+00:25:07,013 --> 00:25:09,762
+so I have ANC second visits fixed,
+
+537
+00:25:09,762 --> 00:25:12,743
+plus ANC second visits outreach.
+
+538
+00:25:12,743 --> 00:25:13,928
+So I&#39;m gonna say skip,
+
+539
+00:25:13,928 --> 00:25:16,178
+if all values are missing for these two here.
+
+540
+00:25:18,350 --> 00:25:21,850
+Okay, the next thing that I want to point out is...
+
+541
+00:25:24,040 --> 00:25:24,873
+One second.
+
+542
+00:25:30,540 --> 00:25:32,250
+This sliding window.
+
+543
+00:25:32,250 --> 00:25:34,830
+What does sliding window mean?
+
+544
+00:25:34,830 --> 00:25:37,700
+Well, the great thing about DHIS2 these days
+
+545
+00:25:37,700 --> 00:25:42,321
+is that we have a lot of user documentation out there.
+
+546
+00:25:42,321 --> 00:25:43,970
+There&#39;s a lot of resources out there.
+
+547
+00:25:43,970 --> 00:25:46,710
+So what I&#39;m gonna do just to show you the processes,
+
+548
+00:25:46,710 --> 00:25:50,233
+I&#39;m just gonna Google, DHIS2 sliding window.
+
+549
+00:25:53,470 --> 00:25:55,320
+You can see I&#39;ve Googled this before.
+
+550
+00:25:57,030 --> 00:25:58,610
+And so what&#39;s my first link?
+
+551
+00:25:58,610 --> 00:26:02,117
+It&#39;s a link to the master user documentation,
+
+552
+00:26:02,117 --> 00:26:05,863
+let me click on that, see where that takes me.
+
+553
+00:26:06,740 --> 00:26:09,770
+Well, I think I found my answer right here
+
+554
+00:26:09,770 --> 00:26:11,363
+about sliding windows.
+
+555
+00:26:14,120 --> 00:26:17,300
+I&#39;ll just give you a quick summary of what this is.
+
+556
+00:26:17,300 --> 00:26:19,810
+Now, this is our good functionality
+
+557
+00:26:19,810 --> 00:26:23,510
+and primarily intended for disease surveillance.
+
+558
+00:26:23,510 --> 00:26:25,830
+So the typical use case for this is
+
+559
+00:26:25,830 --> 00:26:30,177
+if you have a threshold, like an outbreak threshold,
+
+560
+00:26:30,177 --> 00:26:32,610
+and that threshold for outbreak is calculated on,
+
+561
+00:26:32,610 --> 00:26:34,863
+may say a weekly or monthly basis.
+
+562
+00:26:36,890 --> 00:26:41,233
+But you have maybe daily data coming into the system.
+
+563
+00:26:43,030 --> 00:26:45,890
+And what the sliding window will do
+
+564
+00:26:45,890 --> 00:26:50,193
+is as you move forward in time, as you go from week to week,
+
+565
+00:26:52,150 --> 00:26:54,480
+and make this validation rule analysis,
+
+566
+00:26:54,480 --> 00:26:58,230
+the days will follow you incrementally
+
+567
+00:26:58,230 --> 00:26:59,230
+as you move forward in time.
+
+568
+00:26:59,230 --> 00:27:01,470
+And that&#39;s actually what you see this little diagram
+
+569
+00:27:01,470 --> 00:27:02,580
+that&#39;s playing out.
+
+570
+00:27:02,580 --> 00:27:03,500
+You see that we&#39;re going
+
+571
+00:27:03,500 --> 00:27:06,413
+from week one to week two to week three.
+
+572
+00:27:07,296 --> 00:27:10,660
+And our threshold for week one is 10.
+
+573
+00:27:10,660 --> 00:27:13,700
+Our threshold for week two is nine.
+
+574
+00:27:13,700 --> 00:27:17,853
+And our threshold for week three is eight.
+
+575
+00:27:19,470 --> 00:27:24,030
+And you can see that the number of cases is...
+
+576
+00:27:24,030 --> 00:27:26,900
+And that threshold is calculated on a weekly basis,
+
+577
+00:27:26,900 --> 00:27:28,380
+but as we move forward in time,
+
+578
+00:27:28,380 --> 00:27:31,170
+we&#39;re getting more and more cases reported in.
+
+579
+00:27:31,170 --> 00:27:33,191
+And so you see that our number of cases
+
+580
+00:27:33,191 --> 00:27:35,900
+is changing every day.
+
+581
+00:27:35,900 --> 00:27:40,900
+And that sliding window allows you to go period
+
+582
+00:27:40,971 --> 00:27:44,623
+by period or day by day as new data comes in.
+
+583
+00:27:46,970 --> 00:27:51,937
+So instead of the alternative would be that on week two,
+
+584
+00:27:54,040 --> 00:27:56,940
+the validation would only run for and say,
+
+585
+00:27:56,940 --> 00:27:58,613
+you&#39;re on Monday of week two.
+
+586
+00:27:59,750 --> 00:28:01,560
+First day of week two,
+
+587
+00:28:01,560 --> 00:28:04,210
+the validation would only count the data
+
+588
+00:28:04,210 --> 00:28:08,163
+that&#39;s entered for Monday against the weekly threshold.
+
+589
+00:28:09,200 --> 00:28:10,660
+That doesn&#39;t actually really work well
+
+590
+00:28:10,660 --> 00:28:11,960
+in disease surveillance.
+
+591
+00:28:11,960 --> 00:28:13,160
+We want this sliding window.
+
+592
+00:28:13,160 --> 00:28:15,070
+We want the data to be aggregated
+
+593
+00:28:15,070 --> 00:28:18,190
+as we move through time, day after day.
+
+594
+00:28:18,190 --> 00:28:22,900
+I appreciate this as a bit of a nuanced thing,
+
+595
+00:28:22,900 --> 00:28:24,350
+those epidemiologists out there,
+
+596
+00:28:24,350 --> 00:28:27,160
+hopefully you appreciate what we&#39;re trying to go for here.
+
+597
+00:28:27,160 --> 00:28:29,390
+Again, sliding windows are principally used
+
+598
+00:28:29,390 --> 00:28:31,140
+for disease surveillance,
+
+599
+00:28:31,140 --> 00:28:35,170
+and using validation rules for like outbreak detection
+
+600
+00:28:36,300 --> 00:28:40,563
+or against say like a threshold, an outbreak threshold.
+
+601
+00:28:42,352 --> 00:28:44,100
+If you have more specific questions on that,
+
+602
+00:28:44,100 --> 00:28:46,313
+I&#39;m happy to go into it in more detail.
+
+603
+00:28:47,910 --> 00:28:50,460
+But for now I think we just have to keep moving on.
+
+604
+00:28:54,410 --> 00:28:56,910
+So the next step is that we actually need to build
+
+605
+00:28:58,950 --> 00:28:59,870
+our expression.
+
+606
+00:28:59,870 --> 00:29:02,830
+So here you see, we have ANC first visits fixed,
+
+607
+00:29:02,830 --> 00:29:03,663
+ANC second...
+
+608
+00:29:03,663 --> 00:29:05,450
+Oh sorry, ANC second visits fixed,
+
+609
+00:29:05,450 --> 00:29:07,540
+ANC second visits outreach.
+
+610
+00:29:07,540 --> 00:29:11,630
+Just for the sake of showing you, I&#39;m going to delete those.
+
+611
+00:29:11,630 --> 00:29:13,060
+And you see that when I deleted those
+
+612
+00:29:13,060 --> 00:29:16,800
+and I deleted those in this expression builder field here,
+
+613
+00:29:16,800 --> 00:29:18,560
+they says the expression is empty.
+
+614
+00:29:18,560 --> 00:29:21,617
+See the translator down at the bottom is saying,
+
+615
+00:29:21,617 --> 00:29:23,177
+&quot;Hey, you&#39;ve got nothing here.&quot;
+
+616
+00:29:24,020 --> 00:29:25,350
+So how am I gonna build this?
+
+617
+00:29:25,350 --> 00:29:27,810
+I am gonna come over to the right side.
+
+618
+00:29:27,810 --> 00:29:28,760
+I&#39;m gonna leave.
+
+619
+00:29:28,760 --> 00:29:31,160
+I&#39;m gonna select data elements,
+
+620
+00:29:31,160 --> 00:29:33,860
+and I&#39;m gonna search for my ANC2 visits.
+
+621
+00:29:33,860 --> 00:29:38,860
+So I&#39;m gonna search ANC2 and here they&#39;re.
+
+622
+00:29:38,900 --> 00:29:40,980
+And I have fixed an outreach.
+
+623
+00:29:40,980 --> 00:29:44,790
+I&#39;m going to double click on fixed.
+
+624
+00:29:44,790 --> 00:29:46,143
+You see that it comes here.
+
+625
+00:29:47,040 --> 00:29:48,840
+And this thing that you see here,
+
+626
+00:29:48,840 --> 00:29:51,170
+this hashtag and then brackets
+
+627
+00:29:51,170 --> 00:29:54,330
+and seemingly random series of letters and numbers
+
+628
+00:29:54,330 --> 00:29:59,063
+is the unique identifier of this data element.
+
+629
+00:30:00,690 --> 00:30:05,573
+This is how DHIS2 stores this data element in the backend.
+
+630
+00:30:08,550 --> 00:30:13,100
+All right, so, if you&#39;re curious on how to query the API
+
+631
+00:30:13,100 --> 00:30:16,370
+for different metadata items,
+
+632
+00:30:16,370 --> 00:30:20,290
+the easiest way to do it is through the UID of them.
+
+633
+00:30:20,290 --> 00:30:21,810
+Anyways, you still have to deal with it here
+
+634
+00:30:21,810 --> 00:30:23,690
+as you&#39;re building the validation rules.
+
+635
+00:30:23,690 --> 00:30:26,707
+So I&#39;m gonna say ANC second visit fixed,
+
+636
+00:30:26,707 --> 00:30:29,420
+plus ANC second, visit outreach.
+
+637
+00:30:29,420 --> 00:30:32,793
+So here I&#39;d just click the plus button and I click outreach.
+
+638
+00:30:33,760 --> 00:30:36,340
+And then here you go, we&#39;re back to our original expression.
+
+639
+00:30:36,340 --> 00:30:38,203
+So just this plus this.
+
+640
+00:30:39,360 --> 00:30:42,899
+I won&#39;t go over all of these various other operators.
+
+641
+00:30:42,899 --> 00:30:45,140
+There&#39;s clear documentation of what these do.
+
+642
+00:30:45,140 --> 00:30:46,500
+Hopefully most of these are quite clear,
+
+643
+00:30:46,500 --> 00:30:50,123
+like multiplication, division, minus, addition.
+
+644
+00:30:53,642 --> 00:30:55,983
+Counts the number of days in the org unit,
+
+645
+00:30:56,920 --> 00:30:59,790
+in the period that you are running the validation for.
+
+646
+00:30:59,790 --> 00:31:02,340
+So if you have a monthly validation
+
+647
+00:31:02,340 --> 00:31:05,890
+and you are running that validation for October,
+
+648
+00:31:05,890 --> 00:31:09,353
+it would say that there&#39;s 31 days in October.
+
+649
+00:31:10,290 --> 00:31:12,860
+So that would substitute a value of the number
+
+650
+00:31:12,860 --> 00:31:14,510
+of days in the period at which you&#39;re running
+
+651
+00:31:14,510 --> 00:31:15,460
+the validation for.
+
+652
+00:31:16,380 --> 00:31:18,553
+All right, so I&#39;m gonna save this,
+
+653
+00:31:20,788 --> 00:31:25,030
+After that you have to select an operator.
+
+654
+00:31:25,030 --> 00:31:26,370
+You see that we have quite
+
+655
+00:31:26,370 --> 00:31:28,470
+a number of different operators equals two,
+
+656
+00:31:28,470 --> 00:31:30,320
+not equal to greater than greater than,
+
+657
+00:31:30,320 --> 00:31:32,830
+or equal to less than compulsory repair.
+
+658
+00:31:32,830 --> 00:31:36,770
+Compulsory repair means that both values have to be there.
+
+659
+00:31:36,770 --> 00:31:38,830
+That one value cannot be missing.
+
+660
+00:31:38,830 --> 00:31:41,150
+That the left side has to be there
+
+661
+00:31:41,150 --> 00:31:42,990
+and the right side has to be there.
+
+662
+00:31:42,990 --> 00:31:45,010
+You also have exclusive pairs,
+
+663
+00:31:45,010 --> 00:31:47,160
+which means that one side has to be there.
+
+664
+00:31:47,160 --> 00:31:48,660
+If the left side is there,
+
+665
+00:31:48,660 --> 00:31:50,493
+then the right side cannot be there.
+
+666
+00:31:56,942 --> 00:31:59,310
+And then we have to define our right side,
+
+667
+00:31:59,310 --> 00:32:02,310
+defining the right side is just like defining the left side.
+
+668
+00:32:03,910 --> 00:32:06,970
+Then we have to assign...
+
+669
+00:32:06,970 --> 00:32:09,070
+Well, you don&#39;t actually have to do this,
+
+670
+00:32:09,070 --> 00:32:11,530
+but you can assign the org unit level
+
+671
+00:32:11,530 --> 00:32:13,860
+for which you want the validation rule to run.
+
+672
+00:32:13,860 --> 00:32:15,060
+If you leave this blank,
+
+673
+00:32:15,060 --> 00:32:17,230
+if I don&#39;t assign any of these,
+
+674
+00:32:17,230 --> 00:32:19,490
+then what it&#39;ll do is it&#39;ll run the validation rule
+
+675
+00:32:19,490 --> 00:32:22,440
+at the level at which the data is captured,
+
+676
+00:32:22,440 --> 00:32:24,220
+that triggers that validation rule.
+
+677
+00:32:24,220 --> 00:32:26,130
+So this data is captured at facility level.
+
+678
+00:32:26,130 --> 00:32:28,840
+So it would provide the validation at facility level.
+
+679
+00:32:28,840 --> 00:32:31,350
+If I turned on say district level,
+
+680
+00:32:31,350 --> 00:32:33,510
+then what do I actually do is run the validation
+
+681
+00:32:33,510 --> 00:32:37,050
+at district level, not run it at facility level,
+
+682
+00:32:37,050 --> 00:32:40,170
+and it will aggregate the data to the district.
+
+683
+00:32:40,170 --> 00:32:41,530
+So all the facility level data
+
+684
+00:32:41,530 --> 00:32:42,750
+will be aggregated to the district.
+
+685
+00:32:42,750 --> 00:32:46,490
+In this case, all of the data for ANC2,
+
+686
+00:32:46,490 --> 00:32:47,800
+across all the facilities,
+
+687
+00:32:47,800 --> 00:32:49,130
+will be aggravated to the district.
+
+688
+00:32:49,130 --> 00:32:52,040
+All the data for ANC1 across all the facilities
+
+689
+00:32:52,040 --> 00:32:53,590
+will be aggregated to the district.
+
+690
+00:32:53,590 --> 00:32:56,140
+And if the validation doesn&#39;t pass at the district,
+
+691
+00:32:56,140 --> 00:32:58,440
+then you&#39;ll receive an alert for the district.
+
+692
+00:33:01,640 --> 00:33:03,160
+The last tick that we can say
+
+693
+00:33:03,160 --> 00:33:06,430
+is skipped the rule during form validation.
+
+694
+00:33:06,430 --> 00:33:09,190
+Now this allows by default,
+
+695
+00:33:09,190 --> 00:33:10,370
+the validation rules
+
+696
+00:33:10,370 --> 00:33:15,370
+will produce alerts during data entry in the dataset.
+
+697
+00:33:15,520 --> 00:33:18,793
+If you don&#39;t want that to happen, then you take this box.
+
+698
+00:33:19,830 --> 00:33:22,330
+But by default, the box is not ticked,
+
+699
+00:33:22,330 --> 00:33:26,130
+if we go in to a dataset into a data entry form,
+
+700
+00:33:26,130 --> 00:33:27,720
+we start entering data.
+
+701
+00:33:27,720 --> 00:33:30,610
+And we say that ANC2 is greater than ANC1.
+
+702
+00:33:30,610 --> 00:33:32,423
+Then you&#39;ll see a alert pop-up.
+
+703
+00:33:34,000 --> 00:33:37,083
+If I tick this box, then the alert will not pop up.
+
+704
+00:33:42,610 --> 00:33:44,770
+Let&#39;s get back into the PowerPoint.
+
+705
+00:33:44,770 --> 00:33:47,100
+I think we can actually skip ahead a bit.
+
+706
+00:33:47,100 --> 00:33:48,800
+We&#39;ve covered all of this already.
+
+707
+00:33:51,977 --> 00:33:55,493
+The next step is you need to make a validation rule group.
+
+708
+00:33:58,291 --> 00:34:03,291
+And the validation rule groups, making these is very simple.
+
+709
+00:34:03,720 --> 00:34:05,970
+Again, in the maintenance you go to validation rule group,
+
+710
+00:34:05,970 --> 00:34:08,108
+and you just group your validation rules together.
+
+711
+00:34:08,108 --> 00:34:10,520
+So if you have all of your ANC validation rules,
+
+712
+00:34:10,520 --> 00:34:12,170
+you can put those into one group.
+
+713
+00:34:13,300 --> 00:34:16,330
+So the next step is that we need to cover
+
+714
+00:34:16,330 --> 00:34:17,690
+before we&#39;re able to break,
+
+715
+00:34:17,690 --> 00:34:22,690
+is going through building validation rule notifications.
+
+716
+00:34:24,382 --> 00:34:26,010
+So, because we&#39;re actually running
+
+717
+00:34:26,010 --> 00:34:27,350
+a little bit of short on time.
+
+718
+00:34:27,350 --> 00:34:29,510
+I&#39;m gonna skip through running the validation rules.
+
+719
+00:34:29,510 --> 00:34:30,840
+I believe that we&#39;ll be able to come back
+
+720
+00:34:30,840 --> 00:34:32,303
+to that later in the week.
+
+721
+00:34:34,139 --> 00:34:36,940
+So I&#39;m just gonna show you how to build
+
+722
+00:34:36,940 --> 00:34:40,263
+the validation rule notifications now.
+
+723
+00:34:46,900 --> 00:34:49,984
+So let&#39;s again, do this one together.
+
+724
+00:34:54,690 --> 00:34:56,570
+So I&#39;m back in the maintenance app.
+
+725
+00:34:56,570 --> 00:34:59,040
+I&#39;m gonna go to validation rule notification.
+
+726
+00:34:59,040 --> 00:35:00,970
+You see that on the left side of the screen,
+
+727
+00:35:00,970 --> 00:35:02,080
+we see that Robert,
+
+728
+00:35:02,080 --> 00:35:04,630
+Robert you&#39;re winning the prize today
+
+729
+00:35:04,630 --> 00:35:07,010
+and (indistinct), you&#39;re also doing a great job.
+
+730
+00:35:07,010 --> 00:35:10,140
+So you&#39;re already a bit ahead of the pack here.
+
+731
+00:35:10,140 --> 00:35:12,832
+Let&#39;s just add one together though.
+
+732
+00:35:12,832 --> 00:35:17,299
+So I&#39;m going to click the plus button
+
+733
+00:35:17,299 --> 00:35:19,549
+in the bottom right corner like we always do.
+
+734
+00:35:26,380 --> 00:35:30,060
+And I am going to give this a name.
+
+735
+00:35:30,060 --> 00:35:34,277
+I am just gonna call it ANC4, less than ANC1.
+
+736
+00:35:42,330 --> 00:35:44,310
+I&#39;ll give it my name, -Scott,
+
+737
+00:35:44,310 --> 00:35:46,410
+just so, I can find it later if I want.
+
+738
+00:35:46,410 --> 00:35:51,090
+Obviously, if you&#39;re making these in your system
+
+739
+00:35:51,090 --> 00:35:53,308
+in your actual DHIS2 instance,
+
+740
+00:35:53,308 --> 00:35:56,420
+you don&#39;t put hyphen in your name,
+
+741
+00:35:56,420 --> 00:35:58,200
+I&#39;m just doing it now because we&#39;re all building
+
+742
+00:35:58,200 --> 00:36:00,023
+and sharing inside of one database.
+
+743
+00:36:01,150 --> 00:36:01,983
+All right.
+
+744
+00:36:01,983 --> 00:36:04,190
+And then we need to find our validation rules
+
+745
+00:36:04,190 --> 00:36:05,023
+that we want to use.
+
+746
+00:36:05,023 --> 00:36:07,580
+So I am just gonna randomly six because Robert
+
+747
+00:36:07,580 --> 00:36:09,650
+was the first one I saw this morning.
+
+748
+00:36:09,650 --> 00:36:11,010
+I&#39;m gonna choose Roberts.
+
+749
+00:36:11,010 --> 00:36:13,900
+Hopefully Robert, your validation rule is working properly.
+
+750
+00:36:13,900 --> 00:36:15,250
+We&#39;ll find out in a minute.
+
+751
+00:36:16,700 --> 00:36:20,610
+And then we need to define our recipient groups.
+
+752
+00:36:20,610 --> 00:36:24,760
+Now we can send this to different org...
+
+753
+00:36:24,760 --> 00:36:26,543
+Sorry, user groups.
+
+754
+00:36:27,770 --> 00:36:28,830
+This is not necessary.
+
+755
+00:36:28,830 --> 00:36:33,830
+You could have it sent to notify users in hierarchy only.
+
+756
+00:36:35,460 --> 00:36:36,490
+That&#39;s also an option.
+
+757
+00:36:36,490 --> 00:36:37,410
+So what does that mean?
+
+758
+00:36:37,410 --> 00:36:41,400
+That means that anyone who is assigned to this org unit
+
+759
+00:36:41,400 --> 00:36:43,850
+would receive this notification.
+
+760
+00:36:43,850 --> 00:36:46,720
+But it&#39;s also generally best practice
+
+761
+00:36:46,720 --> 00:36:48,640
+that you have different user groups.
+
+762
+00:36:48,640 --> 00:36:52,220
+Maybe you have a user group for disease surveillance
+
+763
+00:36:52,220 --> 00:36:54,373
+or disease response.
+
+764
+00:36:55,609 --> 00:36:57,890
+And any validation rules that are associated
+
+765
+00:36:57,890 --> 00:36:59,480
+with disease surveillance,
+
+766
+00:36:59,480 --> 00:37:02,520
+they should maybe be sent to this user group.
+
+767
+00:37:02,520 --> 00:37:04,910
+Even if the validations are coming
+
+768
+00:37:04,910 --> 00:37:07,843
+from places that that user is not really associated with.
+
+769
+00:37:10,490 --> 00:37:12,690
+So this is an option here.
+
+770
+00:37:12,690 --> 00:37:15,380
+It&#39;s completely up to you to decide and how best to use it.
+
+771
+00:37:15,380 --> 00:37:16,680
+But like I said,
+
+772
+00:37:16,680 --> 00:37:19,090
+it&#39;s useful to make various user groups,
+
+773
+00:37:19,090 --> 00:37:21,940
+based upon different kinds of associations or projects
+
+774
+00:37:21,940 --> 00:37:26,793
+or different roles within the system.
+
+775
+00:37:27,790 --> 00:37:29,350
+I am going to say, though,
+
+776
+00:37:29,350 --> 00:37:32,310
+I wanna notify users in the hierarchy.
+
+777
+00:37:32,310 --> 00:37:33,580
+And you can see that you can do both.
+
+778
+00:37:33,580 --> 00:37:35,340
+You can say, I wanna send it to this user group
+
+779
+00:37:35,340 --> 00:37:37,853
+and notify users in the hierarchy, for example.
+
+780
+00:37:40,360 --> 00:37:42,190
+And then it&#39;s important.
+
+781
+00:37:42,190 --> 00:37:44,530
+The next step is you have to define
+
+782
+00:37:44,530 --> 00:37:45,990
+how you send the notifications.
+
+783
+00:37:45,990 --> 00:37:47,980
+Do you wanna send it as a collective summary
+
+784
+00:37:47,980 --> 00:37:49,580
+or as a single notification?
+
+785
+00:37:49,580 --> 00:37:51,770
+I&#39;ll show you an example of this in a minute,
+
+786
+00:37:51,770 --> 00:37:54,690
+but essentially a collective summary we&#39;ll group,
+
+787
+00:37:54,690 --> 00:37:58,340
+all of the validation rules into a single message.
+
+788
+00:37:58,340 --> 00:38:01,630
+So for example, if you have 20 validation alerts triggered,
+
+789
+00:38:01,630 --> 00:38:03,870
+then it will send it in a single email.
+
+790
+00:38:03,870 --> 00:38:06,066
+If you say single notifications,
+
+791
+00:38:06,066 --> 00:38:09,810
+then it was send those 20 different validation alerts
+
+792
+00:38:09,810 --> 00:38:10,900
+as separate emails.
+
+793
+00:38:10,900 --> 00:38:13,620
+So instead of you receiving one email with 20,
+
+794
+00:38:13,620 --> 00:38:15,733
+you will receive 20 emails with one.
+
+795
+00:38:16,600 --> 00:38:19,940
+Again, depends on the different strategy
+
+796
+00:38:19,940 --> 00:38:22,160
+and purpose of the validation rule.
+
+797
+00:38:22,160 --> 00:38:24,180
+I would say the general rule of thumb though,
+
+798
+00:38:24,180 --> 00:38:27,400
+is try to minimize the number of emails that people receive.
+
+799
+00:38:27,400 --> 00:38:29,760
+People receive too many emails, it just becomes noise.
+
+800
+00:38:29,760 --> 00:38:31,650
+They start paying attention to it.
+
+801
+00:38:31,650 --> 00:38:33,710
+Most countries, most projects I&#39;ve seen
+
+802
+00:38:33,710 --> 00:38:36,763
+have found it more useful use collective summary.
+
+803
+00:38:38,850 --> 00:38:42,140
+Then we have to define a message.
+
+804
+00:38:42,140 --> 00:38:47,140
+And this message you&#39;ll find can be relative
+
+805
+00:38:47,700 --> 00:38:49,580
+to the validation rule.
+
+806
+00:38:49,580 --> 00:38:52,530
+So you see, we have our template variables
+
+807
+00:38:52,530 --> 00:38:54,210
+over here on the right side.
+
+808
+00:38:54,210 --> 00:38:56,110
+So we can use these,
+
+809
+00:38:56,110 --> 00:39:00,460
+drop these into our subject template.
+
+810
+00:39:00,460 --> 00:39:04,460
+And it will automatically fill in these for us.
+
+811
+00:39:04,460 --> 00:39:06,050
+So I&#39;m gonna say rule name
+
+812
+00:39:08,370 --> 00:39:13,370
+has been triggered for, let&#39;s say organizational unit.
+
+813
+00:39:19,030 --> 00:39:24,030
+So whatever facility, on actually for the period.
+
+814
+00:39:26,840 --> 00:39:29,740
+So (indistinct) did the validation will get triggered for?
+
+815
+00:39:29,740 --> 00:39:33,050
+And then I&#39;ll say on the current date.
+
+816
+00:39:33,050 --> 00:39:35,240
+So the date at which the validation rule
+
+817
+00:39:35,240 --> 00:39:38,760
+was the validation rule analysis actually took place.
+
+818
+00:39:38,760 --> 00:39:40,590
+So it&#39;ll say in this case,
+
+819
+00:39:40,590 --> 00:39:45,590
+the translation for this would be ANC1 minus ANC4
+
+820
+00:39:46,250 --> 00:39:49,880
+Robert has been triggered for,
+
+821
+00:39:49,880 --> 00:39:54,880
+let&#39;s say like facility 146 for October, 2020
+
+822
+00:39:57,950 --> 00:40:00,263
+on the 22nd of October.
+
+823
+00:40:02,290 --> 00:40:04,530
+So that&#39;s the subject short, but sweet
+
+824
+00:40:04,530 --> 00:40:07,590
+but gives a lot of good information.
+
+825
+00:40:07,590 --> 00:40:09,950
+And for the message template,
+
+826
+00:40:09,950 --> 00:40:11,620
+we can make this even a little bit longer.
+
+827
+00:40:11,620 --> 00:40:16,380
+We could say something similar, like validation rule name
+
+828
+00:40:18,340 --> 00:40:21,430
+with validation rule description
+
+829
+00:40:24,000 --> 00:40:29,000
+has a left side description of left side value
+
+830
+00:40:35,550 --> 00:40:40,550
+and right side description of right side value.
+
+831
+00:40:44,750 --> 00:40:49,750
+Then maybe we drop in at organizational unit on the period.
+
+832
+00:41:10,272 --> 00:41:11,120
+This is incorrect.
+
+833
+00:41:11,120 --> 00:41:16,120
+Please follow the data quality SoPs, something like that.
+
+834
+00:41:19,050 --> 00:41:21,270
+So it&#39;s just a longer message is giving
+
+835
+00:41:21,270 --> 00:41:22,550
+the user more information about
+
+836
+00:41:22,550 --> 00:41:24,793
+what&#39;s the validation rule?
+
+837
+00:41:26,050 --> 00:41:28,260
+What was the description of the validation rule?
+
+838
+00:41:28,260 --> 00:41:30,100
+What are the actual values that are triggering
+
+839
+00:41:30,100 --> 00:41:31,200
+the validation rule?
+
+840
+00:41:31,200 --> 00:41:32,190
+Where&#39;s it at?
+
+841
+00:41:32,190 --> 00:41:33,650
+When was it?
+
+842
+00:41:33,650 --> 00:41:35,930
+And then giving them maybe some more specific instructions
+
+843
+00:41:35,930 --> 00:41:37,660
+about how to actually correct it.
+
+844
+00:41:37,660 --> 00:41:39,510
+Again, if you remember earlier, we were talking about,
+
+845
+00:41:39,510 --> 00:41:42,000
+it&#39;s very important to give specific instructions
+
+846
+00:41:42,000 --> 00:41:45,290
+on how to correct the validation rules
+
+847
+00:41:45,290 --> 00:41:49,660
+in the validation rule notifications.
+
+848
+00:41:49,660 --> 00:41:51,140
+So if this happens to someone,
+
+849
+00:41:51,140 --> 00:41:52,400
+they received this notification,
+
+850
+00:41:52,400 --> 00:41:54,500
+what specifically should they do about it?
+
+851
+00:41:56,420 --> 00:41:57,623
+This one is quite vague.
+
+852
+00:41:58,780 --> 00:42:00,400
+Please follow the data, quality SoPs.
+
+853
+00:42:00,400 --> 00:42:05,400
+You could say, review during monthly data quality,
+
+854
+00:42:13,890 --> 00:42:16,960
+verification meeting or something like that.
+
+855
+00:42:16,960 --> 00:42:18,830
+We can make it specific to whatever actually
+
+856
+00:42:18,830 --> 00:42:20,210
+is your standard operating procedures
+
+857
+00:42:20,210 --> 00:42:23,540
+or your processes in your project or country.
+
+858
+00:42:23,540 --> 00:42:25,020
+All right, so that is making
+
+859
+00:42:25,020 --> 00:42:26,717
+the validation rule notification.
+
+860
+00:42:26,717 --> 00:42:29,863
+I&#39;m just gonna pop back over to my PowerPoint.
+
+861
+00:42:35,370 --> 00:42:36,503
+I&#39;m gonna skip how to run the validation rules.
+
+862
+00:42:36,503 --> 00:42:38,803
+We&#39;ll be able to come back to this.
+
+863
+00:42:52,520 --> 00:42:56,960
+So when to run your validation rules,
+
+864
+00:42:56,960 --> 00:42:57,793
+now there&#39;s a point here.
+
+865
+00:42:57,793 --> 00:42:59,017
+I do wanna make this quite clear,
+
+866
+00:42:59,017 --> 00:43:01,913
+and I made reference alluded to this earlier.
+
+867
+00:43:05,796 --> 00:43:09,393
+When you&#39;re configuring your data set, there is a tick box.
+
+868
+00:43:10,365 --> 00:43:11,880
+And that&#39;s what you see on the right side
+
+869
+00:43:11,880 --> 00:43:12,830
+of the screen here.
+
+870
+00:43:13,880 --> 00:43:17,780
+This is a screenshot of configuring a dataset.
+
+871
+00:43:17,780 --> 00:43:19,720
+The dataset is reproductive health,
+
+872
+00:43:19,720 --> 00:43:21,860
+and you see where the red box is,
+
+873
+00:43:21,860 --> 00:43:25,396
+it says complete allowed only if validation passes
+
+874
+00:43:25,396 --> 00:43:27,230
+and you see that that box is ticked.
+
+875
+00:43:27,230 --> 00:43:29,080
+Now, what does that actually do?
+
+876
+00:43:29,080 --> 00:43:31,400
+That means that any validation rules
+
+877
+00:43:31,400 --> 00:43:32,840
+that are associated with the data
+
+878
+00:43:32,840 --> 00:43:35,890
+that&#39;s being entered for that dataset,
+
+879
+00:43:35,890 --> 00:43:39,760
+if there&#39;s a validation notification that is triggered,
+
+880
+00:43:39,760 --> 00:43:40,593
+what happens?
+
+881
+00:43:40,593 --> 00:43:44,090
+It means that that data set will not be allowed
+
+882
+00:43:44,090 --> 00:43:45,460
+to be marked complete,
+
+883
+00:43:45,460 --> 00:43:49,150
+which means the data that was entered
+
+884
+00:43:49,150 --> 00:43:51,620
+for that dataset will still be in the system.
+
+885
+00:43:51,620 --> 00:43:52,920
+But that means it won&#39;t show up
+
+886
+00:43:52,920 --> 00:43:55,430
+in your reporting rate analysis.
+
+887
+00:43:55,430 --> 00:43:57,000
+Datasets have to be marked complete
+
+888
+00:43:57,000 --> 00:43:59,653
+in order to show up for a reporting rate analysis.
+
+889
+00:44:01,540 --> 00:44:04,190
+Now, this can be a good thing.
+
+890
+00:44:04,190 --> 00:44:06,140
+If you have highly trained staff
+
+891
+00:44:06,140 --> 00:44:10,110
+who know how to correct the data quality issues,
+
+892
+00:44:10,110 --> 00:44:13,140
+and you have very clearly defined validation rules
+
+893
+00:44:13,140 --> 00:44:14,940
+with good descriptions and good instructions
+
+894
+00:44:14,940 --> 00:44:16,560
+that tells them exactly what they need to do.
+
+895
+00:44:16,560 --> 00:44:20,290
+In most cases though, in my experience,
+
+896
+00:44:20,290 --> 00:44:22,453
+this has caused a lot of problems.
+
+897
+00:44:23,480 --> 00:44:24,940
+The reason it&#39;s caused a lot of problems
+
+898
+00:44:24,940 --> 00:44:27,510
+is because people have not clearly defined
+
+899
+00:44:27,510 --> 00:44:28,610
+their validation rules.
+
+900
+00:44:28,610 --> 00:44:29,710
+They&#39;ve not clearly defined
+
+901
+00:44:29,710 --> 00:44:32,530
+their validation rule instructions, their district staff,
+
+902
+00:44:32,530 --> 00:44:34,670
+the people who are putting them data in
+
+903
+00:44:34,670 --> 00:44:38,110
+or facility staff are not highly trained.
+
+904
+00:44:38,110 --> 00:44:40,660
+And it just means that people are trying
+
+905
+00:44:40,660 --> 00:44:43,580
+to put the data in the best they know how.
+
+906
+00:44:43,580 --> 00:44:47,003
+And they&#39;re being prevented from being able to do that.
+
+907
+00:44:49,060 --> 00:44:52,530
+There is one country I worked in who had one validation rule
+
+908
+00:44:52,530 --> 00:44:53,380
+that was configured
+
+909
+00:44:53,380 --> 00:44:56,240
+that it was not possible of being passed.
+
+910
+00:44:56,240 --> 00:44:58,513
+There was no way to pass the validation rule.
+
+911
+00:44:59,520 --> 00:45:02,910
+And this was the main data set that they had
+
+912
+00:45:02,910 --> 00:45:03,743
+for the country.
+
+913
+00:45:03,743 --> 00:45:05,930
+It was the monthly facility reporting dataset,
+
+914
+00:45:05,930 --> 00:45:07,163
+the major dataset.
+
+915
+00:45:08,070 --> 00:45:10,225
+And it prevented people from the district
+
+916
+00:45:10,225 --> 00:45:12,730
+and the city levels from being able to mark
+
+917
+00:45:12,730 --> 00:45:15,560
+that data set complete for a couple of years
+
+918
+00:45:15,560 --> 00:45:17,770
+before they noticed the problem.
+
+919
+00:45:17,770 --> 00:45:20,050
+And that means that they had no reporting rate data
+
+920
+00:45:20,050 --> 00:45:21,510
+for years.
+
+921
+00:45:21,510 --> 00:45:24,240
+So they asked what we could do.
+
+922
+00:45:24,240 --> 00:45:27,020
+All we did was go in and tick the box.
+
+923
+00:45:27,020 --> 00:45:28,770
+That was it. That was the easiest fix.
+
+924
+00:45:28,770 --> 00:45:31,453
+I think I&#39;ve ever had for DHIS2 to be honest with you.
+
+925
+00:45:32,490 --> 00:45:34,690
+And what did that then do it allowed them
+
+926
+00:45:34,690 --> 00:45:36,154
+to put the data in
+
+927
+00:45:36,154 --> 00:45:39,743
+and we reinforce the data, quality checks, post data entry.
+
+928
+00:45:41,440 --> 00:45:42,273
+All right.
+
+929
+00:45:42,273 --> 00:45:44,950
+Now I wanna show you quickly before we break
+
+930
+00:45:44,950 --> 00:45:45,970
+in a few minutes,
+
+931
+00:45:45,970 --> 00:45:50,310
+on how to schedule validation rules.
+
+932
+00:45:50,310 --> 00:45:51,143
+So we talked about,
+
+933
+00:45:51,143 --> 00:45:53,180
+you can actually schedule the validation rules
+
+934
+00:45:53,180 --> 00:45:56,170
+and they can send out automatic notifications.
+
+935
+00:45:56,170 --> 00:45:58,280
+So we&#39;ve talked about how to make the validation rules.
+
+936
+00:45:58,280 --> 00:45:59,730
+We&#39;ve shown you how to make
+
+937
+00:45:59,730 --> 00:46:01,420
+the validation rule notification.
+
+938
+00:46:01,420 --> 00:46:03,320
+Now we&#39;re gonna show you the last part of the job,
+
+939
+00:46:03,320 --> 00:46:05,150
+which is scheduling the validation rules
+
+940
+00:46:05,150 --> 00:46:07,250
+to run automatically.
+
+941
+00:46:07,250 --> 00:46:09,040
+And so there&#39;s an app for this.
+
+942
+00:46:09,040 --> 00:46:11,140
+The app is called The Scheduler App.
+
+943
+00:46:11,140 --> 00:46:14,760
+This app is again an app that should only be accessible
+
+944
+00:46:14,760 --> 00:46:16,550
+to system administrators.
+
+945
+00:46:16,550 --> 00:46:18,110
+This is not an app that you want anyone
+
+946
+00:46:18,110 --> 00:46:20,290
+to be able to go in and do stuff with.
+
+947
+00:46:20,290 --> 00:46:21,640
+But if you&#39;re a system administrator,
+
+948
+00:46:21,640 --> 00:46:24,370
+you should be able to use this application,
+
+949
+00:46:24,370 --> 00:46:25,950
+The Scheduler App.
+
+950
+00:46:25,950 --> 00:46:28,700
+And what we&#39;re gonna do is we&#39;re actually go in
+
+951
+00:46:28,700 --> 00:46:31,897
+and we&#39;re gonna make a monitoring job.
+
+952
+00:46:31,897 --> 00:46:34,303
+And so I&#39;m gonna walk through the screenshots here.
+
+953
+00:46:36,090 --> 00:46:40,582
+When you go in to make a new job in the scheduler app,
+
+954
+00:46:40,582 --> 00:46:43,170
+you first have to define...
+
+955
+00:46:43,170 --> 00:46:44,400
+You have to of course give it a name,
+
+956
+00:46:44,400 --> 00:46:46,240
+just like we do with everything else.
+
+957
+00:46:46,240 --> 00:46:47,190
+Give it a name in this case,
+
+958
+00:46:47,190 --> 00:46:49,270
+we&#39;re going to call it ANC,
+
+959
+00:46:49,270 --> 00:46:51,780
+and then you have to schedule
+
+960
+00:46:51,780 --> 00:46:54,333
+when the job will execute.
+
+961
+00:46:55,300 --> 00:46:56,470
+All right,
+
+962
+00:46:56,470 --> 00:46:59,442
+you have three options for this.
+
+963
+00:46:59,442 --> 00:47:03,930
+And the first option which is that first orange box
+
+964
+00:47:03,930 --> 00:47:05,350
+on the far left.
+
+965
+00:47:05,350 --> 00:47:08,680
+You see that you can use a predefined frequency.
+
+966
+00:47:08,680 --> 00:47:11,920
+So you see that we have five predefined frequencies there,
+
+967
+00:47:11,920 --> 00:47:14,010
+every hour, every day at midnight,
+
+968
+00:47:14,010 --> 00:47:17,540
+every day at 3:00 am, every day at noon every week.
+
+969
+00:47:17,540 --> 00:47:22,330
+So these are your options for predefined.
+
+970
+00:47:22,330 --> 00:47:24,130
+If you want a different frequency,
+
+971
+00:47:24,130 --> 00:47:27,840
+say you want the first day of every month,
+
+972
+00:47:27,840 --> 00:47:30,750
+then you have to put a chronic suppression.
+
+973
+00:47:30,750 --> 00:47:32,780
+Now, if you are a server administrator
+
+974
+00:47:32,780 --> 00:47:35,800
+or anyone with a bit of background in software development,
+
+975
+00:47:35,800 --> 00:47:37,610
+you know what a chronic depression is,
+
+976
+00:47:37,610 --> 00:47:40,840
+but if you&#39;re not familiar with chronic expressions,
+
+977
+00:47:40,840 --> 00:47:43,010
+all I can say is you should just Google it.
+
+978
+00:47:43,010 --> 00:47:45,580
+There are a lot of great chronic depression builders,
+
+979
+00:47:45,580 --> 00:47:47,270
+out there in the world.
+
+980
+00:47:47,270 --> 00:47:48,103
+You don&#39;t necessarily
+
+981
+00:47:48,103 --> 00:47:49,880
+have to know anything coding or anything.
+
+982
+00:47:49,880 --> 00:47:51,787
+You just have to be able to say,
+
+983
+00:47:51,787 --> 00:47:53,190
+&quot;I want something to run
+
+984
+00:47:53,190 --> 00:47:56,613
+at the first day of the month at 1:00 am.
+
+985
+00:47:57,700 --> 00:48:00,120
+And then there&#39;s chronic suppression builders out there
+
+986
+00:48:00,120 --> 00:48:02,170
+that will give you the syntax for that.
+
+987
+00:48:02,170 --> 00:48:04,633
+And you can copy and paste it here into DHIS.
+
+988
+00:48:06,020 --> 00:48:11,020
+The other alternative is to have continuous execution.
+
+989
+00:48:11,680 --> 00:48:14,600
+Continuous execution means that it will constantly run.
+
+990
+00:48:14,600 --> 00:48:17,070
+As soon as it finishes, it will run again.
+
+991
+00:48:17,070 --> 00:48:21,390
+Now this may be good for a few situations.
+
+992
+00:48:21,390 --> 00:48:23,700
+The first one is disease surveillance.
+
+993
+00:48:23,700 --> 00:48:28,290
+If you are monitoring just one or two validation rules
+
+994
+00:48:28,290 --> 00:48:30,350
+that are used for disease surveillance,
+
+995
+00:48:30,350 --> 00:48:32,620
+you can have this continuously running.
+
+996
+00:48:32,620 --> 00:48:35,380
+That&#39;s not going to tax your system very much.
+
+997
+00:48:35,380 --> 00:48:37,830
+But if you&#39;re using,
+
+998
+00:48:37,830 --> 00:48:41,600
+say you want to make an expression or a job
+
+999
+00:48:41,600 --> 00:48:44,510
+that will check maybe 10 validation rules,
+
+1000
+00:48:44,510 --> 00:48:46,533
+I guess a monthly dataset.
+
+1001
+00:48:47,910 --> 00:48:51,140
+You do not want that to run continuously.
+
+1002
+00:48:51,140 --> 00:48:54,300
+The reason is, is because that will be very taxing
+
+1003
+00:48:54,300 --> 00:48:55,430
+to your server.
+
+1004
+00:48:55,430 --> 00:48:57,963
+It will be very difficult for your server to maintain that
+
+1005
+00:48:57,963 --> 00:49:00,140
+because the validation rules require
+
+1006
+00:49:00,140 --> 00:49:02,283
+a lot of processing to run.
+
+1007
+00:49:03,220 --> 00:49:04,790
+And if you&#39;re running it continuously,
+
+1008
+00:49:04,790 --> 00:49:06,860
+you&#39;re going to really slow down
+
+1009
+00:49:06,860 --> 00:49:08,483
+the performance of your server.
+
+1010
+00:49:08,483 --> 00:49:11,086
+So again, this is useful for disease surveillance.
+
+1011
+00:49:11,086 --> 00:49:14,223
+If you&#39;re just running for one or two validation rules,
+
+1012
+00:49:16,910 --> 00:49:19,320
+but I highly, highly, highly recommend
+
+1013
+00:49:19,320 --> 00:49:20,960
+that you do not use it
+
+1014
+00:49:20,960 --> 00:49:25,960
+if you are running maybe three validation rules or more.
+
+1015
+00:49:27,310 --> 00:49:31,790
+You&#39;ll really tax the performance of your system.
+
+1016
+00:49:31,790 --> 00:49:32,623
+All right.
+
+1017
+00:49:33,890 --> 00:49:36,000
+The next thing that we need to do is to find
+
+1018
+00:49:37,012 --> 00:49:38,930
+a relative star and a relative in.
+
+1019
+00:49:38,930 --> 00:49:41,430
+Now, this may sound a little bit confusing to you.
+
+1020
+00:49:43,620 --> 00:49:46,200
+And essentially what this is,
+
+1021
+00:49:46,200 --> 00:49:47,750
+you enter a number here,
+
+1022
+00:49:47,750 --> 00:49:50,983
+you enter either a negative number or positive number,
+
+1023
+00:49:51,880 --> 00:49:55,130
+and you see here, we&#39;ve entered a negative one
+
+1024
+00:49:55,130 --> 00:49:56,550
+for our relative start.
+
+1025
+00:49:56,550 --> 00:50:01,330
+What this means is this is relative to today,
+
+1026
+00:50:01,330 --> 00:50:04,540
+and it is counting the number of days.
+
+1027
+00:50:04,540 --> 00:50:07,440
+So a negative one here means yesterday,
+
+1028
+00:50:07,440 --> 00:50:10,300
+yesterday was negative one day from today.
+
+1029
+00:50:10,300 --> 00:50:13,900
+You see that our relative end is positive one
+
+1030
+00:50:13,900 --> 00:50:15,830
+that is tomorrow.
+
+1031
+00:50:15,830 --> 00:50:17,480
+So what does that mean?
+
+1032
+00:50:17,480 --> 00:50:20,620
+That means that it will run any of the validation rules
+
+1033
+00:50:20,620 --> 00:50:22,370
+that are included in this job.
+
+1034
+00:50:22,370 --> 00:50:24,620
+We&#39;ll check any data that was entered
+
+1035
+00:50:24,620 --> 00:50:28,410
+between yesterday and tomorrow.
+
+1036
+00:50:28,410 --> 00:50:30,603
+So that&#39;s includes three days.
+
+1037
+00:50:32,570 --> 00:50:36,127
+But these three days fall within October,
+
+1038
+00:50:44,300 --> 00:50:46,880
+which is one month,
+
+1039
+00:50:46,880 --> 00:50:50,470
+October falls into one quarter three.
+
+1040
+00:50:50,470 --> 00:50:54,630
+And that these three days follow within one year.
+
+1041
+00:50:54,630 --> 00:50:59,610
+So for example, if I have this job looking
+
+1042
+00:50:59,610 --> 00:51:01,243
+at this the last three days,
+
+1043
+00:51:02,850 --> 00:51:05,790
+then it will also trigger any validation rules
+
+1044
+00:51:05,790 --> 00:51:10,683
+that are set to monthly and run those for October as well.
+
+1045
+00:51:11,940 --> 00:51:13,350
+If we fast forward and say that we&#39;re sitting
+
+1046
+00:51:15,767 --> 00:51:19,590
+in October 31st, today, today is October 31st,
+
+1047
+00:51:19,590 --> 00:51:21,140
+let&#39;s just imagine that.
+
+1048
+00:51:21,140 --> 00:51:24,160
+And we have our relative start to negative one
+
+1049
+00:51:24,160 --> 00:51:26,840
+and a relative end to one.
+
+1050
+00:51:26,840 --> 00:51:31,790
+That means that tomorrow will be November.
+
+1051
+00:51:31,790 --> 00:51:34,640
+And so it would run the validation rules
+
+1052
+00:51:34,640 --> 00:51:37,053
+for both October and November.
+
+1053
+00:51:38,010 --> 00:51:41,273
+Because these three days straddle two months,
+
+1054
+00:51:42,310 --> 00:51:44,386
+hopefully that makes sense to you.
+
+1055
+00:51:44,386 --> 00:51:46,693
+I know it can be a little bit confusing.
+
+1056
+00:51:47,840 --> 00:51:50,040
+What&#39;s a good rule of thumb.
+
+1057
+00:51:50,040 --> 00:51:54,550
+Well, I actually recommend that you use
+
+1058
+00:51:54,550 --> 00:51:56,980
+a pretty large number for your relative start.
+
+1059
+00:51:56,980 --> 00:51:59,590
+So something like negative 90 or negative 60
+
+1060
+00:51:59,590 --> 00:52:00,870
+or something like that.
+
+1061
+00:52:00,870 --> 00:52:03,520
+And excuse me, this PowerPoint is not updated.
+
+1062
+00:52:03,520 --> 00:52:07,070
+So negative 90 days is not March 24th.
+
+1063
+00:52:07,070 --> 00:52:09,973
+Sorry, I&#39;m recycling a PowerPoint presentation here,
+
+1064
+00:52:12,070 --> 00:52:16,350
+but you say relative negative 90 days relative
+
+1065
+00:52:17,840 --> 00:52:21,470
+into maybe just what plus one, which is tomorrow.
+
+1066
+00:52:21,470 --> 00:52:22,650
+You don&#39;t have to put in the plus.
+
+1067
+00:52:22,650 --> 00:52:24,400
+You can just put in the number one.
+
+1068
+00:52:25,630 --> 00:52:29,290
+And negative 90 days to today.
+
+1069
+00:52:29,290 --> 00:52:34,260
+Well, that covers 91 days that will cover about four months
+
+1070
+00:52:34,260 --> 00:52:35,880
+I think in this situation,
+
+1071
+00:52:35,880 --> 00:52:38,380
+it will cover two quarters in one year.
+
+1072
+00:52:38,380 --> 00:52:40,410
+So any data that was entered in the last 91 days,
+
+1073
+00:52:40,410 --> 00:52:41,540
+in the last four months,
+
+1074
+00:52:41,540 --> 00:52:43,570
+the last two quarters of the last year
+
+1075
+00:52:43,570 --> 00:52:46,443
+would be included in this validation check.
+
+1076
+00:52:50,230 --> 00:52:52,840
+The second to last step is that you have to choose
+
+1077
+00:52:52,840 --> 00:52:54,500
+the validation rule group
+
+1078
+00:52:57,480 --> 00:53:01,653
+or you can add your validation rules one at a time.
+
+1079
+00:53:05,890 --> 00:53:10,890
+You can also say if you want to send notifications.
+
+1080
+00:53:11,670 --> 00:53:14,150
+So again, notifications, where does this come from?
+
+1081
+00:53:14,150 --> 00:53:18,150
+This means that validation of role notification
+
+1082
+00:53:18,150 --> 00:53:20,790
+that you configured earlier would be sent out
+
+1083
+00:53:20,790 --> 00:53:25,070
+and notifications can be sent via email or SMS or both
+
+1084
+00:53:25,070 --> 00:53:28,690
+if the notification is configured
+
+1085
+00:53:28,690 --> 00:53:32,920
+and you configured an email server to your DHIS2,
+
+1086
+00:53:32,920 --> 00:53:36,040
+you configured an SMS gateway to your DHIS2
+
+1087
+00:53:36,040 --> 00:53:38,760
+and the user who is receiving that notification
+
+1088
+00:53:38,760 --> 00:53:42,430
+is configured to receive emails and SMS.
+
+1089
+00:53:42,430 --> 00:53:44,220
+You have to do all four of these
+
+1090
+00:53:44,220 --> 00:53:47,503
+in order for anyone to receive any notifications from DHIS2.
+
+1091
+00:53:48,640 --> 00:53:50,110
+There&#39;s documentation online
+
+1092
+00:53:50,110 --> 00:53:52,640
+about configuring email servers and SMS gateway.
+
+1093
+00:53:52,640 --> 00:53:54,370
+So we won&#39;t get into that today,
+
+1094
+00:53:54,370 --> 00:53:55,490
+but if you&#39;re struggling with that,
+
+1095
+00:53:55,490 --> 00:53:56,930
+please send us a message and we can point you
+
+1096
+00:53:56,930 --> 00:54:00,000
+to the documentation and support material for that.
+
+1097
+00:54:00,000 --> 00:54:01,673
+Or of course answer your questions.
+
+1098
+00:54:02,860 --> 00:54:04,940
+The last one is persists results.
+
+1099
+00:54:04,940 --> 00:54:07,560
+Now, if you take this persist results,
+
+1100
+00:54:07,560 --> 00:54:11,640
+what it will do is it will save any of the validation rules
+
+1101
+00:54:11,640 --> 00:54:12,713
+that are triggered.
+
+1102
+00:54:13,800 --> 00:54:17,770
+And when this job runs automatically,
+
+1103
+00:54:17,770 --> 00:54:19,730
+in this case it&#39;s running every day at midnight,
+
+1104
+00:54:19,730 --> 00:54:21,880
+when this runs automatically,
+
+1105
+00:54:21,880 --> 00:54:24,590
+any validations that have already been triggered
+
+1106
+00:54:24,590 --> 00:54:26,740
+will not be shown.
+
+1107
+00:54:26,740 --> 00:54:28,670
+It will only show the new ones.
+
+1108
+00:54:28,670 --> 00:54:29,503
+Why is that?
+
+1109
+00:54:29,503 --> 00:54:32,350
+It&#39;s because it&#39;s persisting the results of the old one.
+
+1110
+00:54:32,350 --> 00:54:35,358
+Now, if you are a DHIS2 expert,
+
+1111
+00:54:35,358 --> 00:54:38,050
+and you know how to query the API,
+
+1112
+00:54:38,050 --> 00:54:41,400
+these validation rule results are actually saved
+
+1113
+00:54:41,400 --> 00:54:42,660
+in a data table.
+
+1114
+00:54:42,660 --> 00:54:44,330
+So you can actually start to build analytics
+
+1115
+00:54:44,330 --> 00:54:45,670
+around these if you want.
+
+1116
+00:54:45,670 --> 00:54:48,030
+That&#39;s just for the folks who are DHIS2 experts
+
+1117
+00:54:48,030 --> 00:54:49,920
+and are familiar with the API.
+
+1118
+00:54:49,920 --> 00:54:51,910
+If you&#39;re not, you just need to remember
+
+1119
+00:54:51,910 --> 00:54:54,230
+that the functionality here is saving
+
+1120
+00:54:54,230 --> 00:54:56,100
+the validation rule results,
+
+1121
+00:54:56,100 --> 00:54:59,690
+and when that validation job runs again,
+
+1122
+00:54:59,690 --> 00:55:02,440
+it will only show you the new validation rules
+
+1123
+00:55:02,440 --> 00:55:04,413
+that have not been shown in the past.
+
+1124
+00:55:08,020 --> 00:55:10,180
+One other consideration is that if you&#39;re having
+
+1125
+00:55:10,180 --> 00:55:12,510
+a lot of validation rule notifications triggered,
+
+1126
+00:55:12,510 --> 00:55:13,940
+these are being saved onto your server.
+
+1127
+00:55:13,940 --> 00:55:16,083
+It could take up some server space.
+
+1128
+00:55:18,480 --> 00:55:23,480
+All right, I&#39;m going to skip this for now.
+
+1129
+00:55:25,609 --> 00:55:28,695
+And I&#39;m gonna show you quickly some examples here.
+
+1130
+00:55:28,695 --> 00:55:30,940
+I know we&#39;re running a little bit over time,
+
+1131
+00:55:30,940 --> 00:55:32,900
+but let&#39;s take a look at this.
+
+1132
+00:55:32,900 --> 00:55:37,070
+So this is an example that I made for our demo database.
+
+1133
+00:55:37,070 --> 00:55:41,350
+And you can see that I made the ANC validation
+
+1134
+00:55:41,350 --> 00:55:44,293
+or notifications run for the whole country.
+
+1135
+00:55:45,400 --> 00:55:48,030
+This was just two validation rules.
+
+1136
+00:55:48,030 --> 00:55:49,580
+And what did it do?
+
+1137
+00:55:49,580 --> 00:55:53,930
+Well, it actually ended up sending me 19 emails.
+
+1138
+00:55:53,930 --> 00:55:56,150
+And in those emails contained,
+
+1139
+00:55:56,150 --> 00:56:00,023
+2000 different validation rule alerts.
+
+1140
+00:56:01,010 --> 00:56:02,803
+Now, is that useful?
+
+1141
+00:56:03,860 --> 00:56:07,570
+Well, certainly receiving 19 automatic emails
+
+1142
+00:56:07,570 --> 00:56:08,420
+is not useful.
+
+1143
+00:56:08,420 --> 00:56:11,680
+And receiving 2000 alerts is completely unuseful.
+
+1144
+00:56:11,680 --> 00:56:14,650
+There&#39;s no way that anyone would be able to respond
+
+1145
+00:56:14,650 --> 00:56:16,283
+to this or do anything about it.
+
+1146
+00:56:17,680 --> 00:56:18,780
+What do we need to do?
+
+1147
+00:56:19,680 --> 00:56:23,830
+We need to make sure that our messages are clear
+
+1148
+00:56:23,830 --> 00:56:26,890
+and concise and are in a manageable amount.
+
+1149
+00:56:26,890 --> 00:56:31,890
+Now, here&#39;s a look at what the actual email said.
+
+1150
+00:56:32,630 --> 00:56:35,033
+So looking in the email itself,
+
+1151
+00:56:37,993 --> 00:56:41,959
+it says that this health facility has produced
+
+1152
+00:56:41,959 --> 00:56:46,959
+an alert for ANC2 which is less than or equal to ANC1
+
+1153
+00:56:48,720 --> 00:56:50,030
+for this month.
+
+1154
+00:56:50,030 --> 00:56:51,980
+ANC2 can not be greater than ANC1.
+
+1155
+00:56:51,980 --> 00:56:56,580
+So the message is useful, but I received 2000 of them.
+
+1156
+00:56:56,580 --> 00:56:58,350
+Now, can I do anything about that?
+
+1157
+00:56:58,350 --> 00:56:59,927
+Really? No, you cannot.
+
+1158
+00:57:02,790 --> 00:57:05,030
+So we need to ask ourselves,
+
+1159
+00:57:05,030 --> 00:57:06,420
+we have to be very careful about this.
+
+1160
+00:57:06,420 --> 00:57:09,010
+How and whom can automatic validation,
+
+1161
+00:57:09,010 --> 00:57:11,243
+emails and alerts be useful?
+
+1162
+00:57:12,130 --> 00:57:14,040
+Here is a good example from Rwanda.
+
+1163
+00:57:14,040 --> 00:57:17,180
+Now, Rwanda is using DHIS2 validation notifications
+
+1164
+00:57:17,180 --> 00:57:20,401
+for outlier detection.
+
+1165
+00:57:20,401 --> 00:57:24,140
+And we&#39;re gonna cover how to do that in the next session,
+
+1166
+00:57:24,140 --> 00:57:25,370
+after our break.
+
+1167
+00:57:25,370 --> 00:57:27,020
+But essentially what they&#39;ve done here.
+
+1168
+00:57:27,020 --> 00:57:27,853
+And you can see,
+
+1169
+00:57:27,853 --> 00:57:31,800
+this is an actual email from the Rwandan demo database.
+
+1170
+00:57:31,800 --> 00:57:35,060
+This is not real data, but this is their demo database.
+
+1171
+00:57:35,060 --> 00:57:36,510
+You can see that
+
+1172
+00:57:39,070 --> 00:57:43,350
+this person received 23 high priority validation rules
+
+1173
+00:57:43,350 --> 00:57:44,880
+in their email.
+
+1174
+00:57:44,880 --> 00:57:46,560
+And there&#39;s a clear message.
+
+1175
+00:57:46,560 --> 00:57:48,890
+So as validation for Penta 3 outlier,
+
+1176
+00:57:48,890 --> 00:57:50,860
+data validation rule has been detected
+
+1177
+00:57:50,860 --> 00:57:52,953
+at this health facility on this date,
+
+1178
+00:57:56,170 --> 00:57:58,680
+for this month or for that year.
+
+1179
+00:57:58,680 --> 00:58:02,110
+Please confirm the value is correct for Penta 3.
+
+1180
+00:58:02,110 --> 00:58:04,120
+And they only received 20 notifications.
+
+1181
+00:58:04,120 --> 00:58:06,330
+Now, this person is at district level.
+
+1182
+00:58:06,330 --> 00:58:09,850
+These health facilities that are producing the alerts
+
+1183
+00:58:09,850 --> 00:58:13,790
+are from their health facilities.
+
+1184
+00:58:13,790 --> 00:58:15,730
+This is the amount of notifications
+
+1185
+00:58:15,730 --> 00:58:17,720
+that they can do something about.
+
+1186
+00:58:17,720 --> 00:58:19,820
+Also the message is quite clear.
+
+1187
+00:58:19,820 --> 00:58:22,790
+It&#39;s telling them exactly where and when the problem is.
+
+1188
+00:58:22,790 --> 00:58:24,270
+So if you&#39;re a district health officer,
+
+1189
+00:58:24,270 --> 00:58:26,187
+you&#39;re able to receive this email and you&#39;re saying,
+
+1190
+00:58:26,187 --> 00:58:29,680
+&quot;Okay, I need to go in and I need to check these 23 values.&quot;
+
+1191
+00:58:29,680 --> 00:58:30,640
+How long does that take?
+
+1192
+00:58:30,640 --> 00:58:32,380
+I don&#39;t know, maybe a few hours.
+
+1193
+00:58:32,380 --> 00:58:33,750
+Maybe it could take a day.
+
+1194
+00:58:33,750 --> 00:58:36,460
+But you need to go in and correct these values.
+
+1195
+00:58:36,460 --> 00:58:39,020
+These are suspicious values that need to be corrected.
+
+1196
+00:58:39,020 --> 00:58:41,990
+This is a great example from what Rwanda has set-up
+
+1197
+00:58:41,990 --> 00:58:44,600
+Here is another one from Cameroon.
+
+1198
+00:58:44,600 --> 00:58:47,910
+Cameroon is still experimenting with this,
+
+1199
+00:58:47,910 --> 00:58:51,070
+but they have set up some basic alerts
+
+1200
+00:58:51,070 --> 00:58:53,190
+for disease surveillance.
+
+1201
+00:58:53,190 --> 00:58:54,570
+And so in this case,
+
+1202
+00:58:54,570 --> 00:58:57,778
+you see that I won&#39;t translate it for you.
+
+1203
+00:58:57,778 --> 00:58:58,910
+Those are your friends.
+
+1204
+00:58:58,910 --> 00:59:01,680
+I think there&#39;s a bunch of Cameroonians on the call as well.
+
+1205
+00:59:01,680 --> 00:59:02,853
+This is just a test.
+
+1206
+00:59:04,030 --> 00:59:07,320
+I don&#39;t believe that this is in production yet,
+
+1207
+00:59:07,320 --> 00:59:11,560
+but you have at least tested using validation rules
+
+1208
+00:59:11,560 --> 00:59:12,870
+for disease surveillance.
+
+1209
+00:59:12,870 --> 00:59:15,580
+So you are able to send alerts and notifications
+
+1210
+00:59:15,580 --> 00:59:19,290
+to those who are on disease surveillance response teams,
+
+1211
+00:59:19,290 --> 00:59:22,240
+when there is some outbreaker number of cases
+
+1212
+00:59:22,240 --> 00:59:23,730
+that needs to be investigated.
+
+1213
+00:59:23,730 --> 00:59:26,820
+So another really good example of how this can be used
+
+1214
+00:59:26,820 --> 00:59:27,653
+from Cameroon.
+
+1215
+00:59:27,653 --> 00:59:30,720
+And again, the person&#39;s only receiving four notifications.
+
+1216
+00:59:30,720 --> 00:59:32,330
+That&#39;s an actionable number.
+
+1217
+00:59:32,330 --> 00:59:36,050
+That&#39;s not 2000 notification.
+
+1218
+00:59:36,050 --> 00:59:40,060
+So the last point to be made is that,
+
+1219
+00:59:40,060 --> 00:59:41,330
+again, these notifications
+
+1220
+00:59:41,330 --> 00:59:42,380
+and everything need to be built
+
+1221
+00:59:42,380 --> 00:59:44,060
+into your standard operating procedures,
+
+1222
+00:59:44,060 --> 00:59:46,740
+and you need to test them thoroughly.
+
+1223
+00:59:46,740 --> 00:59:48,117
+So that is the end.
+

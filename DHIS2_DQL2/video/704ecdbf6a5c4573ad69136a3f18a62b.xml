@@ -1,0 +1,9 @@
+<video youtube="1.00:sNfCzYwwc0Q" url_name="704ecdbf6a5c4573ad69136a3f18a62b" sub="" transcripts="{&quot;en&quot;: &quot;be3b3dc0-ed45-44d8-85d6-ca620e109667-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Consistency - Time" download_track="true" download_video="true" edx_video_id="be3b3dc0-ed45-44d8-85d6-ca620e109667" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/2.1.3+-+Consistency+-+Time.mp4&quot;]" youtube_id_1_0="sNfCzYwwc0Q">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/2.1.3+-+Consistency+-+Time.mp4"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="be3b3dc0-ed45-44d8-85d6-ca620e109667-en.srt"/>
+</video>

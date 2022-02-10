@@ -1,0 +1,19 @@
+<problem display_name="Consistency - Time Exercise 2" markdown="&gt;&gt;The dark blue line shows the trend over which months? (2 attempts) &lt;&lt;&#10;&#10;( ) A. Values for February of last year to April of this year.&#10;( ) B. Values for January of last year to January of this year.&#10;(x) C. Values for February of last year to January of this year.&#10;( ) D. Values for December of last year to January of this year.      &#10;&#10;[explanation]&#10;The dark blue lines show values for February of last year to January of this year.  &#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <label>The dark blue line shows the trend over which months? (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Values for February of last year to April of this year.</choice>
+    <choice correct="false">B. Values for January of last year to January of this year.</choice>
+    <choice correct="true">C. Values for February of last year to January of this year.</choice>
+    <choice correct="false">D. Values for December of last year to January of this year.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The dark blue lines show values for February of last year to January of this year.  </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

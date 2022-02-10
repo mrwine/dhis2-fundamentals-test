@@ -1,0 +1,34 @@
+<style> 
+  .text {
+    font-size: 16px !important;
+  }
+  .line {
+    width: 33%;
+		margin-left: auto;
+		margin-right: auto;
+  }
+</style>
+<h3>Exercise Part 2: Using Predictor Rules to Identify Outliers</h3>
+<p class= "text">In the second part of this exercise, you will create a Validation Rule using the Predictor that you configured in Part 1, and configure a Validation Rule Notification. For additional guidance on how to complete these steps, please refer back to the Standard Deviation Predictors video in Module 3.2.1. </p>
+<p class= "text"><i>Note: if you are doing this configuration in a live DHIS2 system instead of the DHIS2 Data Quality Config instance, please see the special instructions at the bottom of this page.</i></p>
+<ol>
+  <li>Create a Validation Rule to check if ANC1 is greater than your ANC1 outlier threshold. Call the validation rule: <i>ANC1 Outlier Threshold – YourName</i> - see the image below as an example.</li>
+ <img src="/static/3.2.2_optionaleximg1.png" alt="alternatetext">
+  <li>Create a Validation Rule Group including your ANC1 Outlier Threshold. Call the Validation Rule Group: <i>ANC1 Outlier Threshold – YourName</i>- see the image below as an example.</li>
+ <img src="/static/3.2.2_optionaleximg2.png" alt="alternatetext">  
+  <li>Create a Validation Rule Notification for your Validation Rule Group. Call the Notification:  <i>ANC1 Outlier Threshold – YourName</i>. You will have your own user group that you were added to as part of signing up for this system "User Group - yourEmail." Use this user group now to decide who receives the validation notification under the heading “Recipient user groups.” The notification should look like the images below when completed. </li>
+   <img src="/static/3.2.2_optionaleximg3.png" alt="alternatetext">  
+   <img src="/static/3.2.2_optionaleximg4.png" alt="alternatetext">  
+  <li>Check your Rule and Notification by running a Validation Rule Analysis:
+  <ol>
+    <li>Run it at the national level</li>
+    <li>Run it for the period January 1, 2021 – June 30, 2021</li>
+    <li>Select the Validation Rule Group you have created</li>
+    <li>Ensure “Send notifications” is selected. To receive the notification, you must have your email entered within your user profile.</li>
+    <li>Select Validate to run the analysis. Check your result in DHIS2.</li>
+    <li>Check your email, you should receive the notification as well.</li>
+    </ol> 
+    </li>
+</ol>
+ <img src="/static/3.2.2_optionaleximg5.png" alt="alternatetext">
+<p>Similar to predictors, the running of validation rules and sending notifications can be automated through the use of the scheduler; however you would use the job type “Monitoring.”</p>

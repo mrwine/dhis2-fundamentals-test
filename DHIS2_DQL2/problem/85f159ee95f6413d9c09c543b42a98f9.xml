@@ -1,0 +1,20 @@
+<problem display_name="Question 4" markdown="Review the Consistency - Data dashboard. Reset the Period to September, 2020. Which district had the most suspicious Penta 1 to Penta 3 dropout rate for the last 12 months?&#10;&gt;&gt;Select the one correct answer: (2 attempts)&lt;&lt;&#10;&#10;( ) A. A-4&#10;( ) B. B-4&#10;( ) C. C-4&#10;(x) D. D-4             &#10;[explanation]&#10;The correct answer is D-4.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Review the Consistency - Data dashboard. Reset the Period to September, 2020. Which district had the most suspicious Penta 1 to Penta 3 dropout rate for the last 12 months?</p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. A-4</choice>
+    <choice correct="false">B. B-4</choice>
+    <choice correct="false">C. C-4</choice>
+    <choice correct="true">D. D-4</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is D-4.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,20 @@
+<problem display_name="Question 1" markdown="Which of the following scenarios are where automated transfer of tracker data to aggregate data set could be a considered solution? &#10;&#10;&gt;&gt;Select all answers that apply.&lt;&lt;&#10;&#10;[x] A. Phased scale up of tracker: certain facilities/districts start implementing individual data entry (Tracker), the other facilities retain paper-based data entry forms.&#10;[x] B. Tracker system contains sensitive personal data that needs to be well protected.&#10;[x] C. Tracker reports need to be closed for a given reporting period, where no further edits or new events can be made.&#10;[x] D. Pivoting analysis data by age and sex dimensions in analytics apps is required.&#10;&#10;[explanation]&#10;All are correct. Data obtained from individual data records (tracker) improves the quality of reporting. Aggregate data is easier to dimensionalize in analytics apps. System performance is less affected when processing aggregate data. When it comes to protecting personal data, it is possible to restrict access to such data in tracker on user level, however transferring data to aggregate data sets adds another level of protection. Closing reporting periods is only supported for aggregate reporting.&#10;[explanation]" max_attempts="2">
+<choiceresponse>
+  <p>Which of the following scenarios are where automated transfer of tracker data to aggregate data set could be a considered solution? </p>
+<label>Select all answers that apply.</label>
+<checkboxgroup>
+    <choice correct="true">A. Phased scale up of tracker: certain facilities/districts start implementing individual data entry (Tracker), the other facilities retain paper-based data entry forms.</choice>
+    <choice correct="true">B. Tracker system contains sensitive personal data that needs to be well protected.</choice>
+    <choice correct="true">C. Tracker reports need to be closed for a given reporting period, where no further edits or new events can be made.</choice>
+    <choice correct="true">D. Pivoting analysis data by age and sex dimensions in analytics apps is required.</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>All are correct. Data obtained from individual data records (tracker) improves the quality of reporting. Aggregate data is easier to dimensionalize in analytics apps. System performance is less affected when processing aggregate data. When it comes to protecting personal data, it is possible to restrict access to such data in tracker on user level, however transferring data to aggregate data sets adds another level of protection. Closing reporting periods is only supported for aggregate reporting.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

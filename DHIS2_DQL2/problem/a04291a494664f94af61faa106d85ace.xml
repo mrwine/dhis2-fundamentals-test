@@ -1,0 +1,21 @@
+<problem display_name="Question 10" markdown="Stay on the outliers dashboard.  Do not change the settings except for the Options. Set the options as follows: under Display columns, select Outliers. Set outlier filter to Modified Z-Score, followed by Extreme. Keep the Dimensions as before. In the table, sort by Outlier column from high to low.  &#10;&#10;Which facility has the highest outlier in the resulting table?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts)&lt;&lt;&#10;&#10;( ) A. Facility 543&#10;( ) B. Facility 565&#10;(x) C. Facility 553&#10;( ) D. Facility 478&#10;&#10;[explanation]&#10;The correct answer is Facility 553. &#10;[explanation]&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Stay on the outliers dashboard.  Do not change the settings except for the Options. Set the options as follows: under Display columns, select Outliers. Set outlier filter to Modified Z-Score, followed by Extreme. Keep the Dimensions as before. In the table, sort by Outlier column from high to low.  </p>
+<p>Which facility has the highest outlier in the resulting table?</p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Facility 543</choice>
+    <choice correct="false">B. Facility 565</choice>
+    <choice correct="true">C. Facility 553</choice>
+    <choice correct="false">D. Facility 478</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is Facility 553. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,10 @@
+<video youtube="1.00:duZrMXOyucI" url_name="65882252de1f4301aeeea72c4e570ab7" sub="" transcripts="{&quot;en&quot;: &quot;3522b70a-893c-4de8-b9d0-bcbe449d38f0-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Validation rules and notifications" download_track="true" download_video="true" edx_video_id="3522b70a-893c-4de8-b9d0-bcbe449d38f0" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/3.1.1+-+Validation+rules+and+notifications.mp4&quot;]" show_captions="false" youtube_id_1_0="duZrMXOyucI">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/3.1.1+-+Validation+rules+and+notifications.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="3522b70a-893c-4de8-b9d0-bcbe449d38f0-en.srt"/>
+</video>

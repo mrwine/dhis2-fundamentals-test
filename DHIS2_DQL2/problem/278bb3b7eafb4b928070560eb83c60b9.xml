@@ -1,0 +1,18 @@
+<problem display_name="Graded question - Poor Form Source Design" markdown="&gt;&gt;What is the main issue identified in the above form? (2 attempts)&lt;&lt;&#10;&#10;( ) A. There are too many age disaggregations.&#10;(x) B. There should not be any sex disaggregations.&#10;( ) C. The data elements are sequenced poorly.&#10;&#10;[explanation]&#10;The main issue in this form is B, because You do not need to collect any information on males related to these services. We cannot say that there are too many age disaggregations because this is subjective and they may need this information to accurately measure adolescent pregnancy. Although data elements might be sequenced poorly, that is not the main problem with this form.&#10;[explanation]&#10;&#10;&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <label>What is the main issue identified in the above form? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. There are too many age disaggregations.</choice>
+    <choice correct="true">B. There should not be any sex disaggregations.</choice>
+    <choice correct="false">C. The data elements are sequenced poorly.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The main issue in this form is B, because You do not need to collect any information on males related to these services. We cannot say that there are too many age disaggregations because this is subjective and they may need this information to accurately measure adolescent pregnancy. Although data elements might be sequenced poorly, that is not the main problem with this form.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

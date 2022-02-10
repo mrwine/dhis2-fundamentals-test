@@ -1,0 +1,63 @@
+{
+    "GRADER": [
+        {
+            "drop_count": 0, 
+            "min_count": 1, 
+            "short_label": "Exercise M1", 
+            "type": "Reflective Exercise M1", 
+            "weight": 0.05
+        }, 
+        {
+            "drop_count": 0, 
+            "min_count": 1, 
+            "short_label": "Questions M2", 
+            "type": "Questions M2", 
+            "weight": 0.1
+        }, 
+        {
+            "drop_count": 0, 
+            "min_count": 3, 
+            "short_label": "Exercises M3", 
+            "type": "Exercises M3", 
+            "weight": 0.1
+        }, 
+        {
+            "drop_count": 0, 
+            "min_count": 1, 
+            "short_label": "Questions M4", 
+            "type": "Questions M4", 
+            "weight": 0.05
+        }, 
+        {
+            "drop_count": 0, 
+            "min_count": 4, 
+            "short_label": "Questions M5", 
+            "type": "Questions M5", 
+            "weight": 0.15
+        }, 
+        {
+            "drop_count": 0, 
+            "min_count": 1, 
+            "short_label": "Questions M6 ", 
+            "type": "Questions M6 ", 
+            "weight": 0.1
+        }, 
+        {
+            "drop_count": 0, 
+            "min_count": 1, 
+            "short_label": "FE", 
+            "type": "FinalExam", 
+            "weight": 0.45
+        }, 
+        {
+            "drop_count": 0, 
+            "min_count": 0, 
+            "short_label": "Entrance", 
+            "type": "Entrance Exam", 
+            "weight": 0.0
+        }
+    ], 
+    "GRADE_CUTOFFS": {
+        "Pass": 0.7
+    }
+}

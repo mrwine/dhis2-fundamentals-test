@@ -1,0 +1,10 @@
+<video youtube="1.00:jC0woHJG5HU" url_name="fd67f7c0c6674f4cbd5de5f6e566f530" sub="" transcripts="{&quot;en&quot;: &quot;cbb363fe-ddc1-453f-8cef-f292b17146e3-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Standard Deviation Predictors" download_track="true" download_video="true" edx_video_id="cbb363fe-ddc1-453f-8cef-f292b17146e3" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/3.2.1+Standard+Deviation+Predictors+-+Data+Quality+Academy.mp4&quot;]" show_captions="false" youtube_id_1_0="jC0woHJG5HU">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/3.2.1+Standard+Deviation+Predictors+-+Data+Quality+Academy.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="cbb363fe-ddc1-453f-8cef-f292b17146e3-en.srt"/>
+</video>

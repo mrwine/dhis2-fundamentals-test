@@ -1,0 +1,21 @@
+<problem display_name="Question 3" markdown="Set the Organisation Unit Boundary to &quot;Other.&quot; Select Region D, followed by District D-1. Ensure the disaggregation is now set to &quot;Facility.&quot; Set the options as follows: Under “display columns” select Missing data, and ensure the Outlier filter is Off. The rows should be sorted from largest to smallest using the &quot;Missing&quot; data column. &#10;&#10;Within District D-1, which health facility is the largest amount of Confirmed malaria cases data missing?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts)&lt;&lt;&#10;&#10;(x) A. Facility 222&#10;( ) B. Facility 565&#10;( ) C. Facility 581&#10;( ) D. Facility 449              &#10;[explanation]&#10;The correct answer is Facility 222. The estimated number total for the missing data is 46288 cases based on the information that has been reported. &#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Set the Organisation Unit Boundary to "Other." Select Region D, followed by District D-1. Ensure the disaggregation is now set to "Facility." Set the options as follows: Under “display columns” select Missing data, and ensure the Outlier filter is Off. The rows should be sorted from largest to smallest using the "Missing" data column. </p>
+<p>Within District D-1, which health facility is the largest amount of Confirmed malaria cases data missing?</p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. Facility 222</choice>
+    <choice correct="false">B. Facility 565</choice>
+    <choice correct="false">C. Facility 581</choice>
+    <choice correct="false">D. Facility 449</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is Facility 222. The estimated number total for the missing data is 46288 cases based on the information that has been reported. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

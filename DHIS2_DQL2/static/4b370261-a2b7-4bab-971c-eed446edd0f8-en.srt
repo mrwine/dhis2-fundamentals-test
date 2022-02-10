@@ -1,0 +1,732 @@
+0
+00:00:05,350 --> 00:00:08,020
+- With this video, I&#39;m going to demonstrate
+
+1
+00:00:08,020 --> 00:00:11,618
+how to use the outliers page of the dashboard,
+
+2
+00:00:11,618 --> 00:00:16,370
+of the WHO Data Quality Tool.
+
+3
+00:00:16,370 --> 00:00:21,370
+We&#39;ve set the dashboard with data set to core,
+
+4
+00:00:21,760 --> 00:00:24,400
+period set to June,
+
+5
+00:00:24,400 --> 00:00:27,690
+organization unit with a national boundary,
+
+6
+00:00:27,690 --> 00:00:29,993
+and disaggregation to district.
+
+7
+00:00:31,130 --> 00:00:34,590
+So if we click on the outliers tab,
+
+8
+00:00:34,590 --> 00:00:39,333
+and wait a bit for the moving rectangle to disappear,
+
+9
+00:00:40,260 --> 00:00:43,683
+we will see a result table,
+
+10
+00:00:44,530 --> 00:00:45,590
+so that we can see
+
+11
+00:00:45,590 --> 00:00:48,410
+all of the result table, it&#39;s best to make
+
+12
+00:00:48,410 --> 00:00:51,040
+the settings window disappear, by clicking
+
+13
+00:00:51,040 --> 00:00:52,913
+on the settings icon.
+
+14
+00:00:54,490 --> 00:00:58,750
+The result table has a large number of rows, as you see.
+
+15
+00:00:58,750 --> 00:01:03,610
+And in fact, it even spills over into more than one page.
+
+16
+00:01:04,760 --> 00:01:09,760
+And the result table consists of rows like this,
+
+17
+00:01:10,490 --> 00:01:14,340
+with 12 monthly values,
+
+18
+00:01:14,340 --> 00:01:17,410
+and one or more of the cells,
+
+19
+00:01:17,410 --> 00:01:21,473
+one or more of the values is highlighted in red.
+
+20
+00:01:22,370 --> 00:01:26,000
+These values highlighted in red are outliers.
+
+21
+00:01:26,000 --> 00:01:29,330
+They are suspicious because they are different from the
+
+22
+00:01:29,330 --> 00:01:32,253
+values reported for other months.
+
+23
+00:01:33,680 --> 00:01:36,830
+We&#39;ve set this aggregation to district.
+
+24
+00:01:36,830 --> 00:01:41,830
+So each row presents results for one district,
+
+25
+00:01:42,610 --> 00:01:45,870
+and for one indicator or data element.
+
+26
+00:01:45,870 --> 00:01:50,870
+And here you see the 12 monthly values leading up to
+
+27
+00:01:51,070 --> 00:01:55,343
+June of 2020, the period that we have selected.
+
+28
+00:01:56,680 --> 00:01:59,930
+If we want to see how different this value
+
+29
+00:01:59,930 --> 00:02:02,940
+is from the normal values,
+
+30
+00:02:02,940 --> 00:02:06,410
+the other values reported in other months,
+
+31
+00:02:06,410 --> 00:02:11,410
+we can use that menu at the end of the row
+
+32
+00:02:11,680 --> 00:02:13,513
+and select visualize.
+
+33
+00:02:15,330 --> 00:02:20,010
+We then see this chart showing that in January of 2020,
+
+34
+00:02:21,300 --> 00:02:25,660
+the ANC 1 visits of district B2 were quite different
+
+35
+00:02:25,660 --> 00:02:28,880
+from the values reported in other months.
+
+36
+00:02:28,880 --> 00:02:33,520
+This of course is that outlier that we found when looking
+
+37
+00:02:33,520 --> 00:02:38,520
+at the consistency time and consistency data pages
+
+38
+00:02:38,970 --> 00:02:42,240
+of the dashboard of the WHO Data Quality Tool.
+
+39
+00:02:42,240 --> 00:02:46,980
+So the same outlier keeps appearing in different ways
+
+40
+00:02:46,980 --> 00:02:49,510
+on the different dashboards.
+
+41
+00:02:49,510 --> 00:02:52,240
+And here we see how very different it is
+
+42
+00:02:52,240 --> 00:02:55,990
+from the ANC 1 visits reported in other months
+
+43
+00:02:55,990 --> 00:02:57,083
+by district B2.
+
+44
+00:02:58,010 --> 00:03:01,363
+We can make this chart disappear by clicking on close.
+
+45
+00:03:03,020 --> 00:03:05,420
+Notice this options button,
+
+46
+00:03:05,420 --> 00:03:09,650
+the options button allows you to reveal additional
+
+47
+00:03:09,650 --> 00:03:12,090
+information in your results table,
+
+48
+00:03:12,090 --> 00:03:15,113
+and it allows you to filter the results table.
+
+49
+00:03:16,560 --> 00:03:20,170
+One of the boxes in the options field,
+
+50
+00:03:20,170 --> 00:03:25,170
+options window, is this one to include the Z-score.
+
+51
+00:03:25,607 --> 00:03:29,270
+The Z-score as a measure of how suspicious
+
+52
+00:03:29,270 --> 00:03:33,340
+the red value is. The higher the Z-score,
+
+53
+00:03:33,340 --> 00:03:37,970
+the more suspicious it is, and a standard Z-score
+
+54
+00:03:37,970 --> 00:03:41,500
+of three or more is extremely suspicious.
+
+55
+00:03:41,500 --> 00:03:45,000
+So the, we see that this top row
+
+56
+00:03:46,659 --> 00:03:47,860
+of the result table has quite
+
+57
+00:03:47,860 --> 00:03:50,570
+a high value of the standard Z-score
+
+58
+00:03:50,570 --> 00:03:52,410
+and the modified Z-score,
+
+59
+00:03:52,410 --> 00:03:57,010
+which is simply another way of measuring how suspicious
+
+60
+00:03:57,010 --> 00:03:58,590
+that value is.
+
+61
+00:03:58,590 --> 00:04:03,170
+In fact, the tool automatically sorts these
+
+62
+00:04:03,170 --> 00:04:07,210
+suspicious values so that the most suspicious of all
+
+63
+00:04:07,210 --> 00:04:09,660
+is placed right at the top.
+
+64
+00:04:09,660 --> 00:04:14,325
+So the tool automatically finds the outliers that deserve
+
+65
+00:04:14,325 --> 00:04:16,423
+the most attention.
+
+66
+00:04:19,112 --> 00:04:22,460
+We can also filter this table.
+
+67
+00:04:22,460 --> 00:04:25,823
+Now we&#39;ve got so many rows and as I say,
+
+68
+00:04:26,670 --> 00:04:31,670
+it continues on multiple pages, three pages
+
+69
+00:04:33,270 --> 00:04:37,130
+we can in order to find only the most
+
+70
+00:04:37,130 --> 00:04:42,130
+suspicious values, we can filter by clicking as follows.
+
+71
+00:04:42,420 --> 00:04:45,743
+First, we say, we only want to see the outliers.
+
+72
+00:04:46,770 --> 00:04:48,910
+We will only want to see those that
+
+73
+00:04:48,910 --> 00:04:52,973
+have a modified Z-score that&#39;s extreme.
+
+74
+00:04:54,150 --> 00:04:59,150
+What this does is it only shows you the rows which have a
+
+75
+00:04:59,310 --> 00:05:03,340
+modified Z-score of greater than five
+
+76
+00:05:03,340 --> 00:05:08,340
+and notice that there is a much smaller results table
+
+77
+00:05:08,360 --> 00:05:10,940
+when we limit it to rows with
+
+78
+00:05:10,940 --> 00:05:13,893
+a modified Z-score of greater than five.
+
+79
+00:05:15,970 --> 00:05:17,840
+There&#39;s one other thing that you can do
+
+80
+00:05:17,840 --> 00:05:22,840
+with the outlier page of the dashboard,
+
+81
+00:05:22,870 --> 00:05:26,070
+and that is you can drill down.
+
+82
+00:05:26,070 --> 00:05:28,750
+What do we mean by drill down?
+
+83
+00:05:28,750 --> 00:05:30,280
+Well at present the,
+
+84
+00:05:30,280 --> 00:05:34,540
+each row shows you the values for the district.
+
+85
+00:05:34,540 --> 00:05:38,390
+And we may want to know which specific health facility or
+
+86
+00:05:38,390 --> 00:05:43,390
+health facilities is responsible for this extreme outlier.
+
+87
+00:05:44,970 --> 00:05:47,500
+And to do that, we click on the menu
+
+88
+00:05:47,500 --> 00:05:52,210
+at the end of the row and select drill down.
+
+89
+00:05:52,210 --> 00:05:53,453
+Notice what happens.
+
+90
+00:05:54,420 --> 00:05:59,400
+We get a table which has rows,
+
+91
+00:05:59,400 --> 00:06:01,363
+all for district B2,
+
+92
+00:06:03,440 --> 00:06:08,180
+but each row is for one health facility in district B2.
+
+93
+00:06:08,180 --> 00:06:13,040
+We could filter this if we only wanted to see the rows
+
+94
+00:06:13,040 --> 00:06:17,060
+that had very high modified Z-scores.
+
+95
+00:06:17,060 --> 00:06:18,550
+And right at the top,
+
+96
+00:06:18,550 --> 00:06:22,800
+we see that facility 147,
+
+97
+00:06:22,800 --> 00:06:24,370
+is the one that reported
+
+98
+00:06:24,370 --> 00:06:28,940
+35,888 first ANC visits.
+
+99
+00:06:28,940 --> 00:06:32,170
+And compared to the values reported in other months,
+
+100
+00:06:32,170 --> 00:06:35,670
+we see that this is almost certainly an error.
+
+101
+00:06:35,670 --> 00:06:40,000
+Perhaps some people added some extra eights when this,
+
+102
+00:06:40,000 --> 00:06:41,960
+when these data were entered.
+
+103
+00:06:41,960 --> 00:06:46,896
+And this is why this extreme outlier has appeared in the
+
+104
+00:06:46,896 --> 00:06:50,003
+dataset. In fact, if we visualized it,
+
+105
+00:06:51,400 --> 00:06:55,163
+we&#39;d see this really very suspicious chart.
+
+106
+00:06:56,330 --> 00:06:59,250
+There&#39;s another thing we can do with this menu
+
+107
+00:06:59,250 --> 00:07:00,870
+at the end of the row.
+
+108
+00:07:00,870 --> 00:07:04,870
+And that is we can actually send a message through
+
+109
+00:07:04,870 --> 00:07:08,520
+the dhis2 internal messaging service,
+
+110
+00:07:08,520 --> 00:07:13,520
+and we can contact the person who&#39;s responsible for the data
+
+111
+00:07:13,590 --> 00:07:15,830
+in that district.
+
+112
+00:07:15,830 --> 00:07:20,370
+So we could select the data manager for district B2
+
+113
+00:07:21,310 --> 00:07:24,600
+and type a message in here
+
+114
+00:07:27,600 --> 00:07:31,950
+We want to specify the, the health facility, the dates,
+
+115
+00:07:31,950 --> 00:07:35,360
+the value, and ask them to please report back.
+
+116
+00:07:35,360 --> 00:07:37,653
+And then we could send this message.
+
+117
+00:07:39,480 --> 00:07:43,693
+Through the dhis2 internal messaging service.
+
+118
+00:07:45,780 --> 00:07:50,780
+Notice that some of the cells of the results table are
+
+119
+00:07:51,330 --> 00:07:55,323
+colored pale yellow and have missing values.
+
+120
+00:07:57,690 --> 00:08:01,140
+Missing values are highlighted in this way.
+
+121
+00:08:01,140 --> 00:08:04,760
+And the outlier page can also be used
+
+122
+00:08:04,760 --> 00:08:07,810
+to identify health facilities,
+
+123
+00:08:07,810 --> 00:08:12,810
+which have large amounts of incomplete or missing data.
+
+124
+00:08:13,860 --> 00:08:17,830
+To do this, you turn off the outlier filter
+
+125
+00:08:17,830 --> 00:08:21,260
+under options and click on missing data,
+
+126
+00:08:21,260 --> 00:08:25,990
+and the results table now shows at the top,
+
+127
+00:08:25,990 --> 00:08:29,100
+those health facilities and those indicators
+
+128
+00:08:29,100 --> 00:08:32,983
+for which the monthly values have not been reported.
+
+129
+00:08:36,059 --> 00:08:41,060
+One final feature of the outlier page is the download button
+
+130
+00:08:43,380 --> 00:08:45,750
+by clicking on this
+
+131
+00:08:45,750 --> 00:08:48,810
+and then clicking download a second time,
+
+132
+00:08:48,810 --> 00:08:52,610
+we generate what is called a CSV file,
+
+133
+00:08:52,610 --> 00:08:55,763
+which is like an excel file.
+
+134
+00:08:57,070 --> 00:09:01,050
+This excel file is on the computer. It&#39;s not online,
+
+135
+00:09:01,050 --> 00:09:05,550
+so it can be viewed even when not connected to the internet.
+
+136
+00:09:05,550 --> 00:09:06,693
+If we open it,
+
+137
+00:09:16,410 --> 00:09:21,410
+we see a typical spreadsheet and like any excel spreadsheet,
+
+138
+00:09:21,820 --> 00:09:25,963
+you can use the data sort functions.
+
+139
+00:09:27,990 --> 00:09:32,990
+To arrange these, by such things as the modified Z-score.
+
+140
+00:09:38,090 --> 00:09:41,817
+Now we see once again, the health facility, B2,
+
+141
+00:09:42,820 --> 00:09:47,083
+which has this very large ANC first visit value,
+
+142
+00:09:53,070 --> 00:09:57,080
+or we could sort the spreadsheet according
+
+143
+00:09:57,080 --> 00:09:58,913
+to missing values.
+
+144
+00:10:00,220 --> 00:10:03,150
+But it&#39;s called the gap weight,
+
+145
+00:10:03,150 --> 00:10:06,913
+which is the total amount of missing data.
+
+146
+00:10:08,310 --> 00:10:12,380
+And now we&#39;ve identified this health facility again,
+
+147
+00:10:12,380 --> 00:10:17,380
+it has a series of months without data.
+
+148
+00:10:24,400 --> 00:10:29,400
+So returning to the outlier page,
+
+149
+00:10:34,500 --> 00:10:35,913
+let&#39;s summarize,
+
+150
+00:10:37,030 --> 00:10:39,850
+the outlier page is probably
+
+151
+00:10:39,850 --> 00:10:44,423
+the most powerful of the tools of the dashboard.
+
+152
+00:10:45,660 --> 00:10:49,970
+It allows you to quickly and automatically identify
+
+153
+00:10:49,970 --> 00:10:52,940
+the most suspicious values,
+
+154
+00:10:52,940 --> 00:10:55,800
+not only at the level of the district,
+
+155
+00:10:55,800 --> 00:10:59,080
+but you can easily drill down and identify
+
+156
+00:10:59,080 --> 00:11:01,250
+the specific health facility,
+
+157
+00:11:01,250 --> 00:11:05,130
+which has reported the suspicious value.
+
+158
+00:11:05,130 --> 00:11:09,220
+And you can identify health facilities with large amounts
+
+159
+00:11:09,220 --> 00:11:10,493
+of missing data.
+
+160
+00:11:12,000 --> 00:11:15,580
+This is the final page of the dashboard
+
+161
+00:11:15,580 --> 00:11:18,630
+of the WHO Data Quality Tool,
+
+162
+00:11:18,630 --> 00:11:23,630
+we&#39;ve seen how it is possible to quickly make use
+
+163
+00:11:24,290 --> 00:11:28,950
+of the data quality review functions.
+
+164
+00:11:28,950 --> 00:11:33,770
+And it doesn&#39;t require any configuration on the part of the
+
+165
+00:11:33,770 --> 00:11:37,630
+user other than to set the data group,
+
+166
+00:11:37,630 --> 00:11:41,303
+the period and the organization unit.
+
+167
+00:11:44,940 --> 00:11:49,590
+This makes the tool quite useful for
+
+168
+00:11:49,590 --> 00:11:54,400
+those who would want to quickly use
+
+169
+00:11:54,400 --> 00:11:58,420
+the WHO Data Quality Tool routinely,
+
+170
+00:11:58,420 --> 00:12:02,210
+every month to find the most suspicious values.
+
+171
+00:12:02,210 --> 00:12:06,500
+And we will show you in a subsequent session,
+
+172
+00:12:06,500 --> 00:12:09,460
+how to quickly train district staff to use
+
+173
+00:12:09,460 --> 00:12:12,273
+the outlier dashboard in particular.
+
+174
+00:12:13,930 --> 00:12:18,010
+However, one of the limitations of the dashboard,
+
+175
+00:12:18,010 --> 00:12:22,130
+is that it permits you only to look at those indicators,
+
+176
+00:12:22,130 --> 00:12:25,103
+which have been configured for the dashboard.
+
+177
+00:12:25,990 --> 00:12:30,190
+In the next session, we&#39;re going to demonstrate
+
+178
+00:12:30,190 --> 00:12:33,640
+how to use the analysis function,
+
+179
+00:12:33,640 --> 00:12:38,200
+to look at the consistency and look for outliers
+
+180
+00:12:38,200 --> 00:12:41,910
+in any data element for which there are data,
+
+181
+00:12:41,910 --> 00:12:43,133
+in dhis2.
+
+182
+00:12:44,598 --> 00:12:47,515
+(soft piano music)
+

@@ -1,0 +1,9 @@
+<problem display_name="Exercise 2 - Configuring the WHO Data Quality Tool - Configuring Numerator relations - Completion " markdown="&gt;&gt;I have completed Exercise 2 &lt;&lt;&#10;&#10;(x) Yes&#10;( ) No&#10;" max_attempts="1">
+<multiplechoiceresponse>
+  <label>I have completed Exercise 2 </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">Yes</choice>
+    <choice correct="false">No</choice>
+  </choicegroup>
+</multiplechoiceresponse>
+</problem>

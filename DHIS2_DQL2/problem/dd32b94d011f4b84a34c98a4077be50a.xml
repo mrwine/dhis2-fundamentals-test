@@ -1,0 +1,18 @@
+<problem display_name="Graded question - Managing Duplicate Category Options " markdown="null" max_attempts="2">
+<multiplechoiceresponse>
+  <label>Category option groups and group sets allow us to… (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Entirely collapse duplicate category options and fix the underlying problem by merging data from these two items</choice>
+    <choice correct="false">B. Deal with repeated category option combinations resulting from the same category option</choice>
+    <choice correct="true">C. Hide the problem of 2 or more category options from the user by creating a shared dimension for them in analytics apps</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Category option groups and group set allows us to hide the problem of 2 or more category options from the user by creating a shared dimension for them in analytics apps. We can at least hide the problem from the user to increase the quality of data outputs. The underlying problem may need to be fixed over time depending on its severity. Option A <b>“Entirely collapse duplicate category options and fix the underlying problem by merging data from these two items”</b> is incorrect because you will still have two separate category options in your system. Option B <b>“Deal with repeated category option combinations resulting from the same category option”</b> is ok in some cases, as the same category option may be used in multiple category combinations.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

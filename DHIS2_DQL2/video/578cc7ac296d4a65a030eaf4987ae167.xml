@@ -1,0 +1,10 @@
+<video youtube="1.00:O1anc58h4Qw" url_name="578cc7ac296d4a65a030eaf4987ae167" sub="" transcripts="{&quot;en&quot;: &quot;1af55dc1-6485-4ef7-bc6c-901045ec9910-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Demo - Mapping Reference Numerators" download_track="true" download_video="true" edx_video_id="1af55dc1-6485-4ef7-bc6c-901045ec9910" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.2_Mapping_Reference_Numerators.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/6.1.2+-+Demo+-+Mapping+Reference+Numerators+.mp4&quot;]" show_captions="false" youtube_id_1_0="O1anc58h4Qw">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/6.1.2+-+Demo+-+Mapping+Reference+Numerators+.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.2_Mapping_Reference_Numerators.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="1af55dc1-6485-4ef7-bc6c-901045ec9910-en.srt"/>
+</video>

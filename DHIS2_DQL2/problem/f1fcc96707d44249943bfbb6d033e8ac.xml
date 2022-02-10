@@ -1,0 +1,20 @@
+<problem display_name="Graded question - Numerator Relations - Question 2" markdown="If you already have some core numerators, the WHO DQ Tool will automatically do what?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts) &lt;&lt;&#10;&#10;( ) A. Run DQ analysis&#10;(x) B. Configure some numerator relationships based upon WHO standards&#10;( ) C. Complete all other configuration&#10;( ) D. Nothing&#10;&#10;[explanation]&#10;Configure some numerator relationships based upon WHO standards is correct. &#10;[explanation]&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>If you already have some core numerators, the WHO DQ Tool will automatically do what?</p>
+<label>Select the one correct answer: (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Run DQ analysis</choice>
+    <choice correct="true">B. Configure some numerator relationships based upon WHO standards</choice>
+    <choice correct="false">C. Complete all other configuration</choice>
+    <choice correct="false">D. Nothing</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Configure some numerator relationships based upon WHO standards is correct. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

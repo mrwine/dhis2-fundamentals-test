@@ -1,0 +1,19 @@
+<problem display_name="Question 2" markdown="Which of the following would enable a correct mapping and exchange of tracker to aggregate domains?&#10;&#10;&gt;&gt;Select all answers that apply.&lt;&lt;&#10;&#10;[ ] A. Make sure that the program indicator code in the tracker system matches the aggregate data element code in the aggregate data set.&#10;[x] B. Make sure that the program indicator in the tracker system references data element id and category option combination id.&#10;[x] C. Make sure that the program indicator in the tracker system references aggregate data element code and category option combination code.&#10;&#10;[explanation]&#10;B and C are correct. A is insufficient. As data elements are often dimensionalized by categories/category combinations, Matching 1 program indicator with 1 data element will only work if the data element does not have any other dimensions than “default”. In other cases, both the data element and the category option combination have to be matched in order to enable correct data transfer.&#10;[explanation]" max_attempts="2">
+<choiceresponse>
+  <p>Which of the following would enable a correct mapping and exchange of tracker to aggregate domains?</p>
+<label>Select all answers that apply.</label>
+<checkboxgroup>
+    <choice correct="false">A. Make sure that the program indicator code in the tracker system matches the aggregate data element code in the aggregate data set.</choice>
+    <choice correct="true">B. Make sure that the program indicator in the tracker system references data element id and category option combination id.</choice>
+    <choice correct="true">C. Make sure that the program indicator in the tracker system references aggregate data element code and category option combination code.</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>B and C are correct. A is insufficient. As data elements are often dimensionalized by categories/category combinations, Matching 1 program indicator with 1 data element will only work if the data element does not have any other dimensions than “default”. In other cases, both the data element and the category option combination have to be matched in order to enable correct data transfer.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

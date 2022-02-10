@@ -1,0 +1,2152 @@
+0
+00:00:00,170 --> 00:00:02,900
+- [Scott] All right, so now we are gonna take a quick look
+
+1
+00:00:02,900 --> 00:00:05,150
+at how we are able to,
+
+2
+00:00:05,150 --> 00:00:05,983
+within
+
+3
+00:00:07,470 --> 00:00:12,470
+Tracker programs, perform some data quality checks.
+
+4
+00:00:14,439 --> 00:00:16,889
+And a quick overview, we&#39;ve just talked about the
+
+5
+00:00:19,010 --> 00:00:20,680
+Tracker to Aggregate approaches.
+
+6
+00:00:20,680 --> 00:00:23,420
+Let&#39;s talk about then some common issues with data quality
+
+7
+00:00:23,420 --> 00:00:24,970
+in patient records.
+
+8
+00:00:24,970 --> 00:00:27,620
+Then I&#39;m gonna do a really brief overview of how we can
+
+9
+00:00:27,620 --> 00:00:29,150
+build out some program rules.
+
+10
+00:00:29,150 --> 00:00:31,810
+These are some logic rules that you can put into
+
+11
+00:00:31,810 --> 00:00:35,170
+Tracker programs for data quality checks.
+
+12
+00:00:35,170 --> 00:00:36,970
+This is not a Tracker academy,
+
+13
+00:00:36,970 --> 00:00:40,280
+we have academies specifically on building out
+
+14
+00:00:40,280 --> 00:00:43,010
+Tracker programs, and goes into a lot of detail
+
+15
+00:00:43,010 --> 00:00:44,710
+on how to build out program rules.
+
+16
+00:00:45,640 --> 00:00:48,260
+I strongly encourage you to go to one of those
+
+17
+00:00:48,260 --> 00:00:52,580
+to get a very detailed overview or skill set
+
+18
+00:00:52,580 --> 00:00:53,440
+of actually how to do this.
+
+19
+00:00:53,440 --> 00:00:57,100
+I&#39;m gonna give you some really basic overview just now.
+
+20
+00:00:57,100 --> 00:00:58,880
+And then we&#39;re gonna talk a little bit about
+
+21
+00:00:58,880 --> 00:01:01,370
+how we can monitor completeness through program indicators.
+
+22
+00:01:01,370 --> 00:01:02,960
+Again, I&#39;m not gonna go into detail
+
+23
+00:01:02,960 --> 00:01:04,630
+on how to build program indicators,
+
+24
+00:01:04,629 --> 00:01:07,190
+there&#39;s another academy for that, but I&#39;m just gonna
+
+25
+00:01:07,190 --> 00:01:08,970
+give you a brief overview on how they can be applied
+
+26
+00:01:08,970 --> 00:01:10,690
+for data quality.
+
+27
+00:01:10,690 --> 00:01:11,960
+So let&#39;s talk about
+
+28
+00:01:13,832 --> 00:01:17,420
+some common issues with data in Tracker programs.
+
+29
+00:01:17,420 --> 00:01:21,820
+Most of us are building very complex data entry forms
+
+30
+00:01:21,820 --> 00:01:23,370
+in Tracker.
+
+31
+00:01:23,370 --> 00:01:25,760
+We&#39;re doing the same thing in Aggregate as well.
+
+32
+00:01:25,760 --> 00:01:28,310
+And we&#39;re not building in a lot of workflow support
+
+33
+00:01:29,260 --> 00:01:30,430
+to these forms.
+
+34
+00:01:30,430 --> 00:01:31,840
+It&#39;s a problem in Aggregate.
+
+35
+00:01:31,840 --> 00:01:33,913
+It&#39;s even a bigger problem in Tracker.
+
+36
+00:01:35,037 --> 00:01:36,970
+So if we&#39;re capturing individual patient data,
+
+37
+00:01:36,970 --> 00:01:39,710
+we have got to put in a lot of workflow support.
+
+38
+00:01:39,710 --> 00:01:41,360
+I&#39;ll give you an example of that.
+
+39
+00:01:42,480 --> 00:01:44,360
+Then, there&#39;s often a lot of questions,
+
+40
+00:01:44,360 --> 00:01:47,803
+can we calculate coverages based upon Tracker data only?
+
+41
+00:01:49,050 --> 00:01:51,460
+The general rule of thumb is, probably not.
+
+42
+00:01:51,460 --> 00:01:54,920
+You probably don&#39;t have the entire population coverage
+
+43
+00:01:54,920 --> 00:01:57,256
+using just your Tracker program.
+
+44
+00:01:57,256 --> 00:02:00,400
+So how do we then calculate coverage based upon
+
+45
+00:02:00,400 --> 00:02:01,990
+our Tracker data or in combination of
+
+46
+00:02:01,990 --> 00:02:03,962
+Tracker and Aggregate data?
+
+47
+00:02:03,962 --> 00:02:05,620
+And then calculating completeness
+
+48
+00:02:05,620 --> 00:02:06,800
+from individual patient records.
+
+49
+00:02:06,800 --> 00:02:07,890
+Another tricky thing is,
+
+50
+00:02:07,890 --> 00:02:09,690
+when is a patient actually complete?
+
+51
+00:02:10,690 --> 00:02:14,610
+All right, let&#39;s first go into that workflow question.
+
+52
+00:02:14,610 --> 00:02:17,050
+How do we address that with program rules?
+
+53
+00:02:17,050 --> 00:02:19,360
+Well, it&#39;s actually easier for me to show you
+
+54
+00:02:19,360 --> 00:02:21,690
+than to go through it.
+
+55
+00:02:21,690 --> 00:02:23,440
+I&#39;m gonna give you a quick example.
+
+56
+00:02:24,685 --> 00:02:27,040
+You&#39;re looking at a DHIS2 database
+
+57
+00:02:27,040 --> 00:02:30,480
+for Mass Drug Administration.
+
+58
+00:02:30,480 --> 00:02:33,700
+And what they are actually doing is they are using
+
+59
+00:02:36,400 --> 00:02:39,630
+Events to capture Mass Drug Administration,
+
+60
+00:02:39,630 --> 00:02:41,170
+so Mass Drug Campaigns.
+
+61
+00:02:41,170 --> 00:02:43,293
+So I&#39;m gonna go into the Capture App,
+
+62
+00:02:45,140 --> 00:02:46,910
+and this is not a demo database,
+
+63
+00:02:46,910 --> 00:02:50,210
+this is actually a database from a real project,
+
+64
+00:02:50,210 --> 00:02:52,480
+so you&#39;re not able to go into this one,
+
+65
+00:02:52,480 --> 00:02:54,880
+but I&#39;m just gonna show it to you as an example.
+
+66
+00:02:56,320 --> 00:02:59,810
+And then I&#39;m going to go into an org unit,
+
+67
+00:02:59,810 --> 00:03:01,860
+and I&#39;m gonna select one of my programs.
+
+68
+00:03:01,860 --> 00:03:03,123
+This is the Capture App.
+
+69
+00:03:04,100 --> 00:03:06,810
+Again, this is a different app in data entry.
+
+70
+00:03:06,810 --> 00:03:08,610
+I&#39;m gonna select one of my programs,
+
+71
+00:03:09,610 --> 00:03:14,390
+this is an Event program, I&#39;m gonna click New Event.
+
+72
+00:03:14,390 --> 00:03:19,390
+So now I&#39;m opened a data entry form for an Event Program.
+
+73
+00:03:20,440 --> 00:03:23,433
+In this case, it&#39;s a Mass Drug Administration for LF.
+
+74
+00:03:25,659 --> 00:03:30,659
+LF is lymphatic filariasis, which is a parasite drug.
+
+75
+00:03:32,110 --> 00:03:34,310
+If you&#39;re doing MDA, is Mass Drug Administration
+
+76
+00:03:34,310 --> 00:03:35,710
+for this particular disease.
+
+77
+00:03:36,840 --> 00:03:40,210
+And what I&#39;m gonna start doing is putting in
+
+78
+00:03:41,960 --> 00:03:44,670
+some data here, just to show you some of the warnings
+
+79
+00:03:44,670 --> 00:03:47,003
+that pop up as I&#39;m putting this data in.
+
+80
+00:03:51,750 --> 00:03:52,970
+Can just put in a contract ID,
+
+81
+00:03:52,970 --> 00:03:54,977
+implementation total persons, 10,
+
+82
+00:03:59,160 --> 00:04:01,070
+Here&#39;s the first example of workflow support.
+
+83
+00:04:01,070 --> 00:04:02,363
+So in Programs,
+
+84
+00:04:05,980 --> 00:04:09,290
+I can put in questions that if I answer,
+
+85
+00:04:09,290 --> 00:04:10,790
+will prompt additional questions.
+
+86
+00:04:10,790 --> 00:04:12,223
+Again, workflow support.
+
+87
+00:04:15,526 --> 00:04:18,060
+We want to build in as much workflow support.
+
+88
+00:04:18,060 --> 00:04:19,580
+As you&#39;re filling out questions,
+
+89
+00:04:19,579 --> 00:04:21,770
+you want to be able to hide certain answers,
+
+90
+00:04:21,769 --> 00:04:23,730
+or you want to be able to show other questions,
+
+91
+00:04:23,730 --> 00:04:25,090
+based upon a certain answer.
+
+92
+00:04:25,090 --> 00:04:27,927
+So in this box, I have a tick box that says &quot;Yes,&quot;
+
+93
+00:04:27,927 --> 00:04:29,810
+and if I do that, then it opens another
+
+94
+00:04:29,810 --> 00:04:31,260
+field that I need to fill in.
+
+95
+00:04:32,530 --> 00:04:33,510
+Okay.
+
+96
+00:04:33,510 --> 00:04:36,513
+I&#39;m just gonna start putting in more information here.
+
+97
+00:04:40,540 --> 00:04:42,200
+And this next question is a good one.
+
+98
+00:04:42,200 --> 00:04:44,930
+So we say &quot;Year Started,&quot; so here I should
+
+99
+00:04:44,930 --> 00:04:46,660
+be putting in a year value.
+
+100
+00:04:46,660 --> 00:04:47,660
+I&#39;m gonna put in
+
+101
+00:04:49,520 --> 00:04:52,780
+a number that&#39;s not a year, and look what happens.
+
+102
+00:04:52,780 --> 00:04:56,490
+So I put in what, like 200,000?
+
+103
+00:04:56,490 --> 00:04:58,830
+We&#39;re not even close to the year 200,000 yet, right?
+
+104
+00:04:58,830 --> 00:04:59,663
+And so it says,
+
+105
+00:04:59,663 --> 00:05:03,790
+&quot;Invalid year, this year must be between 1990 and 2020.&quot;
+
+106
+00:05:03,790 --> 00:05:08,570
+So if I go to 2000, see the warning goes away.
+
+107
+00:05:08,570 --> 00:05:11,203
+This is a great example of a simple program rule,
+
+108
+00:05:12,370 --> 00:05:14,190
+where if I put in a number that doesn&#39;t make sense,
+
+109
+00:05:14,190 --> 00:05:16,160
+it&#39;s checking the value that I&#39;m putting in,
+
+110
+00:05:16,160 --> 00:05:18,350
+and it&#39;s telling me in real time,
+
+111
+00:05:18,350 --> 00:05:20,063
+if this is an appropriate number.
+
+112
+00:05:21,670 --> 00:05:23,620
+I&#39;m gonna put in just a couple of more.
+
+113
+00:05:35,751 --> 00:05:36,584
+All right.
+
+114
+00:05:36,584 --> 00:05:38,420
+So I&#39;m just putting in random numbers right now,
+
+115
+00:05:38,420 --> 00:05:41,900
+and you can see I&#39;ve triggered another data quality check.
+
+116
+00:05:41,900 --> 00:05:43,970
+So in this case, what is it saying?
+
+117
+00:05:43,970 --> 00:05:45,420
+Well, I&#39;ve actually got an error box
+
+118
+00:05:45,420 --> 00:05:46,890
+in the top right corner here.
+
+119
+00:05:46,890 --> 00:05:49,160
+And it says &quot;Persons targeted cannot be greater than
+
+120
+00:05:49,160 --> 00:05:51,220
+the population eligible for PC.&quot;
+
+121
+00:05:51,220 --> 00:05:52,683
+PC is a treatment process.
+
+122
+00:05:54,030 --> 00:05:58,880
+And here they say, okay, look, I&#39;ve got 10 here.
+
+123
+00:05:58,880 --> 00:05:59,970
+And it says, &quot;Persons targeted
+
+124
+00:05:59,970 --> 00:06:01,010
+cannot be greater than pop-&quot;
+
+125
+00:06:01,010 --> 00:06:01,940
+And then it&#39;s telling me,
+
+126
+00:06:01,940 --> 00:06:03,770
+okay, check here, check here, check here.
+
+127
+00:06:03,770 --> 00:06:06,840
+And great, so I have 10 here, but I have 10 there,
+
+128
+00:06:06,840 --> 00:06:09,090
+but this is saying it&#39;s not right.
+
+129
+00:06:09,090 --> 00:06:12,250
+So if I just put in zero and zero,
+
+130
+00:06:12,250 --> 00:06:13,790
+great, now it goes away.
+
+131
+00:06:13,790 --> 00:06:17,133
+So the sum of these could not be greater than this.
+
+132
+00:06:18,210 --> 00:06:20,100
+And that&#39;s what it was, so when I put it in the zeros,
+
+133
+00:06:20,100 --> 00:06:20,933
+it went away.
+
+134
+00:06:26,350 --> 00:06:28,570
+All right, now I&#39;ve got another data quality check.
+
+135
+00:06:28,570 --> 00:06:30,437
+I just put in some more random numbers, it&#39;s saying,
+
+136
+00:06:30,437 --> 00:06:32,363
+&quot;The sum of male plus female treated
+
+137
+00:06:32,363 --> 00:06:35,140
+can not be greater than the sum of PreSAC, SAC
+
+138
+00:06:35,140 --> 00:06:36,280
+and adults targeted.&quot;
+
+139
+00:06:36,280 --> 00:06:38,320
+So these are aged breakdowns,
+
+140
+00:06:38,320 --> 00:06:40,873
+and it&#39;s saying the sum of male and female treated
+
+141
+00:06:40,873 --> 00:06:43,670
+can not be greater than these values here.
+
+142
+00:06:43,670 --> 00:06:46,850
+So what did I do, I put in 10 male plus 10 female,
+
+143
+00:06:46,850 --> 00:06:51,640
+that&#39;s 20, and then the sum of this is just 10, right?
+
+144
+00:06:51,640 --> 00:06:53,340
+So let&#39;s try to fix that.
+
+145
+00:06:53,340 --> 00:06:55,130
+I&#39;ll put in zero here.
+
+146
+00:06:55,130 --> 00:06:56,430
+Great, now that went away.
+
+147
+00:07:00,510 --> 00:07:02,570
+I just put in some more random numbers and guess what?
+
+148
+00:07:02,570 --> 00:07:06,660
+I got two more errors saying, &quot;The sum of male and females
+
+149
+00:07:06,660 --> 00:07:09,690
+should be equal to sum of treated,&quot; okay?
+
+150
+00:07:09,690 --> 00:07:11,570
+So they&#39;re saying that this sum, male/female
+
+151
+00:07:11,570 --> 00:07:14,440
+should also be equal to the sum of these three.
+
+152
+00:07:14,440 --> 00:07:18,090
+And then it&#39;s saying also, &quot;The sum of Pre-SAC, SAC,
+
+153
+00:07:18,090 --> 00:07:20,530
+treated cannot be greater than the sum of Pre-SAC targeted.&quot;
+
+154
+00:07:20,530 --> 00:07:24,300
+So they&#39;re saying this sum cannot be greater than this sum.
+
+155
+00:07:24,300 --> 00:07:26,623
+So let me go in and fix that.
+
+156
+00:07:28,740 --> 00:07:32,833
+All right, so now all my data quality checks went away.
+
+157
+00:07:35,060 --> 00:07:38,570
+So I just wanted to give you a quick demonstration
+
+158
+00:07:38,570 --> 00:07:41,140
+of program rules in action.
+
+159
+00:07:41,140 --> 00:07:42,960
+So this is a real project.
+
+160
+00:07:42,960 --> 00:07:45,870
+They&#39;re entering data across dozens of countries
+
+161
+00:07:45,870 --> 00:07:47,340
+actually in this particular program,
+
+162
+00:07:47,340 --> 00:07:49,936
+hundreds of people are entering data using
+
+163
+00:07:49,936 --> 00:07:51,270
+this particular reporting form.
+
+164
+00:07:51,270 --> 00:07:53,930
+And you can see all of the various data quality checks
+
+165
+00:07:53,930 --> 00:07:55,890
+are just an example of some of the data quality checks
+
+166
+00:07:55,890 --> 00:07:58,710
+that are coming up, as they&#39;re putting the data in.
+
+167
+00:07:58,710 --> 00:08:00,630
+You can also see some of the workflow support.
+
+168
+00:08:00,630 --> 00:08:03,500
+So for example, I ask a question, if I say &quot;Yes,&quot;
+
+169
+00:08:03,500 --> 00:08:06,980
+then it gives me another box to fill out.
+
+170
+00:08:06,980 --> 00:08:10,923
+These are done via program rules.
+
+171
+00:08:12,560 --> 00:08:15,500
+So let me get back to my PowerPoint presentation.
+
+172
+00:08:15,500 --> 00:08:16,840
+All those different data quality checks
+
+173
+00:08:16,840 --> 00:08:21,150
+that you&#39;ve just seen are done via program rules in DHIS2.
+
+174
+00:08:21,150 --> 00:08:24,710
+So essentially, what is a program rule?
+
+175
+00:08:24,710 --> 00:08:27,590
+A program rule allows you to
+
+176
+00:08:29,080 --> 00:08:32,570
+put in dynamic behaviors in response to user input.
+
+177
+00:08:32,570 --> 00:08:35,350
+So just as you saw, I was ticking boxes and more things
+
+178
+00:08:35,350 --> 00:08:36,980
+were coming up, or I was putting in values
+
+179
+00:08:36,980 --> 00:08:40,150
+and it was causing alerts and error warnings.
+
+180
+00:08:40,150 --> 00:08:42,820
+You know, that&#39;s the kind of dynamic behaviors
+
+181
+00:08:42,820 --> 00:08:43,820
+we&#39;re talking about.
+
+182
+00:08:45,700 --> 00:08:50,160
+It allows you to send a lot of direct user feedback.
+
+183
+00:08:50,160 --> 00:08:52,987
+So as you&#39;re putting stuff in, you&#39;re telling the user,
+
+184
+00:08:52,987 --> 00:08:55,180
+&quot;No, that doesn&#39;t make sense&quot; or &quot;You need to check this,&quot;
+
+185
+00:08:55,180 --> 00:08:57,107
+or &quot;Those numbers can&#39;t add up.&quot;
+
+186
+00:08:58,260 --> 00:09:01,623
+And you are building these out as expressions.
+
+187
+00:09:03,390 --> 00:09:05,570
+We&#39;ll talk a little bit about the expression builder
+
+188
+00:09:05,570 --> 00:09:06,620
+just in a second here,
+
+189
+00:09:06,620 --> 00:09:09,040
+but essentially these expression builders have
+
+190
+00:09:09,040 --> 00:09:11,770
+a lot of different options for you.
+
+191
+00:09:11,770 --> 00:09:14,210
+It&#39;s not just about showing warnings or errors
+
+192
+00:09:14,210 --> 00:09:16,030
+or tick boxes, what I showed you,
+
+193
+00:09:16,030 --> 00:09:18,090
+there&#39;s lots of things that this can do.
+
+194
+00:09:18,090 --> 00:09:20,673
+And again, there&#39;s a whole academy that goes over this,
+
+195
+00:09:22,419 --> 00:09:24,480
+but just to make the point that
+
+196
+00:09:25,700 --> 00:09:29,460
+you can really tailor these messages, these warnings,
+
+197
+00:09:29,460 --> 00:09:32,083
+this user feedback, this workflow support,
+
+198
+00:09:34,136 --> 00:09:37,633
+to using a lot of different features.
+
+199
+00:09:43,840 --> 00:09:47,390
+Most actions using program rules will happen immediately
+
+200
+00:09:47,390 --> 00:09:49,130
+when the data values are entered.
+
+201
+00:09:49,130 --> 00:09:51,220
+So that&#39;s exactly what you saw me doing.
+
+202
+00:09:51,220 --> 00:09:52,650
+So as I was putting the values in,
+
+203
+00:09:52,650 --> 00:09:54,750
+there was something happening immediately.
+
+204
+00:09:55,847 --> 00:09:58,723
+And that program rule, in terms of how it&#39;s configured,
+
+205
+00:10:00,040 --> 00:10:03,080
+constitutes three things, variables, expressions,
+
+206
+00:10:03,080 --> 00:10:04,113
+and actions.
+
+207
+00:10:05,777 --> 00:10:07,777
+I&#39;m gonna go through these very quickly.
+
+208
+00:10:11,579 --> 00:10:12,710
+Again, to get more detailed answers and explanations,
+
+209
+00:10:17,692 --> 00:10:19,390
+we&#39;ll have to point you to another academy,
+
+210
+00:10:19,390 --> 00:10:21,160
+or certainly you can ask questions and we have
+
+211
+00:10:21,160 --> 00:10:22,510
+lots of resources for this.
+
+212
+00:10:28,150 --> 00:10:29,430
+So what are programs variables?
+
+213
+00:10:29,430 --> 00:10:31,170
+Essentially program variables
+
+214
+00:10:33,480 --> 00:10:36,130
+represent attributes and data element values,
+
+215
+00:10:36,130 --> 00:10:39,000
+which can be evaluated as part of an expression.
+
+216
+00:10:39,000 --> 00:10:43,250
+So essentially these are the data elements and
+
+217
+00:10:45,600 --> 00:10:48,847
+attributes that you actually define.
+
+218
+00:10:50,300 --> 00:10:52,983
+Usually they&#39;re data elements, sometimes they&#39;re attributes.
+
+219
+00:10:54,290 --> 00:10:55,190
+Once you make them
+
+220
+00:10:56,873 --> 00:11:00,233
+as a variable, you can use them in multiple program rules.
+
+221
+00:11:01,580 --> 00:11:05,740
+This can include data values and attributes,
+
+222
+00:11:05,740 --> 00:11:07,853
+and operate these as expressions.
+
+223
+00:11:11,320 --> 00:11:14,493
+Let me kind of skip through that.
+
+224
+00:11:15,460 --> 00:11:16,870
+Here&#39;s the screen if you want to make
+
+225
+00:11:16,870 --> 00:11:18,580
+a program rule variable.
+
+226
+00:11:18,580 --> 00:11:19,590
+This is really the first step,
+
+227
+00:11:19,590 --> 00:11:20,890
+you have to define the variables,
+
+228
+00:11:20,890 --> 00:11:22,450
+then you can put them into your expressions.
+
+229
+00:11:22,450 --> 00:11:24,770
+And then from your expressions, you define the actions.
+
+230
+00:11:24,770 --> 00:11:29,120
+So in this case, we&#39;re looking at a program variable
+
+231
+00:11:29,120 --> 00:11:33,780
+called Sex, and the sex is a tracked entity attribute.
+
+232
+00:11:33,780 --> 00:11:35,580
+So this is like if you have a patient and the patient
+
+233
+00:11:35,580 --> 00:11:37,890
+is male or female, then this would be
+
+234
+00:11:41,000 --> 00:11:42,583
+sex that they&#39;re using here.
+
+235
+00:11:44,710 --> 00:11:47,950
+The expression is the next star,
+
+236
+00:11:47,950 --> 00:11:50,430
+so once you&#39;ve defined your program rule variables,
+
+237
+00:11:50,430 --> 00:11:52,120
+you have to define your expressions,
+
+238
+00:11:52,120 --> 00:11:53,920
+and your expressions are essentially
+
+239
+00:11:55,688 --> 00:11:58,703
+the logic that is being applied to,
+
+240
+00:12:00,108 --> 00:12:04,131
+or it&#39;s defining the kind of interaction that
+
+241
+00:12:04,131 --> 00:12:06,981
+is happening based upon the value that are being entered.
+
+242
+00:12:12,220 --> 00:12:14,083
+So I&#39;ll skip through that.
+
+243
+00:12:17,560 --> 00:12:20,030
+In the expression you have to build out operators,
+
+244
+00:12:20,030 --> 00:12:21,790
+again, we don&#39;t have time to go over this
+
+245
+00:12:21,790 --> 00:12:23,240
+in a lot of detail.
+
+246
+00:12:23,240 --> 00:12:26,240
+There are clear documentations linked here,
+
+247
+00:12:26,240 --> 00:12:29,133
+in the PowerPoint, providing you what these are.
+
+248
+00:12:30,460 --> 00:12:33,360
+You have to do a little bit of programming,
+
+249
+00:12:33,360 --> 00:12:35,750
+and it&#39;s not programming in like you have to know JavaScript
+
+250
+00:12:35,750 --> 00:12:37,230
+or HTML or something like that,
+
+251
+00:12:37,230 --> 00:12:39,890
+but there&#39;s just syntax in which you have to build out
+
+252
+00:12:39,890 --> 00:12:42,523
+these program rule expressions in.
+
+253
+00:12:43,500 --> 00:12:45,380
+And you can see here, I won&#39;t go over
+
+254
+00:12:45,380 --> 00:12:47,570
+each one of these examples, but you can see that they
+
+255
+00:12:47,570 --> 00:12:49,120
+can become actually very complex.
+
+256
+00:12:49,120 --> 00:12:53,240
+There&#39;s a lot of flexibility here on what you can actually
+
+257
+00:12:53,240 --> 00:12:57,050
+do with the program rule expressions.
+
+258
+00:12:57,050 --> 00:12:58,297
+So you can say like,
+
+259
+00:12:58,297 --> 00:13:00,897
+&quot;If&quot; statements or &quot;Greater than&quot; statements, or
+
+260
+00:13:00,897 --> 00:13:03,740
+&quot;Or&quot; statements, &quot;And&quot; statements,
+
+261
+00:13:03,740 --> 00:13:06,850
+you can really, really build some complicated things here.
+
+262
+00:13:06,850 --> 00:13:09,243
+You know, of course it&#39;s better to keep stuff simple.
+
+263
+00:13:10,421 --> 00:13:12,343
+But you can, say like,
+
+264
+00:13:14,787 --> 00:13:17,540
+&quot;If they enter sex as male, if they enter age
+
+265
+00:13:17,540 --> 00:13:22,070
+as greater than 35, if they enter BMI as this,
+
+266
+00:13:22,070 --> 00:13:24,477
+then recommend this action.&quot;
+
+267
+00:13:25,567 --> 00:13:27,830
+You can really base these program rules,
+
+268
+00:13:27,830 --> 00:13:30,410
+based upon multiple variables
+
+269
+00:13:32,100 --> 00:13:34,760
+and give specific feedback as the data&#39;s coming in.
+
+270
+00:13:34,760 --> 00:13:36,860
+Not useful for just data quality,
+
+271
+00:13:36,860 --> 00:13:38,943
+also useful for just workflow support.
+
+272
+00:13:40,415 --> 00:13:41,530
+Custom functions,
+
+273
+00:13:41,530 --> 00:13:45,830
+I&#39;m not gonna go over this, but just suffice to say
+
+274
+00:13:45,830 --> 00:13:49,370
+that you can build out various custom functions.
+
+275
+00:13:49,370 --> 00:13:52,040
+So you can count the number of days in a month,
+
+276
+00:13:52,040 --> 00:13:54,440
+you can count the number of days between events.
+
+277
+00:13:55,560 --> 00:13:58,860
+You can prompt actions if there&#39;s a specific value,
+
+278
+00:13:58,860 --> 00:14:01,070
+we call these our d2 Functions, you can see that
+
+279
+00:14:01,070 --> 00:14:02,920
+on the left side of the column there.
+
+280
+00:14:03,840 --> 00:14:05,160
+That&#39;s just an example.
+
+281
+00:14:05,160 --> 00:14:06,740
+All right so, actions.
+
+282
+00:14:06,740 --> 00:14:08,960
+So we defined our variables, we defined our expression,
+
+283
+00:14:08,960 --> 00:14:11,650
+and then we can define many different actions
+
+284
+00:14:11,650 --> 00:14:12,730
+that they have.
+
+285
+00:14:12,730 --> 00:14:14,200
+In the example that I showed you,
+
+286
+00:14:14,200 --> 00:14:17,750
+the action that I was triggering was &quot;Show warnings,&quot;
+
+287
+00:14:17,750 --> 00:14:18,830
+and &quot;Show an error.&quot;
+
+288
+00:14:18,830 --> 00:14:21,120
+So you saw that as I entered values,
+
+289
+00:14:21,120 --> 00:14:23,100
+and there was data quality checks happening,
+
+290
+00:14:23,100 --> 00:14:25,813
+it was popping up different errors saying,
+
+291
+00:14:31,087 --> 00:14:32,963
+these values don&#39;t sum up together,
+
+292
+00:14:34,384 --> 00:14:36,590
+you need to double-check this.
+
+293
+00:14:36,590 --> 00:14:39,340
+There are many different actions that could happen.
+
+294
+00:14:39,340 --> 00:14:41,733
+So I was just showing you basically one action.
+
+295
+00:14:43,110 --> 00:14:44,810
+You can check the docs here, if you
+
+296
+00:14:44,810 --> 00:14:47,110
+click on this actions icon, it&#39;ll take you to the docs
+
+297
+00:14:47,110 --> 00:14:48,650
+and all the various actions.
+
+298
+00:14:48,650 --> 00:14:51,000
+There&#39;s really a lot of different choices here.
+
+299
+00:14:52,100 --> 00:14:53,810
+So this is a brief summary.
+
+300
+00:14:53,810 --> 00:14:56,220
+So you enter the program rule details,
+
+301
+00:14:56,220 --> 00:14:59,070
+then you enter your program rule expression,
+
+302
+00:14:59,070 --> 00:15:01,033
+and then you define your actions.
+
+303
+00:15:05,580 --> 00:15:08,030
+The other thing that I want to point out is that
+
+304
+00:15:08,030 --> 00:15:12,900
+many of you are using Android, the mobile app,
+
+305
+00:15:12,900 --> 00:15:17,900
+to be able to capture Tracker data as well now.
+
+306
+00:15:18,490 --> 00:15:21,100
+So you&#39;re not just using your PCs,
+
+307
+00:15:21,100 --> 00:15:23,274
+or you actually have folks in the field,
+
+308
+00:15:23,274 --> 00:15:24,370
+community health workers, outreach workers,
+
+309
+00:15:24,370 --> 00:15:26,900
+clinicians, that are using the application.
+
+310
+00:15:26,900 --> 00:15:28,580
+The point to be made about folks that are using
+
+311
+00:15:28,580 --> 00:15:31,100
+the application is, as they&#39;re filling out data,
+
+312
+00:15:31,100 --> 00:15:33,740
+make it as easy as possible.
+
+313
+00:15:33,740 --> 00:15:36,170
+Put in pictures, make different colors,
+
+314
+00:15:36,170 --> 00:15:38,070
+make it so that each one of the answers
+
+315
+00:15:38,070 --> 00:15:40,680
+to each one of the questions is clear and distinct.
+
+316
+00:15:40,680 --> 00:15:43,110
+So here you see an example of a malaria program
+
+317
+00:15:44,220 --> 00:15:45,460
+where a community health worker
+
+318
+00:15:45,460 --> 00:15:47,240
+is filling out malaria cases.
+
+319
+00:15:47,240 --> 00:15:50,140
+And you can see that for the answers
+
+320
+00:15:50,140 --> 00:15:51,550
+in the top right corner,
+
+321
+00:15:51,550 --> 00:15:54,040
+it&#39;s saying &quot;How did you diagnose this malaria test,
+
+322
+00:15:54,040 --> 00:15:55,680
+did you use microscopy, an RDT,
+
+323
+00:15:55,680 --> 00:15:57,050
+or there was no test at all?&quot;
+
+324
+00:15:57,050 --> 00:15:59,800
+And you can see that there&#39;s pictures,
+
+325
+00:15:59,800 --> 00:16:00,890
+there&#39;s clear colors.
+
+326
+00:16:00,890 --> 00:16:03,850
+It&#39;s very simple, even for someone who may be illiterate
+
+327
+00:16:03,850 --> 00:16:06,107
+to answer this question, right?
+
+328
+00:16:06,107 --> 00:16:07,347
+&quot;Which one did you use?&quot;
+
+329
+00:16:08,324 --> 00:16:10,340
+And again, this is the best practice,
+
+330
+00:16:10,340 --> 00:16:13,260
+the best practice is make it as clear and simple as possible
+
+331
+00:16:13,260 --> 00:16:16,140
+for folks to be able to enter this data.
+
+332
+00:16:16,140 --> 00:16:17,680
+The next question of course is,
+
+333
+00:16:17,680 --> 00:16:20,570
+or a later question is, &quot;What are the treatment types?&quot;
+
+334
+00:16:20,570 --> 00:16:23,573
+And again, very clear, pictures different colors,
+
+335
+00:16:24,810 --> 00:16:28,500
+and so they would be able to distinguish
+
+336
+00:16:28,500 --> 00:16:32,213
+which treatment type that they provided.
+
+337
+00:16:35,400 --> 00:16:39,350
+So program indicators are another way in which we&#39;re able
+
+338
+00:16:39,350 --> 00:16:43,260
+to calculate values based upon Tracker data.
+
+339
+00:16:43,260 --> 00:16:45,484
+Many of you may be wondering what&#39;s the difference
+
+340
+00:16:45,484 --> 00:16:47,750
+between a standard indicator and a program indicator.
+
+341
+00:16:47,750 --> 00:16:50,480
+The main difference is that a program indicator
+
+342
+00:16:50,480 --> 00:16:52,860
+can have a little bit more logic put into it,
+
+343
+00:16:52,860 --> 00:16:57,440
+and it calculates values based within a single program.
+
+344
+00:16:57,440 --> 00:17:02,440
+Whereas a standard indicator cannot support much logic,
+
+345
+00:17:02,690 --> 00:17:05,890
+but it can calculate values across multiple programs
+
+346
+00:17:05,890 --> 00:17:08,170
+or multiple data sets.
+
+347
+00:17:08,170 --> 00:17:09,413
+Okay?
+
+348
+00:17:09,413 --> 00:17:10,690
+So a standard indicator,
+
+349
+00:17:10,690 --> 00:17:12,910
+across multiple programs or data sets,
+
+350
+00:17:12,910 --> 00:17:16,470
+and a program indicator, you can add more expressions,
+
+351
+00:17:16,470 --> 00:17:18,370
+more logic to it, but it can only calculate
+
+352
+00:17:18,369 --> 00:17:19,693
+within a single program.
+
+353
+00:17:21,750 --> 00:17:24,430
+So here&#39;s an example of program indicators
+
+354
+00:17:24,430 --> 00:17:27,050
+that look at completeness of data that&#39;s entered
+
+355
+00:17:27,050 --> 00:17:28,950
+in Tracker programs.
+
+356
+00:17:28,950 --> 00:17:31,358
+Two examples here, the first one is
+
+357
+00:17:31,358 --> 00:17:35,120
+&quot;Count of BCG doses given, divided by total number
+
+358
+00:17:35,120 --> 00:17:36,820
+of tracked children,&quot; right?
+
+359
+00:17:36,820 --> 00:17:37,830
+So what is that giving us?
+
+360
+00:17:37,830 --> 00:17:41,239
+That&#39;s giving us basically a coverage of BCG doses
+
+361
+00:17:41,239 --> 00:17:43,130
+across all of the children
+
+362
+00:17:44,588 --> 00:17:47,580
+that we have captured data against in our Tracker program.
+
+363
+00:17:47,580 --> 00:17:48,990
+A very simple program indicator,
+
+364
+00:17:48,990 --> 00:17:51,490
+may be applicable to like an immunization program.
+
+365
+00:17:53,170 --> 00:17:55,340
+The second example here is, &quot;Return the percentage
+
+366
+00:17:55,340 --> 00:17:59,830
+of tracked children who have recoded a BCG dose.&quot;
+
+367
+00:17:59,830 --> 00:18:03,754
+So tell me the percentage of children that have
+
+368
+00:18:03,754 --> 00:18:05,243
+received a BCG dose.
+
+369
+00:18:07,974 --> 00:18:11,500
+So this is very simple examples of how we&#39;re able
+
+370
+00:18:11,500 --> 00:18:14,210
+to actually look at something like BCG dose
+
+371
+00:18:16,228 --> 00:18:18,128
+completeness within a Tracker program.
+
+372
+00:18:24,790 --> 00:18:27,940
+So the question becomes,
+
+373
+00:18:27,940 --> 00:18:29,050
+a lot of times is,
+
+374
+00:18:29,050 --> 00:18:31,630
+if we have Tracker data and we have Aggregate data,
+
+375
+00:18:31,630 --> 00:18:35,633
+how do we combine those into a single coverage indicator?
+
+376
+00:18:38,420 --> 00:18:42,110
+What we typically recommend is that you do not use
+
+377
+00:18:42,110 --> 00:18:45,400
+Tracker data as your sole denominator
+
+378
+00:18:45,400 --> 00:18:47,703
+for coverage indicators.
+
+379
+00:18:48,800 --> 00:18:49,640
+Why is that?
+
+380
+00:18:49,640 --> 00:18:52,060
+Because typically most Tracker programs
+
+381
+00:18:52,060 --> 00:18:55,030
+do not have national coverage.
+
+382
+00:18:55,030 --> 00:18:57,890
+Meaning that most of them are still in some stage
+
+383
+00:18:57,890 --> 00:18:59,350
+of scaling or pilot.
+
+384
+00:18:59,350 --> 00:19:02,684
+So maybe you have a couple of districts using Tracker
+
+385
+00:19:02,684 --> 00:19:03,517
+and they are
+
+386
+00:19:06,110 --> 00:19:07,740
+capturing individual
+
+387
+00:19:09,730 --> 00:19:11,700
+service data through Tracker,
+
+388
+00:19:11,700 --> 00:19:13,010
+but then you have other districts
+
+389
+00:19:13,010 --> 00:19:14,150
+that are maybe not using Tracker,
+
+390
+00:19:14,150 --> 00:19:15,820
+or they&#39;re not using it as well.
+
+391
+00:19:15,820 --> 00:19:18,220
+And they&#39;re still capturing that Aggregated data
+
+392
+00:19:19,145 --> 00:19:21,273
+on a monthly basis or something.
+
+393
+00:19:22,480 --> 00:19:24,250
+So how do you actually then
+
+394
+00:19:26,120 --> 00:19:30,410
+make, say like a national coverage indicator?
+
+395
+00:19:30,410 --> 00:19:32,350
+Well, you need to potentially combine
+
+396
+00:19:32,350 --> 00:19:36,100
+the two sources of data together into a standard indicator,
+
+397
+00:19:36,100 --> 00:19:38,210
+but we don&#39;t recommend that you necessarily
+
+398
+00:19:38,210 --> 00:19:41,285
+solely use Tracker data, unless you know that you have
+
+399
+00:19:41,285 --> 00:19:43,840
+a hundred percent coverage of your Tracker program
+
+400
+00:19:43,840 --> 00:19:45,140
+across the entire country.
+
+401
+00:19:49,890 --> 00:19:52,040
+Let me just kind of skip to the point here.
+
+402
+00:19:54,330 --> 00:19:56,790
+So here we have kind of,
+
+403
+00:19:56,790 --> 00:19:57,900
+what&#39;s the good practice,
+
+404
+00:19:57,900 --> 00:19:59,910
+the best practice is to have
+
+405
+00:19:59,910 --> 00:20:01,700
+two different indicators, potentially.
+
+406
+00:20:01,700 --> 00:20:03,980
+So you have your national coverage,
+
+407
+00:20:03,980 --> 00:20:06,100
+that&#39;s using your Aggregate denominator,
+
+408
+00:20:06,100 --> 00:20:09,150
+and then you have another coverage that&#39;s using
+
+409
+00:20:09,150 --> 00:20:10,700
+Tracker data.
+
+410
+00:20:10,700 --> 00:20:13,040
+And you&#39;re able to see those side by side.
+
+411
+00:20:13,040 --> 00:20:15,603
+And so that&#39;s what we&#39;re actually able to look at here.
+
+412
+00:20:16,750 --> 00:20:20,320
+We have the coverage indicators on the left
+
+413
+00:20:20,320 --> 00:20:22,660
+that are coming from the Tracker program,
+
+414
+00:20:22,660 --> 00:20:27,200
+and then we have the individual data that&#39;s coming from
+
+415
+00:20:29,960 --> 00:20:31,153
+the Aggregate side.
+
+416
+00:20:34,156 --> 00:20:39,156
+You can see in the green is the Tracker coverage.
+
+417
+00:20:39,740 --> 00:20:43,930
+The blue is the national coverage coming from the Aggregate.
+
+418
+00:20:43,930 --> 00:20:46,570
+So you&#39;re able to see those side-by-side.
+
+419
+00:20:46,570 --> 00:20:48,920
+And then the same thing on the right side,
+
+420
+00:20:48,920 --> 00:20:51,520
+the green is the total number of immunized children,
+
+421
+00:20:56,280 --> 00:20:59,370
+and the blue is coming from your Aggregate data
+
+422
+00:20:59,370 --> 00:21:01,220
+and the blue is the total number of children
+
+423
+00:21:01,220 --> 00:21:03,410
+registered in the immunization program.
+
+424
+00:21:03,410 --> 00:21:05,030
+So you&#39;re able to see these side by side.
+
+425
+00:21:05,030 --> 00:21:08,360
+Again, the point being that, you know,
+
+426
+00:21:08,360 --> 00:21:10,250
+as it stands right now, the general recommendation
+
+427
+00:21:10,250 --> 00:21:13,180
+is you put your Tracker data alongside
+
+428
+00:21:13,180 --> 00:21:14,263
+your Aggregate data.
+
+429
+00:21:16,730 --> 00:21:19,693
+And view these as somewhat distinct,
+
+430
+00:21:20,850 --> 00:21:23,810
+unless you know that you have a hundred percent coverage
+
+431
+00:21:23,810 --> 00:21:26,453
+of your Tracker program, which is quite rare.
+
+432
+00:21:30,680 --> 00:21:32,530
+All right, just one other slide here.
+
+433
+00:21:39,690 --> 00:21:40,523
+Sorry.
+
+434
+00:21:41,380 --> 00:21:45,200
+Here we want to talk about how you monitor Aggregate data
+
+435
+00:21:45,200 --> 00:21:47,380
+compiled from a Tracker program to ensure that errors
+
+436
+00:21:47,380 --> 00:21:49,623
+have not occurred in the data transfer.
+
+437
+00:21:50,750 --> 00:21:52,884
+Essentially what we&#39;re looking for
+
+438
+00:21:52,884 --> 00:21:54,240
+is a one-to-one relationship.
+
+439
+00:21:54,240 --> 00:21:59,240
+So what we are saying is that, Yuri just talked through
+
+440
+00:22:02,844 --> 00:22:05,160
+some of the tools that can be used for this,
+
+441
+00:22:05,160 --> 00:22:06,510
+but you also want to put in
+
+442
+00:22:09,366 --> 00:22:12,300
+some program indicators to make sure
+
+443
+00:22:12,300 --> 00:22:14,901
+that the values are being transferred.
+
+444
+00:22:14,901 --> 00:22:18,390
+So for example, if I am transferring this month&#39;s
+
+445
+00:22:18,390 --> 00:22:20,570
+Tracker data into Aggregate,
+
+446
+00:22:20,570 --> 00:22:24,470
+let&#39;s make a program indicator that sums up
+
+447
+00:22:24,470 --> 00:22:28,340
+all of the Tracker data for that data element
+
+448
+00:22:28,340 --> 00:22:30,300
+for that month, right?
+
+449
+00:22:30,300 --> 00:22:34,280
+And then let&#39;s see that program indicator,
+
+450
+00:22:34,280 --> 00:22:39,280
+and then when we push the data from Tracker to Aggregate,
+
+451
+00:22:39,570 --> 00:22:42,040
+let&#39;s make sure that that data element that we see
+
+452
+00:22:42,040 --> 00:22:46,220
+in our Aggregate is the same as that program indicator.
+
+453
+00:22:46,220 --> 00:22:47,053
+Right?
+
+454
+00:22:47,053 --> 00:22:48,680
+So we can double check this.
+
+455
+00:22:48,680 --> 00:22:50,270
+So we make sure that we kind of have
+
+456
+00:22:50,270 --> 00:22:52,230
+a one-to-one relationship.
+
+457
+00:22:52,230 --> 00:22:55,118
+Sometimes it can become quite problematic
+
+458
+00:22:55,118 --> 00:22:56,418
+with the transfer process,
+
+459
+00:22:59,540 --> 00:23:01,470
+if you don&#39;t have these data quality checks
+
+460
+00:23:01,470 --> 00:23:03,570
+in place to monitor just the transfer,
+
+461
+00:23:03,570 --> 00:23:05,820
+did everything actually go through correctly.
+
+462
+00:23:08,420 --> 00:23:09,253
+Okay.
+
+463
+00:23:11,060 --> 00:23:12,980
+I think I&#39;m gonna skip the last slide.
+
+464
+00:23:12,980 --> 00:23:16,060
+Actually, Yuri covered it quite thoroughly, I think.
+
+465
+00:23:16,060 --> 00:23:20,190
+And so that brings us, time now is 12:06 Oslo time.
+
+466
+00:23:20,190 --> 00:23:23,163
+So we are gonna go ahead and take our break.
+
+467
+00:23:24,900 --> 00:23:27,310
+Well, let&#39;s see if there&#39;s any questions, Nora,
+
+468
+00:23:27,310 --> 00:23:29,383
+any questions from the community, Martin?
+
+469
+00:23:35,060 --> 00:23:40,060
+- [Nora] Scott, you answered the questions about Excel
+
+470
+00:23:40,090 --> 00:23:44,930
+into Tracker, and then there is a question from Dhruvee,
+
+471
+00:23:44,930 --> 00:23:49,130
+again, if we calculate coverage, if we use Event Program
+
+472
+00:23:49,130 --> 00:23:52,670
+to do surveys of representative samples,
+
+473
+00:23:52,670 --> 00:23:55,200
+using it for a annual household survey
+
+474
+00:23:55,200 --> 00:23:56,793
+to calculate coverage.
+
+475
+00:23:58,605 --> 00:23:59,580
+I&#39;m not sure.
+
+476
+00:23:59,580 --> 00:24:02,183
+And there&#39;s also another question from Rose.
+
+477
+00:24:04,770 --> 00:24:08,910
+- [Scott] So can we calculate coverage if we&#39;re using data
+
+478
+00:24:08,910 --> 00:24:13,328
+to do surveys of representative samples?
+
+479
+00:24:13,328 --> 00:24:16,910
+Yeah, of course you can,
+
+480
+00:24:16,910 --> 00:24:19,150
+what we were talking about, and I think that seems like
+
+481
+00:24:19,150 --> 00:24:21,580
+maybe a lower level, like a DHS,
+
+482
+00:24:21,580 --> 00:24:24,140
+like a Demographic Household Survey or something like that.
+
+483
+00:24:24,140 --> 00:24:25,330
+You certainly can do that,
+
+484
+00:24:25,330 --> 00:24:29,550
+and that&#39;s the methodology that DHS also employs.
+
+485
+00:24:29,550 --> 00:24:31,760
+What we were saying is that maybe for like
+
+486
+00:24:31,760 --> 00:24:35,280
+coverage indicators that are like total immunized
+
+487
+00:24:35,280 --> 00:24:37,160
+or percentage of immunized children,
+
+488
+00:24:37,160 --> 00:24:40,700
+or something like that, fully immunized children.
+
+489
+00:24:40,700 --> 00:24:42,970
+Typically we don&#39;t have Tracker programs yet
+
+490
+00:24:42,970 --> 00:24:45,450
+that are at national scale to be able to calculate
+
+491
+00:24:45,450 --> 00:24:47,310
+that one with a hundred percent certainty
+
+492
+00:24:47,310 --> 00:24:49,030
+from just Tracker data.
+
+493
+00:24:49,030 --> 00:24:51,560
+But I think that if you&#39;re looking at coverage calculations
+
+494
+00:24:51,560 --> 00:24:53,410
+that are just from like maybe survey data
+
+495
+00:24:53,410 --> 00:24:58,410
+and you&#39;re using Event Capture to get that survey data,
+
+496
+00:24:59,460 --> 00:25:01,160
+then I think that&#39;s probably fine.
+
+497
+00:25:02,380 --> 00:25:03,680
+It&#39;s not so much associated with like
+
+498
+00:25:03,680 --> 00:25:05,073
+clinical service delivery.
+
+499
+00:25:06,790 --> 00:25:08,217
+And then Rose has a question here.
+
+500
+00:25:08,217 --> 00:25:11,050
+&quot;Would it be possible to send program notifications and
+
+501
+00:25:11,050 --> 00:25:13,690
+Tracker Events as a full collective summary,
+
+502
+00:25:13,690 --> 00:25:15,117
+not as single notification?&quot;
+
+503
+00:25:18,781 --> 00:25:19,813
+Yes, I think so.
+
+504
+00:25:25,450 --> 00:25:29,743
+Oh, you want to schedule notifications from Tracker?
+
+505
+00:25:32,610 --> 00:25:33,800
+I believe so.
+
+506
+00:25:33,800 --> 00:25:37,053
+So you also have something called program notifications,
+
+507
+00:25:38,160 --> 00:25:41,770
+that when you&#39;re actually building the program,
+
+508
+00:25:41,770 --> 00:25:42,900
+that you can apply.
+
+509
+00:25:42,900 --> 00:25:44,910
+And I think maybe not using a program rule,
+
+510
+00:25:44,910 --> 00:25:48,100
+but a program notification might be the answer to that.
+
+511
+00:25:48,100 --> 00:25:50,166
+But to be honest with you, Rose,
+
+512
+00:25:50,166 --> 00:25:53,600
+I am not the world&#39;s expert on Tracker.
+
+513
+00:25:53,600 --> 00:25:55,960
+And so what we need to do is I need to pass
+
+514
+00:25:55,960 --> 00:25:58,840
+your question along to Yuri, who would have
+
+515
+00:25:58,840 --> 00:26:01,393
+a better answer than me, I hope.
+
+516
+00:26:02,410 --> 00:26:04,533
+All right, so now we&#39;re at 12:08.
+
+517
+00:26:08,670 --> 00:26:11,080
+If you were wondering if I could share with you
+
+518
+00:26:11,080 --> 00:26:15,470
+access to the database that I just did a quick demo,
+
+519
+00:26:15,470 --> 00:26:16,313
+I cannot.
+
+520
+00:26:18,000 --> 00:26:20,100
+That is a production instance developed by
+
+521
+00:26:20,949 --> 00:26:23,090
+DHIS2 Implementer, that I asked if I could just do
+
+522
+00:26:23,090 --> 00:26:25,280
+a quick demo of their data capture forms,
+
+523
+00:26:25,280 --> 00:26:27,219
+and they said that was fine.
+
+524
+00:26:27,219 --> 00:26:29,269
+But it&#39;s not publicly available instance.
+
+525
+00:26:33,330 --> 00:26:36,630
+Okay, so let us take our 15 minute break
+
+526
+00:26:36,630 --> 00:26:41,630
+and we will be then coming back now at, I guess it would be
+
+527
+00:26:43,591 --> 00:26:44,453
+12:25.
+
+528
+00:26:47,450 --> 00:26:49,300
+Nora, would that give us sufficient time to go through
+
+529
+00:26:49,300 --> 00:26:51,800
+your session after the break?
+
+530
+00:26:51,800 --> 00:26:53,780
+- [Nora] Yes, Scott that&#39;s fine.
+
+531
+00:26:53,780 --> 00:26:57,170
+We&#39;ve just had a request for the uploading of the
+
+532
+00:26:57,170 --> 00:26:59,003
+PowerPoint presentations piece.
+
+533
+00:27:01,336 --> 00:27:03,870
+- [Scott] Right, I believe mine is already uploaded,
+
+534
+00:27:03,870 --> 00:27:06,322
+but we need to grab Yuri&#39;s as well.
+
+535
+00:27:06,322 --> 00:27:10,520
+- [Nora] Yes, then 12:25, we will meet again.
+
+536
+00:27:10,520 --> 00:27:11,900
+- [Scott] Okay, great.
+
+537
+00:27:11,900 --> 00:27:15,153
+We&#39;ll see you back here in 15 minutes at 12:25 Oslo time.
+

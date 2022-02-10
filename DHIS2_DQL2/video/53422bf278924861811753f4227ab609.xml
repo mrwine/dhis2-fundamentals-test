@@ -1,0 +1,9 @@
+<video youtube="1.00:BQalnQR00U4" url_name="53422bf278924861811753f4227ab609" sub="" transcripts="{&quot;en&quot;: &quot;4b370261-a2b7-4bab-971c-eed446edd0f8-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Outliers" download_track="true" download_video="true" edx_video_id="4b370261-a2b7-4bab-971c-eed446edd0f8" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/2.1.5+-+Outliers.mp4&quot;]" youtube_id_1_0="BQalnQR00U4">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/2.1.5+-+Outliers.mp4"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="4b370261-a2b7-4bab-971c-eed446edd0f8-en.srt"/>
+</video>

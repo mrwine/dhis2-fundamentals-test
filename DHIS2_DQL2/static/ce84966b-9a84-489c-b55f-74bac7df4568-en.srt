@@ -1,0 +1,1052 @@
+0
+00:00:00,750 --> 00:00:03,540
+- [Instructor] So another item is user management.
+
+1
+00:00:03,540 --> 00:00:06,520
+And where user management has the most impact
+
+2
+00:00:06,520 --> 00:00:10,130
+on data quality is actually related to data access.
+
+3
+00:00:10,130 --> 00:00:14,010
+So user roles, user groups and the authorities
+
+4
+00:00:14,010 --> 00:00:16,690
+that we then assign these roles.
+
+5
+00:00:16,690 --> 00:00:18,680
+So one thing is to keep on top of this,
+
+6
+00:00:18,680 --> 00:00:21,030
+because these authority sometimes change,
+
+7
+00:00:21,030 --> 00:00:22,270
+they get deprecated,
+
+8
+00:00:22,270 --> 00:00:24,990
+they don&#39;t really work in the way we intended over time
+
+9
+00:00:24,990 --> 00:00:27,040
+and keeping up-to-date on that
+
+10
+00:00:27,040 --> 00:00:29,563
+is not really the easiest thing to do.
+
+11
+00:00:30,610 --> 00:00:33,070
+But what are then the best practices for this?
+
+12
+00:00:33,070 --> 00:00:36,620
+So once again, I don&#39;t have the solutions
+
+13
+00:00:36,620 --> 00:00:38,850
+to a lot of these problems,
+
+14
+00:00:38,850 --> 00:00:41,430
+I think it&#39;s done differently in different places.
+
+15
+00:00:41,430 --> 00:00:42,810
+Certainly like everything else,
+
+16
+00:00:42,810 --> 00:00:45,920
+I always try to implement SOPs for this.
+
+17
+00:00:45,920 --> 00:00:47,920
+I will pull up an example of one
+
+18
+00:00:47,920 --> 00:00:50,303
+after I just kind of explain this a bit more.
+
+19
+00:00:51,340 --> 00:00:55,110
+But in a lot of places we could say the same thing
+
+20
+00:00:55,110 --> 00:00:57,860
+for users as we have for organization units,
+
+21
+00:00:57,860 --> 00:01:00,500
+decentralizing them becomes very challenging.
+
+22
+00:01:00,500 --> 00:01:03,410
+Decentralizing this function becomes very challenging,
+
+23
+00:01:03,410 --> 00:01:06,960
+particularly if you&#39;re having kind of top level expertise
+
+24
+00:01:06,960 --> 00:01:08,410
+in the system that you&#39;re implementing
+
+25
+00:01:08,410 --> 00:01:10,780
+and the ability then to manage users
+
+26
+00:01:10,780 --> 00:01:13,040
+is left to maybe a small group of people.
+
+27
+00:01:13,040 --> 00:01:16,390
+And there could be thousands of users in that system
+
+28
+00:01:16,390 --> 00:01:17,623
+that need to be managed.
+
+29
+00:01:18,680 --> 00:01:21,463
+We already talked about disabling, removing users.
+
+30
+00:01:23,260 --> 00:01:25,933
+This is very challenging just to leading any object.
+
+31
+00:01:27,870 --> 00:01:30,540
+But then, we wanna make sure we are organizing users
+
+32
+00:01:30,540 --> 00:01:34,270
+in some way, and then we have some methodology to do this.
+
+33
+00:01:34,270 --> 00:01:36,670
+So what can they view, what can they edit?
+
+34
+00:01:36,670 --> 00:01:39,873
+Maybe they can only see a subset of information.
+
+35
+00:01:40,850 --> 00:01:43,860
+And users also have an effect on user groups.
+
+36
+00:01:43,860 --> 00:01:46,070
+And user groups are very important actually
+
+37
+00:01:46,070 --> 00:01:47,910
+for this data access concept,
+
+38
+00:01:47,910 --> 00:01:50,300
+particularly when we&#39;re trying to do something
+
+39
+00:01:50,300 --> 00:01:54,860
+about sharing, because it&#39;s basically impossible to manage
+
+40
+00:01:54,860 --> 00:01:58,580
+sharing on a user level if you have thousands of users.
+
+41
+00:01:58,580 --> 00:01:59,630
+Even if it is possible,
+
+42
+00:01:59,630 --> 00:02:02,580
+theoretically, it&#39;s certainly not very practical.
+
+43
+00:02:02,580 --> 00:02:05,430
+So having these user groups there is quite important,
+
+44
+00:02:05,430 --> 00:02:07,900
+but they&#39;re often not there.
+
+45
+00:02:07,900 --> 00:02:10,800
+And if that&#39;s the case then, then what do you do?
+
+46
+00:02:10,800 --> 00:02:13,830
+So, user management is really important for data access.
+
+47
+00:02:13,830 --> 00:02:16,650
+I suggest proactive approaches are taken
+
+48
+00:02:16,650 --> 00:02:20,130
+when kind of implementing this initially,
+
+49
+00:02:20,130 --> 00:02:21,990
+many of us are past that point
+
+50
+00:02:21,990 --> 00:02:23,580
+and there&#39;s already lots of issues.
+
+51
+00:02:23,580 --> 00:02:26,770
+So, there has to be then procedures in place
+
+52
+00:02:26,770 --> 00:02:29,150
+in order to kind of handle this a bit more
+
+53
+00:02:29,150 --> 00:02:32,310
+because there are certain things that are not easily done
+
+54
+00:02:32,310 --> 00:02:34,410
+through the maintenance interface.
+
+55
+00:02:34,410 --> 00:02:37,760
+Some things you have to approach in a different way.
+
+56
+00:02:37,760 --> 00:02:40,020
+So just thinking about how we transfer these skills
+
+57
+00:02:40,020 --> 00:02:42,360
+over to the teams we&#39;re working with,
+
+58
+00:02:42,360 --> 00:02:45,150
+in order to allow them to control data access
+
+59
+00:02:45,150 --> 00:02:47,780
+in a more meaningful way that makes sense to them
+
+60
+00:02:47,780 --> 00:02:49,483
+based on their program&#39;s needs.
+
+61
+00:02:53,970 --> 00:02:55,860
+So here&#39;s another example,
+
+62
+00:02:55,860 --> 00:02:59,040
+standard operating procedure for creating users.
+
+63
+00:02:59,040 --> 00:03:01,770
+Now you might&#39;ve noticed at this point in time,
+
+64
+00:03:01,770 --> 00:03:06,410
+that I don&#39;t use any screenshots actually to create my SOPs,
+
+65
+00:03:06,410 --> 00:03:08,240
+and that is mainly because the user interface
+
+66
+00:03:08,240 --> 00:03:11,150
+keeps changing, the authorities keep changing.
+
+67
+00:03:11,150 --> 00:03:14,510
+So if you&#39;re trying to maintain this over time,
+
+68
+00:03:14,510 --> 00:03:15,910
+becomes quite challenging.
+
+69
+00:03:15,910 --> 00:03:18,620
+But the idea is also to make this as short
+
+70
+00:03:18,620 --> 00:03:21,220
+and understandable as possible.
+
+71
+00:03:21,220 --> 00:03:23,320
+So kinda make it straight to the point,
+
+72
+00:03:23,320 --> 00:03:25,440
+and just specify what people need to do
+
+73
+00:03:25,440 --> 00:03:28,680
+when they want to create a user with certain rights
+
+74
+00:03:28,680 --> 00:03:30,240
+in their system.
+
+75
+00:03:30,240 --> 00:03:33,680
+But this is another, there&#39;s not a,
+
+76
+00:03:33,680 --> 00:03:36,690
+there might be some problems with this approach of course,
+
+77
+00:03:36,690 --> 00:03:39,950
+but it&#39;s another way to kind of help things move along.
+
+78
+00:03:39,950 --> 00:03:43,570
+So I posted this and you can have a look at this as well,
+
+79
+00:03:43,570 --> 00:03:47,300
+basically just goes over what roles they should be assigned,
+
+80
+00:03:47,300 --> 00:03:49,500
+and which user groups they should be assigned
+
+81
+00:03:49,500 --> 00:03:50,650
+to you essentially
+
+82
+00:03:50,650 --> 00:03:53,590
+because this becomes a larger problem obviously
+
+83
+00:03:53,590 --> 00:03:56,140
+with access to the data as we have been discussing.
+
+84
+00:03:58,790 --> 00:04:01,670
+So we also have the issue of sharing.
+
+85
+00:04:01,670 --> 00:04:05,810
+And sharing is directly related to our user management.
+
+86
+00:04:05,810 --> 00:04:08,660
+So when user groups are well-defined,
+
+87
+00:04:08,660 --> 00:04:11,800
+then we can apply sharing to our sets of metadata.
+
+88
+00:04:11,800 --> 00:04:14,180
+But like I said, that&#39;s often not the case.
+
+89
+00:04:14,180 --> 00:04:17,580
+You might not have a lot of well-defined user groups
+
+90
+00:04:17,579 --> 00:04:18,880
+in the system.
+
+91
+00:04:18,880 --> 00:04:20,230
+And this is still kind of,
+
+92
+00:04:20,230 --> 00:04:23,300
+this concept has been around for some time,
+
+93
+00:04:23,300 --> 00:04:25,930
+but this whole idea of sharing both for tracker
+
+94
+00:04:25,930 --> 00:04:28,130
+and for aggregate is still quite challenging
+
+95
+00:04:28,130 --> 00:04:30,240
+in a lot of places making sure that the right people
+
+96
+00:04:30,240 --> 00:04:31,730
+have access to this data.
+
+97
+00:04:31,730 --> 00:04:33,050
+And more so then,
+
+98
+00:04:33,050 --> 00:04:35,430
+maybe this is something we set up initially,
+
+99
+00:04:35,430 --> 00:04:37,600
+we help people to set up initially.
+
+100
+00:04:37,600 --> 00:04:39,390
+But then what happens after that?
+
+101
+00:04:39,390 --> 00:04:41,170
+Long-term management of sharing
+
+102
+00:04:41,170 --> 00:04:44,470
+becomes very challenging, because there are no tools
+
+103
+00:04:44,470 --> 00:04:47,390
+to manage sharing well in DHIS2.
+
+104
+00:04:47,390 --> 00:04:49,420
+So we can kind of click on one item,
+
+105
+00:04:49,420 --> 00:04:53,140
+click on one data element and then share it, right?
+
+106
+00:04:53,140 --> 00:04:54,620
+Through the user interface.
+
+107
+00:04:54,620 --> 00:04:57,796
+But that&#39;s not practical, right?
+
+108
+00:04:57,796 --> 00:05:00,700
+There&#39;s no way you can manage sharing in a large system
+
+109
+00:05:00,700 --> 00:05:05,320
+like this, like a lot of the implementations
+
+110
+00:05:05,320 --> 00:05:06,850
+that we&#39;re working with.
+
+111
+00:05:06,850 --> 00:05:09,840
+So, what do we do then, we script a lot of this, right?
+
+112
+00:05:09,840 --> 00:05:12,164
+We come up with with different solutions,
+
+113
+00:05:12,164 --> 00:05:15,870
+there&#39;s different solutions out there that can be used
+
+114
+00:05:15,870 --> 00:05:17,270
+for scripting this process.
+
+115
+00:05:17,270 --> 00:05:20,780
+We come up with some way to do this ourselves,
+
+116
+00:05:20,780 --> 00:05:23,410
+and then maybe we document it at that snapshot,
+
+117
+00:05:23,410 --> 00:05:24,930
+at that point in time.
+
+118
+00:05:24,930 --> 00:05:27,780
+But then what happens as new programs are added,
+
+119
+00:05:27,780 --> 00:05:30,743
+new data elements are added, new data sets are added?
+
+120
+00:05:31,610 --> 00:05:34,400
+How do we share then all of these items?
+
+121
+00:05:34,400 --> 00:05:37,380
+How do we transfer this over then to countries as well?
+
+122
+00:05:37,380 --> 00:05:40,380
+Because there&#39;s no real good mechanism right now to do this
+
+123
+00:05:40,380 --> 00:05:42,700
+through the user interface that would make it easy
+
+124
+00:05:42,700 --> 00:05:46,460
+for countries to learn how to do sharing correctly.
+
+125
+00:05:46,460 --> 00:05:49,290
+So that&#39;s what we sometimes see it being done so poorly,
+
+126
+00:05:49,290 --> 00:05:51,450
+because there&#39;s not really a good mechanism for it there
+
+127
+00:05:51,450 --> 00:05:55,330
+at the moment, this is something we can fix, right?
+
+128
+00:05:55,330 --> 00:05:56,430
+Often we can go in there
+
+129
+00:05:56,430 --> 00:05:58,480
+and we can fix the sharing actually.
+
+130
+00:05:58,480 --> 00:06:01,350
+We can have a great influence there in helping countries
+
+131
+00:06:01,350 --> 00:06:02,940
+to fix this problem.
+
+132
+00:06:02,940 --> 00:06:04,300
+But the main challenge is then,
+
+133
+00:06:04,300 --> 00:06:06,890
+how do we have countries kind of take this up
+
+134
+00:06:06,890 --> 00:06:09,893
+to do a lot of these functions and operations on their own?
+
+135
+00:06:13,270 --> 00:06:16,300
+So here&#39;s an example of an actual system
+
+136
+00:06:16,300 --> 00:06:19,030
+where sharing has gone completely wrong.
+
+137
+00:06:19,030 --> 00:06:22,410
+It had over 6,000 dashboards,
+
+138
+00:06:22,410 --> 00:06:25,870
+nearly 3,000 of them had nothing on them,
+
+139
+00:06:25,870 --> 00:06:28,440
+the majority of them were completely private,
+
+140
+00:06:28,440 --> 00:06:30,100
+just private to that particular user,
+
+141
+00:06:30,100 --> 00:06:32,153
+so they were serving no function.
+
+142
+00:06:33,220 --> 00:06:35,870
+You had a couple shared with individual users,
+
+143
+00:06:35,870 --> 00:06:37,200
+you had a couple of maybe shared
+
+144
+00:06:37,200 --> 00:06:39,200
+with a couple of user groups,
+
+145
+00:06:39,200 --> 00:06:40,940
+there were a couple that were public.
+
+146
+00:06:40,940 --> 00:06:43,220
+And then we go through all the analytical objects as well,
+
+147
+00:06:43,220 --> 00:06:46,044
+all their favorites, all their data element groups,
+
+148
+00:06:46,044 --> 00:06:48,810
+all the indicator groups and categories, et cetera.
+
+149
+00:06:48,810 --> 00:06:53,740
+So when we have this amount of metadata in our system,
+
+150
+00:06:53,740 --> 00:06:57,340
+you can see there&#39;s obviously other problems here
+
+151
+00:06:57,340 --> 00:07:00,610
+unrelated to sharing all kinds of general problems
+
+152
+00:07:00,610 --> 00:07:01,640
+that we&#39;ve been discussing.
+
+153
+00:07:01,640 --> 00:07:03,800
+Maybe a complete lack of coordination,
+
+154
+00:07:03,800 --> 00:07:06,350
+lack of procedures in terms of adding metadata
+
+155
+00:07:06,350 --> 00:07:07,930
+to the system.
+
+156
+00:07:07,930 --> 00:07:10,010
+But then when we go to actually,
+
+157
+00:07:10,010 --> 00:07:12,470
+dive down into this a bit further,
+
+158
+00:07:12,470 --> 00:07:14,790
+because of the way that this is configured and shared,
+
+159
+00:07:14,790 --> 00:07:17,300
+it&#39;s going to make it extremely difficult
+
+160
+00:07:17,300 --> 00:07:20,633
+to find what is required to analyze your data.
+
+161
+00:07:21,900 --> 00:07:24,610
+This has a direct impact on the ability
+
+162
+00:07:24,610 --> 00:07:27,610
+to kind of output quality, sorry,
+
+163
+00:07:27,610 --> 00:07:29,320
+create quality outputs.
+
+164
+00:07:29,320 --> 00:07:33,320
+Because if I can&#39;t even find what I need,
+
+165
+00:07:33,320 --> 00:07:35,490
+then it&#39;s going to be extremely challenging
+
+166
+00:07:35,490 --> 00:07:38,500
+to create anything that is useful for my needs,
+
+167
+00:07:38,500 --> 00:07:41,330
+that I can even start to begin to review
+
+168
+00:07:41,330 --> 00:07:43,050
+the potential data quality issues.
+
+169
+00:07:43,050 --> 00:07:46,070
+And then, how do I handle that if I can&#39;t even see
+
+170
+00:07:46,070 --> 00:07:47,010
+what I want,
+
+171
+00:07:47,010 --> 00:07:50,013
+or if there&#39;s just so much overwhelming information,
+
+172
+00:07:51,470 --> 00:07:54,530
+if I have 83 public data element groups
+
+173
+00:07:54,530 --> 00:07:58,010
+with over 13,000 public data elements,
+
+174
+00:07:58,010 --> 00:08:01,820
+finding what I need is going to be extremely challenging.
+
+175
+00:08:01,820 --> 00:08:03,660
+So in some cases,
+
+176
+00:08:03,660 --> 00:08:07,390
+we want to share everything with everyone, right?
+
+177
+00:08:07,390 --> 00:08:11,680
+We want to kind of, as a data repository in particular,
+
+178
+00:08:11,680 --> 00:08:14,410
+we want to promote this type of sharing
+
+179
+00:08:14,410 --> 00:08:16,700
+of information across programs.
+
+180
+00:08:16,700 --> 00:08:19,280
+But at the same time, there might be instances
+
+181
+00:08:19,280 --> 00:08:22,060
+where we need to narrow what we&#39;re sharing
+
+182
+00:08:22,060 --> 00:08:25,400
+and make this work a bit more,
+
+183
+00:08:25,400 --> 00:08:28,890
+so people can see what they need to quickly,
+
+184
+00:08:28,890 --> 00:08:31,420
+find what they need to quickly and not just have access
+
+185
+00:08:31,420 --> 00:08:34,160
+to everything all at once.
+
+186
+00:08:34,159 --> 00:08:36,042
+So, there are two items here.
+
+187
+00:08:36,042 --> 00:08:39,430
+We can influence this more because we can go in there
+
+188
+00:08:39,429 --> 00:08:41,090
+and clean it up.
+
+189
+00:08:41,090 --> 00:08:45,620
+But at the same time, how do we then transfer the skills?
+
+190
+00:08:45,620 --> 00:08:47,140
+That&#39;s kind of the question I&#39;m posing.
+
+191
+00:08:47,140 --> 00:08:50,180
+How do we then transfer a lot of this over to countries
+
+192
+00:08:50,180 --> 00:08:52,860
+where, because we&#39;re going to script.
+
+193
+00:08:52,860 --> 00:08:55,930
+Cleaning up something like my example here,
+
+194
+00:08:55,930 --> 00:08:57,970
+we wouldn&#39;t do anything manually, right?
+
+195
+00:08:57,970 --> 00:08:59,210
+We would script all of this,
+
+196
+00:08:59,210 --> 00:09:01,480
+we would find other ways, other solutions,
+
+197
+00:09:01,480 --> 00:09:04,583
+to make this process a bit more automated.
+
+198
+00:09:05,890 --> 00:09:08,690
+So what I&#39;d like to do is kind of initiate
+
+199
+00:09:08,690 --> 00:09:11,400
+a bit of discussion around this topic,
+
+200
+00:09:11,400 --> 00:09:13,900
+because some of you might have solutions
+
+201
+00:09:13,900 --> 00:09:16,700
+that I&#39;ve not been able to think of obviously.
+
+202
+00:09:16,700 --> 00:09:17,533
+As I mentioned,
+
+203
+00:09:17,533 --> 00:09:19,680
+I didn&#39;t have the solution to all these problems,
+
+204
+00:09:19,680 --> 00:09:21,650
+I&#39;m able to identify a lot of them
+
+205
+00:09:21,650 --> 00:09:24,160
+and make long-term adjustments
+
+206
+00:09:24,160 --> 00:09:26,030
+to actually fix some of these things,
+
+207
+00:09:26,030 --> 00:09:28,500
+but nothing immediate in some cases.
+
+208
+00:09:28,500 --> 00:09:32,910
+So, if you have kinda more immediate solutions
+
+209
+00:09:32,910 --> 00:09:34,950
+or different ways to handle these,
+
+210
+00:09:34,950 --> 00:09:37,430
+certainly interested in hearing from you.
+
+211
+00:09:37,430 --> 00:09:39,660
+So when you assign programs and datasets
+
+212
+00:09:39,660 --> 00:09:41,233
+to organization units,
+
+213
+00:09:42,535 --> 00:09:45,640
+what considerations have you made in the past,
+
+214
+00:09:45,640 --> 00:09:47,790
+particularly as it relates to things like,
+
+215
+00:09:47,790 --> 00:09:50,880
+completeness of information and appropriate access
+
+216
+00:09:50,880 --> 00:09:53,440
+to those programs and datasets?
+
+217
+00:09:53,440 --> 00:09:55,350
+What are some approaches that have worked
+
+218
+00:09:55,350 --> 00:09:57,460
+when dealing with user management?
+
+219
+00:09:57,460 --> 00:10:00,160
+In particular, decentralized user management
+
+220
+00:10:00,160 --> 00:10:03,010
+and making sure people have the right access
+
+221
+00:10:03,010 --> 00:10:05,063
+to the right pieces of information?
+
+222
+00:10:06,090 --> 00:10:09,350
+How have you dealt with countries managing mass sharing?
+
+223
+00:10:09,350 --> 00:10:12,410
+Has this something that you&#39;ve been successful in imparting
+
+224
+00:10:12,410 --> 00:10:15,130
+to countries so they can manage this on their own,
+
+225
+00:10:15,130 --> 00:10:15,963
+or is this something
+
+226
+00:10:15,963 --> 00:10:17,690
+where you were still kind of heavily involved
+
+227
+00:10:17,690 --> 00:10:20,240
+with supporting due to the nature of your relationship
+
+228
+00:10:20,240 --> 00:10:23,160
+with that country and the kind of inability
+
+229
+00:10:23,160 --> 00:10:25,520
+that we have right now with DHIS2 tools
+
+230
+00:10:25,520 --> 00:10:26,853
+to do this easily?
+
+231
+00:10:28,770 --> 00:10:31,930
+So, have you been able to successfully decentralize
+
+232
+00:10:31,930 --> 00:10:34,010
+any of these roles?
+
+233
+00:10:34,010 --> 00:10:37,060
+That would also be very interesting to hear from you all.
+
+234
+00:10:37,060 --> 00:10:39,710
+And how have you approached capacity building
+
+235
+00:10:39,710 --> 00:10:40,860
+around these functions?
+
+236
+00:10:40,860 --> 00:10:43,360
+Because I think one of the main challenges is,
+
+237
+00:10:43,360 --> 00:10:45,460
+we&#39;re going to keep seeing this poor design
+
+238
+00:10:45,460 --> 00:10:49,350
+if we&#39;re not able to have others basically learn
+
+239
+00:10:49,350 --> 00:10:53,440
+how to do these various functionalities within their system.
+
+240
+00:10:53,440 --> 00:10:56,270
+If it&#39;s always his group supporting this,
+
+241
+00:10:56,270 --> 00:10:58,640
+then that&#39;s not sustainable.
+
+242
+00:10:58,640 --> 00:10:59,910
+That&#39;s not a sustainable approach,
+
+243
+00:10:59,910 --> 00:11:01,410
+that&#39;s not what we want to do.
+
+244
+00:11:02,280 --> 00:11:03,780
+It might be the case where the tools
+
+245
+00:11:03,780 --> 00:11:06,970
+need some significant modification in order to support these
+
+246
+00:11:06,970 --> 00:11:09,000
+and make these things easier to do.
+
+247
+00:11:09,000 --> 00:11:12,750
+But in the interim, we need some placeholder.
+
+248
+00:11:12,750 --> 00:11:16,110
+So, I&#39;m just curious how you&#39;ve kind of dealt
+
+249
+00:11:16,110 --> 00:11:18,840
+with a lot of these in the countries you&#39;re working with.
+
+250
+00:11:18,840 --> 00:11:20,960
+So we&#39;ve created a discussion board
+
+251
+00:11:20,960 --> 00:11:22,500
+for this particular topic
+
+252
+00:11:22,500 --> 00:11:26,450
+just to directly underneath within this module here.
+
+253
+00:11:26,450 --> 00:11:27,730
+And I&#39;d be really interested
+
+254
+00:11:27,730 --> 00:11:30,530
+if you could kind of just post some of these,
+
+255
+00:11:30,530 --> 00:11:31,920
+some answers to these questions.
+
+256
+00:11:31,920 --> 00:11:33,380
+Just to have a think about it
+
+257
+00:11:33,380 --> 00:11:35,050
+and post some responses to these.
+
+258
+00:11:35,050 --> 00:11:38,140
+If this is not something you have a lot of experience with,
+
+259
+00:11:38,140 --> 00:11:39,850
+don&#39;t worry, maybe you just read
+
+260
+00:11:39,850 --> 00:11:41,580
+some of the replies from others,
+
+261
+00:11:41,580 --> 00:11:44,810
+but this is something maybe we can come back to
+
+262
+00:11:44,810 --> 00:11:47,163
+when we have our live discussion later on.
+

@@ -1,0 +1,884 @@
+0
+00:00:00,300 --> 00:00:04,270
+- [Instructor] So that&#39;s where the next page
+
+1
+00:00:04,270 --> 00:00:08,120
+of the configuration dashboard comes in,
+
+2
+00:00:08,119 --> 00:00:09,790
+the configuration tool comes in
+
+3
+00:00:09,790 --> 00:00:12,760
+and that is to change these thresholds.
+
+4
+00:00:12,760 --> 00:00:17,760
+So I&#39;m gonna show you how that&#39;s done, more administration.
+
+5
+00:00:20,415 --> 00:00:25,415
+This page is really quite complex and a bit overwhelming.
+
+6
+00:00:26,810 --> 00:00:29,450
+Fortunately, the tool does a good job
+
+7
+00:00:29,450 --> 00:00:32,410
+of filling it in by default.
+
+8
+00:00:32,409 --> 00:00:37,410
+So if you leave the default settings,
+
+9
+00:00:37,652 --> 00:00:41,953
+then that usually works pretty well.
+
+10
+00:00:44,940 --> 00:00:49,940
+Now what I&#39;m looking for and completeness,
+
+11
+00:00:52,800 --> 00:00:57,270
+I&#39;m looking for how to reset the thresholds
+
+12
+00:00:58,970 --> 00:01:02,500
+or data consistency.
+
+13
+00:01:02,500 --> 00:01:04,810
+Maybe it was under numerator relations.
+
+14
+00:01:04,810 --> 00:01:05,643
+Oh yeah.
+
+15
+00:01:05,643 --> 00:01:06,723
+Okay, sorry.
+
+16
+00:01:09,265 --> 00:01:12,350
+That&#39;s 10% I was talking about.
+
+17
+00:01:12,350 --> 00:01:15,660
+It isn&#39;t set with the numerator quality parameters.
+
+18
+00:01:15,660 --> 00:01:18,410
+It is actually set in numerator relations
+
+19
+00:01:18,410 --> 00:01:22,520
+and notice here that when you fill this in,
+
+20
+00:01:22,520 --> 00:01:27,450
+that&#39;s when you set this, when I set it to 10%.
+
+21
+00:01:27,450 --> 00:01:30,330
+So by default it says 10%.
+
+22
+00:01:30,330 --> 00:01:35,330
+I&#39;m gonna loosen this and set the threshold to 30%
+
+23
+00:01:36,680 --> 00:01:41,680
+and let&#39;s see what we find when we change this threshold.
+
+24
+00:01:42,810 --> 00:01:47,810
+We go back to the dashboard and consistency data.
+
+25
+00:01:48,840 --> 00:01:53,390
+Now we&#39;ve got a wider set of thresholds
+
+26
+00:01:53,390 --> 00:01:58,300
+for consistency between ANC 1 and Penta 1.
+
+27
+00:01:58,300 --> 00:02:02,450
+And there&#39;s only the single only bow
+
+28
+00:02:02,450 --> 00:02:06,373
+as ANC first visit number.
+
+29
+00:02:07,630 --> 00:02:11,600
+Again, this is set for last 12 months.
+
+30
+00:02:11,600 --> 00:02:14,720
+So ANC is much greater than,
+
+31
+00:02:14,720 --> 00:02:17,320
+the ANC 1 much greater than Penta 1.
+
+32
+00:02:17,320 --> 00:02:21,170
+And these other districts are not flagged
+
+33
+00:02:21,170 --> 00:02:23,713
+as having outlier values.
+
+34
+00:02:27,740 --> 00:02:32,740
+That&#39;s how you set the thresholds for numerator relations.
+
+35
+00:02:33,020 --> 00:02:37,822
+You actually do it when you complete the form.
+
+36
+00:02:37,822 --> 00:02:41,240
+And maybe even with dropout, well dropout rate,
+
+37
+00:02:41,240 --> 00:02:45,920
+you don&#39;t set a threshold, but with each one of these,
+
+38
+00:02:45,920 --> 00:02:50,920
+you can decide what to set the threshold at.
+
+39
+00:02:50,970 --> 00:02:54,380
+For example, I like to adjust the threshold
+
+40
+00:02:54,380 --> 00:02:55,880
+so that you have only
+
+41
+00:02:55,880 --> 00:02:59,140
+a small manageable number of districts
+
+42
+00:02:59,140 --> 00:03:01,980
+which are flagged as having outliers
+
+43
+00:03:01,980 --> 00:03:04,300
+so that you can easily follow up
+
+44
+00:03:04,300 --> 00:03:07,300
+on that small manageable number of districts.
+
+45
+00:03:07,300 --> 00:03:12,300
+But other aspects of these quality parameters are set here
+
+46
+00:03:15,160 --> 00:03:18,260
+and there are so many aspects.
+
+47
+00:03:18,260 --> 00:03:23,260
+And in a moment, we&#39;ll share a PowerPoint presentation
+
+48
+00:03:23,560 --> 00:03:27,670
+that Nick has developed just briefly shift points to it
+
+49
+00:03:29,170 --> 00:03:33,000
+to help you understand what is meant
+
+50
+00:03:33,000 --> 00:03:37,620
+by expected trend constant versus increasing decreasing
+
+51
+00:03:38,620 --> 00:03:43,340
+compare with overall result versus expected result.
+
+52
+00:03:43,340 --> 00:03:46,620
+That&#39;s what the PowerPoint will go into.
+
+53
+00:03:46,620 --> 00:03:51,490
+What I&#39;m going to show you is how even the definition
+
+54
+00:03:51,490 --> 00:03:56,490
+of what is an outlier using standard Z scores,
+
+55
+00:03:57,280 --> 00:04:00,560
+you can change that in the tool.
+
+56
+00:04:00,560 --> 00:04:05,560
+And as an example with malaria cases,
+
+57
+00:04:05,950 --> 00:04:10,010
+you might find that because malaria is seasonal,
+
+58
+00:04:10,010 --> 00:04:15,010
+you want to pick up only quite extreme values for malaria.
+
+59
+00:04:16,890 --> 00:04:21,050
+So you could change the definition of a moderate outlier
+
+60
+00:04:21,050 --> 00:04:26,050
+to three standard deviations and the severe extreme outlier
+
+61
+00:04:26,500 --> 00:04:29,090
+to four standard deviations.
+
+62
+00:04:29,090 --> 00:04:34,090
+So this is something in your spare time to play around with.
+
+63
+00:04:37,249 --> 00:04:42,249
+And just one tip that I have about setting these parameters.
+
+64
+00:04:43,710 --> 00:04:46,970
+What I like to do is even though I,
+
+65
+00:04:46,970 --> 00:04:51,020
+sometimes I&#39;m not quite understanding
+
+66
+00:04:51,020 --> 00:04:52,610
+what the distinction is
+
+67
+00:04:52,610 --> 00:04:55,780
+between expected results and overall result.
+
+68
+00:04:55,780 --> 00:04:58,550
+I like to just play around with these,
+
+69
+00:04:58,550 --> 00:05:01,582
+go into numerator quality parameters
+
+70
+00:05:01,582 --> 00:05:06,582
+and see how it affects the dashboard.
+
+71
+00:05:08,520 --> 00:05:12,900
+Is the reference line going through mode,
+
+72
+00:05:12,900 --> 00:05:17,250
+most of the dots or is the reference line misplaced?
+
+73
+00:05:17,250 --> 00:05:22,023
+For example, if we, let&#39;s with IPT.
+
+74
+00:05:25,400 --> 00:05:30,400
+Let&#39;s go to quality parameters.
+
+75
+00:05:30,620 --> 00:05:35,620
+And if we set this to expected results
+
+76
+00:05:37,830 --> 00:05:42,170
+and we looked at the dashboard, it&#39;s not a core.
+
+77
+00:05:45,410 --> 00:05:49,160
+Okay, it&#39;s not a core because it&#39;s a malaria indicator.
+
+78
+00:05:49,160 --> 00:05:51,780
+Okay, yeah so this is what I was doing.
+
+79
+00:05:51,780 --> 00:05:56,780
+Notice how when it&#39;s set to expected result,
+
+80
+00:05:57,640 --> 00:06:01,290
+the line is below all these dots.
+
+81
+00:06:01,290 --> 00:06:06,050
+So what I like to do is as I say,
+
+82
+00:06:06,050 --> 00:06:11,050
+play around with the quality parameters.
+
+83
+00:06:12,060 --> 00:06:17,060
+And if we change this back to expected result,
+
+84
+00:06:19,710 --> 00:06:22,080
+oh, I forgot something.
+
+85
+00:06:22,080 --> 00:06:25,090
+This is, if you like, it&#39;s a bug of the tool.
+
+86
+00:06:25,090 --> 00:06:29,730
+Most parts of the configuration you don&#39;t have to save,
+
+87
+00:06:29,730 --> 00:06:34,730
+but this page you have to save or you don&#39;t see the effects.
+
+88
+00:06:40,710 --> 00:06:45,433
+So let&#39;s see if this has changed the situation.
+
+89
+00:06:49,450 --> 00:06:53,660
+Okay well, so now it&#39;s still below.
+
+90
+00:06:58,050 --> 00:07:01,210
+I&#39;m just gonna persist with this once more
+
+91
+00:07:01,210 --> 00:07:05,293
+and then I&#39;ll move on or pause for questions.
+
+92
+00:07:06,430 --> 00:07:07,323
+Let&#39;s see.
+
+93
+00:07:11,060 --> 00:07:12,313
+So I&#39;ve saved.
+
+94
+00:07:14,720 --> 00:07:15,553
+All right.
+
+95
+00:07:15,553 --> 00:07:17,190
+Oh, no, I&#39;m sorry.
+
+96
+00:07:17,190 --> 00:07:19,560
+I forgot to set that (indistinct)
+
+97
+00:07:19,560 --> 00:07:21,450
+Now, okay.
+
+98
+00:07:21,450 --> 00:07:26,450
+So we find that indeed overall results produces
+
+99
+00:07:27,450 --> 00:07:32,050
+the reference line which passes through most of the dots.
+
+100
+00:07:32,050 --> 00:07:35,140
+We assume that most of the dots
+
+101
+00:07:35,140 --> 00:07:39,500
+are the appropriate relationship.
+
+102
+00:07:39,500 --> 00:07:44,500
+And we just have a couple of outliers of suspicious numbers.
+
+103
+00:07:45,090 --> 00:07:50,090
+So I&#39;ll point too and maybe Nick wants to say something
+
+104
+00:07:52,120 --> 00:07:55,133
+about the presentation.
+
+105
+00:08:00,210 --> 00:08:04,503
+Do you see the PowerPoint presentation on the screen now?
+
+106
+00:08:06,130 --> 00:08:07,650
+- [Nick] Yep, yes.
+
+107
+00:08:07,650 --> 00:08:09,810
+I mean, I don&#39;t think we&#39;ll get
+
+108
+00:08:09,810 --> 00:08:12,350
+into too much detail on that presentation.
+
+109
+00:08:12,350 --> 00:08:15,060
+It&#39;s just there for your reference.
+
+110
+00:08:15,060 --> 00:08:18,140
+It kind of explains the link
+
+111
+00:08:18,140 --> 00:08:20,470
+between some of these numerator quality presenters
+
+112
+00:08:20,470 --> 00:08:22,720
+and their effect then on, in particular,
+
+113
+00:08:22,720 --> 00:08:24,870
+the analysis functions.
+
+114
+00:08:24,870 --> 00:08:27,660
+So there is some stuff in the analysis functions
+
+115
+00:08:27,660 --> 00:08:30,500
+we didn&#39;t go over in too much detail,
+
+116
+00:08:30,500 --> 00:08:32,400
+but just some of these terms that you see
+
+117
+00:08:32,400 --> 00:08:37,400
+in their expected results or overall results,
+
+118
+00:08:38,480 --> 00:08:40,520
+as well as increasing and decreasing
+
+119
+00:08:40,520 --> 00:08:41,650
+when you&#39;re setting these thresholds
+
+120
+00:08:41,650 --> 00:08:44,050
+as well as all the different analysis
+
+121
+00:08:44,049 --> 00:08:47,060
+that you could perform and basically just goes over
+
+122
+00:08:47,060 --> 00:08:49,670
+the effect of what you&#39;re doing on this.
+
+123
+00:08:49,670 --> 00:08:54,453
+So just real quick you had expected an overall result.
+
+124
+00:08:55,830 --> 00:08:59,300
+Expected result is kind of a theoretical result.
+
+125
+00:08:59,300 --> 00:09:00,790
+It&#39;s usually if you&#39;re, for example,
+
+126
+00:09:00,790 --> 00:09:04,170
+if I&#39;m doing an analysis over time, maybe I expect them.
+
+127
+00:09:04,170 --> 00:09:06,650
+If there are two variables that are comparing
+
+128
+00:09:06,650 --> 00:09:08,160
+the ratio, maybe should be one, right?
+
+129
+00:09:08,160 --> 00:09:09,450
+Maybe they&#39;re equal.
+
+130
+00:09:09,450 --> 00:09:10,740
+But then there&#39;s an observed result
+
+131
+00:09:10,740 --> 00:09:12,600
+and actual results right?
+
+132
+00:09:12,600 --> 00:09:15,660
+Not my theoretical actual result at your national level.
+
+133
+00:09:15,660 --> 00:09:18,040
+So that&#39;s the observed results, right?
+
+134
+00:09:18,040 --> 00:09:19,580
+Where you&#39;re actually seeing, okay,
+
+135
+00:09:19,580 --> 00:09:22,290
+if I compare two values at the national level,
+
+136
+00:09:22,290 --> 00:09:23,820
+what is my observed result?
+
+137
+00:09:23,820 --> 00:09:25,890
+And then I can take all the districts
+
+138
+00:09:25,890 --> 00:09:28,960
+or facilities or whatever and compare them
+
+139
+00:09:28,960 --> 00:09:30,700
+to that observed result.
+
+140
+00:09:30,700 --> 00:09:32,920
+So it&#39;s just kind of a, you know,
+
+141
+00:09:32,920 --> 00:09:36,170
+the tool does various things to model information,
+
+142
+00:09:36,170 --> 00:09:40,250
+pieces of information for you to kind of compare
+
+143
+00:09:40,250 --> 00:09:41,820
+and contrast how things are.
+
+144
+00:09:41,820 --> 00:09:45,630
+And sometimes this modeling
+
+145
+00:09:45,630 --> 00:09:47,700
+is based on ideal scenarios, right?
+
+146
+00:09:47,700 --> 00:09:49,830
+So you might not accurately reflect
+
+147
+00:09:50,850 --> 00:09:52,330
+what you&#39;re observing in reality.
+
+148
+00:09:52,330 --> 00:09:54,770
+So that&#39;s kind of the briefly,
+
+149
+00:09:54,770 --> 00:09:57,570
+the difference between this observed and expected results.
+
+150
+00:09:57,570 --> 00:10:00,790
+Just reviewing in a theoretical value
+
+151
+00:10:00,790 --> 00:10:03,280
+versus a actual observed value based on values
+
+152
+00:10:03,280 --> 00:10:04,540
+in your system.
+
+153
+00:10:04,540 --> 00:10:06,640
+I don&#39;t know where that theoretical value can help.
+
+154
+00:10:06,640 --> 00:10:07,740
+Obviously is where your data
+
+155
+00:10:07,740 --> 00:10:09,580
+is just completely stuck, right?
+
+156
+00:10:09,580 --> 00:10:11,710
+So if you have a lot of problems with your data
+
+157
+00:10:11,710 --> 00:10:15,130
+and then the observed result does not give you value,
+
+158
+00:10:15,130 --> 00:10:18,300
+you know, there&#39;s no added value in comparing districts
+
+159
+00:10:18,300 --> 00:10:21,230
+to that observed value because there&#39;s significant issues
+
+160
+00:10:21,230 --> 00:10:24,100
+with the data quality that you&#39;re already aware of.
+
+161
+00:10:24,100 --> 00:10:27,100
+That&#39;s where that theoretical value for the expected results
+
+162
+00:10:27,100 --> 00:10:29,730
+would be better to use.
+
+163
+00:10:29,730 --> 00:10:33,000
+But in any case, I think this is a bit of a
+
+164
+00:10:34,530 --> 00:10:39,190
+that way down in the weeds about how to look at this.
+
+165
+00:10:39,190 --> 00:10:41,070
+You know, you can have a look if you&#39;re interested
+
+166
+00:10:41,070 --> 00:10:42,700
+and I&#39;m happy to speak to anyone
+
+167
+00:10:42,700 --> 00:10:44,110
+who has any follow up about this,
+
+168
+00:10:44,110 --> 00:10:47,260
+but I don&#39;t wanna detract from the overall discussion.
+
+169
+00:10:47,260 --> 00:10:49,870
+So you can just have a look at the session in leisure
+
+170
+00:10:49,870 --> 00:10:52,603
+and we can talk about this more if you have any questions.
+
+171
+00:10:53,700 --> 00:10:55,810
+- [Instructor] Yeah, thanks Nick.
+
+172
+00:10:55,810 --> 00:10:57,410
+And if nothing else,
+
+173
+00:10:57,410 --> 00:11:02,410
+I encourage you to play around with those who have access
+
+174
+00:11:04,190 --> 00:11:09,110
+to the configuration of the tool.
+
+175
+00:11:09,110 --> 00:11:13,800
+See what happens when you change these parameters.
+
+176
+00:11:13,800 --> 00:11:15,910
+What happens to the chart?
+
+177
+00:11:15,910 --> 00:11:20,440
+And once you have figured out
+
+178
+00:11:20,440 --> 00:11:25,300
+what gives you the most useful chart,
+
+179
+00:11:25,300 --> 00:11:29,870
+then you can just leave that setting there
+
+180
+00:11:29,870 --> 00:11:33,050
+and not feel like you have to explain
+
+181
+00:11:33,050 --> 00:11:38,050
+to people about what the, what these parameters mean.
+
+182
+00:11:43,430 --> 00:11:47,720
+These thresholds for completeness and timeliness,
+
+183
+00:11:47,720 --> 00:11:50,743
+they don&#39;t actually appear on the dashboard.
+
+184
+00:11:50,743 --> 00:11:55,410
+These are thresholds that will appear in the annual report
+
+185
+00:11:56,930 --> 00:12:01,373
+that can be generated automatically.
+
+186
+00:12:04,477 --> 00:12:09,477
+And we&#39;ve covered a good deal of topics here.
+
+187
+00:12:09,700 --> 00:12:14,700
+And I want to have a moment of silence if nothing else,
+
+188
+00:12:14,760 --> 00:12:19,760
+to encourage someone to raise their hand
+
+189
+00:12:19,970 --> 00:12:22,877
+and ask about any of these issues.
+
+190
+00:12:37,730 --> 00:12:42,730
+This comparison of one data element to another program,
+
+191
+00:12:44,350 --> 00:12:49,120
+people often find this very attractive feature.
+
+192
+00:12:49,120 --> 00:12:54,120
+And instead of adding more comparisons to the dashboard,
+
+193
+00:12:55,840 --> 00:12:59,210
+what you can encourage them to do
+
+194
+00:12:59,210 --> 00:13:02,940
+is learn how to use the analysis function,
+
+195
+00:13:02,940 --> 00:13:07,890
+analysis, consistency and once they figure out
+
+196
+00:13:07,890 --> 00:13:12,890
+how to set this up, then how to find
+
+197
+00:13:14,890 --> 00:13:17,783
+the data element that they&#39;re most interested in.
+
+198
+00:13:19,970 --> 00:13:24,583
+So we&#39;re going to, let&#39;s see.
+
+199
+00:13:28,635 --> 00:13:33,635
+Then they can do analysis to their heart&#39;s content.
+
+200
+00:13:34,530 --> 00:13:39,453
+So for me, it&#39;s a way of relieving pressure
+
+201
+00:13:41,110 --> 00:13:45,700
+on configuration of the dashboard
+
+202
+00:13:45,700 --> 00:13:49,200
+&#39;cause you want the dashboard to run efficiently
+
+203
+00:13:50,170 --> 00:13:53,373
+and it won&#39;t.
+
+204
+00:13:55,300 --> 00:13:58,320
+I&#39;m not sure how I selected by accident
+
+205
+00:13:58,320 --> 00:13:59,900
+acute flaccid paralysis
+
+206
+00:13:59,900 --> 00:14:03,940
+but there&#39;s no relationship between treatment of pneumonia
+
+207
+00:14:03,940 --> 00:14:08,940
+and acute flaccid paralysis which shouldn&#39;t surprise us.
+
+208
+00:14:09,640 --> 00:14:14,640
+But the point is that there&#39;s no limits to the analysis
+
+209
+00:14:16,030 --> 00:14:20,350
+that can be done with the analysis tool.
+
+210
+00:14:20,350 --> 00:14:25,350
+Unfortunately, there&#39;s no way to save this configuration.
+
+211
+00:14:25,920 --> 00:14:29,020
+And hopefully with a future version
+
+212
+00:14:29,020 --> 00:14:33,570
+of the data quality tool, there, there will be favorites.
+
+213
+00:14:33,570 --> 00:14:38,570
+So this can be in a certain group of favorites
+
+214
+00:14:39,440 --> 00:14:44,440
+of the child health group, and then others can easily,
+
+215
+00:14:47,590 --> 00:14:49,470
+without going through all these steps
+
+216
+00:14:49,470 --> 00:14:51,990
+of hunting for the data element,
+
+217
+00:14:51,990 --> 00:14:56,143
+they can generate the comparison and look at the
+
+218
+00:14:57,990 --> 00:14:59,810
+and drill down all of the things
+
+219
+00:14:59,810 --> 00:15:02,650
+that we talked about on Monday
+
+220
+00:15:04,000 --> 00:15:06,323
+with the using the analysis function.
+

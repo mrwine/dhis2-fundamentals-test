@@ -1,0 +1,10 @@
+<video youtube="1.00:-mLzT0EWXhk" url_name="accb80ff18f34030b8cbd10d6fe66d6f" sub="" transcripts="{&quot;en&quot;: &quot;eac5d7e9-3773-46b5-805b-90fc7ae1dc7e-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Data Quality Methods" download_track="true" download_video="true" edx_video_id="eac5d7e9-3773-46b5-805b-90fc7ae1dc7e" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.2.1_-_Data_Quality_Methods.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/1.2.1+-+Data+Quality+Overview_+Data+Methods.mp4&quot;]" youtube_id_1_0="-mLzT0EWXhk">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/1.2.1+-+Data+Quality+Overview_+Data+Methods.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.2.1_-_Data_Quality_Methods.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="eac5d7e9-3773-46b5-805b-90fc7ae1dc7e-en.srt"/>
+</video>

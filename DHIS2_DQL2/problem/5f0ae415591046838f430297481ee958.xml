@@ -1,0 +1,20 @@
+<problem display_name="Graded question - Numerator Quality Parameters - Question 1" markdown="How can you change the thresholds that are displayed on the WHO DQ tool dashboard Consistency - data tab?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts) &lt;&lt;&#10;&#10;(x) A. Change the value in the numerator relations tab in the administration page &#10;( ) B. It cannot be changed&#10;( ) C. In the dashboard itself&#10;( ) D. In the maintenance app &#10;[explanation]&#10;Change the value in the numerator relations tab in the administration page is correct. &#10;[explanation]&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>How can you change the thresholds that are displayed on the WHO DQ tool dashboard Consistency - data tab?</p>
+<label>Select the one correct answer: (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. Change the value in the numerator relations tab in the administration page</choice>
+    <choice correct="false">B. It cannot be changed</choice>
+    <choice correct="false">C. In the dashboard itself</choice>
+    <choice correct="false">D. In the maintenance app</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Change the value in the numerator relations tab in the administration page is correct. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

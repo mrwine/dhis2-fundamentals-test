@@ -1,0 +1,19 @@
+<problem display_name="Knowledge Check: Question 2" markdown="Which of the following sentences best describe what does  Internal Consistency dimension examine?: &#10;&#10;&gt;&gt;(Select all that apply)&lt;&lt;&#10;&#10;[x] A. Coherence between the same data at different points in time&#10;[x] B. Coherence between related data items&#10;[X] C. Comparison of data in source documents and in aggregated reports&#10;&#10;&#10;[explanation]&#10;All options are correct. Internal consistency examines coherence between the same data items at different points in time; coherence between related data items; and compares the data in source documents and aggregated reports.&#10;[explanation]&#10;">
+<choiceresponse>
+  <p>Which of the following sentences best describe what does  Internal Consistency dimension examine?: </p>
+<label>(Select all that apply)</label>
+<checkboxgroup>
+    <choice correct="true">A. Coherence between the same data at different points in time</choice>
+    <choice correct="true">B. Coherence between related data items</choice>
+    <choice correct="true">C. Comparison of data in source documents and in aggregated reports</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>All options are correct. Internal consistency examines coherence between the same data items at different points in time; coherence between related data items; and compares the data in source documents and aggregated reports.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

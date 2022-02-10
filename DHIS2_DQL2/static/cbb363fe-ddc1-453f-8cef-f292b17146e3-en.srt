@@ -1,0 +1,4756 @@
+0
+00:00:00,100 --> 00:00:01,430
+- [Scott] All right, so in this video
+
+1
+00:00:01,430 --> 00:00:03,330
+we are going to cover the second part
+
+2
+00:00:03,330 --> 00:00:05,630
+of detecting outliers in dashboard
+
+3
+00:00:05,630 --> 00:00:07,840
+using validation rule notifications.
+
+4
+00:00:07,840 --> 00:00:09,200
+The way that we&#39;re going to do this
+
+5
+00:00:09,200 --> 00:00:11,240
+is by building predictors
+
+6
+00:00:11,240 --> 00:00:12,580
+and then tying those predictors
+
+7
+00:00:12,580 --> 00:00:15,550
+to our validation rule notifications,
+
+8
+00:00:15,550 --> 00:00:16,383
+but in this video,
+
+9
+00:00:16,383 --> 00:00:19,763
+we&#39;re just going to go over how to configure the predictors.
+
+10
+00:00:21,450 --> 00:00:24,650
+Before we get into the nitty-gritty of building predictors,
+
+11
+00:00:24,650 --> 00:00:26,900
+let&#39;s just quickly take a look at some examples
+
+12
+00:00:26,900 --> 00:00:28,320
+of the kinds of outliers
+
+13
+00:00:28,320 --> 00:00:31,880
+that we&#39;re going to be able to detect with these predictors
+
+14
+00:00:31,880 --> 00:00:34,253
+and automatic validation notifications.
+
+15
+00:00:35,240 --> 00:00:36,840
+Here is a very common picture
+
+16
+00:00:36,840 --> 00:00:38,940
+that we see in a lot of countries.
+
+17
+00:00:38,940 --> 00:00:42,680
+We see we have various data elements,
+
+18
+00:00:42,680 --> 00:00:44,470
+sometimes indicators,
+
+19
+00:00:44,470 --> 00:00:48,360
+progressing over a series of months as a line chart,
+
+20
+00:00:48,360 --> 00:00:52,540
+and then we see one month for one of these data values
+
+21
+00:00:52,540 --> 00:00:55,510
+that is significantly higher than all the others.
+
+22
+00:00:55,510 --> 00:00:58,240
+You see most of them have a fairly linear trend,
+
+23
+00:00:58,240 --> 00:01:03,240
+and you see this one peak jutting out right in April 2018.
+
+24
+00:01:03,570 --> 00:01:05,570
+This is clearly an outlier.
+
+25
+00:01:05,570 --> 00:01:08,420
+This data does not follow the normal trend.
+
+26
+00:01:08,420 --> 00:01:12,500
+This data is so high above the normal accepted value range
+
+27
+00:01:12,500 --> 00:01:14,660
+that you can clearly see illustrated here
+
+28
+00:01:14,660 --> 00:01:19,080
+that it&#39;s almost certainly a data quality mistake.
+
+29
+00:01:19,080 --> 00:01:21,370
+Now, these kinds of data quality mistakes
+
+30
+00:01:21,370 --> 00:01:24,090
+can throw off national statistics,
+
+31
+00:01:24,090 --> 00:01:27,970
+so if every month we&#39;re expecting about 54,000,
+
+32
+00:01:27,970 --> 00:01:30,530
+in this case BCG doses,
+
+33
+00:01:30,530 --> 00:01:32,040
+and then, in one month,
+
+34
+00:01:32,040 --> 00:01:36,210
+you report 170,000 BCG doses.
+
+35
+00:01:36,210 --> 00:01:37,650
+Now, of course, that could be
+
+36
+00:01:37,650 --> 00:01:41,663
+from a massive, massive outreach campaign,
+
+37
+00:01:42,850 --> 00:01:45,500
+maybe some door-to-door vaccination efforts,
+
+38
+00:01:45,500 --> 00:01:46,990
+but by and large,
+
+39
+00:01:46,990 --> 00:01:50,950
+almost always these are going to be data entry errors
+
+40
+00:01:50,950 --> 00:01:55,630
+where maybe a person at a health facility or a hospital,
+
+41
+00:01:55,630 --> 00:01:59,470
+maybe they meant to put in 7,000 doses given,
+
+42
+00:01:59,470 --> 00:02:03,740
+and they put in 70,000 doses given, on accident.
+
+43
+00:02:03,740 --> 00:02:05,070
+It&#39;s a very easy thing to do.
+
+44
+00:02:05,070 --> 00:02:06,850
+You just add a couple of extra zeros
+
+45
+00:02:06,850 --> 00:02:09,910
+as you&#39;re putting data in, and you go to the next cell,
+
+46
+00:02:09,910 --> 00:02:11,290
+and you don&#39;t look back at...
+
+47
+00:02:11,290 --> 00:02:13,420
+It&#39;s very, very common,
+
+48
+00:02:13,420 --> 00:02:16,030
+and so we see a clear example of this here,
+
+49
+00:02:16,030 --> 00:02:18,700
+where you see a very common trend
+
+50
+00:02:18,700 --> 00:02:22,430
+across all these various data elements.
+
+51
+00:02:22,430 --> 00:02:23,860
+They&#39;re not changing or fluctuating
+
+52
+00:02:23,860 --> 00:02:25,240
+that much month-to-month,
+
+53
+00:02:25,240 --> 00:02:27,290
+but one month is really jutting out,
+
+54
+00:02:27,290 --> 00:02:31,880
+and if we were to leave this data entry error in place,
+
+55
+00:02:31,880 --> 00:02:34,760
+then, for April 2018,
+
+56
+00:02:34,760 --> 00:02:38,650
+you would probably see that the BCG dose coverage
+
+57
+00:02:38,650 --> 00:02:42,620
+was well over 100%, maybe 200%,
+
+58
+00:02:42,620 --> 00:02:45,060
+and that would make folks question
+
+59
+00:02:45,060 --> 00:02:49,360
+the quality and the validity of all of the other data.
+
+60
+00:02:49,360 --> 00:02:53,200
+If you have one month that&#39;s 200% BCG coverage,
+
+61
+00:02:53,200 --> 00:02:55,100
+can we trust the rest of the data?
+
+62
+00:02:55,100 --> 00:02:57,630
+So the point is that it&#39;s very, very important
+
+63
+00:02:57,630 --> 00:03:00,160
+to identify and correct
+
+64
+00:03:00,160 --> 00:03:02,830
+these kinds of data entry errors,
+
+65
+00:03:02,830 --> 00:03:05,410
+and the way that we&#39;re going to start showing you
+
+66
+00:03:05,410 --> 00:03:06,550
+how to do today
+
+67
+00:03:06,550 --> 00:03:09,060
+is have DHIS2 do this for you,
+
+68
+00:03:09,060 --> 00:03:11,460
+have DHIS2 automatically detect
+
+69
+00:03:11,460 --> 00:03:13,170
+these kinds of data entry errors,
+
+70
+00:03:13,170 --> 00:03:15,550
+these kind of data quality problems,
+
+71
+00:03:15,550 --> 00:03:19,720
+and send you a notification when it has detected them
+
+72
+00:03:19,720 --> 00:03:21,480
+so that you can correct it immediately.
+
+73
+00:03:21,480 --> 00:03:23,630
+You do not want these kinds of data entry errors
+
+74
+00:03:23,630 --> 00:03:25,530
+to linger in the system for very long,
+
+75
+00:03:26,630 --> 00:03:28,060
+so on this slide,
+
+76
+00:03:28,060 --> 00:03:30,630
+we&#39;re gonna look at just a couple of other examples
+
+77
+00:03:30,630 --> 00:03:32,530
+of some clear outliers.
+
+78
+00:03:32,530 --> 00:03:36,100
+The chart at the top is looking at BCG doses
+
+79
+00:03:36,100 --> 00:03:39,560
+to measle one doses dropout rate,
+
+80
+00:03:39,560 --> 00:03:43,520
+so that is the proportion of children
+
+81
+00:03:43,520 --> 00:03:46,400
+who are receiving the BCG dose
+
+82
+00:03:46,400 --> 00:03:49,233
+and then not receiving the first measles dose,
+
+83
+00:03:50,580 --> 00:03:52,680
+and we expect this to be zero.
+
+84
+00:03:52,680 --> 00:03:56,040
+We expect them, every single BCG dose,
+
+85
+00:03:56,040 --> 00:03:58,130
+to be the same value as the measles dose.
+
+86
+00:03:58,130 --> 00:04:01,640
+We expect every person to get both vaccinations,
+
+87
+00:04:01,640 --> 00:04:06,150
+and we can see that in some org units,
+
+88
+00:04:06,150 --> 00:04:08,900
+and these bars here are representing org units,
+
+89
+00:04:08,900 --> 00:04:11,820
+that we have some locations
+
+90
+00:04:11,820 --> 00:04:15,030
+where the children are receiving
+
+91
+00:04:15,030 --> 00:04:18,470
+significantly higher BCG vaccines
+
+92
+00:04:18,470 --> 00:04:20,950
+versus measles vaccines.
+
+93
+00:04:20,950 --> 00:04:23,330
+Now, of course, this should not be the case.
+
+94
+00:04:23,330 --> 00:04:26,030
+We should always see that the number of BCG vaccines
+
+95
+00:04:26,030 --> 00:04:28,990
+are the same as the number of measles vaccines.
+
+96
+00:04:28,990 --> 00:04:32,490
+This top chart is showing us
+
+97
+00:04:32,490 --> 00:04:37,250
+the BCG-to-measles-one-dose dropout rate,
+
+98
+00:04:37,250 --> 00:04:38,630
+and what we expect to see
+
+99
+00:04:38,630 --> 00:04:41,680
+is that the number of BCG doses given
+
+100
+00:04:41,680 --> 00:04:44,803
+is equal to the number of measles doses given.
+
+101
+00:04:46,790 --> 00:04:50,800
+Here, on the top chart, we have a target line of zero.
+
+102
+00:04:50,800 --> 00:04:54,910
+Again, that&#39;s indicative of the BCG vaccines
+
+103
+00:04:54,910 --> 00:04:57,240
+doses given should equal the measles.
+
+104
+00:04:57,240 --> 00:04:59,490
+We should be a one-to-one relationship there.
+
+105
+00:05:01,010 --> 00:05:02,740
+Then we&#39;re giving ourselves
+
+106
+00:05:02,740 --> 00:05:07,740
+an acceptable maximum range of 20%,
+
+107
+00:05:07,810 --> 00:05:10,600
+and that means that we are allowing,
+
+108
+00:05:10,600 --> 00:05:13,100
+in this particular country scenario,
+
+109
+00:05:13,100 --> 00:05:15,700
+a dropout rate of 20%
+
+110
+00:05:15,700 --> 00:05:18,460
+from BCG vaccine to measles one,
+
+111
+00:05:18,460 --> 00:05:21,730
+meaning that 20% of the children
+
+112
+00:05:21,730 --> 00:05:23,780
+who got the BCG vaccine
+
+113
+00:05:23,780 --> 00:05:26,070
+will not get the measles one dose,
+
+114
+00:05:26,070 --> 00:05:28,740
+and they&#39;re saying that that&#39;s an acceptable range,
+
+115
+00:05:28,740 --> 00:05:31,683
+of course, not ideal, but an acceptable range,
+
+116
+00:05:32,840 --> 00:05:36,230
+but you see we have two bars here.
+
+117
+00:05:36,230 --> 00:05:39,530
+These bars are representing health facilities
+
+118
+00:05:39,530 --> 00:05:43,000
+where we have a 72.1% dropout rate
+
+119
+00:05:43,000 --> 00:05:46,780
+and a 73.4% dropout rate.
+
+120
+00:05:46,780 --> 00:05:47,800
+Now, what does this mean?
+
+121
+00:05:47,800 --> 00:05:49,790
+This means that
+
+122
+00:05:49,790 --> 00:05:51,777
+we have 72.1
+
+123
+00:05:52,991 --> 00:05:53,824
+and 73.4%
+
+124
+00:05:55,000 --> 00:05:58,320
+of the children who received the BCG vaccine
+
+125
+00:05:58,320 --> 00:06:02,310
+not receiving the measles vaccine.
+
+126
+00:06:02,310 --> 00:06:04,520
+Now, obviously, this is a big problem.
+
+127
+00:06:04,520 --> 00:06:07,380
+This is either a data quality mistake,
+
+128
+00:06:07,380 --> 00:06:09,650
+or this is some kind of breakdown
+
+129
+00:06:09,650 --> 00:06:11,700
+in clinical service delivery.
+
+130
+00:06:11,700 --> 00:06:14,193
+We should never see a dropout rate this high,
+
+131
+00:06:15,420 --> 00:06:18,707
+so this is telling this program manager that,
+
+132
+00:06:18,707 --> 00:06:23,097
+&quot;Hey, we&#39;ve got problems in these two health facilities
+
+133
+00:06:23,097 --> 00:06:25,427
+&quot;in that the majority of children
+
+134
+00:06:25,427 --> 00:06:27,347
+&quot;who are receiving the BCG vaccine
+
+135
+00:06:27,347 --> 00:06:30,037
+&quot;are then not receiving the measles,
+
+136
+00:06:30,037 --> 00:06:31,970
+&quot;and so I need to follow up.&quot;
+
+137
+00:06:31,970 --> 00:06:33,590
+Hopefully, in this scenario,
+
+138
+00:06:33,590 --> 00:06:36,250
+you find that it&#39;s a data quality problem.
+
+139
+00:06:36,250 --> 00:06:37,830
+If it&#39;s not a data quality problem,
+
+140
+00:06:37,830 --> 00:06:39,350
+then you have some serious problems
+
+141
+00:06:39,350 --> 00:06:42,010
+with your measles one doses
+
+142
+00:06:42,010 --> 00:06:44,453
+in these two health facilities,
+
+143
+00:06:45,410 --> 00:06:46,300
+so those are the bars
+
+144
+00:06:46,300 --> 00:06:50,330
+that are going above the acceptable maximum range.
+
+145
+00:06:50,330 --> 00:06:53,370
+Let&#39;s look, now, though, at these few bars
+
+146
+00:06:53,370 --> 00:06:57,940
+that are going below the zero target line,
+
+147
+00:06:57,940 --> 00:06:58,773
+so they&#39;re going down.
+
+148
+00:06:58,773 --> 00:06:59,790
+These are negative values,
+
+149
+00:06:59,790 --> 00:07:01,450
+and we see that there are two here
+
+150
+00:07:01,450 --> 00:07:02,360
+that are really quite big.
+
+151
+00:07:02,360 --> 00:07:05,260
+We have one that&#39;s negative 74.5
+
+152
+00:07:05,260 --> 00:07:07,790
+and one that&#39;s negative 271.4.
+
+153
+00:07:10,200 --> 00:07:11,540
+What does this mean?
+
+154
+00:07:11,540 --> 00:07:12,670
+This essentially means
+
+155
+00:07:12,670 --> 00:07:17,020
+that we have more children receiving the measles vaccine
+
+156
+00:07:17,020 --> 00:07:19,703
+than we have receiving the BCG vaccine.
+
+157
+00:07:20,640 --> 00:07:23,130
+Now, that is extremely unusual,
+
+158
+00:07:23,130 --> 00:07:25,630
+basically, impossible from a clinical perspective.
+
+159
+00:07:26,780 --> 00:07:30,820
+This is almost certainly a data-quality issue
+
+160
+00:07:30,820 --> 00:07:32,220
+in these two health facilities
+
+161
+00:07:32,220 --> 00:07:35,130
+where the bar is going lower
+
+162
+00:07:35,130 --> 00:07:37,170
+than the target line,
+
+163
+00:07:37,170 --> 00:07:39,830
+and you see that we actually have three others,
+
+164
+00:07:39,830 --> 00:07:41,040
+health facilities that are reporting
+
+165
+00:07:41,040 --> 00:07:43,750
+that the measles one is higher than the BCG.
+
+166
+00:07:43,750 --> 00:07:47,650
+Now, there should be an acceptable range for this, too.
+
+167
+00:07:47,650 --> 00:07:49,970
+We appreciate that in many countries
+
+168
+00:07:49,970 --> 00:07:53,890
+you&#39;re reporting on two different cohorts of children
+
+169
+00:07:53,890 --> 00:07:56,973
+between the BCG vaccine and the measles one vaccine.
+
+170
+00:07:58,530 --> 00:08:00,720
+Maybe you have some kind of seasonal birth
+
+171
+00:08:04,020 --> 00:08:06,043
+patterns or trends in your country,
+
+172
+00:08:07,360 --> 00:08:11,120
+but a value of negative 74.5
+
+173
+00:08:11,120 --> 00:08:13,940
+and negative 271.4
+
+174
+00:08:13,940 --> 00:08:17,730
+should be considered extremely unacceptable
+
+175
+00:08:17,730 --> 00:08:19,660
+no matter how much
+
+176
+00:08:21,000 --> 00:08:25,710
+seasonality you have to your birth rates in your country.
+
+177
+00:08:25,710 --> 00:08:27,300
+It&#39;s basically guaranteed
+
+178
+00:08:27,300 --> 00:08:29,420
+that these are data quality problems,
+
+179
+00:08:29,420 --> 00:08:31,240
+that someone accidentally put in
+
+180
+00:08:32,090 --> 00:08:35,520
+far too few BCG vaccines
+
+181
+00:08:35,520 --> 00:08:39,530
+or far too many measles one doses,
+
+182
+00:08:39,530 --> 00:08:40,750
+so these are definitely something
+
+183
+00:08:40,750 --> 00:08:42,390
+that needs to be followed up on,
+
+184
+00:08:42,390 --> 00:08:45,020
+and the point of this chart at the top here
+
+185
+00:08:45,020 --> 00:08:47,020
+is showing you that you can see these
+
+186
+00:08:47,020 --> 00:08:48,740
+very, very, very clearly,
+
+187
+00:08:48,740 --> 00:08:50,470
+these bars that are way too high,
+
+188
+00:08:50,470 --> 00:08:52,870
+and these bars that are way too low,
+
+189
+00:08:52,870 --> 00:08:55,440
+and you&#39;re going to be able, if you&#39;re looking at this,
+
+190
+00:08:55,440 --> 00:08:56,800
+if you&#39;re a program manager,
+
+191
+00:08:56,800 --> 00:08:59,140
+to immediately follow up on these.
+
+192
+00:08:59,140 --> 00:09:02,233
+They should be as obvious as they possibly can be.
+
+193
+00:09:04,400 --> 00:09:07,410
+Again, examples of outliers,
+
+194
+00:09:07,410 --> 00:09:11,563
+especially that negative 271.4, an extreme outlier.
+
+195
+00:09:12,590 --> 00:09:16,030
+All right, let&#39;s take a look at the next chart below this.
+
+196
+00:09:16,030 --> 00:09:17,440
+This next chart below this
+
+197
+00:09:17,440 --> 00:09:22,300
+is looking at new malaria cases, under five,
+
+198
+00:09:22,300 --> 00:09:26,773
+versus new malaria cases, five and above.
+
+199
+00:09:27,920 --> 00:09:30,120
+The under five are showing up here
+
+200
+00:09:30,120 --> 00:09:34,870
+as the green portion of these stacked column,
+
+201
+00:09:34,870 --> 00:09:37,783
+or excuse me, this is a stacked bar chart,
+
+202
+00:09:38,930 --> 00:09:41,560
+and the blue portion is showing
+
+203
+00:09:41,560 --> 00:09:45,620
+the five-and-above proportion of the population
+
+204
+00:09:45,620 --> 00:09:47,710
+in this stacked bar chart,
+
+205
+00:09:47,710 --> 00:09:51,400
+and you see that we have set our range
+
+206
+00:09:51,400 --> 00:09:55,340
+for this chart to be up to 100%,
+
+207
+00:09:55,340 --> 00:09:58,970
+so here we have, essentially, a clear representation
+
+208
+00:09:58,970 --> 00:10:03,550
+of the proportion of total new malaria cases
+
+209
+00:10:03,550 --> 00:10:08,313
+being disaggregated by under five and over five.
+
+210
+00:10:09,670 --> 00:10:13,180
+Now, we expect, in most countries
+
+211
+00:10:13,180 --> 00:10:17,490
+that have malaria,
+
+212
+00:10:17,490 --> 00:10:21,580
+to have about 30%
+
+213
+00:10:21,580 --> 00:10:23,560
+of our new malaria cases
+
+214
+00:10:23,560 --> 00:10:26,683
+to be under five, okay?
+
+215
+00:10:27,560 --> 00:10:29,170
+That&#39;s a very, very common trend
+
+216
+00:10:29,170 --> 00:10:32,120
+that we see around the world where we have endemic malaria,
+
+217
+00:10:34,040 --> 00:10:38,093
+so you see that at the 30% line, that&#39;s what we have.
+
+218
+00:10:38,948 --> 00:10:43,250
+We have a black line going through 30%
+
+219
+00:10:43,250 --> 00:10:47,080
+that says expected range under five, minimum.
+
+220
+00:10:47,080 --> 00:10:49,140
+Now, we&#39;re giving ourselves a little bit of a buffer
+
+221
+00:10:49,140 --> 00:10:52,660
+because it can vary based upon your population distribution
+
+222
+00:10:52,660 --> 00:10:54,100
+in terms of age,
+
+223
+00:10:54,100 --> 00:10:56,830
+but we then give ourselves
+
+224
+00:10:56,830 --> 00:11:00,957
+an acceptable upper range of 35%,
+
+225
+00:11:00,957 --> 00:11:03,520
+and you see, again, at the 35% line,
+
+226
+00:11:03,520 --> 00:11:07,720
+we have a strong black line cutting through that,
+
+227
+00:11:07,720 --> 00:11:11,790
+and it&#39;s telling us that between 30 and 35%,
+
+228
+00:11:11,790 --> 00:11:13,190
+we should see
+
+229
+00:11:13,190 --> 00:11:17,370
+that under-five population end
+
+230
+00:11:17,370 --> 00:11:21,313
+and the over-five population begin.
+
+231
+00:11:23,060 --> 00:11:27,550
+Now, what you see here, if you look through the months,
+
+232
+00:11:27,550 --> 00:11:31,030
+kind of going from top to bottom as you scan through,
+
+233
+00:11:31,030 --> 00:11:34,763
+you see that in November 2018,
+
+234
+00:11:36,030 --> 00:11:40,180
+our new malaria cases under five
+
+235
+00:11:40,180 --> 00:11:42,263
+are around 65%.
+
+236
+00:11:43,780 --> 00:11:47,630
+You see that green at November 2018.
+
+237
+00:11:47,630 --> 00:11:48,980
+You see that green line
+
+238
+00:11:48,980 --> 00:11:53,960
+going way, way, way, way past the acceptable ranges
+
+239
+00:11:53,960 --> 00:11:58,640
+and going far into what, in the other months,
+
+240
+00:11:58,640 --> 00:12:01,203
+is just the blue, just the over five,
+
+241
+00:12:02,300 --> 00:12:07,300
+and this is another clear indication of an outlier,
+
+242
+00:12:07,370 --> 00:12:09,930
+so November 2018,
+
+243
+00:12:09,930 --> 00:12:12,010
+there is clearly an outlier
+
+244
+00:12:12,010 --> 00:12:16,030
+in your new malaria cases under five.
+
+245
+00:12:16,030 --> 00:12:20,093
+Someone accidentally put in a value that was way too big,
+
+246
+00:12:21,120 --> 00:12:22,200
+and you can see
+
+247
+00:12:22,200 --> 00:12:25,550
+that it&#39;s throwing off our national statistics.
+
+248
+00:12:25,550 --> 00:12:27,910
+It&#39;s throwing off our national distribution
+
+249
+00:12:27,910 --> 00:12:32,000
+and disaggregation of our age breakdown
+
+250
+00:12:32,000 --> 00:12:34,910
+of the new malaria cases,
+
+251
+00:12:34,910 --> 00:12:36,800
+so if you were to look at this,
+
+252
+00:12:36,800 --> 00:12:41,140
+you would say that somehow, in November 2018,
+
+253
+00:12:41,140 --> 00:12:44,280
+65% of our malaria cases
+
+254
+00:12:44,280 --> 00:12:46,063
+were under-five population.
+
+255
+00:12:47,180 --> 00:12:50,623
+Now, that&#39;s just not clinically possible.
+
+256
+00:12:53,900 --> 00:12:55,410
+I can&#39;t even imagine a scenario
+
+257
+00:12:55,410 --> 00:12:57,490
+in which that&#39;s clinically possible,
+
+258
+00:12:57,490 --> 00:13:00,850
+so that means that you have an outlier.
+
+259
+00:13:00,850 --> 00:13:04,820
+You have a data quality problem in November 2018,
+
+260
+00:13:04,820 --> 00:13:09,480
+and if you look at the values that we have reported
+
+261
+00:13:09,480 --> 00:13:12,680
+for our new under-five cases,
+
+262
+00:13:12,680 --> 00:13:15,373
+most months, they&#39;re ranging between,
+
+263
+00:13:18,320 --> 00:13:19,650
+they&#39;re ranging between
+
+264
+00:13:21,330 --> 00:13:24,180
+about 100,000,
+
+265
+00:13:24,180 --> 00:13:26,963
+maybe 150,000, something like that,
+
+266
+00:13:29,690 --> 00:13:32,920
+but here, in November 2018,
+
+267
+00:13:32,920 --> 00:13:36,363
+we&#39;re up above nearly, we&#39;re nearly 300,000 cases.
+
+268
+00:13:38,010 --> 00:13:42,110
+Whereas our over five is still
+
+269
+00:13:42,110 --> 00:13:44,400
+in the acceptable average that we&#39;re seeing,
+
+270
+00:13:44,400 --> 00:13:45,233
+and, of course,
+
+271
+00:13:45,233 --> 00:13:46,790
+you have to appreciate that malaria&#39;s seasonal,
+
+272
+00:13:46,790 --> 00:13:48,240
+so it&#39;s going to,
+
+273
+00:13:48,240 --> 00:13:51,843
+what we&#39;re not seeing here is the seasonal curve,
+
+274
+00:13:53,070 --> 00:13:54,470
+but we&#39;re still seeing
+
+275
+00:13:54,470 --> 00:13:56,530
+that the proportion is way out of whack.
+
+276
+00:13:56,530 --> 00:13:58,590
+It&#39;s just not possible,
+
+277
+00:13:58,590 --> 00:14:02,930
+so again, another clear indication of a outlier.
+
+278
+00:14:02,930 --> 00:14:04,820
+The point of these two charts, really,
+
+279
+00:14:04,820 --> 00:14:06,750
+is to show that we can see outliers
+
+280
+00:14:06,750 --> 00:14:09,290
+in a lot of different ways, right?
+
+281
+00:14:09,290 --> 00:14:10,130
+In the first chart,
+
+282
+00:14:10,130 --> 00:14:12,540
+we saw that we can see an outlier stick up
+
+283
+00:14:12,540 --> 00:14:14,653
+in a kind of month-to-month trend.
+
+284
+00:14:15,620 --> 00:14:19,150
+Here, on the first chart here,
+
+285
+00:14:19,150 --> 00:14:23,120
+we&#39;re able to see that outliers being illustrated
+
+286
+00:14:24,170 --> 00:14:27,810
+by a relationship between two different data elements,
+
+287
+00:14:27,810 --> 00:14:29,293
+so, for example, here,
+
+288
+00:14:29,293 --> 00:14:32,700
+a BCG-to-measles-one-dose dropout rate,
+
+289
+00:14:32,700 --> 00:14:35,870
+so we&#39;re comparing these two data elements together
+
+290
+00:14:35,870 --> 00:14:38,640
+to see outliers in one or the other,
+
+291
+00:14:38,640 --> 00:14:42,200
+and then, on this malaria example in this bottom chart,
+
+292
+00:14:42,200 --> 00:14:44,370
+we&#39;re seeing outliers represented
+
+293
+00:14:44,370 --> 00:14:47,110
+by disaggregations
+
+294
+00:14:47,110 --> 00:14:49,910
+of our clinical data by age.
+
+295
+00:14:49,910 --> 00:14:51,913
+You maybe also can do this by gender,
+
+296
+00:14:53,390 --> 00:14:56,650
+and so these are just to show you
+
+297
+00:14:56,650 --> 00:14:59,030
+that we can find outliers in a lot of ways,
+
+298
+00:14:59,030 --> 00:15:02,510
+but this requires you to look at the dashboards,
+
+299
+00:15:02,510 --> 00:15:04,760
+to look at your charts, to have these,
+
+300
+00:15:04,760 --> 00:15:07,343
+that you&#39;re routinely looking at them.
+
+301
+00:15:08,210 --> 00:15:09,870
+Of course, people are not always
+
+302
+00:15:09,870 --> 00:15:12,460
+routinely looking at their DHIS2 dashboards,
+
+303
+00:15:12,460 --> 00:15:14,700
+and so the most effective way
+
+304
+00:15:14,700 --> 00:15:17,640
+to make sure that people address these kinds of outliers
+
+305
+00:15:17,640 --> 00:15:19,230
+that are throwing off national statistics
+
+306
+00:15:19,230 --> 00:15:23,810
+is to configure DHIS2 to be able to automatically detect it
+
+307
+00:15:23,810 --> 00:15:28,120
+and to send a notification to the user who can correct it.
+
+308
+00:15:28,120 --> 00:15:29,700
+Okay, so let&#39;s take,
+
+309
+00:15:29,700 --> 00:15:32,530
+just before we get into the crazy predictor stuff,
+
+310
+00:15:32,530 --> 00:15:34,390
+let&#39;s just do a quick overview of
+
+311
+00:15:34,390 --> 00:15:37,630
+how do we identify these outliers on a standard dashboard
+
+312
+00:15:37,630 --> 00:15:41,170
+and isolate the actual outlier itself?
+
+313
+00:15:41,170 --> 00:15:42,680
+Well, we have some steps for this,
+
+314
+00:15:42,680 --> 00:15:45,740
+and I&#39;m gonna show these to you just in a second.
+
+315
+00:15:45,740 --> 00:15:48,923
+The first step is that we want to isolate the period.
+
+316
+00:15:50,580 --> 00:15:53,310
+Usually, we just wanna drill into one month.
+
+317
+00:15:53,310 --> 00:15:56,330
+Then we want to change the chart type to a bar chart.
+
+318
+00:15:56,330 --> 00:15:58,990
+Then we need to isolate the data element.
+
+319
+00:15:58,990 --> 00:16:01,110
+Then we need to isolate the facility level
+
+320
+00:16:01,110 --> 00:16:02,940
+to see where the data is coming from,
+
+321
+00:16:02,940 --> 00:16:04,370
+and then we change the layout
+
+322
+00:16:04,370 --> 00:16:07,020
+so that org units is in category, period&#39;s in filter,
+
+323
+00:16:07,020 --> 00:16:08,210
+and data is in series.
+
+324
+00:16:08,210 --> 00:16:10,100
+Now, I just did that really fast.
+
+325
+00:16:10,100 --> 00:16:12,040
+Let me just show it to you in real life here,
+
+326
+00:16:12,040 --> 00:16:16,170
+so I&#39;m going to go to the demo site
+
+327
+00:16:16,170 --> 00:16:17,173
+for the academies.
+
+328
+00:16:23,240 --> 00:16:24,620
+Here we are.
+
+329
+00:16:24,620 --> 00:16:27,210
+I&#39;m going to log in as demo
+
+330
+00:16:27,210 --> 00:16:31,567
+and then District1#.
+
+331
+00:16:33,376 --> 00:16:37,946
+- [Scott] Yeah, okay, so here we have a similar chart
+
+332
+00:16:37,946 --> 00:16:39,246
+to what I just showed you,
+
+333
+00:16:40,166 --> 00:16:43,526
+and I think even Bob mentioned this in the videos.
+
+334
+00:16:43,526 --> 00:16:44,586
+Where is the outlier here?
+
+335
+00:16:44,586 --> 00:16:46,366
+Well, there&#39;s probably two outliers:
+
+336
+00:16:46,366 --> 00:16:50,116
+This point here, back May 2019, ANC first visits,
+
+337
+00:16:50,116 --> 00:16:52,766
+and this one here, ANC first visits
+
+338
+00:16:54,756 --> 00:16:57,566
+from January 2020.
+
+339
+00:16:57,566 --> 00:17:01,026
+Now, how do we figure out where this data is coming from?
+
+340
+00:17:01,026 --> 00:17:04,286
+Where&#39;s the facility that&#39;s causing this outlier, right?
+
+341
+00:17:04,286 --> 00:17:06,486
+Now we need to do a quick recap
+
+342
+00:17:06,486 --> 00:17:08,666
+of how to use the Data Visualizer app,
+
+343
+00:17:08,665 --> 00:17:09,516
+so what I&#39;m gonna do
+
+344
+00:17:09,516 --> 00:17:11,516
+is just show you the whole process here.
+
+345
+00:17:12,506 --> 00:17:16,446
+I am going to, I can&#39;t explore this on the dashboard,
+
+346
+00:17:16,445 --> 00:17:20,519
+so I&#39;m going to click the Open In Visualizer App button,
+
+347
+00:17:21,596 --> 00:17:22,546
+and that&#39;s gonna take me
+
+348
+00:17:22,546 --> 00:17:25,436
+into the Data Visualizer application,
+
+349
+00:17:25,435 --> 00:17:26,856
+so now we&#39;re in the application,
+
+350
+00:17:26,856 --> 00:17:29,226
+and we could start to drill into this data.
+
+351
+00:17:29,226 --> 00:17:30,566
+What was my first step?
+
+352
+00:17:30,566 --> 00:17:33,276
+My first step was to isolate the periods,
+
+353
+00:17:33,276 --> 00:17:37,016
+so we know that the outlier&#39;s in January 2020.
+
+354
+00:17:37,016 --> 00:17:39,876
+I am going to go to my period selection.
+
+355
+00:17:39,876 --> 00:17:41,359
+I&#39;m going to deselect all these periods.
+
+356
+00:17:41,359 --> 00:17:43,796
+You see we have 13 months here selected.
+
+357
+00:17:43,796 --> 00:17:45,206
+I&#39;m gonna deselect these.
+
+358
+00:17:45,206 --> 00:17:46,886
+I&#39;m gonna go to fixed periods,
+
+359
+00:17:46,886 --> 00:17:50,086
+and I&#39;m gonna say January 2020.
+
+360
+00:17:50,086 --> 00:17:53,526
+Turn that one on, and here we go.
+
+361
+00:17:53,526 --> 00:17:57,206
+Just some dots because we have a trend line,
+
+362
+00:17:57,206 --> 00:17:58,956
+but we don&#39;t have a trend if it&#39;s just one period.
+
+363
+00:17:58,956 --> 00:18:01,289
+Here&#39;s still my outlier, way up here.
+
+364
+00:18:02,206 --> 00:18:05,056
+Then we need to change the chart type to a bar chart,
+
+365
+00:18:05,056 --> 00:18:07,816
+so I&#39;m gonna go over here to the chart types.
+
+366
+00:18:07,816 --> 00:18:08,966
+Change it to a column.
+
+367
+00:18:08,966 --> 00:18:10,126
+You could also change it to bar.
+
+368
+00:18:10,126 --> 00:18:12,796
+I&#39;m gonna choose column, and there we go,
+
+369
+00:18:12,796 --> 00:18:15,336
+so now we actually see all the data next to each other,
+
+370
+00:18:15,336 --> 00:18:17,946
+and still, here&#39;s our outlier, all right?
+
+371
+00:18:17,946 --> 00:18:20,716
+Now we want to isolate that data element,
+
+372
+00:18:20,716 --> 00:18:23,916
+that data element that has the outliers ANC first visits,
+
+373
+00:18:23,916 --> 00:18:25,756
+so I&#39;m gonna come to data,
+
+374
+00:18:25,756 --> 00:18:27,816
+and I&#39;m gonna turn off everything
+
+375
+00:18:27,816 --> 00:18:30,799
+that&#39;s not ANC first visits.
+
+376
+00:18:33,426 --> 00:18:34,726
+Click Update. Boom.
+
+377
+00:18:34,726 --> 00:18:37,849
+Now we just got one big bar. That&#39;s fine.
+
+378
+00:18:39,006 --> 00:18:40,036
+Now let&#39;s figure out
+
+379
+00:18:40,036 --> 00:18:41,996
+where this data is actually coming from.
+
+380
+00:18:41,996 --> 00:18:43,406
+Now, the easiest way to do that
+
+381
+00:18:43,406 --> 00:18:46,846
+is to go into our organizational units,
+
+382
+00:18:46,846 --> 00:18:48,246
+and you see right now I have
+
+383
+00:18:49,246 --> 00:18:53,086
+the relative User Organization Units tick box selected.
+
+384
+00:18:53,086 --> 00:18:54,646
+I&#39;m going to untick that.
+
+385
+00:18:54,646 --> 00:18:57,736
+I&#39;m going to select National level, or the National,
+
+386
+00:18:57,736 --> 00:18:58,996
+and then I&#39;m gonna select my level,
+
+387
+00:18:58,996 --> 00:18:59,829
+and I&#39;m gonna go ahead
+
+388
+00:18:59,829 --> 00:19:04,006
+and go all the way down to Facility level, okay?
+
+389
+00:19:04,006 --> 00:19:06,436
+So that&#39;s gonna show me all of the facilities.
+
+390
+00:19:06,436 --> 00:19:08,546
+Click update. Nothing changed.
+
+391
+00:19:08,546 --> 00:19:09,526
+Why did nothing change?
+
+392
+00:19:09,526 --> 00:19:11,646
+Because my layout is not correct,
+
+393
+00:19:11,646 --> 00:19:13,866
+so the last step is to change the layout.
+
+394
+00:19:13,866 --> 00:19:18,816
+We are going to move organizational units to category.
+
+395
+00:19:18,816 --> 00:19:21,656
+We are going to move period to filter,
+
+396
+00:19:21,656 --> 00:19:23,096
+which automatically went for us
+
+397
+00:19:23,096 --> 00:19:25,856
+when we switched out with the org units,
+
+398
+00:19:25,856 --> 00:19:27,596
+and we&#39;re going to leave
+
+399
+00:19:29,736 --> 00:19:31,496
+data in series.
+
+400
+00:19:31,496 --> 00:19:34,416
+Click Update. Boom.
+
+401
+00:19:34,416 --> 00:19:37,136
+Where is that outlier? Well, it is clear.
+
+402
+00:19:37,136 --> 00:19:38,686
+This is right here.
+
+403
+00:19:38,686 --> 00:19:41,476
+Outlier is at facility 147,
+
+404
+00:19:41,476 --> 00:19:45,593
+and in one month, they reported 35,888
+
+405
+00:19:45,593 --> 00:19:49,186
+ANC first visits, okay?
+
+406
+00:19:49,186 --> 00:19:52,296
+This is how you isolate for the outliers
+
+407
+00:19:52,296 --> 00:19:56,296
+going from a dashboard and through the Data Visualizer.
+
+408
+00:19:56,296 --> 00:19:58,686
+A few steps here, right?
+
+409
+00:19:58,686 --> 00:20:01,586
+You also have to know how to use the Data Visualizer.
+
+410
+00:20:01,586 --> 00:20:03,116
+Now, wouldn&#39;t it be nice
+
+411
+00:20:03,116 --> 00:20:07,296
+if this notification was just sent directly to my e-mail?
+
+412
+00:20:07,296 --> 00:20:08,376
+How do we do that?
+
+413
+00:20:08,376 --> 00:20:11,186
+Well, that&#39;s what we&#39;re gonna talk about now.
+
+414
+00:20:11,186 --> 00:20:13,886
+How do we see this outlier sent directly to my e-mail?
+
+415
+00:20:15,356 --> 00:20:17,426
+I know I just went through that quite quickly.
+
+416
+00:20:17,426 --> 00:20:22,216
+If you want to revisit how I just gone through
+
+417
+00:20:22,216 --> 00:20:24,036
+and use the applications and the dashboards
+
+418
+00:20:24,036 --> 00:20:25,516
+to identify this outlier,
+
+419
+00:20:25,516 --> 00:20:28,396
+please go back and rewatch this presentation,
+
+420
+00:20:28,396 --> 00:20:31,296
+and you&#39;re certainly welcome to slow it down if necessary.
+
+421
+00:20:39,696 --> 00:20:41,066
+All right, and again,
+
+422
+00:20:41,066 --> 00:20:43,096
+I showed this example just before the break,
+
+423
+00:20:43,096 --> 00:20:47,116
+but Rwanda has at least configured some to do this,
+
+424
+00:20:47,116 --> 00:20:51,786
+at least partially, to automatically detect the outliers,
+
+425
+00:20:51,786 --> 00:20:54,739
+and send them, and push them to people&#39;s, to e-mails.
+
+426
+00:20:59,036 --> 00:21:00,816
+All right, so the way
+
+427
+00:21:00,816 --> 00:21:03,246
+that we actually calculate the outlier threshold,
+
+428
+00:21:03,246 --> 00:21:06,666
+and, again, we have to compare the data that is entered
+
+429
+00:21:06,666 --> 00:21:09,536
+against an outlier threshold.
+
+430
+00:21:09,536 --> 00:21:11,816
+The way that we actually calculate that outlier threshold
+
+431
+00:21:11,816 --> 00:21:13,426
+is using predictors,
+
+432
+00:21:13,426 --> 00:21:16,909
+and we put that predicted value into a validation rule.
+
+433
+00:21:18,046 --> 00:21:19,336
+Predictors...
+
+434
+00:21:24,806 --> 00:21:27,556
+Right, so predictors have typically only been used
+
+435
+00:21:27,556 --> 00:21:32,346
+for data elements in DHIS 2.28 to 2.34.
+
+436
+00:21:32,346 --> 00:21:34,016
+Starting in 2.35,
+
+437
+00:21:34,016 --> 00:21:36,716
+we can actually start to do some of this analysis,
+
+438
+00:21:36,716 --> 00:21:39,916
+not using predictors, but using indicators,
+
+439
+00:21:39,916 --> 00:21:42,766
+so the release that we actually just put out yesterday,
+
+440
+00:21:42,766 --> 00:21:45,036
+you can start to use this and standard indicators,
+
+441
+00:21:45,036 --> 00:21:46,786
+but most of you, basically, all of you
+
+442
+00:21:46,786 --> 00:21:48,136
+because we released it yesterday,
+
+443
+00:21:48,136 --> 00:21:49,766
+are not using 2.35 yet.
+
+444
+00:21:49,766 --> 00:21:50,976
+I&#39;m gonna show you how to do it
+
+445
+00:21:50,976 --> 00:21:55,069
+in 2.28 to 2.34.
+
+446
+00:22:03,526 --> 00:22:08,109
+So let&#39;s take a look at some of these predictors.
+
+447
+00:22:14,156 --> 00:22:16,406
+What are these calculations for?
+
+448
+00:22:16,406 --> 00:22:19,656
+So predictors really use
+
+449
+00:22:19,656 --> 00:22:21,996
+previously reported values.
+
+450
+00:22:21,996 --> 00:22:23,706
+They use previously reported values
+
+451
+00:22:23,706 --> 00:22:27,326
+to calculate a new value, all right?
+
+452
+00:22:27,326 --> 00:22:29,226
+That&#39;s really what predictors are for,
+
+453
+00:22:30,136 --> 00:22:32,986
+and we can, a couple of examples of this,
+
+454
+00:22:32,986 --> 00:22:35,136
+so the first example:
+
+455
+00:22:35,136 --> 00:22:37,546
+I want to get the average malaria incidence
+
+456
+00:22:37,546 --> 00:22:40,226
+over the last six months, right?
+
+457
+00:22:40,226 --> 00:22:42,936
+You can&#39;t use a standard indicator for that.
+
+458
+00:22:42,936 --> 00:22:45,156
+You cannot use,
+
+459
+00:22:45,156 --> 00:22:46,386
+the only thing that you can use
+
+460
+00:22:46,386 --> 00:22:49,189
+to calculate that value in DHIS2 is a predictor.
+
+461
+00:22:50,426 --> 00:22:51,906
+Another example: I wanna calculate
+
+462
+00:22:51,906 --> 00:22:54,916
+the average ART consumption over the last three months.
+
+463
+00:22:54,916 --> 00:22:56,256
+Maybe you&#39;re using DHIS2
+
+464
+00:22:56,256 --> 00:22:58,296
+for some kind of supply chain monitoring,
+
+465
+00:22:58,296 --> 00:23:00,086
+and using predictors,
+
+466
+00:23:00,086 --> 00:23:02,936
+you would be able to calculate, say, average consumption.
+
+467
+00:23:04,586 --> 00:23:08,556
+Next point: I want to see the average ANC visits
+
+468
+00:23:08,556 --> 00:23:10,686
+with three standard deviations,
+
+469
+00:23:10,686 --> 00:23:11,519
+&#39;member, we talked about
+
+470
+00:23:11,519 --> 00:23:13,316
+what standard deviations were yesterday,
+
+471
+00:23:13,316 --> 00:23:15,046
+for the last 12 months.
+
+472
+00:23:15,046 --> 00:23:18,666
+This would produce an ANC 1 outlier threshold.
+
+473
+00:23:18,666 --> 00:23:19,499
+This is really the,
+
+474
+00:23:19,499 --> 00:23:21,276
+actually, what we&#39;re gonna be building now.
+
+475
+00:23:21,276 --> 00:23:25,626
+We want to see what is the outlier threshold,
+
+476
+00:23:25,626 --> 00:23:27,346
+and the way we calculate that is
+
+477
+00:23:27,346 --> 00:23:31,536
+we want three standard deviations from the average
+
+478
+00:23:31,536 --> 00:23:33,269
+over the last 12 months.
+
+479
+00:23:34,586 --> 00:23:37,256
+Predictors can also be used,
+
+480
+00:23:37,256 --> 00:23:40,176
+the next bullet point, the fourth bullet point here,
+
+481
+00:23:40,176 --> 00:23:41,866
+predictors can also be used
+
+482
+00:23:41,866 --> 00:23:45,716
+to count the number of facilities that report some value.
+
+483
+00:23:45,716 --> 00:23:49,166
+This is a very, very highly requested
+
+484
+00:23:49,166 --> 00:23:51,376
+indicator in DHIS2,
+
+485
+00:23:51,376 --> 00:23:53,726
+and even though we&#39;re not,
+
+486
+00:23:53,726 --> 00:23:56,416
+it&#39;s not related to data quality, necessarily,
+
+487
+00:23:56,416 --> 00:23:58,006
+I just wanna make the point clear
+
+488
+00:23:58,006 --> 00:24:00,496
+that using predictors, you can count the number
+
+489
+00:24:00,496 --> 00:24:03,706
+of org units that did something,
+
+490
+00:24:03,706 --> 00:24:05,856
+so I wanna know every org unit
+
+491
+00:24:05,856 --> 00:24:08,986
+that recorded more than five malaria cases
+
+492
+00:24:08,986 --> 00:24:12,146
+or how many org units recorded more than five malaria cases.
+
+493
+00:24:12,146 --> 00:24:13,896
+Well, you can actually get that number
+
+494
+00:24:13,896 --> 00:24:16,819
+using predictors from aggregate data.
+
+495
+00:24:21,366 --> 00:24:23,536
+A couple of words of warning here.
+
+496
+00:24:23,536 --> 00:24:25,736
+Predictors have to be scheduled jobs.
+
+497
+00:24:25,736 --> 00:24:27,516
+Just like we talked about scheduling jobs
+
+498
+00:24:27,516 --> 00:24:28,886
+and validation rules,
+
+499
+00:24:28,886 --> 00:24:31,416
+predictors have to be scheduled jobs.
+
+500
+00:24:31,416 --> 00:24:35,186
+Predictors do also require quite a lot of processing
+
+501
+00:24:35,186 --> 00:24:37,616
+on your CPU, on your servers,
+
+502
+00:24:37,616 --> 00:24:40,209
+so if you have a lot of that predictors running,
+
+503
+00:24:42,156 --> 00:24:45,006
+quite often, you can really tax your server,
+
+504
+00:24:45,006 --> 00:24:46,896
+just like we talked about with validation rules,
+
+505
+00:24:46,896 --> 00:24:48,256
+so you have to be very careful
+
+506
+00:24:48,256 --> 00:24:51,766
+about how many predictors you have run, when they run,
+
+507
+00:24:51,766 --> 00:24:54,126
+and how much data they actually generate
+
+508
+00:24:54,126 --> 00:24:56,143
+because these could all have server (stammers).
+
+509
+00:24:58,417 --> 00:25:00,536
+They could all affect your server. Excuse me.
+
+510
+00:25:00,536 --> 00:25:01,946
+If you are a server expert
+
+511
+00:25:01,946 --> 00:25:04,206
+or a server administrator out there,
+
+512
+00:25:04,206 --> 00:25:05,666
+please feel free to talk to us
+
+513
+00:25:05,666 --> 00:25:07,916
+about exactly how you should be considering
+
+514
+00:25:07,916 --> 00:25:11,346
+how many predictors to run, when to run them,
+
+515
+00:25:11,346 --> 00:25:12,726
+how much data to store
+
+516
+00:25:13,586 --> 00:25:16,626
+because if you just set these up
+
+517
+00:25:16,626 --> 00:25:19,126
+without considering how your server is performing,
+
+518
+00:25:19,126 --> 00:25:21,426
+you could really set yourself up for disaster,
+
+519
+00:25:24,016 --> 00:25:26,159
+so how do we make a predictor?
+
+520
+00:25:27,036 --> 00:25:28,936
+Well, predictors are actually,
+
+521
+00:25:28,936 --> 00:25:31,396
+the value that&#39;s generated through a predictor
+
+522
+00:25:31,396 --> 00:25:35,916
+is actually stored as a data element in DHIS2,
+
+523
+00:25:35,916 --> 00:25:40,106
+and the reason that this is good or is useful
+
+524
+00:25:40,106 --> 00:25:43,566
+is that that data element can then be used in indicators.
+
+525
+00:25:43,566 --> 00:25:46,656
+It can be used in validation rules.
+
+526
+00:25:46,656 --> 00:25:50,426
+It can be used in anywhere that you use a data element,
+
+527
+00:25:50,426 --> 00:25:52,966
+so again, predictors are very different
+
+528
+00:25:52,966 --> 00:25:54,776
+than standard indicators.
+
+529
+00:25:54,776 --> 00:25:58,266
+Standard indicators calculate values on the fly.
+
+530
+00:25:58,266 --> 00:25:59,856
+They do not store those values.
+
+531
+00:25:59,856 --> 00:26:01,546
+They just, every time you turn on an indicator,
+
+532
+00:26:01,546 --> 00:26:03,836
+that value&#39;s calculated, right?
+
+533
+00:26:03,836 --> 00:26:06,796
+Predictors actually calculate the value
+
+534
+00:26:06,796 --> 00:26:10,336
+and then store that value as a data element
+
+535
+00:26:10,336 --> 00:26:13,136
+so that you can go back and use it in other places,
+
+536
+00:26:13,136 --> 00:26:14,496
+so how do we do this?
+
+537
+00:26:14,496 --> 00:26:17,196
+We first make a data element.
+
+538
+00:26:17,196 --> 00:26:19,246
+Then we make the predictor,
+
+539
+00:26:19,246 --> 00:26:21,156
+and we assign that predictor
+
+540
+00:26:21,156 --> 00:26:25,086
+to store that value that it generates in the data element.
+
+541
+00:26:25,086 --> 00:26:27,436
+Then, just like with indicators and data elements,
+
+542
+00:26:27,436 --> 00:26:30,026
+we have to put the predictor in a predictor group.
+
+543
+00:26:30,026 --> 00:26:32,546
+Then we schedule the predictor group to run,
+
+544
+00:26:32,546 --> 00:26:34,996
+just like we did with the validation rules,
+
+545
+00:26:34,996 --> 00:26:37,076
+and then, finally, we can put that predictor
+
+546
+00:26:37,076 --> 00:26:38,856
+into a validation rule
+
+547
+00:26:38,856 --> 00:26:41,929
+to allow us to get those outlier detection going,
+
+548
+00:26:44,826 --> 00:26:47,806
+so how do we make the outlier threshold?
+
+549
+00:26:47,806 --> 00:26:50,296
+Well, the first step
+
+550
+00:26:50,296 --> 00:26:54,176
+is that you have to make your data element,
+
+551
+00:26:54,176 --> 00:26:56,836
+and so I&#39;m going to quickly cover how to make data elements.
+
+552
+00:26:56,836 --> 00:27:01,276
+This is not a DHIS2 configuration course, specifically,
+
+553
+00:27:01,276 --> 00:27:05,336
+but you have to make the data element first,
+
+554
+00:27:05,336 --> 00:27:07,526
+and this is the screen to make a data element.
+
+555
+00:27:07,526 --> 00:27:08,716
+Again, you go to your Maintenance app.
+
+556
+00:27:08,716 --> 00:27:09,736
+You click Data Elements.
+
+557
+00:27:09,736 --> 00:27:10,996
+You click the plus button,
+
+558
+00:27:10,996 --> 00:27:13,366
+and then you&#39;re into making a data element.
+
+559
+00:27:13,366 --> 00:27:16,136
+You have to give your data element a name, of course.
+
+560
+00:27:16,136 --> 00:27:17,706
+You also have to give it a short name.
+
+561
+00:27:17,706 --> 00:27:19,856
+Typically, the short name is the same as the long name.
+
+562
+00:27:19,856 --> 00:27:20,689
+In this case,
+
+563
+00:27:20,689 --> 00:27:24,406
+we&#39;re saying ANC1 Outlier Threshold, hyphen, your name,
+
+564
+00:27:24,406 --> 00:27:26,166
+and again, you&#39;re putting your, hyphen, your name
+
+565
+00:27:26,166 --> 00:27:27,716
+in case you&#39;re doing this right now.
+
+566
+00:27:27,716 --> 00:27:28,876
+You&#39;re following along.
+
+567
+00:27:28,876 --> 00:27:33,476
+You&#39;re able to recognize your outlier threshold
+
+568
+00:27:33,476 --> 00:27:36,456
+from anyone else who&#39;s making theirs right now.
+
+569
+00:27:36,456 --> 00:27:39,026
+Your domain type will be set to aggregate,
+
+570
+00:27:39,026 --> 00:27:40,876
+your value type set to number,
+
+571
+00:27:40,876 --> 00:27:43,189
+and your aggregation type set to sum.
+
+572
+00:27:46,436 --> 00:27:50,336
+Then we need to go in and make the predictor,
+
+573
+00:27:50,336 --> 00:27:53,149
+so again, we go to Maintenance app.
+
+574
+00:27:54,642 --> 00:27:55,836
+We scroll all the way down
+
+575
+00:27:55,836 --> 00:27:57,456
+to the bottom of the Maintenance app.
+
+576
+00:27:57,456 --> 00:27:59,766
+You&#39;ll see the predictors there.
+
+577
+00:27:59,766 --> 00:28:00,746
+You&#39;ll click on the predictor,
+
+578
+00:28:00,746 --> 00:28:02,906
+and you can click that blue plus button again,
+
+579
+00:28:02,906 --> 00:28:05,336
+and you&#39;ll go into making the predictor.
+
+580
+00:28:05,336 --> 00:28:07,476
+The screen you see here is actually how,
+
+581
+00:28:07,476 --> 00:28:10,429
+is the screen you would build the predictor in.
+
+582
+00:28:11,946 --> 00:28:14,449
+Again, first step, as always, give it a name.
+
+583
+00:28:15,416 --> 00:28:17,506
+Second step is, of course,
+
+584
+00:28:17,506 --> 00:28:19,516
+you can also give it a short name, and a code,
+
+585
+00:28:19,516 --> 00:28:20,996
+and a description as well,
+
+586
+00:28:20,996 --> 00:28:25,686
+but the second compulsory step is to define the output,
+
+587
+00:28:25,686 --> 00:28:28,136
+so we just made a data element.
+
+588
+00:28:28,136 --> 00:28:31,406
+We need to go in and find that data element we just made
+
+589
+00:28:31,406 --> 00:28:34,476
+and assign that data element to this predictor,
+
+590
+00:28:34,476 --> 00:28:36,316
+and just to repeat myself,
+
+591
+00:28:36,316 --> 00:28:40,026
+the predictor will store the value that is generated
+
+592
+00:28:40,026 --> 00:28:43,996
+in that data element, okay?
+
+593
+00:28:43,996 --> 00:28:46,106
+We also have to define a period type,
+
+594
+00:28:46,106 --> 00:28:49,456
+so at what frequency will,
+
+595
+00:28:49,456 --> 00:28:50,886
+so the frequency was (indistinct) run,
+
+596
+00:28:50,886 --> 00:28:53,806
+but how will that aggregated value
+
+597
+00:28:53,806 --> 00:28:55,706
+in that data element be stored?
+
+598
+00:28:55,706 --> 00:28:58,209
+And we&#39;re gonna say monthly here,
+
+599
+00:28:59,466 --> 00:29:03,316
+and then, the next step, which is absolutely required,
+
+600
+00:29:03,316 --> 00:29:05,596
+but it does not have an asterisk next to it,
+
+601
+00:29:05,596 --> 00:29:07,596
+and so please hear me.
+
+602
+00:29:07,596 --> 00:29:10,946
+You have to select an organizational unit group level,
+
+603
+00:29:10,946 --> 00:29:13,376
+or sorry, organizational unit level.
+
+604
+00:29:13,376 --> 00:29:14,216
+You have to select
+
+605
+00:29:14,216 --> 00:29:16,946
+an organizational unit level for predictors,
+
+606
+00:29:16,946 --> 00:29:20,806
+so here, the typical rule of thumb is
+
+607
+00:29:20,806 --> 00:29:24,556
+select the level at which the data is captured
+
+608
+00:29:24,556 --> 00:29:27,146
+against the values that will be used
+
+609
+00:29:27,146 --> 00:29:29,326
+to calculate your predictor.
+
+610
+00:29:29,326 --> 00:29:31,136
+Select that same level,
+
+611
+00:29:31,136 --> 00:29:35,456
+so in this case, ANC data is coming in at facility level,
+
+612
+00:29:35,456 --> 00:29:37,756
+so I want my predictor,
+
+613
+00:29:37,756 --> 00:29:39,686
+I want the value that is generated
+
+614
+00:29:39,686 --> 00:29:42,446
+to also be stored at facility level,
+
+615
+00:29:42,446 --> 00:29:45,426
+so I&#39;m selecting facility here, okay?
+
+616
+00:29:45,426 --> 00:29:48,656
+So please, you have to select an organizational unit level.
+
+617
+00:29:48,656 --> 00:29:51,129
+If you don&#39;t, the predictor will not work.
+
+618
+00:29:54,226 --> 00:29:55,186
+The next step
+
+619
+00:29:55,186 --> 00:29:59,529
+is to define your generator, okay?
+
+620
+00:30:05,626 --> 00:30:07,196
+In the generator,
+
+621
+00:30:07,196 --> 00:30:10,486
+this is where you actually put in the calculation
+
+622
+00:30:10,486 --> 00:30:11,499
+for the predictor,
+
+623
+00:30:13,586 --> 00:30:14,826
+and in the generator,
+
+624
+00:30:14,826 --> 00:30:17,626
+you first have to define a missing value strategy.
+
+625
+00:30:17,626 --> 00:30:20,626
+This is the same as the validation rules,
+
+626
+00:30:20,626 --> 00:30:24,519
+and it will just say if the values that are missing,
+
+627
+00:30:25,656 --> 00:30:27,516
+how do I handle the values that are missing
+
+628
+00:30:27,516 --> 00:30:29,566
+in the calculation that you&#39;re providing?
+
+629
+00:30:33,226 --> 00:30:36,996
+The default is skip any values if it&#39;s missing,
+
+630
+00:30:36,996 --> 00:30:41,806
+and the question is, is this usually good?
+
+631
+00:30:41,806 --> 00:30:46,326
+And typically, with predictors, it&#39;s not useful.
+
+632
+00:30:46,326 --> 00:30:48,336
+We actually want the calculation,
+
+633
+00:30:48,336 --> 00:30:50,479
+even if there are some values missing,
+
+634
+00:30:52,656 --> 00:30:54,136
+and the reason is for that
+
+635
+00:30:54,136 --> 00:30:57,236
+because we still wanna calculate this value.
+
+636
+00:30:57,236 --> 00:31:00,286
+This value&#39;s actually referencing previously reported data,
+
+637
+00:31:00,286 --> 00:31:02,206
+so even if, and in this case,
+
+638
+00:31:02,206 --> 00:31:03,076
+we&#39;re actually gonna be looking
+
+639
+00:31:03,076 --> 00:31:05,586
+at 12 previous months of data,
+
+640
+00:31:05,586 --> 00:31:09,236
+so if we leave it to skip if all values are missing
+
+641
+00:31:09,236 --> 00:31:11,156
+or skip if any values are missing,
+
+642
+00:31:11,156 --> 00:31:14,136
+then, if it skip if any values are missing,
+
+643
+00:31:14,136 --> 00:31:17,606
+then if there&#39;s one month of where there is no data,
+
+644
+00:31:17,606 --> 00:31:20,736
+then we won&#39;t actually generate our predictor,
+
+645
+00:31:20,736 --> 00:31:21,706
+and that&#39;s not what we want.
+
+646
+00:31:21,706 --> 00:31:24,656
+We actually want them to generate the predicted value
+
+647
+00:31:24,656 --> 00:31:26,656
+for the average over the last 12 months
+
+648
+00:31:26,656 --> 00:31:28,226
+even if there is one of those months
+
+649
+00:31:28,226 --> 00:31:29,526
+that doesn&#39;t have a value.
+
+650
+00:31:31,216 --> 00:31:33,186
+Okay, again, I think this is something
+
+651
+00:31:33,186 --> 00:31:35,466
+that&#39;s easier to show you than to
+
+652
+00:31:38,636 --> 00:31:40,156
+to talk about on a slide,
+
+653
+00:31:40,156 --> 00:31:43,329
+so I am gonna go into my Maintenance app.
+
+654
+00:31:49,166 --> 00:31:53,166
+I&#39;m gonna scroll all the way down to predictors.
+
+655
+00:31:57,956 --> 00:32:00,209
+I&#39;m gonna go into my generator.
+
+656
+00:32:02,306 --> 00:32:03,286
+All right, and remember,
+
+657
+00:32:03,286 --> 00:32:06,126
+we&#39;re making a predictor that is going to produce
+
+658
+00:32:06,126 --> 00:32:10,086
+an outlier threshold for ANC 1,
+
+659
+00:32:10,086 --> 00:32:13,276
+so again, how do we calculate an outlier threshold?
+
+660
+00:32:13,276 --> 00:32:16,216
+Well, the outlier threshold is the average
+
+661
+00:32:18,036 --> 00:32:21,386
+plus three standard deviations
+
+662
+00:32:23,596 --> 00:32:24,429
+of the value,
+
+663
+00:32:24,429 --> 00:32:26,416
+so how do we do that?
+
+664
+00:32:26,416 --> 00:32:29,436
+Well, in predictors,
+
+665
+00:32:29,436 --> 00:32:33,699
+we are allowed to type in various mathematical operators.
+
+666
+00:32:34,536 --> 00:32:36,976
+If you&#39;re curious on what all of these operators are,
+
+667
+00:32:36,976 --> 00:32:37,916
+I think I have a slide on it,
+
+668
+00:32:37,916 --> 00:32:40,756
+but you can also just Google DHIS2 predictors,
+
+669
+00:32:40,756 --> 00:32:43,676
+and there is a clear documentation on all the various ones,
+
+670
+00:32:43,676 --> 00:32:46,636
+but for the ones
+
+671
+00:32:46,636 --> 00:32:48,783
+that we&#39;re gonna use right now is AVG,
+
+672
+00:32:51,096 --> 00:32:53,356
+and then, that&#39;s the average,
+
+673
+00:32:53,356 --> 00:32:55,416
+and then we&#39;re gonna find ANC 1,
+
+674
+00:32:57,226 --> 00:32:59,299
+and I&#39;m just gonna say ANC 1 visits.
+
+675
+00:33:00,806 --> 00:33:02,309
+Close my,
+
+676
+00:33:04,226 --> 00:33:07,446
+sorry, close my brackets,
+
+677
+00:33:07,446 --> 00:33:09,426
+and you see my translator&#39;s already working,
+
+678
+00:33:09,426 --> 00:33:11,539
+so I&#39;m taking the average of ANC 1,
+
+679
+00:33:12,736 --> 00:33:13,569
+plus
+
+680
+00:33:17,166 --> 00:33:20,096
+I&#39;m gonna do another open bracket,
+
+681
+00:33:20,096 --> 00:33:23,466
+three times
+
+682
+00:33:24,366 --> 00:33:26,039
+the standard deviation,
+
+683
+00:33:27,016 --> 00:33:30,959
+and standard deviation is typed S-T-D-D-E-V,
+
+684
+00:33:32,526 --> 00:33:34,359
+another open brackets.
+
+685
+00:33:36,556 --> 00:33:39,136
+I&#39;m gonna then add ANC 1 visits again
+
+686
+00:33:40,996 --> 00:33:43,286
+and two closes.
+
+687
+00:33:43,286 --> 00:33:46,206
+Right, so now it&#39;s actually translating properly,
+
+688
+00:33:46,206 --> 00:33:48,356
+so we are taking the average
+
+689
+00:33:48,356 --> 00:33:50,806
+plus three standard deviations from the average.
+
+690
+00:33:50,806 --> 00:33:52,756
+Remember, yesterday we talked about standard deviations
+
+691
+00:33:52,756 --> 00:33:54,156
+and the bell curve.
+
+692
+00:33:54,156 --> 00:33:57,513
+Three standard deviations off the average
+
+693
+00:33:57,513 --> 00:34:00,846
+means that it&#39;s going to pick up any value
+
+694
+00:34:00,846 --> 00:34:03,316
+that is 98% different
+
+695
+00:34:03,316 --> 00:34:05,926
+than the average, okay?
+
+696
+00:34:05,926 --> 00:34:07,656
+98% different than the average
+
+697
+00:34:07,656 --> 00:34:10,069
+over all of the sampled values.
+
+698
+00:34:12,726 --> 00:34:17,116
+All right. Again, I have to give it a name.
+
+699
+00:34:17,116 --> 00:34:18,016
+For the sake of time,
+
+700
+00:34:18,016 --> 00:34:21,046
+I&#39;m just gonna copy and paste that in there.
+
+701
+00:34:21,045 --> 00:34:21,879
+Submit.
+
+702
+00:34:32,516 --> 00:34:33,856
+Okay, here it is again.
+
+703
+00:34:33,856 --> 00:34:35,106
+I&#39;m back into my PowerPoint,
+
+704
+00:34:35,106 --> 00:34:37,516
+so the formula for standard deviations
+
+705
+00:34:37,516 --> 00:34:40,356
+is average plus the data element
+
+706
+00:34:41,315 --> 00:34:45,636
+plus three standard deviations, three times S-T-D-D-E-V,
+
+707
+00:34:45,636 --> 00:34:47,089
+and then ANC 1 again.
+
+708
+00:34:48,146 --> 00:34:50,609
+You might be wondering if this is case sensitive.
+
+709
+00:34:51,866 --> 00:34:55,406
+In older versions of DHIS2, it is case sensitive.
+
+710
+00:34:55,406 --> 00:34:56,946
+In newer versions, it is not,
+
+711
+00:34:56,946 --> 00:34:59,546
+so if you&#39;re using DHIS2 point,
+
+712
+00:34:59,546 --> 00:35:03,056
+I believe, 31 or older
+
+713
+00:35:03,056 --> 00:35:04,216
+and you&#39;re using predictors,
+
+714
+00:35:04,216 --> 00:35:06,296
+you need to put these in all capital letters.
+
+715
+00:35:06,296 --> 00:35:11,256
+If you&#39;re using 31 or newer, so 31, 32, 33, or 34,
+
+716
+00:35:11,256 --> 00:35:15,739
+you can put these in lowercase letters, like you see here.
+
+717
+00:35:19,476 --> 00:35:22,056
+Yeah, so here are the other functions for predictors.
+
+718
+00:35:22,056 --> 00:35:23,216
+You can see that there&#39;s quite a lot,
+
+719
+00:35:23,216 --> 00:35:24,896
+like average, count, max, median,
+
+720
+00:35:24,896 --> 00:35:26,709
+min, standard deviation, sum.
+
+721
+00:35:27,766 --> 00:35:29,969
+These can be used in different situations.
+
+722
+00:35:31,476 --> 00:35:35,776
+The next step is that we have to define our counts.
+
+723
+00:35:35,776 --> 00:35:38,316
+Sorry for the spelling mistake here on count,
+
+724
+00:35:38,316 --> 00:35:40,626
+but we have to define our counts.
+
+725
+00:35:40,626 --> 00:35:42,866
+Now, again, in this particular situation,
+
+726
+00:35:42,866 --> 00:35:45,746
+looking at producing an outlier threshold,
+
+727
+00:35:45,746 --> 00:35:49,316
+we want to reference the last 12 months of data,
+
+728
+00:35:49,316 --> 00:35:51,586
+so we are gonna say
+
+729
+00:35:51,586 --> 00:35:54,616
+12 sequential sample counts here.
+
+730
+00:35:54,616 --> 00:35:56,746
+A sequential sample count is just
+
+731
+00:35:56,746 --> 00:35:58,476
+what was the last period?
+
+732
+00:35:58,476 --> 00:36:00,816
+And how many of those periods do you wanna count?
+
+733
+00:36:00,816 --> 00:36:02,906
+So we&#39;re gonna say our last period was months.
+
+734
+00:36:02,906 --> 00:36:05,216
+We&#39;ve already defined that elsewhere in the predictor.
+
+735
+00:36:05,216 --> 00:36:06,316
+We&#39;re gonna say 12.
+
+736
+00:36:06,316 --> 00:36:08,616
+We wanna look at the last 12 months of data.
+
+737
+00:36:08,616 --> 00:36:10,376
+Our annual sample count, which is saying
+
+738
+00:36:10,376 --> 00:36:12,476
+how many previous years do you wanna reference?
+
+739
+00:36:12,476 --> 00:36:14,996
+We&#39;re gonna leave that one to zero,
+
+740
+00:36:14,996 --> 00:36:18,776
+and then, we have a sequential skip count.
+
+741
+00:36:18,776 --> 00:36:22,036
+Sequential skip count will allow you to say
+
+742
+00:36:22,036 --> 00:36:25,669
+I wanna skip some number of previous samples.
+
+743
+00:36:26,746 --> 00:36:28,876
+In this case, we&#39;re not adding a,
+
+744
+00:36:28,876 --> 00:36:30,616
+we don&#39;t need a sequential skip count,
+
+745
+00:36:30,616 --> 00:36:32,669
+so we&#39;re not gonna even add it in,
+
+746
+00:36:34,756 --> 00:36:36,376
+so what does this actually look like?
+
+747
+00:36:36,376 --> 00:36:39,286
+Let&#39;s pretend that we are in
+
+748
+00:36:40,486 --> 00:36:42,806
+March right now, okay?
+
+749
+00:36:42,806 --> 00:36:44,556
+Let&#39;s pretend that we are in March,
+
+750
+00:36:46,193 --> 00:36:48,386
+and the numbers that you see listed here,
+
+751
+00:36:48,386 --> 00:36:49,866
+these are months of the year,
+
+752
+00:36:49,866 --> 00:36:51,276
+so January through December,
+
+753
+00:36:51,276 --> 00:36:55,019
+and then 1, 2, 3, 4, January, February, March, April.
+
+754
+00:36:55,926 --> 00:36:58,276
+Okay, so let&#39;s say that we are in April,
+
+755
+00:36:58,276 --> 00:37:01,576
+and we say we have a sequential sample count of 12.
+
+756
+00:37:01,576 --> 00:37:02,936
+What will that do?
+
+757
+00:37:02,936 --> 00:37:05,136
+Well, that will take the previous 12 months,
+
+758
+00:37:05,136 --> 00:37:09,679
+so that would take from March to April of last year,
+
+759
+00:37:11,061 --> 00:37:12,366
+annual sample count is zero,
+
+760
+00:37:12,366 --> 00:37:14,926
+so we&#39;re just looking at just those last 12 months,
+
+761
+00:37:14,926 --> 00:37:16,056
+and our skip count is zero,
+
+762
+00:37:16,056 --> 00:37:18,849
+so we&#39;re not skipping any values in the last 12 months.
+
+763
+00:37:22,306 --> 00:37:25,966
+This can become more complex, of course, right?
+
+764
+00:37:25,966 --> 00:37:27,776
+So for seasonal data,
+
+765
+00:37:27,776 --> 00:37:30,466
+you typically have to have some combination
+
+766
+00:37:30,466 --> 00:37:34,586
+of annual sample count and sequential sample count
+
+767
+00:37:34,586 --> 00:37:39,156
+to be able to factor in the epi curve of malaria,
+
+768
+00:37:39,156 --> 00:37:41,836
+that bell curve that you have of seasonal malaria
+
+769
+00:37:41,836 --> 00:37:43,589
+or any kind of seasonal disease.
+
+770
+00:37:44,656 --> 00:37:47,206
+I won&#39;t go into it now for the sake of time,
+
+771
+00:37:47,206 --> 00:37:48,926
+but there is clear documentation
+
+772
+00:37:50,127 --> 00:37:52,826
+on our website in our user manual
+
+773
+00:37:52,826 --> 00:37:54,326
+on how to build out predictors
+
+774
+00:37:54,326 --> 00:37:56,816
+using combinations of sequential sample counts
+
+775
+00:37:56,816 --> 00:37:58,456
+and annual sample counts
+
+776
+00:38:00,016 --> 00:38:02,269
+to factor in more seasonal data.
+
+777
+00:38:11,936 --> 00:38:14,726
+So that is how you make
+
+778
+00:38:16,436 --> 00:38:19,476
+the outlier, or sorry, the predictor
+
+779
+00:38:19,476 --> 00:38:21,316
+that generates the outlier threshold.
+
+780
+00:38:21,316 --> 00:38:24,146
+How do we then put that into our validation rules?
+
+781
+00:38:24,146 --> 00:38:25,916
+Again, we wanna have a validation rule
+
+782
+00:38:25,916 --> 00:38:28,576
+that checks the ANC 1 value
+
+783
+00:38:28,576 --> 00:38:30,916
+against the ANC outlier threshold,
+
+784
+00:38:30,916 --> 00:38:32,726
+and say if that ANC 1 value
+
+785
+00:38:32,726 --> 00:38:34,776
+is higher than that outlier threshold,
+
+786
+00:38:34,776 --> 00:38:35,609
+send me an alert.
+
+787
+00:38:35,609 --> 00:38:36,456
+Send me a notification.
+
+788
+00:38:36,456 --> 00:38:37,595
+Let me know that this value
+
+789
+00:38:37,595 --> 00:38:42,039
+is 99% different than the average.
+
+790
+00:38:43,676 --> 00:38:46,366
+Well, it&#39;s the exact same process that we just went through
+
+791
+00:38:46,366 --> 00:38:47,869
+in building validation rules.
+
+792
+00:38:49,316 --> 00:38:53,292
+Here, you can see building out the validation rule.
+
+793
+00:38:53,292 --> 00:38:54,406
+We give it a name.
+
+794
+00:38:54,406 --> 00:38:56,096
+We then give it a description.
+
+795
+00:38:56,096 --> 00:38:57,676
+Again, an instruction.
+
+796
+00:38:57,676 --> 00:38:59,786
+You can define the importance.
+
+797
+00:38:59,786 --> 00:39:01,056
+Our monthly type, again,
+
+798
+00:39:01,056 --> 00:39:03,966
+or sorry, excuse me, our period type, again, is monthly.
+
+799
+00:39:03,966 --> 00:39:07,286
+Our left-side expression is ANC 1 visits.
+
+800
+00:39:07,286 --> 00:39:09,966
+Our operator is less than,
+
+801
+00:39:09,966 --> 00:39:12,946
+and our right-side operator or expression
+
+802
+00:39:12,946 --> 00:39:15,416
+will be ANC 1 threshold,
+
+803
+00:39:15,416 --> 00:39:17,946
+so again, validation rules need to be defined
+
+804
+00:39:17,946 --> 00:39:19,756
+based on what we know to be true,
+
+805
+00:39:19,756 --> 00:39:23,466
+and in this case, we can interpret that to be ANC 1 visits
+
+806
+00:39:23,466 --> 00:39:28,466
+should be less than ANC 1 outlier threshold,
+
+807
+00:39:28,536 --> 00:39:31,836
+and again, that threshold value is a data element
+
+808
+00:39:31,836 --> 00:39:34,139
+that is coming from a predictor,
+
+809
+00:39:37,226 --> 00:39:39,709
+so what happens when we run this validation rule?
+
+810
+00:39:41,256 --> 00:39:43,876
+We can see that we received
+
+811
+00:39:43,876 --> 00:39:46,569
+a lot of validation notifications,
+
+812
+00:39:48,096 --> 00:39:51,426
+and just looking at this one example here,
+
+813
+00:39:51,426 --> 00:39:56,006
+we can see
+
+814
+00:39:56,006 --> 00:39:58,866
+that we have a value
+
+815
+00:39:58,866 --> 00:40:03,256
+for facility 583 in October 2019
+
+816
+00:40:03,256 --> 00:40:04,446
+that was reported
+
+817
+00:40:05,405 --> 00:40:08,976
+a ANC 1 value of 126,
+
+818
+00:40:08,976 --> 00:40:13,826
+but our outlier threshold is 117.9,
+
+819
+00:40:13,826 --> 00:40:14,773
+so it&#39;s saying, &quot;Hey, look.
+
+820
+00:40:14,773 --> 00:40:17,643
+&quot;126 is bigger than 117.9.
+
+821
+00:40:17,643 --> 00:40:19,173
+&quot;It should be less than.
+
+822
+00:40:19,173 --> 00:40:21,439
+&quot;Here&#39;s an alert,&quot; okay?
+
+823
+00:40:24,646 --> 00:40:27,216
+Before I cut over to
+
+824
+00:40:28,936 --> 00:40:31,206
+revisiting some of the scheduling,
+
+825
+00:40:31,206 --> 00:40:33,066
+I do wanna quickly show you
+
+826
+00:40:33,066 --> 00:40:36,819
+how you use predictors to count org units,
+
+827
+00:40:38,321 --> 00:40:39,406
+and in this case,
+
+828
+00:40:39,406 --> 00:40:42,516
+I&#39;m saying I&#39;m counting the number of org units
+
+829
+00:40:42,516 --> 00:40:45,526
+that have a stock-out of some commodity.
+
+830
+00:40:45,526 --> 00:40:47,006
+This is not related to data quality.
+
+831
+00:40:47,006 --> 00:40:50,079
+It&#39;s just highly requested thing to know,
+
+832
+00:40:51,166 --> 00:40:53,026
+and so, in predictors,
+
+833
+00:40:53,026 --> 00:40:56,796
+we can also put in if statements in our generators,
+
+834
+00:40:56,796 --> 00:40:59,386
+and that if statement here,
+
+835
+00:40:59,386 --> 00:41:01,046
+if you look at the translator,
+
+836
+00:41:01,046 --> 00:41:05,056
+where it says valid at the bottom of the screenshot,
+
+837
+00:41:05,056 --> 00:41:07,156
+just directly above that, you have the translation,
+
+838
+00:41:07,156 --> 00:41:10,229
+and this saying if the stock-out of RDTs,
+
+839
+00:41:11,776 --> 00:41:15,816
+number of days is greater than zero,
+
+840
+00:41:15,816 --> 00:41:17,526
+count a one.
+
+841
+00:41:17,526 --> 00:41:20,356
+If not, record a zero,
+
+842
+00:41:20,356 --> 00:41:22,196
+so what is that actually gonna do?
+
+843
+00:41:22,196 --> 00:41:25,526
+That&#39;s gonna say that if you have more than one,
+
+844
+00:41:25,526 --> 00:41:28,546
+or if you have one or more days of stock-out of RDTs
+
+845
+00:41:28,546 --> 00:41:31,046
+that&#39;s recorded in your monthly reporting form,
+
+846
+00:41:31,046 --> 00:41:33,429
+then it&#39;s going to count a one value,
+
+847
+00:41:34,366 --> 00:41:38,646
+and that one will be saved as a data element
+
+848
+00:41:38,646 --> 00:41:40,796
+against that facility,
+
+849
+00:41:40,796 --> 00:41:42,576
+and you can use that value
+
+850
+00:41:42,576 --> 00:41:44,206
+to then aggregate up the hierarchy
+
+851
+00:41:44,206 --> 00:41:45,486
+and say how many facilities
+
+852
+00:41:45,486 --> 00:41:48,386
+did I have a stock-out of RDTs last month?
+
+853
+00:41:48,386 --> 00:41:51,516
+Or you can even, say, put that value onto a map,
+
+854
+00:41:51,516 --> 00:41:53,456
+and you can make a map showing specifically
+
+855
+00:41:53,456 --> 00:41:56,829
+these are the facilities that had a stock-out last month.
+
+856
+00:41:57,736 --> 00:42:00,236
+That&#39;s how predictors can be used
+
+857
+00:42:00,236 --> 00:42:01,516
+to count health facilities.
+
+858
+00:42:01,516 --> 00:42:04,486
+Again, it&#39;s a little bit more of an advanced concept.
+
+859
+00:42:04,486 --> 00:42:06,756
+If you have questions, please send those on Slack,
+
+860
+00:42:06,756 --> 00:42:09,546
+and we&#39;ll be happy to come back to them.
+
+861
+00:42:09,546 --> 00:42:10,556
+For the sake of time here,
+
+862
+00:42:10,556 --> 00:42:12,756
+we don&#39;t have time to go into
+
+863
+00:42:12,756 --> 00:42:16,256
+more advanced functionalities with predictors,
+
+864
+00:42:16,256 --> 00:42:18,036
+but there is a lot that you can do with them.
+
+865
+00:42:18,036 --> 00:42:19,586
+Hopefully, you appreciate that.
+
+866
+00:42:21,136 --> 00:42:25,356
+All right, so one additional point
+
+867
+00:42:25,356 --> 00:42:26,376
+that I need to make
+
+868
+00:42:29,606 --> 00:42:31,446
+is that predictors
+
+869
+00:42:32,746 --> 00:42:37,746
+also have to be scheduled in the Scheduler app, okay?
+
+870
+00:42:37,886 --> 00:42:40,686
+So it&#39;s a different job
+
+871
+00:42:41,644 --> 00:42:42,486
+than the maintenance job
+
+872
+00:42:42,486 --> 00:42:46,636
+that we use to schedule validation rules,
+
+873
+00:42:46,636 --> 00:42:49,669
+so we have our ANC outlier threshold,
+
+874
+00:42:50,556 --> 00:42:53,156
+and we are going to make the job type predictor.
+
+875
+00:42:53,156 --> 00:42:57,489
+Again, you select the frequency that you want.
+
+876
+00:42:58,956 --> 00:43:01,036
+Just like we did the validation rules, exact same,
+
+877
+00:43:01,036 --> 00:43:02,846
+you can select a predefined frequency.
+
+878
+00:43:02,846 --> 00:43:05,956
+You can put in your own frequency through a cron expression,
+
+879
+00:43:05,956 --> 00:43:07,816
+or you could say continuous execution.
+
+880
+00:43:07,816 --> 00:43:09,336
+Again, I highly recommend
+
+881
+00:43:09,336 --> 00:43:11,996
+that you do not use continuous execution
+
+882
+00:43:11,996 --> 00:43:16,026
+unless you are in a disease-surveillance scenario,
+
+883
+00:43:16,026 --> 00:43:18,826
+and you&#39;re only using one or maybe two validation rules.
+
+884
+00:43:19,946 --> 00:43:22,006
+The job type will be predictor.
+
+885
+00:43:22,006 --> 00:43:23,266
+This is, again, different.
+
+886
+00:43:23,266 --> 00:43:27,796
+The job type for the validation rule
+
+887
+00:43:27,796 --> 00:43:30,416
+was a monitoring job type.
+
+888
+00:43:30,416 --> 00:43:32,176
+This is a predictor job type,
+
+889
+00:43:32,176 --> 00:43:33,906
+but the parameters are the same,
+
+890
+00:43:33,906 --> 00:43:36,306
+so we have to define our relative start
+
+891
+00:43:36,306 --> 00:43:37,739
+and our relative end.
+
+892
+00:43:38,956 --> 00:43:41,876
+Again, rule of thumb, relative start, negative 60,
+
+893
+00:43:41,876 --> 00:43:42,976
+maybe negative 30.
+
+894
+00:43:42,976 --> 00:43:46,746
+You just wanna cover a few previous months, right?
+
+895
+00:43:46,746 --> 00:43:50,216
+Relative in to being just one, which is tomorrow,
+
+896
+00:43:50,216 --> 00:43:52,436
+and then, when we have to give our predictors
+
+897
+00:43:52,436 --> 00:43:54,016
+into our Scheduler,
+
+898
+00:43:54,016 --> 00:43:56,286
+so you just type out the predictors here.
+
+899
+00:43:56,286 --> 00:44:00,396
+You&#39;ll be able to select them, and then you add the job.
+
+900
+00:44:00,396 --> 00:44:05,246
+Now, let&#39;s say that you have some predictor jobs.
+
+901
+00:44:05,246 --> 00:44:07,363
+Then, you have your analytics tables
+
+902
+00:44:07,363 --> 00:44:09,529
+and your validation rule alerts.
+
+903
+00:44:10,976 --> 00:44:12,276
+If you&#39;re a system administrator,
+
+904
+00:44:12,276 --> 00:44:13,546
+I&#39;m talking to you right now.
+
+905
+00:44:13,546 --> 00:44:15,356
+If you&#39;re not a DHIS2 techie,
+
+906
+00:44:15,356 --> 00:44:17,806
+you&#39;re probably not gonna appreciate a lot of this,
+
+907
+00:44:17,806 --> 00:44:19,046
+but the point to be made
+
+908
+00:44:19,046 --> 00:44:24,026
+is that you have to schedule these jobs to run concurrently.
+
+909
+00:44:24,026 --> 00:44:28,156
+You cannot schedule these jobs to run at the same time,
+
+910
+00:44:28,156 --> 00:44:31,356
+and they need to run in a specific order, okay?
+
+911
+00:44:31,356 --> 00:44:33,206
+For you to actually be able to generate
+
+912
+00:44:33,206 --> 00:44:35,516
+your validation rule alerts,
+
+913
+00:44:35,516 --> 00:44:36,586
+so the first thing is that
+
+914
+00:44:36,586 --> 00:44:40,936
+you schedule the predictors jobs to run first, okay?
+
+915
+00:44:40,936 --> 00:44:43,646
+And you, again, you want to have all of these jobs run
+
+916
+00:44:43,646 --> 00:44:45,386
+when the server usage is low,
+
+917
+00:44:45,386 --> 00:44:48,136
+when there&#39;s not a lot of people on the database.
+
+918
+00:44:48,136 --> 00:44:50,056
+The predictor jobs, for example,
+
+919
+00:44:50,056 --> 00:44:52,106
+you see the example here on the right side of the screen,
+
+920
+00:44:52,106 --> 00:44:55,966
+could run at, say, 11 o&#39;clock, 23 on a Sunday.
+
+921
+00:44:55,966 --> 00:44:58,736
+Very few people are gonna be looking at DHIS2
+
+922
+00:44:58,736 --> 00:45:00,239
+at 11 o&#39;clock on a Sunday.
+
+923
+00:45:01,486 --> 00:45:04,836
+Then you have your analytics tables run after that.
+
+924
+00:45:04,836 --> 00:45:06,456
+Again, the analytics tables
+
+925
+00:45:06,456 --> 00:45:09,886
+are just a function that has to be performed
+
+926
+00:45:09,886 --> 00:45:11,946
+in order to see the data on the dashboards
+
+927
+00:45:11,946 --> 00:45:15,686
+or in the Data Visualizer on maps, et cetera,
+
+928
+00:45:15,686 --> 00:45:17,156
+so you want those to probably run
+
+929
+00:45:17,156 --> 00:45:19,316
+right after their predictors.
+
+930
+00:45:19,316 --> 00:45:21,296
+You can have that run maybe an hour later.
+
+931
+00:45:21,296 --> 00:45:23,239
+Run that at midnight on Sunday.
+
+932
+00:45:24,336 --> 00:45:26,416
+Analytics tables, depending on the size of your database,
+
+933
+00:45:26,416 --> 00:45:28,336
+may take a while,
+
+934
+00:45:28,336 --> 00:45:33,026
+so if you give yourself a few extra hours of buffer,
+
+935
+00:45:33,026 --> 00:45:36,066
+and say then you want your validation rule alerts jobs
+
+936
+00:45:36,066 --> 00:45:39,056
+to run at maybe 03,
+
+937
+00:45:39,056 --> 00:45:43,976
+so a few hours after your tables, your analytics tables,
+
+938
+00:45:43,976 --> 00:45:45,886
+and if you run them in this order,
+
+939
+00:45:45,886 --> 00:45:47,956
+that means that your predictors come first.
+
+940
+00:45:47,956 --> 00:45:52,056
+Those predictors are then able to be seen on your dashboards
+
+941
+00:45:52,056 --> 00:45:54,566
+if you want, if you have them there,
+
+942
+00:45:54,566 --> 00:45:56,666
+and then, they&#39;ll be able to be pushed out
+
+943
+00:45:59,436 --> 00:46:00,766
+in your e-mails.
+
+944
+00:46:00,766 --> 00:46:02,776
+If everything goes properly,
+
+945
+00:46:02,776 --> 00:46:05,936
+then this will all happen when you&#39;re asleep.
+
+946
+00:46:05,936 --> 00:46:07,286
+When you wake up in the morning,
+
+947
+00:46:07,286 --> 00:46:09,076
+you&#39;ll see an e-mail from DHIS2
+
+948
+00:46:09,076 --> 00:46:10,233
+saying, &quot;Hey, look.
+
+949
+00:46:10,233 --> 00:46:14,133
+&quot;These are the alerts that were generated last night.&quot;
+
+950
+00:46:18,466 --> 00:46:19,299
+Okay.
+
+951
+00:46:22,246 --> 00:46:24,736
+There is some question
+
+952
+00:46:24,736 --> 00:46:27,676
+already posted in the community practice
+
+953
+00:46:27,676 --> 00:46:32,216
+or on the Slack channel around how do I get e-mail?
+
+954
+00:46:32,216 --> 00:46:35,856
+Or how do I configure DHIS2 to send an e-mail?
+
+955
+00:46:35,856 --> 00:46:37,546
+Well, the reality is that
+
+956
+00:46:37,546 --> 00:46:40,796
+you have to generate an e-mail service
+
+957
+00:46:40,796 --> 00:46:42,839
+from your service provider.
+
+958
+00:46:44,056 --> 00:46:49,056
+DHIS2 does not have a built-in e-mail host.
+
+959
+00:46:49,266 --> 00:46:50,986
+This has to be provided from your service provider,
+
+960
+00:46:50,986 --> 00:46:53,986
+so if you are a ministry of health,
+
+961
+00:46:53,986 --> 00:46:57,056
+and you are using a telecommunications company
+
+962
+00:46:57,056 --> 00:47:01,056
+in your country hosting your DHIS2 instance,
+
+963
+00:47:01,056 --> 00:47:04,696
+or hosting, say, your e-mail service for your ministry,
+
+964
+00:47:04,696 --> 00:47:08,046
+that host, that company, whoever it is,
+
+965
+00:47:08,046 --> 00:47:12,696
+needs to provide an e-mail host
+
+966
+00:47:12,696 --> 00:47:15,946
+or an e-mail endpoint for your DHIS2 instance
+
+967
+00:47:15,946 --> 00:47:17,436
+to be able to send e-mails.
+
+968
+00:47:17,436 --> 00:47:18,296
+Again, not something
+
+969
+00:47:18,296 --> 00:47:20,286
+that University of Oslo can provide you,
+
+970
+00:47:20,286 --> 00:47:21,119
+so it has to come
+
+971
+00:47:21,119 --> 00:47:23,569
+from whoever&#39;s hosting your e-mail service.
+
+972
+00:47:24,426 --> 00:47:27,546
+Many of you are probably using Google
+
+973
+00:47:29,068 --> 00:47:30,896
+as your default e-mail service,
+
+974
+00:47:30,896 --> 00:47:32,869
+so if you have a Gmail, for example,
+
+975
+00:47:33,926 --> 00:47:36,706
+and if you are using Google,
+
+976
+00:47:36,706 --> 00:47:38,466
+then we&#39;ve given you some of the guidance
+
+977
+00:47:38,466 --> 00:47:40,109
+on how to configure this,
+
+978
+00:47:41,836 --> 00:47:43,696
+but you have to provide a host name,
+
+979
+00:47:43,696 --> 00:47:46,966
+a port number, a username, a password.
+
+980
+00:47:46,966 --> 00:47:49,416
+A username and password, this is for your e-mail service.
+
+981
+00:47:49,416 --> 00:47:51,726
+This is not for your DHIS2.
+
+982
+00:47:51,726 --> 00:47:56,576
+You need to provide a TLS, an e-mail sender address,
+
+983
+00:47:56,576 --> 00:48:00,269
+and an address to send test e-mails.
+
+984
+00:48:01,846 --> 00:48:03,606
+Again, all of this has to be provided
+
+985
+00:48:03,606 --> 00:48:05,469
+by your e-mail service provider.
+
+986
+00:48:06,646 --> 00:48:08,226
+We cannot provide this to you.
+
+987
+00:48:08,226 --> 00:48:11,876
+This has to come from whoever&#39;s hosting your e-mail service.
+
+988
+00:48:11,876 --> 00:48:15,286
+Any telecommunications company that hosts e-mail services
+
+989
+00:48:15,286 --> 00:48:17,483
+should be able to provide this to you.
+
+990
+00:48:19,336 --> 00:48:22,106
+These are fairly basic things, to be honest with you.
+
+991
+00:48:22,106 --> 00:48:23,966
+The example that you see here is
+
+992
+00:48:23,966 --> 00:48:27,989
+if you have your e-mail hosted by, say, Amazon Web Services,
+
+993
+00:48:29,076 --> 00:48:30,246
+on the left side of the screen,
+
+994
+00:48:30,246 --> 00:48:33,686
+and like we do here at DHIS2,
+
+995
+00:48:33,686 --> 00:48:35,456
+we have our e-mail&#39;s hosted by Amazon Web Services,
+
+996
+00:48:35,456 --> 00:48:38,306
+so that would be our host criteria.
+
+997
+00:48:38,306 --> 00:48:39,756
+Of course, you don&#39;t have our password,
+
+998
+00:48:39,756 --> 00:48:42,189
+so you can&#39;t use the same thing.
+
+999
+00:48:42,613 --> 00:48:45,613
+Okay, so we have maybe just 10 more minutes
+
+1000
+00:48:45,613 --> 00:48:47,183
+for any burning questions.
+
+1001
+00:48:47,183 --> 00:48:50,813
+Nora, is there any terrible issues out there,
+
+1002
+00:48:50,813 --> 00:48:53,326
+or what&#39;s the most terrible issue out there?
+
+1003
+00:48:55,633 --> 00:48:58,033
+- [Nora] Yes, Scott, there were a few questions.
+
+1004
+00:48:59,343 --> 00:49:03,813
+I&#39;m just going through them.
+
+1005
+00:49:05,613 --> 00:49:07,930
+Under introduce yourself from (indistinct).
+
+1006
+00:49:08,966 --> 00:49:12,583
+Does predictors work in event and tracker too?
+
+1007
+00:49:12,583 --> 00:49:15,246
+How does that different from program indicators?
+
+1008
+00:49:16,903 --> 00:49:18,153
+- [Scott] That&#39;s a really good question.
+
+1009
+00:49:18,153 --> 00:49:22,073
+Yes, you can use event and tracker data in predictors.
+
+1010
+00:49:22,073 --> 00:49:26,793
+The difference between a program indicator
+
+1011
+00:49:26,793 --> 00:49:29,753
+is that that predictor value is actually saved
+
+1012
+00:49:29,753 --> 00:49:31,933
+as a data element, right?
+
+1013
+00:49:31,933 --> 00:49:36,513
+So you&#39;re able to, then, use that predicted value
+
+1014
+00:49:36,513 --> 00:49:40,403
+in other calculations, in validation rule notifications,
+
+1015
+00:49:40,403 --> 00:49:42,723
+anywhere that you can use a data element,
+
+1016
+00:49:42,723 --> 00:49:44,063
+and that&#39;s very unique
+
+1017
+00:49:44,063 --> 00:49:47,703
+in that you cannot do that with a program indicator.
+
+1018
+00:49:47,703 --> 00:49:49,873
+There&#39;s also different types of calculations
+
+1019
+00:49:49,873 --> 00:49:51,763
+that can be done in predictors
+
+1020
+00:49:51,763 --> 00:49:56,616
+that cannot be done in program indicators.
+
+1021
+00:49:57,893 --> 00:50:00,993
+Predictors can also incorporate values
+
+1022
+00:50:00,993 --> 00:50:03,603
+across multiple programs,
+
+1023
+00:50:03,603 --> 00:50:05,183
+so that could be very useful to you,
+
+1024
+00:50:05,183 --> 00:50:07,693
+that if you have a program for ANC,
+
+1025
+00:50:07,693 --> 00:50:10,243
+a program for immunization, a program for birth,
+
+1026
+00:50:10,243 --> 00:50:13,753
+or follow-up, or something like that,
+
+1027
+00:50:13,753 --> 00:50:15,013
+and you want to have a value
+
+1028
+00:50:15,013 --> 00:50:17,433
+across all of those different programs,
+
+1029
+00:50:17,433 --> 00:50:20,693
+you can use that to make a single calculation.
+
+1030
+00:50:20,693 --> 00:50:22,183
+You can do that in a predictor.
+
+1031
+00:50:22,183 --> 00:50:24,516
+You cannot do that in a program indicator.
+
+1032
+00:50:29,073 --> 00:50:30,533
+Any other questions?
+
+1033
+00:50:30,533 --> 00:50:33,726
+- [Nora] Yes, there was something about
+
+1034
+00:50:33,726 --> 00:50:37,856
+can you use data elements across different data sets?
+
+1035
+00:50:39,863 --> 00:50:40,833
+- [Scott] Yes, yeah, of course,
+
+1036
+00:50:40,833 --> 00:50:44,073
+you can use any combination of data elements that you want
+
+1037
+00:50:44,073 --> 00:50:45,073
+to make a predictor.
+
+1038
+00:50:47,273 --> 00:50:49,486
+- [Nora] And then, for the general QA,
+
+1039
+00:50:51,163 --> 00:50:53,873
+that the number of, from Fernando,
+
+1040
+00:50:53,873 --> 00:50:56,413
+the number of standard deviation to add to the average
+
+1041
+00:50:56,413 --> 00:50:57,840
+to set the thresholds that vary
+
+1042
+00:50:57,840 --> 00:51:00,173
+depending on the value we&#39;re tracking,
+
+1043
+00:51:00,173 --> 00:51:02,473
+but a good rule of thumb is three,
+
+1044
+00:51:02,473 --> 00:51:06,643
+and I think that is what you are (indistinct) using.
+
+1045
+00:51:06,643 --> 00:51:08,863
+- [Scott] Yeah, I think he said it perfectly.
+
+1046
+00:51:08,863 --> 00:51:09,983
+I would totally agree.
+
+1047
+00:51:09,983 --> 00:51:12,253
+I think three is a good rule of thumb.
+
+1048
+00:51:12,253 --> 00:51:15,423
+We don&#39;t have the intelligence in DHIS2 yet
+
+1049
+00:51:15,423 --> 00:51:18,253
+to be a little bit more flexible there.
+
+1050
+00:51:18,253 --> 00:51:22,423
+We would like it to help the user define
+
+1051
+00:51:22,423 --> 00:51:25,686
+what would be an appropriate number of standard deviations.
+
+1052
+00:51:26,823 --> 00:51:29,443
+We are kind of starting to explore how to do that,
+
+1053
+00:51:29,443 --> 00:51:31,113
+but right now, I think you&#39;re absolutely right.
+
+1054
+00:51:31,113 --> 00:51:32,713
+Just set it to three.
+
+1055
+00:51:32,713 --> 00:51:34,493
+Three is probably not going to steer you wrong
+
+1056
+00:51:34,493 --> 00:51:35,556
+in most cases.
+
+1057
+00:51:37,063 --> 00:51:39,223
+- [Nora] Then there&#39;s a question just above that
+
+1058
+00:51:39,223 --> 00:51:41,153
+from Paul from Cameroon.
+
+1059
+00:51:41,153 --> 00:51:44,423
+Can you explain the significance of each term:
+
+1060
+00:51:44,423 --> 00:51:49,086
+0, 1 0 0, 1, 0?
+
+1061
+00:51:49,923 --> 00:51:51,883
+I think that&#39;s a cron expression?
+
+1062
+00:51:53,393 --> 00:51:55,023
+- [Scott] That could be a cron expression.
+
+1063
+00:51:55,023 --> 00:51:59,396
+It could also be that he was referring to the if statement,
+
+1064
+00:52:01,493 --> 00:52:04,153
+so I could go a little bit more into detail
+
+1065
+00:52:04,153 --> 00:52:05,263
+on the cron expression,
+
+1066
+00:52:05,263 --> 00:52:09,563
+so let me just get back.
+
+1067
+00:52:09,563 --> 00:52:11,113
+Let me go to the Scheduler app.
+
+1068
+00:52:16,863 --> 00:52:18,773
+Okay, so it looks like some folks have already done this.
+
+1069
+00:52:18,773 --> 00:52:22,373
+That&#39;s great, so the cron expression...
+
+1070
+00:52:25,943 --> 00:52:29,803
+If I just make a new job, I&#39;ve gotta define my job type.
+
+1071
+00:52:29,803 --> 00:52:32,453
+Again, the monitoring job is for validation rules.
+
+1072
+00:52:32,453 --> 00:52:34,573
+The predictor is for predictors,
+
+1073
+00:52:34,573 --> 00:52:37,443
+so I&#39;m just gonna make a validation rules.
+
+1074
+00:52:37,443 --> 00:52:39,086
+My cron expression,
+
+1075
+00:52:40,123 --> 00:52:42,733
+I have the ones that I can already choose,
+
+1076
+00:52:42,733 --> 00:52:44,876
+so like every day at midnight,
+
+1077
+00:52:52,510 --> 00:52:54,490
+and, say, every week,
+
+1078
+00:52:54,490 --> 00:52:56,593
+and this would be every week
+
+1079
+00:52:58,813 --> 00:53:01,593
+at 3, I think it&#39;s 3:00 a.m.,
+
+1080
+00:53:01,593 --> 00:53:05,846
+so I&#39;m just gonna say test, Add Job.
+
+1081
+00:53:06,883 --> 00:53:10,773
+Yeah, okay, so that would be the first day at every day,
+
+1082
+00:53:10,773 --> 00:53:12,323
+first day of the week at 3:00 a.m.,
+
+1083
+00:53:12,323 --> 00:53:13,843
+so let me kind of explain this to you
+
+1084
+00:53:13,843 --> 00:53:15,043
+a little bit more clearly,
+
+1085
+00:53:15,043 --> 00:53:17,153
+so each one of these values,
+
+1086
+00:53:17,153 --> 00:53:18,023
+so we have
+
+1087
+00:53:18,023 --> 00:53:21,256
+0 0 3 ? *
+
+1088
+00:53:22,443 --> 00:53:23,873
+and then MON.
+
+1089
+00:53:23,873 --> 00:53:25,283
+Well, hopefully, you understand the MON.
+
+1090
+00:53:25,283 --> 00:53:26,116
+That&#39;s Monday,
+
+1091
+00:53:27,493 --> 00:53:31,563
+so each one of these actually represents a unit of time,
+
+1092
+00:53:31,563 --> 00:53:34,863
+so we have second, minute,
+
+1093
+00:53:34,863 --> 00:53:37,283
+so zero, zero seconds,
+
+1094
+00:53:37,283 --> 00:53:41,023
+at zero minutes on the third hour,
+
+1095
+00:53:41,023 --> 00:53:45,283
+and then we have day and month,
+
+1096
+00:53:45,283 --> 00:53:50,283
+so it&#39;s the day is defined as Monday, and the month is,
+
+1097
+00:53:50,503 --> 00:53:53,543
+or sorry, we have a day and week,
+
+1098
+00:53:53,543 --> 00:53:55,343
+and then the day of the week, month,
+
+1099
+00:53:56,753 --> 00:53:59,543
+so we have this running every Monday.
+
+1100
+00:53:59,543 --> 00:54:02,793
+Now, I know that is kind of confusing to folks.
+
+1101
+00:54:02,793 --> 00:54:04,653
+Please just Google it, so
+
+1102
+00:54:08,913 --> 00:54:11,623
+if I just Google cron expressions,
+
+1103
+00:54:11,623 --> 00:54:15,093
+there are free formatters online
+
+1104
+00:54:15,093 --> 00:54:17,763
+for building cron expressions,
+
+1105
+00:54:17,763 --> 00:54:19,246
+so, for example,
+
+1106
+00:54:22,643 --> 00:54:25,623
+if I want to say I want something to run
+
+1107
+00:54:29,033 --> 00:54:33,523
+every month, then...
+
+1108
+00:54:35,533 --> 00:54:36,763
+I&#39;m sorry.
+
+1109
+00:54:36,763 --> 00:54:40,433
+I want something to run every day
+
+1110
+00:54:40,433 --> 00:54:42,593
+starting on Sunday.
+
+1111
+00:54:42,593 --> 00:54:46,143
+Then automatically generates a cron expression for me.
+
+1112
+00:54:46,143 --> 00:54:49,043
+If I could say I want every day
+
+1113
+00:54:49,043 --> 00:54:51,383
+on the first day of the month,
+
+1114
+00:54:51,383 --> 00:54:52,443
+then you see it generates a cron expression,
+
+1115
+00:54:52,443 --> 00:54:54,056
+so if I copy this,
+
+1116
+00:54:56,723 --> 00:54:57,926
+go back to DHIS2.
+
+1117
+00:55:02,270 --> 00:55:03,103
+- [Man] All right, Scott,
+
+1118
+00:55:03,103 --> 00:55:05,433
+there was an update about that question from the user.
+
+1119
+00:55:05,433 --> 00:55:09,561
+Apparently, it&#39;s about predictor configuration.
+
+1120
+00:55:09,561 --> 00:55:13,373
+(Nora speaks indistinctly)
+
+1121
+00:55:13,373 --> 00:55:16,276
+- [Scott] Okay, well, let me just finish this then,
+
+1122
+00:55:17,203 --> 00:55:19,233
+so I&#39;ve just copy-and-pasted the cron expression
+
+1123
+00:55:19,233 --> 00:55:22,586
+for every day, the first day of every month here,
+
+1124
+00:55:23,613 --> 00:55:25,073
+so you see that.
+
+1125
+00:55:25,073 --> 00:55:27,146
+If I click Save Changes,
+
+1126
+00:55:27,983 --> 00:55:30,703
+then you see you can say when&#39;s my next execution?
+
+1127
+00:55:30,703 --> 00:55:31,943
+You can see my next execution
+
+1128
+00:55:31,943 --> 00:55:35,695
+is November 1st at midnight, okay?
+
+1129
+00:55:35,695 --> 00:55:36,543
+So you see that there,
+
+1130
+00:55:36,543 --> 00:55:38,643
+so that&#39;s how you can do cron expressions.
+
+1131
+00:55:40,633 --> 00:55:42,153
+The actual question was
+
+1132
+00:55:42,153 --> 00:55:46,083
+on setting the org unit level for the predictors.
+
+1133
+00:55:46,083 --> 00:55:46,916
+Is that correct?
+
+1134
+00:55:48,363 --> 00:55:51,183
+- [Nora] It was to do, to count facilities
+
+1135
+00:55:53,622 --> 00:55:55,166
+with dropout drugs.
+
+1136
+00:55:56,483 --> 00:55:58,203
+- [Scott] Yeah, so this is not...
+
+1137
+00:55:58,203 --> 00:56:00,533
+Actually, in two weeks, we have an entire academy
+
+1138
+00:56:00,533 --> 00:56:01,783
+on supply chain
+
+1139
+00:56:01,783 --> 00:56:04,133
+and building predictors for the supply chain,
+
+1140
+00:56:04,133 --> 00:56:06,643
+so I recommend that you attend that academy
+
+1141
+00:56:06,643 --> 00:56:09,183
+if you really wanna specifically know how to do that,
+
+1142
+00:56:09,183 --> 00:56:11,933
+but very quickly here, let me just show you,
+
+1143
+00:56:11,933 --> 00:56:14,063
+if I wanna count the number of facilities
+
+1144
+00:56:14,063 --> 00:56:18,113
+that have any specific value that&#39;s recorded,
+
+1145
+00:56:18,113 --> 00:56:23,093
+I go into my generator, and I type if, open brackets,
+
+1146
+00:56:23,093 --> 00:56:25,163
+and I&#39;m just gonna say
+
+1147
+00:56:25,163 --> 00:56:27,833
+acute flaccid paralysis death under five,
+
+1148
+00:56:27,833 --> 00:56:29,313
+just for the exam,
+
+1149
+00:56:29,313 --> 00:56:32,843
+and I&#39;m gonna say if acute flaccid paralysis deaths
+
+1150
+00:56:32,843 --> 00:56:37,563
+are greater than, let&#39;s say five,
+
+1151
+00:56:37,563 --> 00:56:39,113
+then record one,
+
+1152
+00:56:39,113 --> 00:56:41,733
+if else, record a zero.
+
+1153
+00:56:41,733 --> 00:56:43,653
+Now, what does this predictor do?
+
+1154
+00:56:43,653 --> 00:56:45,923
+You can see that it is considered valid.
+
+1155
+00:56:45,923 --> 00:56:49,153
+This will say if that health facility that month
+
+1156
+00:56:49,153 --> 00:56:53,523
+recorded more than five acute flaccid paralysis deaths,
+
+1157
+00:56:53,523 --> 00:56:56,173
+then it will count one,
+
+1158
+00:56:56,173 --> 00:56:58,823
+so the way you translate these if statements is like
+
+1159
+00:56:58,823 --> 00:57:01,873
+if this, then this;
+
+1160
+00:57:01,873 --> 00:57:04,053
+if else, then this,
+
+1161
+00:57:04,053 --> 00:57:09,033
+so if this is greater than five, count one;
+
+1162
+00:57:09,033 --> 00:57:13,273
+if else, count zero, all right?
+
+1163
+00:57:13,273 --> 00:57:17,033
+So this is basic, basic, basic,
+
+1164
+00:57:17,033 --> 00:57:20,993
+basic computer programming, basic if statements,
+
+1165
+00:57:20,993 --> 00:57:22,663
+but here, that&#39;s what is going on,
+
+1166
+00:57:22,663 --> 00:57:26,733
+so if this is greater than five,
+
+1167
+00:57:26,733 --> 00:57:27,913
+then count one;
+
+1168
+00:57:27,913 --> 00:57:29,123
+if else, count zero,
+
+1169
+00:57:29,123 --> 00:57:30,243
+and so what will this do?
+
+1170
+00:57:30,243 --> 00:57:33,630
+This will say, &quot;Oh, this facility had more than five.
+
+1171
+00:57:33,630 --> 00:57:34,983
+&quot;Record a one value,&quot;
+
+1172
+00:57:34,983 --> 00:57:38,023
+and that one value, again, is saved as a data element,
+
+1173
+00:57:38,023 --> 00:57:40,973
+and that data element can be aggregated up,
+
+1174
+00:57:40,973 --> 00:57:44,553
+so you can say how many, across the entire country,
+
+1175
+00:57:44,553 --> 00:57:47,773
+how many health facilities did I have more than five
+
+1176
+00:57:47,773 --> 00:57:50,983
+acute flaccid paralysis deaths this month?
+
+1177
+00:57:50,983 --> 00:57:51,983
+And you&#39;ll have a number there
+
+1178
+00:57:51,983 --> 00:57:53,963
+because for every single one that does,
+
+1179
+00:57:53,963 --> 00:57:57,213
+it&#39;s counting a one, okay?
+
+1180
+00:57:57,213 --> 00:58:00,113
+Now, this is a very basic example.
+
+1181
+00:58:00,113 --> 00:58:02,973
+You can make these much, much more complex,
+
+1182
+00:58:02,973 --> 00:58:03,933
+and you&#39;ll actually,
+
+1183
+00:58:03,933 --> 00:58:06,583
+if you do come to the Supply Chain Academy in two weeks,
+
+1184
+00:58:06,583 --> 00:58:07,883
+you&#39;ll see that we&#39;ve made some
+
+1185
+00:58:07,883 --> 00:58:09,923
+that are much more complex than this,
+
+1186
+00:58:09,923 --> 00:58:11,283
+but this is a very basic one
+
+1187
+00:58:11,283 --> 00:58:13,323
+to be able to count the number of facilities
+
+1188
+00:58:13,323 --> 00:58:15,386
+that record any particular value.
+

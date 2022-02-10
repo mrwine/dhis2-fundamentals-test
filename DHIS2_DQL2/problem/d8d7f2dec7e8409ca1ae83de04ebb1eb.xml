@@ -1,0 +1,18 @@
+<problem display_name="Graded question - Mapping Reference Numerators  - Question 2" markdown="By ticking the &quot;core&quot; check box when assigning a data element to a numerator you are doing what?&#10;&#10;&gt;&gt;Select the correct answer (1 attempt) &lt;&lt;&#10;&#10;(x) A. Placing that data element into the &quot;core&quot; data group that can be selected for analysis.&#10;( ) B. Marking the data element for follow-up by a system administrator&#10;&#10;[explanation]&#10;Placing that data element into the &quot;core&quot; data group that can be selected for analysis is correct.&#10;[explanation]&#10;&#10;" max_attempts="1">
+<multiplechoiceresponse>
+  <p>By ticking the "core" check box when assigning a data element to a numerator you are doing what?</p>
+<label>Select the correct answer (1 attempt) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. Placing that data element into the "core" data group that can be selected for analysis.</choice>
+    <choice correct="false">B. Marking the data element for follow-up by a system administrator</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Placing that data element into the "core" data group that can be selected for analysis is correct.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

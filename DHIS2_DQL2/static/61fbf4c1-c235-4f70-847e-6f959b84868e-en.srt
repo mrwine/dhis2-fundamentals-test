@@ -1,0 +1,788 @@
+0
+00:00:00,035 --> 00:00:02,618
+(upbeat music)
+
+1
+00:00:05,130 --> 00:00:06,553
+- [Instructor] I&#39;m going to present
+
+2
+00:00:06,553 --> 00:00:11,150
+how you can quickly train staff at district
+
+3
+00:00:11,150 --> 00:00:16,150
+and even facility level to make use every month
+
+4
+00:00:16,940 --> 00:00:20,223
+of the WHO Data Quality Tool.
+
+5
+00:00:21,810 --> 00:00:25,950
+First, I want to share with you a single slide
+
+6
+00:00:25,950 --> 00:00:29,820
+that explains why data quality assurance
+
+7
+00:00:29,820 --> 00:00:34,043
+should be decentralized and it should be routine.
+
+8
+00:00:35,210 --> 00:00:37,890
+Let me define some of these terms.
+
+9
+00:00:37,890 --> 00:00:42,890
+By data quality assurance, I mean a continuous process
+
+10
+00:00:43,430 --> 00:00:46,730
+of checking the quality of the data
+
+11
+00:00:46,730 --> 00:00:50,760
+and investigating where there are suspicious values
+
+12
+00:00:50,760 --> 00:00:55,760
+and if necessary editing the data to remove any errors.
+
+13
+00:00:56,460 --> 00:01:01,460
+By decentralized, we mean that data quality assurance
+
+14
+00:01:01,530 --> 00:01:04,660
+is best done at the level of the district
+
+15
+00:01:04,660 --> 00:01:07,040
+and the health facility.
+
+16
+00:01:07,040 --> 00:01:10,060
+And this process should be routine,
+
+17
+00:01:10,060 --> 00:01:13,050
+that is should be done every month
+
+18
+00:01:13,050 --> 00:01:15,723
+as data are entered into the system.
+
+19
+00:01:16,830 --> 00:01:21,533
+This is a bottom up approach to data quality assurance.
+
+20
+00:01:22,970 --> 00:01:27,970
+It is more efficient for data quality problems to be fixed
+
+21
+00:01:28,190 --> 00:01:33,190
+closer to where the data are first recorded and reported,
+
+22
+00:01:33,920 --> 00:01:38,180
+rather than wait for staff at higher levels,
+
+23
+00:01:38,180 --> 00:01:41,850
+regional or national to review and attempt
+
+24
+00:01:41,850 --> 00:01:45,670
+to fix these data quality problems.
+
+25
+00:01:45,670 --> 00:01:48,050
+This is for several reasons.
+
+26
+00:01:48,050 --> 00:01:50,540
+First of all, at the district level,
+
+27
+00:01:50,540 --> 00:01:53,890
+the volume of data to review is smaller,
+
+28
+00:01:53,890 --> 00:01:58,180
+especially if the data are reviewed every month
+
+29
+00:01:58,180 --> 00:02:01,710
+rather than waiting months later to identify
+
+30
+00:02:01,710 --> 00:02:04,473
+and investigate suspicious values.
+
+31
+00:02:05,730 --> 00:02:10,090
+Secondly, investigation of suspicious values
+
+32
+00:02:10,090 --> 00:02:14,870
+is more practical for staff at a decentralized level.
+
+33
+00:02:14,870 --> 00:02:19,610
+The district staff have access to the paper records.
+
+34
+00:02:19,610 --> 00:02:23,770
+They have established relationships with the facility staff,
+
+35
+00:02:23,770 --> 00:02:26,960
+and it can more easily communicate with them
+
+36
+00:02:26,960 --> 00:02:30,360
+to undertake investigations.
+
+37
+00:02:30,360 --> 00:02:35,360
+And finally, DHIS2 data belong to the district
+
+38
+00:02:36,660 --> 00:02:41,290
+and district staff have the permission to edit them
+
+39
+00:02:41,290 --> 00:02:43,803
+and remove any errors.
+
+40
+00:02:44,800 --> 00:02:49,490
+So let&#39;s get started with a demonstration of how district
+
+41
+00:02:49,490 --> 00:02:54,000
+and perhaps facility staff, can be trained quickly
+
+42
+00:02:54,000 --> 00:02:58,560
+to use the DHIS2 data quality review tools.
+
+43
+00:03:02,380 --> 00:03:06,310
+First of all, the user needs to understand
+
+44
+00:03:06,310 --> 00:03:11,063
+how to launch the WHO Data Quality Tool.
+
+45
+00:03:13,830 --> 00:03:18,830
+Users at district level do not need to understand how to use
+
+46
+00:03:18,930 --> 00:03:23,220
+all the functions of the WHO Data Quality Tool.
+
+47
+00:03:23,220 --> 00:03:27,260
+In fact, they don&#39;t necessarily need to be instructed
+
+48
+00:03:27,260 --> 00:03:32,260
+in how to use all of the four tabs of the Dashboard.
+
+49
+00:03:32,700 --> 00:03:37,700
+They can simply understand the power of the outliers page
+
+50
+00:03:39,130 --> 00:03:40,363
+of the Dashboard.
+
+51
+00:03:41,840 --> 00:03:45,360
+They will first need a bit of orientation
+
+52
+00:03:45,360 --> 00:03:50,310
+to the settings window of the Dashboard.
+
+53
+00:03:50,310 --> 00:03:51,440
+They should understand
+
+54
+00:03:51,440 --> 00:03:54,540
+that they can make the settings window appear
+
+55
+00:03:54,540 --> 00:03:59,033
+and disappear by clicking on the settings icon.
+
+56
+00:04:01,330 --> 00:04:06,330
+For review of the quality of data at district level,
+
+57
+00:04:06,490 --> 00:04:11,490
+it&#39;s best to configure a special group of indicators
+
+58
+00:04:11,530 --> 00:04:15,680
+that are most important for review at district level.
+
+59
+00:04:15,680 --> 00:04:20,150
+So the data quality reviewer should set data
+
+60
+00:04:20,149 --> 00:04:25,150
+to district group and they should set period to last month
+
+61
+00:04:26,210 --> 00:04:29,510
+if the review is being done at the end of the month
+
+62
+00:04:29,510 --> 00:04:33,690
+when you have data entered for last month.
+
+63
+00:04:33,690 --> 00:04:36,610
+If review is done at the beginning of the month,
+
+64
+00:04:36,610 --> 00:04:39,630
+and it&#39;s probably best to set the period
+
+65
+00:04:39,630 --> 00:04:42,023
+to the month before last.
+
+66
+00:04:44,020 --> 00:04:48,390
+Now, how should the organization unit
+
+67
+00:04:48,390 --> 00:04:52,820
+of the settings window be configured?
+
+68
+00:04:52,820 --> 00:04:57,250
+If the user is at the level of the district,
+
+69
+00:04:57,250 --> 00:05:02,240
+then the organization unit is going to automatically be set
+
+70
+00:05:03,440 --> 00:05:08,440
+to show the data just for their district.
+
+71
+00:05:08,450 --> 00:05:13,450
+However, if you are practicing the instructions
+
+72
+00:05:14,190 --> 00:05:17,140
+of district staff at national level,
+
+73
+00:05:17,140 --> 00:05:20,210
+you&#39;ll have to configure the boundary
+
+74
+00:05:20,210 --> 00:05:24,330
+of the organization unit to the specific district
+
+75
+00:05:24,330 --> 00:05:27,510
+that you are supporting for data quality review.
+
+76
+00:05:27,510 --> 00:05:30,803
+In this case, we&#39;ve selected district A-1.
+
+77
+00:05:31,710 --> 00:05:34,530
+Again at district level,
+
+78
+00:05:34,530 --> 00:05:36,800
+they won&#39;t have to go through this process
+
+79
+00:05:36,800 --> 00:05:41,720
+because DHIS2 will automatically set the window
+
+80
+00:05:41,720 --> 00:05:44,703
+to show data only for their district.
+
+81
+00:05:45,580 --> 00:05:50,580
+The dis-aggregation should ideally be set to facility level.
+
+82
+00:05:52,290 --> 00:05:56,360
+In the case of this DHIS2 instance,
+
+83
+00:05:56,360 --> 00:05:59,580
+facility is the only level below district.
+
+84
+00:05:59,580 --> 00:06:04,580
+So the desegregation is automatically set to facility
+
+85
+00:06:04,870 --> 00:06:07,320
+as soon as we set the district,
+
+86
+00:06:07,320 --> 00:06:11,040
+as soon as we set the boundary to a single district.
+
+87
+00:06:11,040 --> 00:06:15,740
+But you may have two levels below the level of the district,
+
+88
+00:06:15,740 --> 00:06:19,690
+in which case the menu will show those two levels
+
+89
+00:06:19,690 --> 00:06:22,940
+and you should select facility.
+
+90
+00:06:22,940 --> 00:06:25,470
+By dis-aggregating to facility,
+
+91
+00:06:25,470 --> 00:06:28,500
+we&#39;ll see how it simplifies the process
+
+92
+00:06:28,500 --> 00:06:31,890
+for the person doing the data quality review
+
+93
+00:06:31,890 --> 00:06:33,763
+at district level.
+
+94
+00:06:36,120 --> 00:06:38,220
+To free up space on the screen,
+
+95
+00:06:38,220 --> 00:06:41,263
+it&#39;s best to hide the settings window.
+
+96
+00:06:44,270 --> 00:06:48,390
+Users at district level will need a bit of explanation
+
+97
+00:06:48,390 --> 00:06:53,163
+to understand the table, the results table that appears.
+
+98
+00:06:54,240 --> 00:06:57,070
+They&#39;ll need to understand that all of the data
+
+99
+00:06:57,070 --> 00:07:02,070
+are for their district and that each row represents data
+
+100
+00:07:02,310 --> 00:07:05,150
+for one health facility in their district
+
+101
+00:07:05,150 --> 00:07:08,683
+and one of the indicators in the district group.
+
+102
+00:07:09,790 --> 00:07:13,260
+The data and the row are for the 12 months
+
+103
+00:07:13,260 --> 00:07:17,343
+leading up to the period that has been selected.
+
+104
+00:07:18,370 --> 00:07:22,210
+Users need to understand that values that are highlighted
+
+105
+00:07:22,210 --> 00:07:27,210
+in red are suspicious and cells that are pale yellow,
+
+106
+00:07:27,270 --> 00:07:29,103
+have missing values.
+
+107
+00:07:31,570 --> 00:07:34,810
+The results table is lengthy,
+
+108
+00:07:34,810 --> 00:07:38,300
+so users need to understand how to filter it
+
+109
+00:07:38,300 --> 00:07:43,300
+in order to identify only the most suspicious values.
+
+110
+00:07:43,670 --> 00:07:48,670
+And the filtering process involves as we have learned
+
+111
+00:07:49,200 --> 00:07:51,223
+to click on options,
+
+112
+00:07:52,160 --> 00:07:57,160
+and then they can include the Z-score in the table.
+
+113
+00:07:57,370 --> 00:08:00,360
+Users need to understand that the Z-score
+
+114
+00:08:00,360 --> 00:08:05,050
+is simply a measure of how suspicious the value in red
+
+115
+00:08:05,050 --> 00:08:09,030
+is with a higher Z-score.
+
+116
+00:08:09,030 --> 00:08:11,550
+In this case, the modified Z-score
+
+117
+00:08:12,760 --> 00:08:15,940
+showing that the value is more suspicious.
+
+118
+00:08:15,940 --> 00:08:20,733
+We can now filter the table to show only values
+
+119
+00:08:22,120 --> 00:08:25,570
+that have a modified Z-score that is quite high
+
+120
+00:08:25,570 --> 00:08:30,570
+by clicking on outliers and modified Z-score and extreme.
+
+121
+00:08:32,260 --> 00:08:37,260
+We now have a relatively small table of the most important,
+
+122
+00:08:37,690 --> 00:08:42,210
+suspicious values for the reviewer
+
+123
+00:08:42,210 --> 00:08:45,053
+at district level to investigate.
+
+124
+00:08:46,230 --> 00:08:51,200
+They should follow up on at least the first page
+
+125
+00:08:51,200 --> 00:08:54,770
+of the filtered results table.
+
+126
+00:08:54,770 --> 00:08:59,430
+For some of these values, let&#39;s take for example,
+
+127
+00:08:59,430 --> 00:09:04,430
+the value that is highlighted in red in the first row.
+
+128
+00:09:08,210 --> 00:09:12,920
+And the user can be taught how to use the menu icon
+
+129
+00:09:12,920 --> 00:09:16,810
+and click on visualize in order to see this chart.
+
+130
+00:09:16,810 --> 00:09:21,280
+For this value, they may have an explanation.
+
+131
+00:09:21,280 --> 00:09:25,200
+They may understand that this facility
+
+132
+00:09:25,200 --> 00:09:29,070
+indeed had an increase in out-patient attendance.
+
+133
+00:09:29,070 --> 00:09:34,070
+So not all values that are highlighted in red
+
+134
+00:09:34,140 --> 00:09:37,510
+will require extensive investigation.
+
+135
+00:09:37,510 --> 00:09:41,430
+But the point is, that the data quality reviewer,
+
+136
+00:09:41,430 --> 00:09:44,970
+needs to understand why it is that that value
+
+137
+00:09:44,970 --> 00:09:48,633
+is so different from the other values in the row.
+
+138
+00:09:52,620 --> 00:09:56,610
+Again, they can be taught how to click on the menu icon
+
+139
+00:09:56,610 --> 00:09:59,053
+at the end of a row and visual utilize.
+
+140
+00:10:00,260 --> 00:10:05,260
+And they will almost certainly see that some of the values
+
+141
+00:10:05,500 --> 00:10:08,530
+that are highlighted in red are so suspicious
+
+142
+00:10:08,530 --> 00:10:11,596
+that they are likely erroneous, that they are errors,
+
+143
+00:10:11,596 --> 00:10:16,596
+and deserve to be followed up with a phone call
+
+144
+00:10:16,680 --> 00:10:19,160
+or some other communication to people
+
+145
+00:10:19,160 --> 00:10:20,593
+at facility level.
+
+146
+00:10:24,490 --> 00:10:29,023
+In addition to investigating the suspicious values,
+
+147
+00:10:29,890 --> 00:10:31,780
+the reviewer at district level
+
+148
+00:10:31,780 --> 00:10:36,780
+needs to look into the most important missing values
+
+149
+00:10:37,050 --> 00:10:42,050
+and to use the outlier tab to identify those missing values,
+
+150
+00:10:43,430 --> 00:10:46,273
+they should be taught to turn off the filter,
+
+151
+00:10:47,260 --> 00:10:49,120
+click on missing data,
+
+152
+00:10:49,120 --> 00:10:52,810
+and now the results table shows at the top.
+
+153
+00:10:52,810 --> 00:10:56,400
+Those indicators and those health facilities,
+
+154
+00:10:56,400 --> 00:11:00,550
+which have the largest volume of missing data.
+
+155
+00:11:00,550 --> 00:11:05,040
+And it may be worthwhile for them to make attempts
+
+156
+00:11:05,040 --> 00:11:10,040
+to mobilize these additional data context in this case,
+
+157
+00:11:10,140 --> 00:11:11,730
+the district hospital,
+
+158
+00:11:11,730 --> 00:11:16,330
+and see if they can get these missing reports.
+
+159
+00:11:16,330 --> 00:11:21,330
+After all, the values from the district hospital are so high
+
+160
+00:11:21,770 --> 00:11:24,230
+that if the reports are missing,
+
+161
+00:11:24,230 --> 00:11:27,760
+it will affect the total performance measurement
+
+162
+00:11:27,760 --> 00:11:29,913
+as measured at the district level.
+
+163
+00:11:30,960 --> 00:11:35,620
+Finally, the user at district level should understand
+
+164
+00:11:35,620 --> 00:11:38,920
+how to use the download button,
+
+165
+00:11:38,920 --> 00:11:42,610
+so that they can download to their computer
+
+166
+00:11:42,610 --> 00:11:47,610
+and visualize a spreadsheet that they can use
+
+167
+00:11:49,860 --> 00:11:53,502
+even when they are not connected to the internet.
+
+168
+00:11:53,502 --> 00:11:56,002
+(phone rings)
+
+169
+00:11:58,790 --> 00:12:00,220
+And they could print this out
+
+170
+00:12:00,220 --> 00:12:02,373
+and make use of it in supervision.
+
+171
+00:12:04,700 --> 00:12:09,490
+The user at district level may already understand how to use
+
+172
+00:12:09,490 --> 00:12:12,370
+the sorting functions of Excel,
+
+173
+00:12:12,370 --> 00:12:14,800
+but you might need to refresh them
+
+174
+00:12:14,800 --> 00:12:19,800
+that if they click on data and then sort this table,
+
+175
+00:12:20,810 --> 00:12:25,810
+can be sorted according to the values of one row.
+
+176
+00:12:25,880 --> 00:12:30,460
+In this case, let&#39;s select the maximum modified Z-score
+
+177
+00:12:30,460 --> 00:12:32,680
+and largest to smallest,
+
+178
+00:12:32,680 --> 00:12:36,380
+and now we see at the top the values
+
+179
+00:12:36,380 --> 00:12:38,263
+that are most suspicious.
+
+180
+00:12:48,460 --> 00:12:52,780
+Or they might filter this
+
+181
+00:12:52,780 --> 00:12:55,520
+to find the most important missing values
+
+182
+00:12:55,520 --> 00:12:58,520
+sorting in this case, by the modified,
+
+183
+00:12:58,520 --> 00:13:02,500
+by the gap weight, largest to smallest.
+
+184
+00:13:02,500 --> 00:13:07,500
+And here again, we see the facilities that are responsible
+
+185
+00:13:08,420 --> 00:13:11,983
+for the most important missing data.
+
+186
+00:13:23,160 --> 00:13:28,160
+In summary, to instruct staff at district or facility level
+
+187
+00:13:29,760 --> 00:13:33,570
+to use the tool in a short amount of time,
+
+188
+00:13:33,570 --> 00:13:36,890
+perhaps even during the supervision visit,
+
+189
+00:13:36,890 --> 00:13:41,450
+the instruction should focus on how they can quickly learn
+
+190
+00:13:41,450 --> 00:13:46,450
+how to make use of the outlier page of the Dashboard,
+
+191
+00:13:47,290 --> 00:13:51,770
+and how they can by screening the data
+
+192
+00:13:51,770 --> 00:13:56,040
+routinely every month, identify and investigate
+
+193
+00:13:56,040 --> 00:13:59,660
+the most important missing and suspicious values.
+
+194
+00:13:59,660 --> 00:14:01,030
+And in this way,
+
+195
+00:14:01,030 --> 00:14:06,030
+maintain the quality of the data bottom up approach.
+
+196
+00:14:06,292 --> 00:14:08,875
+(upbeat music)
+

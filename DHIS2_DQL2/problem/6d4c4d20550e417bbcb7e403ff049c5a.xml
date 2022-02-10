@@ -1,0 +1,17 @@
+<problem display_name="Graded question - Naming Conventions - Question 2" markdown="&gt;&gt;True or False: Adding 'Percentage' or '%' at the beginning of an indicator name is best practice. (1 attempt)&lt;&lt;&#10;&#10;( ) True&#10;(x) False&#10;&#10;[explanation]&#10;This will make sorting in analytics tools challenging. You can add it to the end of the name, for example, Indicator name (%).&#10;[explanation]" max_attempts="1">
+<multiplechoiceresponse>
+  <label>True or False: Adding 'Percentage' or '%' at the beginning of an indicator name is best practice. (1 attempt)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">True</choice>
+    <choice correct="true">False</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>This will make sorting in analytics tools challenging. You can add it to the end of the name, for example, Indicator name (%).</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,668 @@
+0
+00:00:01,010 --> 00:00:02,780
+- [Instructor] So we&#39;ve talked a bit about form design
+
+1
+00:00:02,780 --> 00:00:05,110
+and I kind of went through that rather quickly.
+
+2
+00:00:05,110 --> 00:00:07,360
+It&#39;s just kind of a background piece of information
+
+3
+00:00:07,360 --> 00:00:09,090
+that I&#39;d like you to consider
+
+4
+00:00:09,090 --> 00:00:10,570
+when you&#39;re looking at your data.
+
+5
+00:00:10,570 --> 00:00:12,650
+You can see actually it&#39;s not just form design,
+
+6
+00:00:12,650 --> 00:00:14,230
+but when you review your outputs,
+
+7
+00:00:14,230 --> 00:00:16,310
+you might also see a lot of this happening
+
+8
+00:00:16,309 --> 00:00:18,750
+either between programs or within programs
+
+9
+00:00:18,750 --> 00:00:20,140
+where they&#39;re collecting duplicate data
+
+10
+00:00:20,140 --> 00:00:22,410
+or where there&#39;s incorrect desegregations.
+
+11
+00:00:22,410 --> 00:00:24,470
+And that is something to identify
+
+12
+00:00:24,470 --> 00:00:27,820
+and work with programs to try and update as you go forward,
+
+13
+00:00:27,820 --> 00:00:30,290
+because collecting all this duplicate information
+
+14
+00:00:30,290 --> 00:00:32,543
+can result in really poor data quality.
+
+15
+00:00:33,910 --> 00:00:35,400
+But moving on,
+
+16
+00:00:35,400 --> 00:00:37,480
+how do we rationalize some of the design decisions
+
+17
+00:00:37,480 --> 00:00:40,000
+that have been made that cause some of these problems?
+
+18
+00:00:40,000 --> 00:00:40,833
+And actually,
+
+19
+00:00:40,833 --> 00:00:43,650
+this falls back more on implementation teams,
+
+20
+00:00:43,650 --> 00:00:47,980
+more so than source, pieces of information or data, right?
+
+21
+00:00:47,980 --> 00:00:50,040
+So, this is something we can have much more
+
+22
+00:00:50,040 --> 00:00:51,620
+of an immediate effect on
+
+23
+00:00:51,620 --> 00:00:53,890
+if we think about it from that perspective.
+
+24
+00:00:53,890 --> 00:00:56,470
+So, let&#39;s just walk through what we&#39;re going
+
+25
+00:00:56,470 --> 00:00:59,203
+to talk about in the course of this discussion.
+
+26
+00:01:00,180 --> 00:01:03,120
+So first we&#39;re going to talk about procedural challenges
+
+27
+00:01:03,120 --> 00:01:06,410
+associated with DHIS2 system design.
+
+28
+00:01:06,410 --> 00:01:08,970
+Then, we&#39;re going to discuss the correct value types
+
+29
+00:01:08,970 --> 00:01:12,493
+to be used when we create data elements in DHIS2.
+
+30
+00:01:13,640 --> 00:01:15,180
+We&#39;re also going to talk about approaches
+
+31
+00:01:15,180 --> 00:01:16,960
+to handle historical data
+
+32
+00:01:16,960 --> 00:01:20,250
+and deal with historical data completeness.
+
+33
+00:01:20,250 --> 00:01:21,540
+We&#39;re also going to talk about approaches
+
+34
+00:01:21,540 --> 00:01:23,950
+to handle duplicate category options
+
+35
+00:01:23,950 --> 00:01:26,040
+and category option combinations,
+
+36
+00:01:26,040 --> 00:01:29,300
+which is a relatively large problem
+
+37
+00:01:29,300 --> 00:01:31,060
+that happens in many implementations.
+
+38
+00:01:31,060 --> 00:01:32,710
+It&#39;s also very common.
+
+39
+00:01:32,710 --> 00:01:34,960
+So, we&#39;ll talk about that a little bit,
+
+40
+00:01:34,960 --> 00:01:37,170
+and then we&#39;ll talk about best practices
+
+41
+00:01:37,170 --> 00:01:39,293
+when managing data dimensions,
+
+42
+00:01:40,440 --> 00:01:44,020
+the process of identifying duplicate data elements,
+
+43
+00:01:44,020 --> 00:01:47,030
+and considerations when creating data sets.
+
+44
+00:01:47,030 --> 00:01:48,890
+So you can see the items I&#39;ve described.
+
+45
+00:01:48,890 --> 00:01:51,740
+We all have quite a bit of a role to play
+
+46
+00:01:51,740 --> 00:01:54,270
+when we&#39;re helping anyone set up their system.
+
+47
+00:01:54,270 --> 00:01:56,200
+These are all things that are ultimately
+
+48
+00:01:56,200 --> 00:01:59,160
+something we can have a larger impact on immediately
+
+49
+00:01:59,160 --> 00:02:02,530
+versus some of the issues and challenges that I spoke before
+
+50
+00:02:02,530 --> 00:02:04,833
+about different parts of form design.
+
+51
+00:02:06,870 --> 00:02:09,810
+So if we look at some of the procedural challenges,
+
+52
+00:02:09,810 --> 00:02:11,610
+and this is kind of a source
+
+53
+00:02:11,610 --> 00:02:15,290
+of poor system design essentially.
+
+54
+00:02:15,290 --> 00:02:17,940
+So we often have a lack of procedures
+
+55
+00:02:17,940 --> 00:02:19,880
+for adding metadata, right?
+
+56
+00:02:19,880 --> 00:02:21,120
+And this is a big problem
+
+57
+00:02:21,120 --> 00:02:25,610
+because people just add metadata to wherever they want.
+
+58
+00:02:25,610 --> 00:02:27,770
+There might not be things like naming conventions,
+
+59
+00:02:27,770 --> 00:02:30,100
+or might not be any type of instruction
+
+60
+00:02:30,100 --> 00:02:31,190
+on where to do this.
+
+61
+00:02:31,190 --> 00:02:34,320
+Maybe they do it in their production system directly,
+
+62
+00:02:34,320 --> 00:02:36,420
+and maybe multiple people do it at the same time
+
+63
+00:02:36,420 --> 00:02:38,030
+and this is where this second point
+
+64
+00:02:38,030 --> 00:02:39,980
+on lack of coordination comes in.
+
+65
+00:02:39,980 --> 00:02:42,340
+So maybe you have two or more administrators
+
+66
+00:02:42,340 --> 00:02:44,260
+adding the same data sets
+
+67
+00:02:44,260 --> 00:02:47,300
+and they&#39;re not looking at what actually exists
+
+68
+00:02:47,300 --> 00:02:48,920
+in their system.
+
+69
+00:02:48,920 --> 00:02:50,230
+And this can also be a problem
+
+70
+00:02:50,230 --> 00:02:52,420
+because if you&#39;re hiding lots of metadata,
+
+71
+00:02:52,420 --> 00:02:53,610
+you&#39;re sharing is incorrect,
+
+72
+00:02:53,610 --> 00:02:55,140
+which we&#39;ll get to in a moment,
+
+73
+00:02:55,140 --> 00:02:58,210
+then, if I&#39;m an admin and I&#39;m working on one program
+
+74
+00:02:58,210 --> 00:03:01,110
+and I don&#39;t see the categories or data elements that exist
+
+75
+00:03:01,993 --> 00:03:04,550
+that can be reused potentially,
+
+76
+00:03:04,550 --> 00:03:06,350
+then I might create my own
+
+77
+00:03:06,350 --> 00:03:08,500
+and then we&#39;ll have duplicates essentially.
+
+78
+00:03:10,420 --> 00:03:13,970
+The WHO digital data packages also have some impact
+
+79
+00:03:13,970 --> 00:03:17,500
+on DHIS2 systems and how clean the design can be
+
+80
+00:03:17,500 --> 00:03:19,780
+and how easy it can be to find data
+
+81
+00:03:19,780 --> 00:03:21,820
+and the impact of data quality.
+
+82
+00:03:21,820 --> 00:03:24,460
+And this is because we can potentially introduce
+
+83
+00:03:24,460 --> 00:03:26,580
+a lot of duplicate metadata
+
+84
+00:03:26,580 --> 00:03:29,210
+when we import these and install these on our systems.
+
+85
+00:03:29,210 --> 00:03:32,330
+So something to really strongly consider
+
+86
+00:03:32,330 --> 00:03:33,750
+when we&#39;re doing this.
+
+87
+00:03:33,750 --> 00:03:37,270
+We&#39;re the ones often helping many countries set these up.
+
+88
+00:03:37,270 --> 00:03:38,150
+It&#39;s pretty rare
+
+89
+00:03:38,150 --> 00:03:40,080
+where these packages are just being set up
+
+90
+00:03:40,080 --> 00:03:43,080
+without any input from anybody, right?
+
+91
+00:03:43,080 --> 00:03:47,100
+So, this is something we often have a direct effect on
+
+92
+00:03:47,100 --> 00:03:49,633
+and it&#39;s something we really need to consider carefully.
+
+93
+00:03:50,820 --> 00:03:54,270
+Another problem is often revisions of data collection forms
+
+94
+00:03:54,270 --> 00:03:55,830
+over time.
+
+95
+00:03:55,830 --> 00:03:58,690
+So, when we take a look at data collection forms,
+
+96
+00:03:58,690 --> 00:04:01,260
+and when they get altered with new data elements,
+
+97
+00:04:01,260 --> 00:04:03,170
+new desegregations, et cetera,
+
+98
+00:04:03,170 --> 00:04:04,810
+we have to come up with smart ways
+
+99
+00:04:04,810 --> 00:04:06,980
+to handle this carry over.
+
+100
+00:04:06,980 --> 00:04:08,590
+And we&#39;ll talk about this a little bit more
+
+101
+00:04:08,590 --> 00:04:10,670
+as we go through this session.
+
+102
+00:04:10,670 --> 00:04:13,440
+We also often have new objects being added
+
+103
+00:04:13,440 --> 00:04:15,750
+directly to the production server,
+
+104
+00:04:15,750 --> 00:04:18,040
+and then they&#39;re abandoned without anybody cleaning this up.
+
+105
+00:04:18,040 --> 00:04:21,210
+So you get all kinds of data elements,
+
+106
+00:04:21,209 --> 00:04:24,270
+all kinds of different groups maybe,
+
+107
+00:04:24,270 --> 00:04:26,330
+all kinds of different data sets even,
+
+108
+00:04:26,330 --> 00:04:27,690
+and they&#39;re never used.
+
+109
+00:04:27,690 --> 00:04:29,810
+Maybe someone entered a couple of test values for them,
+
+110
+00:04:29,810 --> 00:04:31,570
+and they&#39;re just completely abandoned.
+
+111
+00:04:31,570 --> 00:04:34,000
+And no one&#39;s really sure why they&#39;re there,
+
+112
+00:04:34,000 --> 00:04:35,180
+but over time,
+
+113
+00:04:35,180 --> 00:04:38,740
+this becomes quite a significant challenge to deal with.
+
+114
+00:04:38,740 --> 00:04:40,600
+So one of the procedural challenges
+
+115
+00:04:40,600 --> 00:04:44,080
+that I mentioned was a lack of standard operating procedures
+
+116
+00:04:44,080 --> 00:04:46,980
+or guidance on how to create metadata.
+
+117
+00:04:46,980 --> 00:04:49,820
+So I&#39;m actually going to share a couple examples
+
+118
+00:04:49,820 --> 00:04:52,140
+with you about some things that have been done
+
+119
+00:04:52,140 --> 00:04:53,100
+in other places,
+
+120
+00:04:53,100 --> 00:04:53,990
+some things that I&#39;ve done,
+
+121
+00:04:53,990 --> 00:04:55,900
+some things that others have done,
+
+122
+00:04:55,900 --> 00:04:59,230
+to kind of work through this creation of metadata.
+
+123
+00:04:59,230 --> 00:05:00,760
+And there are some references
+
+124
+00:05:00,760 --> 00:05:02,610
+that I used as well to create this.
+
+125
+00:05:02,610 --> 00:05:05,630
+But I think it&#39;s important to have this in place
+
+126
+00:05:05,630 --> 00:05:08,050
+for both aggregate and tracker metadata,
+
+127
+00:05:08,050 --> 00:05:11,240
+so people are really aware of what that process is.
+
+128
+00:05:11,240 --> 00:05:14,120
+And this kind of training also goes well beyond
+
+129
+00:05:14,120 --> 00:05:16,730
+any type of customization training, right?
+
+130
+00:05:16,730 --> 00:05:18,500
+We&#39;re not just discussing with them
+
+131
+00:05:18,500 --> 00:05:21,620
+where to click and where different things are found,
+
+132
+00:05:21,620 --> 00:05:24,180
+but after that type of information has been done,
+
+133
+00:05:24,180 --> 00:05:26,410
+and they kind of understand how to use the interface
+
+134
+00:05:26,410 --> 00:05:27,690
+to add metadata,
+
+135
+00:05:27,690 --> 00:05:30,680
+we&#39;re really focusing on what to do procedurally
+
+136
+00:05:30,680 --> 00:05:32,160
+and what&#39;s right and what&#39;s wrong
+
+137
+00:05:32,160 --> 00:05:34,360
+and the considerations to make
+
+138
+00:05:34,360 --> 00:05:35,640
+when you&#39;re creating new metadata.
+
+139
+00:05:35,640 --> 00:05:38,300
+So it&#39;s obviously going a bit beyond
+
+140
+00:05:38,300 --> 00:05:40,120
+just regular kind of training,
+
+141
+00:05:40,120 --> 00:05:41,507
+but really thinking about,
+
+142
+00:05:41,507 --> 00:05:45,320
+&quot;If I make an SOP, then I train people exactly on this SOP&quot;
+
+143
+00:05:45,320 --> 00:05:47,130
+so people understand the process
+
+144
+00:05:47,130 --> 00:05:48,770
+that we&#39;re putting in place
+
+145
+00:05:48,770 --> 00:05:51,820
+and everyone&#39;s on board with this, right?
+
+146
+00:05:51,820 --> 00:05:54,380
+I kind of have in bold on this, if you can see,
+
+147
+00:05:54,380 --> 00:05:56,600
+that this is to be done on the development server first.
+
+148
+00:05:56,600 --> 00:05:57,433
+Right?
+
+149
+00:05:57,433 --> 00:06:00,290
+And I also mentioned this as a particular sticking point
+
+150
+00:06:00,290 --> 00:06:01,640
+in the presentation,
+
+151
+00:06:01,640 --> 00:06:03,780
+because you often have people just doing things
+
+152
+00:06:03,780 --> 00:06:05,090
+directly on production
+
+153
+00:06:05,090 --> 00:06:07,190
+and this can cause a lot of havoc,
+
+154
+00:06:07,190 --> 00:06:09,510
+particularly with things like category options
+
+155
+00:06:09,510 --> 00:06:10,430
+and categories,
+
+156
+00:06:10,430 --> 00:06:12,100
+especially if you rebuild those
+
+157
+00:06:12,100 --> 00:06:14,100
+and then things really get out of hand.
+
+158
+00:06:14,100 --> 00:06:17,320
+So, we have to be really careful how we approach this
+
+159
+00:06:17,320 --> 00:06:18,860
+and make sure that we can...
+
+160
+00:06:18,860 --> 00:06:21,090
+This is something I think we have a bit more control
+
+161
+00:06:21,090 --> 00:06:23,320
+and influence to help countries
+
+162
+00:06:23,320 --> 00:06:25,110
+in terms of setting up their systems
+
+163
+00:06:25,110 --> 00:06:27,510
+and making sure we transfer those best practices
+
+164
+00:06:27,510 --> 00:06:28,710
+over to them,
+
+165
+00:06:28,710 --> 00:06:30,500
+when we&#39;re doing training and capacity building
+
+166
+00:06:30,500 --> 00:06:31,400
+with them as well.
+

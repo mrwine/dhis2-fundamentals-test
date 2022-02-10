@@ -1,0 +1,20 @@
+<problem display_name="Question 1" markdown="Run a Validation Rule analysis for National from 1st July to the 30th September for Maternal health.&#10;&gt;&gt;How many validation rule violations are there? (2 attempts)&lt;&lt;&#10;&#10;( ) A. 3&#10;( ) B. 231&#10;( ) C. 49&#10;(x) D. 8    &#10;&#10;[explanation]&#10;8 is the correct answer.&#10;[explanation]">
+<multiplechoiceresponse>
+  <p>Run a Validation Rule analysis for National from 1st July to the 30th September for Maternal health.</p>
+<label>How many validation rule violations are there? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. 3</choice>
+    <choice correct="false">B. 231</choice>
+    <choice correct="false">C. 49</choice>
+    <choice correct="true">D. 8</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>8 is the correct answer.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

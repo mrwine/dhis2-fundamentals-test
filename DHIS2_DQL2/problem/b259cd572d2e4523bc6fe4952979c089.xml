@@ -1,0 +1,17 @@
+<problem display_name="Graded question - General Challenges &amp; Organisation Unit Management - Question 2" markdown="&gt;&gt;True or False: Organisation unit management has a direct effect on data quality and use? (1 attempt) &lt;&lt;&#10;&#10;(x) True&#10;( ) False&#10;&#10;[explanation]&#10;This is a critical function as it directly impacts completeness and what types of organisation unit group sets are available to disaggregate data.&#10;[explanation]" max_attempts="1">
+<multiplechoiceresponse>
+  <label>True or False: Organisation unit management has a direct effect on data quality and use? (1 attempt) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">True</choice>
+    <choice correct="false">False</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>This is a critical function as it directly impacts completeness and what types of organisation unit group sets are available to disaggregate data.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,452 @@
+0
+00:00:00,390 --> 00:00:02,950
+- [Instructor] So another issue that you might find
+
+1
+00:00:02,950 --> 00:00:05,630
+is dealing with data dimensions.
+
+2
+00:00:05,630 --> 00:00:09,440
+So there are really three areas that you can define
+
+3
+00:00:09,440 --> 00:00:11,160
+what&#39;s a data dimension
+
+4
+00:00:11,160 --> 00:00:14,500
+to be used in analytics ops in DHIS2.
+
+5
+00:00:14,500 --> 00:00:17,100
+This includes our categories,
+
+6
+00:00:17,100 --> 00:00:19,760
+category option group sets,
+
+7
+00:00:19,760 --> 00:00:22,283
+and our organization unit group sets.
+
+8
+00:00:23,490 --> 00:00:27,850
+This all affects what is essentially the left side menu
+
+9
+00:00:27,850 --> 00:00:31,200
+that users see when they&#39;re performing analysis
+
+10
+00:00:31,200 --> 00:00:34,280
+on various items in these apps.
+
+11
+00:00:34,280 --> 00:00:37,540
+And if this becomes so large that people cannot
+
+12
+00:00:37,540 --> 00:00:40,390
+make heads or tails of what they&#39;re seeing,
+
+13
+00:00:40,390 --> 00:00:43,330
+then it&#39;s not really kind of being used
+
+14
+00:00:43,330 --> 00:00:44,640
+in the way it should be.
+
+15
+00:00:44,640 --> 00:00:46,660
+The whole idea is that we want these dimensions
+
+16
+00:00:46,660 --> 00:00:48,970
+to be present so people can drill down,
+
+17
+00:00:48,970 --> 00:00:51,210
+can desegregate their data in the way that&#39;s necessary
+
+18
+00:00:51,210 --> 00:00:54,160
+to support their analysis requirements.
+
+19
+00:00:54,160 --> 00:00:56,420
+If they&#39;re not able to find what they need,
+
+20
+00:00:56,420 --> 00:00:58,360
+this is going to have some impact on
+
+21
+00:00:58,360 --> 00:01:00,843
+how they actually utilize the system itself.
+
+22
+00:01:01,760 --> 00:01:04,360
+So it can affect data quality,
+
+23
+00:01:04,360 --> 00:01:07,880
+but this is also a bit of a user issue as well
+
+24
+00:01:07,880 --> 00:01:09,020
+in terms of what they&#39;re seeing.
+
+25
+00:01:09,020 --> 00:01:11,270
+And if this list, in this example here,
+
+26
+00:01:11,270 --> 00:01:13,990
+that you can see there&#39;s kind of top and bottoms
+
+27
+00:01:13,990 --> 00:01:16,280
+to this list, but I can keep scrolling down
+
+28
+00:01:16,280 --> 00:01:18,460
+and more and more would be there.
+
+29
+00:01:18,460 --> 00:01:22,500
+So one way to do this obviously is if you&#39;re sharing
+
+30
+00:01:22,500 --> 00:01:24,930
+and we&#39;ll talk a bit about sharing more,
+
+31
+00:01:24,930 --> 00:01:26,540
+but you can choose to share
+
+32
+00:01:26,540 --> 00:01:28,840
+which data dimensions people see.
+
+33
+00:01:28,840 --> 00:01:30,620
+So they&#39;re not seeing everything.
+
+34
+00:01:30,620 --> 00:01:33,850
+They&#39;re only seeing the ones that are relevant to them.
+
+35
+00:01:33,850 --> 00:01:36,500
+But one of the main problems with DHIS2
+
+36
+00:01:36,500 --> 00:01:39,030
+is that for all three of these items, categories,
+
+37
+00:01:39,030 --> 00:01:40,600
+category option group sets,
+
+38
+00:01:40,600 --> 00:01:42,500
+and organization unit group sets,
+
+39
+00:01:42,500 --> 00:01:46,480
+they have this data dimension checkbox ticked by default.
+
+40
+00:01:46,480 --> 00:01:48,980
+So anytime I go to create a new one,
+
+41
+00:01:48,980 --> 00:01:50,930
+it&#39;s just going to appear on that menu,
+
+42
+00:01:52,013 --> 00:01:53,430
+and it&#39;s going to get larger and larger and larger
+
+43
+00:01:53,430 --> 00:01:57,140
+until it&#39;s basically I cannot navigate or find anything
+
+44
+00:01:57,140 --> 00:01:59,160
+that I need, or at least not easily,
+
+45
+00:01:59,160 --> 00:02:01,063
+unless I really know the system well.
+
+46
+00:02:02,747 --> 00:02:04,320
+So, one thing that I often like to do
+
+47
+00:02:04,320 --> 00:02:08,580
+is make sure to incorporate whether or not to select this
+
+48
+00:02:08,580 --> 00:02:09,540
+in a data dimension.
+
+49
+00:02:09,539 --> 00:02:11,410
+So that&#39;s standard operating procedure
+
+50
+00:02:11,410 --> 00:02:12,243
+that I shared with you.
+
+51
+00:02:12,243 --> 00:02:14,120
+We&#39;ll just go back to that real quick.
+
+52
+00:02:17,100 --> 00:02:20,930
+I made sure that I highlight that you have to decide
+
+53
+00:02:20,930 --> 00:02:23,540
+whether or not you should use a data dimension
+
+54
+00:02:23,540 --> 00:02:26,760
+for that particular item that you&#39;re creating.
+
+55
+00:02:26,760 --> 00:02:30,420
+Because if not, if you just go to create a new category
+
+56
+00:02:30,420 --> 00:02:32,140
+or an organization unit group set,
+
+57
+00:02:32,140 --> 00:02:34,380
+or a category option group set,
+
+58
+00:02:34,380 --> 00:02:36,180
+it&#39;s going to add it to that left menu.
+
+59
+00:02:36,180 --> 00:02:38,880
+And this is going to cause some challenges
+
+60
+00:02:38,880 --> 00:02:41,190
+with the ability to find what you need
+
+61
+00:02:41,190 --> 00:02:43,190
+in order to analyze your data correctly.
+
+62
+00:02:45,940 --> 00:02:49,490
+Another challenge that we might see related to system design
+
+63
+00:02:49,490 --> 00:02:52,300
+and data quality is when we find a lot of
+
+64
+00:02:52,300 --> 00:02:54,900
+duplicate data elements.
+
+65
+00:02:54,900 --> 00:02:57,023
+So just in this example here,
+
+66
+00:02:58,830 --> 00:03:00,950
+I have a number of duplicate data elements
+
+67
+00:03:00,950 --> 00:03:03,380
+that are storing or representing,
+
+68
+00:03:03,380 --> 00:03:05,210
+I should say, the same item.
+
+69
+00:03:05,210 --> 00:03:07,940
+They&#39;re all about maternal deaths.
+
+70
+00:03:07,940 --> 00:03:10,680
+Every single one of these items that I see here
+
+71
+00:03:10,680 --> 00:03:12,610
+is related to maternal deaths.
+
+72
+00:03:12,610 --> 00:03:15,320
+And in fact, it&#39;s just representing the same,
+
+73
+00:03:15,320 --> 00:03:18,370
+basically the same concept.
+
+74
+00:03:18,370 --> 00:03:21,010
+So what do I do in this scenario?
+
+75
+00:03:21,010 --> 00:03:22,900
+Now, this is a bit more complicated
+
+76
+00:03:22,900 --> 00:03:24,840
+because these different data elements
+
+77
+00:03:24,840 --> 00:03:28,170
+can belong to different programs.
+
+78
+00:03:28,170 --> 00:03:29,560
+They might belong to the same program.
+
+79
+00:03:29,560 --> 00:03:32,178
+It might be reported a couple of different times
+
+80
+00:03:32,178 --> 00:03:35,940
+in the same system, but they might belong to different
+
+81
+00:03:35,940 --> 00:03:37,570
+programs as well.
+
+82
+00:03:37,570 --> 00:03:39,890
+And the challenge here is that different programs
+
+83
+00:03:39,890 --> 00:03:43,230
+will then be reporting different values potentially.
+
+84
+00:03:43,230 --> 00:03:45,620
+And you&#39;re not actually sure then in this scenario,
+
+85
+00:03:45,620 --> 00:03:46,610
+what is the source?
+
+86
+00:03:46,610 --> 00:03:50,690
+What is the source of truth for this particular data item?
+
+87
+00:03:50,690 --> 00:03:52,980
+You don&#39;t really know when there&#39;s so many different values
+
+88
+00:03:52,980 --> 00:03:55,350
+that represent the same concept.
+
+89
+00:03:55,350 --> 00:03:57,110
+You can kind of pick and choose,
+
+90
+00:03:57,110 --> 00:04:01,210
+and programs kind of do this because they&#39;re stuck with
+
+91
+00:04:01,210 --> 00:04:03,930
+the item that they&#39;re really the ones responsible for
+
+92
+00:04:03,930 --> 00:04:05,800
+or feel they&#39;re responsible for.
+
+93
+00:04:05,800 --> 00:04:07,670
+But in an integrated system,
+
+94
+00:04:07,670 --> 00:04:09,520
+this is not really the best approach.
+
+95
+00:04:10,924 --> 00:04:14,280
+So this is more a measure to identify this problem.
+
+96
+00:04:14,280 --> 00:04:16,880
+I can&#39;t say I have an immediate solution
+
+97
+00:04:16,880 --> 00:04:18,690
+for rectifying this issue,
+
+98
+00:04:18,690 --> 00:04:21,220
+because this is not something that can be done quickly.
+
+99
+00:04:21,220 --> 00:04:23,390
+You cannot just take all these data elements
+
+100
+00:04:23,390 --> 00:04:24,780
+and collapse them.
+
+101
+00:04:24,780 --> 00:04:26,970
+You&#39;re gonna have all kinds of different values.
+
+102
+00:04:26,970 --> 00:04:28,690
+Potentially you&#39;re gonna have different programs
+
+103
+00:04:28,690 --> 00:04:32,680
+that are responsible for kind of maintaining these as well.
+
+104
+00:04:32,680 --> 00:04:35,220
+So there&#39;s not an easy workaround that I personally
+
+105
+00:04:35,220 --> 00:04:37,550
+can recommend to you on this,
+
+106
+00:04:37,550 --> 00:04:39,920
+but this is just something that you really should look for
+
+107
+00:04:39,920 --> 00:04:44,390
+and try to help over time countries and other partners
+
+108
+00:04:44,390 --> 00:04:45,550
+fix this type of issue.
+
+109
+00:04:45,550 --> 00:04:47,990
+Because this becomes very challenging to deal with
+
+110
+00:04:47,990 --> 00:04:49,420
+from a data quality point of view
+
+111
+00:04:49,420 --> 00:04:52,420
+when you&#39;re no longer sure what the actual value is
+
+112
+00:04:52,420 --> 00:04:54,620
+for the item that you&#39;re looking to analyze.
+

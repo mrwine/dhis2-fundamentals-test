@@ -1,0 +1,17 @@
+<problem display_name="Graded question - Procedural Challenges - Question 2 " markdown="&gt;&gt;Should we ever make large-scale untested metadata changes on a live production server? (1 attempt)&lt;&lt;&#10;&#10;( ) Yes&#10;(x) No&#10;&#10;[explanation]&#10;No. This is highly unrecommended practice.&#10;[explanation]" max_attempts="1">
+<multiplechoiceresponse>
+  <label>Should we ever make large-scale untested metadata changes on a live production server? (1 attempt)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">Yes</choice>
+    <choice correct="true">No</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>No. This is highly unrecommended practice.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

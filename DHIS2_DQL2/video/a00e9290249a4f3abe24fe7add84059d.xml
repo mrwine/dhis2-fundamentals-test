@@ -1,0 +1,10 @@
+<video youtube="1.00:Ox6PVhlR-XE" url_name="a00e9290249a4f3abe24fe7add84059d" sub="" transcripts="{&quot;en&quot;: &quot;cca359ee-bdc7-4bea-a0b2-dfdf10fced7a-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Numerical Value Types" download_track="true" download_video="true" edx_video_id="cca359ee-bdc7-4bea-a0b2-dfdf10fced7a" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.2_Data_elements_vale_types.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.2.2+-+Numerical+Value+Types.mp4&quot;]" show_captions="false" youtube_id_1_0="Ox6PVhlR-XE">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.2.2+-+Numerical+Value+Types.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.2_Data_elements_vale_types.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="cca359ee-bdc7-4bea-a0b2-dfdf10fced7a-en.srt"/>
+</video>

@@ -1,0 +1,744 @@
+0
+00:00:00,140 --> 00:00:02,640
+(light music)
+
+1
+00:00:04,429 --> 00:00:07,373
+- [Bob] On the login page, there&#39;s the username.
+
+2
+00:00:19,560 --> 00:00:23,340
+And we&#39;re in, before we proceed
+
+3
+00:00:23,340 --> 00:00:28,180
+to discussing the WHO Data Quality Tool,
+
+4
+00:00:28,180 --> 00:00:31,200
+I want to pause for a couple of minutes
+
+5
+00:00:31,200 --> 00:00:35,010
+to draw your attention to a special dashboard
+
+6
+00:00:35,010 --> 00:00:39,920
+that has been designed on this instance of DHIS 2.
+
+7
+00:00:39,920 --> 00:00:43,230
+This is the data quality dashboard
+
+8
+00:00:43,230 --> 00:00:48,230
+and we encourage you to also configure on your own DHIS 2
+
+9
+00:00:49,840 --> 00:00:54,840
+something that looks at data quality in the same way.
+
+10
+00:00:56,680 --> 00:01:00,980
+In fact, the standard applications of DHIS 2
+
+11
+00:01:00,980 --> 00:01:04,150
+are well-designed to look at
+
+12
+00:01:04,150 --> 00:01:07,660
+such aspects of data quality as the completeness.
+
+13
+00:01:07,660 --> 00:01:10,390
+Here you see for multiple datasets,
+
+14
+00:01:10,390 --> 00:01:13,250
+the trend over the last 12 months
+
+15
+00:01:13,250 --> 00:01:15,033
+and the reporting rates.
+
+16
+00:01:16,370 --> 00:01:18,770
+Or a table that disaggregates
+
+17
+00:01:18,770 --> 00:01:21,273
+the reporting rates by district.
+
+18
+00:01:22,410 --> 00:01:24,990
+This is a chart that is looking at
+
+19
+00:01:24,990 --> 00:01:27,710
+that second dimension of data quality
+
+20
+00:01:27,710 --> 00:01:31,333
+which is internal consistency in time.
+
+21
+00:01:32,190 --> 00:01:37,190
+Is the value of in this case ANC first visits,
+
+22
+00:01:38,160 --> 00:01:40,160
+is it consistent in time?
+
+23
+00:01:40,160 --> 00:01:45,160
+And we see at national level a couple of examples
+
+24
+00:01:45,310 --> 00:01:49,940
+where the monthly value was not consistent in time.
+
+25
+00:01:49,940 --> 00:01:54,790
+So a chart like this showing the month-to-month trend
+
+26
+00:01:54,790 --> 00:01:59,790
+can allow you to identify the very largest outliers,
+
+27
+00:02:00,230 --> 00:02:04,320
+suspicious values, values that are very different
+
+28
+00:02:04,320 --> 00:02:06,920
+from what was reported in other months.
+
+29
+00:02:06,920 --> 00:02:11,510
+We will see how the WHO Data Quality Tool
+
+30
+00:02:11,510 --> 00:02:16,510
+is even more sensitive at picking up these outlier values.
+
+31
+00:02:17,790 --> 00:02:19,900
+Also on the dashboard,
+
+32
+00:02:19,900 --> 00:02:22,500
+there&#39;s a table that presents for you
+
+33
+00:02:22,500 --> 00:02:26,900
+the very largest extreme outlier values
+
+34
+00:02:26,900 --> 00:02:31,003
+reported for various data elements.
+
+35
+00:02:33,610 --> 00:02:35,770
+And there&#39;s a chart that is looking
+
+36
+00:02:35,770 --> 00:02:39,660
+at the consistency between related elements.
+
+37
+00:02:39,660 --> 00:02:42,170
+Remember this was one of the metrics,
+
+38
+00:02:42,170 --> 00:02:45,740
+one of the things to assess with the Data Quality Review.
+
+39
+00:02:45,740 --> 00:02:50,570
+In this case, comparing the first doses of Penta
+
+40
+00:02:50,570 --> 00:02:55,570
+reported by a district to the third doses of Penta.
+
+41
+00:02:55,860 --> 00:03:00,270
+And these two districts have a negative dropout rate,
+
+42
+00:03:00,270 --> 00:03:02,950
+So that is suspicious
+
+43
+00:03:02,950 --> 00:03:07,050
+because they have reported higher numbers
+
+44
+00:03:07,050 --> 00:03:10,253
+of third doses of Penta than first doses.
+
+45
+00:03:11,320 --> 00:03:14,070
+And just wrapping up our quick view
+
+46
+00:03:14,070 --> 00:03:17,210
+of this standard data quality dashboard,
+
+47
+00:03:17,210 --> 00:03:19,910
+here&#39;s a chart which is comparing
+
+48
+00:03:19,910 --> 00:03:24,880
+estimates of coverage from two different sources.
+
+49
+00:03:24,880 --> 00:03:27,970
+The blue bars show you
+
+50
+00:03:27,970 --> 00:03:30,410
+the routine estimate of coverage
+
+51
+00:03:30,410 --> 00:03:31,880
+based upon the data
+
+52
+00:03:31,880 --> 00:03:35,670
+reported monthly by each health facility,
+
+53
+00:03:35,670 --> 00:03:38,480
+and that routine estimate of coverage
+
+54
+00:03:38,480 --> 00:03:41,370
+is compared to the estimate
+
+55
+00:03:41,370 --> 00:03:44,653
+from a recent demographic health survey.
+
+56
+00:03:45,510 --> 00:03:47,880
+So this is the assessment
+
+57
+00:03:47,880 --> 00:03:52,210
+of that third dimension of data quality that we mentioned.
+
+58
+00:03:52,210 --> 00:03:55,620
+This is external consistency of the data.
+
+59
+00:03:55,620 --> 00:03:58,680
+And we see that for one region,
+
+60
+00:03:58,680 --> 00:04:02,050
+there is not very good external consistency
+
+61
+00:04:02,050 --> 00:04:07,040
+between the survey and the routine estimate.
+
+62
+00:04:07,040 --> 00:04:09,860
+And finally, the fourth dimension
+
+63
+00:04:09,860 --> 00:04:12,360
+of the Data Quality Review framework
+
+64
+00:04:12,360 --> 00:04:17,140
+looks at the consistency of the denominator values.
+
+65
+00:04:17,140 --> 00:04:18,560
+And in this case,
+
+66
+00:04:18,560 --> 00:04:23,560
+we see that there is not consistent growth from year to year
+
+67
+00:04:24,530 --> 00:04:29,530
+in the estimated S value of the population
+
+68
+00:04:29,710 --> 00:04:31,230
+under one year of age,
+
+69
+00:04:31,230 --> 00:04:34,030
+that denominator used to calculate
+
+70
+00:04:34,030 --> 00:04:38,000
+coverage with most immunization data.
+
+71
+00:04:38,000 --> 00:04:43,000
+We see that there was a drop between 2015 and 2016,
+
+72
+00:04:44,210 --> 00:04:48,130
+whereas with other years there was what we would like to see
+
+73
+00:04:48,130 --> 00:04:51,350
+which is a steady annual change,
+
+74
+00:04:51,350 --> 00:04:55,800
+a steady annual growth in this denominator.
+
+75
+00:04:55,800 --> 00:04:58,290
+So we encourage you to use
+
+76
+00:04:58,290 --> 00:05:03,290
+the standard applications of DHIS 2 to look at data quality.
+
+77
+00:05:05,700 --> 00:05:09,220
+What we&#39;re going to do now is switch over
+
+78
+00:05:09,220 --> 00:05:14,220
+to using the WHO Data Quality Tool application.
+
+79
+00:05:16,880 --> 00:05:20,350
+If you&#39;ve got a lot of applications to choose from,
+
+80
+00:05:20,350 --> 00:05:24,650
+one way to rapidly find the WHO Data Quality Tool
+
+81
+00:05:24,650 --> 00:05:29,590
+is to in the search apps line type in WHO
+
+82
+00:05:29,590 --> 00:05:32,000
+and then you&#39;ll find the only application
+
+83
+00:05:32,000 --> 00:05:34,780
+that has WHO in its name.
+
+84
+00:05:34,780 --> 00:05:36,803
+We&#39;d launch that application.
+
+85
+00:05:37,850 --> 00:05:42,070
+And right away, we&#39;re taken to this page
+
+86
+00:05:42,070 --> 00:05:46,330
+which as you see from the highlighting up at the top,
+
+87
+00:05:46,330 --> 00:05:49,990
+this is the dashboard of the data quality.
+
+88
+00:05:49,990 --> 00:05:52,890
+The WHO Data Quality Tool.
+
+89
+00:05:52,890 --> 00:05:56,450
+Later, we will learn about some of the other functions
+
+90
+00:05:56,450 --> 00:05:59,680
+of the WHO Data Quality Tool
+
+91
+00:05:59,680 --> 00:06:02,933
+and specifically the analysis function.
+
+92
+00:06:04,270 --> 00:06:09,270
+But for now, we&#39;re going to focus on the dashboard
+
+93
+00:06:09,280 --> 00:06:12,860
+and specifically on this first page.
+
+94
+00:06:12,860 --> 00:06:15,060
+You see that the dashboard
+
+95
+00:06:15,060 --> 00:06:18,660
+or the WHO Data Quality Tool has four pages.
+
+96
+00:06:18,660 --> 00:06:22,740
+We will present on each of these four pages.
+
+97
+00:06:22,740 --> 00:06:27,050
+For now, we&#39;re going to focus on the completeness page,
+
+98
+00:06:27,050 --> 00:06:30,773
+the dashboard of the WHO Data Quality tool.
+
+99
+00:06:32,610 --> 00:06:37,567
+The completeness dashboard shows results
+
+100
+00:06:38,930 --> 00:06:41,690
+for the completeness of several different datasets.
+
+101
+00:06:41,690 --> 00:06:43,020
+If we scroll down here,
+
+102
+00:06:43,020 --> 00:06:46,660
+we see ANC dataset completeness,
+
+103
+00:06:46,660 --> 00:06:51,660
+HMIS dataset, immunization, malaria, maternity.
+
+104
+00:06:57,060 --> 00:07:00,130
+And for each of these datasets,
+
+105
+00:07:00,130 --> 00:07:01,813
+there are two charts.
+
+106
+00:07:03,410 --> 00:07:05,790
+The charts on the left is showing you
+
+107
+00:07:05,790 --> 00:07:07,930
+the trend in the reporting rate
+
+108
+00:07:07,930 --> 00:07:11,493
+and the completeness over a 12-month period.
+
+109
+00:07:12,380 --> 00:07:16,490
+You see here on the axis which 12 months,
+
+110
+00:07:16,490 --> 00:07:21,490
+from September 2019 to August of 2020.
+
+111
+00:07:21,630 --> 00:07:25,560
+Why is it going up to August of 2020?
+
+112
+00:07:25,560 --> 00:07:30,560
+Well, over here is something called the settings icon.
+
+113
+00:07:32,240 --> 00:07:34,240
+And if we click on that,
+
+114
+00:07:34,240 --> 00:07:36,730
+a special window opens that allows us
+
+115
+00:07:36,730 --> 00:07:41,363
+to set how this dashboard is configured.
+
+116
+00:07:42,620 --> 00:07:46,680
+We&#39;ll say something later about setting data,
+
+117
+00:07:46,680 --> 00:07:50,380
+but let&#39;s change how the period is set.
+
+118
+00:07:50,380 --> 00:07:53,320
+Now it is set to August 2020
+
+119
+00:07:53,320 --> 00:07:57,550
+and notice the chart on the left
+
+120
+00:07:57,550 --> 00:08:02,550
+is showing completeness over 12 months up to August 2020.
+
+121
+00:08:03,840 --> 00:08:06,110
+The chart on the right is showing
+
+122
+00:08:06,110 --> 00:08:08,630
+the completeness for a single month.
+
+123
+00:08:08,630 --> 00:08:12,250
+Which month? August of 2020.
+
+124
+00:08:12,250 --> 00:08:15,903
+Notice what happens if we change the period.
+
+125
+00:08:17,800 --> 00:08:20,110
+We&#39;ve selected July as the period
+
+126
+00:08:20,110 --> 00:08:22,710
+and now the chart on the left
+
+127
+00:08:22,710 --> 00:08:26,900
+is showing also a trend over 12 months,
+
+128
+00:08:26,900 --> 00:08:31,900
+but it is the 12 months which end in July of 2020.
+
+129
+00:08:31,900 --> 00:08:34,410
+And the chart on the right
+
+130
+00:08:34,409 --> 00:08:38,320
+shows us the completeness for a single month,
+
+131
+00:08:38,320 --> 00:08:41,353
+the month of July 2020.
+
+132
+00:08:45,030 --> 00:08:50,030
+The histograms, the bars in the chart on the right
+
+133
+00:08:50,160 --> 00:08:53,610
+are disaggregated by region.
+
+134
+00:08:53,610 --> 00:08:58,483
+It shows completeness for each of the four regions.
+
+135
+00:09:00,380 --> 00:09:05,310
+If we look at the settings for organization unit,
+
+136
+00:09:05,310 --> 00:09:10,133
+notice it is set here to desegregate by region.
+
+137
+00:09:12,060 --> 00:09:14,490
+Let&#39;s see if we can change that.
+
+138
+00:09:14,490 --> 00:09:18,770
+Let&#39;s change it to desegregation by district.
+
+139
+00:09:18,770 --> 00:09:23,040
+Aha, now we see that the charts on the right
+
+140
+00:09:23,040 --> 00:09:27,680
+are showing completeness for the ANC dataset,
+
+141
+00:09:27,680 --> 00:09:30,250
+disaggregated to show completeness
+
+142
+00:09:30,250 --> 00:09:34,253
+for each of the districts in the country.
+
+143
+00:09:36,130 --> 00:09:40,270
+So we see how we can configure the dashboard.
+
+144
+00:09:40,270 --> 00:09:45,223
+We can change the configuration by changing the period.
+
+145
+00:09:46,430 --> 00:09:49,200
+We can change disaggregation.
+
+146
+00:09:49,200 --> 00:09:52,730
+We could also instead of looking
+
+147
+00:09:52,730 --> 00:09:55,370
+at all of the data nationwide,
+
+148
+00:09:55,370 --> 00:09:58,620
+we could decide to look at only the data
+
+149
+00:09:58,620 --> 00:10:00,913
+for one specific region.
+
+150
+00:10:02,180 --> 00:10:05,800
+Here we have completeness
+
+151
+00:10:05,800 --> 00:10:10,800
+only for the districts within region A.
+
+152
+00:10:10,900 --> 00:10:13,890
+Or even if we click on the plus sign,
+
+153
+00:10:13,890 --> 00:10:15,740
+then we see a dropdown menu
+
+154
+00:10:15,740 --> 00:10:18,560
+showing all of the districts in region A
+
+155
+00:10:18,560 --> 00:10:20,143
+and we could select one,
+
+156
+00:10:21,990 --> 00:10:25,240
+and automatically desegregation is set
+
+157
+00:10:25,240 --> 00:10:27,310
+to one level below the district
+
+158
+00:10:27,310 --> 00:10:30,063
+so it&#39;s set to facility.
+
+159
+00:10:33,540 --> 00:10:36,340
+Okay, we will go back.
+
+160
+00:10:36,340 --> 00:10:40,213
+Leave this on the month of July.
+
+161
+00:10:41,550 --> 00:10:45,460
+Set the national as the boundary.
+
+162
+00:10:45,460 --> 00:10:48,960
+District as the disaggregation.
+
+163
+00:10:48,960 --> 00:10:53,960
+And let&#39;s see what happens when we change data from Core
+
+164
+00:10:55,070 --> 00:10:59,120
+and Core, notice Core shows you results
+
+165
+00:10:59,120 --> 00:11:01,863
+for multiple different programs.
+
+166
+00:11:03,790 --> 00:11:08,790
+Let&#39;s change Data to one specific program, Immunization.
+
+167
+00:11:12,650 --> 00:11:15,390
+Now we are looking at completeness
+
+168
+00:11:15,390 --> 00:11:18,163
+only for the Immunization dataset.
+
+169
+00:11:19,780 --> 00:11:23,530
+So we see how by changing the settings,
+
+170
+00:11:23,530 --> 00:11:27,530
+we can use the dashboard
+
+171
+00:11:27,530 --> 00:11:32,530
+to look at a different set of programs.
+
+172
+00:11:33,650 --> 00:11:37,030
+In this case, Core means multiple programs.
+
+173
+00:11:37,030 --> 00:11:41,820
+We can look at the completeness for a different period.
+
+174
+00:11:41,820 --> 00:11:44,450
+Even we can change the year
+
+175
+00:11:44,450 --> 00:11:48,663
+and look at the completeness for December of 2019.
+
+176
+00:11:49,580 --> 00:11:50,550
+And we can change
+
+177
+00:11:50,550 --> 00:11:54,790
+organization unit to disaggregate differently
+
+178
+00:11:54,790 --> 00:11:59,790
+or look at a different boundary of data.
+
+179
+00:12:04,430 --> 00:12:07,550
+We will continue in the next presentation
+
+180
+00:12:07,550 --> 00:12:10,410
+to review consistency time
+
+181
+00:12:10,410 --> 00:12:12,040
+and that&#39;s when we will see
+
+182
+00:12:12,040 --> 00:12:16,080
+how useful it is to change the data
+
+183
+00:12:16,080 --> 00:12:20,095
+to a specific program like immunization.
+
+184
+00:12:20,095 --> 00:12:20,928
+(light music)
+
+185
+00:12:20,928 --> 00:12:21,761
+Thank you.
+

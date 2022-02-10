@@ -1,0 +1,19 @@
+<problem display_name="Consistency - Data Exercise 3" markdown="&gt;&gt;Which districts have a negative Penta 1 to Penta 3 dropout rate? (2 attempts)&lt;&lt;&#10;&#10;(x) A. District A-2 and District A-3&#10;( ) B. District A-1 and District A-2&#10;( ) C. District A-2 and District A-4&#10;( ) D. District A-1 and District A-3       &#10;&#10;[explanation]&#10;District A-2 and District A-3 had negative dropout rates.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <label>Which districts have a negative Penta 1 to Penta 3 dropout rate? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. District A-2 and District A-3</choice>
+    <choice correct="false">B. District A-1 and District A-2</choice>
+    <choice correct="false">C. District A-2 and District A-4</choice>
+    <choice correct="false">D. District A-1 and District A-3</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>District A-2 and District A-3 had negative dropout rates.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

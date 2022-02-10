@@ -1,0 +1,20 @@
+<problem display_name="Question 2" markdown="Which statement(s) below are correct about program rules?&#10;Select all that apply. (2 attempts)&#10;&#10;&#10;&gt;&gt;Program rules:&lt;&lt;&#10;&#10;[x] A. Allow the interaction with the user based on input.&#10;[x] B. Allow you to create and control dynamic behavior of the user interface in the Tracker Capture and Capture apps.&#10;[x] C. Expressions are evaluated each time the user interface is displayed and each time a data element is changed.&#10;&#10;[explanation]&#10;All are correct.&#10;[explanation]&#10;" max_attempts="2">
+<choiceresponse>
+  <p>Which statement(s) below are correct about program rules?</p>
+<p>Select all that apply. (2 attempts)</p>
+<label>Program rules:</label>
+<checkboxgroup>
+    <choice correct="true">A. Allow the interaction with the user based on input.</choice>
+    <choice correct="true">B. Allow you to create and control dynamic behavior of the user interface in the Tracker Capture and Capture apps.</choice>
+    <choice correct="true">C. Expressions are evaluated each time the user interface is displayed and each time a data element is changed.</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>All are correct.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

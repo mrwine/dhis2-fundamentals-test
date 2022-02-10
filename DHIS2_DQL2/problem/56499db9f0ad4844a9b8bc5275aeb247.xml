@@ -1,0 +1,21 @@
+<problem display_name="Consistency - Data Exercise 1" markdown="Move the cursor over the chart and read some of the windows which pop up to show details.&#10;&#10;&gt;&gt;What does each dot represent? (2 attempts)&lt;&lt;&#10;&#10;(x) A. The total ANC 1 value and total ANC 4 value&#10;( ) B. The total ANC 1 value&#10;( ) C. The total ANC 4 value&#10;( ) D. The total District value          &#10;&#10;[explanation] &#10;Each dot represents the total ANC 1 value (on the vertical axis) and total ANC 4 value (on the horizontal axis) for one district for the 12-month period. &#10;[explanation] " max_attempts="2">
+<multiplechoiceresponse>
+  <p>Move the cursor over the chart and read some of the windows which pop up to show details.</p>
+<label>What does each dot represent? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. The total ANC 1 value and total ANC 4 value</choice>
+    <choice correct="false">B. The total ANC 1 value</choice>
+    <choice correct="false">C. The total ANC 4 value</choice>
+    <choice correct="false">D. The total District value</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p> </p>
+<p>Each dot represents the total ANC 1 value (on the vertical axis) and total ANC 4 value (on the horizontal axis) for one district for the 12-month period. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

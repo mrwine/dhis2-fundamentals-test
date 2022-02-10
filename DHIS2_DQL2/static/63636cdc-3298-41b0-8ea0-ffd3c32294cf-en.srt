@@ -1,0 +1,1140 @@
+0
+00:00:00,469 --> 00:00:02,969
+(smooth jazz)
+
+1
+00:00:05,600 --> 00:00:08,410
+- [Norah] This is the session on the Data Quality Review.
+
+2
+00:00:08,410 --> 00:00:13,193
+And your report is part of the Data Quality Online Academy.
+
+3
+00:00:15,280 --> 00:00:17,749
+So there are two aspects that we are going to talk about
+
+4
+00:00:17,749 --> 00:00:18,582
+in this session.
+
+5
+00:00:18,582 --> 00:00:22,280
+The first one is the annual report
+
+6
+00:00:22,280 --> 00:00:25,080
+using the WHO DQ Tool,
+
+7
+00:00:25,080 --> 00:00:26,910
+and then secondly the process
+
+8
+00:00:26,910 --> 00:00:29,200
+of actually reviewing your data
+
+9
+00:00:29,200 --> 00:00:31,260
+and making the appropriate corrections.
+
+10
+00:00:31,260 --> 00:00:35,001
+So if we start back at the WHO DQ Tool,
+
+11
+00:00:35,001 --> 00:00:38,663
+your first question is, have you installed it?
+
+12
+00:00:39,650 --> 00:00:43,523
+Has it been customized or have you left it as the default?
+
+13
+00:00:44,530 --> 00:00:46,770
+Again, brings up the question,
+
+14
+00:00:46,770 --> 00:00:50,070
+who&#39;s responsible for this customization.
+
+15
+00:00:50,070 --> 00:00:53,040
+Only the HMIS Team or the M&amp;E Team,
+
+16
+00:00:53,040 --> 00:00:54,660
+the program managers.
+
+17
+00:00:54,660 --> 00:00:56,333
+Who all is involved?
+
+18
+00:00:57,590 --> 00:01:00,790
+If we take the purpose of this report,
+
+19
+00:01:00,790 --> 00:01:04,130
+who needs it and why do they need it?
+
+20
+00:01:04,129 --> 00:01:06,903
+And out of this report,
+
+21
+00:01:08,359 --> 00:01:12,120
+the actions taken or are any actions going to be taken
+
+22
+00:01:12,120 --> 00:01:15,340
+that result in demonstrable changes?
+
+23
+00:01:15,340 --> 00:01:20,340
+So the bottom line is does this report change anything
+
+24
+00:01:20,660 --> 00:01:24,840
+or does it just become a nice report in a glossy folder
+
+25
+00:01:24,840 --> 00:01:26,403
+stored in a glass cabinet?
+
+26
+00:01:28,640 --> 00:01:31,800
+The second aspect of this data quality review
+
+27
+00:01:31,800 --> 00:01:34,490
+is to look at the data and to fix it.
+
+28
+00:01:34,490 --> 00:01:38,950
+And it&#39;s about checking for outliers and obvious data errors
+
+29
+00:01:38,950 --> 00:01:40,800
+and then correcting them.
+
+30
+00:01:40,800 --> 00:01:42,650
+Checking for missing months of data
+
+31
+00:01:42,650 --> 00:01:44,150
+and then filling them in.
+
+32
+00:01:44,150 --> 00:01:47,670
+Specifically if you know a facility has worked,
+
+33
+00:01:47,670 --> 00:01:50,723
+but no pieces of paper have arrived.
+
+34
+00:01:53,910 --> 00:01:57,570
+On the tool bar for the WHO DQ Tool,
+
+35
+00:01:57,570 --> 00:01:59,410
+there&#39;s something that says Annual Report.
+
+36
+00:01:59,410 --> 00:02:03,500
+You click that open and the first option you have is data
+
+37
+00:02:03,500 --> 00:02:04,950
+and you can select a group.
+
+38
+00:02:04,950 --> 00:02:07,550
+It could be Core, it could be Immunization,
+
+39
+00:02:07,550 --> 00:02:10,020
+it could be Maternal Health,
+
+40
+00:02:10,020 --> 00:02:11,280
+for the period.
+
+41
+00:02:11,280 --> 00:02:12,710
+You then select the year
+
+42
+00:02:12,710 --> 00:02:15,740
+that you want to run the annual report for
+
+43
+00:02:15,740 --> 00:02:18,200
+and how many years before that
+
+44
+00:02:18,200 --> 00:02:21,960
+do you want as reference so that there is some background.
+
+45
+00:02:21,960 --> 00:02:24,430
+And then you select the organization unit.
+
+46
+00:02:24,430 --> 00:02:26,310
+This could be the whole country,
+
+47
+00:02:26,310 --> 00:02:31,310
+sub-level, sub-national, or sub-national times two.
+
+48
+00:02:31,780 --> 00:02:33,883
+The choice again is always yours.
+
+49
+00:02:35,810 --> 00:02:39,950
+You will then get a report that is completed
+
+50
+00:02:39,950 --> 00:02:44,420
+and it will show up under in the WHO DQ Tool.
+
+51
+00:02:44,420 --> 00:02:47,210
+You then have the option of printing the report
+
+52
+00:02:47,210 --> 00:02:49,873
+and you will be able to save it as a PDF.
+
+53
+00:02:50,710 --> 00:02:55,710
+So this report, the one I ran was nine pages.
+
+54
+00:02:55,970 --> 00:03:00,970
+Looks at completeness, timeliness, facility reporting
+
+55
+00:03:01,540 --> 00:03:06,540
+completeness of indicator data, and all of guidance
+
+56
+00:03:07,270 --> 00:03:11,000
+and indicators showing you what&#39;s helping
+
+57
+00:03:11,000 --> 00:03:14,203
+with completeness, with timeliness of the data.
+
+58
+00:03:15,240 --> 00:03:17,190
+So this is what this report looks like.
+
+59
+00:03:19,790 --> 00:03:21,100
+So the questions are,
+
+60
+00:03:21,100 --> 00:03:22,853
+so here&#39;s this report.
+
+61
+00:03:24,080 --> 00:03:25,833
+Is this report helpful?
+
+62
+00:03:27,200 --> 00:03:30,023
+If it&#39;s helpful, for who is it helpful?
+
+63
+00:03:31,590 --> 00:03:35,083
+What guidance can you gain from this report?
+
+64
+00:03:36,250 --> 00:03:40,290
+And is this report a guarantee that the data
+
+65
+00:03:40,290 --> 00:03:44,943
+is correct, complete, consistent, and timely?
+
+66
+00:03:46,220 --> 00:03:48,794
+So all four of things that are whole
+
+67
+00:03:48,794 --> 00:03:52,100
+are looked at with part of the development
+
+68
+00:03:52,100 --> 00:03:54,240
+of an annual report on data quality
+
+69
+00:03:54,240 --> 00:03:55,763
+using the DQ Tool.
+
+70
+00:03:58,860 --> 00:04:01,610
+The second section of this presentation
+
+71
+00:04:01,610 --> 00:04:04,410
+looks at the data quality review and data cleaning.
+
+72
+00:04:04,410 --> 00:04:08,883
+And the use case we&#39;re going to talk about is South Sudan.
+
+73
+00:04:10,007 --> 00:04:14,710
+Fortunately, or unfortunately it was them using DHIS 1.4,
+
+74
+00:04:14,710 --> 00:04:16,400
+not DHIS 2.
+
+75
+00:04:16,399 --> 00:04:21,400
+We are still looking for use cases with DHIS 2.
+
+76
+00:04:21,440 --> 00:04:26,440
+And it was done for the years 2012, 2013, 2014 data
+
+77
+00:04:27,950 --> 00:04:30,270
+and here is a map of South Sudan,
+
+78
+00:04:30,270 --> 00:04:33,043
+and a flag if you don&#39;t recollect it.
+
+79
+00:04:34,700 --> 00:04:39,000
+So the first question is why do we bother to clean the data?
+
+80
+00:04:39,000 --> 00:04:43,020
+And the problem is that poor quality data
+
+81
+00:04:43,020 --> 00:04:45,690
+makes the data unusable.
+
+82
+00:04:45,690 --> 00:04:50,690
+You can&#39;t use it for accurately estimating indicators,
+
+83
+00:04:50,950 --> 00:04:54,550
+coverage of performance, coverage of service delivery,
+
+84
+00:04:54,550 --> 00:04:58,840
+and that means that all that effort that you went into
+
+85
+00:04:58,840 --> 00:05:03,780
+to create and to collect and to capture
+
+86
+00:05:03,780 --> 00:05:07,430
+and to clean the data from all the facilities,
+
+87
+00:05:07,430 --> 00:05:08,830
+there is no return.
+
+88
+00:05:08,830 --> 00:05:11,973
+So the data is collected, but it&#39;s not usable.
+
+89
+00:05:13,140 --> 00:05:14,750
+We also know that if there are
+
+90
+00:05:14,750 --> 00:05:17,453
+a few obvious data entry errors,
+
+91
+00:05:18,470 --> 00:05:20,410
+people can take this as a sign
+
+92
+00:05:20,410 --> 00:05:23,320
+that all the data is untrustworthy.
+
+93
+00:05:23,320 --> 00:05:25,263
+And that we know is not true.
+
+94
+00:05:26,550 --> 00:05:30,580
+Experience has shown that on the whole,
+
+95
+00:05:30,580 --> 00:05:35,580
+generally HMIS data is generally reliable.
+
+96
+00:05:36,300 --> 00:05:39,149
+It&#39;s not perfect, it will never be perfect,
+
+97
+00:05:39,149 --> 00:05:42,853
+but it should be good enough so that it can be used.
+
+98
+00:05:43,930 --> 00:05:47,803
+If we go about correcting any of the obvious errors
+
+99
+00:05:47,803 --> 00:05:52,803
+that we see, the data then becomes usable and acceptable.
+
+100
+00:05:54,040 --> 00:05:57,240
+And usable data, and acceptable data
+
+101
+00:05:57,240 --> 00:06:02,240
+is much better than unusable data which has no value.
+
+102
+00:06:02,250 --> 00:06:06,053
+Just stores up space in the computer and costs money.
+
+103
+00:06:07,820 --> 00:06:11,040
+What we do know is that in spite of everybody saying,
+
+104
+00:06:11,040 --> 00:06:12,910
+well we do validation checks
+
+105
+00:06:12,910 --> 00:06:15,540
+and we have quarterly data reviews,
+
+106
+00:06:15,540 --> 00:06:18,000
+data errors do creep in
+
+107
+00:06:18,000 --> 00:06:21,890
+and they frequently remain undetected and uncorrected
+
+108
+00:06:21,890 --> 00:06:25,853
+and stay there to haunt you for years.
+
+109
+00:06:26,990 --> 00:06:29,340
+And as we said, South Sudan was using DHIS 1.4
+
+110
+00:06:31,010 --> 00:06:33,060
+at the time of the data cleaning process.
+
+111
+00:06:34,660 --> 00:06:39,030
+So some background to what happened in South Sudan.
+
+112
+00:06:39,030 --> 00:06:42,720
+First of all, because a minimum indicator based dataset
+
+113
+00:06:42,720 --> 00:06:47,690
+implemented in 2011, so it was based on indicators
+
+114
+00:06:47,690 --> 00:06:51,000
+and from the indicators we defined the data elements,
+
+115
+00:06:51,000 --> 00:06:53,600
+we put them into data collection tools
+
+116
+00:06:53,600 --> 00:06:57,043
+and it was two pages with one page for EPI.
+
+117
+00:06:58,380 --> 00:07:02,430
+And there was a decision made in 2013
+
+118
+00:07:02,430 --> 00:07:07,430
+to provide a report for 2012, the Annual HMIS Report
+
+119
+00:07:08,700 --> 00:07:12,380
+because we now had a year of data.
+
+120
+00:07:12,380 --> 00:07:14,920
+However, on reviewing this data,
+
+121
+00:07:14,920 --> 00:07:18,135
+it quickly became apparent that the data
+
+122
+00:07:18,135 --> 00:07:20,650
+was not good enough to be used.
+
+123
+00:07:20,650 --> 00:07:24,010
+We could not use it for the annual report.
+
+124
+00:07:24,010 --> 00:07:25,820
+And so the decision was made
+
+125
+00:07:25,820 --> 00:07:30,500
+that we would go back and we would clean the data
+
+126
+00:07:30,500 --> 00:07:33,380
+so that it would become usable.
+
+127
+00:07:33,380 --> 00:07:38,080
+And so this was then done at state level, some national
+
+128
+00:07:38,080 --> 00:07:42,774
+and we also did combine some states for convenience
+
+129
+00:07:42,774 --> 00:07:45,700
+just so that in terms of time
+
+130
+00:07:45,700 --> 00:07:47,913
+and in terms of distance and travel.
+
+131
+00:07:48,920 --> 00:07:51,170
+Present at these data cleanup workshops
+
+132
+00:07:51,170 --> 00:07:56,100
+was the State M&amp;E Officer, and the County M&amp;E Officer
+
+133
+00:07:56,100 --> 00:08:00,050
+for each county and they were responsible
+
+134
+00:08:00,050 --> 00:08:02,020
+for correcting the data.
+
+135
+00:08:02,020 --> 00:08:04,810
+Because it was the county, they knew
+
+136
+00:08:04,810 --> 00:08:07,120
+what was going on in their area.
+
+137
+00:08:07,120 --> 00:08:10,690
+They could easily contact the facility people
+
+138
+00:08:10,690 --> 00:08:14,180
+responsible and ask questions.
+
+139
+00:08:14,180 --> 00:08:17,450
+They did all of that work about fixing the data.
+
+140
+00:08:17,450 --> 00:08:22,220
+It took approximately four to five days per group of States
+
+141
+00:08:22,220 --> 00:08:25,270
+and it was a really labor intensive process
+
+142
+00:08:25,270 --> 00:08:28,210
+with everybody working from early in the morning
+
+143
+00:08:28,210 --> 00:08:31,450
+to late in the afternoon in the heat and dust
+
+144
+00:08:31,450 --> 00:08:33,963
+of South Sudan to get this work done.
+
+145
+00:08:35,370 --> 00:08:39,280
+So, we first made some crucial decisions.
+
+146
+00:08:39,280 --> 00:08:41,640
+The first one was that we were going to
+
+147
+00:08:41,640 --> 00:08:43,340
+concentrate on the headcount.
+
+148
+00:08:43,340 --> 00:08:47,010
+Knowing how many people access the health services
+
+149
+00:08:47,010 --> 00:08:49,990
+is crucial to understanding how much money you have,
+
+150
+00:08:49,990 --> 00:08:52,270
+how many resources you need.
+
+151
+00:08:52,270 --> 00:08:53,816
+So headcount.
+
+152
+00:08:53,816 --> 00:08:55,110
+Then we looked at children
+
+153
+00:08:55,110 --> 00:08:57,620
+with diarrhea, pneumonia, and malaria.
+
+154
+00:08:57,620 --> 00:09:01,540
+Because we&#39;re also defining a vulnerable population.
+
+155
+00:09:01,540 --> 00:09:04,360
+We then looked at maternal health in terms of
+
+156
+00:09:04,360 --> 00:09:08,090
+anti-natal visits, deliveries, live births, IPTP
+
+157
+00:09:09,810 --> 00:09:12,160
+and the things relating to maternal health
+
+158
+00:09:12,160 --> 00:09:15,290
+because we also see that those were the crucial things
+
+159
+00:09:15,290 --> 00:09:16,363
+to have correct.
+
+160
+00:09:17,260 --> 00:09:21,910
+We ran validation rules, absolute and statisticals
+
+161
+00:09:21,910 --> 00:09:26,150
+were run and any violations triggered were noted.
+
+162
+00:09:26,150 --> 00:09:28,713
+The same process that we use in DHIS2.
+
+163
+00:09:30,230 --> 00:09:32,700
+Extreme outliers were identified
+
+164
+00:09:32,700 --> 00:09:35,360
+and corrected using tools in 1.4,
+
+165
+00:09:35,360 --> 00:09:39,440
+which include interpolation and regression analysis.
+
+166
+00:09:39,440 --> 00:09:43,370
+Interpolation is making an educated guess
+
+167
+00:09:44,870 --> 00:09:47,630
+based on data before and data after.
+
+168
+00:09:47,630 --> 00:09:50,480
+And regression analysis, we&#39;re not going into
+
+169
+00:09:50,480 --> 00:09:53,403
+a mathematical discussion this afternoon on this.
+
+170
+00:09:55,490 --> 00:09:59,140
+The second process was we would concentrate
+
+171
+00:09:59,140 --> 00:10:02,493
+on replacing the missing months of data.
+
+172
+00:10:03,420 --> 00:10:06,707
+In other words, we will know that a facility worked,
+
+173
+00:10:06,707 --> 00:10:08,880
+but for some unknown reason,
+
+174
+00:10:08,880 --> 00:10:11,170
+the piece of paper never arrived.
+
+175
+00:10:11,170 --> 00:10:14,740
+And there are many explanations and reasons for that.
+
+176
+00:10:14,740 --> 00:10:19,740
+Insecurity, unable to travel, no stop, whatever
+
+177
+00:10:20,330 --> 00:10:22,020
+but we know the facility worked
+
+178
+00:10:22,020 --> 00:10:25,210
+so we professed missing data.
+
+179
+00:10:25,210 --> 00:10:28,010
+And when we looked at validation rules
+
+180
+00:10:28,010 --> 00:10:29,460
+with compulsory pairing.
+
+181
+00:10:29,460 --> 00:10:32,540
+In other words, if you have one you must have the other.
+
+182
+00:10:32,540 --> 00:10:35,520
+An example would be diarrhea treated
+
+183
+00:10:36,530 --> 00:10:38,440
+must have diarrhea reported.
+
+184
+00:10:38,440 --> 00:10:39,613
+We fixed those up.
+
+185
+00:10:40,640 --> 00:10:43,680
+We look for extreme outliers and corrected those
+
+186
+00:10:43,680 --> 00:10:45,380
+at facility level.
+
+187
+00:10:45,380 --> 00:10:50,380
+Specifically if a value materially altered the indicator.
+
+188
+00:10:50,960 --> 00:10:55,960
+If it skewed the indicator, it became important enough
+
+189
+00:10:56,420 --> 00:10:58,220
+to correct the data.
+
+190
+00:10:58,220 --> 00:11:02,010
+And in this process, we looked both at raw data
+
+191
+00:11:02,010 --> 00:11:03,610
+and at indicators.
+
+192
+00:11:03,610 --> 00:11:05,370
+Because frequently on raw data,
+
+193
+00:11:05,370 --> 00:11:08,300
+you may not see that something is wrong.
+
+194
+00:11:08,300 --> 00:11:11,607
+But when you look at it as an indicator,
+
+195
+00:11:11,607 --> 00:11:13,810
+that that data element is part of an indicator,
+
+196
+00:11:13,810 --> 00:11:16,383
+it becomes apparent that something is not right.
+
+197
+00:11:18,670 --> 00:11:20,230
+So some of the actions
+
+198
+00:11:20,230 --> 00:11:22,440
+and some of the things that we did.
+
+199
+00:11:22,440 --> 00:11:25,613
+We developed a decision tree for data outliers.
+
+200
+00:11:26,470 --> 00:11:29,550
+If it was out of range and then there was the services,
+
+201
+00:11:29,550 --> 00:11:32,940
+first of all look did the data elements hang together?
+
+202
+00:11:32,940 --> 00:11:35,550
+Did they make sense when you looked at them?
+
+203
+00:11:35,550 --> 00:11:39,400
+Then, using regression we recalculated
+
+204
+00:11:39,400 --> 00:11:42,190
+a value that made no sense.
+
+205
+00:11:42,190 --> 00:11:44,800
+If the data elements did not hang together,
+
+206
+00:11:44,800 --> 00:11:47,000
+in other words they made no sense,
+
+207
+00:11:47,000 --> 00:11:50,170
+we would recalculate the key data elements.
+
+208
+00:11:50,170 --> 00:11:53,640
+The most important ones and provide a comment.
+
+209
+00:11:53,640 --> 00:11:57,003
+Again, using data from previous months and months after.
+
+210
+00:11:58,260 --> 00:12:01,070
+And if we had data, there was no services
+
+211
+00:12:01,070 --> 00:12:03,460
+that were provided by the health facility,
+
+212
+00:12:03,460 --> 00:12:04,650
+we would just delete it.
+
+213
+00:12:04,650 --> 00:12:07,160
+So this is just some of the ways we looked
+
+214
+00:12:07,160 --> 00:12:10,603
+at trying to fix outlier data.
+
+215
+00:12:11,770 --> 00:12:14,870
+Trying to fix missing data.
+
+216
+00:12:14,870 --> 00:12:17,570
+We looked at was the facility
+
+217
+00:12:17,570 --> 00:12:20,690
+actually providing any services?
+
+218
+00:12:20,690 --> 00:12:24,293
+And if it wasn&#39;t, then we closed it.
+
+219
+00:12:25,130 --> 00:12:30,130
+If we realized that the facility did not work for one month
+
+220
+00:12:30,830 --> 00:12:34,200
+or maybe even two months due to security,
+
+221
+00:12:34,200 --> 00:12:36,673
+due to no staffing, whatever,
+
+222
+00:12:37,876 --> 00:12:40,130
+but if the services were not provided,
+
+223
+00:12:40,130 --> 00:12:43,500
+we wrote a zero and we gave a comment.
+
+224
+00:12:43,500 --> 00:12:46,423
+So that was no longer missing data.
+
+225
+00:12:47,939 --> 00:12:52,727
+The facility did not function so it&#39;s not missing data.
+
+226
+00:12:54,500 --> 00:12:57,550
+And if we said that services were provided
+
+227
+00:12:57,550 --> 00:13:00,330
+by the health facility, and the data was missing,
+
+228
+00:13:00,330 --> 00:13:03,000
+we corrected it using interpolation
+
+229
+00:13:03,000 --> 00:13:06,193
+and regression analysis to fill in the gaps.
+
+230
+00:13:07,630 --> 00:13:11,800
+So why was it possible to do this in South Sudan?
+
+231
+00:13:11,800 --> 00:13:14,030
+Well, there were a few reasons.
+
+232
+00:13:14,030 --> 00:13:17,963
+First of all, it was a very, very small dataset.
+
+233
+00:13:18,915 --> 00:13:20,143
+It was only two pages.
+
+234
+00:13:21,381 --> 00:13:26,381
+The local staff of M&amp;E offices were eager to be responsible
+
+235
+00:13:26,570 --> 00:13:28,520
+and fix their own data.
+
+236
+00:13:28,520 --> 00:13:31,870
+They wanted good, clean data.
+
+237
+00:13:31,870 --> 00:13:36,350
+And they took great pride in having data with no violations.
+
+238
+00:13:36,350 --> 00:13:39,280
+And there was a lot of hands on support and supervision
+
+239
+00:13:39,280 --> 00:13:41,693
+to guide people through this process.
+
+240
+00:13:42,530 --> 00:13:44,530
+Well what were some of the results?
+
+241
+00:13:44,530 --> 00:13:48,520
+First of all, we had cleaned data for three years
+
+242
+00:13:48,520 --> 00:13:51,613
+resulting in an annual report for each year.
+
+243
+00:13:53,870 --> 00:13:56,890
+How many of your countries are doing an annual report
+
+244
+00:13:56,890 --> 00:13:59,333
+each year for your HMIS data?
+
+245
+00:14:00,720 --> 00:14:03,140
+Because we had data for three years,
+
+246
+00:14:03,140 --> 00:14:06,973
+we were able to measure service delivery over time.
+
+247
+00:14:07,870 --> 00:14:10,620
+Were counties and states getting better,
+
+248
+00:14:10,620 --> 00:14:12,183
+were they staying the same?
+
+249
+00:14:13,220 --> 00:14:15,937
+And one of the most crucial aspects for us,
+
+250
+00:14:15,937 --> 00:14:18,750
+the development of the capacity and the knowledge
+
+251
+00:14:18,750 --> 00:14:22,663
+of the M&amp;E staff regarding both HMIS and DHIS.
+
+252
+00:14:23,500 --> 00:14:26,680
+And as we all know, when you start out in a country
+
+253
+00:14:26,680 --> 00:14:31,030
+one of the biggest issues is an updated facility list
+
+254
+00:14:31,030 --> 00:14:34,063
+so a lot of work went into fixing a facility list.
+
+255
+00:14:35,380 --> 00:14:40,196
+So in conclusion, has all the missing data,
+
+256
+00:14:40,196 --> 00:14:41,760
+where you know a facility worked
+
+257
+00:14:41,760 --> 00:14:44,500
+but there&#39;s no report been added in?
+
+258
+00:14:44,500 --> 00:14:47,273
+Have you fixed all your outliers?
+
+259
+00:14:47,273 --> 00:14:51,197
+Have all your validation rules been fixed or explained?
+
+260
+00:14:52,270 --> 00:14:53,250
+And then the question is
+
+261
+00:14:53,250 --> 00:14:56,810
+whether WHO takes responsibility for this?
+
+262
+00:14:56,810 --> 00:15:00,033
+Is it important to do this in your situation?
+
+263
+00:15:02,370 --> 00:15:05,330
+And so we are left with two exercises.
+
+264
+00:15:05,330 --> 00:15:08,170
+The first one is about the WHO Annual Report.
+
+265
+00:15:08,170 --> 00:15:11,870
+So you either use your own country&#39;s DHIS2 instance
+
+266
+00:15:11,870 --> 00:15:13,640
+or the demo one.
+
+267
+00:15:13,640 --> 00:15:17,000
+Run the annual report for a selected OU unit
+
+268
+00:15:17,000 --> 00:15:20,120
+and Data Elemental Indicator Group.
+
+269
+00:15:20,120 --> 00:15:24,780
+Print it, which will allow you to download in PDF format.
+
+270
+00:15:24,780 --> 00:15:26,850
+Then review it and discuss it.
+
+271
+00:15:26,850 --> 00:15:28,810
+How can you use this report?
+
+272
+00:15:28,810 --> 00:15:32,050
+We know that there are quite a few of you
+
+273
+00:15:32,050 --> 00:15:33,560
+working in the same country
+
+274
+00:15:33,560 --> 00:15:37,030
+and I think that this would be a very nice exercise for you
+
+275
+00:15:37,030 --> 00:15:39,173
+as a group to have a look.
+
+276
+00:15:40,160 --> 00:15:44,430
+And then in terms of the data review and corrections,
+
+277
+00:15:44,430 --> 00:15:47,820
+either your own DHIS2 or the demo instance.
+
+278
+00:15:47,820 --> 00:15:52,820
+Using the WHO DQ Tool, find the missing data and outliers.
+
+279
+00:15:53,390 --> 00:15:56,650
+What needs to happen to replace these missing values
+
+280
+00:15:56,650 --> 00:15:59,133
+or correct the obvious data outliers?
+
+281
+00:16:01,303 --> 00:16:03,330
+And here&#39;s the difficult question,
+
+282
+00:16:03,330 --> 00:16:07,030
+how will you decide what the new value should be?
+
+283
+00:16:08,246 --> 00:16:09,514
+Thank you.
+
+284
+00:16:09,514 --> 00:16:12,014
+(smooth jazz)
+

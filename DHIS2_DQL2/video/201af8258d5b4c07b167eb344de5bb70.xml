@@ -1,0 +1,10 @@
+<video youtube="1.00:D_r32XEeRtU" url_name="201af8258d5b4c07b167eb344de5bb70" sub="" transcripts="{&quot;en&quot;: &quot;b6be93e2-439b-44c6-a31e-a510bff8d166-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Naming Conventions" download_track="true" download_video="true" edx_video_id="b6be93e2-439b-44c6-a31e-a510bff8d166" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.2_Naming_conventions.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.4.2+-+Naming+Conventions.mp4&quot;]" show_captions="false" youtube_id_1_0="D_r32XEeRtU">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.4.2+-+Naming+Conventions.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.2_Naming_conventions.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="b6be93e2-439b-44c6-a31e-a510bff8d166-en.srt"/>
+</video>

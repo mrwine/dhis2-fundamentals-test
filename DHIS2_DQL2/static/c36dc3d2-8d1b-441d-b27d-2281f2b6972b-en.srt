@@ -1,0 +1,636 @@
+0
+00:00:00,510 --> 00:00:02,780
+- So the last thing that I wanted to talk about
+
+1
+00:00:02,780 --> 00:00:05,760
+are some supplemental scripts
+
+2
+00:00:05,760 --> 00:00:08,010
+that have been developed to support
+
+3
+00:00:08,010 --> 00:00:11,690
+the assessment of DHIS2 system design.
+
+4
+00:00:11,690 --> 00:00:14,500
+And these dig a little bit deeper
+
+5
+00:00:14,500 --> 00:00:17,310
+than what the data integrity check provides.
+
+6
+00:00:17,310 --> 00:00:20,220
+And it also provides you a bit of a summary
+
+7
+00:00:20,220 --> 00:00:21,550
+that you can present to others
+
+8
+00:00:21,550 --> 00:00:25,110
+that is more easily digestible I think in a lot of ways,
+
+9
+00:00:25,110 --> 00:00:27,750
+because you can enumerate the results
+
+10
+00:00:27,750 --> 00:00:30,560
+that are outputted by these queries.
+
+11
+00:00:30,560 --> 00:00:35,020
+So I&#39;ve shared the SQL file for you here.
+
+12
+00:00:35,020 --> 00:00:39,460
+There&#39;re series of SQL queries and one of the challenges is
+
+13
+00:00:39,460 --> 00:00:43,140
+that you need direct database access to run some of these.
+
+14
+00:00:43,140 --> 00:00:46,960
+So for example, you can run any query on users
+
+15
+00:00:46,960 --> 00:00:50,670
+via an SQL view within DHIS2.
+
+16
+00:00:50,670 --> 00:00:52,640
+So this is not something necessarily
+
+17
+00:00:52,640 --> 00:00:55,140
+that everyone will be able to do,
+
+18
+00:00:55,140 --> 00:00:57,950
+but it&#39;s good to be aware that this is a possibility
+
+19
+00:00:57,950 --> 00:01:00,910
+because you can always enlist a little bit of help
+
+20
+00:01:00,910 --> 00:01:03,300
+in making sure that you can do this.
+
+21
+00:01:03,300 --> 00:01:06,810
+So I&#39;m going to transfer over to the interface
+
+22
+00:01:06,810 --> 00:01:09,880
+where I can run some SQL queries essentially.
+
+23
+00:01:09,880 --> 00:01:13,940
+So you can see this in operation on a system
+
+24
+00:01:13,940 --> 00:01:16,650
+and kind of understand some of the outputs.
+
+25
+00:01:16,650 --> 00:01:18,560
+So it assesses a number of different things.
+
+26
+00:01:18,560 --> 00:01:21,120
+There&#39;s a data set, state elements, indicators,
+
+27
+00:01:21,120 --> 00:01:25,012
+users, organization units, dashboards, charts,
+
+28
+00:01:25,012 --> 00:01:26,850
+pivot tables, and maps.
+
+29
+00:01:26,850 --> 00:01:28,680
+So we can see there&#39;s a lot of stuff related
+
+30
+00:01:28,680 --> 00:01:32,620
+to analytical outputs, as well as things like
+
+31
+00:01:32,620 --> 00:01:35,670
+our data sets and our data elements.
+
+32
+00:01:35,670 --> 00:01:39,090
+Now you can see once again, in terms of input,
+
+33
+00:01:39,090 --> 00:01:41,360
+there&#39;s a big focus on aggregate data,
+
+34
+00:01:41,360 --> 00:01:42,780
+but I think this helps us really
+
+35
+00:01:42,780 --> 00:01:46,840
+to summarize some key issues that we might see in the system
+
+36
+00:01:46,840 --> 00:01:49,590
+when we&#39;re actually performing this type of assessment.
+
+37
+00:01:51,130 --> 00:01:54,570
+Okay, so we&#39;re getting a bit technical now.
+
+38
+00:01:54,570 --> 00:01:57,560
+This might not be something that everyone&#39;s familiar with
+
+39
+00:01:57,560 --> 00:01:59,470
+or that they&#39;re available to perform
+
+40
+00:01:59,470 --> 00:02:02,700
+without a little bit of support, but that&#39;s okay.
+
+41
+00:02:02,700 --> 00:02:04,900
+What we really want to impart is that
+
+42
+00:02:04,900 --> 00:02:06,810
+these tools are available
+
+43
+00:02:06,810 --> 00:02:09,220
+and someone can help you to implement them.
+
+44
+00:02:09,220 --> 00:02:10,660
+But because the queries are already there
+
+45
+00:02:10,660 --> 00:02:12,770
+for anyone who&#39;s familiar with doing this,
+
+46
+00:02:12,770 --> 00:02:14,480
+it&#39;s basically just something you can copy
+
+47
+00:02:14,480 --> 00:02:16,380
+and paste when you&#39;re running these
+
+48
+00:02:16,380 --> 00:02:17,910
+so you can get the output.
+
+49
+00:02:17,910 --> 00:02:19,600
+So the output&#39;s located at the--
+
+50
+00:02:19,600 --> 00:02:21,380
+so I&#39;ve run one query on datasets
+
+51
+00:02:21,380 --> 00:02:23,570
+just to show you an example.
+
+52
+00:02:23,570 --> 00:02:24,970
+I&#39;ll run another one in a moment,
+
+53
+00:02:24,970 --> 00:02:27,900
+just so you can kinda see how it operates.
+
+54
+00:02:27,900 --> 00:02:31,220
+So, I&#39;ve just pasted in the query.
+
+55
+00:02:31,220 --> 00:02:33,970
+And then I have the results at the bottom.
+
+56
+00:02:33,970 --> 00:02:35,470
+This is a query on datasets
+
+57
+00:02:35,470 --> 00:02:37,730
+and it gives me a bit of information
+
+58
+00:02:37,730 --> 00:02:41,760
+that isn&#39;t present in the data integrity checks.
+
+59
+00:02:41,760 --> 00:02:44,960
+So here I have the number of datasets,
+
+60
+00:02:44,960 --> 00:02:46,910
+the total number of data sets.
+
+61
+00:02:46,910 --> 00:02:49,300
+I have something called datasets abandoned
+
+62
+00:02:49,300 --> 00:02:51,510
+and it gives me a description of what that is.
+
+63
+00:02:51,510 --> 00:02:55,110
+Data sets that have not been changed in the last 100 days
+
+64
+00:02:55,110 --> 00:02:58,690
+and they&#39;re assigned to one or less org units.
+
+65
+00:02:58,690 --> 00:03:02,480
+We then have under this dataset, no updated data.
+
+66
+00:03:02,480 --> 00:03:05,850
+Datasets with no data values with the last updated date
+
+67
+00:03:05,850 --> 00:03:07,810
+within the last three periods
+
+68
+00:03:07,810 --> 00:03:09,813
+based on the data set period type.
+
+69
+00:03:10,890 --> 00:03:13,580
+And then the final one, dataset with no new data,
+
+70
+00:03:13,580 --> 00:03:16,763
+datasets with no data values in the last three periods.
+
+71
+00:03:18,370 --> 00:03:21,010
+So this is helping me to identify basically
+
+72
+00:03:21,010 --> 00:03:24,320
+items that are not being utilized.
+
+73
+00:03:24,320 --> 00:03:26,720
+We can think about how this might affect
+
+74
+00:03:26,720 --> 00:03:28,683
+our completeness for example.
+
+75
+00:03:29,980 --> 00:03:32,110
+If these datasets are not being utilized
+
+76
+00:03:32,110 --> 00:03:34,510
+and we check the completeness of this data,
+
+77
+00:03:34,510 --> 00:03:36,870
+it&#39;s probably going to be pretty low.
+
+78
+00:03:36,870 --> 00:03:39,343
+So the reasoning behind that,
+
+79
+00:03:40,210 --> 00:03:41,800
+there could be different reasonings behind
+
+80
+00:03:41,800 --> 00:03:45,000
+why that&#39;s not being used, but it might not be
+
+81
+00:03:45,000 --> 00:03:48,170
+that this dataset is even being utilized anymore.
+
+82
+00:03:48,170 --> 00:03:52,610
+So, if that&#39;s the case then what do we do
+
+83
+00:03:54,410 --> 00:03:56,640
+with these data sets where there&#39;s no new values
+
+84
+00:03:56,640 --> 00:03:58,650
+for such a long period of time.
+
+85
+00:03:58,650 --> 00:04:00,940
+And you can see this as more of a summary,
+
+86
+00:04:00,940 --> 00:04:04,750
+but this allows you to assess and summarize and share
+
+87
+00:04:04,750 --> 00:04:08,410
+some of these kind of top level issues with others.
+
+88
+00:04:08,410 --> 00:04:10,870
+I&#39;m just going to run another query.
+
+89
+00:04:10,870 --> 00:04:13,340
+So this is the file here,
+
+90
+00:04:13,340 --> 00:04:15,493
+I&#39;ll run it for data elements, for example.
+
+91
+00:04:16,410 --> 00:04:19,530
+Just copy the whole thing.
+
+92
+00:04:19,529 --> 00:04:20,363
+Sorry.
+
+93
+00:04:21,670 --> 00:04:22,703
+Copy it all.
+
+94
+00:04:23,720 --> 00:04:25,090
+And I&#39;m gonna run the query again.
+
+95
+00:04:25,090 --> 00:04:27,000
+I&#39;m just gonna paste it right in there.
+
+96
+00:04:27,000 --> 00:04:29,570
+It&#39;s gonna give me by output at the bottom,
+
+97
+00:04:29,570 --> 00:04:31,710
+and this is for data elements.
+
+98
+00:04:31,710 --> 00:04:34,238
+And you can see the summary of what it&#39;s produced,
+
+99
+00:04:34,238 --> 00:04:36,010
+total number of data elements,
+
+100
+00:04:36,010 --> 00:04:38,053
+data elements not in any groups.
+
+101
+00:04:39,000 --> 00:04:40,480
+And then it has a number of listings
+
+102
+00:04:40,480 --> 00:04:43,060
+for aggregate to data elements in particular.
+
+103
+00:04:43,060 --> 00:04:47,220
+Aggregate dated elements that are not assigned
+
+104
+00:04:47,220 --> 00:04:48,963
+to any organization units,
+
+105
+00:04:49,920 --> 00:04:54,873
+aggregate data elements with no data values.
+
+106
+00:04:56,170 --> 00:04:57,840
+Aggregate data elements with no data values
+
+107
+00:04:57,840 --> 00:05:00,140
+in the last three periods.
+
+108
+00:05:00,140 --> 00:05:03,770
+And the period type is based upon the data set itself.
+
+109
+00:05:03,770 --> 00:05:06,390
+So the last three periods could be the last three months,
+
+110
+00:05:06,390 --> 00:05:09,830
+if the data set is monthly, and it will be quarterly,
+
+111
+00:05:09,830 --> 00:05:11,960
+of course, the last three quarters perhaps,
+
+112
+00:05:11,960 --> 00:05:13,410
+if the data set is quarterly.
+
+113
+00:05:14,710 --> 00:05:18,120
+So you can see what kind of outputs that this produces.
+
+114
+00:05:18,120 --> 00:05:21,420
+So there&#39;s a number of queries there.
+
+115
+00:05:21,420 --> 00:05:23,770
+Maybe not everyone&#39;s going to be able to run them,
+
+116
+00:05:23,770 --> 00:05:28,580
+but if you can, I would suggest maybe on a local instance,
+
+117
+00:05:28,580 --> 00:05:31,800
+for example, you can run some of these queries
+
+118
+00:05:31,800 --> 00:05:33,700
+just to see the output and see
+
+119
+00:05:33,700 --> 00:05:37,150
+if this kind of helps you understand the setup
+
+120
+00:05:37,150 --> 00:05:39,900
+of the database you&#39;re working with a little bit more.
+
+121
+00:05:39,900 --> 00:05:43,510
+I think it also presents quite easy to understand
+
+122
+00:05:43,510 --> 00:05:46,910
+outputs for others to kind of review.
+
+123
+00:05:46,910 --> 00:05:48,850
+So it&#39;s not just something internally,
+
+124
+00:05:48,850 --> 00:05:50,820
+even though maybe they might need
+
+125
+00:05:50,820 --> 00:05:53,720
+a little bit of help producing these outputs.
+
+126
+00:05:53,720 --> 00:05:54,990
+I think that is something very nice
+
+127
+00:05:54,990 --> 00:05:57,150
+to present to others at a top level.
+
+128
+00:05:57,150 --> 00:05:59,120
+Obviously you will have to investigate.
+
+129
+00:05:59,120 --> 00:06:04,120
+For example, if you say, this last row in this table,
+
+130
+00:06:04,520 --> 00:06:07,100
+data element, no analysis.
+
+131
+00:06:07,100 --> 00:06:11,440
+There&#39;s 110 of these data elements that are not used
+
+132
+00:06:11,440 --> 00:06:15,090
+in any favorites, either directly or through indicators.
+
+133
+00:06:15,090 --> 00:06:16,530
+So you&#39;re gonna have to investigate
+
+134
+00:06:16,530 --> 00:06:19,890
+what are those data elements that aren&#39;t being used.
+
+135
+00:06:19,890 --> 00:06:22,310
+But at a very top level I think it&#39;s it&#39;s quite easy
+
+136
+00:06:22,310 --> 00:06:23,850
+to present these summaries and say,
+
+137
+00:06:23,850 --> 00:06:27,460
+this is why we might need to consider making some changes.
+
+138
+00:06:27,460 --> 00:06:30,310
+We have all this kind of abandoned,
+
+139
+00:06:30,310 --> 00:06:33,070
+disparate metadata in our system
+
+140
+00:06:33,070 --> 00:06:35,840
+that&#39;s just causing all kinds of problems,
+
+141
+00:06:35,840 --> 00:06:37,193
+and what do we do with it?
+
+142
+00:06:38,030 --> 00:06:42,090
+So, those are some of the tools you can use
+
+143
+00:06:42,090 --> 00:06:45,050
+in order to assess this a little bit more.
+
+144
+00:06:45,050 --> 00:06:49,186
+These SQL queries, you can run some as SQL views,
+
+145
+00:06:49,186 --> 00:06:51,700
+but there are some that you just cannot.
+
+146
+00:06:51,700 --> 00:06:54,100
+It will not allow you to do to the tables
+
+147
+00:06:54,100 --> 00:06:55,030
+that you&#39;re accessing.
+
+148
+00:06:55,030 --> 00:06:59,330
+So, the most foolproof way to make sure
+
+149
+00:06:59,330 --> 00:07:02,290
+you can run all of them is to have direct database access.
+
+150
+00:07:02,290 --> 00:07:04,570
+And then of course, you can run them directly
+
+151
+00:07:04,570 --> 00:07:06,283
+and get the output that you need.
+
+152
+00:07:09,130 --> 00:07:12,240
+So, the whole point of this was just to make you aware
+
+153
+00:07:12,240 --> 00:07:15,050
+that these tools are available.
+
+154
+00:07:15,050 --> 00:07:16,400
+Might not be the case where
+
+155
+00:07:16,400 --> 00:07:18,140
+you&#39;re actually doing this yourself.
+
+156
+00:07:18,140 --> 00:07:20,560
+It might be the case of course, where you are.
+
+157
+00:07:20,560 --> 00:07:23,540
+But now that you know they are available,
+
+158
+00:07:23,540 --> 00:07:26,543
+it&#39;s just another kind of way to help you assess the system.
+

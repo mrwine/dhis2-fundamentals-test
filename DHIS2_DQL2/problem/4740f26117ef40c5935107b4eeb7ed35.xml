@@ -1,0 +1,23 @@
+<problem display_name="Question 11" markdown="A validation rule compares the following 2 data elements:&#10;-Malaria RDT done OPD &amp;#60; 5 years&#10;-Malaria RDT confirmed OPD &amp;#60; 5 years&#10;Using best practice, select the correct option for creating this rule: &#10;&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts)&lt;&lt;&#10;&#10;( ) A. Malaria RDT done OPD &amp;#60; 5 years == Malaria RDT confirmed OPD &amp;#60; 5 years&#10;( ) B. Malaria RDT done OPD &amp;#60; 5 years &amp;#62;= Malaria RDT confirmed OPD &amp;#60; 5 years&#10;( ) C.Malaria RDT done OPD &amp;#60; 5 years &amp;#60;= Malaria RDT confirmed OPD &amp;#60; 5 years&#10;(x) D. Malaria RDT confirmed OPD &amp;#60; 5 years &amp;#60;= Malaria RDT done OPD &amp;#60; 5 years  &#10;&#10;[explanation]&#10;In this scenario, the number of confirmed cases identified by RDT should be less then or equal to the number of RDT tests performed.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <p>A validation rule compares the following 2 data elements:</p>
+<p>-Malaria RDT done OPD &lt; 5 years</p>
+<p>-Malaria RDT confirmed OPD &lt; 5 years</p>
+<p>Using best practice, select the correct option for creating this rule: </p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Malaria RDT done OPD &lt; 5 years == Malaria RDT confirmed OPD &lt; 5 years</choice>
+    <choice correct="false">B. Malaria RDT done OPD &lt; 5 years &gt;= Malaria RDT confirmed OPD &lt; 5 years</choice>
+    <choice correct="false">C.Malaria RDT done OPD &lt; 5 years &lt;= Malaria RDT confirmed OPD &lt; 5 years</choice>
+    <choice correct="true">D. Malaria RDT confirmed OPD &lt; 5 years &lt;= Malaria RDT done OPD &lt; 5 years</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>In this scenario, the number of confirmed cases identified by RDT should be less then or equal to the number of RDT tests performed.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

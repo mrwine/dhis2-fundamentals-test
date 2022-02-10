@@ -1,0 +1,812 @@
+0
+00:00:00,360 --> 00:00:02,660
+- [Instructor] So, in the previous set of discussions
+
+1
+00:00:02,660 --> 00:00:05,930
+that I&#39;ve been having about customization,
+
+2
+00:00:05,930 --> 00:00:07,300
+I think that there&#39;s a lot of ways
+
+3
+00:00:07,300 --> 00:00:10,010
+we can influence our partners
+
+4
+00:00:10,010 --> 00:00:12,290
+and our organizations that we&#39;re working with
+
+5
+00:00:12,290 --> 00:00:14,330
+to think through some of these measures
+
+6
+00:00:14,330 --> 00:00:17,333
+or at least identify some of these challenges.
+
+7
+00:00:18,310 --> 00:00:19,620
+Now I&#39;d like to talk about things
+
+8
+00:00:19,620 --> 00:00:21,630
+where I didn&#39;t have the answer
+
+9
+00:00:21,630 --> 00:00:24,400
+in a lot of cases in the previous examples,
+
+10
+00:00:24,400 --> 00:00:26,833
+but I think that they&#39;re relatively,
+
+11
+00:00:27,970 --> 00:00:29,520
+they&#39;re something that we can influence,
+
+12
+00:00:29,520 --> 00:00:30,930
+something that we can support,
+
+13
+00:00:30,930 --> 00:00:34,070
+something that we can transfer to countries.
+
+14
+00:00:34,070 --> 00:00:36,240
+But then we have other problems
+
+15
+00:00:36,240 --> 00:00:37,890
+that are to do with maintenance,
+
+16
+00:00:37,890 --> 00:00:40,460
+that are maybe a bit more challenging to handle,
+
+17
+00:00:40,460 --> 00:00:42,550
+something we can have less influence on.
+
+18
+00:00:42,550 --> 00:00:44,600
+And it&#39;s more difficult
+
+19
+00:00:44,600 --> 00:00:47,920
+to write up procedures on supporting.
+
+20
+00:00:47,920 --> 00:00:50,230
+So what I want to talk about in this
+
+21
+00:00:50,230 --> 00:00:52,300
+kind of part of our demonstration
+
+22
+00:00:52,300 --> 00:00:54,993
+is talking about general maintenance challenges,
+
+23
+00:00:55,940 --> 00:00:58,870
+challenges with organization unit management,
+
+24
+00:00:58,870 --> 00:01:02,380
+challenges with users and challenges with sharing.
+
+25
+00:01:02,380 --> 00:01:04,940
+And where I am coming from from this perspective
+
+26
+00:01:04,940 --> 00:01:07,030
+is that there are challenges
+
+27
+00:01:07,030 --> 00:01:09,550
+basically with showing other people
+
+28
+00:01:09,550 --> 00:01:11,560
+to manage these things in the way they want,
+
+29
+00:01:11,560 --> 00:01:12,650
+because the user interface
+
+30
+00:01:12,650 --> 00:01:14,960
+is not really there in the same way it is
+
+31
+00:01:14,960 --> 00:01:16,160
+for some of the other issues
+
+32
+00:01:16,160 --> 00:01:17,810
+that I&#39;ve been discussing so far.
+
+33
+00:01:21,740 --> 00:01:24,150
+So some of the general challenges that we have,
+
+34
+00:01:24,150 --> 00:01:27,920
+well, one big challenge is batch changes to metadata.
+
+35
+00:01:27,920 --> 00:01:30,450
+As an example, let&#39;s say we need to correct
+
+36
+00:01:30,450 --> 00:01:32,730
+the number type of data elements.
+
+37
+00:01:32,730 --> 00:01:35,050
+So we have a number of data elements
+
+38
+00:01:35,050 --> 00:01:38,600
+that have the number value type associated with it.
+
+39
+00:01:38,600 --> 00:01:41,753
+We want to change these to positive or zero integer.
+
+40
+00:01:42,700 --> 00:01:45,330
+So what&#39;s an easy way for someone
+
+41
+00:01:45,330 --> 00:01:49,540
+who might not know how to import metadata to do this,
+
+42
+00:01:49,540 --> 00:01:52,520
+or modified metadata through the API or through SQL
+
+43
+00:01:52,520 --> 00:01:56,020
+or some other way that maybe we know how to do it?
+
+44
+00:01:56,020 --> 00:01:58,660
+Maybe us as groups know how to do,
+
+45
+00:01:58,660 --> 00:02:00,670
+but can often be challenging
+
+46
+00:02:00,670 --> 00:02:03,670
+to transfer to others, right?
+
+47
+00:02:03,670 --> 00:02:05,400
+Because we want to impart this knowledge to others,
+
+48
+00:02:05,400 --> 00:02:07,420
+this is something that system administrators
+
+49
+00:02:07,420 --> 00:02:08,890
+often have to deal with.
+
+50
+00:02:08,889 --> 00:02:11,520
+So how do we fix these types of things?
+
+51
+00:02:11,520 --> 00:02:14,550
+Searching and filtering is another example.
+
+52
+00:02:14,550 --> 00:02:17,180
+We cannot, for example, list all the data elements
+
+53
+00:02:17,180 --> 00:02:20,810
+associated with a particular data set or a program.
+
+54
+00:02:20,810 --> 00:02:22,480
+Now I know there are ways of doing this.
+
+55
+00:02:22,480 --> 00:02:23,650
+We can do this through the API.
+
+56
+00:02:23,650 --> 00:02:25,830
+We can do this through an SQL query,
+
+57
+00:02:25,830 --> 00:02:29,530
+but we cannot easily do this through the maintenance app.
+
+58
+00:02:29,530 --> 00:02:31,450
+So how do we kind of show others
+
+59
+00:02:31,450 --> 00:02:33,480
+who might not have that skill set to do this,
+
+60
+00:02:33,480 --> 00:02:36,780
+even though it&#39;s something we would expect people to do?
+
+61
+00:02:36,780 --> 00:02:39,550
+Now, so, this is something where influence
+
+62
+00:02:39,550 --> 00:02:41,640
+on how we approach these things.
+
+63
+00:02:41,640 --> 00:02:43,840
+It&#39;s not really clear at this point in time.
+
+64
+00:02:44,750 --> 00:02:48,073
+Dealing with unwanted objects is also often difficult.
+
+65
+00:02:49,030 --> 00:02:50,660
+Removing data elements with data,
+
+66
+00:02:50,660 --> 00:02:52,890
+both in aggregate and tracker,
+
+67
+00:02:52,890 --> 00:02:55,143
+can be quite significantly difficult.
+
+68
+00:02:56,490 --> 00:02:57,940
+Every time you enter a data value,
+
+69
+00:02:57,940 --> 00:03:00,260
+there&#39;s then an audit type of value
+
+70
+00:03:00,260 --> 00:03:01,910
+that gets associated with that data element.
+
+71
+00:03:01,910 --> 00:03:04,410
+And there&#39;s this basically set of relationships
+
+72
+00:03:04,410 --> 00:03:05,840
+that is then created.
+
+73
+00:03:05,840 --> 00:03:07,890
+We have to remove all the dependencies
+
+74
+00:03:07,890 --> 00:03:09,610
+first in the correct order
+
+75
+00:03:09,610 --> 00:03:10,880
+or remove them all at once,
+
+76
+00:03:10,880 --> 00:03:13,820
+depending on what the relationships are like.
+
+77
+00:03:13,820 --> 00:03:16,470
+And then we can finally remove maybe a data element
+
+78
+00:03:16,470 --> 00:03:19,720
+we&#39;ve created and just wanted to test.
+
+79
+00:03:19,720 --> 00:03:22,160
+But this makes development processes
+
+80
+00:03:22,160 --> 00:03:24,780
+a little bit more challenging than they need to be,
+
+81
+00:03:24,780 --> 00:03:26,960
+because there&#39;s no cascading delete.
+
+82
+00:03:26,960 --> 00:03:28,470
+Now at the same time,
+
+83
+00:03:28,470 --> 00:03:30,390
+there is some good reasons for that perhaps
+
+84
+00:03:30,390 --> 00:03:31,320
+because you don&#39;t want people
+
+85
+00:03:31,320 --> 00:03:32,410
+to just go through your system
+
+86
+00:03:32,410 --> 00:03:34,750
+and remove necessary items,
+
+87
+00:03:34,750 --> 00:03:36,450
+but it does make it a bit difficult
+
+88
+00:03:36,450 --> 00:03:37,600
+when you need to remove things
+
+89
+00:03:37,600 --> 00:03:39,513
+that need to actually be removed.
+
+90
+00:03:40,490 --> 00:03:43,463
+Removing users is also challenging.
+
+91
+00:03:44,650 --> 00:03:46,130
+So anytime a user does something,
+
+92
+00:03:46,130 --> 00:03:48,680
+there&#39;s also relationships that are there
+
+93
+00:03:48,680 --> 00:03:51,360
+and they might just be associated
+
+94
+00:03:51,360 --> 00:03:53,250
+with maybe a private or empty dashboard
+
+95
+00:03:53,250 --> 00:03:54,930
+or something else in your system.
+
+96
+00:03:54,930 --> 00:03:56,460
+There&#39;s some relationship there
+
+97
+00:03:56,460 --> 00:04:00,900
+that is not really clear to you why that&#39;s occurring.
+
+98
+00:04:00,900 --> 00:04:02,960
+So the general processes
+
+99
+00:04:02,960 --> 00:04:05,580
+that probably many people follow is to disable users
+
+100
+00:04:05,580 --> 00:04:07,720
+and there might be some reasoning behind that,
+
+101
+00:04:07,720 --> 00:04:09,270
+but then you might find a user
+
+102
+00:04:09,270 --> 00:04:12,370
+who&#39;s been inactive for 12 months or two years,
+
+103
+00:04:12,370 --> 00:04:14,630
+and they&#39;re completely gone.
+
+104
+00:04:14,630 --> 00:04:16,840
+They&#39;re not associated with the health system anymore,
+
+105
+00:04:16,839 --> 00:04:18,960
+either, maybe a partner of some kind,
+
+106
+00:04:18,959 --> 00:04:21,070
+for example, that was accessing the system,
+
+107
+00:04:21,070 --> 00:04:24,320
+but it&#39;s now located in a completely different place.
+
+108
+00:04:24,320 --> 00:04:26,230
+And there&#39;s no real easy way
+
+109
+00:04:26,230 --> 00:04:28,000
+to delete these types of users
+
+110
+00:04:28,000 --> 00:04:31,350
+or even deleting test users that are just associated
+
+111
+00:04:31,350 --> 00:04:34,403
+with one or two objects somewhere in your system.
+
+112
+00:04:36,410 --> 00:04:39,510
+Another kind of potential challenge is merging orgunits.
+
+113
+00:04:39,510 --> 00:04:43,370
+So over time, if you need to modify orgunits in any way,
+
+114
+00:04:43,370 --> 00:04:45,090
+there&#39;s no real easy way to do this.
+
+115
+00:04:45,090 --> 00:04:47,750
+You can, there is some interface for this,
+
+116
+00:04:47,750 --> 00:04:51,000
+but it does become challenging
+
+117
+00:04:51,000 --> 00:04:52,560
+to actually implement this in practice
+
+118
+00:04:52,560 --> 00:04:54,830
+because you can also really mess things up
+
+119
+00:04:54,830 --> 00:04:55,993
+if you&#39;re not careful.
+
+120
+00:04:58,010 --> 00:05:00,920
+And of course, when you do any of these operations,
+
+121
+00:05:00,920 --> 00:05:02,810
+that the feedback is very limited,
+
+122
+00:05:02,810 --> 00:05:05,160
+particularly through the user interface.
+
+123
+00:05:05,160 --> 00:05:07,940
+So we can access the log and we can pull out
+
+124
+00:05:07,940 --> 00:05:09,910
+this information perhaps and see
+
+125
+00:05:09,910 --> 00:05:12,370
+exactly what the dependency is,
+
+126
+00:05:12,370 --> 00:05:13,610
+which table it&#39;s referencing,
+
+127
+00:05:13,610 --> 00:05:15,900
+and what we need to do to remove it.
+
+128
+00:05:15,900 --> 00:05:19,780
+But this does not really translate well
+
+129
+00:05:19,780 --> 00:05:21,780
+to working with our partners
+
+130
+00:05:21,780 --> 00:05:23,330
+and our countries all the time,
+
+131
+00:05:24,230 --> 00:05:26,360
+compared to a lot of the other operations
+
+132
+00:05:26,360 --> 00:05:27,560
+that we&#39;ve talked about.
+
+133
+00:05:31,810 --> 00:05:33,610
+So from that perspective,
+
+134
+00:05:33,610 --> 00:05:37,140
+let&#39;s take a look at organization unit management first.
+
+135
+00:05:37,140 --> 00:05:41,410
+So we&#39;ve talked a bit about things like completeness,
+
+136
+00:05:41,410 --> 00:05:44,480
+and we certainly talked a lot about categories,
+
+137
+00:05:44,480 --> 00:05:46,640
+desegregations from categories.
+
+138
+00:05:46,640 --> 00:05:48,170
+Now, organization unit group sets
+
+139
+00:05:48,170 --> 00:05:50,150
+are another type of desegregation.
+
+140
+00:05:50,150 --> 00:05:53,170
+And we haven&#39;t talked about that too much so far,
+
+141
+00:05:53,170 --> 00:05:55,520
+other than knowing that it is a data dimension
+
+142
+00:05:55,520 --> 00:05:57,820
+that we should consider whether or not we to use
+
+143
+00:05:57,820 --> 00:06:00,660
+as one directly in our analysis tools,
+
+144
+00:06:00,660 --> 00:06:03,790
+but using these organization units
+
+145
+00:06:03,790 --> 00:06:07,030
+to analyze our data is obviously critical.
+
+146
+00:06:07,030 --> 00:06:08,690
+Everything about completeness associated
+
+147
+00:06:08,690 --> 00:06:10,560
+with our organization units here,
+
+148
+00:06:10,560 --> 00:06:13,080
+or sorry, is tied to our organization units.
+
+149
+00:06:13,080 --> 00:06:16,000
+We also want to be able to desegregate
+
+150
+00:06:16,000 --> 00:06:19,710
+by various organization unit group sets, right?
+
+151
+00:06:19,710 --> 00:06:21,890
+So by type, by ownership, whatever it might be,
+
+152
+00:06:21,890 --> 00:06:23,640
+whatever are the common kind
+
+153
+00:06:23,640 --> 00:06:26,030
+of organization unit groups and group sets
+
+154
+00:06:26,030 --> 00:06:28,150
+that you&#39;ve created in your system
+
+155
+00:06:28,150 --> 00:06:32,260
+for people to desegregate data down further by.
+
+156
+00:06:32,260 --> 00:06:34,740
+So this become critical to manage.
+
+157
+00:06:34,740 --> 00:06:36,740
+Obviously, we know organization units
+
+158
+00:06:36,740 --> 00:06:39,440
+are the backbone of many systems
+
+159
+00:06:39,440 --> 00:06:42,380
+and there&#39;s all kinds of other areas
+
+160
+00:06:42,380 --> 00:06:43,950
+that they affect on system design,
+
+161
+00:06:43,950 --> 00:06:45,450
+but we&#39;ll limit the scope
+
+162
+00:06:45,450 --> 00:06:48,230
+to kind of more focusing on the data quality
+
+163
+00:06:48,230 --> 00:06:50,110
+and data use aspect.
+
+164
+00:06:50,110 --> 00:06:52,040
+So what are the best practices
+
+165
+00:06:52,040 --> 00:06:54,660
+for actually managing these orgunits?
+
+166
+00:06:54,660 --> 00:06:57,900
+So, also writing down who does what
+
+167
+00:06:57,900 --> 00:07:01,060
+for organization units is very important.
+
+168
+00:07:01,060 --> 00:07:03,710
+So if you have any standard operating procedures on this,
+
+169
+00:07:03,710 --> 00:07:05,990
+that&#39;s very important to establish.
+
+170
+00:07:05,990 --> 00:07:08,320
+That&#39;s more of a proactive solution
+
+171
+00:07:08,320 --> 00:07:10,860
+than kind of trying to fix things after the fact,
+
+172
+00:07:10,860 --> 00:07:14,910
+because it does help you kind of train people
+
+173
+00:07:14,910 --> 00:07:16,500
+to do this a bit more,
+
+174
+00:07:16,500 --> 00:07:18,500
+but actually implementing decentralized
+
+175
+00:07:18,500 --> 00:07:21,470
+organization unit management can be very difficult.
+
+176
+00:07:21,470 --> 00:07:22,770
+You might only have a central team
+
+177
+00:07:22,770 --> 00:07:26,950
+who&#39;s managing literally thousands of organization units.
+
+178
+00:07:26,950 --> 00:07:28,750
+And this can become challenging
+
+179
+00:07:28,750 --> 00:07:30,473
+to kind of keep that up to date.
+
+180
+00:07:32,370 --> 00:07:33,710
+Also for data set assignment,
+
+181
+00:07:33,710 --> 00:07:35,220
+because data set assignment
+
+182
+00:07:35,220 --> 00:07:38,023
+has a big effect on completeness,
+
+183
+00:07:38,920 --> 00:07:41,500
+we often take shortcuts when we do this.
+
+184
+00:07:41,500 --> 00:07:43,037
+So maybe we&#39;ll just say,
+
+185
+00:07:43,037 --> 00:07:46,520
+&quot;Assign my data set to the facility level,&quot;
+
+186
+00:07:46,520 --> 00:07:50,510
+but who&#39;s actually reporting on that data set?
+
+187
+00:07:50,510 --> 00:07:51,620
+Is it every facility?
+
+188
+00:07:51,620 --> 00:07:53,970
+Is it a subset of facilities?
+
+189
+00:07:53,970 --> 00:07:55,630
+Are there facilities who aren&#39;t reporting
+
+190
+00:07:55,630 --> 00:07:58,220
+and this is contributing to a lower reporting rate?
+
+191
+00:07:58,220 --> 00:08:01,150
+So these types of things can have a direct effect
+
+192
+00:08:01,150 --> 00:08:04,410
+actually on what we see in our analysis
+
+193
+00:08:04,410 --> 00:08:06,810
+when we&#39;re performing various items.
+
+194
+00:08:06,810 --> 00:08:11,120
+So there are different ways to assign basically.
+
+195
+00:08:11,120 --> 00:08:14,930
+There&#39;s not good ways through the interface, so, right?
+
+196
+00:08:14,930 --> 00:08:18,530
+So that&#39;s a bit of a challenge as well.
+
+197
+00:08:18,530 --> 00:08:20,810
+How do we transfer this down to to others
+
+198
+00:08:20,810 --> 00:08:23,020
+when everything that might,
+
+199
+00:08:23,020 --> 00:08:24,740
+when a lot of things I should say
+
+200
+00:08:24,740 --> 00:08:26,640
+that would be useful perhaps,
+
+201
+00:08:26,640 --> 00:08:28,820
+we have to come up with a different solution
+
+202
+00:08:28,820 --> 00:08:30,873
+to implement in practice.
+

@@ -1,0 +1,19 @@
+<problem display_name="Graded question - Historical Data " markdown="&gt;&gt;We can use the category combo override function to… (2 attempts)&lt;&lt;&#10;&#10;( ) A. Delete category combinations.&#10;(x) B. Re-use data elements that have disaggregations changed due to form updates.&#10;( ) C. Move data from one category combination to another.&#10;&#10;[explanation] &#10;We can use the category combo override function to reuse data elements that have disaggregations changed due to form updates. This allows us to see historical data trends as far back as there is data for a data element. Unfortunately, there is no easy way to move data from one category combination to another, and we cannot delete category combinations with this function.&#10;[explanation]">
+<multiplechoiceresponse>
+  <label>We can use the category combo override function to… (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Delete category combinations.</choice>
+    <choice correct="true">B. Re-use data elements that have disaggregations changed due to form updates.</choice>
+    <choice correct="false">C. Move data from one category combination to another.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p> </p>
+<p>We can use the category combo override function to reuse data elements that have disaggregations changed due to form updates. This allows us to see historical data trends as far back as there is data for a data element. Unfortunately, there is no easy way to move data from one category combination to another, and we cannot delete category combinations with this function.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

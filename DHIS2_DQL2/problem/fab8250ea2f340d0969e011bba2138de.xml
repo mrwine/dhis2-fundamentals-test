@@ -1,0 +1,20 @@
+<problem display_name="Question 5" markdown="Continue to review the Consistency-Data dashboard. Set Data = District; Period = March 2021; Boundary = Other, then District A-3; Disaggregation = Facility; &#10;Is the following statement True or False: &#10;During the last 12 months, most health facilities of District A-3 reported a higher number of 1st doses of Penta vaccine than 3rd doses of Penta vaccine.&#10;&#10;&gt;&gt;Select the one correct answer: (1 attempt)&lt;&lt;&#10;&#10;( ) True&#10;(x) False    &#10;&#10;[explanation]&#10;The correct answer is False. &#10;[explanation]" max_attempts="1">
+<multiplechoiceresponse>
+  <p>Continue to review the Consistency-Data dashboard. Set Data = District; Period = March 2021; Boundary = Other, then District A-3; Disaggregation = Facility; </p>
+<p>Is the following statement True or False: </p>
+<p>During the last 12 months, most health facilities of District A-3 reported a higher number of 1st doses of Penta vaccine than 3rd doses of Penta vaccine.</p>
+<label>Select the one correct answer: (1 attempt)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">True</choice>
+    <choice correct="true">False</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is False. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

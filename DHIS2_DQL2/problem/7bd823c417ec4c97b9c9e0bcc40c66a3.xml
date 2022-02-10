@@ -1,0 +1,19 @@
+<problem display_name="Standard Deviation Predictors Question 2" markdown="Data quality issues:&#10;&#10;&gt;&gt;Select all that apply: (2 attempts)&lt;&lt;&#10;&#10;[x] A. Are a fact of life in any information system&#10;[x] B. Are something that should be corrected routinely at all levels and covered in clear standard operating procedures&#10;[x] C. Should be sent to the user as notifications or alerts if necessary&#10;&#10;[explanation]&#10;All options are  correct. Data Quality issues are a fact of life in any information system, are something that should be corrected routinely at all levels and covered in clear standard operating procedures AND should be sent to the user as notifications or alerts if necessary.&#10;[explanation]" max_attempts="2">
+<choiceresponse>
+  <p>Data quality issues:</p>
+<label>Select all that apply: (2 attempts)</label>
+<checkboxgroup>
+    <choice correct="true">A. Are a fact of life in any information system</choice>
+    <choice correct="true">B. Are something that should be corrected routinely at all levels and covered in clear standard operating procedures</choice>
+    <choice correct="true">C. Should be sent to the user as notifications or alerts if necessary</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>All options are  correct. Data Quality issues are a fact of life in any information system, are something that should be corrected routinely at all levels and covered in clear standard operating procedures AND should be sent to the user as notifications or alerts if necessary.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

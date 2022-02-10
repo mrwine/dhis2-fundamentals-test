@@ -1,0 +1,10 @@
+<problem display_name="Exercise Completion" markdown="&gt;&gt;I have attempted to run the data integrity check in DHIS2 ||(1 attempt) &lt;&lt;&#10;&#10;(x) Yes&#10;( ) No&#10;" max_attempts="1">
+<multiplechoiceresponse>
+  <label>I have attempted to run the data integrity check in DHIS2 </label>
+<description>(1 attempt) </description>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">Yes</choice>
+    <choice correct="false">No</choice>
+  </choicegroup>
+</multiplechoiceresponse>
+</problem>

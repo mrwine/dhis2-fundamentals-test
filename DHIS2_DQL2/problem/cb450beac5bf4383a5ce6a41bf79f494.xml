@@ -1,0 +1,17 @@
+<problem display_name="Graded question - Naming Conventions - Question 1" markdown="&gt;&gt;True or False: The text 'Number of' is appropriate at the beginning of a data element name. (1 attempt)&lt;&lt;&#10;&#10;( ) True&#10;(x) False&#10;&#10;[explanation]&#10;It can be used in the form or in the description, but it is not required in the actual name.&#10;[explanation]" max_attempts="1">
+<multiplechoiceresponse>
+  <label>True or False: The text 'Number of' is appropriate at the beginning of a data element name. (1 attempt)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">True</choice>
+    <choice correct="true">False</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>It can be used in the form or in the description, but it is not required in the actual name.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

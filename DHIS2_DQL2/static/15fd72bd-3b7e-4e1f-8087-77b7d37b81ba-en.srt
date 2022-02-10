@@ -1,0 +1,1212 @@
+0
+00:00:00,660 --> 00:00:03,120
+- [Man] So mapping reference numerators.
+
+1
+00:00:03,120 --> 00:00:07,663
+It is not always easy to identify the best data element.
+
+2
+00:00:10,140 --> 00:00:11,263
+Why not?
+
+3
+00:00:12,240 --> 00:00:16,470
+In principle, you just find the data element group
+
+4
+00:00:16,470 --> 00:00:19,700
+and then in the group you select the indicator
+
+5
+00:00:19,700 --> 00:00:21,350
+or the data elements rather.
+
+6
+00:00:21,350 --> 00:00:25,330
+So in principle, it&#39;s as easy as falling out of bed
+
+7
+00:00:25,330 --> 00:00:26,430
+in the morning.
+
+8
+00:00:26,430 --> 00:00:29,763
+But let&#39;s go on.
+
+9
+00:00:31,067 --> 00:00:33,010
+Okay. Why?
+
+10
+00:00:33,010 --> 00:00:38,010
+Challenge number one is this is not so unusual.
+
+11
+00:00:38,020 --> 00:00:43,020
+This is a national instance that has 8,000 data elements.
+
+12
+00:00:43,020 --> 00:00:45,990
+So finding the right data element
+
+13
+00:00:45,990 --> 00:00:49,083
+is the proverbial needle in the haystack.
+
+14
+00:00:52,580 --> 00:00:54,553
+So let me go to the next point.
+
+15
+00:00:56,890 --> 00:00:59,300
+You may find yourself in searching,
+
+16
+00:00:59,300 --> 00:01:02,240
+and this is searching in the Pivot Table app,
+
+17
+00:01:02,240 --> 00:01:03,350
+for
+
+18
+00:01:05,840 --> 00:01:07,180
+just the right one.
+
+19
+00:01:07,180 --> 00:01:10,940
+And we use the search function, all data elements.
+
+20
+00:01:10,940 --> 00:01:15,680
+In the Pivot Table app you can do all data elements.
+
+21
+00:01:15,680 --> 00:01:19,770
+So you could, and I&#39;m sure you&#39;ve done this yourself,
+
+22
+00:01:19,770 --> 00:01:22,680
+search for all of the data elements
+
+23
+00:01:22,680 --> 00:01:24,763
+that are related to DPT.
+
+24
+00:01:27,040 --> 00:01:31,390
+This isn&#39;t possible, again, within the Data Quality tool.
+
+25
+00:01:31,390 --> 00:01:35,330
+So you have to do some homework in advance
+
+26
+00:01:35,330 --> 00:01:40,330
+and use some other app like the Pivot Table app
+
+27
+00:01:40,690 --> 00:01:44,233
+to find just the right data element.
+
+28
+00:01:51,890 --> 00:01:53,663
+Okay. Of course,
+
+29
+00:01:55,610 --> 00:02:00,450
+one way of dealing with this proliferation of data elements
+
+30
+00:02:00,450 --> 00:02:04,990
+is to form groups or either a data element group
+
+31
+00:02:04,990 --> 00:02:06,313
+or an indicator group.
+
+32
+00:02:08,880 --> 00:02:11,750
+This is even an essential step
+
+33
+00:02:12,760 --> 00:02:15,840
+for configuration of the Data Quality tool,
+
+34
+00:02:15,840 --> 00:02:19,020
+because if your data element has not already been
+
+35
+00:02:19,020 --> 00:02:22,100
+assigned to a group, as I said before,
+
+36
+00:02:22,100 --> 00:02:25,180
+you&#39;re not going to be able to grab hold of it
+
+37
+00:02:26,510 --> 00:02:29,800
+when configuring the Data Quality tool dashboard.
+
+38
+00:02:29,800 --> 00:02:34,130
+So your data element needs to be in a group
+
+39
+00:02:34,130 --> 00:02:38,260
+and ideally your group should have
+
+40
+00:02:38,260 --> 00:02:43,260
+just a limited number of data elements in it.
+
+41
+00:02:43,310 --> 00:02:47,450
+I comment here about data element groups.
+
+42
+00:02:47,450 --> 00:02:48,793
+I have started,
+
+43
+00:02:49,690 --> 00:02:53,700
+when working and supporting configuration,
+
+44
+00:02:53,700 --> 00:02:56,880
+I&#39;ve started to form a
+
+45
+00:02:57,720 --> 00:03:00,940
+special group called Data Quality
+
+46
+00:03:00,940 --> 00:03:04,350
+and I put into that data element group
+
+47
+00:03:04,350 --> 00:03:06,550
+all of the numerators
+
+48
+00:03:06,550 --> 00:03:11,550
+that I think the ministry is interested in reviewing.
+
+49
+00:03:12,960 --> 00:03:17,380
+Hopefully that list is not too large
+
+50
+00:03:17,380 --> 00:03:20,800
+and this is where we advocate
+
+51
+00:03:20,800 --> 00:03:24,540
+for encouraging the ministry
+
+52
+00:03:24,540 --> 00:03:29,520
+to identify a small number of data elements
+
+53
+00:03:29,520 --> 00:03:33,720
+and indicators that they want to look at.
+
+54
+00:03:33,720 --> 00:03:36,790
+If you&#39;ve got 8,000 data elements
+
+55
+00:03:36,790 --> 00:03:39,160
+and 5,000 indicators,
+
+56
+00:03:39,160 --> 00:03:41,620
+there is absolutely no way
+
+57
+00:03:41,620 --> 00:03:46,620
+that you can keep informed about quality issues
+
+58
+00:03:46,820 --> 00:03:51,090
+with thousands of data elements and indicators.
+
+59
+00:03:51,090 --> 00:03:54,490
+So an essential step, absolutely essential
+
+60
+00:03:54,490 --> 00:03:58,750
+is that the ministry makes some decision about
+
+61
+00:03:58,750 --> 00:04:03,750
+a group of, let&#39;s say, at most 50 indicators
+
+62
+00:04:03,800 --> 00:04:05,750
+that they want to be tracking
+
+63
+00:04:06,950 --> 00:04:08,420
+the programs.
+
+64
+00:04:08,420 --> 00:04:10,030
+Now
+
+65
+00:04:10,030 --> 00:04:15,030
+the tuberculosis program, if they have data and VHIS too,
+
+66
+00:04:15,290 --> 00:04:18,800
+they may say, &quot;Well sorry, we want to look at more than 50.&quot;
+
+67
+00:04:18,800 --> 00:04:23,230
+So maybe each program in addition would have its own list
+
+68
+00:04:23,230 --> 00:04:26,340
+of 30 that it wants to look at.
+
+69
+00:04:26,340 --> 00:04:30,130
+So this is an essential governance step
+
+70
+00:04:30,130 --> 00:04:34,280
+that the ministry has to go through in deciding
+
+71
+00:04:34,280 --> 00:04:38,760
+what are these core indicators, to use the word core
+
+72
+00:04:38,760 --> 00:04:40,683
+in a somewhat different since,
+
+73
+00:04:41,590 --> 00:04:45,160
+and I don&#39;t know, Nick, do you have any other words
+
+74
+00:04:45,160 --> 00:04:49,292
+of advice on how we address this bottleneck
+
+75
+00:04:49,292 --> 00:04:53,720
+and people selecting the indicator lists
+
+76
+00:04:53,720 --> 00:04:56,143
+that are most important?
+
+77
+00:04:59,370 --> 00:05:01,050
+- [Nick] No, I think it&#39;s just,
+
+78
+00:05:01,050 --> 00:05:04,083
+some of this comes down to the database design obviously.
+
+79
+00:05:05,580 --> 00:05:08,080
+We&#39;ll talk about that more potentially later on.
+
+80
+00:05:08,080 --> 00:05:11,215
+But I think you&#39;ve covered the pertinent points.
+
+81
+00:05:11,215 --> 00:05:14,330
+It&#39;s just basically can be quite difficult to manage
+
+82
+00:05:14,330 --> 00:05:16,780
+because the tool itself has its limitations
+
+83
+00:05:16,780 --> 00:05:19,610
+in how you map things and then of course the database
+
+84
+00:05:19,610 --> 00:05:22,840
+on top of this, whichever database that you&#39;re using,
+
+85
+00:05:22,840 --> 00:05:25,500
+will have its own limitations and how things are organized
+
+86
+00:05:25,500 --> 00:05:27,560
+and they&#39;re often not optimal.
+
+87
+00:05:27,560 --> 00:05:28,770
+- [Man] Yeah. Yeah.
+
+88
+00:05:28,770 --> 00:05:30,610
+So indeed,
+
+89
+00:05:30,610 --> 00:05:34,020
+we&#39;re touching on design issues.
+
+90
+00:05:34,020 --> 00:05:37,470
+Are the groups optimally configured
+
+91
+00:05:37,470 --> 00:05:41,740
+to support easy use
+
+92
+00:05:41,740 --> 00:05:43,830
+and that&#39;s a bigger issue.
+
+93
+00:05:43,830 --> 00:05:46,940
+It also comes in with analysis.
+
+94
+00:05:46,940 --> 00:05:49,820
+The users who wants to
+
+95
+00:05:50,950 --> 00:05:55,200
+configure a chart or a table,
+
+96
+00:05:55,200 --> 00:05:57,980
+they need to be able to easily find
+
+97
+00:05:57,980 --> 00:05:59,573
+just the right data element.
+
+98
+00:06:02,160 --> 00:06:06,670
+I don&#39;t know other than to suggest that they
+
+99
+00:06:06,670 --> 00:06:10,550
+convene a meeting where they say, &quot;Okay, we know it&#39;s
+
+100
+00:06:10,550 --> 00:06:13,690
+very hard to select our favorite 50, but
+
+101
+00:06:13,690 --> 00:06:15,300
+we&#39;re going to lock the door
+
+102
+00:06:15,300 --> 00:06:18,057
+and you&#39;re not allowed to leave the room.&quot;
+
+103
+00:06:19,633 --> 00:06:21,980
+Who&#39;s going to be in the room?
+
+104
+00:06:21,980 --> 00:06:23,533
+The HMIS unit,
+
+105
+00:06:25,870 --> 00:06:28,250
+some representatives of programs,
+
+106
+00:06:28,250 --> 00:06:30,870
+maybe some representatives of districts.
+
+107
+00:06:30,870 --> 00:06:34,880
+Because if you don&#39;t focus your Data Quality desk review
+
+108
+00:06:38,050 --> 00:06:40,960
+you&#39;re not going to hit on the most important issues.
+
+109
+00:06:40,960 --> 00:06:42,843
+Okay. So to move along.
+
+110
+00:06:44,580 --> 00:06:46,960
+Numerator only indicator.
+
+111
+00:06:46,960 --> 00:06:48,530
+So here&#39;s this example.
+
+112
+00:06:48,530 --> 00:06:50,840
+Here we are actually in the maintenance app,
+
+113
+00:06:50,840 --> 00:06:52,053
+this screenshot.
+
+114
+00:06:53,470 --> 00:06:57,310
+And here&#39;s a country, in fact, this was
+
+115
+00:06:57,310 --> 00:07:00,260
+the instance we used on Monday,
+
+116
+00:07:00,260 --> 00:07:02,730
+here&#39;s the country where third doses of DPT-3
+
+117
+00:07:05,700 --> 00:07:09,063
+that are delivered from a fixed site, a static site,
+
+118
+00:07:09,920 --> 00:07:12,563
+that&#39;s a separate data element from,
+
+119
+00:07:14,614 --> 00:07:17,930
+I&#39;ve even defined this wrong I realize,
+
+120
+00:07:17,930 --> 00:07:19,710
+this should be a three here.
+
+121
+00:07:19,710 --> 00:07:21,060
+So I made a mistake
+
+122
+00:07:22,400 --> 00:07:25,393
+in configuring DPT-3 doses given.
+
+123
+00:07:29,812 --> 00:07:32,480
+In fact, that&#39;s the next slide.
+
+124
+00:07:32,480 --> 00:07:37,128
+But imagine this is DPT-3 from outreach.
+
+125
+00:07:37,128 --> 00:07:41,480
+So what you have to do is a step in configuring the tool
+
+126
+00:07:41,480 --> 00:07:43,730
+is to exit the tool,
+
+127
+00:07:43,730 --> 00:07:45,630
+go to the maintenance app,
+
+128
+00:07:45,630 --> 00:07:48,110
+go to the indicators function,
+
+129
+00:07:48,110 --> 00:07:52,653
+and define this new numerator only.
+
+130
+00:07:54,201 --> 00:07:56,750
+We call it a numerator only indicator because
+
+131
+00:07:56,750 --> 00:08:00,200
+the denominator for it is going to be one.
+
+132
+00:08:00,200 --> 00:08:05,200
+And it&#39;s simply to add together the fixed in the outreach.
+
+133
+00:08:10,932 --> 00:08:13,760
+That&#39;s the point of challenge number three.
+
+134
+00:08:13,760 --> 00:08:18,453
+And when you grab a hold of an existing indicator,
+
+135
+00:08:20,760 --> 00:08:24,060
+especially with tuberculosis, not unfrequently,
+
+136
+00:08:24,060 --> 00:08:26,383
+you come across indicators like this.
+
+137
+00:08:29,320 --> 00:08:33,210
+It requires a very painstaking process
+
+138
+00:08:33,210 --> 00:08:35,070
+to define this properly.
+
+139
+00:08:35,070 --> 00:08:39,110
+I&#39;m sure you&#39;re much more familiar with this than me,
+
+140
+00:08:39,110 --> 00:08:41,793
+having configured a lot of indicators.
+
+141
+00:08:44,720 --> 00:08:47,470
+The administrator has to sit down
+
+142
+00:08:47,470 --> 00:08:50,460
+with the tuberculosis people who understand
+
+143
+00:08:50,460 --> 00:08:54,570
+this great variety of TB indicators,
+
+144
+00:08:54,570 --> 00:08:57,950
+and with extreme attention to detail,
+
+145
+00:08:57,950 --> 00:09:01,820
+make sure that the indicator
+
+146
+00:09:01,820 --> 00:09:05,980
+is properly defined because in the end,
+
+147
+00:09:05,980 --> 00:09:10,010
+if what you&#39;re reviewing with the tool
+
+148
+00:09:10,010 --> 00:09:13,060
+is an indicator that isn&#39;t even properly defined,
+
+149
+00:09:13,060 --> 00:09:15,150
+then you&#39;ve wasted your time.
+
+150
+00:09:15,150 --> 00:09:18,630
+You want to review the quality
+
+151
+00:09:18,630 --> 00:09:20,823
+of a properly defined indicator.
+
+152
+00:09:22,630 --> 00:09:24,040
+Full stop.
+
+153
+00:09:24,040 --> 00:09:25,480
+Okay.
+
+154
+00:09:25,480 --> 00:09:27,623
+Another challenge of the process.
+
+155
+00:09:28,700 --> 00:09:31,660
+If you want to look at the quality of HIV data,
+
+156
+00:09:31,660 --> 00:09:34,810
+well, often the instance doesn&#39;t have the HIV data
+
+157
+00:09:34,810 --> 00:09:36,720
+or the TB data.
+
+158
+00:09:36,720 --> 00:09:39,800
+Sometimes the instance won&#39;t have hospital data
+
+159
+00:09:39,800 --> 00:09:41,510
+on inpatient care,
+
+160
+00:09:41,510 --> 00:09:43,260
+on human resources.
+
+161
+00:09:43,260 --> 00:09:47,510
+Very few instances have the staffing data there
+
+162
+00:09:47,510 --> 00:09:50,030
+or the logistics information.
+
+163
+00:09:50,030 --> 00:09:54,220
+So what do you do if you want to look for extreme outliers
+
+164
+00:09:54,220 --> 00:09:58,570
+in these other datasets?
+
+165
+00:09:58,570 --> 00:10:01,920
+Well, you&#39;ve got a couple of choices.
+
+166
+00:10:01,920 --> 00:10:06,763
+I like the DHIS2 Data Quality tool.
+
+167
+00:10:07,780 --> 00:10:10,690
+One solution, that&#39;s the second bullet,
+
+168
+00:10:10,690 --> 00:10:14,440
+is to take the HIV data and import it
+
+169
+00:10:14,440 --> 00:10:16,673
+into the DHIS2.
+
+170
+00:10:21,938 --> 00:10:25,480
+Take the aggregate data and bring it into DHIS2
+
+171
+00:10:25,480 --> 00:10:28,710
+and then you can use the Data Quality tool.
+
+172
+00:10:28,710 --> 00:10:31,310
+I remember one country that really
+
+173
+00:10:31,310 --> 00:10:33,800
+had its own data management system.
+
+174
+00:10:33,800 --> 00:10:36,773
+And we had an academy there,
+
+175
+00:10:38,460 --> 00:10:42,750
+the December before last, I think it was,
+
+176
+00:10:42,750 --> 00:10:47,750
+and the director of the HMIS unit was so impressed
+
+177
+00:10:47,900 --> 00:10:50,720
+at the power of the Data Quality tool
+
+178
+00:10:50,720 --> 00:10:54,310
+that she wanted to know how to code the tool
+
+179
+00:10:54,310 --> 00:10:57,920
+into their own data management software.
+
+180
+00:10:57,920 --> 00:11:01,660
+And I said, &quot;Well, why don&#39;t you simply import the data
+
+181
+00:11:01,660 --> 00:11:04,060
+into DHIS2?&quot;
+
+182
+00:11:04,060 --> 00:11:08,683
+I don&#39;t know whether she followed up on that advice or not.
+
+183
+00:11:10,080 --> 00:11:12,500
+Frequently when you demonstrate the tool
+
+184
+00:11:12,500 --> 00:11:16,008
+to high-level officials, they&#39;ll love it.
+
+185
+00:11:16,008 --> 00:11:18,047
+They&#39;ll say, &quot;This is what we need.&quot;
+
+186
+00:11:19,090 --> 00:11:23,054
+Okay. And then the other solution.
+
+187
+00:11:23,054 --> 00:11:25,550
+WHO has an Excel tool
+
+188
+00:11:25,550 --> 00:11:29,430
+that allows you to look for outliers
+
+189
+00:11:29,430 --> 00:11:33,520
+and look for all of these aspects of consistency
+
+190
+00:11:34,450 --> 00:11:38,780
+but it doesn&#39;t have anywhere near the flexibility.
+
+191
+00:11:38,780 --> 00:11:40,990
+You can&#39;t drill down.
+
+192
+00:11:40,990 --> 00:11:45,990
+But the point is that in some cases for these other datasets
+
+193
+00:11:46,240 --> 00:11:49,830
+that are missing, if you have district aggregate data
+
+194
+00:11:49,830 --> 00:11:50,680
+by month
+
+195
+00:11:52,140 --> 00:11:54,730
+or by quarter in the case of TB data,
+
+196
+00:11:54,730 --> 00:11:58,210
+then you can, if you format it properly,
+
+197
+00:11:58,210 --> 00:12:00,450
+you can load it into the Excel tool
+
+198
+00:12:00,450 --> 00:12:04,593
+and then you can look for these aspects of inconsistency.
+
+199
+00:12:06,050 --> 00:12:09,760
+I am not keeping an eye on the clock here.
+
+200
+00:12:09,760 --> 00:12:11,803
+How many minutes do we have?
+
+201
+00:12:13,350 --> 00:12:15,160
+- [Nick] Yeah. About 10 minutes.
+
+202
+00:12:15,160 --> 00:12:15,993
+- [Man] Okay.
+
+203
+00:12:19,248 --> 00:12:20,098
+Another challenge
+
+204
+00:12:25,917 --> 00:12:27,750
+you may find
+
+205
+00:12:27,750 --> 00:12:31,410
+and I found this in several national instances,
+
+206
+00:12:31,410 --> 00:12:34,170
+that there&#39;s more than one data element
+
+207
+00:12:34,170 --> 00:12:36,370
+that appears to be
+
+208
+00:12:38,690 --> 00:12:41,240
+for the same thing.
+
+209
+00:12:41,240 --> 00:12:44,490
+So here&#39;s an actual example where,
+
+210
+00:12:44,490 --> 00:12:48,700
+in the Pivot Table app, I&#39;ve used the search function,
+
+211
+00:12:48,700 --> 00:12:51,290
+the search window to look for DPT-3
+
+212
+00:12:51,290 --> 00:12:53,690
+and I found two different data elements
+
+213
+00:12:53,690 --> 00:12:56,723
+that appear to be for pinto one doses.
+
+214
+00:12:57,780 --> 00:13:01,543
+And if you&#39;re not careful, when you configure the app,
+
+215
+00:13:02,524 --> 00:13:07,333
+you may map it to a data element that&#39;s empty.
+
+216
+00:13:09,820 --> 00:13:13,210
+In this case, outside of the tool,
+
+217
+00:13:13,210 --> 00:13:16,160
+what you need to do is
+
+218
+00:13:16,160 --> 00:13:18,280
+a bit of investigation
+
+219
+00:13:18,280 --> 00:13:20,793
+and that&#39;s what the next slide shows.
+
+220
+00:13:22,890 --> 00:13:27,310
+Here, what I&#39;ve done is I&#39;ve used the data visualizer
+
+221
+00:13:27,310 --> 00:13:31,110
+to look at the data for these two different
+
+222
+00:13:32,020 --> 00:13:35,300
+data elements for pinto one doses, DPT-1 doses,
+
+223
+00:13:35,300 --> 00:13:38,530
+and I added in here the targets
+
+224
+00:13:39,486 --> 00:13:40,319
+just to know
+
+225
+00:13:41,425 --> 00:13:42,810
+just for comparison.
+
+226
+00:13:42,810 --> 00:13:45,370
+And what I found when I did this
+
+227
+00:13:45,370 --> 00:13:48,730
+is that there&#39;s the green data element,
+
+228
+00:13:48,730 --> 00:13:51,713
+which looks very similar to the blue one,
+
+229
+00:13:52,970 --> 00:13:53,803
+is empty.
+
+230
+00:13:53,803 --> 00:13:56,293
+There there&#39;s hardly any data for it.
+
+231
+00:13:57,924 --> 00:13:59,890
+And then you&#39;ve got to write down this
+
+232
+00:13:59,890 --> 00:14:03,230
+and carefully make sure when you do the configuration
+
+233
+00:14:03,230 --> 00:14:07,713
+that you grab hold of that right data, correct data element.
+
+234
+00:14:13,354 --> 00:14:15,330
+Another challenge here
+
+235
+00:14:15,330 --> 00:14:18,980
+is when you are
+
+236
+00:14:18,980 --> 00:14:22,270
+selecting indicators or data elements
+
+237
+00:14:22,270 --> 00:14:26,380
+that you want to include on the dashboard,
+
+238
+00:14:26,380 --> 00:14:29,630
+ideally, you would be using data elements
+
+239
+00:14:29,630 --> 00:14:34,403
+which had a high level of completeness.
+
+240
+00:14:37,550 --> 00:14:39,360
+If you put on the dashboard
+
+241
+00:14:40,310 --> 00:14:44,160
+an indicator or a data element from a dataset
+
+242
+00:14:44,160 --> 00:14:48,210
+where only half of facilities are reporting,
+
+243
+00:14:48,210 --> 00:14:52,830
+or even higher, if it&#39;s 70% of facilities,
+
+244
+00:14:52,830 --> 00:14:55,860
+you will almost always find
+
+245
+00:14:55,860 --> 00:14:58,750
+the data are highly inconsistent.
+
+246
+00:14:58,750 --> 00:15:02,510
+So in a way you don&#39;t even need to bother to use
+
+247
+00:15:02,510 --> 00:15:04,120
+the Data Quality tool
+
+248
+00:15:04,120 --> 00:15:08,070
+if the completeness is below 70% or 80%
+
+249
+00:15:08,070 --> 00:15:12,130
+because you&#39;re going to find so much inconsistency in there.
+
+250
+00:15:12,130 --> 00:15:15,510
+And the real fundamental problem has to do
+
+251
+00:15:15,510 --> 00:15:18,100
+with the reporting rate with the completeness.
+
+252
+00:15:18,100 --> 00:15:19,703
+But in this case,
+
+253
+00:15:20,550 --> 00:15:23,730
+we want to look at anti-natal care
+
+254
+00:15:23,730 --> 00:15:26,130
+and yet the data set
+
+255
+00:15:26,130 --> 00:15:29,910
+that is for anti-natal care coverage
+
+256
+00:15:29,910 --> 00:15:33,760
+has quite a low reporting rate.
+
+257
+00:15:33,760 --> 00:15:37,290
+So it&#39;s the best data element we can use.
+
+258
+00:15:37,290 --> 00:15:38,690
+It&#39;s imperfect.
+
+259
+00:15:38,690 --> 00:15:41,240
+The reporting rate is low.
+
+260
+00:15:41,240 --> 00:15:42,483
+But all the same,
+
+261
+00:15:43,809 --> 00:15:45,680
+we&#39;ll go ahead and we&#39;ll include it
+
+262
+00:15:48,042 --> 00:15:49,210
+on the dashboard
+
+263
+00:15:50,150 --> 00:15:54,170
+because there&#39;s no alternative data elements
+
+264
+00:15:54,170 --> 00:15:57,210
+available in the DHIS and this is the data
+
+265
+00:15:57,210 --> 00:16:01,690
+which the ministry is using to track
+
+266
+00:16:01,690 --> 00:16:02,910
+anti-natal care
+
+267
+00:16:04,370 --> 00:16:08,410
+even though we know it&#39;s going to generate
+
+268
+00:16:08,410 --> 00:16:12,013
+inconsistent results because of the low reporting rate.
+
+269
+00:16:14,270 --> 00:16:17,500
+Challenge seven, I&#39;m almost ready to wrap up
+
+270
+00:16:19,190 --> 00:16:23,830
+before I teach you a bit of Sinhala.
+
+271
+00:16:23,830 --> 00:16:26,603
+I don&#39;t know if (indistinct) is back on.
+
+272
+00:16:31,570 --> 00:16:34,640
+What we find with imported data,
+
+273
+00:16:34,640 --> 00:16:38,620
+if you import the HIV data into
+
+274
+00:16:38,620 --> 00:16:41,610
+the instance,
+
+275
+00:16:41,610 --> 00:16:44,100
+keep in mind that when you import data
+
+276
+00:16:44,100 --> 00:16:47,870
+you don&#39;t import the completeness metadata.
+
+277
+00:16:47,870 --> 00:16:49,830
+You usually don&#39;t.
+
+278
+00:16:49,830 --> 00:16:53,290
+And so here&#39;s the data on ART
+
+279
+00:16:56,420 --> 00:16:57,560
+care and treatment,
+
+280
+00:16:57,560 --> 00:16:59,470
+that dataset.
+
+281
+00:16:59,470 --> 00:17:02,520
+And you look at the tool
+
+282
+00:17:02,520 --> 00:17:04,100
+and it&#39;s blank.
+
+283
+00:17:04,099 --> 00:17:06,370
+It&#39;s got no completeness
+
+284
+00:17:07,871 --> 00:17:08,704
+on the page,
+
+285
+00:17:08,704 --> 00:17:11,220
+the completeness page of the dashboard.
+
+286
+00:17:11,220 --> 00:17:15,490
+And that&#39;s true of every region.
+
+287
+00:17:15,490 --> 00:17:18,070
+And the simple
+
+288
+00:17:18,069 --> 00:17:21,320
+reason that there&#39;s no completeness is that
+
+289
+00:17:21,319 --> 00:17:25,500
+you&#39;ve got to work with the completeness metadata
+
+290
+00:17:25,500 --> 00:17:29,113
+in order for DHIS to track this.
+
+291
+00:17:29,950 --> 00:17:32,040
+And that&#39;s not a simple thing.
+
+292
+00:17:32,040 --> 00:17:37,040
+I think we need to develop guidance on how to generate
+
+293
+00:17:37,480 --> 00:17:40,600
+completeness metadata for imported data sets.
+
+294
+00:17:40,600 --> 00:17:44,470
+I got started with it, but I&#39;m not a backend type of person.
+
+295
+00:17:44,470 --> 00:17:46,670
+So I think someone who&#39;s
+
+296
+00:17:48,034 --> 00:17:52,060
+got greater skills in using the backend
+
+297
+00:17:52,060 --> 00:17:54,820
+ought to come up with guidance
+
+298
+00:17:54,820 --> 00:17:56,830
+or an app or I don&#39;t know what,
+
+299
+00:17:56,830 --> 00:18:00,760
+on how to help to get the completeness metadata
+
+300
+00:18:00,760 --> 00:18:05,520
+in there so that we can track this most fundamental
+
+301
+00:18:05,520 --> 00:18:08,360
+metric of Data Quality.
+
+302
+00:18:08,360 --> 00:18:09,887
+So there we are. Thank you.
+

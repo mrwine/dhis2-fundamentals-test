@@ -1,0 +1,396 @@
+0
+00:00:00,250 --> 00:00:02,740
+- [Instructor] So another item that I wanted to discuss,
+
+1
+00:00:02,740 --> 00:00:04,260
+and we went over this
+
+2
+00:00:04,260 --> 00:00:06,080
+in our kind of overview of the session,
+
+3
+00:00:06,080 --> 00:00:08,320
+is about naming conventions.
+
+4
+00:00:08,320 --> 00:00:09,770
+So we&#39;ll share the document
+
+5
+00:00:09,770 --> 00:00:11,460
+that we have on naming conventions,
+
+6
+00:00:11,460 --> 00:00:13,450
+but there&#39;s just a couple of key principles
+
+7
+00:00:13,450 --> 00:00:16,400
+that we can always keep in mind when we&#39;re naming things.
+
+8
+00:00:16,400 --> 00:00:19,160
+And the reason that this has an effect on system design
+
+9
+00:00:19,160 --> 00:00:21,070
+is our ability to find items
+
+10
+00:00:21,070 --> 00:00:22,770
+within our system accurately
+
+11
+00:00:22,770 --> 00:00:25,270
+and with minimal kind of effort.
+
+12
+00:00:25,270 --> 00:00:27,770
+So good naming practices that they help with identifying
+
+13
+00:00:27,770 --> 00:00:29,810
+these different data elements and indicators.
+
+14
+00:00:29,810 --> 00:00:32,290
+And there&#39;s some basic principles we can follow
+
+15
+00:00:32,290 --> 00:00:35,198
+for basically any data element or indicator that we create.
+
+16
+00:00:35,198 --> 00:00:39,360
+So as a general rule, data elements do not need
+
+17
+00:00:39,360 --> 00:00:42,610
+the term number of in the name itself.
+
+18
+00:00:42,610 --> 00:00:44,120
+Now, maybe this is on the form.
+
+19
+00:00:44,120 --> 00:00:45,540
+Maybe this is somewhere else
+
+20
+00:00:45,540 --> 00:00:48,770
+when they&#39;re actually being displayed for entry purposes.
+
+21
+00:00:48,770 --> 00:00:50,400
+But when we&#39;re actually performing analysis,
+
+22
+00:00:50,400 --> 00:00:52,570
+this can make things a bit confusing.
+
+23
+00:00:52,570 --> 00:00:56,060
+As data elements will no longer be grouped in order,
+
+24
+00:00:56,060 --> 00:00:57,420
+there&#39;ll be grouped by number of,
+
+25
+00:00:57,420 --> 00:00:59,740
+and when you&#39;re looking for things in a list,
+
+26
+00:00:59,740 --> 00:01:01,840
+an order ordered list of some kind,
+
+27
+00:01:01,840 --> 00:01:03,840
+it makes it very difficult to find them.
+
+28
+00:01:05,269 --> 00:01:08,270
+We can talk about something similar for indicators.
+
+29
+00:01:08,270 --> 00:01:11,100
+So indicators should not be percentage of,
+
+30
+00:01:11,100 --> 00:01:12,300
+in the name itself.
+
+31
+00:01:12,300 --> 00:01:15,000
+Now maybe you can put a percentage symbol in brackets
+
+32
+00:01:15,000 --> 00:01:17,240
+at the end of the indicator name for example,
+
+33
+00:01:17,240 --> 00:01:20,080
+to clearly identify that you are having an indicator
+
+34
+00:01:20,080 --> 00:01:21,600
+that&#39;s the proportion of some kind,
+
+35
+00:01:21,600 --> 00:01:23,330
+and maybe just use the pound sign,
+
+36
+00:01:23,330 --> 00:01:25,860
+the number sign in brackets at the end of the name,
+
+37
+00:01:25,860 --> 00:01:29,463
+for example, for a numerator only indicator.
+
+38
+00:01:29,463 --> 00:01:31,900
+But you don&#39;t actually have to put the full
+
+39
+00:01:31,900 --> 00:01:34,640
+kind of text here because once again,
+
+40
+00:01:34,640 --> 00:01:35,473
+it makes sorting difficult.
+
+41
+00:01:35,473 --> 00:01:38,190
+So these are some general principles for both data elements
+
+42
+00:01:38,190 --> 00:01:39,780
+and indicators that we can follow
+
+43
+00:01:39,780 --> 00:01:41,720
+when we&#39;re naming items in the system,
+
+44
+00:01:41,720 --> 00:01:43,640
+or even when maybe we have to go through
+
+45
+00:01:43,640 --> 00:01:45,370
+and rename numbers of items,
+
+46
+00:01:45,370 --> 00:01:48,133
+because how they&#39;ve been named previously is quite poor.
+
+47
+00:01:50,400 --> 00:01:53,660
+So here are a couple examples, a couple of concrete examples
+
+48
+00:01:53,660 --> 00:01:56,650
+of bad practices and kind of where we can get to
+
+49
+00:01:56,650 --> 00:01:59,800
+in terms of better practices or good practices.
+
+50
+00:01:59,800 --> 00:02:02,030
+So we can see in the bad practice item,
+
+51
+00:02:02,030 --> 00:02:04,770
+some names of the data elements and they&#39;re quite long.
+
+52
+00:02:04,770 --> 00:02:07,460
+And you know, this makes it difficult to read,
+
+53
+00:02:07,460 --> 00:02:10,470
+to sort, to really find what we need,
+
+54
+00:02:10,470 --> 00:02:12,430
+but we can take this and pair this down,
+
+55
+00:02:12,430 --> 00:02:14,920
+slowly but surely going through this process
+
+56
+00:02:14,920 --> 00:02:17,780
+of kind of getting to our good example
+
+57
+00:02:17,780 --> 00:02:19,070
+on the right side here,
+
+58
+00:02:19,070 --> 00:02:20,450
+where we&#39;re just having minimal texts
+
+59
+00:02:20,450 --> 00:02:22,880
+that accurately conveys
+
+60
+00:02:22,880 --> 00:02:25,200
+what that data element is representing.
+
+61
+00:02:25,200 --> 00:02:28,740
+You can also see that because of the way it is worded,
+
+62
+00:02:28,740 --> 00:02:30,630
+that things are kind of grouped together
+
+63
+00:02:30,630 --> 00:02:32,670
+just by their nature,
+
+64
+00:02:32,670 --> 00:02:35,200
+due to the alphabetical order of that list.
+
+65
+00:02:35,200 --> 00:02:38,223
+And that it makes it easier to find in a sense.
+
+66
+00:02:39,210 --> 00:02:42,370
+So this is something to consider, this is a manual process.
+
+67
+00:02:42,370 --> 00:02:44,660
+Again, we&#39;ve been talking about manual processes
+
+68
+00:02:44,660 --> 00:02:46,580
+a little bit, you know, this is not something
+
+69
+00:02:46,580 --> 00:02:48,380
+that can be automated necessarily.
+
+70
+00:02:48,380 --> 00:02:50,640
+You&#39;re going to have to go through the data elements
+
+71
+00:02:50,640 --> 00:02:53,430
+and identify which ones are kind of not working,
+
+72
+00:02:53,430 --> 00:02:55,200
+in terms of their naming convention.
+
+73
+00:02:55,200 --> 00:02:57,120
+And if you&#39;re adding new data elements,
+
+74
+00:02:57,120 --> 00:02:58,670
+that is something that you can take
+
+75
+00:02:58,670 --> 00:03:00,510
+a more proactive role in perhaps,
+
+76
+00:03:00,510 --> 00:03:02,090
+by having some kind of guidelines
+
+77
+00:03:02,090 --> 00:03:04,843
+on general naming standards for items in your system.
+
+78
+00:03:08,320 --> 00:03:10,800
+Here&#39;s a couple of examples for indicators as well.
+
+79
+00:03:10,800 --> 00:03:13,680
+And this is where we see the same kind of problems
+
+80
+00:03:13,680 --> 00:03:15,200
+that I mentioned earlier, right?
+
+81
+00:03:15,200 --> 00:03:17,410
+We have this percentage of, at the beginning
+
+82
+00:03:17,410 --> 00:03:19,770
+of the indicator name in a lot of cases,
+
+83
+00:03:19,770 --> 00:03:22,460
+and we see this in live systems all the time,
+
+84
+00:03:22,460 --> 00:03:24,510
+but this makes the listing of the indicators
+
+85
+00:03:24,510 --> 00:03:26,190
+in an ordered list quite difficult
+
+86
+00:03:26,190 --> 00:03:29,370
+because they&#39;re not grouped by anything significant.
+
+87
+00:03:29,370 --> 00:03:30,910
+The names are much longer than they should be.
+
+88
+00:03:30,910 --> 00:03:33,460
+So if you&#39;re creating a chart, for example,
+
+89
+00:03:33,460 --> 00:03:36,569
+with many data items on it, it&#39;s going to be, you know,
+
+90
+00:03:36,569 --> 00:03:37,402
+the names will be collapsed naturally
+
+91
+00:03:37,402 --> 00:03:39,890
+because it just won&#39;t fit on the chart itself.
+
+92
+00:03:39,890 --> 00:03:41,360
+So there&#39;s a lot of implications here
+
+93
+00:03:41,360 --> 00:03:42,720
+in terms of analyzing our data
+
+94
+00:03:42,720 --> 00:03:45,850
+and outputting that data and just finding what we need.
+
+95
+00:03:45,850 --> 00:03:48,880
+So if we follow a couple of these very simple principles,
+
+96
+00:03:48,880 --> 00:03:51,630
+we can really make things easier to find in our system.
+
+97
+00:03:51,630 --> 00:03:54,420
+And this is once again, largely a manual process
+
+98
+00:03:54,420 --> 00:03:56,770
+and not something that can be easily automated.
+

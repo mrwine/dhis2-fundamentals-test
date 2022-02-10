@@ -1,0 +1,18 @@
+<problem display_name="Graded question - Procedural Challenges - Question 1 " markdown="&gt;&gt;What is a potential challenge with configuration of a WHO metadata package? (2 attempts)&lt;&lt;&#10;&#10;(x) A. It may result in the creation of duplicate metadata.&#10;( ) B. It can cause a number of saved outputs to display incorrectly.&#10;( ) C. It will result in data sets being modified directly.      &#10;&#10;[explanation]&#10;Configuring a WHO metadata package may result in the creation of duplicate metadata. In this case, you have to also factor in how you handle updates to the packages. Management of this legacy metadata along with the new metadata becomes a key consideration. It would not cause an incorrect display of saved outputs, but it may result in the creation of duplicate analytical outputs. Data sets can be modified only if specified.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <label>What is a potential challenge with configuration of a WHO metadata package? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. It may result in the creation of duplicate metadata.</choice>
+    <choice correct="false">B. It can cause a number of saved outputs to display incorrectly.</choice>
+    <choice correct="false">C. It will result in data sets being modified directly.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Configuring a WHO metadata package may result in the creation of duplicate metadata. In this case, you have to also factor in how you handle updates to the packages. Management of this legacy metadata along with the new metadata becomes a key consideration. It would not cause an incorrect display of saved outputs, but it may result in the creation of duplicate analytical outputs. Data sets can be modified only if specified.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,18 @@
+<problem display_name="Graded question - Considerations when Configuring the WHO DQ Tool - Question 2" markdown="It is important to use data elements with as high reporting rate/completeness as you can when configuring the WHO DQ tool.&#10;&gt;&gt;Select the one correct answer: (1 attempt) &lt;&lt;&#10;&#10;(x) A. True&#10;( ) B. False&#10;[explanation]&#10;True is correct&#10;[explanation]&#10;&#10;&#10;" max_attempts="1">
+<multiplechoiceresponse>
+  <p>It is important to use data elements with as high reporting rate/completeness as you can when configuring the WHO DQ tool.</p>
+<label>Select the one correct answer: (1 attempt) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. True</choice>
+    <choice correct="false">B. False</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>True is correct</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

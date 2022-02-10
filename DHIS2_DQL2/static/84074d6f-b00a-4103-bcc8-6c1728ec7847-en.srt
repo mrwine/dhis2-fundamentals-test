@@ -1,0 +1,724 @@
+0
+00:00:00,792 --> 00:00:03,375
+(upbeat music)
+
+1
+00:00:05,520 --> 00:00:08,410
+- As we have seen, the dashboard
+
+2
+00:00:08,410 --> 00:00:12,683
+of the data quality tool is easy to use.
+
+3
+00:00:13,620 --> 00:00:18,620
+A limitation of the dashboard of the application, however,
+
+4
+00:00:19,130 --> 00:00:22,590
+is that it can only be used to review
+
+5
+00:00:22,590 --> 00:00:26,460
+those indicators or data elements
+
+6
+00:00:26,460 --> 00:00:29,473
+for which the dashboard has been configured.
+
+7
+00:00:31,080 --> 00:00:35,830
+We&#39;ll next see how we can use the analysis function
+
+8
+00:00:37,310 --> 00:00:40,340
+of the WHO data quality tool
+
+9
+00:00:40,340 --> 00:00:44,740
+to look for outliers or inconsistencies
+
+10
+00:00:45,970 --> 00:00:50,970
+between any data elements which have data in the dhis2,
+
+11
+00:00:54,140 --> 00:00:59,140
+let&#39;s start by looking at how we use analysis consistency.
+
+12
+00:01:02,500 --> 00:01:07,010
+When we select analysis consistency,
+
+13
+00:01:07,010 --> 00:01:12,010
+a window appears asking us to select the type
+
+14
+00:01:12,600 --> 00:01:16,370
+of consistency we want to analyze.
+
+15
+00:01:16,370 --> 00:01:20,280
+Consistency over time is equivalent
+
+16
+00:01:20,280 --> 00:01:25,280
+to what we saw on the consistency time dashboard.
+
+17
+00:01:25,900 --> 00:01:30,620
+Whereas consistency between indicators is the equivalent
+
+18
+00:01:30,620 --> 00:01:35,053
+of what we saw on the consistency data dashboard.
+
+19
+00:01:36,300 --> 00:01:39,250
+For the example I will now present,
+
+20
+00:01:39,250 --> 00:01:44,250
+we want to analyze further dropout rates, and to do that
+
+21
+00:01:45,490 --> 00:01:49,003
+we select consistency between indicators,
+
+22
+00:01:50,520 --> 00:01:53,103
+then click on expected result.
+
+23
+00:01:54,450 --> 00:01:58,470
+And it&#39;s now possible to select dropout
+
+24
+00:01:58,470 --> 00:02:00,853
+as the type of analysis.
+
+25
+00:02:03,460 --> 00:02:07,920
+We next need to decide which two indicators
+
+26
+00:02:07,920 --> 00:02:10,163
+will define the dropout rate.
+
+27
+00:02:11,700 --> 00:02:16,700
+Let&#39;s look at the Penta 1 to Penta 3 dropout rate.
+
+28
+00:02:17,550 --> 00:02:22,310
+To do that, we have to first select Penta 1.
+
+29
+00:02:24,560 --> 00:02:28,730
+And for that, we need to find out which indicator,
+
+30
+00:02:28,730 --> 00:02:31,593
+which data element group to select.
+
+31
+00:02:34,342 --> 00:02:36,320
+And if we select immunization,
+
+32
+00:02:36,320 --> 00:02:41,320
+we find that Penta 1 given before 12 months of age
+
+33
+00:02:42,090 --> 00:02:47,090
+is a data element in the immunization, eight element group.
+
+34
+00:02:49,880 --> 00:02:53,380
+Next, we need to select Penta 3
+
+35
+00:02:53,380 --> 00:02:55,980
+given before 12 months of age.
+
+36
+00:02:55,980 --> 00:02:59,003
+Again, we need to select the data element group,
+
+37
+00:03:01,530 --> 00:03:02,713
+immunization.
+
+38
+00:03:05,240 --> 00:03:09,870
+And the immunization data element group includes
+
+39
+00:03:09,870 --> 00:03:14,130
+Penta third doses given before 12 months of age.
+
+40
+00:03:14,130 --> 00:03:17,080
+So already you see some of the challenge
+
+41
+00:03:17,080 --> 00:03:19,690
+of using the analysis function,
+
+42
+00:03:19,690 --> 00:03:23,080
+in that we need to configure it
+
+43
+00:03:24,005 --> 00:03:27,110
+and to configure it, we need to know
+
+44
+00:03:27,110 --> 00:03:30,300
+what is the data element group or indicator group
+
+45
+00:03:30,300 --> 00:03:34,220
+we want to select from, what is the data element
+
+46
+00:03:34,220 --> 00:03:38,420
+or indicator we want to select and so forth.
+
+47
+00:03:38,420 --> 00:03:42,520
+This configuration requires that the user be familiar
+
+48
+00:03:42,520 --> 00:03:46,260
+with how the data sets are organized.
+
+49
+00:03:46,260 --> 00:03:50,650
+So this is not a function that can easily be used
+
+50
+00:03:50,650 --> 00:03:52,300
+by the beginner,
+
+51
+00:03:52,300 --> 00:03:55,980
+but we&#39;ve now set up to look at the dropout rate
+
+52
+00:03:55,980 --> 00:03:59,460
+between Penta 1, given before 12 months,
+
+53
+00:03:59,460 --> 00:04:02,680
+and Penta 3, given before 12 months.
+
+54
+00:04:02,680 --> 00:04:06,330
+Now we only need to select the period,
+
+55
+00:04:06,330 --> 00:04:10,750
+let&#39;s select last month, last year, as the period
+
+56
+00:04:10,750 --> 00:04:15,750
+and disaggregate by district, then click on analyze.
+
+57
+00:04:19,970 --> 00:04:22,630
+The screen shows us a chart
+
+58
+00:04:22,630 --> 00:04:25,460
+that is identical to what we saw
+
+59
+00:04:25,460 --> 00:04:28,563
+on the consistency data dashboard.
+
+60
+00:04:29,600 --> 00:04:33,950
+But, in addition to this histogram with one bar
+
+61
+00:04:33,950 --> 00:04:37,030
+for each district and two districts
+
+62
+00:04:37,030 --> 00:04:39,710
+that have a negative dropout rate,
+
+63
+00:04:39,710 --> 00:04:44,710
+we have a table, and the table shows us the number
+
+64
+00:04:44,920 --> 00:04:49,250
+of first doses of Penta given by each district
+
+65
+00:04:49,250 --> 00:04:52,933
+and the number of third doses given by each district.
+
+66
+00:04:53,890 --> 00:04:57,519
+And it shows this for these two districts
+
+67
+00:04:57,519 --> 00:04:59,323
+with negative dropout rates,
+
+68
+00:05:00,340 --> 00:05:04,917
+that the number of third doses given in 2019
+
+69
+00:05:06,400 --> 00:05:10,270
+was greater than the number of first doses.
+
+70
+00:05:10,270 --> 00:05:13,190
+So we get this additional information
+
+71
+00:05:13,190 --> 00:05:15,703
+when we use the analysis function.
+
+72
+00:05:18,610 --> 00:05:20,870
+We can select one of these districts
+
+73
+00:05:20,870 --> 00:05:25,870
+by clicking on the row and the row turns light yellow.
+
+74
+00:05:27,160 --> 00:05:28,673
+When we do that,
+
+75
+00:05:29,910 --> 00:05:31,800
+a table with a single row
+
+76
+00:05:31,800 --> 00:05:35,230
+for district A-2 appears at the bottom of the screen
+
+77
+00:05:36,610 --> 00:05:39,410
+and a chart showing,
+
+78
+00:05:39,410 --> 00:05:43,330
+for each month over the 12 month period,
+
+79
+00:05:43,330 --> 00:05:47,360
+the value of Penta 1 and the value of Penta 3,
+
+80
+00:05:47,360 --> 00:05:49,223
+and notice what we see.
+
+81
+00:05:50,540 --> 00:05:55,540
+For most months, we see that district A-2 reported
+
+82
+00:05:55,670 --> 00:05:58,610
+a higher number of third doses of Penta
+
+83
+00:05:58,610 --> 00:06:00,623
+than first doses of Penta.
+
+84
+00:06:02,530 --> 00:06:07,530
+For example, in may of 2019, 1063 first doses,
+
+85
+00:06:08,890 --> 00:06:12,840
+but 1,139 third doses.
+
+86
+00:06:12,840 --> 00:06:17,220
+So district A-2 has a consistent practice
+
+87
+00:06:17,220 --> 00:06:21,660
+of reporting higher numbers of third doses of Penta vaccine,
+
+88
+00:06:21,660 --> 00:06:24,750
+than first doses of Penta vaccine.
+
+89
+00:06:24,750 --> 00:06:29,730
+And then for November of the 12 month period,
+
+90
+00:06:29,730 --> 00:06:33,930
+there&#39;s this quite suspicious value that may be due
+
+91
+00:06:33,930 --> 00:06:37,800
+to an error in data entry because the number
+
+92
+00:06:37,800 --> 00:06:40,050
+of third doses is so much greater
+
+93
+00:06:40,050 --> 00:06:41,950
+than the number of first doses.
+
+94
+00:06:41,950 --> 00:06:44,080
+But for these other months,
+
+95
+00:06:44,080 --> 00:06:49,080
+there seems to be some habit of reporting higher numbers
+
+96
+00:06:49,720 --> 00:06:52,360
+of third doses, just a bit higher
+
+97
+00:06:52,360 --> 00:06:56,900
+than first doses of Penta vaccine.
+
+98
+00:06:56,900 --> 00:07:00,690
+We can continue the investigation by clicking
+
+99
+00:07:00,690 --> 00:07:05,023
+on the menu icon at the end of this single row.
+
+100
+00:07:06,520 --> 00:07:09,193
+And we&#39;re allowed to drill down.
+
+101
+00:07:11,990 --> 00:07:16,670
+What we now see is a histogram
+
+102
+00:07:16,670 --> 00:07:19,710
+that disaggregates the Penta 1
+
+103
+00:07:19,710 --> 00:07:23,680
+to Penta 3 dropout rate from 2019,
+
+104
+00:07:23,680 --> 00:07:26,830
+by individual health facility.
+
+105
+00:07:26,830 --> 00:07:31,500
+And we see that almost all the health facilities
+
+106
+00:07:31,500 --> 00:07:36,500
+of district A-2 have been reporting higher numbers
+
+107
+00:07:36,560 --> 00:07:41,560
+of third doses than first doses of Penta vaccine.
+
+108
+00:07:41,840 --> 00:07:46,233
+Most all of the facilities have negative dropout rates.
+
+109
+00:07:47,900 --> 00:07:51,580
+We can again, select one of these health facilities,
+
+110
+00:07:51,580 --> 00:07:52,890
+one of these rows
+
+111
+00:07:54,640 --> 00:07:58,620
+and look at the trend over the 12 month period
+
+112
+00:07:58,620 --> 00:08:00,980
+and the values for the self facility.
+
+113
+00:08:00,980 --> 00:08:05,353
+And we see that this one facility, 197,
+
+114
+00:08:06,430 --> 00:08:11,430
+again, appears to have some kind of a very suspicious value
+
+115
+00:08:11,880 --> 00:08:14,620
+that is probably erroneous,
+
+116
+00:08:14,620 --> 00:08:19,070
+where it has reported 10 times as many third doses
+
+117
+00:08:19,070 --> 00:08:21,313
+as first doses of Penta vaccine.
+
+118
+00:08:22,630 --> 00:08:26,260
+So in summary, by using the analysis function
+
+119
+00:08:26,260 --> 00:08:29,643
+and looking at analysis of dropout rates,
+
+120
+00:08:30,950 --> 00:08:35,200
+we get additional information that allows us to investigate
+
+121
+00:08:35,200 --> 00:08:38,540
+and determine is the negative dropout rate
+
+122
+00:08:38,539 --> 00:08:43,540
+for a district due to a single erroneous value,
+
+123
+00:08:43,780 --> 00:08:46,690
+a single outlier such as here,
+
+124
+00:08:46,690 --> 00:08:51,280
+or is it due to a pattern, amongst
+
+125
+00:08:51,280 --> 00:08:54,220
+many different health facilities,
+
+126
+00:08:54,220 --> 00:08:58,810
+and for many different months of reporting higher numbers
+
+127
+00:08:58,810 --> 00:09:01,983
+of third doses than first doses.
+
+128
+00:09:04,150 --> 00:09:08,630
+Let&#39;s look at one more example before we then see
+
+129
+00:09:08,630 --> 00:09:12,423
+how we can use analysis to look at outliers.
+
+130
+00:09:13,670 --> 00:09:16,440
+With this example, we&#39;re going to look
+
+131
+00:09:16,440 --> 00:09:19,870
+at analysis between indicators,
+
+132
+00:09:19,870 --> 00:09:24,120
+but this time we&#39;re going to look at two indicators
+
+133
+00:09:24,120 --> 00:09:27,090
+that we expect to be roughly equivalent.
+
+134
+00:09:27,090 --> 00:09:32,070
+And in this case, we&#39;re going to compare third doses
+
+135
+00:09:32,070 --> 00:09:33,573
+of Penta vaccine,
+
+136
+00:09:36,160 --> 00:09:39,390
+to third doses of OPV vaccine.
+
+137
+00:09:39,390 --> 00:09:42,750
+These two vaccines are typically given on the same visit,
+
+138
+00:09:42,750 --> 00:09:46,360
+so we expect the values to be roughly the same.
+
+139
+00:09:46,360 --> 00:09:49,143
+Again, setting period to 2019,
+
+140
+00:09:50,960 --> 00:09:55,123
+disaggregation to district, click on analyze.
+
+141
+00:09:56,110 --> 00:09:58,640
+And we see a scatter plot,
+
+142
+00:09:58,640 --> 00:10:03,640
+which reassures us that indeed, for all of the districts,
+
+143
+00:10:04,080 --> 00:10:08,720
+the value of third doses of Penta vaccine is closely related
+
+144
+00:10:08,720 --> 00:10:13,000
+to the value of third doses of OPV vaccine.
+
+145
+00:10:13,000 --> 00:10:17,550
+And we could, if we wanted to, do some investigation.
+
+146
+00:10:17,550 --> 00:10:21,750
+Although, the fact that all of these dots are
+
+147
+00:10:21,750 --> 00:10:25,813
+between the two gray lines reassures us.
+
+148
+00:10:27,790 --> 00:10:32,010
+Let&#39;s look next at how to use the analysis function
+
+149
+00:10:32,010 --> 00:10:34,783
+to check for outliers and missing data.
+
+150
+00:10:37,050 --> 00:10:42,050
+The function works just as the outlier dashboard does,
+
+151
+00:10:42,610 --> 00:10:46,130
+except it is much more flexible in that it allows us
+
+152
+00:10:46,130 --> 00:10:50,500
+to select any data element at all,
+
+153
+00:10:50,500 --> 00:10:54,680
+not just the ones that are configured for the dashboard.
+
+154
+00:10:54,680 --> 00:10:58,800
+In fact, we could select from
+
+155
+00:11:00,750 --> 00:11:04,753
+multiple data sets and multiple data element groups.
+
+156
+00:11:07,120 --> 00:11:07,953
+We could even
+
+157
+00:11:11,920 --> 00:11:12,753
+select
+
+158
+00:11:15,070 --> 00:11:16,700
+all data elements
+
+159
+00:11:17,700 --> 00:11:19,493
+from a data element group.
+
+160
+00:11:22,880 --> 00:11:25,750
+Set period to last 12 months,
+
+161
+00:11:25,750 --> 00:11:29,673
+organization unit to disaggregation by district, analyze,
+
+162
+00:11:33,980 --> 00:11:36,433
+we&#39;re waiting for the data to process.
+
+163
+00:11:37,970 --> 00:11:39,773
+And we get the table,
+
+164
+00:11:40,720 --> 00:11:44,170
+showing us all of the suspicious values
+
+165
+00:11:44,170 --> 00:11:47,463
+for the selected data elements.
+
+166
+00:11:48,500 --> 00:11:53,430
+It has the same options as with the outlier dashboard.
+
+167
+00:11:53,430 --> 00:11:58,430
+So we can filter to identify only the most suspicious values
+
+168
+00:11:59,490 --> 00:12:04,323
+or we can filter, if we are at facility level.
+
+169
+00:12:06,720 --> 00:12:10,210
+We can use it to identify facilities
+
+170
+00:12:10,210 --> 00:12:13,253
+that have large amounts of missing data.
+
+171
+00:12:14,760 --> 00:12:18,640
+In summary, the analysis function works in a way
+
+172
+00:12:18,640 --> 00:12:21,450
+that is quite similar to the dashboard
+
+173
+00:12:21,450 --> 00:12:24,010
+of the WHO data quality tool,
+
+174
+00:12:24,010 --> 00:12:26,113
+but it is much more flexible.
+
+175
+00:12:27,550 --> 00:12:31,140
+The price that you pay for using the analysis function is
+
+176
+00:12:31,140 --> 00:12:34,570
+that you have to configure it and to do that,
+
+177
+00:12:34,570 --> 00:12:39,570
+you need to be familiar with how the data sets are organized
+
+178
+00:12:40,740 --> 00:12:44,980
+and you need to find just the data element or indicator
+
+179
+00:12:44,980 --> 00:12:48,262
+that is most appropriate for the analysis.
+
+180
+00:12:48,262 --> 00:12:50,845
+(upbeat music)
+

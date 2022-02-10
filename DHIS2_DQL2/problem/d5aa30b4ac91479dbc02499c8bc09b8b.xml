@@ -1,0 +1,20 @@
+<problem display_name="Question 2" markdown="&gt;&gt;Review the data table and drill down into the district with the highest outlier weight for confirmed malaria cases. Re-apply your outlier filters. Which facility is reporting an outlier of 2139 for July 2021 for confirmed malaria cases.&lt;&lt;&#10;&#10;Select the one correct answer: (2 attempts)&#10;&#10;( ) A. Facility 582&#10;(x) B. Facility 593&#10;( ) C. Facility 579&#10;( ) D. Facility 219    &#10;&#10;[explanation]&#10;Facility 593 is correct. You will see this facility by drilling down into District D-1.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <label>Review the data table and drill down into the district with the highest outlier weight for confirmed malaria cases. Re-apply your outlier filters. Which facility is reporting an outlier of 2139 for July 2021 for confirmed malaria cases.</label>
+<p>Select the one correct answer: (2 attempts)</p>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Facility 582</choice>
+    <choice correct="true">B. Facility 593</choice>
+    <choice correct="false">C. Facility 579</choice>
+    <choice correct="false">D. Facility 219</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Facility 593 is correct. You will see this facility by drilling down into District D-1.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

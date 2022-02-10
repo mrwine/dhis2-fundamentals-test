@@ -1,0 +1,18 @@
+<problem display_name="Knowledge Checks: Question 2 " markdown="Select the correct definition: The Data quality Dimension: Consistency is: &#10;&gt;&gt;Select the one correct answer&lt;&lt;&#10;&#10;(x) A. When data across all systems reflects the same information &#10;( ) B. When data in a specific system has all the same information &#10;&#10;[explanation]&#10;Consistency is when data across all systems reflects the same information.&#10;[explanation]">
+<multiplechoiceresponse>
+  <p>Select the correct definition: The Data quality Dimension: Consistency is: </p>
+<label>Select the one correct answer</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. When data across all systems reflects the same information</choice>
+    <choice correct="false">B. When data in a specific system has all the same information</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Consistency is when data across all systems reflects the same information.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,20 @@
+<problem display_name="Graded question - Numerator Quality Parameters - Question 2" markdown="&quot;A = B&quot; means what in terms of the configuration of the WHO Data Quality Tool?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts) &lt;&lt;&#10;&#10;( ) A. You only want to see indicator from group A and group B&#10;( ) B. It means that indicator A is greater than indicator B&#10;(x) C. It means that indicator A should be roughly equal to indicator B&#10;( ) D. It does not mean anything&#10;&#10;[explanation]&#10;It means that indicator A should be roughly equal to indicator B is correct. &#10;[explanation]&#10;&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>"A = B" means what in terms of the configuration of the WHO Data Quality Tool?</p>
+<label>Select the one correct answer: (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. You only want to see indicator from group A and group B</choice>
+    <choice correct="false">B. It means that indicator A is greater than indicator B</choice>
+    <choice correct="true">C. It means that indicator A should be roughly equal to indicator B</choice>
+    <choice correct="false">D. It does not mean anything</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>It means that indicator A should be roughly equal to indicator B is correct. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

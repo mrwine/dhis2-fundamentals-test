@@ -1,0 +1,10 @@
+<video youtube="1.00:k3xMlAxHRno" url_name="98fa09e8024a4be4ba1c915b566de524" sub="" transcripts="{&quot;en&quot;: &quot;8ad4c459-4128-4d41-95e4-aa182c68c33a-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Historical Data" download_track="true" download_video="true" edx_video_id="8ad4c459-4128-4d41-95e4-aa182c68c33a" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.3_Historical_data.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.2.3+-+Historical+Data.mp4&quot;]" show_captions="false" youtube_id_1_0="k3xMlAxHRno">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.2.3+-+Historical+Data.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.3_Historical_data.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="8ad4c459-4128-4d41-95e4-aa182c68c33a-en.srt"/>
+</video>

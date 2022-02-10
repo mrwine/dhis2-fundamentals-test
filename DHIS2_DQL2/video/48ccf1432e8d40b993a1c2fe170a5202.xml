@@ -1,0 +1,10 @@
+<video youtube="1.00:uriAuopZVj8" url_name="48ccf1432e8d40b993a1c2fe170a5202" sub="" transcripts="{&quot;en&quot;: &quot;24291675-88a7-427f-bcec-28652f1bd05a-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC SA" display_name="Foundational Data Quality Concepts" download_track="true" download_video="true" edx_video_id="24291675-88a7-427f-bcec-28652f1bd05a" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.1.1_-_Foundational_Data_Quality_Concepts.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/1.1.1+-+Foundational+Data+Quality+Concepts+.mp4&quot;]" youtube_id_1_0="uriAuopZVj8">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/1.1.1+-+Foundational+Data+Quality+Concepts+.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.1.1_-_Foundational_Data_Quality_Concepts.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="24291675-88a7-427f-bcec-28652f1bd05a-en.srt"/>
+</video>

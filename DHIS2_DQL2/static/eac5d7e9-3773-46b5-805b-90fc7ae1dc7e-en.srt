@@ -1,0 +1,360 @@
+0
+00:00:00,217 --> 00:00:02,800
+(upbeat music)
+
+1
+00:00:04,640 --> 00:00:06,560
+- [Bob] I&#39;m going to share with you
+
+2
+00:00:06,560 --> 00:00:09,410
+something called the WHO&#39;s framework
+
+3
+00:00:09,410 --> 00:00:11,800
+for data quality review.
+
+4
+00:00:11,800 --> 00:00:14,090
+This is an approach to assessing
+
+5
+00:00:14,090 --> 00:00:16,250
+the quality of the data,
+
+6
+00:00:16,250 --> 00:00:18,160
+which are routinely reported
+
+7
+00:00:18,160 --> 00:00:20,423
+by health facilities each month.
+
+8
+00:00:22,610 --> 00:00:24,610
+There are a variety of tools
+
+9
+00:00:24,610 --> 00:00:28,490
+that you may be familiar with for assessing data quality.
+
+10
+00:00:28,490 --> 00:00:30,750
+Here are several of them.
+
+11
+00:00:33,866 --> 00:00:38,270
+WHO has a data quality review tool kit
+
+12
+00:00:38,270 --> 00:00:43,010
+that you can access using this web link.
+
+13
+00:00:43,010 --> 00:00:46,320
+We will provide you with these PowerPoint slides
+
+14
+00:00:46,320 --> 00:00:50,110
+and later, perhaps, you can browse this website
+
+15
+00:00:50,110 --> 00:00:54,430
+and even download the three documents
+
+16
+00:00:54,430 --> 00:00:56,930
+that describe in greater detail
+
+17
+00:00:56,930 --> 00:01:00,403
+the WHO data quality review framework.
+
+18
+00:01:02,760 --> 00:01:04,730
+To begin with, we should say something
+
+19
+00:01:04,730 --> 00:01:08,773
+about the frequency of data quality review.
+
+20
+00:01:09,710 --> 00:01:12,380
+This assessment of the quality of data
+
+21
+00:01:12,380 --> 00:01:15,470
+could take place at various frequencies.
+
+22
+00:01:15,470 --> 00:01:19,530
+It could be monthly, and this is going to be a large
+
+23
+00:01:19,530 --> 00:01:21,670
+part of the focus of this workshop,
+
+24
+00:01:21,670 --> 00:01:24,500
+how staff at health facility
+
+25
+00:01:24,500 --> 00:01:27,010
+and district level could routinely,
+
+26
+00:01:27,010 --> 00:01:30,493
+that is monthly, assess data quality.
+
+27
+00:01:31,857 --> 00:01:33,940
+On the other hand, at a national level,
+
+28
+00:01:33,940 --> 00:01:38,080
+there should be a process that is at least once each year,
+
+29
+00:01:38,080 --> 00:01:41,530
+perhaps just before the annual health summit,
+
+30
+00:01:41,530 --> 00:01:43,780
+the annual review of progress
+
+31
+00:01:43,780 --> 00:01:46,420
+against the core indicators
+
+32
+00:01:46,420 --> 00:01:49,160
+to assure the quality of data
+
+33
+00:01:49,160 --> 00:01:54,080
+before they are interpreted for the annual review.
+
+34
+00:01:54,080 --> 00:01:56,810
+And then in the longer run
+
+35
+00:01:56,810 --> 00:01:59,070
+certain specific health programs,
+
+36
+00:01:59,070 --> 00:02:03,380
+such as the immunization program or the HIV/AIDS program,
+
+37
+00:02:03,380 --> 00:02:06,330
+might have every three to five years
+
+38
+00:02:06,330 --> 00:02:09,803
+of more in-depth program specific review.
+
+39
+00:02:12,820 --> 00:02:15,210
+There are two principle methods
+
+40
+00:02:15,210 --> 00:02:19,900
+for assessing the quality of routine data.
+
+41
+00:02:19,900 --> 00:02:21,840
+The first involves surveys,
+
+42
+00:02:21,840 --> 00:02:24,160
+or at least, a supervisory visit
+
+43
+00:02:24,160 --> 00:02:27,310
+it requires a visit to the health facility
+
+44
+00:02:27,310 --> 00:02:30,450
+to examine the facility registers,
+
+45
+00:02:30,450 --> 00:02:32,620
+recount the data and compare
+
+46
+00:02:32,620 --> 00:02:35,640
+that recounts of data with the data
+
+47
+00:02:35,640 --> 00:02:37,110
+that have been recorded
+
+48
+00:02:37,110 --> 00:02:40,363
+and reported on the monthly report.
+
+49
+00:02:41,490 --> 00:02:44,000
+This type of visit to the health facility
+
+50
+00:02:44,000 --> 00:02:47,480
+allows the surveyor or the supervisor
+
+51
+00:02:47,480 --> 00:02:50,297
+to as well collect information
+
+52
+00:02:50,297 --> 00:02:53,610
+about such things as the availability of staff
+
+53
+00:02:53,610 --> 00:02:57,580
+or the presence of standard operating procedures,
+
+54
+00:02:57,580 --> 00:03:00,210
+or whether there are sufficient numbers
+
+55
+00:03:00,210 --> 00:03:03,140
+of reporting formats available,
+
+56
+00:03:03,140 --> 00:03:07,290
+and the supervisor or surveyor can examine
+
+57
+00:03:07,290 --> 00:03:10,320
+the health facility or the district health office
+
+58
+00:03:10,320 --> 00:03:12,870
+to see evidence of use of data,
+
+59
+00:03:12,870 --> 00:03:14,743
+visualization of data.
+
+60
+00:03:15,760 --> 00:03:18,220
+Now, with all of these advantages
+
+61
+00:03:18,220 --> 00:03:21,230
+of a data verification survey,
+
+62
+00:03:21,230 --> 00:03:23,950
+or a visit to the health facility,
+
+63
+00:03:23,950 --> 00:03:27,590
+it has to be acknowledged that it is expensive
+
+64
+00:03:27,590 --> 00:03:30,790
+it requires travel.
+
+65
+00:03:30,790 --> 00:03:35,790
+And for this reason such an approach is often infrequent.
+
+66
+00:03:37,000 --> 00:03:39,210
+And sometimes it is applied
+
+67
+00:03:39,210 --> 00:03:41,590
+only to a sample of health facilities
+
+68
+00:03:41,590 --> 00:03:44,470
+or a sample of districts.
+
+69
+00:03:44,470 --> 00:03:46,880
+On the other hand, there&#39;s the other approach
+
+70
+00:03:46,880 --> 00:03:50,140
+which we referred to as the data desk review.
+
+71
+00:03:50,140 --> 00:03:54,960
+And that&#39;s going to be the main focus of this workshop.
+
+72
+00:03:54,960 --> 00:03:56,780
+No travel is required.
+
+73
+00:03:56,780 --> 00:03:58,460
+It&#39;s called a desk review
+
+74
+00:03:58,460 --> 00:04:01,010
+&#39;cause it can be done from the office
+
+75
+00:04:01,010 --> 00:04:04,610
+where the data base is maintained.
+
+76
+00:04:04,610 --> 00:04:08,640
+If someone has access to the DHIS2 instance,
+
+77
+00:04:08,640 --> 00:04:12,010
+then they can undertake a review,
+
+78
+00:04:12,010 --> 00:04:14,130
+not just occasionally,
+
+79
+00:04:14,130 --> 00:04:15,910
+but it can be done monthly.
+
+80
+00:04:15,910 --> 00:04:18,250
+It&#39;s practical to do this
+
+81
+00:04:18,250 --> 00:04:20,820
+and not just for a sample of health facilities,
+
+82
+00:04:20,820 --> 00:04:25,507
+but the review can look at the data
+
+83
+00:04:25,507 --> 00:04:29,530
+for all health facilities nationwide.
+
+84
+00:04:29,530 --> 00:04:34,530
+And if the right tools are installed in the DHIS2,
+
+85
+00:04:35,680 --> 00:04:40,680
+then this desk review is able to actually drill down
+
+86
+00:04:41,140 --> 00:04:44,940
+and that is investigate at a lower level
+
+87
+00:04:44,940 --> 00:04:47,710
+and find out were there any suspicious data
+
+88
+00:04:47,710 --> 00:04:49,043
+have been reporting from.
+
+89
+00:04:49,043 --> 00:04:51,626
+(upbeat music)
+

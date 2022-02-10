@@ -1,0 +1,20 @@
+<problem display_name="Consistency - Data Exercise 2" markdown="Review the graph assessing Penta dropout rates: Move the cursor over the vertical bars and read the information in the windows which pop up.&#10;&#10;&gt;&gt;How is “dropout rate” defined and how is it calculated? (2 attempts)&lt;&lt;&#10;&#10;(x) A. It is defined as the percentage of patients who come for a first visit but who fail to come for a subsequent visit.&#10;( ) B. It is defined as the percentage of patients who come for a first visit and come for a subsequent visit.&#10;( ) C. It is defined as the percentage of patients who come for a single visit.&#10;( ) D. It is defined as the percentage of patients who fail to come for a single visit.             &#10;&#10;[explanation]&#10;The Dropout rate is defined as the percentage of patients who come for a first visit but who fail to come for a subsequent visit.&#10;[explanation] &#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Review the graph assessing Penta dropout rates: Move the cursor over the vertical bars and read the information in the windows which pop up.</p>
+<label>How is “dropout rate” defined and how is it calculated? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. It is defined as the percentage of patients who come for a first visit but who fail to come for a subsequent visit.</choice>
+    <choice correct="false">B. It is defined as the percentage of patients who come for a first visit and come for a subsequent visit.</choice>
+    <choice correct="false">C. It is defined as the percentage of patients who come for a single visit.</choice>
+    <choice correct="false">D. It is defined as the percentage of patients who fail to come for a single visit.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The Dropout rate is defined as the percentage of patients who come for a first visit but who fail to come for a subsequent visit.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

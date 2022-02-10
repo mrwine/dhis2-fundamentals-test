@@ -1,0 +1,20 @@
+<problem display_name="Graded question - Configuring Numerator Groups  - Question 1" markdown="Where is it possible to add a new indicator group for analysis?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts) &lt;&lt;&#10;&#10;( ) A. Nowhere. It is only used for meta-data administration&#10;( ) B. Only in the Annual Report&#10;(x) C. In the WHO DQ tool dashboard where that group can be selected&#10;( ) D. Both in the WHO DQ dashboard and the standard DHIS2 dashboard app&#10;&#10;[explanation]&#10;In the WHO DQ tool dashboard where that group can be selected is the correct answer.&#10;[explanation]&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Where is it possible to add a new indicator group for analysis?</p>
+<label>Select the one correct answer: (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Nowhere. It is only used for meta-data administration</choice>
+    <choice correct="false">B. Only in the Annual Report</choice>
+    <choice correct="true">C. In the WHO DQ tool dashboard where that group can be selected</choice>
+    <choice correct="false">D. Both in the WHO DQ dashboard and the standard DHIS2 dashboard app</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>In the WHO DQ tool dashboard where that group can be selected is the correct answer.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,19 @@
+<problem display_name="Consistency - Time Exercise 1" markdown="&gt;&gt;The consistency-time charts (these are the charts on the left side of the page) show total values for which level of the Health System? (2 attempts)&lt;&lt;&#10;&#10;(x) A. National &#10;( ) B. Regional &#10;( ) C. District&#10;( ) D. Facility &#10;&#10;[explanation]&#10;The chart shows the values of the National level of the Health System.&#10;[explanation] " max_attempts="2">
+<multiplechoiceresponse>
+  <label>The consistency-time charts (these are the charts on the left side of the page) show total values for which level of the Health System? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. National</choice>
+    <choice correct="false">B. Regional</choice>
+    <choice correct="false">C. District</choice>
+    <choice correct="false">D. Facility</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The chart shows the values of the National level of the Health System.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

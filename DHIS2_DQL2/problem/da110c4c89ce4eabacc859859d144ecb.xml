@@ -1,0 +1,20 @@
+<problem display_name="Knowledge Checks: Question 1 " markdown="A virtuous data cycle is made of: &#10;&gt;&gt;Select the one correct answer&lt;&lt;&#10;&#10;(x) A. Data use and Data Quality &#10;( ) B. Data Quality and Data Sets  &#10;( ) C. Data Sets and Data Elements &#10;( ) D. Data Use and Data Sets  &#10;&#10;[explanation]&#10;A virtuous data cycle consists of data use and data quality.&#10;[explanation]">
+<multiplechoiceresponse>
+  <p>A virtuous data cycle is made of: </p>
+<label>Select the one correct answer</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. Data use and Data Quality</choice>
+    <choice correct="false">B. Data Quality and Data Sets</choice>
+    <choice correct="false">C. Data Sets and Data Elements</choice>
+    <choice correct="false">D. Data Use and Data Sets</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>A virtuous data cycle consists of data use and data quality.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,20 @@
+<problem display_name="Question 1" markdown="Run Min/Max Outlier analysis for ANC/Region D/District D4/Facility 281 from the 1st January to the 30th September.&#10;&gt;&gt;How many values exceeded the Min/Max range? (2 attempts)&lt;&lt;&#10;&#10;(x) A. 14&#10;( ) B. 5&#10;( ) C. 23 &#10;( ) D. 18 &#10;&#10;[explanation]&#10;14 is the correct answer. &#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Run Min/Max Outlier analysis for ANC/Region D/District D4/Facility 281 from the 1st January to the 30th September.</p>
+<label>How many values exceeded the Min/Max range? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. 14</choice>
+    <choice correct="false">B. 5</choice>
+    <choice correct="false">C. 23</choice>
+    <choice correct="false">D. 18</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>14 is the correct answer. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

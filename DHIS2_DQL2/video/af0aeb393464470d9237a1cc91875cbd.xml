@@ -1,0 +1,10 @@
+<video youtube="1.00:lC9NiQ6WSyo" url_name="af0aeb393464470d9237a1cc91875cbd" sub="" transcripts="{&quot;en&quot;: &quot;01ed0b06-e9bd-4b48-92d8-1aa9e3304ab0-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Incorrect Disaggregations &amp; Duplication of Variables" download_track="true" download_video="true" edx_video_id="01ed0b06-e9bd-4b48-92d8-1aa9e3304ab0" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.1.2_Incorrect_disaggregations_Duplication_of_variables.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.1.2+-+Disaggregations+_+Duplication.mp4&quot;]" show_captions="false" youtube_id_1_0="lC9NiQ6WSyo">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.1.2+-+Disaggregations+_+Duplication.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.1.2_Incorrect_disaggregations_Duplication_of_variables.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="01ed0b06-e9bd-4b48-92d8-1aa9e3304ab0-en.srt"/>
+</video>

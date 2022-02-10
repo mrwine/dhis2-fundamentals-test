@@ -1,0 +1,20 @@
+<problem display_name="Question 1" markdown="Which statement(s) below are correct about program rules?&#10;&#10;&gt;&gt;Select all that apply. (2 attempts)&lt;&lt;&#10;&#10;[x] A. Complex data entry with little or no workflow support&#10;[x] B. Calculating coverage based upon only tracker data&#10;[x] C. Calculating completeness from individual patient data           &#10;&#10;&#10;[explanation] &#10;All options are correct.&#10;[explanation]" max_attempts="2">
+<choiceresponse>
+  <p>Which statement(s) below are correct about program rules?</p>
+<label>Select all that apply. (2 attempts)</label>
+<checkboxgroup>
+    <choice correct="true">A. Complex data entry with little or no workflow support</choice>
+    <choice correct="true">B. Calculating coverage based upon only tracker data</choice>
+    <choice correct="true">C. Calculating completeness from individual patient data           </choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p> </p>
+<p>All options are correct.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

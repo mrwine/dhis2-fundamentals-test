@@ -1,0 +1,21 @@
+<problem display_name="Question 8 " markdown="null" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Now select the Outliers dashboard. Configure the dashboard as follows: Data = District; Period = July 2020; Boundary = Other, then select Region C, and then District C-1; Disaggregation = Facility. </p>
+<p>An extreme outlier value of Penta 3 given &lt; 1 was reported for July 2020. Further investigation shows that this value is due to a data entry error and that this error resulted in over reporting of Penta 3 doses administered. Estimate the amount of over-reporting compared to an average month. </p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. 1638</choice>
+    <choice correct="true">B. 1072</choice>
+    <choice correct="false">C. 546</choice>
+    <choice correct="false">D. 23.9</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is 1072.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

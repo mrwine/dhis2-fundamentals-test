@@ -1,0 +1,476 @@
+0
+00:00:00,740 --> 00:00:02,863
+- Move on to numerator relations,
+
+1
+00:00:03,860 --> 00:00:08,640
+this numerator relations, what is numerator relations?
+
+2
+00:00:08,640 --> 00:00:13,213
+This is configuring what appears on consistency data.
+
+3
+00:00:15,100 --> 00:00:18,760
+And we already have a couple of things. Actually,
+
+4
+00:00:18,760 --> 00:00:23,760
+I&#39;m going to remove one of these so that I can show you
+
+5
+00:00:26,160 --> 00:00:27,860
+how it&#39;s done.
+
+6
+00:00:27,860 --> 00:00:32,110
+Um, so for now on numerator relations,
+
+7
+00:00:32,110 --> 00:00:36,610
+we only have the DPT one to three dropout rates.
+
+8
+00:00:36,610 --> 00:00:39,623
+That&#39;s all that&#39;s configured so far.
+
+9
+00:00:40,950 --> 00:00:44,150
+And if we look at the numerator relations page,
+
+10
+00:00:44,150 --> 00:00:46,380
+it comes with some defaults,
+
+11
+00:00:46,380 --> 00:00:51,380
+some default comparisons that the WHO recommends looking at,
+
+12
+00:00:53,050 --> 00:00:54,070
+for example,
+
+13
+00:00:54,070 --> 00:00:58,280
+comparing the first visit for anti-natal care to the first
+
+14
+00:00:58,280 --> 00:01:03,280
+dose of tetanus toxoid, or here is the first dose of,
+
+15
+00:01:03,370 --> 00:01:08,370
+of SP for preventive therapy for malaria in pregnancy.
+
+16
+00:01:10,760 --> 00:01:15,760
+And one of the comparators that they recommend is the DPT
+
+17
+00:01:17,410 --> 00:01:19,200
+one to three dropout rate.
+
+18
+00:01:19,200 --> 00:01:23,430
+Notice how this is already filled in for you.
+
+19
+00:01:23,430 --> 00:01:28,430
+So the tool will automatically complete parts of the
+
+20
+00:01:28,430 --> 00:01:30,840
+numerator relations page.
+
+21
+00:01:30,840 --> 00:01:35,620
+If you have already configured numerator A and numerator B,
+
+22
+00:01:35,620 --> 00:01:37,390
+which, which we have.
+
+23
+00:01:37,390 --> 00:01:40,210
+So I haven&#39;t done anything to fill this in.
+
+24
+00:01:40,210 --> 00:01:42,780
+The tool has automatically filled this in.
+
+25
+00:01:42,780 --> 00:01:46,040
+You should check that it has done it correctly because
+
+26
+00:01:46,040 --> 00:01:49,430
+sometimes it, it misinterprets.
+
+27
+00:01:49,430 --> 00:01:53,370
+And then you, as we,
+
+28
+00:01:53,370 --> 00:01:56,980
+as we have seen on the dashboard that the dropout rate will
+
+29
+00:01:56,980 --> 00:01:58,360
+appear automatically.
+
+30
+00:01:58,360 --> 00:02:03,360
+So I&#39;m going to try to add this one
+
+31
+00:02:04,400 --> 00:02:09,400
+antenatal care compared to first visit for anti-natal care,
+
+32
+00:02:09,770 --> 00:02:14,170
+compared to the first dose of SP for IPT.
+
+33
+00:02:16,560 --> 00:02:21,560
+And when we, when we try to fill in the form, you see here,
+
+34
+00:02:23,040 --> 00:02:28,040
+here&#39;s the comparison, the type A is about equal B.
+
+35
+00:02:28,790 --> 00:02:29,900
+Well,
+
+36
+00:02:29,900 --> 00:02:34,900
+we can also select A is greater than B because often they,
+
+37
+00:02:35,750 --> 00:02:36,583
+not,
+
+38
+00:02:36,583 --> 00:02:41,120
+every woman is going to get SP for various reasons during
+
+39
+00:02:42,300 --> 00:02:45,340
+their first antenatal care visits or,
+
+40
+00:02:45,340 --> 00:02:50,340
+or even some subsequent visits that the first numerator has
+
+41
+00:02:50,630 --> 00:02:53,190
+been filled in automatically.
+
+42
+00:02:53,190 --> 00:02:58,190
+But then when we try to find the, the comparison numerator,
+
+43
+00:02:59,280 --> 00:03:02,150
+we look down the list and it&#39;s not there.
+
+44
+00:03:02,150 --> 00:03:06,150
+So you, what you have to do is,
+
+45
+00:03:06,150 --> 00:03:10,700
+is actually configure IPT one.
+
+46
+00:03:13,580 --> 00:03:18,580
+And fortunately there is in the ANC group,
+
+47
+00:03:19,700 --> 00:03:23,490
+there&#39;s a IPT first dose,
+
+48
+00:03:23,490 --> 00:03:26,920
+given at the primary health care units.
+
+49
+00:03:26,920 --> 00:03:28,963
+So once we configure this,
+
+50
+00:03:31,530 --> 00:03:36,200
+then the tool, when we go back to numerator relations,
+
+51
+00:03:36,200 --> 00:03:41,200
+it&#39;s automatically filled in and you can add things.
+
+52
+00:03:42,110 --> 00:03:44,263
+One that I like to add.
+
+53
+00:03:45,240 --> 00:03:47,230
+It&#39;s an interesting one.
+
+54
+00:03:47,230 --> 00:03:48,280
+If you think about it
+
+55
+00:03:49,250 --> 00:03:54,250
+ANC one compared to DPT one.
+
+56
+00:03:56,300 --> 00:04:01,300
+So how many of the pregnancies that present for their first
+
+57
+00:04:02,290 --> 00:04:06,420
+antenatal care visit go on to get their first dose of
+
+58
+00:04:06,420 --> 00:04:07,920
+DPT.
+
+59
+00:04:07,920 --> 00:04:12,703
+And let&#39;s say, choose A equals B.
+
+60
+00:04:15,020 --> 00:04:19,410
+We&#39;ve got short lists because we&#39;ve only configured a small
+
+61
+00:04:19,410 --> 00:04:21,470
+number of numerators,
+
+62
+00:04:21,470 --> 00:04:25,023
+and we&#39;re going to compare that and save it.
+
+63
+00:04:26,200 --> 00:04:27,033
+In fact,
+
+64
+00:04:27,033 --> 00:04:30,750
+I&#39;ll go back now and see what the dashboard looks like,
+
+65
+00:04:30,750 --> 00:04:33,220
+but having done that, you,
+
+66
+00:04:33,220 --> 00:04:38,220
+you see the table that that row of the table is filled in.
+
+67
+00:04:38,280 --> 00:04:41,740
+And now when we go to consistency data,
+
+68
+00:04:41,740 --> 00:04:46,650
+we&#39;ve got three different comparisons.
+
+69
+00:04:46,650 --> 00:04:51,650
+Remember our advice from the last session,
+
+70
+00:04:52,310 --> 00:04:57,310
+that&#39;s as interesting as it is to compare two different data
+
+71
+00:04:57,730 --> 00:05:01,769
+elements. This is the function of the data quality tool,
+
+72
+00:05:01,769 --> 00:05:06,769
+which is most demanding of the backend. And it slows down.
+
+73
+00:05:08,690 --> 00:05:11,620
+Sometimes this page will not load
+
+74
+00:05:11,620 --> 00:05:14,848
+It won&#39;t render and you&#39;ll find yourself waiting for a long
+
+75
+00:05:14,848 --> 00:05:19,440
+time. So it may be best if you find the page,
+
+76
+00:05:19,440 --> 00:05:24,440
+not loading to limit the data consistency to just a couple
+
+77
+00:05:26,290 --> 00:05:29,890
+of data comparisons,
+
+78
+00:05:29,890 --> 00:05:31,700
+but here&#39;s comparing,
+
+79
+00:05:31,700 --> 00:05:33,710
+here&#39;s the one we added.
+
+80
+00:05:33,710 --> 00:05:36,750
+Well, we added this one
+
+81
+00:05:37,746 --> 00:05:41,433
+and you see there&#39;s fairly good comparison.
+
+82
+00:05:42,280 --> 00:05:45,270
+And we added this one.
+
+83
+00:05:45,270 --> 00:05:50,270
+So indeed ANC1 does have a almost linear
+
+84
+00:05:51,720 --> 00:05:55,603
+relationship to first dose of Pinta vaccine.
+
+85
+00:05:56,540 --> 00:06:01,010
+Again, this, the only reason this works is because we,
+
+86
+00:06:01,010 --> 00:06:05,710
+we discussed yesterday, the idea of a steady state,
+
+87
+00:06:05,710 --> 00:06:10,690
+and this works because the number of pregnancies tends to be
+
+88
+00:06:12,160 --> 00:06:14,353
+roughly constant over time.
+
+89
+00:06:16,090 --> 00:06:20,210
+And if you have high levels of antenatal care coverage,
+
+90
+00:06:20,210 --> 00:06:21,820
+then most,
+
+91
+00:06:21,820 --> 00:06:26,820
+every pregnancy leads to a first antenatal care visits.
+
+92
+00:06:27,390 --> 00:06:30,870
+Most pregnancies result in a live birth.
+
+93
+00:06:30,870 --> 00:06:34,430
+And if you&#39;ve got high coverage with Pinta 1,
+
+94
+00:06:34,430 --> 00:06:37,900
+most live births received their first dose of Pinta
+
+95
+00:06:37,900 --> 00:06:38,733
+vaccine.
+
+96
+00:06:38,733 --> 00:06:43,360
+So this is always reassuring to see this kind of comparison.
+
+97
+00:06:44,620 --> 00:06:49,520
+And it works only if you&#39;ve got pretty high data quality,
+
+98
+00:06:49,520 --> 00:06:54,010
+pretty complete data, a few outliers,
+
+99
+00:06:54,010 --> 00:06:57,450
+high levels of coverage with antenatal care and
+
+100
+00:06:57,450 --> 00:06:58,373
+immunization.
+
+101
+00:06:59,480 --> 00:07:04,480
+And it&#39;s a fairly robust assessment of the quality of the
+
+102
+00:07:04,640 --> 00:07:08,330
+data system when you&#39;ve got this, this linear relationship.
+
+103
+00:07:08,330 --> 00:07:10,443
+But obviously there are some exceptions.
+
+104
+00:07:12,770 --> 00:07:17,740
+Let me again, I encourage anyone to raise their hand.
+
+105
+00:07:17,740 --> 00:07:22,740
+If you want me to pause, I, if not,
+
+106
+00:07:22,870 --> 00:07:26,793
+I&#39;m going to cover these thresholds.
+
+107
+00:07:28,220 --> 00:07:32,390
+Notice how tight the, the thresholds are here.
+
+108
+00:07:32,390 --> 00:07:37,240
+This is plus 10%. This is minus 10%.
+
+109
+00:07:37,240 --> 00:07:40,390
+And when the thresholds are so tight,
+
+110
+00:07:40,390 --> 00:07:45,390
+you&#39;ve got a large number of districts which have diamond
+
+111
+00:07:45,894 --> 00:07:50,894
+shaped dots because they fall outside of plus or minus 10%.
+
+112
+00:07:53,180 --> 00:07:54,300
+So,
+
+113
+00:07:54,300 --> 00:07:59,300
+and even this one where antenatal care is one is pretty
+
+114
+00:08:00,300 --> 00:08:03,130
+close to Pinta one.
+
+115
+00:08:03,130 --> 00:08:07,640
+And maybe we don&#39;t want to identify this as being a
+
+116
+00:08:07,640 --> 00:08:08,820
+suspicious value.
+
+117
+00:08:08,820 --> 00:08:13,820
+We want to accept districts that have at least this,
+
+118
+00:08:15,320 --> 00:08:18,833
+dot that is at least this close to the reference line.
+

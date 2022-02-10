@@ -1,0 +1,776 @@
+0
+00:00:01,302 --> 00:00:03,885
+(upbeat music)
+
+1
+00:00:05,040 --> 00:00:08,461
+- [Instructor] With this video, I&#39;m going to present
+
+2
+00:00:08,461 --> 00:00:10,550
+to you how to use
+
+3
+00:00:10,550 --> 00:00:14,160
+the Consistency-time page
+
+4
+00:00:14,160 --> 00:00:18,633
+of the dashboard of the WHO Data Quality Tool.
+
+5
+00:00:20,810 --> 00:00:24,313
+Let&#39;s click on the tab for Consistency-time.
+
+6
+00:00:25,400 --> 00:00:29,550
+And then, so that our screen will match up
+
+7
+00:00:29,550 --> 00:00:32,480
+with the screenshots in the guide,
+
+8
+00:00:32,479 --> 00:00:35,790
+we&#39;ll set Data to Core,
+
+9
+00:00:35,790 --> 00:00:38,023
+Period to April,
+
+10
+00:00:39,220 --> 00:00:42,653
+and Disaggregation to District.
+
+11
+00:00:44,240 --> 00:00:48,060
+Now, if we want to free up some space on our screen,
+
+12
+00:00:48,060 --> 00:00:50,670
+we can make the settings window disappear
+
+13
+00:00:50,670 --> 00:00:53,133
+by clicking on the settings icon.
+
+14
+00:00:55,820 --> 00:01:00,820
+Let&#39;s look at the charts on this page.
+
+15
+00:01:01,310 --> 00:01:06,310
+We see that there are charts for several indicators,
+
+16
+00:01:07,400 --> 00:01:09,463
+ANC 1st visits,
+
+17
+00:01:10,680 --> 00:01:14,520
+if we scroll down, ANC 4th visits,
+
+18
+00:01:14,520 --> 00:01:16,623
+HIV tests done,
+
+19
+00:01:17,950 --> 00:01:20,710
+Institutional deliveries,
+
+20
+00:01:20,710 --> 00:01:25,223
+Penta 3 given before the age of 12 months,
+
+21
+00:01:26,190 --> 00:01:30,450
+and Under 5 OPD malaria as a percentage
+
+22
+00:01:30,450 --> 00:01:32,963
+of total outpatient malaria.
+
+23
+00:01:34,870 --> 00:01:36,853
+For each of these indicators,
+
+24
+00:01:38,150 --> 00:01:40,353
+the page has two charts.
+
+25
+00:01:42,030 --> 00:01:46,560
+The chart on the left has three different lines
+
+26
+00:01:46,560 --> 00:01:48,153
+in different colors.
+
+27
+00:01:49,170 --> 00:01:51,223
+Let&#39;s explore these lines.
+
+28
+00:01:54,340 --> 00:01:57,040
+The dark blue line is showing the trend
+
+29
+00:01:57,040 --> 00:01:59,870
+in the number of ANC 1st visits
+
+30
+00:01:59,870 --> 00:02:04,870
+from May of 2019
+
+31
+00:02:06,020 --> 00:02:09,900
+through April of 2020,
+
+32
+00:02:09,900 --> 00:02:12,373
+which is the period that we selected.
+
+33
+00:02:14,640 --> 00:02:16,860
+And then, what is this light blue line?
+
+34
+00:02:16,860 --> 00:02:20,060
+Well, the light blue line is also showing the trend
+
+35
+00:02:20,060 --> 00:02:23,003
+over a 12 month period.
+
+36
+00:02:23,003 --> 00:02:26,780
+But in this case, it is the months
+
+37
+00:02:26,780 --> 00:02:29,683
+from May of 2018,
+
+38
+00:02:31,100 --> 00:02:33,273
+to April of 2019.
+
+39
+00:02:35,060 --> 00:02:37,770
+And then, the orange line shows the trend
+
+40
+00:02:37,770 --> 00:02:42,320
+over another 12 month period, which is May of 2017
+
+41
+00:02:44,148 --> 00:02:46,810
+to April of 2018.
+
+42
+00:02:46,810 --> 00:02:49,670
+So, each of the lines is showing the trend
+
+43
+00:02:49,670 --> 00:02:51,950
+over a 12 month period,
+
+44
+00:02:51,950 --> 00:02:56,273
+whether it&#39;s between 1 and 11 months previously,
+
+45
+00:02:57,480 --> 00:03:01,940
+or 12 and 23 months previously,
+
+46
+00:03:01,940 --> 00:03:06,580
+or 24 and 35 months previously.
+
+47
+00:03:06,580 --> 00:03:09,410
+This is an example of what is called
+
+48
+00:03:09,410 --> 00:03:11,310
+a year on year chart,
+
+49
+00:03:11,310 --> 00:03:14,870
+because we have placed the findings for one year
+
+50
+00:03:14,870 --> 00:03:18,523
+on top of the findings for other years.
+
+51
+00:03:19,650 --> 00:03:23,640
+And we noticed from these charts,
+
+52
+00:03:23,640 --> 00:03:28,640
+that the values of ANC 1st visits go up and down a bit,
+
+53
+00:03:29,100 --> 00:03:34,100
+but most months they don&#39;t jump up or down a great deal.
+
+54
+00:03:34,340 --> 00:03:36,283
+But we see two exceptions.
+
+55
+00:03:37,770 --> 00:03:41,660
+There&#39;s this outlier, this value that&#39;s very different
+
+56
+00:03:41,660 --> 00:03:45,063
+from other months, in January of 2020.
+
+57
+00:03:47,340 --> 00:03:52,093
+Back here, in May of 2019, we also see a jump up.
+
+58
+00:03:53,250 --> 00:03:58,030
+So, the year on year chart is good to show
+
+59
+00:03:58,030 --> 00:04:02,000
+how the value for a single month can be quite different,
+
+60
+00:04:02,000 --> 00:04:06,090
+not only different from the months in that year,
+
+61
+00:04:06,090 --> 00:04:10,533
+but different from the value for months in other years.
+
+62
+00:04:12,250 --> 00:04:17,250
+Let&#39;s look now, at the chart on the right side of the page.
+
+63
+00:04:19,470 --> 00:04:22,170
+This is a special kind of chart, also.
+
+64
+00:04:22,170 --> 00:04:24,113
+It&#39;s called a scatter plot.
+
+65
+00:04:25,040 --> 00:04:28,670
+This is because the values are scattered.
+
+66
+00:04:28,670 --> 00:04:33,220
+Each of these dots represents the values
+
+67
+00:04:33,220 --> 00:04:34,790
+for a single district.
+
+68
+00:04:34,790 --> 00:04:38,320
+If we place the cursor on the dot, then a window appears
+
+69
+00:04:38,320 --> 00:04:42,053
+showing that this is for District C-5.
+
+70
+00:04:43,010 --> 00:04:48,010
+And what does the value along the vertical axis represent?
+
+71
+00:04:48,410 --> 00:04:53,330
+Well, as we see, the value on the vertical axis
+
+72
+00:04:53,330 --> 00:04:58,330
+is the number of first ANC visits in April of 2020,
+
+73
+00:04:59,140 --> 00:05:02,403
+which was 3,917.
+
+74
+00:05:04,030 --> 00:05:07,763
+What does the value on the horizontal axis represent?
+
+75
+00:05:08,920 --> 00:05:13,720
+Horizontal axis is the average value of ANC visits
+
+76
+00:05:13,720 --> 00:05:18,720
+for that district during the 11 months prior to April 2020.
+
+77
+00:05:20,380 --> 00:05:25,380
+So, this would be from May of 2019 until March of 2020.
+
+78
+00:05:28,640 --> 00:05:32,540
+And the two values, they aren&#39;t the same,
+
+79
+00:05:32,540 --> 00:05:35,230
+but they are close to each other,
+
+80
+00:05:35,230 --> 00:05:38,970
+and that&#39;s why this dot is close to the line.
+
+81
+00:05:38,970 --> 00:05:43,560
+This line represents districts,
+
+82
+00:05:43,560 --> 00:05:46,810
+which have exactly, or almost exactly,
+
+83
+00:05:46,810 --> 00:05:50,369
+the same value in April 2020 as they had
+
+84
+00:05:50,369 --> 00:05:53,810
+during the average of the previous 11 months.
+
+85
+00:05:53,810 --> 00:05:58,113
+And all of the dots, where the two values,
+
+86
+00:05:59,440 --> 00:06:02,010
+the value for April 20,
+
+87
+00:06:02,010 --> 00:06:04,900
+and the value for the previous 11 months,
+
+88
+00:06:04,900 --> 00:06:07,570
+where those two values are almost the same,
+
+89
+00:06:07,570 --> 00:06:09,680
+they&#39;re close to this black line,
+
+90
+00:06:09,680 --> 00:06:12,593
+and they fall between the two gray lines.
+
+91
+00:06:13,610 --> 00:06:17,543
+Now there&#39;s one dot where there&#39;s an exception.
+
+92
+00:06:18,750 --> 00:06:20,420
+It was this dot down here.
+
+93
+00:06:20,420 --> 00:06:24,240
+And notice that the dot has a diamond shape,
+
+94
+00:06:24,240 --> 00:06:29,240
+rather than a circular shape of the dots that appear
+
+95
+00:06:29,660 --> 00:06:33,030
+between the two gray lines.
+
+96
+00:06:33,030 --> 00:06:38,030
+So, dots which are suspicious have a different shape.
+
+97
+00:06:38,420 --> 00:06:43,420
+This is for District B-2, which in April of 2020
+
+98
+00:06:43,610 --> 00:06:48,610
+reported a total of 1,425 first ANC visits.
+
+99
+00:06:49,300 --> 00:06:52,880
+Whereas, the average reported by this district
+
+100
+00:06:52,880 --> 00:06:57,680
+during the previous 11 months was 4,595.
+
+101
+00:06:57,680 --> 00:06:59,830
+So these are quite different.
+
+102
+00:06:59,830 --> 00:07:04,720
+The value on the vertical axis is quite different
+
+103
+00:07:04,720 --> 00:07:07,700
+from the value on the horizontal axis.
+
+104
+00:07:07,700 --> 00:07:10,510
+So this dot is placed outside
+
+105
+00:07:10,510 --> 00:07:13,173
+and identified as an outlier.
+
+106
+00:07:14,419 --> 00:07:19,070
+Let me show you how we might investigate
+
+107
+00:07:19,070 --> 00:07:23,923
+this outlier by changing the period.
+
+108
+00:07:25,170 --> 00:07:29,833
+The outlier appears in January of 2020.
+
+109
+00:07:31,360 --> 00:07:35,460
+So what if we change the period of these charts
+
+110
+00:07:35,460 --> 00:07:38,193
+to January of 2020?
+
+111
+00:07:39,580 --> 00:07:42,900
+Again, let&#39;s free up space by making the settings window
+
+112
+00:07:42,900 --> 00:07:44,270
+disappear.
+
+113
+00:07:44,270 --> 00:07:47,100
+And notice how the charts have changed.
+
+114
+00:07:47,100 --> 00:07:52,100
+Now, we still see trend lines in the chart on the left,
+
+115
+00:07:53,800 --> 00:07:57,350
+but in this case, the trend for the blue line is from
+
+116
+00:07:57,350 --> 00:08:02,350
+February of 2019 to January of 2020,
+
+117
+00:08:02,950 --> 00:08:04,490
+the period that we select.
+
+118
+00:08:04,490 --> 00:08:07,763
+And we see our outlier here.
+
+119
+00:08:10,870 --> 00:08:13,063
+Look at the chart on the right now.
+
+120
+00:08:14,400 --> 00:08:18,290
+Well, apart from these districts,
+
+121
+00:08:18,290 --> 00:08:22,700
+which had values in January of 2020,
+
+122
+00:08:22,700 --> 00:08:25,880
+which were reasonably close to the average
+
+123
+00:08:25,880 --> 00:08:30,770
+for the previous 11 months, there&#39;s a single dot up here.
+
+124
+00:08:30,770 --> 00:08:34,680
+And it is for District B-2.
+
+125
+00:08:34,679 --> 00:08:39,680
+So, in January of 2020, District B-2
+
+126
+00:08:39,799 --> 00:08:44,720
+reported a very large, and probably incorrect,
+
+127
+00:08:44,720 --> 00:08:49,720
+value of 36,835 first ANC visits.
+
+128
+00:08:51,840 --> 00:08:53,980
+When you compare this to the average
+
+129
+00:08:53,980 --> 00:08:56,360
+of the previous 11 months,
+
+130
+00:08:56,360 --> 00:09:01,360
+it reported only 1,363 first ANC visits
+
+131
+00:09:02,220 --> 00:09:04,630
+during those previous 11 months.
+
+132
+00:09:04,630 --> 00:09:08,270
+So this dot is showing far from the reference line,
+
+133
+00:09:08,270 --> 00:09:12,303
+far from the line showing equal values.
+
+134
+00:09:14,350 --> 00:09:19,350
+And can you explain now why it is that we saw-
+
+135
+00:09:20,170 --> 00:09:23,900
+let&#39;s go back to April, keep in mind the value
+
+136
+00:09:23,900 --> 00:09:28,900
+reported for District B-2 in January of 2020, almost 37,000-
+
+137
+00:09:32,200 --> 00:09:35,123
+if we change the period back to April,
+
+138
+00:09:39,120 --> 00:09:44,023
+can you explain why the dot was below the line in April?
+
+139
+00:09:46,890 --> 00:09:51,890
+Well, in fact, this dot is below the line in April
+
+140
+00:09:53,010 --> 00:09:57,023
+because the average of the previous 11 months,
+
+141
+00:09:58,620 --> 00:10:03,090
+when we are looking at the chart, based on April,
+
+142
+00:10:03,090 --> 00:10:07,320
+the average includes this very high and incorrect value
+
+143
+00:10:07,320 --> 00:10:09,900
+that was reported in January.
+
+144
+00:10:09,900 --> 00:10:13,350
+And so, that increases so much the average
+
+145
+00:10:13,350 --> 00:10:18,350
+over the previous 11 months that it pulls this dot away
+
+146
+00:10:18,560 --> 00:10:20,810
+from the reference line.
+
+147
+00:10:20,810 --> 00:10:24,570
+So that&#39;s an example of how you can do some investigation
+
+148
+00:10:24,570 --> 00:10:27,280
+by changing the period.
+
+149
+00:10:27,280 --> 00:10:29,520
+And you could also do some investigation
+
+150
+00:10:29,520 --> 00:10:34,290
+by changing the organization unit and drill down.
+
+151
+00:10:34,290 --> 00:10:37,930
+However, we will see how it is much easier
+
+152
+00:10:37,930 --> 00:10:42,600
+to drill down and do investigations when we talk about
+
+153
+00:10:42,600 --> 00:10:45,000
+the outlier page.
+
+154
+00:10:45,000 --> 00:10:48,680
+Before we leave the Consistency-time page,
+
+155
+00:10:48,680 --> 00:10:53,680
+I want to show you how we can change data,
+
+156
+00:10:54,100 --> 00:10:58,210
+and what happens to the Consistency-time page
+
+157
+00:10:58,210 --> 00:10:59,963
+when we change data.
+
+158
+00:11:01,060 --> 00:11:04,110
+At present, data includes, as you see,
+
+159
+00:11:04,110 --> 00:11:08,090
+one or two indicators from multiple programs,
+
+160
+00:11:08,090 --> 00:11:10,553
+antenatal care program,
+
+161
+00:11:11,540 --> 00:11:13,930
+HIV program,
+
+162
+00:11:13,930 --> 00:11:16,770
+this is labor and delivery program,
+
+163
+00:11:16,770 --> 00:11:21,160
+immunization, and a malaria indicator.
+
+164
+00:11:21,160 --> 00:11:24,690
+Notice that there&#39;s only a single immunization indicator
+
+165
+00:11:24,690 --> 00:11:29,223
+now included when we have data set to core.
+
+166
+00:11:30,070 --> 00:11:35,070
+But what happens if we change core to immunization?
+
+167
+00:11:36,720 --> 00:11:39,683
+Wait a while for the data to be processed.
+
+168
+00:11:43,020 --> 00:11:45,750
+And now, let&#39;s scroll down the page
+
+169
+00:11:45,750 --> 00:11:48,590
+and see which indicators are included
+
+170
+00:11:48,590 --> 00:11:51,810
+on the Consistency-time page.
+
+171
+00:11:51,810 --> 00:11:56,280
+Well, we see a new indicator, a new immunization indicator,
+
+172
+00:11:56,280 --> 00:11:58,410
+BCG, Measles,
+
+173
+00:11:58,410 --> 00:11:59,920
+OPV 1,
+
+174
+00:11:59,920 --> 00:12:02,690
+OPV 2, 3,
+
+175
+00:12:02,690 --> 00:12:05,760
+Penta 1, 2, 3,
+
+176
+00:12:05,760 --> 00:12:08,240
+Rotavirus 1 and 2.
+
+177
+00:12:08,240 --> 00:12:12,140
+So, by changing to a different group,
+
+178
+00:12:12,140 --> 00:12:15,820
+changing data to one of these other groups,
+
+179
+00:12:15,820 --> 00:12:20,373
+we can look at a larger group of programs,
+
+180
+00:12:21,380 --> 00:12:23,110
+specific indicators,
+
+181
+00:12:23,110 --> 00:12:26,740
+and we can do a data quality review
+
+182
+00:12:26,740 --> 00:12:30,763
+that is specific to that program.
+
+183
+00:12:32,100 --> 00:12:34,460
+Here, if we change to the HIV program,
+
+184
+00:12:34,460 --> 00:12:39,460
+we see a larger number of HIV indicators on the dashboard.
+
+185
+00:12:40,720 --> 00:12:45,720
+So, that&#39;s an example of how changing data
+
+186
+00:12:46,720 --> 00:12:51,720
+allows us to provide a more detailed look
+
+187
+00:12:52,290 --> 00:12:56,590
+at a more extensive set of indicators.
+
+188
+00:12:56,590 --> 00:13:00,680
+And later, we will practice changing this
+
+189
+00:13:00,680 --> 00:13:05,280
+to the district group, which has been especially designed
+
+190
+00:13:05,280 --> 00:13:07,969
+for data quality review of indicators
+
+191
+00:13:07,969 --> 00:13:11,223
+of greatest relevance at the district level.
+
+192
+00:13:12,360 --> 00:13:13,397
+Thank you.
+
+193
+00:13:13,397 --> 00:13:15,980
+(upbeat music)
+

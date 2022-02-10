@@ -1,0 +1,20 @@
+<problem display_name="Validation Rules Question 2" markdown="Validation notifications:&#10;&#10;&gt;&gt;Select all that apply: (2 attempts)&lt;&lt;&#10;&#10;[x] A. Should not overwhelm the recipient with too many.&#10;[x] B. Should be specific and clear on what needs to be done to correct the issue detected.&#10;[x] C. Should be sent via an email routinely.&#10;[x] D. Could be used for disease detection and outbreak alerts.&#10;&#10;[explanation]&#10;All options are correct. Validation notifications should not overwhelm the recipient with too many, should be specific and clear on what needs to be done to correct the issue detected, should be sent via an email routinely AND could be used for disease detection and outbreak alerts.        &#10;[explanation]&#10;&#10;" max_attempts="2">
+<choiceresponse>
+  <p>Validation notifications:</p>
+<label>Select all that apply: (2 attempts)</label>
+<checkboxgroup>
+    <choice correct="true">A. Should not overwhelm the recipient with too many.</choice>
+    <choice correct="true">B. Should be specific and clear on what needs to be done to correct the issue detected.</choice>
+    <choice correct="true">C. Should be sent via an email routinely.</choice>
+    <choice correct="true">D. Could be used for disease detection and outbreak alerts.</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>All options are correct. Validation notifications should not overwhelm the recipient with too many, should be specific and clear on what needs to be done to correct the issue detected, should be sent via an email routinely AND could be used for disease detection and outbreak alerts.        </p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

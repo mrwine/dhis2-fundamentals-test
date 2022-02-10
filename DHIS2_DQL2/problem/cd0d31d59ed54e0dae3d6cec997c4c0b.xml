@@ -1,0 +1,21 @@
+<problem display_name="Question 9 " markdown="Stay on the Outliers dashboard. Do not change the settings except for the Options. Set Options as follows: Under “display columns” select Missing data, and select the Outlier filter to Off. The data table should be sorted from largest to smallest missing weight. If it is not, please sort it using the &quot;Missing&quot; column.&#10;&#10;For which health facility is the largest amount of OPD total attendance data missing?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts)&lt;&lt;&#10;&#10;( ) A. Facility 346&#10;( ) B. Facility 543&#10;( ) C. Facility 559&#10;(x) D. Facility 378              &#10;[explanation]&#10;The correct answer is Facility 378 &#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Stay on the Outliers dashboard. Do not change the settings except for the Options. Set Options as follows: Under “display columns” select Missing data, and select the Outlier filter to Off. The data table should be sorted from largest to smallest missing weight. If it is not, please sort it using the "Missing" column.</p>
+<p>For which health facility is the largest amount of OPD total attendance data missing?</p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Facility 346</choice>
+    <choice correct="false">B. Facility 543</choice>
+    <choice correct="false">C. Facility 559</choice>
+    <choice correct="true">D. Facility 378</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is Facility 378 </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

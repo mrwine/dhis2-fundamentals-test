@@ -1,0 +1,19 @@
+<problem display_name="Validation Rules Question 1" markdown="Validation alerts are:&#10;&#10;&gt;&gt;Select all that apply: (2 attempts) &lt;&lt;&#10;&#10;[x] A. Based on a set of predefined rules&#10;[x] B. Able to be run during data entry, after data entry, or automatically.&#10;[x] C. Able to be scheduled to trigger automatic alerts and notifications&#10;&#10;[explanation]&#10;All options are correct. Validation alerts are Based on a set of predefined rules, able to be run during data entry, after data entry, or automatically AND able to be scheduled to trigger automatic alerts and notifications&#10;[explanation]&#10;&#10;" max_attempts="2">
+<choiceresponse>
+  <p>Validation alerts are:</p>
+<label>Select all that apply: (2 attempts) </label>
+<checkboxgroup>
+    <choice correct="true">A. Based on a set of predefined rules</choice>
+    <choice correct="true">B. Able to be run during data entry, after data entry, or automatically.</choice>
+    <choice correct="true">C. Able to be scheduled to trigger automatic alerts and notifications</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>All options are correct. Validation alerts are Based on a set of predefined rules, able to be run during data entry, after data entry, or automatically AND able to be scheduled to trigger automatic alerts and notifications</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

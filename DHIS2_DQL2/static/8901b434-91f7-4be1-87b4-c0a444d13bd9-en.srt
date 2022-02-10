@@ -1,0 +1,3232 @@
+0
+00:00:02,150 --> 00:00:04,330
+- [Pamod] In this session, what we are going to discuss
+
+1
+00:00:04,330 --> 00:00:07,690
+is about Data Quality Practices in Sri Lanka.
+
+2
+00:00:07,690 --> 00:00:10,540
+So, what I hope to do in this session is that,
+
+3
+00:00:10,540 --> 00:00:13,340
+I will be taking two examples,
+
+4
+00:00:13,340 --> 00:00:15,250
+two implementations in Sri Lanka.
+
+5
+00:00:15,250 --> 00:00:17,750
+One is from the RMNCAH program,
+
+6
+00:00:17,750 --> 00:00:20,390
+and the other one is from the nutrition program.
+
+7
+00:00:20,390 --> 00:00:22,950
+And I&#39;m going to discuss how these elements
+
+8
+00:00:22,950 --> 00:00:26,070
+of ensuring data quality has been applied
+
+9
+00:00:26,070 --> 00:00:28,143
+in these two implementations.
+
+10
+00:00:30,410 --> 00:00:32,450
+So the first scenario,
+
+11
+00:00:32,450 --> 00:00:34,510
+or the first use case that I&#39;m going to talk about
+
+12
+00:00:34,510 --> 00:00:38,240
+is the RMNCAH program in Sri Lanka.
+
+13
+00:00:38,240 --> 00:00:42,080
+So this in fact, was one of the major DHS implementations
+
+14
+00:00:42,080 --> 00:00:44,600
+in Sri Lanka, and it took us a lot of efforts
+
+15
+00:00:44,600 --> 00:00:46,370
+to get this implemented.
+
+16
+00:00:46,370 --> 00:00:48,430
+The main reason being,
+
+17
+00:00:48,430 --> 00:00:52,570
+the paper-based data collection system of RMNCAH
+
+18
+00:00:52,570 --> 00:00:54,720
+has been a well-established system
+
+19
+00:00:54,720 --> 00:00:57,050
+for more than three decades.
+
+20
+00:00:57,050 --> 00:00:59,680
+So trying to introduce a digital system,
+
+21
+00:00:59,680 --> 00:01:03,432
+and also trying to ensure at least the minimum data quality
+
+22
+00:01:03,432 --> 00:01:05,100
+that was already there in the paper-based system
+
+23
+00:01:05,099 --> 00:01:06,470
+was a major challenge.
+
+24
+00:01:06,470 --> 00:01:11,470
+So let us see how we apply these concepts of data quality
+
+25
+00:01:11,646 --> 00:01:14,020
+while we were planning the implementation.
+
+26
+00:01:14,020 --> 00:01:17,910
+So we might feel that ensuring data quality
+
+27
+00:01:17,910 --> 00:01:19,630
+is a very complicated task,
+
+28
+00:01:19,630 --> 00:01:21,903
+but I will show you how simple you can start.
+
+29
+00:01:23,380 --> 00:01:26,930
+So for example, the first thing that we did was,
+
+30
+00:01:26,930 --> 00:01:28,480
+we concentrated about data quality
+
+31
+00:01:28,480 --> 00:01:31,810
+while we were designing the data entry forms.
+
+32
+00:01:31,810 --> 00:01:34,970
+So one simple step that we ensured was that,
+
+33
+00:01:34,970 --> 00:01:37,970
+because we were trying to introduce this digital system
+
+34
+00:01:37,970 --> 00:01:41,310
+to an already existing paper-based system,
+
+35
+00:01:41,310 --> 00:01:44,650
+we tried to adhere to the well-established data flows.
+
+36
+00:01:44,650 --> 00:01:47,320
+In simple words, what we tried to do is,
+
+37
+00:01:47,320 --> 00:01:49,970
+the data entry interfaces or the data forms,
+
+38
+00:01:49,970 --> 00:01:51,830
+in the DHIS2, the datasets,
+
+39
+00:01:51,830 --> 00:01:56,280
+we tried to make the use interfaces as much as similar
+
+40
+00:01:56,280 --> 00:01:57,900
+to the existing paper-based format.
+
+41
+00:01:57,900 --> 00:01:59,320
+I mean, we always say
+
+42
+00:01:59,320 --> 00:02:02,010
+that you have to optimize the data collection forms.
+
+43
+00:02:02,010 --> 00:02:03,770
+But while ensuring that,
+
+44
+00:02:03,770 --> 00:02:06,380
+we tried to keep the flow of the data,
+
+45
+00:02:06,380 --> 00:02:08,270
+the order in which it appear,
+
+46
+00:02:08,270 --> 00:02:10,960
+the same as how it is in data entry forms.
+
+47
+00:02:10,960 --> 00:02:14,580
+So by doing that, we can minimize the random errors
+
+48
+00:02:14,580 --> 00:02:17,170
+that data entry people might do,
+
+49
+00:02:17,170 --> 00:02:20,360
+because they just have to follow the same workflow
+
+50
+00:02:20,360 --> 00:02:23,890
+that they are doing while entering data into paper formats.
+
+51
+00:02:23,890 --> 00:02:26,520
+So for this instance,
+
+52
+00:02:26,520 --> 00:02:28,860
+what we created was a custom data entry form,
+
+53
+00:02:28,860 --> 00:02:31,490
+not a section or standard DHIS2 dataset,
+
+54
+00:02:31,490 --> 00:02:32,920
+but it was a custom form.
+
+55
+00:02:32,920 --> 00:02:34,620
+So let me show you, first of all,
+
+56
+00:02:34,620 --> 00:02:38,600
+now this is the paper format that we had in the RMNCAH,
+
+57
+00:02:38,600 --> 00:02:40,530
+the main aggregate data collection form.
+
+58
+00:02:40,530 --> 00:02:42,380
+You can see it&#39;s a very complicated form.
+
+59
+00:02:42,380 --> 00:02:46,160
+There are so many data items or data elements.
+
+60
+00:02:46,160 --> 00:02:49,360
+And of course, most of these columns that you see here
+
+61
+00:02:49,360 --> 00:02:51,320
+are the periods.
+
+62
+00:02:51,320 --> 00:02:53,627
+So the columns of course, do not come into this,
+
+63
+00:02:53,627 --> 00:02:56,260
+our data entry interface, but what I&#39;m talking here
+
+64
+00:02:56,260 --> 00:03:01,210
+is about having this same model as how it is appearing
+
+65
+00:03:01,210 --> 00:03:03,360
+in the paper format.
+
+66
+00:03:03,360 --> 00:03:05,260
+And we had the same workflow,
+
+67
+00:03:05,260 --> 00:03:08,370
+while we did the transition to the digital format.
+
+68
+00:03:08,370 --> 00:03:12,270
+So here what you&#39;re seeing is our DHIS2 custom dataset,
+
+69
+00:03:12,270 --> 00:03:16,350
+or data entry form, and please excuse me for the language.
+
+70
+00:03:16,350 --> 00:03:17,950
+The forms are in local language,
+
+71
+00:03:17,950 --> 00:03:21,400
+but what I want to highlight is the same order
+
+72
+00:03:21,400 --> 00:03:23,270
+that we have it in the data format,
+
+73
+00:03:23,270 --> 00:03:27,000
+we have been following in DHIS2 dataset as well.
+
+74
+00:03:27,000 --> 00:03:29,700
+Even though we have done some slight modifications,
+
+75
+00:03:29,700 --> 00:03:33,520
+for example, we have set up here the vertical tabs
+
+76
+00:03:34,750 --> 00:03:36,660
+to capture this large amount of data,
+
+77
+00:03:36,660 --> 00:03:41,660
+but the flow of information capture remains the same.
+
+78
+00:03:42,500 --> 00:03:43,380
+And the next thing is,
+
+79
+00:03:43,380 --> 00:03:46,500
+sometimes when we are designing forms,
+
+80
+00:03:46,500 --> 00:03:50,564
+we cannot actually replicate the paper forms into the DHIS2.
+
+81
+00:03:50,564 --> 00:03:53,010
+There are some optimizations that we have to do,
+
+82
+00:03:53,010 --> 00:03:54,290
+especially like there are things
+
+83
+00:03:54,290 --> 00:03:56,240
+like duplicate data collection,
+
+84
+00:03:56,240 --> 00:03:59,300
+and there are so many things that we don&#39;t do
+
+85
+00:03:59,300 --> 00:04:02,050
+in an optimum way in paper-based collection,
+
+86
+00:04:02,050 --> 00:04:03,400
+but which we can optimize
+
+87
+00:04:03,400 --> 00:04:07,720
+when we are creating the datasets in DHIS2.
+
+88
+00:04:07,720 --> 00:04:10,370
+So for example, in the mental health system,
+
+89
+00:04:10,370 --> 00:04:12,470
+this is the paper form that we are using.
+
+90
+00:04:12,470 --> 00:04:13,703
+But when we were trying to convert that into DHIS2,
+
+91
+00:04:16,240 --> 00:04:19,690
+what we actually did was, we optimized the data form.
+
+92
+00:04:19,690 --> 00:04:22,500
+And at the same time, we had the opportunity of modifying
+
+93
+00:04:22,500 --> 00:04:26,030
+the existing paper-based data collection form,
+
+94
+00:04:26,030 --> 00:04:28,960
+so that it kind of added to the quality of data
+
+95
+00:04:28,960 --> 00:04:31,030
+that is collected.
+
+96
+00:04:31,030 --> 00:04:34,990
+For example, now this is the modified paper-based form
+
+97
+00:04:34,990 --> 00:04:37,350
+that we were able to create,
+
+98
+00:04:37,350 --> 00:04:40,150
+because when we&#39;ve been one step ahead,
+
+99
+00:04:40,150 --> 00:04:43,560
+this is the DHIS2-based data collection form.
+
+100
+00:04:43,560 --> 00:04:45,730
+So to minimally confuse the users
+
+101
+00:04:45,730 --> 00:04:48,950
+and at the point of generation of data,
+
+102
+00:04:48,950 --> 00:04:51,620
+we tried to use the same data collection form
+
+103
+00:04:51,620 --> 00:04:54,120
+as we have been in DHIS2.
+
+104
+00:04:54,120 --> 00:04:54,953
+So what we did was,
+
+105
+00:04:54,953 --> 00:04:58,280
+we kind of modified the existing paper-based form
+
+106
+00:04:58,280 --> 00:04:59,943
+to be an optimized paper form.
+
+107
+00:05:01,810 --> 00:05:05,230
+This is another example of the same mental health system,
+
+108
+00:05:05,230 --> 00:05:09,430
+where we have optimized the data collection forms, right?
+
+109
+00:05:09,430 --> 00:05:13,290
+And sometimes, of course, in this RHMIS system
+
+110
+00:05:13,290 --> 00:05:15,950
+there were requirements such as like,
+
+111
+00:05:15,950 --> 00:05:19,610
+when we wanted to collect these WHO MNH Indicators,
+
+112
+00:05:19,610 --> 00:05:22,070
+we did not have a paper-based form to start with.
+
+113
+00:05:22,070 --> 00:05:24,830
+So there of course, we had the luxury of designing
+
+114
+00:05:24,830 --> 00:05:27,950
+of a paper-based form also from the scratch,
+
+115
+00:05:27,950 --> 00:05:32,830
+which was kind of easy because this is the DHIS2 dataset,
+
+116
+00:05:32,830 --> 00:05:34,870
+or rather the event form.
+
+117
+00:05:34,870 --> 00:05:37,040
+And that one, based on that one,
+
+118
+00:05:37,040 --> 00:05:38,500
+so when designing that one,
+
+119
+00:05:38,500 --> 00:05:40,980
+we were able to follow the best practices.
+
+120
+00:05:40,980 --> 00:05:45,380
+And then we came back and we designed a new paper form
+
+121
+00:05:45,380 --> 00:05:46,670
+for the collection of data,
+
+122
+00:05:46,670 --> 00:05:50,680
+because most of the institutes
+
+123
+00:05:50,680 --> 00:05:53,270
+that are involved with our MCH system,
+
+124
+00:05:53,270 --> 00:05:56,750
+they do not capture the data, the electronic system
+
+125
+00:05:56,750 --> 00:05:57,970
+at the point of generation.
+
+126
+00:05:57,970 --> 00:06:00,850
+So usually the data entry happens on a paper-based form,
+
+127
+00:06:00,850 --> 00:06:03,763
+and then that is copied into the DHIS2.
+
+128
+00:06:04,820 --> 00:06:09,280
+Right, and I mean, for the expanding on this,
+
+129
+00:06:09,280 --> 00:06:12,053
+one thing that we had to make sure,
+
+130
+00:06:13,050 --> 00:06:16,720
+like when we are having this digital transformation
+
+131
+00:06:16,720 --> 00:06:18,926
+from paper system to the electronic system
+
+132
+00:06:18,926 --> 00:06:21,576
+is to minimally interrupt the workflow.
+
+133
+00:06:21,576 --> 00:06:23,660
+Because the thing is, I think that should be the context
+
+134
+00:06:23,660 --> 00:06:24,851
+of most of the countries,
+
+135
+00:06:24,851 --> 00:06:29,108
+because you may have a well-established paper format.
+
+136
+00:06:29,108 --> 00:06:31,796
+And when you are trying to introduce the digital system,
+
+137
+00:06:31,796 --> 00:06:34,969
+we should try to minimally disrupt the existing data flow.
+
+138
+00:06:34,969 --> 00:06:38,695
+It&#39;s like, the government&#39;s motive
+
+139
+00:06:38,695 --> 00:06:42,760
+is to provide better health, not only data.
+
+140
+00:06:42,760 --> 00:06:46,790
+So if you are just trying to enhance the data,
+
+141
+00:06:46,790 --> 00:06:48,440
+I mean, the quality of data
+
+142
+00:06:48,440 --> 00:06:50,910
+by introducing the digital system,
+
+143
+00:06:50,910 --> 00:06:51,743
+and at the same time,
+
+144
+00:06:51,743 --> 00:06:54,710
+if you are kind of disrupting an existing data flow,
+
+145
+00:06:54,710 --> 00:06:57,700
+that will have a lot of resistance during the implementation
+
+146
+00:06:57,700 --> 00:06:59,410
+from so many stakeholders.
+
+147
+00:06:59,410 --> 00:07:02,620
+So the other thing that we tried to do with this is that,
+
+148
+00:07:02,620 --> 00:07:05,720
+in our paper-based system in Sri Lanka,
+
+149
+00:07:05,720 --> 00:07:08,080
+we had these different approval levels.
+
+150
+00:07:08,080 --> 00:07:11,300
+So those were inherent data quality measures
+
+151
+00:07:11,300 --> 00:07:12,693
+that were there at field levels.
+
+152
+00:07:12,693 --> 00:07:16,280
+So when we were introducing DHIS2, what we did was,
+
+153
+00:07:16,280 --> 00:07:19,570
+we did not try to capture data to the digital system
+
+154
+00:07:19,570 --> 00:07:20,830
+just at the same time.
+
+155
+00:07:20,830 --> 00:07:25,240
+So we preserved the paper-based system and we kind of,
+
+156
+00:07:25,240 --> 00:07:27,720
+as they have to copy the data that is captured
+
+157
+00:07:27,720 --> 00:07:29,930
+in the paper-based system into the digital system,
+
+158
+00:07:29,930 --> 00:07:32,807
+and also the approval workflows that were already there,
+
+159
+00:07:32,807 --> 00:07:33,640
+we tried to implement the DHIS2,
+
+160
+00:07:35,210 --> 00:07:37,560
+so that there was one step verification
+
+161
+00:07:37,560 --> 00:07:40,460
+before the data goes higher up along the health hierarchy.
+
+162
+00:07:41,787 --> 00:07:44,130
+So that the data approval workflows
+
+163
+00:07:44,130 --> 00:07:47,657
+was a major contribute in factor,
+
+164
+00:07:47,657 --> 00:07:49,140
+ensuring data quality in the CRHIMS
+
+165
+00:07:50,830 --> 00:07:52,853
+or the digital MCH system.
+
+166
+00:07:54,530 --> 00:07:57,740
+We conducted the training programs.
+
+167
+00:07:57,740 --> 00:08:00,100
+In fact like, well, what you&#39;re seeing here
+
+168
+00:08:00,100 --> 00:08:02,580
+is one of our field level training program,
+
+169
+00:08:02,580 --> 00:08:05,270
+and the person who was in the front
+
+170
+00:08:05,270 --> 00:08:09,210
+is the one who was leading this entire MCH system
+
+171
+00:08:09,210 --> 00:08:11,150
+Dr. Kaushal, I think she&#39;s a participant
+
+172
+00:08:11,150 --> 00:08:12,247
+in this academy also.
+
+173
+00:08:12,247 --> 00:08:15,290
+We are so much grateful to her and her team
+
+174
+00:08:15,290 --> 00:08:18,650
+for implementing all of this, the data quality practices
+
+175
+00:08:18,650 --> 00:08:19,660
+in her system.
+
+176
+00:08:19,660 --> 00:08:22,030
+So here the data quality measures
+
+177
+00:08:22,030 --> 00:08:24,910
+and how they should capture data, and at that point,
+
+178
+00:08:24,910 --> 00:08:28,300
+how to ensure data quality was an inherent component
+
+179
+00:08:28,300 --> 00:08:29,640
+during these training programs
+
+180
+00:08:29,640 --> 00:08:31,510
+that we conducted at field level.
+
+181
+00:08:31,510 --> 00:08:33,883
+So what we did was we had a national team,
+
+182
+00:08:35,181 --> 00:08:36,600
+we&#39;re kind of master trainers,
+
+183
+00:08:36,600 --> 00:08:39,080
+and we were able to replicate the training programs
+
+184
+00:08:39,080 --> 00:08:43,030
+using our trainers who are at a field level.
+
+185
+00:08:43,030 --> 00:08:46,260
+So all these training programs had a special emphasis
+
+186
+00:08:46,260 --> 00:08:48,600
+on ensuring data quality.
+
+187
+00:08:48,600 --> 00:08:53,170
+Like for example, especially at the point of generation,
+
+188
+00:08:53,170 --> 00:08:54,700
+point of capture of data,
+
+189
+00:08:54,700 --> 00:08:56,400
+there were so many data quality measures,
+
+190
+00:08:56,400 --> 00:08:58,720
+which I will be showing you in non-exclusive slides.
+
+191
+00:08:58,720 --> 00:09:01,979
+So they have a special emphasis that we put on data quality
+
+192
+00:09:01,979 --> 00:09:04,029
+during this and use the training program.
+
+193
+00:09:04,940 --> 00:09:09,940
+And one other thing about ensuring data quality
+
+194
+00:09:12,300 --> 00:09:15,140
+is to have proper user manual, so SOPs.
+
+195
+00:09:16,050 --> 00:09:17,960
+The thing is like the DHIS2
+
+196
+00:09:17,960 --> 00:09:21,710
+has its own extensive user guide,
+
+197
+00:09:21,710 --> 00:09:25,170
+which like I&#39;m sure that they confuse many end-users
+
+198
+00:09:25,170 --> 00:09:27,470
+if you just ask these end-users to refer
+
+199
+00:09:27,470 --> 00:09:30,360
+the DHIS2 user manual which is available online.
+
+200
+00:09:30,360 --> 00:09:32,680
+So that of course didn&#39;t work and we realized that.
+
+201
+00:09:32,680 --> 00:09:36,870
+So what we did was we created the end-user manual,
+
+202
+00:09:36,870 --> 00:09:40,480
+which is of course it&#39;s a very comprehensive end-user manual
+
+203
+00:09:40,480 --> 00:09:44,310
+with the screenshots and also like explaining everything
+
+204
+00:09:44,310 --> 00:09:47,200
+in very simple manner
+
+205
+00:09:47,200 --> 00:09:49,390
+which could be comprehended by end-users.
+
+206
+00:09:49,390 --> 00:09:53,210
+So this end-user manual was something that we handed over
+
+207
+00:09:53,210 --> 00:09:55,723
+to the end-users during our training programs,
+
+208
+00:09:56,750 --> 00:10:00,750
+which they can keep at their work places and they can refer.
+
+209
+00:10:00,750 --> 00:10:01,583
+But the thing is like,
+
+210
+00:10:01,583 --> 00:10:03,990
+this is a kind of a comprehensive user manual,
+
+211
+00:10:03,990 --> 00:10:07,170
+which maybe a bit too much
+
+212
+00:10:07,170 --> 00:10:10,220
+when you are just trying to find something real quick
+
+213
+00:10:10,220 --> 00:10:13,900
+when you are entering data at your desk.
+
+214
+00:10:13,900 --> 00:10:17,090
+So for that purpose, we had another type of manual,
+
+215
+00:10:17,090 --> 00:10:18,590
+which I&#39;ll show you in a while.
+
+216
+00:10:18,590 --> 00:10:21,770
+And the other thing is, there were so many SOPs
+
+217
+00:10:21,770 --> 00:10:25,640
+that we created before we tried to implement the system.
+
+218
+00:10:25,640 --> 00:10:27,910
+Because like, we understood initially
+
+219
+00:10:27,910 --> 00:10:30,810
+that when you are having this digital transformation
+
+220
+00:10:30,810 --> 00:10:32,030
+from paper-based system,
+
+221
+00:10:32,030 --> 00:10:34,970
+which was kind of list I&#39;ve issued to the digital system,
+
+222
+00:10:34,970 --> 00:10:39,340
+there may be a lot of resistance that we might encounter
+
+223
+00:10:39,340 --> 00:10:40,700
+because for the simple reason
+
+224
+00:10:40,700 --> 00:10:43,940
+that users don&#39;t like too much of change.
+
+225
+00:10:43,940 --> 00:10:48,940
+So we try to simplify everything so that to make sure
+
+226
+00:10:48,960 --> 00:10:52,300
+that the end-users don&#39;t see this learning curve
+
+227
+00:10:52,300 --> 00:10:53,890
+as a very difficult one.
+
+228
+00:10:53,890 --> 00:10:56,680
+So this is where we had different levels of SOPs.
+
+229
+00:10:56,680 --> 00:11:00,550
+So this one that you&#39;re seeing is a checklist
+
+230
+00:11:00,550 --> 00:11:02,320
+that all the facilities should have
+
+231
+00:11:02,320 --> 00:11:03,840
+before entering data into the system.
+
+232
+00:11:03,840 --> 00:11:08,090
+So here we try to explain everything in a simple way,
+
+233
+00:11:08,090 --> 00:11:09,990
+and this we have asked them to keep
+
+234
+00:11:09,990 --> 00:11:13,120
+by the side of the computer that they&#39;re using
+
+235
+00:11:13,120 --> 00:11:13,953
+for data entry.
+
+236
+00:11:15,040 --> 00:11:17,550
+But the one that we have asked them
+
+237
+00:11:17,550 --> 00:11:21,270
+either to keep at all times next to their computers
+
+238
+00:11:21,270 --> 00:11:25,410
+or else to paste it on the wall where they&#39;re entering data
+
+239
+00:11:25,410 --> 00:11:26,370
+is this ones.
+
+240
+00:11:26,370 --> 00:11:31,250
+So these are single page end-user manuals or SOPs
+
+241
+00:11:31,250 --> 00:11:35,670
+that we have created just specifically to given tasks.
+
+242
+00:11:35,670 --> 00:11:39,280
+So these kinds of, I mean like how this helps
+
+243
+00:11:39,280 --> 00:11:41,470
+in data quality is that the thing is like,
+
+244
+00:11:41,470 --> 00:11:46,070
+if you perceive using a system as a kind of a difficult one,
+
+245
+00:11:46,070 --> 00:11:47,680
+then there is high chance that,
+
+246
+00:11:47,680 --> 00:11:49,500
+I mean, that&#39;s this is what we have seen,
+
+247
+00:11:49,500 --> 00:11:52,190
+that there is a high chance that they might make mistakes.
+
+248
+00:11:52,190 --> 00:11:57,190
+So having these specific SOPs and the use of manuals
+
+249
+00:11:57,270 --> 00:12:01,460
+with the end-users kind of really contributed
+
+250
+00:12:01,460 --> 00:12:05,470
+to ensuring the perceptive ease of use of this system,
+
+251
+00:12:05,470 --> 00:12:09,810
+which of course contributed to the data quality in the end.
+
+252
+00:12:09,810 --> 00:12:12,000
+So these kinds of manuals or SOPs
+
+253
+00:12:12,000 --> 00:12:14,090
+we had for each of these tasks,
+
+254
+00:12:14,090 --> 00:12:15,820
+and this is exactly what we followed there
+
+255
+00:12:15,820 --> 00:12:17,250
+in our COVID implementation,
+
+256
+00:12:17,250 --> 00:12:20,350
+which was kind of a rapid implementation from the learnings
+
+257
+00:12:20,350 --> 00:12:23,570
+that we had from other MCH system.
+
+258
+00:12:23,570 --> 00:12:27,120
+And this is another single page user document
+
+259
+00:12:28,000 --> 00:12:30,470
+that the MCH system is using.
+
+260
+00:12:30,470 --> 00:12:35,470
+And then, we also tried to use
+
+261
+00:12:35,540 --> 00:12:38,520
+remote administration software.
+
+262
+00:12:38,520 --> 00:12:41,200
+So remote desktop softwares like TeamViwer.
+
+263
+00:12:41,200 --> 00:12:43,670
+Because like, how it really contributed us
+
+264
+00:12:43,670 --> 00:12:45,723
+in ensuring data quality is that,
+
+265
+00:12:45,723 --> 00:12:47,040
+what we saw was that
+
+266
+00:12:47,040 --> 00:12:50,860
+when we are trying to provide support to end-users,
+
+267
+00:12:50,860 --> 00:12:53,730
+there were some issues where they cannot actually explain
+
+268
+00:12:53,730 --> 00:12:55,050
+even on the phone.
+
+269
+00:12:55,050 --> 00:12:58,990
+So if they actually cannot solve their problem,
+
+270
+00:12:58,990 --> 00:13:03,330
+they try to enter data which might be a radiance, right?
+
+271
+00:13:03,330 --> 00:13:05,500
+Because if they would assume
+
+272
+00:13:05,500 --> 00:13:07,870
+that this would be the proper way of using,
+
+273
+00:13:07,870 --> 00:13:11,020
+and which is not exactly the correct thing.
+
+274
+00:13:11,020 --> 00:13:14,470
+So here we are using TeamViwer as a tool
+
+275
+00:13:14,470 --> 00:13:16,420
+where we can connect from national level
+
+276
+00:13:16,420 --> 00:13:19,640
+to the end-users computer and assist them in troubleshoot.
+
+277
+00:13:19,640 --> 00:13:22,550
+So with this, we were able to in fact,
+
+278
+00:13:22,550 --> 00:13:24,210
+observe the data, I mean,
+
+279
+00:13:24,210 --> 00:13:25,500
+like how they are entering data,
+
+280
+00:13:25,500 --> 00:13:27,753
+what other mistakes that they are doing,
+
+281
+00:13:27,753 --> 00:13:29,629
+as well as it helped us in troubleshooting
+
+282
+00:13:29,629 --> 00:13:31,480
+when they&#39;re having issues.
+
+283
+00:13:31,480 --> 00:13:36,093
+So for this one also we had a separate SOPs that we created.
+
+284
+00:13:37,420 --> 00:13:41,570
+And the other thing that really helped us
+
+285
+00:13:41,570 --> 00:13:46,570
+in ensuring that data entry is timely and data entry users
+
+286
+00:13:48,430 --> 00:13:52,570
+are having minimal issues is that, the user support.
+
+287
+00:13:52,570 --> 00:13:55,330
+So for the, to provide the user support,
+
+288
+00:13:55,330 --> 00:13:56,950
+we had this three tier model.
+
+289
+00:13:56,950 --> 00:13:59,664
+So here what happens is we had this,
+
+290
+00:13:59,664 --> 00:14:02,140
+the initial communication method
+
+291
+00:14:02,140 --> 00:14:06,700
+which should happen using fax or hotline
+
+292
+00:14:06,700 --> 00:14:09,080
+or else we are using this instant messaging platforms
+
+293
+00:14:09,080 --> 00:14:10,400
+such as Wiver.
+
+294
+00:14:10,400 --> 00:14:14,180
+So there of course, they can reach over initial help desk
+
+295
+00:14:14,180 --> 00:14:16,950
+for for simple troubleshooting.
+
+296
+00:14:16,950 --> 00:14:19,830
+They did public health related issues,
+
+297
+00:14:19,830 --> 00:14:21,730
+or else very technological issues.
+
+298
+00:14:21,730 --> 00:14:24,210
+Like this will be attended at tier one.
+
+299
+00:14:24,210 --> 00:14:27,000
+And then in case they cannot settle there,
+
+300
+00:14:27,000 --> 00:14:28,240
+they&#39;ll be directed to the tier two
+
+301
+00:14:28,240 --> 00:14:31,600
+where we have a medical officer in public health,
+
+302
+00:14:31,600 --> 00:14:33,670
+as well as our ICT officer
+
+303
+00:14:33,670 --> 00:14:35,480
+will be attending to these issues.
+
+304
+00:14:35,480 --> 00:14:37,780
+And if they can&#39;t also solve them,
+
+305
+00:14:37,780 --> 00:14:39,860
+we have the consultant committee divisions
+
+306
+00:14:39,860 --> 00:14:41,580
+who are attending this technical matters
+
+307
+00:14:41,580 --> 00:14:43,180
+related to public health issues.
+
+308
+00:14:43,180 --> 00:14:45,430
+And the medical officer in health informatics
+
+309
+00:14:46,469 --> 00:14:48,600
+who is going to attend to the very technical
+
+310
+00:14:48,600 --> 00:14:50,170
+or technological issues.
+
+311
+00:14:50,170 --> 00:14:53,530
+So this way, it really helped us in ensuring
+
+312
+00:14:53,530 --> 00:14:56,723
+that all the issues the end-users are having are attended.
+
+313
+00:14:58,430 --> 00:15:01,774
+And when it comes to specific data quality measures
+
+314
+00:15:01,774 --> 00:15:02,607
+that are already there in DHIS2,
+
+315
+00:15:04,140 --> 00:15:08,553
+we are mainly using most of these same MCH datasets,
+
+316
+00:15:09,450 --> 00:15:12,860
+their validation rules and compulsory data elements.
+
+317
+00:15:12,860 --> 00:15:15,400
+In addition, we are also using the data.
+
+318
+00:15:15,400 --> 00:15:18,970
+But we are in the process of incorporating min-max,
+
+319
+00:15:18,970 --> 00:15:21,810
+predictors, WHO Data Quality Tools, score cards,
+
+320
+00:15:21,810 --> 00:15:24,870
+and legends in this MCH instances.
+
+321
+00:15:24,870 --> 00:15:27,820
+But like why there is a delay is that,
+
+322
+00:15:27,820 --> 00:15:30,950
+we are trying to match all these tools that are there
+
+323
+00:15:30,950 --> 00:15:34,030
+into the existing the workflows
+
+324
+00:15:34,030 --> 00:15:36,800
+so that is why it is taking some time.
+
+325
+00:15:36,800 --> 00:15:40,490
+But this is our planning over the next a one year&#39;s time
+
+326
+00:15:40,490 --> 00:15:44,080
+to incorporate all this into the MCH data flow.
+
+327
+00:15:45,357 --> 00:15:47,995
+And when it comes to review and feedback,
+
+328
+00:15:47,995 --> 00:15:51,900
+we identify review and feedback as a major measure
+
+329
+00:15:51,900 --> 00:15:53,570
+in ensuring data quality.
+
+330
+00:15:53,570 --> 00:15:56,620
+So what we do is we have created dashboards
+
+331
+00:15:57,793 --> 00:16:00,030
+and provided our end-users instructions
+
+332
+00:16:00,030 --> 00:16:02,640
+on how they should be following and adhering this dashboard.
+
+333
+00:16:02,640 --> 00:16:05,490
+So they are supposed to use this monitoring Dashboards
+
+334
+00:16:05,490 --> 00:16:07,970
+at facility level, district level,
+
+335
+00:16:07,970 --> 00:16:10,010
+provincial level and at national level.
+
+336
+00:16:10,010 --> 00:16:13,130
+So there have been clear instructions that we have provided
+
+337
+00:16:13,130 --> 00:16:16,170
+to the end-users on how to use these dashboards.
+
+338
+00:16:16,170 --> 00:16:18,960
+And in addition, we have the national level staff
+
+339
+00:16:18,960 --> 00:16:23,190
+who will be drilling down and conducting distributes
+
+340
+00:16:23,190 --> 00:16:24,950
+from time to time,
+
+341
+00:16:24,950 --> 00:16:27,730
+just make sure that whether there are any data quality
+
+342
+00:16:27,730 --> 00:16:30,900
+or any major data quality issues,
+
+343
+00:16:30,900 --> 00:16:32,960
+which are happening at a field level.
+
+344
+00:16:32,960 --> 00:16:35,000
+Because like, this is kind of like a secondary level
+
+345
+00:16:35,000 --> 00:16:37,400
+of monitoring for the district level staff,
+
+346
+00:16:37,400 --> 00:16:39,250
+which we are doing at national level.
+
+347
+00:16:40,230 --> 00:16:44,110
+And to compliment this, we have regular reviews,
+
+348
+00:16:44,110 --> 00:16:47,730
+which is happening at the PHM is the field level,
+
+349
+00:16:47,730 --> 00:16:49,240
+public health midwife level,
+
+350
+00:16:49,240 --> 00:16:51,740
+or medical officer of health is kind of like
+
+351
+00:16:51,740 --> 00:16:54,800
+sub-district level, RBHS is the district level
+
+352
+00:16:54,800 --> 00:16:55,660
+and at the country level
+
+353
+00:16:55,660 --> 00:16:58,200
+in this frequencies that we have mentioned.
+
+354
+00:16:58,200 --> 00:17:00,150
+So how this happen is that,
+
+355
+00:17:00,150 --> 00:17:01,570
+now, what you are seeing here
+
+356
+00:17:01,570 --> 00:17:03,870
+is kind of like a district level review
+
+357
+00:17:03,870 --> 00:17:08,120
+where all the medical doctors who are in charge
+
+358
+00:17:08,119 --> 00:17:10,600
+of all these sub-districts will come to this place
+
+359
+00:17:10,599 --> 00:17:14,940
+along with few public health field level staff
+
+360
+00:17:14,940 --> 00:17:17,430
+and we are doing a comprehensive reading.
+
+361
+00:17:17,430 --> 00:17:22,430
+So these are, and one key thing is that,
+
+362
+00:17:23,000 --> 00:17:24,100
+for all these reviews,
+
+363
+00:17:24,099 --> 00:17:26,660
+we are using the DHIS2-based MCH system.
+
+364
+00:17:26,660 --> 00:17:28,490
+So we will be displaying the dashboards
+
+365
+00:17:28,490 --> 00:17:31,390
+and they have to comment on any of the data quality issues
+
+366
+00:17:31,390 --> 00:17:35,890
+that they expect panel from national level are asking.
+
+367
+00:17:35,890 --> 00:17:38,730
+Now these reviews did not stop
+
+368
+00:17:38,730 --> 00:17:40,850
+even during the COVID pandemic.
+
+369
+00:17:40,850 --> 00:17:42,290
+What actually happened was like,
+
+370
+00:17:42,290 --> 00:17:45,260
+it was another opportunity for us to further explore
+
+371
+00:17:45,260 --> 00:17:47,570
+what are the avenues which are available
+
+372
+00:17:47,570 --> 00:17:49,210
+to conduct these online.
+
+373
+00:17:49,210 --> 00:17:53,700
+So what we did was we organized the Zoom platform
+
+374
+00:17:53,700 --> 00:17:55,520
+that we have, and through the Zoom,
+
+375
+00:17:55,520 --> 00:18:00,070
+we were able to conduct this monthly and quarterly review
+
+376
+00:18:00,070 --> 00:18:04,060
+at district level using the remote technology.
+
+377
+00:18:04,060 --> 00:18:06,240
+So none of these review activities have stopped
+
+378
+00:18:06,240 --> 00:18:08,140
+even during the COVID-19 pandemic.
+
+379
+00:18:08,140 --> 00:18:10,840
+So what you&#39;re seeing here is the district level staff
+
+380
+00:18:11,920 --> 00:18:14,490
+who were joining through Zoom,
+
+381
+00:18:14,490 --> 00:18:15,940
+and then a certain level of staff
+
+382
+00:18:15,940 --> 00:18:19,400
+who are kind of volunteering whatever they are presenting.
+
+383
+00:18:19,400 --> 00:18:22,060
+Right, and these data that we have gathered
+
+384
+00:18:22,060 --> 00:18:25,150
+through our MCH system is produced as an annual report
+
+385
+00:18:26,120 --> 00:18:27,520
+from the Ministry of Health.
+
+386
+00:18:28,670 --> 00:18:31,240
+And we also have a MCH quantity report.
+
+387
+00:18:31,240 --> 00:18:32,470
+For all these reports,
+
+388
+00:18:32,470 --> 00:18:35,260
+the data is coming through the DHIS2-based system
+
+389
+00:18:35,260 --> 00:18:38,720
+and this is why like, once these reports are public
+
+390
+00:18:38,720 --> 00:18:41,860
+are made public, the institute and the ministry
+
+391
+00:18:41,860 --> 00:18:43,540
+has to hold the responsibility.
+
+392
+00:18:43,540 --> 00:18:46,357
+So that is why we are trying to ensure data quality
+
+393
+00:18:46,357 --> 00:18:47,470
+in our DHIS2-based system,
+
+394
+00:18:47,470 --> 00:18:50,400
+because the reports are actually generated
+
+395
+00:18:50,400 --> 00:18:51,700
+through this system only.
+
+396
+00:18:51,700 --> 00:18:54,890
+Right, so these are some data quality measures
+
+397
+00:18:54,890 --> 00:18:58,950
+that we have insured in our MCH system.
+
+398
+00:18:58,950 --> 00:19:02,250
+So with this, I&#39;m going to move on to our second example,
+
+399
+00:19:02,250 --> 00:19:06,090
+which is the nutrition monitoring system.
+
+400
+00:19:06,090 --> 00:19:11,090
+Right, so this of course was the requirement
+
+401
+00:19:11,380 --> 00:19:14,370
+which is coming from the presidential secretariat level
+
+402
+00:19:14,370 --> 00:19:19,280
+of Sri Lanka, where the requirement was to identify children
+
+403
+00:19:19,280 --> 00:19:22,990
+who are having nutrition-related problems at field level,
+
+404
+00:19:22,990 --> 00:19:25,840
+and to obtain multi-sector support to address them
+
+405
+00:19:25,840 --> 00:19:26,720
+at field level.
+
+406
+00:19:26,720 --> 00:19:29,470
+But then the information had to be connected
+
+407
+00:19:29,470 --> 00:19:31,670
+and verified and transmitted
+
+408
+00:19:31,670 --> 00:19:33,120
+all the way up to the national level
+
+409
+00:19:33,120 --> 00:19:36,530
+and shared with the multi-sector state.
+
+410
+00:19:36,530 --> 00:19:40,070
+So the major functionality of this system
+
+411
+00:19:40,070 --> 00:19:42,430
+was to register the children with malnutrition
+
+412
+00:19:42,430 --> 00:19:43,600
+at field level.
+
+413
+00:19:43,600 --> 00:19:46,940
+And then they wanted to routinely monitor and track
+
+414
+00:19:46,940 --> 00:19:50,140
+the nutritional parameters such as height and weight
+
+415
+00:19:50,140 --> 00:19:51,810
+and household total risk factors.
+
+416
+00:19:51,810 --> 00:19:55,750
+So these are the routinely monitored components,
+
+417
+00:19:55,750 --> 00:19:58,880
+and then obtain household geo locations,
+
+418
+00:19:58,880 --> 00:20:02,410
+and also perform analytics (indistinct)
+
+419
+00:20:03,367 --> 00:20:04,670
+and the mobile users,
+
+420
+00:20:04,670 --> 00:20:06,290
+and to synchronize the data
+
+421
+00:20:06,290 --> 00:20:09,710
+which is collected at field level with the central server
+
+422
+00:20:09,710 --> 00:20:12,120
+and then share with the stakeholders.
+
+423
+00:20:12,120 --> 00:20:14,910
+So to achieve all these requirements,
+
+424
+00:20:14,910 --> 00:20:17,010
+we felt that it was the mobile technology
+
+425
+00:20:17,010 --> 00:20:22,010
+that we have to use and the traditional use of laptops
+
+426
+00:20:22,280 --> 00:20:24,960
+and computers to enter data will not really work
+
+427
+00:20:24,960 --> 00:20:27,670
+because the data has to be captured at individual level
+
+428
+00:20:27,670 --> 00:20:29,050
+at field level.
+
+429
+00:20:29,050 --> 00:20:31,190
+So this requirement of course,
+
+430
+00:20:31,190 --> 00:20:33,750
+came around four to five years back.
+
+431
+00:20:33,750 --> 00:20:37,720
+So at that time, the DHIS2 Android native mobile application
+
+432
+00:20:37,720 --> 00:20:38,900
+was not that mature
+
+433
+00:20:38,900 --> 00:20:41,960
+because nowadays it is having so many useful features.
+
+434
+00:20:41,960 --> 00:20:45,120
+But those days, there were some restrictions
+
+435
+00:20:45,120 --> 00:20:46,420
+to fulfill these functionalities
+
+436
+00:20:46,420 --> 00:20:48,623
+that were required by the program.
+
+437
+00:20:50,150 --> 00:20:52,750
+So what happened was this public health midwife
+
+438
+00:20:52,750 --> 00:20:54,130
+who&#39;s a field level health stuff,
+
+439
+00:20:54,130 --> 00:20:57,310
+a health worker will collect data at field level,
+
+440
+00:20:57,310 --> 00:20:58,440
+which is then synchronized
+
+441
+00:20:58,440 --> 00:21:01,220
+into the DHIS2-based central server,
+
+442
+00:21:01,220 --> 00:21:04,960
+and which could be accessed by their supervising officers
+
+443
+00:21:04,960 --> 00:21:07,810
+and all the staff at district and national level
+
+444
+00:21:07,810 --> 00:21:09,450
+using the web interface.
+
+445
+00:21:09,450 --> 00:21:12,600
+And once this data is sent by the midwife,
+
+446
+00:21:12,600 --> 00:21:14,200
+their immediate surprising officer
+
+447
+00:21:14,200 --> 00:21:16,050
+who is the medical office of health
+
+448
+00:21:16,050 --> 00:21:19,180
+or the applicant nursing sisters should validate that data,
+
+449
+00:21:19,180 --> 00:21:20,860
+and the data had to be returned back.
+
+450
+00:21:20,860 --> 00:21:23,620
+I mean, this validation once it happens only,
+
+451
+00:21:23,620 --> 00:21:27,400
+the data could be shared with all the stakeholders
+
+452
+00:21:27,400 --> 00:21:29,210
+who are involved at the process.
+
+453
+00:21:29,210 --> 00:21:32,000
+So to do this, of course,
+
+454
+00:21:32,000 --> 00:21:34,890
+what we did was to have this design,
+
+455
+00:21:34,890 --> 00:21:39,630
+this custom Android application due to the obvious reason
+
+456
+00:21:39,630 --> 00:21:43,280
+that some of these requirements were not be able to meet
+
+457
+00:21:43,280 --> 00:21:46,720
+by the DHIS2 Android application at the time.
+
+458
+00:21:46,720 --> 00:21:49,630
+Right, so let&#39;s quickly look at few data quality measures
+
+459
+00:21:49,630 --> 00:21:54,280
+that were in place in this Android mobile application
+
+460
+00:21:54,280 --> 00:21:55,423
+while capturing data.
+
+461
+00:21:56,870 --> 00:21:59,750
+So the first thing is like, there were some,
+
+462
+00:21:59,750 --> 00:22:01,940
+there were a few simple interfaces.
+
+463
+00:22:01,940 --> 00:22:04,830
+And now as you can see here,
+
+464
+00:22:04,830 --> 00:22:06,917
+these are few interfaces that we used
+
+465
+00:22:06,917 --> 00:22:11,220
+and simplifying interfaces itself
+
+466
+00:22:12,140 --> 00:22:14,440
+was identified as one major factor
+
+467
+00:22:15,330 --> 00:22:17,717
+to enhance the compliance of the end-users
+
+468
+00:22:17,717 --> 00:22:20,230
+who are using the system, this is field and stuff,
+
+469
+00:22:20,230 --> 00:22:22,210
+and also enhance the data quality.
+
+470
+00:22:22,210 --> 00:22:24,780
+Because like, what we found out from our study was that,
+
+471
+00:22:24,780 --> 00:22:27,600
+when you have very complicated workflows
+
+472
+00:22:27,600 --> 00:22:29,573
+and very crowded interfaces,
+
+473
+00:22:30,450 --> 00:22:33,440
+it contributed adversely to the data quality
+
+474
+00:22:33,440 --> 00:22:36,640
+because the end-users can make lots of mistakes
+
+475
+00:22:36,640 --> 00:22:38,270
+because they just become confused
+
+476
+00:22:38,270 --> 00:22:41,580
+the complexity of the interfaces.
+
+477
+00:22:41,580 --> 00:22:44,560
+So using simple interfaces was one major practice
+
+478
+00:22:44,560 --> 00:22:45,423
+that we followed.
+
+479
+00:22:46,610 --> 00:22:50,170
+And secondly, because they were collecting
+
+480
+00:22:50,170 --> 00:22:52,430
+this height and weight values
+
+481
+00:22:52,430 --> 00:22:55,750
+of the children with malnutrition, what we did first,
+
+482
+00:22:55,750 --> 00:22:59,500
+we provided them a visual verification of the data
+
+483
+00:22:59,500 --> 00:23:00,333
+as they enter it.
+
+484
+00:23:00,333 --> 00:23:04,160
+So if you can focus in on this height and weight values
+
+485
+00:23:04,160 --> 00:23:05,210
+that are entered here,
+
+486
+00:23:05,210 --> 00:23:09,110
+you can see that color of this one is greenish, so that,
+
+487
+00:23:09,110 --> 00:23:12,270
+and this one is kind of like a yellowish amber color.
+
+488
+00:23:12,270 --> 00:23:16,010
+So what happens is now when someone starts typing height,
+
+489
+00:23:16,010 --> 00:23:17,160
+what will happen is like,
+
+490
+00:23:17,160 --> 00:23:20,890
+there will be some age verification based on the,
+
+491
+00:23:20,890 --> 00:23:22,650
+so we have the date of birth of the child
+
+492
+00:23:22,650 --> 00:23:25,040
+and the today date, and with this,
+
+493
+00:23:25,040 --> 00:23:27,230
+we&#39;ll be able to know which is the age.
+
+494
+00:23:27,230 --> 00:23:29,740
+And there&#39;ll be a kind of a verification
+
+495
+00:23:29,740 --> 00:23:34,360
+with the comparison of this WHO, there are standard ranges,
+
+496
+00:23:34,360 --> 00:23:37,930
+the reference ranges for different standard deviation values
+
+497
+00:23:37,930 --> 00:23:40,730
+for height and weight for that particular age.
+
+498
+00:23:40,730 --> 00:23:43,330
+So if the height or weight value is okay
+
+499
+00:23:43,330 --> 00:23:45,640
+it will be kind of a greenish color,
+
+500
+00:23:45,640 --> 00:23:47,760
+if it is a slightly bad it be amber,
+
+501
+00:23:47,760 --> 00:23:49,810
+and if it is really bad, it will be red color.
+
+502
+00:23:49,810 --> 00:23:52,552
+So that way, there&#39;ll be a visual verification that happens
+
+503
+00:23:52,552 --> 00:23:54,424
+at the point of data entry.
+
+504
+00:23:54,424 --> 00:23:56,320
+So that it will be about idea about,
+
+505
+00:23:56,320 --> 00:23:58,740
+if there is a major mistake done by the end-user
+
+506
+00:23:58,740 --> 00:23:59,923
+at that point itself.
+
+507
+00:24:01,471 --> 00:24:06,340
+And then of course, to further assist with data quality
+
+508
+00:24:06,340 --> 00:24:08,470
+as well as to support the interventions,
+
+509
+00:24:08,470 --> 00:24:12,490
+what we did was we provided some longitudinal charting.
+
+510
+00:24:12,490 --> 00:24:15,730
+So these are kind of like analytic outputs
+
+511
+00:24:15,730 --> 00:24:17,270
+that we integrated into system,
+
+512
+00:24:17,270 --> 00:24:19,610
+which contributes to enhancing data quality.
+
+513
+00:24:19,610 --> 00:24:23,340
+So here what happened is like, in the mobile app itself,
+
+514
+00:24:23,340 --> 00:24:26,520
+the end-user after entering the height and weight values
+
+515
+00:24:26,520 --> 00:24:31,520
+and verify by observing this height and weight charts
+
+516
+00:24:31,730 --> 00:24:34,632
+and see whether there is a, I mean,
+
+517
+00:24:34,632 --> 00:24:37,980
+kind of a significant abnormality in any of these values
+
+518
+00:24:37,980 --> 00:24:39,670
+that have been entered, right?
+
+519
+00:24:39,670 --> 00:24:41,010
+So there&#39;ll be a kind of a,
+
+520
+00:24:41,010 --> 00:24:43,533
+this kind of a like a dual verification of the data
+
+521
+00:24:43,533 --> 00:24:45,433
+that was entered by the end-user.
+
+522
+00:24:46,510 --> 00:24:49,640
+And in addition, there were simple reports
+
+523
+00:24:49,640 --> 00:24:52,440
+and simple analytics which are available to the end-user
+
+524
+00:24:52,440 --> 00:24:54,000
+in the mobile application itself.
+
+525
+00:24:54,000 --> 00:24:58,300
+So it kind of provided them a very brief overview
+
+526
+00:24:58,300 --> 00:25:00,850
+about say like here, what you can see is like,
+
+527
+00:25:00,850 --> 00:25:03,220
+how many children have each of these nutrition problem
+
+528
+00:25:03,220 --> 00:25:05,710
+when they are under her care.
+
+529
+00:25:05,710 --> 00:25:09,590
+So that kind of analytical outputs are available
+
+530
+00:25:09,590 --> 00:25:10,980
+for the end-user.
+
+531
+00:25:10,980 --> 00:25:14,510
+Right, so once this data was captured that the field level,
+
+532
+00:25:14,510 --> 00:25:17,970
+the next, there was some validations that happened
+
+533
+00:25:17,970 --> 00:25:19,550
+at a facility level.
+
+534
+00:25:19,550 --> 00:25:20,570
+So for this one also,
+
+535
+00:25:20,570 --> 00:25:23,500
+there was a (indistinct) which was designed
+
+536
+00:25:23,500 --> 00:25:26,800
+mainly to cater the requirement of data approval
+
+537
+00:25:26,800 --> 00:25:29,020
+of tracker data, because this is tracker data, right?
+
+538
+00:25:29,020 --> 00:25:30,820
+So this is even though it&#39;s collected
+
+539
+00:25:30,820 --> 00:25:31,870
+by a custom Android application,
+
+540
+00:25:31,870 --> 00:25:34,480
+the data is sent to the DHIS2 system.
+
+541
+00:25:34,480 --> 00:25:37,140
+So that means, all this has to be in compliance
+
+542
+00:25:37,140 --> 00:25:39,010
+with the DHIS2 data model.
+
+543
+00:25:39,010 --> 00:25:43,290
+So this tracker data that is entered here will be verified
+
+544
+00:25:43,290 --> 00:25:44,710
+by their supervising officers.
+
+545
+00:25:44,710 --> 00:25:46,580
+So the supervising public health nursing sister
+
+546
+00:25:46,580 --> 00:25:48,350
+has to go through this data,
+
+547
+00:25:48,350 --> 00:25:50,790
+and they will be the ones who will be marking them
+
+548
+00:25:50,790 --> 00:25:54,860
+as completed after ensuring that they are adhering the,
+
+549
+00:25:54,860 --> 00:25:56,780
+I mean, at least these days are possible values
+
+550
+00:25:56,780 --> 00:26:01,470
+that&#39;s what they can, I mean, at maximum level they can do.
+
+551
+00:26:01,470 --> 00:26:04,050
+So once this is done, there will be a data approval
+
+552
+00:26:04,050 --> 00:26:06,407
+which happens at the medical officer of health,
+
+553
+00:26:06,407 --> 00:26:07,650
+the MOH level.
+
+554
+00:26:07,650 --> 00:26:09,260
+And once the data approved only,
+
+555
+00:26:09,260 --> 00:26:10,610
+the data will be visualized
+
+556
+00:26:10,610 --> 00:26:14,050
+and shared with other stakeholders at provincial
+
+557
+00:26:14,050 --> 00:26:15,293
+and national level.
+
+558
+00:26:16,145 --> 00:26:20,300
+And in addition, there were several data quality measures
+
+559
+00:26:20,300 --> 00:26:23,250
+that happened at various other levels,
+
+560
+00:26:23,250 --> 00:26:26,600
+which kind of assisted in this entire process,
+
+561
+00:26:26,600 --> 00:26:28,130
+because like the data had to be shared
+
+562
+00:26:28,130 --> 00:26:30,550
+with the multi-sector stakeholders.
+
+563
+00:26:30,550 --> 00:26:33,783
+This was a crucial step for validation of data
+
+564
+00:26:33,783 --> 00:26:36,183
+that is captured at the field level.
+
+565
+00:26:37,110 --> 00:26:40,910
+Right, so I think I have consumed almost 25 minutes,
+
+566
+00:26:40,910 --> 00:26:43,950
+so slightly over, so I will stop it at there.
+
+567
+00:26:43,950 --> 00:26:46,677
+And if there are any questions, I&#39;m willing to take it.
+
+568
+00:26:46,677 --> 00:26:47,993
+Thank you so much.
+
+569
+00:26:49,780 --> 00:26:52,099
+- [Instructor] Great, now thank you so much Pamod.
+
+570
+00:26:52,099 --> 00:26:53,470
+That was an outstanding presentation.
+
+571
+00:26:53,470 --> 00:26:55,290
+I really appreciate how you touched
+
+572
+00:26:55,290 --> 00:26:57,790
+on so many various elements of data quality
+
+573
+00:26:57,790 --> 00:26:59,960
+that people don&#39;t always think about.
+
+574
+00:26:59,960 --> 00:27:01,500
+We&#39;re always, you&#39;re exactly right,
+
+575
+00:27:01,500 --> 00:27:03,400
+we&#39;re always so concerned about checking the data
+
+576
+00:27:03,400 --> 00:27:05,680
+once it gets into the system and the different tools
+
+577
+00:27:05,680 --> 00:27:07,340
+that we have in DHIS2.
+
+578
+00:27:07,340 --> 00:27:09,540
+But you hit the nail on the head, so to speak,
+
+579
+00:27:09,540 --> 00:27:11,760
+when you talked about like form design,
+
+580
+00:27:11,760 --> 00:27:15,520
+standard operating procedures, training processes,
+
+581
+00:27:15,520 --> 00:27:18,730
+all of these things are absolutely critical to data quality.
+
+582
+00:27:18,730 --> 00:27:20,890
+And I&#39;m really, we tried to make that point yesterday,
+
+583
+00:27:20,890 --> 00:27:24,280
+and I&#39;m really glad you were able to drive it home today.
+
+584
+00:27:24,280 --> 00:27:26,950
+We did have one question from the community,
+
+585
+00:27:26,950 --> 00:27:29,090
+and again everyone, we are taking your questions
+
+586
+00:27:29,090 --> 00:27:31,490
+on the Slack channel just like we did yesterday.
+
+587
+00:27:31,490 --> 00:27:32,680
+So please if you have a question,
+
+588
+00:27:32,680 --> 00:27:34,470
+post that to the Slack channel.
+
+589
+00:27:34,470 --> 00:27:36,383
+There was one question,
+
+590
+00:27:38,200 --> 00:27:41,990
+they are asking if you faced any challenges
+
+591
+00:27:41,990 --> 00:27:45,440
+or you had to change anything during the implementation
+
+592
+00:27:45,440 --> 00:27:48,350
+of these various reporting forms and data quality checks.
+
+593
+00:27:48,350 --> 00:27:50,420
+So once you started actually implementing,
+
+594
+00:27:50,420 --> 00:27:52,830
+how did you, were there any changes that you had to make
+
+595
+00:27:52,830 --> 00:27:53,893
+in the process?
+
+596
+00:27:56,060 --> 00:27:56,900
+- [Pamod] Well, okay.
+
+597
+00:27:56,900 --> 00:27:59,970
+So as I mentioned one crucial fact was that,
+
+598
+00:27:59,970 --> 00:28:02,690
+we had to minimally disrupt the existing workflow.
+
+599
+00:28:02,690 --> 00:28:04,160
+So one major,
+
+600
+00:28:04,160 --> 00:28:07,130
+like this was not a very kind of a abrupt implementation.
+
+601
+00:28:07,130 --> 00:28:09,690
+So there was a, I mean, especially my other colleague
+
+602
+00:28:09,690 --> 00:28:12,720
+from Sri Lanka, was the one who was greatly involved
+
+603
+00:28:12,720 --> 00:28:14,160
+with this MCH system.
+
+604
+00:28:14,160 --> 00:28:17,120
+So there was like at least more than one year of planning
+
+605
+00:28:17,120 --> 00:28:20,140
+in assessing all the workflows and paper forms
+
+606
+00:28:20,140 --> 00:28:23,490
+to ensure that was, and there was a, I mean,
+
+607
+00:28:23,490 --> 00:28:25,600
+the other thing that I did not mention here
+
+608
+00:28:25,600 --> 00:28:27,710
+is the testing and piloting
+
+609
+00:28:27,710 --> 00:28:30,350
+that goes into the entire process
+
+610
+00:28:30,350 --> 00:28:32,450
+before you actually implement the system.
+
+611
+00:28:32,450 --> 00:28:35,260
+Because like, most of these data quality measures
+
+612
+00:28:35,260 --> 00:28:36,750
+should be captured at that point
+
+613
+00:28:36,750 --> 00:28:38,730
+if the system is not capturing data for, I mean,
+
+614
+00:28:38,730 --> 00:28:42,270
+like there are errors in data quality that you observed
+
+615
+00:28:42,270 --> 00:28:43,670
+during this piloting process.
+
+616
+00:28:43,670 --> 00:28:47,150
+Those have, I mean, you have to come back and reverse
+
+617
+00:28:47,150 --> 00:28:48,900
+whatever the workflow so the datasets,
+
+618
+00:28:48,900 --> 00:28:50,400
+the signs that you&#39;re following.
+
+619
+00:28:50,400 --> 00:28:54,450
+So there was a lot of planning and that&#39;s how, I mean,
+
+620
+00:28:54,450 --> 00:28:55,283
+after doing that only,
+
+621
+00:28:55,283 --> 00:28:57,640
+we went for the first round of implementation.
+
+622
+00:28:57,640 --> 00:29:00,190
+So there were a lot of issues that we&#39;ve found
+
+623
+00:29:00,190 --> 00:29:02,110
+at that fields that were corrected.
+
+624
+00:29:02,110 --> 00:29:04,300
+And then what happened was,
+
+625
+00:29:04,300 --> 00:29:06,760
+during the initial round of change training
+
+626
+00:29:06,760 --> 00:29:08,190
+that we did all around the country,
+
+627
+00:29:08,190 --> 00:29:10,190
+there were some feedback that were coming
+
+628
+00:29:10,190 --> 00:29:13,500
+related to different issues with the datasets
+
+629
+00:29:13,500 --> 00:29:16,780
+and accessing the system workflows, things like that.
+
+630
+00:29:16,780 --> 00:29:19,620
+So during that time, we accommodated a lot of changes
+
+631
+00:29:19,620 --> 00:29:22,510
+that came from the end-users.
+
+632
+00:29:22,510 --> 00:29:25,380
+But after the first round of implementations,
+
+633
+00:29:25,380 --> 00:29:28,590
+we kind of like what we did was we received feedback
+
+634
+00:29:28,590 --> 00:29:29,670
+from the end-users,
+
+635
+00:29:29,670 --> 00:29:34,060
+but we did not go on changing the formats,
+
+636
+00:29:34,060 --> 00:29:36,350
+the day-to-day formats from time to time.
+
+637
+00:29:36,350 --> 00:29:38,310
+But (indistinct) was that,
+
+638
+00:29:38,310 --> 00:29:40,700
+if you need us to accommodate something
+
+639
+00:29:40,700 --> 00:29:44,970
+in the designs of the forms, so this will only be done
+
+640
+00:29:45,850 --> 00:29:47,520
+maybe at the start of next year.
+
+641
+00:29:47,520 --> 00:29:49,940
+So we kind of like, if they&#39;re not really critical,
+
+642
+00:29:49,940 --> 00:29:52,490
+we kind of collected all these things
+
+643
+00:29:52,490 --> 00:29:55,480
+and we discuss internally within our team.
+
+644
+00:29:55,480 --> 00:29:57,909
+And maybe at the start of next year,
+
+645
+00:29:57,909 --> 00:30:01,250
+only we will accommodate them into the DHIS2-based forms.
+
+646
+00:30:01,250 --> 00:30:03,450
+But if they have a major changes that required
+
+647
+00:30:03,450 --> 00:30:04,923
+maybe collect, I mean,
+
+648
+00:30:04,923 --> 00:30:06,660
+like to decide whether this data item
+
+649
+00:30:06,660 --> 00:30:08,170
+had to be collected or not,
+
+650
+00:30:08,170 --> 00:30:09,747
+that of course had to go to the complicated specialist
+
+651
+00:30:09,747 --> 00:30:12,920
+and there has to be a decision that is required
+
+652
+00:30:12,920 --> 00:30:14,970
+which is of course totally out of the scope
+
+653
+00:30:14,970 --> 00:30:17,070
+of the DHIS2 implementation, so yes.
+
+654
+00:30:17,070 --> 00:30:19,400
+The other challenges but we were careful
+
+655
+00:30:19,400 --> 00:30:23,073
+not to entertain and include all the changes made
+
+656
+00:30:24,030 --> 00:30:27,020
+by the end-users, but we reviewed and incorporated them
+
+657
+00:30:27,020 --> 00:30:30,840
+on time to time basis, thank you.
+
+658
+00:30:30,840 --> 00:30:31,850
+- [Instructor] I think that&#39;s quite clear.
+
+659
+00:30:31,850 --> 00:30:33,660
+Thank you for that answer.
+
+660
+00:30:33,660 --> 00:30:35,770
+A couple of more questions, I know you&#39;re a busy man,
+
+661
+00:30:35,770 --> 00:30:38,293
+but if we can just keep you around for a few more minutes.
+
+662
+00:30:39,300 --> 00:30:44,260
+Question from Lisa Grout, in the application
+
+663
+00:30:44,260 --> 00:30:47,050
+that where you&#39;re tracking individual children,
+
+664
+00:30:47,050 --> 00:30:49,743
+do you do the validation child by child?
+
+665
+00:30:51,850 --> 00:30:53,810
+- [Pamod] Yeah, good question.
+
+666
+00:30:53,810 --> 00:30:57,340
+Yes, the thing is, it&#39;s a very difficult,
+
+667
+00:30:57,340 --> 00:30:58,590
+I mean like, this is one reason
+
+668
+00:30:58,590 --> 00:31:00,470
+like why we tried to incorporate
+
+669
+00:31:00,470 --> 00:31:03,890
+all these the color verification and things like that
+
+670
+00:31:03,890 --> 00:31:05,100
+at the point of data capture,
+
+671
+00:31:05,100 --> 00:31:07,530
+because otherwise it&#39;s going to be a very hectic task
+
+672
+00:31:07,530 --> 00:31:11,050
+for the supervising officer to go through all the reports.
+
+673
+00:31:11,050 --> 00:31:14,970
+So what we have, I mean like, we have made promises
+
+674
+00:31:14,970 --> 00:31:19,130
+in the system to verify child by child,
+
+675
+00:31:19,130 --> 00:31:21,777
+but when we are implementing what we have asked them
+
+676
+00:31:21,777 --> 00:31:23,110
+it&#39;s like, because these are kind of like
+
+677
+00:31:23,110 --> 00:31:25,450
+when you try to have these systems implemented
+
+678
+00:31:25,450 --> 00:31:28,040
+in a couple of districts or provinces,
+
+679
+00:31:28,040 --> 00:31:32,030
+the infrastructure could be even technology, a mobile,
+
+680
+00:31:32,030 --> 00:31:35,989
+I mean, like the network, as well as human resources,
+
+681
+00:31:35,989 --> 00:31:38,070
+they did greatly vary from district to district
+
+682
+00:31:38,070 --> 00:31:40,250
+or even from health facility to health facility.
+
+683
+00:31:40,250 --> 00:31:42,090
+So what we have instructed them with,
+
+684
+00:31:42,090 --> 00:31:44,303
+like, you always need to like,
+
+685
+00:31:45,750 --> 00:31:47,510
+the system has the potential,
+
+686
+00:31:47,510 --> 00:31:49,670
+but like it really depends on the capacity
+
+687
+00:31:49,670 --> 00:31:51,395
+that you have in your health facility.
+
+688
+00:31:51,395 --> 00:31:54,050
+Like ensuring data quality.
+
+689
+00:31:54,050 --> 00:31:57,580
+So there is always a kind of a fine balance
+
+690
+00:31:57,580 --> 00:32:00,930
+between data quality and actually capturing data.
+
+691
+00:32:00,930 --> 00:32:03,310
+Because they, if you have minimal capacity
+
+692
+00:32:03,310 --> 00:32:08,310
+and you priority number one is ensuring data quality,
+
+693
+00:32:08,430 --> 00:32:11,290
+then unknown data will come out from the facility.
+
+694
+00:32:11,290 --> 00:32:14,390
+So it&#39;s kind of like we have given them the choice.
+
+695
+00:32:14,390 --> 00:32:18,010
+So this is what the system has, this is the best practice,
+
+696
+00:32:18,010 --> 00:32:22,260
+but it&#39;s totally up to you to decide on what you should do,
+
+697
+00:32:22,260 --> 00:32:24,610
+but we have given them some incest
+
+698
+00:32:24,610 --> 00:32:25,830
+really how to capture
+
+699
+00:32:26,790 --> 00:32:28,610
+if there are any major data quality issues.
+
+700
+00:32:28,610 --> 00:32:31,740
+Like we have asked them to observe
+
+701
+00:32:31,740 --> 00:32:34,220
+the data entry practices of end-users.
+
+702
+00:32:34,220 --> 00:32:36,900
+And if they identify from the preliminary study
+
+703
+00:32:36,900 --> 00:32:38,250
+that there are a couple of end-users
+
+704
+00:32:38,250 --> 00:32:41,300
+who really do these mistakes over and over again,
+
+705
+00:32:41,300 --> 00:32:43,170
+then you can either focus on them
+
+706
+00:32:43,170 --> 00:32:45,790
+when you are validating the data or is to provide them
+
+707
+00:32:45,790 --> 00:32:48,510
+kind of refresher training and guidance
+
+708
+00:32:48,510 --> 00:32:50,590
+to ensure that they are not doing those mistakes.
+
+709
+00:32:50,590 --> 00:32:52,440
+So there are the simple answers,
+
+710
+00:32:52,440 --> 00:32:57,060
+like we have not kind of strictly enforce these rules,
+
+711
+00:32:57,060 --> 00:33:02,060
+and we have make it so taxable
+
+712
+00:33:02,710 --> 00:33:06,590
+so that the end-users, the health facilities can decide
+
+713
+00:33:06,590 --> 00:33:09,480
+which is the best option for them.
+
+714
+00:33:09,480 --> 00:33:11,600
+- [Instructor] Right, okay, thank you very much for that.
+
+715
+00:33:11,600 --> 00:33:14,100
+The questions are coming in quite quickly now.
+
+716
+00:33:14,100 --> 00:33:15,470
+It seems like people are really intrigued
+
+717
+00:33:15,470 --> 00:33:17,230
+by your presentation.
+
+718
+00:33:17,230 --> 00:33:18,510
+Just two more questions for you
+
+719
+00:33:18,510 --> 00:33:20,823
+before we need to take a break and move on.
+
+720
+00:33:22,260 --> 00:33:24,380
+We have one question.
+
+721
+00:33:24,380 --> 00:33:26,910
+I&#39;ll just go ahead and ask both of them now.
+
+722
+00:33:26,910 --> 00:33:29,030
+We have one question is, how long did it take
+
+723
+00:33:29,030 --> 00:33:31,680
+to implement these various data quality checks?
+
+724
+00:33:31,680 --> 00:33:34,160
+And then the other question is,
+
+725
+00:33:34,160 --> 00:33:37,050
+what happens if suspicious data is found
+
+726
+00:33:38,030 --> 00:33:39,820
+in the review process, how do you go back
+
+727
+00:33:39,820 --> 00:33:42,930
+and make the change and how to keep track of the changes
+
+728
+00:33:42,930 --> 00:33:43,780
+that you&#39;ve made?
+
+729
+00:33:45,310 --> 00:33:48,150
+- [Pamod] Yeah, so I will take the MCH instance
+
+730
+00:33:48,150 --> 00:33:49,597
+for this example (indistinct).
+
+731
+00:33:50,801 --> 00:33:55,801
+So like, the MCH instance was initially set up in year 2017
+
+732
+00:33:56,470 --> 00:34:00,230
+and now we have asked three years of implementations.
+
+733
+00:34:00,230 --> 00:34:02,840
+So data quality, ensuring data quality
+
+734
+00:34:02,840 --> 00:34:06,460
+was not the number one priority during 2017.
+
+735
+00:34:06,460 --> 00:34:11,230
+So in 2017, it was mainly about addressing user use
+
+736
+00:34:11,230 --> 00:34:13,730
+in accessing the system, entering data,
+
+737
+00:34:13,730 --> 00:34:15,700
+and to ensure the completeness
+
+738
+00:34:15,699 --> 00:34:17,840
+like even those are data quality measures,
+
+739
+00:34:17,840 --> 00:34:22,070
+but like, we didn&#39;t go into this final data related issues
+
+740
+00:34:22,070 --> 00:34:23,330
+in the first year.
+
+741
+00:34:23,330 --> 00:34:26,400
+But then from your 2018, 2019,
+
+742
+00:34:26,400 --> 00:34:28,780
+the easiest we focused mostly on the data,
+
+743
+00:34:28,780 --> 00:34:30,720
+I mean, like things specifically,
+
+744
+00:34:30,719 --> 00:34:33,930
+we put a lot of emphasis on during the reviews,
+
+745
+00:34:33,929 --> 00:34:36,450
+because these reviews used to be happening
+
+746
+00:34:36,449 --> 00:34:41,450
+based on the paper data that was previously before 2017.
+
+747
+00:34:41,639 --> 00:34:43,940
+So then there was some transformation required
+
+748
+00:34:44,960 --> 00:34:47,960
+from 2018 onwards to use the system
+
+749
+00:34:47,960 --> 00:34:51,910
+for these review meetings, so it took some time into that.
+
+750
+00:34:51,909 --> 00:34:55,610
+So it was like, so what I would like to say is like,
+
+751
+00:34:55,610 --> 00:34:58,550
+if you see how it&#39;s our plan for future,
+
+752
+00:34:58,550 --> 00:35:00,060
+so we have more plans
+
+753
+00:35:00,060 --> 00:35:02,360
+like compared to what we have done so far.
+
+754
+00:35:02,360 --> 00:35:04,260
+So, it&#39;s a work in progress.
+
+755
+00:35:04,260 --> 00:35:07,620
+So we have achieved some level as of now,
+
+756
+00:35:07,620 --> 00:35:09,170
+but we have lot to do.
+
+757
+00:35:09,170 --> 00:35:11,760
+So we can say like we have ensured data quality
+
+758
+00:35:11,760 --> 00:35:13,950
+this last three years, we have done,
+
+759
+00:35:13,950 --> 00:35:15,320
+we have taken some major steps,
+
+760
+00:35:15,320 --> 00:35:17,240
+but there&#39;s lot more to do.
+
+761
+00:35:17,240 --> 00:35:20,660
+So it&#39;s really about like what you&#39;re trying to achieve.
+
+762
+00:35:20,660 --> 00:35:23,123
+And sorry, what was the second question?
+
+763
+00:35:24,020 --> 00:35:26,310
+- [Instructor] What happens if you do find suspicious data
+
+764
+00:35:26,310 --> 00:35:28,470
+in the review, how is it changed
+
+765
+00:35:28,470 --> 00:35:30,390
+and how do you keep track of the changes?
+
+766
+00:35:30,390 --> 00:35:32,920
+- [Pamod] Yeah, the thing is like, now that of course,
+
+767
+00:35:32,920 --> 00:35:34,590
+like what happens is like,
+
+768
+00:35:34,590 --> 00:35:37,700
+they try to understand what is the issue with data
+
+769
+00:35:37,700 --> 00:35:38,533
+during this review.
+
+770
+00:35:38,533 --> 00:35:41,890
+So for example, now I mentioned about this distributes
+
+771
+00:35:41,890 --> 00:35:45,420
+that our staff is conducting at national level.
+
+772
+00:35:45,420 --> 00:35:46,910
+So during the distributes,
+
+773
+00:35:46,910 --> 00:35:50,810
+if they identify some data quality issues
+
+774
+00:35:50,810 --> 00:35:53,610
+before the reviews, they will contact the health facility
+
+775
+00:35:53,610 --> 00:35:54,660
+and advise them.
+
+776
+00:35:54,660 --> 00:35:58,663
+And if for some reason, if the same mistake is happening
+
+777
+00:35:58,663 --> 00:35:59,630
+over and over again,
+
+778
+00:35:59,630 --> 00:36:01,530
+they really try to talk to the health manager
+
+779
+00:36:01,530 --> 00:36:02,567
+or the public health doctor
+
+780
+00:36:02,567 --> 00:36:05,120
+and identify why it is happening and try to like,
+
+781
+00:36:05,120 --> 00:36:06,950
+if they identify the issue
+
+782
+00:36:06,950 --> 00:36:09,210
+that this may be happening recurrently,
+
+783
+00:36:09,210 --> 00:36:11,940
+so then there may be some training gaps,
+
+784
+00:36:11,940 --> 00:36:16,670
+which if we identify the, even like, what we try to do
+
+785
+00:36:16,670 --> 00:36:18,750
+is if we feel that in a particular district,
+
+786
+00:36:18,750 --> 00:36:20,700
+that there is the same mistake that is happening
+
+787
+00:36:20,700 --> 00:36:21,780
+over and over again,
+
+788
+00:36:21,780 --> 00:36:26,490
+we try to organize the refresher data analysis training,
+
+789
+00:36:26,490 --> 00:36:30,500
+there we also talk about data quality during that process.
+
+790
+00:36:30,500 --> 00:36:34,150
+And then the other thing is sometimes like, I mean,
+
+791
+00:36:34,150 --> 00:36:35,398
+to ensure the timeliness,
+
+792
+00:36:35,398 --> 00:36:39,950
+we locked the data after a particular given period of time.
+
+793
+00:36:39,950 --> 00:36:41,970
+So then we have to put what we do
+
+794
+00:36:41,970 --> 00:36:45,320
+is we will put lock exceptions and after accepting that
+
+795
+00:36:45,320 --> 00:36:50,090
+it&#39;s a mistake and when they have like the end-user
+
+796
+00:36:50,090 --> 00:36:51,310
+at the facility developed,
+
+797
+00:36:51,310 --> 00:36:52,970
+they accept that it&#39;s a mistake
+
+798
+00:36:52,970 --> 00:36:54,790
+which has been communicated to national level.
+
+799
+00:36:54,790 --> 00:36:56,730
+Then normally we will put a doc exceptions
+
+800
+00:36:56,730 --> 00:36:59,280
+and unlock the data for it to be corrected.
+
+801
+00:36:59,280 --> 00:37:02,223
+So those kinds of measures are what we do
+
+802
+00:37:02,223 --> 00:37:05,530
+when I know there are some data quality issues.
+
+803
+00:37:05,530 --> 00:37:07,690
+- [Instructor] Okay, that&#39;s very clear.
+
+804
+00:37:07,690 --> 00:37:09,270
+And again, thank you so much Pamod
+
+805
+00:37:09,270 --> 00:37:10,940
+for the wonderful presentation.
+
+806
+00:37:10,940 --> 00:37:12,990
+There were many quite a few questions
+
+807
+00:37:12,990 --> 00:37:15,290
+that I don&#39;t think we have time to get to, we.
+

@@ -1,0 +1,964 @@
+0
+00:00:00,543 --> 00:00:03,126
+(gentle music)
+
+1
+00:00:08,039 --> 00:00:11,580
+- [Norah] The Data Quality App, a hidden gem.
+
+2
+00:00:11,580 --> 00:00:16,580
+Part of the sessions on the Data Quality Online Academy.
+
+3
+00:00:20,750 --> 00:00:24,000
+So, some questions about this app.
+
+4
+00:00:24,000 --> 00:00:25,253
+Have you seen it?
+
+5
+00:00:26,960 --> 00:00:29,063
+Have you used it?
+
+6
+00:00:31,220 --> 00:00:33,180
+Do all the analytic users
+
+7
+00:00:33,180 --> 00:00:35,923
+have access to this app in your country?
+
+8
+00:00:36,960 --> 00:00:38,003
+Are you sure?
+
+9
+00:00:39,560 --> 00:00:40,543
+Go and check.
+
+10
+00:00:42,720 --> 00:00:44,730
+So, some of the learning objectives,
+
+11
+00:00:44,730 --> 00:00:47,260
+we will look at what is the most common use
+
+12
+00:00:47,260 --> 00:00:49,600
+of the Data Quality App,
+
+13
+00:00:49,600 --> 00:00:52,450
+the value of validation rules,
+
+14
+00:00:52,450 --> 00:00:56,810
+how to translate validation rules into actual use
+
+15
+00:00:56,810 --> 00:01:01,090
+and some issues associated with the Data Quality App.
+
+16
+00:01:01,090 --> 00:01:04,490
+They will be no DHIS online training
+
+17
+00:01:04,489 --> 00:01:08,790
+of how to move your cursor here and what to select there,
+
+18
+00:01:08,790 --> 00:01:10,123
+you can use the manual.
+
+19
+00:01:11,920 --> 00:01:14,620
+So, the DQ App contains the following.
+
+20
+00:01:14,620 --> 00:01:18,860
+It allows you to do a validation rule analysis,
+
+21
+00:01:18,860 --> 00:01:21,670
+a standard deviation analysis,
+
+22
+00:01:21,670 --> 00:01:26,670
+a min-max outlier analysis, and a follow-up analysis.
+
+23
+00:01:28,440 --> 00:01:32,410
+So, let&#39;s talk about validation rules to start.
+
+24
+00:01:32,410 --> 00:01:34,013
+Who&#39;s responsible?
+
+25
+00:01:34,850 --> 00:01:37,440
+If I talk about validation rules,
+
+26
+00:01:37,440 --> 00:01:40,570
+I sort of get everybody looking away from me.
+
+27
+00:01:40,570 --> 00:01:43,567
+And the feeling is, &quot;Well, you know, they&#39;re not important,
+
+28
+00:01:43,567 --> 00:01:44,993
+&quot;so it doesn&#39;t matter.
+
+29
+00:01:46,037 --> 00:01:47,587
+&quot;Nobody runs them anyway.
+
+30
+00:01:47,587 --> 00:01:49,647
+&quot;And if they do, when you find something,
+
+31
+00:01:49,647 --> 00:01:50,907
+&quot;nobody does anything.
+
+32
+00:01:50,907 --> 00:01:52,277
+&quot;You can&#39;t change anything.
+
+33
+00:01:52,277 --> 00:01:55,307
+&quot;So, why bother to do this?&quot;
+
+34
+00:01:57,940 --> 00:01:59,960
+If we start with validations,
+
+35
+00:01:59,960 --> 00:02:03,560
+is we start asking the questions about who&#39;s responsible
+
+36
+00:02:03,560 --> 00:02:07,460
+for thinking about them and then defining them?
+
+37
+00:02:09,090 --> 00:02:12,280
+Is the person or the people or the group?
+
+38
+00:02:12,280 --> 00:02:16,260
+Is it the HMIS DHIS2 configuration expert?
+
+39
+00:02:16,260 --> 00:02:18,180
+Is it a program manager?
+
+40
+00:02:18,180 --> 00:02:20,620
+Is it a district information officer?
+
+41
+00:02:20,620 --> 00:02:22,180
+Who has to do the thinking
+
+42
+00:02:22,180 --> 00:02:24,823
+and the defining and the configuration?
+
+43
+00:02:26,190 --> 00:02:30,513
+Was it done by one person who takes the responsibility?
+
+44
+00:02:31,720 --> 00:02:36,370
+Then we ask for who&#39;s responsible for running these rules.
+
+45
+00:02:36,370 --> 00:02:39,640
+The data entry clerk, the program manager,
+
+46
+00:02:39,640 --> 00:02:43,153
+facility or district information officer or higher level?
+
+47
+00:02:44,520 --> 00:02:46,293
+Who&#39;s responsible for running them?
+
+48
+00:02:48,320 --> 00:02:51,803
+If we want to understand the logic of validation rules,
+
+49
+00:02:52,970 --> 00:02:55,500
+it is a method to assess the quality
+
+50
+00:02:55,500 --> 00:02:57,803
+of data entered in DHIS2.
+
+51
+00:02:59,190 --> 00:03:03,370
+And these rules are based on a set of predefined rules
+
+52
+00:03:03,370 --> 00:03:04,933
+set for the data.
+
+53
+00:03:06,530 --> 00:03:10,270
+Unfortunately, the validation rules do not allow you
+
+54
+00:03:10,270 --> 00:03:14,100
+to fully figure out whether or not the values reported
+
+55
+00:03:14,100 --> 00:03:16,000
+are completely accurate.
+
+56
+00:03:16,000 --> 00:03:19,890
+It is only based on what is in DHIS2.
+
+57
+00:03:19,890 --> 00:03:22,230
+And if a value is 25,
+
+58
+00:03:22,230 --> 00:03:25,920
+you don&#39;t know was it 25 clients they saw
+
+59
+00:03:25,920 --> 00:03:27,880
+and they transferred from the client record
+
+60
+00:03:27,880 --> 00:03:30,200
+onto the tele sheet onto the input form
+
+61
+00:03:30,200 --> 00:03:31,803
+and they captured 25?
+
+62
+00:03:33,180 --> 00:03:34,993
+You&#39;re just given the 25.
+
+63
+00:03:36,420 --> 00:03:40,810
+So, how do we define a validation rule?
+
+64
+00:03:40,810 --> 00:03:43,120
+We use the term an expression.
+
+65
+00:03:43,120 --> 00:03:47,250
+An expression is a relationship
+
+66
+00:03:47,250 --> 00:03:51,633
+between a number of data elements that talk to each other.
+
+67
+00:03:52,840 --> 00:03:55,160
+This validation rule expression
+
+68
+00:03:55,160 --> 00:03:58,700
+has a left side, a right side,
+
+69
+00:03:58,700 --> 00:04:01,680
+and in the middle we have an operator.
+
+70
+00:04:01,680 --> 00:04:04,160
+And so, some of the common operator used
+
+71
+00:04:04,160 --> 00:04:05,893
+is less than or equal to,
+
+72
+00:04:07,630 --> 00:04:11,930
+equal to or greater than and equal to.
+
+73
+00:04:11,930 --> 00:04:16,743
+So, some of the operators that we see most commonly.
+
+74
+00:04:18,209 --> 00:04:21,130
+Validation rules are created and based
+
+75
+00:04:21,130 --> 00:04:22,383
+what you know is true.
+
+76
+00:04:24,390 --> 00:04:29,390
+Malaria RDT tested cannot be more than malaria RDT positive
+
+77
+00:04:31,500 --> 00:04:36,173
+&#39;cause in order to be RDT positive, you have to be tested.
+
+78
+00:04:37,340 --> 00:04:42,230
+Another example is live birth
+
+79
+00:04:42,230 --> 00:04:44,860
+weighing less than 2.5 kilogram
+
+80
+00:04:45,880 --> 00:04:48,747
+cannot be more than live births.
+
+81
+00:04:49,940 --> 00:04:54,940
+Validation rules are created based on what you know is true.
+
+82
+00:04:57,800 --> 00:05:01,030
+For instructions on how to set up a validation rule,
+
+83
+00:05:01,030 --> 00:05:01,863
+read the manual.
+
+84
+00:05:01,863 --> 00:05:03,650
+They&#39;re actually very good
+
+85
+00:05:03,650 --> 00:05:05,617
+and we don&#39;t read them often enough.
+
+86
+00:05:08,970 --> 00:05:11,900
+Some simple guides to validation rules.
+
+87
+00:05:11,900 --> 00:05:14,730
+Validation rules are assigned into groups.
+
+88
+00:05:14,730 --> 00:05:16,610
+This is for analysis.
+
+89
+00:05:16,610 --> 00:05:19,650
+Validation rules need to be easy to use
+
+90
+00:05:19,650 --> 00:05:22,040
+and easy to understand.
+
+91
+00:05:22,040 --> 00:05:25,050
+We use these common operators,
+
+92
+00:05:25,050 --> 00:05:27,535
+less than, equal to or greater than.
+
+93
+00:05:27,535 --> 00:05:29,410
+Are we sure that everybody understands
+
+94
+00:05:29,410 --> 00:05:32,743
+what these signs mean and which way the arrow points?
+
+95
+00:05:34,100 --> 00:05:38,660
+There&#39;s also the importance field of low, medium and high.
+
+96
+00:05:38,660 --> 00:05:43,260
+Have we decided how to assign our validation rules
+
+97
+00:05:43,260 --> 00:05:46,713
+into the importance field or do we just select the default?
+
+98
+00:05:48,180 --> 00:05:51,600
+Validation rules also need to be consistent.
+
+99
+00:05:51,600 --> 00:05:54,840
+In other words, the way that they set up and written,
+
+100
+00:05:54,840 --> 00:05:57,510
+always have the smaller number first.
+
+101
+00:05:57,510 --> 00:06:01,547
+It is easier to understand, it&#39;s intuitively easier
+
+102
+00:06:01,547 --> 00:06:06,320
+and it makes it easier to grasp the concept.
+
+103
+00:06:06,320 --> 00:06:09,750
+Validation rules should be run after data entry
+
+104
+00:06:09,750 --> 00:06:12,770
+before the complete button is ticked.
+
+105
+00:06:12,770 --> 00:06:15,650
+Validation rules should also be run after most
+
+106
+00:06:15,650 --> 00:06:18,223
+or all of the monthly data has been captured.
+
+107
+00:06:19,120 --> 00:06:20,570
+So, then there are some questions
+
+108
+00:06:20,570 --> 00:06:23,690
+about who&#39;s responsible for this.
+
+109
+00:06:23,690 --> 00:06:25,950
+The facility information officer,
+
+110
+00:06:25,950 --> 00:06:27,670
+the district information officer,
+
+111
+00:06:27,670 --> 00:06:30,713
+the program officer, the program manager?
+
+112
+00:06:31,790 --> 00:06:34,110
+Do you have a standard operating procedure
+
+113
+00:06:34,110 --> 00:06:36,710
+to guide the process of running these rules
+
+114
+00:06:36,710 --> 00:06:38,023
+and taking action?
+
+115
+00:06:39,340 --> 00:06:42,273
+Validation rules, how to define them.
+
+116
+00:06:43,200 --> 00:06:45,260
+Validation rules is an expression
+
+117
+00:06:45,260 --> 00:06:46,930
+that defines a relationship
+
+118
+00:06:46,930 --> 00:06:49,510
+between a number of data elements.
+
+119
+00:06:49,510 --> 00:06:52,650
+An expression has a left side, a right side,
+
+120
+00:06:52,650 --> 00:06:54,940
+and then in the middle, an operator.
+
+121
+00:06:54,940 --> 00:06:57,120
+So, some of the common operators used
+
+122
+00:06:57,120 --> 00:07:00,390
+are less than or equal to, equal to
+
+123
+00:07:00,390 --> 00:07:02,173
+or greater than and equal to.
+
+124
+00:07:03,460 --> 00:07:05,310
+Validation rules are created
+
+125
+00:07:05,310 --> 00:07:08,160
+based on what you know to be true.
+
+126
+00:07:08,160 --> 00:07:13,160
+Malaria RDT positive cannot be more than malaria RDT tested.
+
+127
+00:07:15,480 --> 00:07:18,820
+For instructions on how to set up a validation rule,
+
+128
+00:07:18,820 --> 00:07:22,133
+look in the DHIS2 manual, it&#39;s actually very good.
+
+129
+00:07:23,770 --> 00:07:26,660
+So, how to run a validation rules.
+
+130
+00:07:26,660 --> 00:07:30,357
+You select an OrgUnit, you select the time period,
+
+131
+00:07:30,357 --> 00:07:32,943
+you select your group and you click Validate.
+
+132
+00:07:35,780 --> 00:07:38,480
+Depending on the size of your database
+
+133
+00:07:38,480 --> 00:07:41,350
+and the number of rules to be run,
+
+134
+00:07:41,350 --> 00:07:44,100
+became careful in what you select.
+
+135
+00:07:44,100 --> 00:07:46,473
+Try and avoid crashing the system.
+
+136
+00:07:47,430 --> 00:07:51,100
+Once you have run the validation rules, you get a report
+
+137
+00:07:51,100 --> 00:07:55,080
+which can be downloaded into different formats,
+
+138
+00:07:55,080 --> 00:07:57,073
+Excel is the easiest.
+
+139
+00:07:58,820 --> 00:08:02,200
+So, this is the output once you have run the report.
+
+140
+00:08:02,200 --> 00:08:04,160
+So, on the left, you start off
+
+141
+00:08:04,160 --> 00:08:06,000
+with the name of your facility,
+
+142
+00:08:06,000 --> 00:08:08,580
+the time period, the importance.
+
+143
+00:08:08,580 --> 00:08:13,190
+Remember, we discussed who decides low, medium, or high.
+
+144
+00:08:13,190 --> 00:08:16,740
+Then the validation rule, and in this output it&#39;s blank.
+
+145
+00:08:16,740 --> 00:08:19,160
+Then what is the left value?
+
+146
+00:08:19,160 --> 00:08:23,210
+What was the operator and the value on the right side?
+
+147
+00:08:23,210 --> 00:08:24,993
+And then there is a detail icon.
+
+148
+00:08:26,340 --> 00:08:29,030
+And if you double click on the detail icon,
+
+149
+00:08:29,030 --> 00:08:31,560
+you will get the rule explained to you.
+
+150
+00:08:31,560 --> 00:08:36,160
+So, this rule says that children five to nine years old
+
+151
+00:08:36,159 --> 00:08:38,980
+with acute respiratory illness
+
+152
+00:08:38,980 --> 00:08:43,533
+should be greater than or equal to child five to nine years
+
+153
+00:08:43,533 --> 00:08:44,823
+with pneumonia.
+
+154
+00:08:46,260 --> 00:08:48,330
+So, the left-hand side,
+
+155
+00:08:48,330 --> 00:08:51,400
+child with symptoms of acute respiratory illness,
+
+156
+00:08:51,400 --> 00:08:52,500
+five to nine years,
+
+157
+00:08:52,500 --> 00:08:54,093
+there were no children seen.
+
+158
+00:08:55,230 --> 00:08:59,590
+And the right-hand side, of the no children seen,
+
+159
+00:08:59,590 --> 00:09:02,013
+11 were diagnosed with pneumonia.
+
+160
+00:09:03,100 --> 00:09:05,210
+When you see something like this,
+
+161
+00:09:05,210 --> 00:09:10,210
+where there is a missing value and then a value,
+
+162
+00:09:10,350 --> 00:09:11,920
+you need to determine
+
+163
+00:09:13,690 --> 00:09:16,900
+should the 11 have been the acute respiratory
+
+164
+00:09:16,900 --> 00:09:18,208
+and the pneumonia?
+
+165
+00:09:18,208 --> 00:09:21,209
+So you actually need to go and find out
+
+166
+00:09:21,209 --> 00:09:23,450
+why is there a missing value
+
+167
+00:09:23,450 --> 00:09:26,110
+and what is the correct response
+
+168
+00:09:26,110 --> 00:09:29,003
+to how do you fix this validation rule?
+
+169
+00:09:29,840 --> 00:09:33,623
+And there are many ways of going about sorting this out.
+
+170
+00:09:36,240 --> 00:09:39,280
+If you get a list which you download into Excel,
+
+171
+00:09:39,280 --> 00:09:42,030
+this is what the report will look like,
+
+172
+00:09:42,030 --> 00:09:45,320
+facility, the time period, the rule,
+
+173
+00:09:45,320 --> 00:09:49,430
+the lift side, the value, the operator,
+
+174
+00:09:49,430 --> 00:09:53,370
+the value on the right side and the right side description.
+
+175
+00:09:53,370 --> 00:09:56,030
+And if you&#39;ve downloaded it into Excel,
+
+176
+00:09:56,030 --> 00:10:00,130
+you can sort it to according to organization units
+
+177
+00:10:00,130 --> 00:10:03,220
+and you can give to supervisors and program managers
+
+178
+00:10:03,220 --> 00:10:04,053
+for actions.
+
+179
+00:10:04,053 --> 00:10:07,583
+So this is how you sort out your validation rules.
+
+180
+00:10:09,270 --> 00:10:11,400
+Then the other,
+
+181
+00:10:11,400 --> 00:10:14,513
+so this is available in the Data Quality App.
+
+182
+00:10:14,513 --> 00:10:16,670
+For standard deviation analysis,
+
+183
+00:10:16,670 --> 00:10:20,690
+now we mainly use the WHO DQ Tool
+
+184
+00:10:20,690 --> 00:10:24,570
+for extreme outliers and missing data.
+
+185
+00:10:24,570 --> 00:10:27,260
+The min-max outlier analysis.
+
+186
+00:10:27,260 --> 00:10:31,700
+This you can only use if you have set min-max values,
+
+187
+00:10:31,700 --> 00:10:34,100
+and you need to set them first
+
+188
+00:10:34,100 --> 00:10:37,730
+and the next presentation will go through that process.
+
+189
+00:10:37,730 --> 00:10:40,470
+And the last aspect in the Data Quality App
+
+190
+00:10:40,470 --> 00:10:42,510
+is the follow-up analysis.
+
+191
+00:10:42,510 --> 00:10:45,080
+It&#39;s used to mark data that is correct,
+
+192
+00:10:45,080 --> 00:10:48,400
+but does not fit the pattern or triggers a validation rule,
+
+193
+00:10:48,400 --> 00:10:50,403
+and we will have a slide about that.
+
+194
+00:10:52,690 --> 00:10:55,080
+This is marked for follow-up.
+
+195
+00:10:55,080 --> 00:10:58,800
+When you double click a value,
+
+196
+00:10:58,800 --> 00:11:01,243
+you will get a data information window.
+
+197
+00:11:02,760 --> 00:11:06,950
+And top-left hand corner, you have a space for a comment,
+
+198
+00:11:06,950 --> 00:11:11,400
+and if you click on the star, you can save it.
+
+199
+00:11:11,400 --> 00:11:13,843
+You highlight the star and you save.
+
+200
+00:11:14,780 --> 00:11:18,140
+And this comment and the star is useful to explain
+
+201
+00:11:18,140 --> 00:11:20,583
+when the validation rule has been triggered.
+
+202
+00:11:22,017 --> 00:11:24,100
+It explains why the data doesn&#39;t look
+
+203
+00:11:24,100 --> 00:11:26,090
+as you want it to look,
+
+204
+00:11:26,090 --> 00:11:29,913
+and then you can run the report on the followup stars.
+
+205
+00:11:32,200 --> 00:11:34,003
+So, some discussions.
+
+206
+00:11:35,340 --> 00:11:38,633
+What are the barriers to running validation rules?
+
+207
+00:11:41,620 --> 00:11:42,993
+Have you looked at the data
+
+208
+00:11:42,993 --> 00:11:46,905
+and set the most possible validation rules?
+
+209
+00:11:46,905 --> 00:11:49,300
+Have you done everything that could be done?
+
+210
+00:11:49,300 --> 00:11:53,770
+Do validation rules pick up all the data mistakes?
+
+211
+00:11:53,770 --> 00:11:56,150
+We&#39;ve spoken about that earlier.
+
+212
+00:11:56,150 --> 00:12:00,030
+When obvious data entry errors identified,
+
+213
+00:12:00,030 --> 00:12:02,193
+why are they not corrected?
+
+214
+00:12:04,180 --> 00:12:07,863
+Who&#39;s responsible for chasing up the data entry errors?
+
+215
+00:12:09,290 --> 00:12:13,320
+What happens when these errors are not corrected?
+
+216
+00:12:13,320 --> 00:12:14,683
+What is the result?
+
+217
+00:12:16,600 --> 00:12:19,233
+So, here are some exercises associated.
+
+218
+00:12:22,630 --> 00:12:26,900
+So, confirm access to the Data Quality App
+
+219
+00:12:26,900 --> 00:12:30,233
+in the country DHIS2 instances.
+
+220
+00:12:31,300 --> 00:12:34,870
+Obtain a list of all validation rules
+
+221
+00:12:34,870 --> 00:12:37,050
+and the groups that they fit into.
+
+222
+00:12:37,050 --> 00:12:40,540
+You may have to ask the IT people to help you.
+
+223
+00:12:40,540 --> 00:12:43,323
+Review all your validation rules.
+
+224
+00:12:44,490 --> 00:12:46,400
+Review them for consistency
+
+225
+00:12:46,400 --> 00:12:49,340
+in terms of the smaller value first.
+
+226
+00:12:49,340 --> 00:12:50,840
+We&#39;ve spoken about that.
+
+227
+00:12:51,710 --> 00:12:56,710
+Then I want you to run at least two validation rule groups
+
+228
+00:12:56,770 --> 00:12:58,723
+for the last six months.
+
+229
+00:12:59,590 --> 00:13:02,833
+Write a short report on the rules that are violated.
+
+230
+00:13:03,700 --> 00:13:06,903
+As part of your short report, consider an action plan.
+
+231
+00:13:08,530 --> 00:13:10,840
+Do some rules need to be rewritten
+
+232
+00:13:10,840 --> 00:13:13,200
+to make them easier to understand?
+
+233
+00:13:13,200 --> 00:13:15,233
+That could be part of your action plan.
+
+234
+00:13:16,130 --> 00:13:19,083
+Are some rules being triggered consistently?
+
+235
+00:13:19,990 --> 00:13:23,419
+And is that a problem of data quality
+
+236
+00:13:23,419 --> 00:13:25,313
+or is that a problem with the rule?
+
+237
+00:13:26,510 --> 00:13:29,460
+And then I want you to think of one rule
+
+238
+00:13:29,460 --> 00:13:31,780
+that you can add to the current list.
+
+239
+00:13:32,910 --> 00:13:34,123
+Thank you.
+
+240
+00:13:34,123 --> 00:13:36,706
+(gentle music)
+

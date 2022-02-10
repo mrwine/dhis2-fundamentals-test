@@ -1,0 +1,20 @@
+<problem display_name="Graded question - Mapping Reference Numerators  - Question 1" markdown="To be able to edit the WHO Data Quality tool you need to have what authority associated with your user role in DHIS2?&#10;&#10;&gt;&gt;Select the one correct answer:  (2 attempts) &lt;&lt;&#10;&#10;( ) A. Only basic data entry&#10;(x) B. Edit  indicators&#10;( ) C. Only data visualization&#10;( ) D. User management&#10;&#10;[explanation]&#10;Feedback: Edit Indicators is correct. &#10;[explanation]&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>To be able to edit the WHO Data Quality tool you need to have what authority associated with your user role in DHIS2?</p>
+<label>Select the one correct answer:  (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Only basic data entry</choice>
+    <choice correct="true">B. Edit  indicators</choice>
+    <choice correct="false">C. Only data visualization</choice>
+    <choice correct="false">D. User management</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Feedback: Edit Indicators is correct. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

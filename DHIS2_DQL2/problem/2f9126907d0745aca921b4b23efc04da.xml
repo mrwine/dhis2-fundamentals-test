@@ -1,0 +1,21 @@
+<problem display_name="Question 1" markdown="Run Follow up analysis for Region C from the 1st January to the 30th September. Please use the ANC data set.&#10;&gt;&gt;How many comments were starred? (2 attempts)&lt;&lt;&#10;&#10;(x) A. 3&#10;( ) B. 12&#10;( ) C. 31&#10;( ) D. 0&#10;&#10;[explanation] &#10;3 is the correct answer.&#10;[explanation] &#10;">
+<multiplechoiceresponse>
+  <p>Run Follow up analysis for Region C from the 1st January to the 30th September. Please use the ANC data set.</p>
+<label>How many comments were starred? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. 3</choice>
+    <choice correct="false">B. 12</choice>
+    <choice correct="false">C. 31</choice>
+    <choice correct="false">D. 0</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p> </p>
+<p>3 is the correct answer.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

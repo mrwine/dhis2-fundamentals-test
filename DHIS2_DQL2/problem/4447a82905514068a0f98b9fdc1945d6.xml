@@ -1,0 +1,18 @@
+<problem display_name="Graded question - Data Dimensions &amp; Duplicate Data Elements" markdown="&gt;&gt;What is the problem with having too many data dimensions? (2 attempts)&lt;&lt;&#10;&#10;(x) A. It will be very challenging for users to find the dimensions they need to perform analysis on their data &#10;( ) B. It will result in disaggregations behaving incorrectly when summing data &#10;( ) C. You will be unable to keep track of managing these data dimensions over time &#10;&#10;[explanation]&#10;The problem with having too many data dimensions is “It will be very challenging for users to find the dimensions they need to perform analysis on their data”, therefore option A is correct. In order to control this, create some procedures and training on this limitation! Option B “It will result in disaggregations behaving incorrectly when summing data” is incorrect because this should not be the case if the system is functioning well. Option C “You will be unable to keep track of managing these data dimensions over time, is also incorrect because this is possible, but remember to create a good data dictionary!&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <label>What is the problem with having too many data dimensions? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. It will be very challenging for users to find the dimensions they need to perform analysis on their data</choice>
+    <choice correct="false">B. It will result in disaggregations behaving incorrectly when summing data</choice>
+    <choice correct="false">C. You will be unable to keep track of managing these data dimensions over time</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The problem with having too many data dimensions is “It will be very challenging for users to find the dimensions they need to perform analysis on their data”, therefore option A is correct. In order to control this, create some procedures and training on this limitation! Option B “It will result in disaggregations behaving incorrectly when summing data” is incorrect because this should not be the case if the system is functioning well. Option C “You will be unable to keep track of managing these data dimensions over time, is also incorrect because this is possible, but remember to create a good data dictionary!</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

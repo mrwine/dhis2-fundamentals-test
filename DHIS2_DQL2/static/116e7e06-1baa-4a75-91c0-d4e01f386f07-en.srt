@@ -1,0 +1,460 @@
+0
+00:00:00,240 --> 00:00:01,680
+- [Instructor] So in this discussion,
+
+1
+00:00:01,680 --> 00:00:04,450
+we&#39;re going to talk about DHIS2 system design
+
+2
+00:00:04,450 --> 00:00:07,420
+and how it affects data quality.
+
+3
+00:00:07,420 --> 00:00:09,370
+We&#39;re going to go through a couple of different topics
+
+4
+00:00:09,370 --> 00:00:11,950
+and we&#39;ll split this up into multiple sessions
+
+5
+00:00:11,950 --> 00:00:16,593
+just to kind of have these segmented by thematic area.
+
+6
+00:00:19,220 --> 00:00:20,110
+In this presentation,
+
+7
+00:00:20,110 --> 00:00:22,560
+we&#39;re going to discuss a couple of different ways
+
+8
+00:00:23,420 --> 00:00:28,360
+we can look at the inputs of our DHIS2 system
+
+9
+00:00:28,360 --> 00:00:31,730
+and how this ends up affecting data quality.
+
+10
+00:00:31,730 --> 00:00:34,730
+So the first thing we&#39;re going to look at is form design.
+
+11
+00:00:34,730 --> 00:00:38,090
+And I will just emphasize that we&#39;re talking about
+
+12
+00:00:38,090 --> 00:00:40,750
+aggregate form design in this scenario.
+
+13
+00:00:40,750 --> 00:00:42,920
+There&#39;s a lot about tracker that can also be discussed,
+
+14
+00:00:42,920 --> 00:00:46,520
+but in this particular case, just due to time restrictions,
+
+15
+00:00:46,520 --> 00:00:48,640
+we&#39;re not going to focus on that too much.
+
+16
+00:00:48,640 --> 00:00:51,330
+However, when we get to the other parts of the discussion,
+
+17
+00:00:51,330 --> 00:00:53,470
+database and metadata design
+
+18
+00:00:53,470 --> 00:00:56,490
+and the functions to assess databases and metadata design,
+
+19
+00:00:56,490 --> 00:00:58,593
+we will be discussing tracker as well.
+
+20
+00:00:59,940 --> 00:01:03,310
+So the other topics we have for database and metadata design
+
+21
+00:01:03,310 --> 00:01:06,570
+and functions to assess databases and metadata design,
+
+22
+00:01:06,570 --> 00:01:09,650
+first, we&#39;ll talk about the databases and metadata design
+
+23
+00:01:09,650 --> 00:01:11,590
+a little bit, in a little bit of detail,
+
+24
+00:01:11,590 --> 00:01:13,620
+and actually I&#39;ve separated this out
+
+25
+00:01:13,620 --> 00:01:15,870
+into two separate components.
+
+26
+00:01:15,870 --> 00:01:17,900
+The first thing that I&#39;m going to talk about is things that
+
+27
+00:01:17,900 --> 00:01:20,930
+we more or less have some control over.
+
+28
+00:01:20,930 --> 00:01:25,920
+So some customization challenges that we actually can modify
+
+29
+00:01:25,920 --> 00:01:30,470
+and have a great deal of impact on usability of the system
+
+30
+00:01:30,470 --> 00:01:33,410
+in terms of reviewing data and getting the data we need.
+
+31
+00:01:33,410 --> 00:01:36,480
+Then the second part of this is some challenges that we
+
+32
+00:01:36,480 --> 00:01:38,650
+have a little less control over currently,
+
+33
+00:01:38,650 --> 00:01:40,776
+just based upon the limitations of
+
+34
+00:01:40,776 --> 00:01:42,710
+the DHIS2 maintenance app.
+
+35
+00:01:42,710 --> 00:01:45,350
+So there&#39;s a lot of things we might be able to do
+
+36
+00:01:45,350 --> 00:01:46,270
+to get around this,
+
+37
+00:01:46,270 --> 00:01:47,750
+maybe running SQL queries
+
+38
+00:01:47,750 --> 00:01:49,730
+or accessing things through the API
+
+39
+00:01:49,730 --> 00:01:51,980
+and making modifications that way.
+
+40
+00:01:51,980 --> 00:01:54,790
+But then, if we&#39;re trying to build long-term capacity,
+
+41
+00:01:54,790 --> 00:01:56,670
+it becomes quite challenging to do this
+
+42
+00:01:56,670 --> 00:02:00,360
+if there&#39;s no real good way to do some things in DHIS2
+
+43
+00:02:00,360 --> 00:02:02,060
+to deal with some of these issues.
+
+44
+00:02:02,970 --> 00:02:04,870
+Lastly, we&#39;re going to talk about functions
+
+45
+00:02:04,870 --> 00:02:07,770
+to assess databases and metadata design.
+
+46
+00:02:07,770 --> 00:02:11,350
+So we&#39;re actually going to discuss some ways to deal with
+
+47
+00:02:11,350 --> 00:02:14,480
+these problems or at least assess these problems.
+
+48
+00:02:14,480 --> 00:02:17,020
+We&#39;re going to be presenting a number of problems, actually,
+
+49
+00:02:17,020 --> 00:02:19,310
+over the course of this discussion.
+
+50
+00:02:19,310 --> 00:02:22,480
+And we do want to kind of also provide some tools
+
+51
+00:02:22,480 --> 00:02:25,310
+to actually rectify the situation
+
+52
+00:02:25,310 --> 00:02:27,160
+when you find something that&#39;s wrong.
+
+53
+00:02:31,130 --> 00:02:34,230
+Okay, so the first kind of session that we&#39;ll have
+
+54
+00:02:34,230 --> 00:02:36,830
+is focusing on aggregate form design.
+
+55
+00:02:36,830 --> 00:02:37,890
+And we&#39;re going to talk about
+
+56
+00:02:37,890 --> 00:02:39,620
+a couple of different things here.
+
+57
+00:02:39,620 --> 00:02:43,040
+First, we&#39;ll talk about poor form source design.
+
+58
+00:02:43,040 --> 00:02:45,660
+So, when you&#39;re actually having a paper form that
+
+59
+00:02:45,660 --> 00:02:48,270
+really has a lot of problems with it and what you do.
+
+60
+00:02:48,270 --> 00:02:49,590
+And we&#39;re actually going to talk about
+
+61
+00:02:49,590 --> 00:02:51,720
+a couple of different kinds of aspects of this
+
+62
+00:02:51,720 --> 00:02:53,350
+as we go through the session.
+
+63
+00:02:53,350 --> 00:02:55,490
+We&#39;re going to talk about incorrect disaggregations
+
+64
+00:02:55,490 --> 00:02:58,410
+on these forms as well as duplicate variables
+
+65
+00:02:58,410 --> 00:02:59,940
+and duplicate variables happen
+
+66
+00:02:59,940 --> 00:03:01,560
+in a lot of different scenarios.
+
+67
+00:03:01,560 --> 00:03:03,830
+This includes within the same form itself,
+
+68
+00:03:03,830 --> 00:03:06,830
+across different forms, between different programs,
+
+69
+00:03:06,830 --> 00:03:10,230
+and across different forms in the same program itself.
+
+70
+00:03:10,230 --> 00:03:11,760
+So we&#39;ll break each of these down
+
+71
+00:03:11,760 --> 00:03:13,410
+as we go through this discussion.
+
+72
+00:03:16,250 --> 00:03:17,690
+So the first thing I&#39;m going to talk about
+
+73
+00:03:17,690 --> 00:03:21,640
+is just some basics on poor form source design in general.
+
+74
+00:03:21,640 --> 00:03:24,060
+And if we look at this form,
+
+75
+00:03:24,060 --> 00:03:26,820
+it&#39;s a form that&#39;s collecting delivery services,
+
+76
+00:03:26,820 --> 00:03:30,070
+essentially, antenatal care delivery parity
+
+77
+00:03:30,070 --> 00:03:32,940
+and have a look at the disaggregations.
+
+78
+00:03:32,940 --> 00:03:34,490
+Just think for a second what might be off
+
+79
+00:03:34,490 --> 00:03:35,840
+when you look at this form.
+
+80
+00:03:35,840 --> 00:03:37,760
+So this is based on a real paper form.
+
+81
+00:03:37,760 --> 00:03:39,530
+This is not something I just made up
+
+82
+00:03:39,530 --> 00:03:41,990
+for the sake of providing a poor example.
+
+83
+00:03:41,990 --> 00:03:43,353
+But if we have a look,
+
+84
+00:03:44,470 --> 00:03:47,710
+we have male here recorded for all these services
+
+85
+00:03:47,710 --> 00:03:50,290
+and that doesn&#39;t make any sense at all, right?
+
+86
+00:03:50,290 --> 00:03:52,980
+So we cannot actually record anything
+
+87
+00:03:52,980 --> 00:03:55,530
+for the male sex disaggregation.
+
+88
+00:03:55,530 --> 00:03:56,630
+So it shouldn&#39;t be there.
+
+89
+00:03:56,630 --> 00:03:59,110
+We don&#39;t need the sex disaggregation applied
+
+90
+00:03:59,110 --> 00:04:01,510
+to these age disaggregations at all.
+
+91
+00:04:01,510 --> 00:04:03,430
+And the problem with this,
+
+92
+00:04:03,430 --> 00:04:05,920
+it results in data being entered
+
+93
+00:04:05,920 --> 00:04:08,530
+that is subsequently incorrect, right?
+
+94
+00:04:08,530 --> 00:04:11,770
+So we might have information entered for males,
+
+95
+00:04:11,770 --> 00:04:14,030
+and we&#39;re not actually sure what to do with that.
+
+96
+00:04:14,030 --> 00:04:15,660
+Is this an incorrect value?
+
+97
+00:04:15,660 --> 00:04:18,330
+Should this go in the female disaggregation?
+
+98
+00:04:18,329 --> 00:04:20,750
+Should this be removed entirely?
+
+99
+00:04:20,750 --> 00:04:23,620
+And what happens in this scenario is,
+
+100
+00:04:23,620 --> 00:04:25,050
+we&#39;re not actually sure when we go to review
+
+101
+00:04:25,050 --> 00:04:28,070
+our data quality, why our numbers look incorrect,
+
+102
+00:04:28,070 --> 00:04:30,944
+or we&#39;re just reviewing our data and we&#39;re not actually
+
+103
+00:04:30,944 --> 00:04:34,700
+even aware of how this is affecting our final output.
+
+104
+00:04:34,700 --> 00:04:36,970
+And we&#39;re just kind of reporting the values that have been
+
+105
+00:04:36,970 --> 00:04:38,880
+recorded in that female disaggregation
+
+106
+00:04:38,880 --> 00:04:40,920
+and not really doing anything with the values
+
+107
+00:04:40,920 --> 00:04:44,081
+that have been recorded in that male disaggregation.
+
+108
+00:04:44,081 --> 00:04:45,480
+So it&#39;s just something to be wary of
+
+109
+00:04:45,480 --> 00:04:47,840
+when we&#39;re thinking about how we design systems
+
+110
+00:04:47,840 --> 00:04:50,420
+and how this affects our final data output, actually,
+
+111
+00:04:50,420 --> 00:04:53,913
+because it can have quite a deleterious effect
+
+112
+00:04:53,913 --> 00:04:57,500
+on our information because just giving us the wrong output,
+
+113
+00:04:57,500 --> 00:04:59,760
+the wrong values, our data quality is affected.
+
+114
+00:04:59,760 --> 00:05:02,760
+Our outputs are all affected with wrong values, essentially.
+

@@ -1,0 +1,9 @@
+<video youtube="1.00:fp7gTcQ21tM" url_name="a752621d20f5456eb4a5fd273308b3d5" sub="" transcripts="{&quot;en&quot;: &quot;4975dedb-d5d8-42d4-9a5b-e451dd15f4c8-en.srt&quot;}" display_name="Introduction to the WHO Data Quality Tool" download_track="true" download_video="true" edx_video_id="4975dedb-d5d8-42d4-9a5b-e451dd15f4c8" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/2.1.1+-+Introduction+to+the+WHO+Data+Quality+Tool.mp4&quot;]" youtube_id_1_0="fp7gTcQ21tM">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/2.1.1+-+Introduction+to+the+WHO+Data+Quality+Tool.mp4"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="4975dedb-d5d8-42d4-9a5b-e451dd15f4c8-en.srt"/>
+</video>

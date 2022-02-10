@@ -1,0 +1,10 @@
+<video youtube="1.00:SDwDRhc5ARQ" url_name="ae170fd05fff41e7af8f81500b057f6b" sub="" transcripts="{&quot;en&quot;: &quot;2559618c-8131-4e98-beb7-5d2b4557cdde-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="(Meta) Data Integrity Checks" download_track="true" download_video="true" edx_video_id="2559618c-8131-4e98-beb7-5d2b4557cdde" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.3_Meta_data_integrity_checks.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.4.3+-+(Meta)+Data+Integrity+Checks.mp4&quot;]" show_captions="false" youtube_id_1_0="SDwDRhc5ARQ">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.4.3+-+(Meta)+Data+Integrity+Checks.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.3_Meta_data_integrity_checks.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="2559618c-8131-4e98-beb7-5d2b4557cdde-en.srt"/>
+</video>

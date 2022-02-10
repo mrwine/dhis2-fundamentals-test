@@ -1,0 +1,10 @@
+<video youtube="1.00:njhXbuVuJX0" url_name="0ccd3d8bff054ec1b93f9a57c12145c0" sub="" transcripts="{&quot;en&quot;: &quot;c92af22d-20c7-46a7-bfb6-ac078080c99e-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Demo - WHO DQ Tool Installation" download_track="true" download_video="true" edx_video_id="c92af22d-20c7-46a7-bfb6-ac078080c99e" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.1_DQ_app_installation.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/6.1.1+-+Demo+-+WHO+DQ+App+Installation.mp4&quot;]" show_captions="false" youtube_id_1_0="njhXbuVuJX0">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/6.1.1+-+Demo+-+WHO+DQ+App+Installation.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.1_DQ_app_installation.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="c92af22d-20c7-46a7-bfb6-ac078080c99e-en.srt"/>
+</video>

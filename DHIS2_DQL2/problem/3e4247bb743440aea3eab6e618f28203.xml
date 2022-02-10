@@ -1,0 +1,9 @@
+<problem display_name="Self-graded question" markdown="&gt;&gt;Did you complete the reflective exercise? (1 point) &lt;&lt;&#10;[[&#10;(Yes)&#10;No&#10;]]&#10;">
+<optionresponse>
+  <label>Did you complete the reflective exercise? (1 point) </label>
+<optioninput>
+    <option correct="True">Yes</option>
+    <option correct="False">No</option>
+  </optioninput>
+</optionresponse>
+</problem>

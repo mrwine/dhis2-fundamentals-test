@@ -1,0 +1,104 @@
+0
+00:00:00,996 --> 00:00:03,579
+(lively music)
+
+1
+00:00:05,820 --> 00:00:08,763
+- [Bob] Good day. This is Bob Pond.
+
+2
+00:00:09,830 --> 00:00:11,840
+I&#39;m going to be presenting
+
+3
+00:00:11,840 --> 00:00:16,840
+on how to use the WHO Data Quality Tool.
+
+4
+00:00:17,930 --> 00:00:22,930
+We have shared with you the document that you see here,
+
+5
+00:00:24,000 --> 00:00:29,000
+which is a guide on how to use the WHO Data Quality Tool,
+
+6
+00:00:30,770 --> 00:00:34,830
+and it includes a lot of screenshots
+
+7
+00:00:34,830 --> 00:00:38,210
+that take you through step by step how
+
+8
+00:00:38,210 --> 00:00:43,210
+to practice exactly what I&#39;m going to be presenting on.
+
+9
+00:00:44,330 --> 00:00:46,600
+You see at the beginning of the guide,
+
+10
+00:00:46,600 --> 00:00:51,600
+there is a URL where you can log into a special instance
+
+11
+00:00:52,710 --> 00:00:57,120
+of DHIS2 even after this academy.
+
+12
+00:00:57,120 --> 00:01:00,770
+If you log in there, use the demo,
+
+13
+00:01:00,770 --> 00:01:05,600
+use the username and password that are on the log in page,
+
+14
+00:01:05,600 --> 00:01:08,240
+and even those who are not here
+
+15
+00:01:08,240 --> 00:01:12,730
+at the academy should be able to practice these steps.
+
+16
+00:01:12,730 --> 00:01:14,960
+In this first presentation,
+
+17
+00:01:14,960 --> 00:01:19,253
+I&#39;m going to cover how to use the Completeness dashboard.
+
+18
+00:01:20,320 --> 00:01:25,320
+Then we will go over the Consistency-time dashboard
+
+19
+00:01:26,140 --> 00:01:29,960
+and onwards with the various sections
+
+20
+00:01:29,960 --> 00:01:33,770
+that you see here in the table of contents of the tool.
+
+21
+00:01:33,770 --> 00:01:37,083
+So without delaying further,
+
+22
+00:01:38,130 --> 00:01:41,800
+let&#39;s take a look at this special instance
+
+23
+00:01:44,092 --> 00:01:47,080
+of DHIS2, which has been set up for you
+
+24
+00:01:47,080 --> 00:01:50,713
+to practice data quality assessment.
+
+25
+00:01:50,713 --> 00:01:53,296
+(lively music)
+

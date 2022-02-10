@@ -1,0 +1,9 @@
+<video youtube="1.00:_oUdFvNDPg0" url_name="d226e520ec934b0d8a08b7642c093f53" sub="" transcripts="{&quot;en&quot;: &quot;61fbf4c1-c235-4f70-847e-6f959b84868e-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="District DQA - Rapid Training " download_track="true" download_video="true" edx_video_id="61fbf4c1-c235-4f70-847e-6f959b84868e" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/2.1.7+-+District+DQA+-+Rapid+Training_+WHO+Data+Quality+Tool.mp4&quot;]" youtube_id_1_0="_oUdFvNDPg0">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/2.1.7+-+District+DQA+-+Rapid+Training_+WHO+Data+Quality+Tool.mp4"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="61fbf4c1-c235-4f70-847e-6f959b84868e-en.srt"/>
+</video>

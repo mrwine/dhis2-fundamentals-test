@@ -1,0 +1,1068 @@
+0
+00:00:01,430 --> 00:00:03,650
+- [Instructor] So, another area where we can have a bit of
+
+1
+00:00:03,650 --> 00:00:05,400
+a positive impact on,
+
+2
+00:00:05,400 --> 00:00:07,403
+is dealing with historical data.
+
+3
+00:00:08,360 --> 00:00:11,870
+And this can be quite challenging, in reality, to implement.
+
+4
+00:00:11,870 --> 00:00:13,020
+Whether it&#39;s tracker data,
+
+5
+00:00:13,020 --> 00:00:16,110
+or whether it&#39;s some kind of aggregate data,
+
+6
+00:00:16,110 --> 00:00:18,110
+but we just have some different approaches
+
+7
+00:00:18,110 --> 00:00:21,640
+that we can potentially implement to, hopefully,
+
+8
+00:00:21,640 --> 00:00:25,520
+reduce the impact this has on our data quality.
+
+9
+00:00:25,520 --> 00:00:26,980
+So, what we want to do is, kind of,
+
+10
+00:00:26,980 --> 00:00:29,310
+make data usable over time,
+
+11
+00:00:29,310 --> 00:00:31,190
+when reporting tools change.
+
+12
+00:00:31,190 --> 00:00:32,710
+This always happens, right?
+
+13
+00:00:32,710 --> 00:00:36,160
+Forms are revised, new standards are released.
+
+14
+00:00:36,160 --> 00:00:39,090
+You know, even with the digital data packages,
+
+15
+00:00:39,090 --> 00:00:40,240
+these are often new standards
+
+16
+00:00:40,240 --> 00:00:42,050
+that many countries have to adopt,
+
+17
+00:00:42,050 --> 00:00:44,660
+and, kind of, you know, figure out how it will fit
+
+18
+00:00:44,660 --> 00:00:46,410
+into their overall health system,
+
+19
+00:00:46,410 --> 00:00:48,360
+if they want to report on those values.
+
+20
+00:00:49,750 --> 00:00:51,490
+So, there are a couple approaches,
+
+21
+00:00:51,490 --> 00:00:53,740
+and actually we&#39;re gonna talk about historical data,
+
+22
+00:00:53,740 --> 00:00:54,910
+hopefully in a little bit of detail,
+
+23
+00:00:54,910 --> 00:00:56,100
+to give you some information
+
+24
+00:00:56,100 --> 00:00:57,880
+that you might be able to utilize
+
+25
+00:00:57,880 --> 00:00:59,940
+to deal with different scenarios, essentially,
+
+26
+00:00:59,940 --> 00:01:03,640
+where we have historical data present in our system.
+
+27
+00:01:03,640 --> 00:01:05,513
+So, first things first.
+
+28
+00:01:06,450 --> 00:01:09,660
+I recommend reusing anything that remains the same.
+
+29
+00:01:09,660 --> 00:01:11,590
+So, if I have a new reporting tool,
+
+30
+00:01:11,590 --> 00:01:14,683
+and a number of the data elements are the same,
+
+31
+00:01:15,790 --> 00:01:16,890
+just keep them the same.
+
+32
+00:01:16,890 --> 00:01:20,073
+There&#39;s no need to create new data elements for a new form.
+
+33
+00:01:22,240 --> 00:01:23,970
+Another way you can also do this,
+
+34
+00:01:23,970 --> 00:01:25,450
+let&#39;s say there are, kind of,
+
+35
+00:01:25,450 --> 00:01:27,320
+old and new data elements, right?
+
+36
+00:01:27,320 --> 00:01:28,650
+The new data elements,
+
+37
+00:01:28,650 --> 00:01:32,450
+maybe their definition is now up slightly different,
+
+38
+00:01:32,450 --> 00:01:34,590
+or they are collecting something similar,
+
+39
+00:01:34,590 --> 00:01:36,240
+but not exactly the same,
+
+40
+00:01:36,240 --> 00:01:40,000
+or maybe there are already sets of old and new data elements
+
+41
+00:01:40,000 --> 00:01:41,830
+and you&#39;re coming in after the fact,
+
+42
+00:01:41,830 --> 00:01:45,160
+and you&#39;re unable to rectify this proactively,
+
+43
+00:01:45,160 --> 00:01:48,513
+but you have to come up with some fix now, right?
+
+44
+00:01:49,540 --> 00:01:51,690
+So, what you can do is actually use indicators,
+
+45
+00:01:51,690 --> 00:01:53,620
+just numerator only indicators,
+
+46
+00:01:53,620 --> 00:01:56,800
+to add up the old and new data elements, essentially.
+
+47
+00:01:56,800 --> 00:01:59,030
+And by doing this, I would also recommend
+
+48
+00:01:59,030 --> 00:02:01,640
+hiding the individual data element groups
+
+49
+00:02:01,640 --> 00:02:04,120
+that contain these data elements
+
+50
+00:02:04,120 --> 00:02:06,710
+so you&#39;re only pointing them to do analysis
+
+51
+00:02:06,710 --> 00:02:08,120
+on the indicators
+
+52
+00:02:08,120 --> 00:02:10,350
+so they can access data as far back
+
+53
+00:02:10,350 --> 00:02:12,540
+as they have information for.
+
+54
+00:02:12,540 --> 00:02:15,090
+If you&#39;re having two separate sets of data elements,
+
+55
+00:02:15,090 --> 00:02:18,010
+and you&#39;re not linking them in any meaningful way,
+
+56
+00:02:18,010 --> 00:02:20,430
+you know, you&#39;re going to have to do separate analyses
+
+57
+00:02:20,430 --> 00:02:24,380
+on different data elements for different periods.
+
+58
+00:02:24,380 --> 00:02:26,530
+This is going to be difficult over time.
+
+59
+00:02:26,530 --> 00:02:30,650
+And it also might be very difficult to review data over time
+
+60
+00:02:30,650 --> 00:02:32,450
+and find out any quality issues,
+
+61
+00:02:32,450 --> 00:02:34,700
+on top of making your information outputs
+
+62
+00:02:34,700 --> 00:02:36,093
+difficult to produce.
+
+63
+00:02:46,030 --> 00:02:48,020
+So, another problem we will have,
+
+64
+00:02:48,020 --> 00:02:49,890
+when dealing with historical data,
+
+65
+00:02:49,890 --> 00:02:53,053
+is what we do with our categories or dissaggregations.
+
+66
+00:02:54,310 --> 00:02:55,770
+When dissaggregations change,
+
+67
+00:02:55,770 --> 00:02:58,040
+this can cause a bit of a headache,
+
+68
+00:02:58,040 --> 00:02:59,940
+in all honesty, right?
+
+69
+00:02:59,940 --> 00:03:02,350
+And some of you might have dealt with this problem already,
+
+70
+00:03:02,350 --> 00:03:05,463
+many times, but for those of you who kind of haven&#39;t,
+
+71
+00:03:06,420 --> 00:03:09,040
+you know, here are some things you can do
+
+72
+00:03:09,040 --> 00:03:13,030
+to kind of assist you in working with this.
+
+73
+00:03:13,030 --> 00:03:16,530
+The first thing is using the category combination override
+
+74
+00:03:16,530 --> 00:03:19,210
+to apply a new disaggregation.
+
+75
+00:03:19,210 --> 00:03:22,383
+So, I just want to show you what that actually looks like.
+
+76
+00:03:24,230 --> 00:03:28,320
+So, we can apply new disaggregations to data elements
+
+77
+00:03:28,320 --> 00:03:31,860
+within a dataset, within dataset maintenance.
+
+78
+00:03:31,860 --> 00:03:34,100
+This feature has been around for some time,
+
+79
+00:03:34,100 --> 00:03:37,540
+but I find that it&#39;s not used necessarily everywhere.
+
+80
+00:03:37,540 --> 00:03:39,040
+And when I show this to people,
+
+81
+00:03:39,040 --> 00:03:41,173
+it&#39;s sometimes a bit new to them as well.
+
+82
+00:03:42,080 --> 00:03:44,780
+So, if I scroll down within the dataset maintenance
+
+83
+00:03:44,780 --> 00:03:47,280
+to all the data elements that are associated
+
+84
+00:03:47,280 --> 00:03:48,810
+with my dataset,
+
+85
+00:03:48,810 --> 00:03:51,200
+and I&#39;m going to click on this little wrench icon here,
+
+86
+00:03:51,200 --> 00:03:53,160
+and you can just see before I go over,
+
+87
+00:03:53,160 --> 00:03:57,040
+it says &quot;Override the data element category combination&quot;.
+
+88
+00:03:57,040 --> 00:03:58,490
+So, I&#39;m going to click on this here.
+
+89
+00:03:58,490 --> 00:04:01,450
+Now, it brings up a list of all the data elements
+
+90
+00:04:01,450 --> 00:04:03,300
+within my particular dataset.
+
+91
+00:04:03,300 --> 00:04:05,800
+And you can see underneath the data element name,
+
+92
+00:04:05,800 --> 00:04:08,560
+it has the disaggregation that&#39;s been applied
+
+93
+00:04:08,560 --> 00:04:10,170
+to my data element.
+
+94
+00:04:10,170 --> 00:04:13,160
+And you can see here, a number of them are just default.
+
+95
+00:04:13,160 --> 00:04:14,590
+A number of them have age and sex.
+
+96
+00:04:14,590 --> 00:04:17,040
+A number of them have age only.
+
+97
+00:04:17,040 --> 00:04:21,120
+So, what I can do, I&#39;ll just scroll up to the top.
+
+98
+00:04:21,120 --> 00:04:24,100
+Right now, let&#39;s say for example, &quot;All cause death&quot;.
+
+99
+00:04:24,100 --> 00:04:26,710
+This is disaggregated by age alone.
+
+100
+00:04:26,710 --> 00:04:29,760
+Now, two things can happen when I modify the form.
+
+101
+00:04:29,760 --> 00:04:32,060
+Age categories could collapse.
+
+102
+00:04:32,060 --> 00:04:33,590
+Well, actually three things I should say.
+
+103
+00:04:33,590 --> 00:04:35,280
+Age categories could collapse,
+
+104
+00:04:35,280 --> 00:04:36,240
+they could remain the same,
+
+105
+00:04:36,240 --> 00:04:38,900
+which means we don&#39;t have to touch this at all,
+
+106
+00:04:38,900 --> 00:04:40,540
+and also, you could have
+
+107
+00:04:40,540 --> 00:04:43,180
+additional disaggregations occurring.
+
+108
+00:04:43,180 --> 00:04:45,130
+So, let&#39;s say in this scenario,
+
+109
+00:04:45,130 --> 00:04:48,610
+it said that the numerical ages are staying the same,
+
+110
+00:04:48,610 --> 00:04:49,830
+but I&#39;m adding sex to this.
+
+111
+00:04:49,830 --> 00:04:52,330
+So, I want this data element now disaggregated
+
+112
+00:04:52,330 --> 00:04:53,513
+by age and sex.
+
+113
+00:04:54,750 --> 00:04:56,027
+I&#39;ll just go here to where it says
+
+114
+00:04:56,027 --> 00:04:58,730
+&quot;Override data element category combo&quot;,
+
+115
+00:04:58,730 --> 00:05:03,040
+and I can apply the age and sex disaggregation
+
+116
+00:05:03,040 --> 00:05:05,320
+to this data element.
+
+117
+00:05:05,320 --> 00:05:08,640
+All the data stored in the previous disaggregation
+
+118
+00:05:08,640 --> 00:05:10,380
+will remain the same.
+
+119
+00:05:10,380 --> 00:05:13,360
+When I go to make my totals across time,
+
+120
+00:05:13,360 --> 00:05:16,020
+let&#39;s say this was the case up until 2020,
+
+121
+00:05:16,020 --> 00:05:18,300
+and then, in 2020 I modified it
+
+122
+00:05:18,300 --> 00:05:20,743
+to add sex to this disaggregation,
+
+123
+00:05:21,930 --> 00:05:24,360
+all the data before 2020 will still be stored
+
+124
+00:05:24,360 --> 00:05:28,120
+in this data element, within that category combo.
+
+125
+00:05:28,120 --> 00:05:31,170
+Now, all the new data going forward from 2020
+
+126
+00:05:31,170 --> 00:05:34,720
+will be stored in this category combo, essentially, right?
+
+127
+00:05:34,720 --> 00:05:36,500
+So moving forward, all that data will be there,
+
+128
+00:05:36,500 --> 00:05:39,220
+but because I&#39;m storing it within the same data element,
+
+129
+00:05:39,220 --> 00:05:43,100
+my historical total, over time, will always be intact.
+
+130
+00:05:43,100 --> 00:05:46,360
+And I will just be able to look at the single data element
+
+131
+00:05:46,360 --> 00:05:49,710
+in order to, kind of, review all the information
+
+132
+00:05:49,710 --> 00:05:51,433
+associated with that data element.
+
+133
+00:05:53,240 --> 00:05:54,930
+So, another thing we can do
+
+134
+00:05:54,930 --> 00:05:57,870
+when working with categories and disaggregations,
+
+135
+00:05:57,870 --> 00:06:02,120
+is we can just, basically, add everything as totals.
+
+136
+00:06:02,120 --> 00:06:04,700
+This means we&#39;re going to lose some granularity.
+
+137
+00:06:04,700 --> 00:06:08,223
+We&#39;re going to lose our disaggregations for historical data.
+
+138
+00:06:09,390 --> 00:06:12,310
+This is not a recommended approach often,
+
+139
+00:06:12,310 --> 00:06:16,410
+and it&#39;s just a potential way to do things.
+
+140
+00:06:16,410 --> 00:06:19,680
+But I wouldn&#39;t recommend doing this, if you can, right?
+
+141
+00:06:19,680 --> 00:06:22,140
+You want to maintain the integrity of this information.
+
+142
+00:06:22,140 --> 00:06:23,970
+You don&#39;t want to lose information
+
+143
+00:06:23,970 --> 00:06:27,770
+as you move from previous forms to new versions of forms.
+
+144
+00:06:27,770 --> 00:06:31,040
+The only issue is you might have to do this
+
+145
+00:06:31,040 --> 00:06:34,690
+because of a way they&#39;ve done something within their system.
+
+146
+00:06:34,690 --> 00:06:37,560
+And then, okay, if this is the only approach you can use
+
+147
+00:06:37,560 --> 00:06:41,120
+to make things work, that&#39;s fine, I suppose, right?
+
+148
+00:06:41,120 --> 00:06:43,080
+Because there&#39;s not a whole lot you can do
+
+149
+00:06:43,080 --> 00:06:44,410
+if you&#39;re coming in at the end
+
+150
+00:06:44,410 --> 00:06:47,370
+and you&#39;re kind of having to rectify this after the fact,
+
+151
+00:06:47,370 --> 00:06:50,300
+and this approach is, kind of, the most reasonable one.
+
+152
+00:06:50,300 --> 00:06:53,113
+But where we can avoid this, obviously, we try to.
+
+153
+00:06:54,990 --> 00:06:56,428
+Okay, another thing we can do is
+
+154
+00:06:56,428 --> 00:07:00,010
+use category combination groups,
+
+155
+00:07:00,010 --> 00:07:03,453
+and group sets to make comparable disaggregations.
+
+156
+00:07:04,460 --> 00:07:07,310
+So, I&#39;m going to talk a bit more about
+
+157
+00:07:07,310 --> 00:07:09,620
+category combo groups and group sets
+
+158
+00:07:09,620 --> 00:07:12,070
+in the next couple of sets of slides,
+
+159
+00:07:12,070 --> 00:07:14,190
+just so you can, kind of, get a better feel
+
+160
+00:07:14,190 --> 00:07:16,050
+for what this does.
+
+161
+00:07:16,050 --> 00:07:20,780
+But for example, if you have a more granular disaggregation,
+
+162
+00:07:20,780 --> 00:07:24,620
+so, previously, it was zero to one and one to four,
+
+163
+00:07:24,620 --> 00:07:28,710
+and this is collapsed and it just becomes less than five.
+
+164
+00:07:28,710 --> 00:07:32,900
+We can use the category combination groups and group sets
+
+165
+00:07:32,900 --> 00:07:36,010
+to collapse this disaggregation, essentially,
+
+166
+00:07:36,010 --> 00:07:38,910
+and, kind of, make it comparable over time.
+
+167
+00:07:38,910 --> 00:07:41,870
+Now, I&#39;m going to walk through an example in more detail,
+
+168
+00:07:41,870 --> 00:07:44,813
+so you can see this, so you can see how this works.
+
+169
+00:07:50,250 --> 00:07:52,000
+Another challenge that you will have
+
+170
+00:07:52,000 --> 00:07:55,810
+with dealing with historical data relates to completeness.
+
+171
+00:07:55,810 --> 00:07:59,520
+And there are a lot of potential challenges here.
+
+172
+00:07:59,520 --> 00:08:03,840
+If you have facilities opening and closing all the time,
+
+173
+00:08:03,840 --> 00:08:07,800
+then this is going to adversely affect your completeness.
+
+174
+00:08:07,800 --> 00:08:11,990
+There&#39;s no way, inherently, in DHIS2 to close a facility
+
+175
+00:08:11,990 --> 00:08:14,040
+for one period, for example,
+
+176
+00:08:14,040 --> 00:08:17,940
+and then, say it&#39;s open again the next proceeding period.
+
+177
+00:08:17,940 --> 00:08:21,390
+So, there are some ways you can do this manually.
+
+178
+00:08:21,390 --> 00:08:23,110
+And maybe, even, you&#39;ve thought of some ways
+
+179
+00:08:23,110 --> 00:08:26,760
+you can do this successfully in your own implementations.
+
+180
+00:08:26,760 --> 00:08:29,700
+So for example, you could have them mark the facility
+
+181
+00:08:29,700 --> 00:08:30,710
+as open every month.
+
+182
+00:08:30,710 --> 00:08:33,240
+So, when they go in to fill in their core datasets,
+
+183
+00:08:33,240 --> 00:08:35,420
+they could also mark them as open,
+
+184
+00:08:35,419 --> 00:08:37,450
+and then, you can use this in calculating
+
+185
+00:08:37,450 --> 00:08:39,270
+your completeness rate,
+
+186
+00:08:39,270 --> 00:08:42,070
+rather than the in-built tools in DHIS2.
+
+187
+00:08:42,070 --> 00:08:43,860
+You could also run a script that, basically,
+
+188
+00:08:43,860 --> 00:08:47,410
+says all facilities are open and they, basically,
+
+189
+00:08:47,410 --> 00:08:49,050
+have to, kind of, do the opposite
+
+190
+00:08:49,050 --> 00:08:52,250
+and only input facilities that are closed each month.
+
+191
+00:08:52,250 --> 00:08:54,300
+That&#39;s obviously a custom solution,
+
+192
+00:08:54,300 --> 00:08:57,180
+rather than something that can be inherently done
+
+193
+00:08:57,180 --> 00:08:58,760
+within the platform itself.
+
+194
+00:08:58,760 --> 00:09:01,270
+So, this is a bit of a limitation here with DHIS2
+
+195
+00:09:01,270 --> 00:09:03,470
+because there&#39;s not a good way around this,
+
+196
+00:09:03,470 --> 00:09:04,720
+at the moment, currently.
+
+197
+00:09:05,680 --> 00:09:08,210
+You will also have to deal with imported data.
+
+198
+00:09:08,210 --> 00:09:11,580
+So, when you&#39;re bringing in imported data,
+
+199
+00:09:11,580 --> 00:09:13,560
+there&#39;s no completeness that&#39;s brought in with it.
+
+200
+00:09:13,560 --> 00:09:15,440
+Unless, of course, you have completeness tables
+
+201
+00:09:15,440 --> 00:09:16,950
+from somewhere else.
+
+202
+00:09:16,950 --> 00:09:19,450
+But if you&#39;re bringing in imported data
+
+203
+00:09:19,450 --> 00:09:22,320
+from an Excel sheet or some other kind of,
+
+204
+00:09:22,320 --> 00:09:24,910
+maybe an access database, whatever it might be,
+
+205
+00:09:24,910 --> 00:09:27,230
+if it&#39;s not another DHIS2 system,
+
+206
+00:09:27,230 --> 00:09:29,380
+the likelihood of it having this completeness data
+
+207
+00:09:29,380 --> 00:09:32,970
+in the exact format that you require is pretty low.
+
+208
+00:09:32,970 --> 00:09:36,230
+So, what you can do is create completeness estimates
+
+209
+00:09:36,230 --> 00:09:39,980
+based on what you identify as mandatory data elements.
+
+210
+00:09:39,980 --> 00:09:42,910
+So, if you say, you know, data element A, B and C
+
+211
+00:09:42,910 --> 00:09:45,040
+should be filled in every month,
+
+212
+00:09:45,040 --> 00:09:47,170
+so you can go through all the data that you&#39;re importing
+
+213
+00:09:47,170 --> 00:09:48,010
+and check.
+
+214
+00:09:48,010 --> 00:09:49,490
+For that particular facility,
+
+215
+00:09:49,490 --> 00:09:51,640
+if the data is filled in for that month
+
+216
+00:09:51,640 --> 00:09:53,920
+and generate completeness tables based on that,
+
+217
+00:09:53,920 --> 00:09:56,210
+and then, kind of, bring this into the system
+
+218
+00:09:56,210 --> 00:09:58,000
+through the API or through SQL,
+
+219
+00:09:58,000 --> 00:09:59,490
+however you want to push it.
+
+220
+00:09:59,490 --> 00:10:00,920
+But, of course, once again,
+
+221
+00:10:00,920 --> 00:10:04,513
+this is not something that there&#39;s a very good solution for.
+
+222
+00:10:06,200 --> 00:10:09,280
+Another issue you might have is when datasets are modified
+
+223
+00:10:09,280 --> 00:10:11,170
+or added or split up.
+
+224
+00:10:11,170 --> 00:10:14,650
+So, let&#39;s say I have version one of a HIV data set,
+
+225
+00:10:14,650 --> 00:10:17,900
+and now I&#39;m bringing in the digital data packages,
+
+226
+00:10:17,900 --> 00:10:22,310
+and I now have version two of my HIV data set.
+
+227
+00:10:22,310 --> 00:10:23,143
+What happens is,
+
+228
+00:10:23,143 --> 00:10:25,210
+because there&#39;s completely separate datasets,
+
+229
+00:10:25,210 --> 00:10:26,810
+that completeness does not carry over
+
+230
+00:10:26,810 --> 00:10:28,890
+from one dataset to the other,
+
+231
+00:10:28,890 --> 00:10:30,890
+even though we might be able to reuse
+
+232
+00:10:30,890 --> 00:10:33,880
+some of the data elements from that previous dataset
+
+233
+00:10:33,880 --> 00:10:34,713
+in the new dataset,
+
+234
+00:10:34,713 --> 00:10:36,930
+as we had recommended earlier,
+
+235
+00:10:36,930 --> 00:10:38,580
+we&#39;re not able to actually do anything
+
+236
+00:10:38,580 --> 00:10:39,470
+about the completeness.
+
+237
+00:10:39,470 --> 00:10:41,920
+So, this becomes a potential problem
+
+238
+00:10:41,920 --> 00:10:43,550
+when we&#39;re dealing with,
+
+239
+00:10:43,550 --> 00:10:46,160
+actually, you splitting up this information.
+
+240
+00:10:46,160 --> 00:10:48,260
+So, the only solution that I have to offer
+
+241
+00:10:48,260 --> 00:10:52,260
+is moving this historical dataset completeness via the API.
+
+242
+00:10:52,260 --> 00:10:54,610
+So, at least it&#39;s in a format that&#39;s, you know,
+
+243
+00:10:54,610 --> 00:10:58,260
+already kind of useful for DHIS2,
+
+244
+00:10:58,260 --> 00:11:01,470
+and you can just move this from the old previous dataset
+
+245
+00:11:01,470 --> 00:11:05,350
+into the new dataset, via the API or through SQL as well,
+
+246
+00:11:05,350 --> 00:11:06,370
+I suppose.
+
+247
+00:11:06,370 --> 00:11:08,860
+But there&#39;s not really a good way to do this
+
+248
+00:11:08,860 --> 00:11:09,693
+through the interface.
+
+249
+00:11:09,693 --> 00:11:13,040
+So there are some challenges here that extend beyond,
+
+250
+00:11:13,040 --> 00:11:16,420
+you know, what we, we can have an impact on this
+
+251
+00:11:16,420 --> 00:11:18,260
+but this is very difficult, I think then,
+
+252
+00:11:18,260 --> 00:11:21,730
+to show people in countries how to manage this.
+
+253
+00:11:21,730 --> 00:11:23,730
+It&#39;s still a big challenge actually,
+
+254
+00:11:23,730 --> 00:11:26,630
+but, obviously, completeness, it has such a big effect
+
+255
+00:11:26,630 --> 00:11:28,300
+on how we analyze our data.
+
+256
+00:11:28,300 --> 00:11:30,860
+And we talked about this earlier in previous sessions,
+
+257
+00:11:30,860 --> 00:11:33,110
+when there is issues with completeness,
+
+258
+00:11:33,110 --> 00:11:35,500
+big variations in completeness over time,
+
+259
+00:11:35,500 --> 00:11:39,300
+it affects how you actually make decisions based on the data
+
+260
+00:11:39,300 --> 00:11:40,400
+that you&#39;re seeing.
+
+261
+00:11:40,400 --> 00:11:43,420
+So if the completeness is not set up correctly,
+
+262
+00:11:43,420 --> 00:11:44,580
+then you could make a,
+
+263
+00:11:44,580 --> 00:11:47,520
+you could be making incorrect interpretations of your data,
+
+264
+00:11:47,520 --> 00:11:50,660
+which will lead to lots of other problems down the line
+
+265
+00:11:50,660 --> 00:11:52,800
+when you&#39;re actually reviewing both your data quality,
+
+266
+00:11:52,800 --> 00:11:54,793
+as well as a lot of your data outputs.
+

@@ -1,0 +1,10 @@
+<video youtube="1.00:F8TlY2BcCSo" url_name="38acd0d9ab76416e8095c0bcc3fb4228" sub="" transcripts="{&quot;en&quot;: &quot;152815dc-e82e-43da-86f5-9d35f0e2985d-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Data Set Design" download_track="true" download_video="true" edx_video_id="152815dc-e82e-43da-86f5-9d35f0e2985d" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.6_Data_set_design.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.2.6+-+Data+Set+Design.mp4&quot;]" show_captions="false" youtube_id_1_0="F8TlY2BcCSo">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.2.6+-+Data+Set+Design.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.6_Data_set_design.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="152815dc-e82e-43da-86f5-9d35f0e2985d-en.srt"/>
+</video>

@@ -1,0 +1,9 @@
+<problem display_name="Exercise 1 - Configuring the WHO Data Quality Tool - Completion" markdown="&gt;&gt;I have completed Exercise 1 &lt;&lt;&#10;&#10;(x) Yes&#10;( ) No&#10;" max_attempts="1">
+<multiplechoiceresponse>
+  <label>I have completed Exercise 1 </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">Yes</choice>
+    <choice correct="false">No</choice>
+  </choicegroup>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,2268 @@
+{
+    "0.2_NavigatingDHIS2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "0.2_NavigatingDHIS2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "0.2_NavigatingDHIS2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@0.2_NavigatingDHIS2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "0.2_NavigatingDHIS2-png.jpg", 
+            null
+        ]
+    }, 
+    "1.1.1_-_Foundational_Data_Quality_Concepts.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "1.1.1_-_Foundational_Data_Quality_Concepts.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "1.1.1 - Foundational Data Quality Concepts.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.1.1_-_Foundational_Data_Quality_Concepts.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "1.2.1_-_Data_Quality_Methods.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "1.2.1_-_Data_Quality_Methods.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "1.2.1 - Data Quality Methods.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.2.1_-_Data_Quality_Methods.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "1.2.2_-_Data_Quality_Domains.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "1.2.2_-_Data_Quality_Domains.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "1.2.2 - Data Quality Domains.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.2.2_-_Data_Quality_Domains.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "1.3.1_-_Use_Case_Sri_Lanka.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "1.3.1_-_Use_Case_Sri_Lanka.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "1.3.1 - Use Case Sri Lanka.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.3.1_-_Use_Case_Sri_Lanka.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "1.3.2_-_Use_Case_South_Africa.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "1.3.2_-_Use_Case_South_Africa.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "1.3.2 - Use Case South Africa.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.3.2_-_Use_Case_South_Africa.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "1.3.3_-_Use_Case_Rwanda.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "1.3.3_-_Use_Case_Rwanda.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "1.3.3 - Use Case Rwanda.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.3.3_-_Use_Case_Rwanda.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "1_Form_design_issues.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "1_Form_design_issues.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "1 Form design issues.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1_Form_design_issues.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "2.1.1_DHIS2_Building_blocks.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "2.1.1_DHIS2_Building_blocks.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "2.1.1 DHIS2 Building blocks.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@2.1.1_DHIS2_Building_blocks.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "3.0.2_Instructions_-_Account_Creation_on_DHIS2_Data_Quality_Configuration.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.0.2_Instructions_-_Account_Creation_on_DHIS2_Data_Quality_Configuration.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.0.2_Instructions - Account Creation on DHIS2 Data Quality Configuration.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.0.2_Instructions_-_Account_Creation_on_DHIS2_Data_Quality_Configuration.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "3.0_DQ_metadata_config_access.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.0_DQ_metadata_config_access.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.0_DQ_metadata_config_access.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.0_DQ_metadata_config_access.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "3.0_DQ_metadata_config_access-png.jpg", 
+            null
+        ]
+    }, 
+    "3.0_WHO_DQ_Tool_Warning.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.0_WHO_DQ_Tool_Warning.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.0_WHO_DQ_Tool_Warning.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.0_WHO_DQ_Tool_Warning.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "3.0_WHO_DQ_Tool_Warning-png.jpg", 
+            null
+        ]
+    }, 
+    "3.2.2_HowToUsePredictorRulesToIdentifyOutliers.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.2.2_HowToUsePredictorRulesToIdentifyOutliers.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.2.2_HowToUsePredictorRulesToIdentifyOutliers.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.2.2_HowToUsePredictorRulesToIdentifyOutliers.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "3.2.2_optionaleximg1.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.2.2_optionaleximg1.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.2.2_optionaleximg1.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.2.2_optionaleximg1.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "3.2.2_optionaleximg1-png.jpg", 
+            null
+        ]
+    }, 
+    "3.2.2_optionaleximg2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.2.2_optionaleximg2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.2.2_optionaleximg2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.2.2_optionaleximg2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "3.2.2_optionaleximg2-png.jpg", 
+            null
+        ]
+    }, 
+    "3.2.2_optionaleximg3.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.2.2_optionaleximg3.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.2.2_optionaleximg3.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.2.2_optionaleximg3.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "3.2.2_optionaleximg3-png.jpg", 
+            null
+        ]
+    }, 
+    "3.2.2_optionaleximg4.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.2.2_optionaleximg4.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.2.2_optionaleximg4.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.2.2_optionaleximg4.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "3.2.2_optionaleximg4-png.jpg", 
+            null
+        ]
+    }, 
+    "3.2.2_optionaleximg5.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "3.2.2_optionaleximg5.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "3.2.2_optionaleximg5.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@3.2.2_optionaleximg5.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "3.2.2_optionaleximg5-png.jpg", 
+            null
+        ]
+    }, 
+    "5.1.1_-_Poor_Form_Source_Design.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.1.1_-_Poor_Form_Source_Design.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.1.1 - Poor Form Source Design.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.1.1_-_Poor_Form_Source_Design.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "5.1.1_-_Poor_Form_Source_Design-png.jpg", 
+            null
+        ]
+    }, 
+    "5.1.2_-_Incorrect_DisaggregationsAndDuplication_of_Variables.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.1.2_-_Incorrect_DisaggregationsAndDuplication_of_Variables.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.1.2 - Incorrect DisaggregationsAndDuplication of Variables.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.1.2_-_Incorrect_DisaggregationsAndDuplication_of_Variables.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "5.1.2_-_Incorrect_DisaggregationsAndDuplication_of_Variables-png.jpg", 
+            null
+        ]
+    }, 
+    "5.1.2_Incorrect_disaggregations_Duplication_of_variables.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.1.2_Incorrect_disaggregations_Duplication_of_variables.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.1.2 Incorrect disaggregations_Duplication of variables.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.1.2_Incorrect_disaggregations_Duplication_of_variables.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.2.1_Procedural_challenges.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.2.1_Procedural_challenges.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.2.1 Procedural challenges.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.1_Procedural_challenges.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.2.2_Data_elements_vale_types.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.2.2_Data_elements_vale_types.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.2.2 Data elements vale types.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.2_Data_elements_vale_types.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.2.3_Historical_data.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.2.3_Historical_data.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.2.3 Historical data.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.3_Historical_data.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.2.4_Managing_duplicate_category_options.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.2.4_Managing_duplicate_category_options.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.2.4 Managing duplicate category options.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.4_Managing_duplicate_category_options.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.2.5_Data_dimensions_and_Duplicate_data_element.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.2.5_Data_dimensions_and_Duplicate_data_element.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.2.5 Data dimensions and Duplicate data element.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.5_Data_dimensions_and_Duplicate_data_element.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.2.6_Data_set_design.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.2.6_Data_set_design.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.2.6 Data set design.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.2.6_Data_set_design.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.3.1_General_challenges_and_Org_unit_management.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.3.1_General_challenges_and_Org_unit_management.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.3.1 General challenges and Org unit management.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.3.1_General_challenges_and_Org_unit_management.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.3.2_User_management_and_Sharing.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.3.2_User_management_and_Sharing.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.3.2 User management and Sharing.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.3.2_User_management_and_Sharing.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.4.1_Manual_metadata_review.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.4.1_Manual_metadata_review.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.4.1 Manual metadata review.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.1_Manual_metadata_review.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.4.2_Naming_conventions.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.4.2_Naming_conventions.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.4.2 Naming conventions.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.2_Naming_conventions.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.4.3_Meta_data_integrity_checks.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.4.3_Meta_data_integrity_checks.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.4.3 Meta data integrity checks.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.3_Meta_data_integrity_checks.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.4.4_SQL_scripts.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.4.4_SQL_scripts.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.4.4 SQL scripts.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.4_SQL_scripts.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "5.5.1_Summary.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "5.5.1_Summary.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "5.5.1 Summary.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.5.1_Summary.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "6.0.2_DHIS2_Account_Creation_Data_Quality_App_Configuration.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.0.2_DHIS2_Account_Creation_Data_Quality_App_Configuration.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.0.2_DHIS2_Account Creation_Data Quality App Configuration.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.0.2_DHIS2_Account_Creation_Data_Quality_App_Configuration.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "6.0_DQ_app_config_access.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.0_DQ_app_config_access.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.0_DQ_app_config_access.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.0_DQ_app_config_access.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "6.0_DQ_app_config_access-png.jpg", 
+            null
+        ]
+    }, 
+    "6.1.1_DQ_app_installation.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.1.1_DQ_app_installation.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.1.1 DQ app installation.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.1_DQ_app_installation.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "6.1.2_Mapping_Reference_Numerators.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.1.2_Mapping_Reference_Numerators.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.1.2 Mapping Reference Numerators.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.2_Mapping_Reference_Numerators.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "6.1.3_Configuring_Numerator_Groups.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.1.3_Configuring_Numerator_Groups.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.1.3 Configuring Numerator Groups.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.3_Configuring_Numerator_Groups.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "6.1.4_Considerations_when_Configuring_the_WHO_DQ_Tool.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.1.4_Considerations_when_Configuring_the_WHO_DQ_Tool.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.1.4 Considerations when Configuring the WHO DQ Tool.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.4_Considerations_when_Configuring_the_WHO_DQ_Tool.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "6.1.5_Numerator_relations.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.1.5_Numerator_relations.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.1.5 Numerator_relations.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.5_Numerator_relations.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "6.1.6_Numerator_Quality_Parameters.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "6.1.6_Numerator_Quality_Parameters.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "6.1.6 Numerator_Quality_Parameters.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.6_Numerator_Quality_Parameters.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "AccountCreation1.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation1.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation1.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation1.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation1-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation1_V2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation1_V2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation1_V2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation1_V2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation1_V2-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation2-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation2_V2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation2_V2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation2_V2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation2_V2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation2_V2-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation3.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation3.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation3.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation3.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation3-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation3_V2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation3_V2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation3_V2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation3_V2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation3_V2-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation4.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation4.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation4.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation4.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation4-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation5.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation5.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation5.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation5.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation5-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation6.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation6.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation6.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation6.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation6-png.jpg", 
+            null
+        ]
+    }, 
+    "AccountCreation7.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "AccountCreation7.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "AccountCreation7.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@AccountCreation7.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "AccountCreation7-png.jpg", 
+            null
+        ]
+    }, 
+    "Aggregation_of_tracker_data_to_data_sets.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Aggregation_of_tracker_data_to_data_sets.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Aggregation of tracker data to data sets.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Aggregation_of_tracker_data_to_data_sets.docx", 
+        "import_path": "Aggregation of tracker data to data sets.docx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "BobPond.jpg": {
+        "contentType": "image/jpeg", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "BobPond.jpg", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "BobPond.jpg", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@BobPond.jpg", 
+        "import_path": "BobPond.jpg", 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "BobPond.jpg", 
+            null
+        ]
+    }, 
+    "Consistency_-_Data_Exercise.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Consistency_-_Data_Exercise.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Consistency - Data Exercise.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Consistency_-_Data_Exercise.docx", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DHIS2_DQ_App_NJS.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DHIS2_DQ_App_NJS.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DHIS2_DQ App_NJS.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DHIS2_DQ_App_NJS.pdf", 
+        "import_path": "DHIS2_DQ App_NJS.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DHIS2_DQ_App_NJS.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DHIS2_DQ_App_NJS.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DHIS2_DQ App_NJS.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DHIS2_DQ_App_NJS.pptx", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DHIS2_DQ_Data_Review_NJS.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DHIS2_DQ_Data_Review_NJS.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DHIS2_DQ Data Review_NJS.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DHIS2_DQ_Data_Review_NJS.pdf", 
+        "import_path": "DHIS2_DQ Data Review_NJS.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DHIS2_DQ_Data_Review_NJS.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DHIS2_DQ_Data_Review_NJS.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DHIS2_DQ Data Review_NJS.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DHIS2_DQ_Data_Review_NJS.pptx", 
+        "import_path": "DHIS2_DQ Data Review_NJS.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DHIS2_DQ_min_max_NJS.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DHIS2_DQ_min_max_NJS.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DHIS2_DQ min_max_NJS.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DHIS2_DQ_min_max_NJS.pdf", 
+        "import_path": "DHIS2_DQ min_max_NJS.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DHIS2_DQ_min_max_NJS.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DHIS2_DQ_min_max_NJS.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DHIS2_DQ min_max_NJS.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DHIS2_DQ_min_max_NJS.pptx", 
+        "import_path": "DHIS2_DQ min_max_NJS.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DataQualityAcademy_ParticipantsGuide.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DataQualityAcademy_ParticipantsGuide.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DataQualityAcademy_ParticipantsGuide.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DataQualityAcademy_ParticipantsGuide.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DataQualityL2Academy_Day2Exercises.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DataQualityL2Academy_Day2Exercises.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DataQualityL2Academy_Day2Exercises.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DataQualityL2Academy_Day2Exercises.docx", 
+        "import_path": "DataQualityL2Academy_Day2Exercises.docx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "DataQuality_Icon_V2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "DataQuality_Icon_V2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "DataQuality_Icon_V2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@DataQuality_Icon_V2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "DataQuality_Icon_V2-png.jpg", 
+            null
+        ]
+    }, 
+    "Data_Qaulity_in_Tracker_Programs_Day_6_Session_1.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_Qaulity_in_Tracker_Programs_Day_6_Session_1.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data Qaulity in Tracker Programs_Day 6 Session 1.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_Qaulity_in_Tracker_Programs_Day_6_Session_1.pdf", 
+        "import_path": "Data Qaulity in Tracker Programs_Day 6 Session 1.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Data_Qaulity_in_Tracker_Programs_Day_6_Session_1.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_Qaulity_in_Tracker_Programs_Day_6_Session_1.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data Qaulity in Tracker Programs_Day 6 Session 1.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_Qaulity_in_Tracker_Programs_Day_6_Session_1.pptx", 
+        "import_path": "Data Qaulity in Tracker Programs_Day 6 Session 1.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Data_Quality_App_-_Data_Review.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_Quality_App_-_Data_Review.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data Quality App - Data Review.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_Quality_App_-_Data_Review.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Data_Quality_Fundamentals_DQ_Academy_2020.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_Quality_Fundamentals_DQ_Academy_2020.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data_Quality_Fundamentals_DQ_Academy_2020.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_Quality_Fundamentals_DQ_Academy_2020.pdf", 
+        "import_path": "Data_Quality_Fundamentals_DQ_Academy_2020.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Data_Quality_Fundamentals_DQ_Academy_2020.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_Quality_Fundamentals_DQ_Academy_2020.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data Quality Fundamentals_DQ Academy 2020.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_Quality_Fundamentals_DQ_Academy_2020.pptx", 
+        "import_path": "Data Quality Fundamentals_DQ Academy 2020.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Data_Quality_V2.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_Quality_V2.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data_Quality_V2.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_Quality_V2.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "Data_Quality_V2-png.jpg", 
+            null
+        ]
+    }, 
+    "Data_Quality_in_Tracker_Programs.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_Quality_in_Tracker_Programs.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data Quality in Tracker Programs.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_Quality_in_Tracker_Programs.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Data_approval__1_.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_approval__1_.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data_approval (1).png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_approval__1_.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "Data_approval__1_-png.jpg", 
+            null
+        ]
+    }, 
+    "Data_quality.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Data_quality.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Data_quality.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Data_quality.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "Data_quality-png.jpg", 
+            null
+        ]
+    }, 
+    "Day3_Exercises_DataQualityApp.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Day3_Exercises_DataQualityApp.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Day3_Exercises_DataQualityApp.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Day3_Exercises_DataQualityApp.docx", 
+        "import_path": "Day3_Exercises_DataQualityApp.docx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Exercise_4_-_Consistency-Time.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Exercise_4_-_Consistency-Time.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Exercise 4 - Consistency-Time.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Exercise_4_-_Consistency-Time.docx", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Final_DHIS2_Data_Quality.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Final_DHIS2_Data_Quality.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Final_DHIS2 Data Quality.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Final_DHIS2_Data_Quality.pdf", 
+        "import_path": "Final_DHIS2 Data Quality.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "HISP_SA_DQ_academy_presentation.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "HISP_SA_DQ_academy_presentation.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "HISP SA DQ academy presentation.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@HISP_SA_DQ_academy_presentation.pdf", 
+        "import_path": "HISP SA DQ academy presentation.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "HISP_SA_DQ_academy_presentation.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "HISP_SA_DQ_academy_presentation.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "HISP SA DQ academy presentation.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@HISP_SA_DQ_academy_presentation.pptx", 
+        "import_path": "HISP SA DQ academy presentation.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "How_to_use_Predictor_rules_to_visualize_outliers_-Oct_2020.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "How_to_use_Predictor_rules_to_visualize_outliers_-Oct_2020.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "How to use Predictor rules to visualize outliers -Oct 2020.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@How_to_use_Predictor_rules_to_visualize_outliers_-Oct_2020.docx", 
+        "import_path": "How to use Predictor rules to visualize outliers -Oct 2020.docx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "How_to_use_Predictor_rules_to_visualize_outliers_July_2021.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "How_to_use_Predictor_rules_to_visualize_outliers_July_2021.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "How_to_use_Predictor_rules_to_visualize_outliers_July 2021.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@How_to_use_Predictor_rules_to_visualize_outliers_July_2021.docx", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "M6.2_Example1_v1.0.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "M6.2_Example1_v1.0.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "M6.2_Example1_v1.0.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@M6.2_Example1_v1.0.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "M6.2_Example1_v1.0-png.jpg", 
+            null
+        ]
+    }, 
+    "M6.2_Example2_v1.0.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "M6.2_Example2_v1.0.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "M6.2_Example2_v1.0.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@M6.2_Example2_v1.0.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "M6.2_Example2_v1.0-png.jpg", 
+            null
+        ]
+    }, 
+    "M6.2_Table_2_V1.1.JPG": {
+        "contentType": "image/jpeg", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "M6.2_Table_2_V1.1.JPG", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "M6.2_Table_2_V1.1.JPG", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@M6.2_Table_2_V1.1.JPG", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "M6.2_Table_2_V1.1-JPG.jpg", 
+            null
+        ]
+    }, 
+    "M6.2_Table_V1.1.JPG": {
+        "contentType": "image/jpeg", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "M6.2_Table_V1.1.JPG", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "M6.2_Table_V1.1.JPG", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@M6.2_Table_V1.1.JPG", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "M6.2_Table_V1.1-JPG.jpg", 
+            null
+        ]
+    }, 
+    "NavigatingTheDHIS2OnlineAcademy_DataQualityAcademy.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "NavigatingTheDHIS2OnlineAcademy_DataQualityAcademy.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "NavigatingTheDHIS2OnlineAcademy_DataQualityAcademy.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@NavigatingTheDHIS2OnlineAcademy_DataQualityAcademy.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "New_Metadata_SOP_Data_Elements__Category_Options_Category_CoCs_Extended.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "New_Metadata_SOP_Data_Elements__Category_Options_Category_CoCs_Extended.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "New Metadata SOP_Data Elements _Category Options_Category_CoCs_Extended.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@New_Metadata_SOP_Data_Elements__Category_Options_Category_CoCs_Extended.docx", 
+        "import_path": "New Metadata SOP_Data Elements _Category Options_Category_CoCs_Extended.docx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "NorahStoops.jpg": {
+        "contentType": "image/jpeg", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "NorahStoops.jpg", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "NorahStoops.jpg", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@NorahStoops.jpg", 
+        "import_path": "NorahStoops.jpg", 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "NorahStoops.jpg", 
+            null
+        ]
+    }, 
+    "Outlier_Predictors_DQ_Academy_Day_4_Session_2.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Outlier_Predictors_DQ_Academy_Day_4_Session_2.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Outlier Predictors_DQ Academy Day 4 Session 2.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Outlier_Predictors_DQ_Academy_Day_4_Session_2.pdf", 
+        "import_path": "Outlier Predictors_DQ Academy Day 4 Session 2.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Outlier_Predictors_DQ_Academy_Day_4_Session_2.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Outlier_Predictors_DQ_Academy_Day_4_Session_2.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Outlier Predictors_DQ Academy Day 4 Session 2.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Outlier_Predictors_DQ_Academy_Day_4_Session_2.pptx", 
+        "import_path": "Outlier Predictors_DQ Academy Day 4 Session 2.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pptx", 
+        "import_path": "Outlier_Predictors_DQ_Academy_Day_4_Session_2_NJS.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Outlier_Validation_Rule_Alert_Notification_Exercise.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Outlier_Validation_Rule_Alert_Notification_Exercise.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Outlier_Validation_Rule_Alert_Notification_Exercise.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Outlier_Validation_Rule_Alert_Notification_Exercise.docx", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "ScottRusspatrick.jpg": {
+        "contentType": "image/jpeg", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "ScottRusspatrick.jpg", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "ScottRusspatrick.jpg", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@ScottRusspatrick.jpg", 
+        "import_path": "ScottRusspatrick.jpg", 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "ScottRusspatrick.jpg", 
+            null
+        ]
+    }, 
+    "Shurajit.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Shurajit.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Shurajit.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Shurajit.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "Shurajit-png.jpg", 
+            null
+        ]
+    }, 
+    "Sri_Lanka_DQ3.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Sri_Lanka_DQ3.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Sri Lanka DQ3.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Sri_Lanka_DQ3.pptx", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "The_Data_Quality_App_-_A_Hidden_Gem.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "The_Data_Quality_App_-_A_Hidden_Gem.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "The Data Quality App - A Hidden Gem.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@The_Data_Quality_App_-_A_Hidden_Gem.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "The_Data_Quality_App_-_MinMax_Values.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "The_Data_Quality_App_-_MinMax_Values.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "The Data Quality App - MinMax Values.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@The_Data_Quality_App_-_MinMax_Values.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Tracker_to_Aggregate.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Tracker_to_Aggregate.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Tracker to Aggregate.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Tracker_to_Aggregate.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Tracker_to_aggregate_data_-_DHIS2.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Tracker_to_aggregate_data_-_DHIS2.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Tracker to aggregate data - DHIS2.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Tracker_to_aggregate_data_-_DHIS2.pdf", 
+        "import_path": "Tracker to aggregate data - DHIS2.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Tracker_to_aggregate_data_-_DHIS2.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Tracker_to_aggregate_data_-_DHIS2.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Tracker to aggregate data - DHIS2.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Tracker_to_aggregate_data_-_DHIS2.pptx", 
+        "import_path": "Tracker to aggregate data - DHIS2.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Users_SOP_Extended.docx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Users_SOP_Extended.docx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Users SOP_Extended.docx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Users_SOP_Extended.docx", 
+        "import_path": "Users SOP_Extended.docx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Validation_rules_and_notfications_DQ_Day_4_Session_1.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Validation_rules_and_notfications_DQ_Day_4_Session_1.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Validation rules and notfications_DQ Day 4 Session 1.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Validation_rules_and_notfications_DQ_Day_4_Session_1.pdf", 
+        "import_path": "Validation rules and notfications_DQ Day 4 Session 1.pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Validation_rules_and_notfications_DQ_Day_4_Session_1.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Validation_rules_and_notfications_DQ_Day_4_Session_1.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Validation rules and notfications_DQ Day 4 Session 1.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Validation_rules_and_notfications_DQ_Day_4_Session_1.pptx", 
+        "import_path": "Validation rules and notfications_DQ Day 4 Session 1.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Validation rules and notfications_DQ Day 4 Session 1 (1).pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Validation_rules_and_notfications_DQ_Day_4_Session_1__1_.pptx", 
+        "import_path": "Validation rules and notfications_DQ Day 4 Session 1 (1).pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pdf", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pptx": {
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pptx", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pptx", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pptx", 
+        "import_path": "Validation_rules_and_notfications_DQ_Day_4_Session_1__1_NJS.pptx", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "Yury.jpg": {
+        "contentType": "image/jpeg", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Yury.jpg", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Yury.jpg", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Yury.jpg", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "Yury.jpg", 
+            null
+        ]
+    }, 
+    "Zoom_Key_Tools_and_Tips_to_participate_in_an_Academy_1_.pdf": {
+        "contentType": "application/pdf", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "Zoom_Key_Tools_and_Tips_to_participate_in_an_Academy_1_.pdf", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "Zoom Key Tools and Tips to participate in an Academy(1).pdf", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@Zoom_Key_Tools_and_Tips_to_participate_in_an_Academy_1_.pdf", 
+        "import_path": "Zoom Key Tools and Tips to participate in an Academy(1).pdf", 
+        "locked": false, 
+        "thumbnail_location": null
+    }, 
+    "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Duplicates_within_program.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Duplicates_within_program.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "asset-v1_HISP+D2DQ300+2020_Q2+type@asset+block@Duplicates_within_program.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Duplicates_within_program.png", 
+        "import_path": "asset-v1_HISP+D2DQ300+2020_Q2+type@asset+block@Duplicates_within_program.png", 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Duplicates_within_program-png.jpg", 
+            null
+        ]
+    }, 
+    "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Incorrect_Disagg.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Incorrect_Disagg.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "asset-v1_HISP+D2DQ300+2020_Q2+type@asset+block@Incorrect_Disagg.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Incorrect_Disagg.png", 
+        "import_path": "asset-v1_HISP+D2DQ300+2020_Q2+type@asset+block@Incorrect_Disagg.png", 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Incorrect_Disagg-png.jpg", 
+            null
+        ]
+    }, 
+    "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Poor_Source_Design.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Poor_Source_Design.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "asset-v1_HISP+D2DQ300+2020_Q2+type@asset+block@Poor_Source_Design.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Poor_Source_Design.png", 
+        "import_path": "asset-v1_HISP+D2DQ300+2020_Q2+type@asset+block@Poor_Source_Design.png", 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "asset-v1_HISP_D2DQ300_2020_Q2_type_asset_block_Poor_Source_Design-png.jpg", 
+            null
+        ]
+    }, 
+    "asset-v1_HSISP_D2Fundamentals100EN_2020_Q3_type_asset_block_DHIS2_Fundamentals_Grading_Policy.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "asset-v1_HSISP_D2Fundamentals100EN_2020_Q3_type_asset_block_DHIS2_Fundamentals_Grading_Policy.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "asset-v1 HSISP+D2Fundamentals100EN+2020_Q3+type@asset+block@DHIS2_Fundamentals_Grading_Policy.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@asset-v1_HSISP_D2Fundamentals100EN_2020_Q3_type_asset_block_DHIS2_Fundamentals_Grading_Policy.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "asset-v1_HSISP_D2Fundamentals100EN_2020_Q3_type_asset_block_DHIS2_Fundamentals_Grading_Policy-png.jpg", 
+            null
+        ]
+    }, 
+    "cert-signature-kristin-braa.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "cert-signature-kristin-braa.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "cert-signature-kristin-braa.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@cert-signature-kristin-braa.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "cert-signature-kristin-braa-png.jpg", 
+            null
+        ]
+    }, 
+    "dhis2-icon-rgb-positive.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "dhis2-icon-rgb-positive.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "dhis2-icon-rgb-positive.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@dhis2-icon-rgb-positive.png", 
+        "import_path": "dhis2-icon-rgb-positive.png", 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "dhis2-icon-rgb-positive-png.jpg", 
+            null
+        ]
+    }, 
+    "navigation.png": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "navigation.png", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "navigation.png", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@navigation.png", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "navigation-png.jpg", 
+            null
+        ]
+    }, 
+    "table_6.2.PNG": {
+        "contentType": "image/png", 
+        "content_son": {
+            "category": "asset", 
+            "course": "DHIS2_DQL2O", 
+            "name": "table_6.2.PNG", 
+            "org": "DHIS2", 
+            "revision": null, 
+            "run": "2021_Q1-4", 
+            "tag": "c4x"
+        }, 
+        "displayname": "table 6.2.PNG", 
+        "filename": "asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@table_6.2.PNG", 
+        "import_path": null, 
+        "locked": false, 
+        "thumbnail_location": [
+            "c4x", 
+            "DHIS2", 
+            "DHIS2_DQL2O", 
+            "thumbnail", 
+            "table_6.2-PNG.jpg", 
+            null
+        ]
+    }
+}

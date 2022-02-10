@@ -1,0 +1,19 @@
+<problem display_name="Graded question- Data Set Design - Question 1" markdown="null" max_attempts="2">
+<multiplechoiceresponse>
+  <label>What is one method we can use to control which data elements can have data entered in them that is not available on a paper/source form? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Validation Rules</choice>
+    <choice correct="false">B. Section Form</choice>
+    <choice correct="true">C. Grey Cells</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p> </p>
+  <p><b>Grey cells can be used to easily block data elements or disaggregations from being entered</b>. Validation rules can be used to check data, but can not be used to block a single data element from being entered. Section forms are a type of form we can make, they do not control what can be entered</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

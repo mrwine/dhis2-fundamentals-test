@@ -1,0 +1,10 @@
+<video youtube="1.00:yRLKui4-8s8" url_name="4f753e1378b74af6a36756600602e8ee" sub="" transcripts="{&quot;en&quot;: &quot;50b79881-cc65-4f4d-82dc-c6b6b2b0ee93-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Summary " download_track="true" download_video="true" edx_video_id="50b79881-cc65-4f4d-82dc-c6b6b2b0ee93" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.5.1_Summary.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.5.1+-+Summary.mp4&quot;]" show_captions="false" youtube_id_1_0="yRLKui4-8s8">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.5.1+-+Summary.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.5.1_Summary.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="50b79881-cc65-4f4d-82dc-c6b6b2b0ee93-en.srt"/>
+</video>

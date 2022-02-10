@@ -1,0 +1,13 @@
+<course license="creative-commons: ver=4.0 BY NC SA" advanced_modules="[&quot;lti_consumer&quot;, &quot;survey&quot;, &quot;poll&quot;, &quot;word_cloud&quot;, &quot;xblock-multimedia-carousel&quot;]" catalog_visibility="both" cert_html_view_enabled="true" cert_html_view_overrides="{&quot;successfully_completed_text&quot;: &quot;Has successfully completed&quot;, &quot;optional_cert_text&quot;: &quot;&lt;br/&gt;A self-paced DHIS2 Academy hosted by HISP-UiO &quot;}" certificates="{&quot;certificates&quot;: [{&quot;course_title&quot;: &quot;Data Quality Level 2&quot;, &quot;description&quot;: &quot;Description of the certificate&quot;, &quot;is_active&quot;: true, &quot;signatories&quot;: [{&quot;name&quot;: &quot;Kristin Braa&quot;, &quot;certificate&quot;: 1048550871, &quot;title&quot;: &quot;Professor&quot;, &quot;organization&quot;: &quot;University of Oslo&quot;, &quot;signature_image_path&quot;: &quot;/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@cert-signature-kristin-braa.png&quot;, &quot;id&quot;: 124106808}], &quot;version&quot;: 1, &quot;id&quot;: 1048550871, &quot;name&quot;: &quot;Name of the certificate&quot;}]}" certificates_display_behavior="early_with_info" certificates_show_before_end="true" course_image="DataQuality_Icon_V2.png" days_early_for_beta="100.0" display_name="Data Quality Level 2 Academy" end="null" enrollment_end="null" enrollment_start="&quot;2021-09-30T12:30:00+00:00&quot;" entrance_exam_enabled="true" entrance_exam_id="block-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@chapter+block@e625ac21704b47159c7c26dc8ff39fd1" entrance_exam_minimum_score_pct="1.0" graceperiod="" instructor_info="{&quot;instructors&quot;: []}" invitation_only="false" is_new="true" language="en" learning_info="[]" lti_passports="[&quot;zoom:xJcHGRAfQOyKEo5VvjFoFQ:YxQigXo6OdHvBfDkJ1Cd12XFrEbx6zy80GMi&quot;]" minimum_grade_credit="0.8" self_paced="true" start="&quot;2021-09-30T12:30:00+00:00&quot;">
+  <chapter url_name="e625ac21704b47159c7c26dc8ff39fd1"/>
+  <chapter url_name="7ecd29cb281b47faab4a1a191da09a8d"/>
+  <chapter url_name="d1d3edfcb9304f0ab06768e6480405cb"/>
+  <chapter url_name="70e3a1755c004093ad59b02d5b271d51"/>
+  <chapter url_name="551313a33a2c40e5905fac1355a4347e"/>
+  <chapter url_name="c103ba755a5b49738142faa659027f32"/>
+  <chapter url_name="095b6fc287674b78be73407bccf0b4f4"/>
+  <chapter url_name="dc974f927c304c7094f540ca5f045fce"/>
+  <chapter url_name="181641989f0d4323b474276650812df0"/>
+  <chapter url_name="2aeff9a363204b01b5c3a434201d0c44"/>
+  <wiki slug="DHIS2.DHIS2_DQL2.10_2020"/>
+</course>

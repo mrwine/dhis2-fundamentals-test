@@ -1,0 +1,20 @@
+<problem display_name="Knowledge Checks: Question 3 " markdown="Which of the following is not an example of a bad data quality? &#10;&#10;&gt;&gt;Select the one correct answer&lt;&lt;&#10;&#10;( ) A. Making up data&#10;( ) B. Inputting the wrong data &#10;( ) C. Not addressing data quality issues&#10;(X) D. Data entered on location &#10;&#10;[explanation]&#10;Data entered on location isn’t in and of itself indicative of bad data quality. However, the data should be checked to ensure that it complies with the 4 dimensions of data quality. &#10;[explanation]">
+<multiplechoiceresponse>
+  <p>Which of the following is not an example of a bad data quality? </p>
+<label>Select the one correct answer</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Making up data</choice>
+    <choice correct="false">B. Inputting the wrong data</choice>
+    <choice correct="false">C. Not addressing data quality issues</choice>
+    <choice correct="true">D. Data entered on location</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Data entered on location isn’t in and of itself indicative of bad data quality. However, the data should be checked to ensure that it complies with the 4 dimensions of data quality. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,20 @@
+<problem display_name="Graded question - General Challenges &amp; Organisation Unit Management - Question 1" markdown="What are some general maintenance challenges that are limitations within DHIS2? (2 attempts)&#10;&#10;&gt;&gt;Select all that apply&lt;&lt;&#10;&#10;[ ] A. Hiding duplicate category options  &#10;[x] B. Deleting metadata due to dependencies &#10;[x] C. Making batch changes  &#10;[x] D. Nested searches for specific items&#10;&#10;[explanation]&#10;Correct options are B, C, and D. Deleting metadata is difficult and there is often little feedback on what is happening. The maintenance app is currently not well suited to make large batch changes. Nested searches for specific items is correct because  we can not find all data elements within a tracker program easily for example. Option A is incorrect because we can use category option groups and group sets to hide this, even if we can't solve the underlying problem immediately.&#10;[explanation]&#10;" max_attempts="2">
+<choiceresponse>
+  <p>What are some general maintenance challenges that are limitations within DHIS2? (2 attempts)</p>
+<label>Select all that apply</label>
+<checkboxgroup>
+    <choice correct="false">A. Hiding duplicate category options  </choice>
+    <choice correct="true">B. Deleting metadata due to dependencies </choice>
+    <choice correct="true">C. Making batch changes  </choice>
+    <choice correct="true">D. Nested searches for specific items</choice>
+  </checkboxgroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Correct options are B, C, and D. Deleting metadata is difficult and there is often little feedback on what is happening. The maintenance app is currently not well suited to make large batch changes. Nested searches for specific items is correct because  we can not find all data elements within a tracker program easily for example. Option A is incorrect because we can use category option groups and group sets to hide this, even if we can't solve the underlying problem immediately.</p>
+
+</div>
+</solution>
+</choiceresponse>
+</problem>

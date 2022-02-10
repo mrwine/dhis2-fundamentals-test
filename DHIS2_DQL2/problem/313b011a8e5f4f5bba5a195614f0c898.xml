@@ -1,0 +1,21 @@
+<problem display_name="Question 7" markdown="From the previous question, drill down into the district with the highest deviation from the non-supicious values for BCG given less then 1.&#10;&#10;Which health facility reported the most extreme outlier for BCG given less then 1?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts)&lt;&lt;&#10;&#10;(x) A. Facility 579&#10;( ) B. Facility 12&#10;( ) C. Facility 608&#10;( ) D. Facility 14               &#10;&#10;[explanation]&#10;The correct answer is Facility 579. &#10;[explanation]&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>From the previous question, drill down into the district with the highest deviation from the non-supicious values for BCG given less then 1.</p>
+<p>Which health facility reported the most extreme outlier for BCG given less then 1?</p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. Facility 579</choice>
+    <choice correct="false">B. Facility 12</choice>
+    <choice correct="false">C. Facility 608</choice>
+    <choice correct="false">D. Facility 14</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is Facility 579. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

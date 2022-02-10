@@ -1,0 +1,55 @@
+<script>// <![CDATA[
+    function requestAccount() {
+	document.getElementById("requestButton").disabled = true;
+        var baseUrl = window.location.href.split("/", 3).join("/");
+        $.ajax({
+            url: baseUrl + "/api/user/v1/accounts",
+            dataType: "json",
+            success: function(data) {
+                var email = data[0].email;
+                var obj = {"email": email, "url": "https://academy.dq.dhis2.org/dq-config"};
+                console.log(obj)
+                $.ajax({
+                    url         : "https://academy.dq.dhis2.org/signup/signup",
+                    type        : "POST",
+                    data        : JSON.stringify(obj),
+                    contentType    : "application/json; charset=utf-8",
+                    dataType    : "json",
+			success: function (result, status, xhr) {
+				alert(xhr.responseText);
+			},
+			error: function (xhr,status,error) {
+				alert(xhr.responseText);
+			}
+                });
+            }
+        });
+
+    }
+
+// ]]></script>
+<style> 
+  .text {
+    font-size: 16px !important;
+  }
+  .line {
+    width: 33%;
+		margin-left: auto;
+		margin-right: auto;
+  }
+</style>
+<p class= "text">
+  <h3>Account Creation Walkthrough</h3>
+<p><i>Please follow the instructions below to create your account for the <b>Data Quality Config</b> training instance.</i></p>
+
+<p>In order to create your account on the Data Quality Config instance, start the process by clicking on the “Request account” button in the Account Creation section below. <b>You only need to click the button once</b>, otherwise you will recieve multiple emails account request emails.</p>
+<p>Click the "Request account" button below to request an account on the <b>DHIS2 Data Quality Config</b> training instance.</p>
+<div>
+<p>You will receive an invitation by email with instructions on how to complete the registration in DHIS2.</p>
+</div>
+<div>
+<p><input id="requestButton" type="button" onclick="requestAccount();" value="Request account" /></p>
+</div>
+<div>
+<p><i>Note: the email address you use with the DHIS2 Online Academy will be sent to the DHIS2 database to create an account.</i></p>
+</div>

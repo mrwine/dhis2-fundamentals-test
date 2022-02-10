@@ -1,0 +1,10 @@
+<video youtube="1.00:pZiUc4Ivm90" url_name="0f40266063984adc815f63c25a8d7d05" sub="" transcripts="{&quot;en&quot;: &quot;15fd72bd-3b7e-4e1f-8087-77b7d37b81ba-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Considerations when Configuring the WHO DQ Tool" download_track="true" download_video="true" edx_video_id="15fd72bd-3b7e-4e1f-8087-77b7d37b81ba" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.4_Considerations_when_Configuring_the_WHO_DQ_Tool.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/6.1.4+-+Demo+-+Considerations+when+Configuring+the+WHO+DQ+Tool+.mp4&quot;]" show_captions="false" youtube_id_1_0="pZiUc4Ivm90">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/6.1.4+-+Demo+-+Considerations+when+Configuring+the+WHO+DQ+Tool+.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@6.1.4_Considerations_when_Configuring_the_WHO_DQ_Tool.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="15fd72bd-3b7e-4e1f-8087-77b7d37b81ba-en.srt"/>
+</video>

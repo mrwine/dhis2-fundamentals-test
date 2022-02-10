@@ -1,0 +1,536 @@
+0
+00:00:00,917 --> 00:00:03,500
+(gentle music)
+
+1
+00:00:08,917 --> 00:00:10,477
+- Min/max values,
+
+2
+00:00:10,477 --> 00:00:13,693
+the lost secret to data quality success
+
+3
+00:00:13,693 --> 00:00:18,693
+and part of the series on the data quality online academy.
+
+4
+00:00:19,130 --> 00:00:23,200
+So some discussion about min/max ranges.
+
+5
+00:00:23,200 --> 00:00:26,730
+What we know is that good quality routine health data
+
+6
+00:00:26,730 --> 00:00:29,015
+is stable and consistent
+
+7
+00:00:29,015 --> 00:00:34,015
+and does not yo-yo doesn&#39;t go large variations up or down.
+
+8
+00:00:35,520 --> 00:00:40,054
+And any variations can and should be explained.
+
+9
+00:00:40,054 --> 00:00:44,940
+Your number of first anti-natal visits should be constant
+
+10
+00:00:44,940 --> 00:00:49,940
+month in, month out with maybe some seasonal variation.
+
+11
+00:00:51,671 --> 00:00:55,083
+Head count should be consistent.
+
+12
+00:00:56,730 --> 00:01:01,093
+The setting of minimum and maximum ranges provides a guide
+
+13
+00:01:01,093 --> 00:01:04,030
+as to what the data should not exceed
+
+14
+00:01:04,030 --> 00:01:06,900
+and if used correctly assists in preventing
+
+15
+00:01:06,900 --> 00:01:09,010
+or limiting extreme outliers.
+
+16
+00:01:09,010 --> 00:01:12,330
+So the idea is that the min/max ranges gives you
+
+17
+00:01:12,330 --> 00:01:16,370
+a safety cushion within the data that can work,
+
+18
+00:01:16,370 --> 00:01:19,252
+that would be expected, would be usable
+
+19
+00:01:19,252 --> 00:01:23,810
+and outside that you have to start and think and see
+
+20
+00:01:23,810 --> 00:01:24,853
+what&#39;s going on.
+
+21
+00:01:25,830 --> 00:01:29,440
+This means that ranges should be wide enough to accept
+
+22
+00:01:29,440 --> 00:01:33,320
+most values and narrow enough to trap values that
+
+23
+00:01:33,320 --> 00:01:35,000
+are not lucky.
+
+24
+00:01:35,000 --> 00:01:40,000
+A range of one to 1000 is not a min/max range.
+
+25
+00:01:43,390 --> 00:01:47,763
+A range from 10 to 12 is not a min/max range.
+
+26
+00:01:48,720 --> 00:01:52,020
+Min/Max ranges are not punishment.
+
+27
+00:01:52,020 --> 00:01:54,430
+In other words, people shouldn&#39;t-
+
+28
+00:01:54,430 --> 00:01:55,670
+when they&#39;re entering the data,
+
+29
+00:01:55,670 --> 00:01:58,790
+keep on tripping over the messages
+
+30
+00:01:58,790 --> 00:02:00,463
+that this is out of range.
+
+31
+00:02:01,400 --> 00:02:04,150
+In most cases with extreme outliers,
+
+32
+00:02:04,150 --> 00:02:07,670
+we notice that they are either no min/max values preset
+
+33
+00:02:09,020 --> 00:02:11,960
+or if they are set, they are just ignored.
+
+34
+00:02:11,960 --> 00:02:14,263
+Press enter, enter and continue.
+
+35
+00:02:15,651 --> 00:02:18,530
+So some considerations about min/max ranges,
+
+36
+00:02:18,530 --> 00:02:20,653
+they&#39;re used during data entry.
+
+37
+00:02:21,490 --> 00:02:24,860
+We also know that there are quite a few data elements
+
+38
+00:02:24,860 --> 00:02:28,280
+which can show a fair degree of fluctuation
+
+39
+00:02:28,280 --> 00:02:30,720
+that we would consider normal;
+
+40
+00:02:30,720 --> 00:02:33,580
+family planning supplies are a good example
+
+41
+00:02:33,580 --> 00:02:36,420
+Vaccine supplies, drug supplies,
+
+42
+00:02:36,420 --> 00:02:40,970
+this month, you got nothing, next month, you get 2000,
+
+43
+00:02:40,970 --> 00:02:43,560
+but it can be considered normal
+
+44
+00:02:44,630 --> 00:02:47,253
+and they are not problematic.
+
+45
+00:02:48,100 --> 00:02:51,970
+Where you&#39;ve got a disease or medical condition that
+
+46
+00:02:51,970 --> 00:02:55,650
+runs at very low numbers and slowly there is an uptake,
+
+47
+00:02:55,650 --> 00:02:59,340
+min/max ranges might help pick that one up.
+
+48
+00:02:59,340 --> 00:03:03,760
+However, where you have expected seasonal increases,
+
+49
+00:03:03,760 --> 00:03:06,430
+be careful when using min/max.
+
+50
+00:03:06,430 --> 00:03:10,330
+An example is malaria or diarrhea in children
+
+51
+00:03:10,330 --> 00:03:12,200
+in the rainy season.
+
+52
+00:03:12,200 --> 00:03:15,300
+So there are times when you have an expected
+
+53
+00:03:15,300 --> 00:03:17,093
+seasonal increase.
+
+54
+00:03:18,370 --> 00:03:22,180
+And in order to access mim/max ranges,
+
+55
+00:03:22,180 --> 00:03:25,302
+you need access or rights to the data entry screen.
+
+56
+00:03:25,302 --> 00:03:29,940
+And according to the user role policy in most countries,
+
+57
+00:03:29,940 --> 00:03:33,250
+that&#39;s only granted to the people who enter data,
+
+58
+00:03:33,250 --> 00:03:34,500
+the data capturing stuff.
+
+59
+00:03:37,000 --> 00:03:40,440
+So if you double-click on any value,
+
+60
+00:03:40,440 --> 00:03:43,993
+you will see the last 12 months of data.
+
+61
+00:03:44,900 --> 00:03:48,980
+And so the ranges promotes good data quality and alerts
+
+62
+00:03:48,980 --> 00:03:51,740
+to data that does not fit the norm,
+
+63
+00:03:51,740 --> 00:03:53,463
+doesn&#39;t fit the normal pattern.
+
+64
+00:03:54,530 --> 00:03:56,653
+And 12 months.
+
+65
+00:03:58,270 --> 00:04:00,920
+If you double-click on a value,
+
+66
+00:04:00,920 --> 00:04:04,203
+you get what is called the data information window.
+
+67
+00:04:05,330 --> 00:04:08,950
+Top left-hand corner is the comment.
+
+68
+00:04:08,950 --> 00:04:12,133
+And we see that this comment field is almost never used,
+
+69
+00:04:13,740 --> 00:04:17,260
+perhaps mainly because it&#39;s not seen.
+
+70
+00:04:17,260 --> 00:04:20,820
+And above the comment is a star, which if you click on it
+
+71
+00:04:20,820 --> 00:04:25,233
+will save it and allow you to run a follow-up analysis.
+
+72
+00:04:26,130 --> 00:04:30,310
+On the right, we see where you can set the min/max ranges,
+
+73
+00:04:30,310 --> 00:04:33,233
+you can manually set them and save it.
+
+74
+00:04:34,250 --> 00:04:35,403
+And we see here,
+
+75
+00:04:38,080 --> 00:04:39,810
+data in graph format for the last
+
+76
+00:04:39,810 --> 00:04:40,883
+12 months.
+
+77
+00:04:42,253 --> 00:04:47,253
+If we look at this data information window,
+
+78
+00:04:48,210 --> 00:04:51,960
+no ranges have have been set and there&#39;s a substantial
+
+79
+00:04:51,960 --> 00:04:53,623
+amount of variation.
+
+80
+00:04:55,450 --> 00:04:57,758
+And if you eyeball the values,
+
+81
+00:04:57,758 --> 00:05:02,758
+do you think that we could manually think about ranges
+
+82
+00:05:04,330 --> 00:05:07,963
+for this specific data element for this specific facility.
+
+83
+00:05:11,885 --> 00:05:15,750
+And possibly, open to debate, our minimum could be four,
+
+84
+00:05:15,750 --> 00:05:19,380
+because that would track everything except the zero
+
+85
+00:05:19,380 --> 00:05:22,070
+and the maximum would be 18,
+
+86
+00:05:22,070 --> 00:05:25,503
+which would trap everything above the 20 line.
+
+87
+00:05:26,700 --> 00:05:30,240
+Just remember that this range here is only for
+
+88
+00:05:30,240 --> 00:05:33,430
+this data element for this facility.
+
+89
+00:05:33,430 --> 00:05:35,723
+It&#39;s not carried over anywhere else.
+
+90
+00:05:37,400 --> 00:05:41,510
+The other thing that we find on the data information window
+
+91
+00:05:41,510 --> 00:05:42,643
+is an audit trail.
+
+92
+00:05:44,230 --> 00:05:48,196
+And every time somebody changes the value,
+
+93
+00:05:48,196 --> 00:05:50,310
+it keeps track of it.
+
+94
+00:05:50,310 --> 00:05:54,330
+So you can see when values were changed and updated
+
+95
+00:05:54,330 --> 00:05:55,753
+and who did that.
+
+96
+00:05:58,170 --> 00:06:03,170
+This is how you set about making min/max ranges in bulk
+
+97
+00:06:05,060 --> 00:06:08,786
+and you find this under data administration,
+
+98
+00:06:08,786 --> 00:06:12,783
+min/max generation, you select a dataset,
+
+99
+00:06:14,470 --> 00:06:18,270
+select an OU level, restrict your selection,
+
+100
+00:06:18,270 --> 00:06:22,010
+do not try and run it for the whole country at once.
+
+101
+00:06:22,010 --> 00:06:26,710
+Run it for one small area.
+
+102
+00:06:26,710 --> 00:06:29,350
+You run it for more than that, it will crash because
+
+103
+00:06:29,350 --> 00:06:32,010
+remember it has to go through every facility
+
+104
+00:06:32,010 --> 00:06:34,320
+and every data element.
+
+105
+00:06:34,320 --> 00:06:37,460
+And you click generate and that will automatically
+
+106
+00:06:37,460 --> 00:06:38,683
+make it calculate.
+
+107
+00:06:39,810 --> 00:06:43,700
+So the exercise for this session is either access
+
+108
+00:06:43,700 --> 00:06:47,670
+to your own country DHIS2 or the demo database.
+
+109
+00:06:48,776 --> 00:06:51,087
+If you&#39;re looking for your own country,
+
+110
+00:06:51,087 --> 00:06:55,120
+DHIS2 instance, confirm if min/max rangers have been set
+
+111
+00:06:55,120 --> 00:06:56,163
+for your country.
+
+112
+00:06:57,000 --> 00:07:01,623
+And then if you have a staging or testing instance,
+
+113
+00:07:03,010 --> 00:07:07,600
+have a look at it, generate min/max values for one dataset
+
+114
+00:07:07,600 --> 00:07:10,630
+and a limited OU level.
+
+115
+00:07:10,630 --> 00:07:15,050
+If possible, open the data entry screen and view
+
+116
+00:07:15,050 --> 00:07:17,420
+the data information window.
+
+117
+00:07:17,420 --> 00:07:19,273
+We saw that picture earlier on.
+
+118
+00:07:20,800 --> 00:07:25,800
+Run min/max violations for selected dataset and OU level,
+
+119
+00:07:26,140 --> 00:07:29,943
+remember the min/max violations is in the data quality app.
+
+120
+00:07:31,300 --> 00:07:33,620
+Write a short report of the violations,
+
+121
+00:07:33,620 --> 00:07:35,970
+in other words, where they have been triggered.
+
+122
+00:07:36,830 --> 00:07:39,390
+What is the action plan,
+
+123
+00:07:39,390 --> 00:07:41,740
+now that you&#39;ve got these violations?
+
+124
+00:07:41,740 --> 00:07:43,270
+What are you going to do about it?
+
+125
+00:07:43,270 --> 00:07:45,570
+Are we just going to ignore it,
+
+126
+00:07:45,570 --> 00:07:48,020
+or do you think that is something that you could do?
+
+127
+00:07:48,020 --> 00:07:50,830
+Maybe manually change some of the values,
+
+128
+00:07:50,830 --> 00:07:54,830
+discuss with the facility stop, what is the action plan?
+
+129
+00:07:54,830 --> 00:07:58,522
+And if you&#39;re using the demo database, follow the
+
+130
+00:07:58,522 --> 00:08:02,300
+same instructions, except for you it&#39;s not a staging
+
+131
+00:08:02,300 --> 00:08:04,456
+or testing instance.
+
+132
+00:08:04,456 --> 00:08:05,593
+Thank you very much.
+
+133
+00:08:06,933 --> 00:08:09,516
+(gentle music)
+

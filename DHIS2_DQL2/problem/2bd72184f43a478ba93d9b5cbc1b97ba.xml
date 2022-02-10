@@ -1,0 +1,18 @@
+<problem display_name="Question 1" markdown="&gt;&gt;What does the z-score help us to identify? (1 attempts)&lt;&lt;&#10;&#10;( ) A. The z-score is a measure that shows us the middle data point of our combined data&#10;(X) B. The z-score is a measure that supports us to identify suspicious values in our data&#10;( ) C. The z-score is a measure that supports us in determining if a significant relationship exists between two or more variables&#10;&#10;[explanation]&#10;Z-scores help us to identify suspicious values. Standard z-scores &gt;= 3 are highly suspicious (or extreme), while modified z-scores &gt;= 5 are highly suspicious (or extreme). Values with these z-scores will be shown when you apply z-score filters to your outlier data table.&#10;[explanation] " max_attempts="1">
+<multiplechoiceresponse>
+  <label>What does the z-score help us to identify? (1 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. The z-score is a measure that shows us the middle data point of our combined data</choice>
+    <choice correct="true">B. The z-score is a measure that supports us to identify suspicious values in our data</choice>
+    <choice correct="false">C. The z-score is a measure that supports us in determining if a significant relationship exists between two or more variables</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Z-scores help us to identify suspicious values. Standard z-scores &gt;= 3 are highly suspicious (or extreme), while modified z-scores &gt;= 5 are highly suspicious (or extreme). Values with these z-scores will be shown when you apply z-score filters to your outlier data table.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

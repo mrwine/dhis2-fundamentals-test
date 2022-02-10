@@ -1,0 +1,28 @@
+<problem display_name="Knowledge Check:" markdown="&lt;style&gt; &#10;  .text {&#10;    font-size: 16px !important;&#10;  }&#10;  .line {&#10;    width: 33%;&#10;&#9;&#9;margin-left: auto;&#10;&#9;&#9;margin-right: auto;&#10;  }&#10;&lt;/style&gt;&#10;Which of the following fits the definition: _____ is used to assess accuracy, availability, and use of data for Data Quality.&#10;&#10;&gt;&gt;Select the one correct answer&lt;&lt;&#10;&#10;(x) A. Data Verification Surveys &#10;( ) B. Data Desk Review &#10;&#10;[explanation]&#10;Data verification surveys are used to assess the access, availability and use of data for Data Quality. &#10;[explanation]">
+<multiplechoiceresponse>
+  <style> 
+<p>  .text {</p>
+<p>    font-size: 16px !important;</p>
+<p>  }</p>
+<p>  .line {</p>
+<p>    width: 33%;</p>
+<p>		margin-left: auto;</p>
+<p>		margin-right: auto;</p>
+<p>  }</p>
+</style>
+<p>Which of the following fits the definition: _____ is used to assess accuracy, availability, and use of data for Data Quality.</p>
+<label>Select the one correct answer</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. Data Verification Surveys</choice>
+    <choice correct="false">B. Data Desk Review</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Data verification surveys are used to assess the access, availability and use of data for Data Quality. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

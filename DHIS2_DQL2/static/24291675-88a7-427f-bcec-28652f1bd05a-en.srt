@@ -1,0 +1,3008 @@
+0
+00:00:00,730 --> 00:00:02,490
+- [Instructor] All right, so now I have the pleasure
+
+1
+00:00:02,490 --> 00:00:05,750
+of taking us through some of the basics of data quality.
+
+2
+00:00:05,750 --> 00:00:07,790
+Again, a lot of this is gonna be kind of foundational
+
+3
+00:00:07,790 --> 00:00:08,630
+to many of you.
+
+4
+00:00:08,630 --> 00:00:09,910
+Many of you, like I said,
+
+5
+00:00:09,910 --> 00:00:11,690
+could probably give this presentation yourself,
+
+6
+00:00:11,690 --> 00:00:13,720
+but I just wanna make sure that we all appreciate
+
+7
+00:00:13,720 --> 00:00:16,440
+all the different components of data quality
+
+8
+00:00:16,440 --> 00:00:19,540
+so that we are just starting off on the same page,
+
+9
+00:00:19,540 --> 00:00:21,323
+singing the same song, so to speak.
+
+10
+00:00:22,230 --> 00:00:25,083
+Let me just progress through the slide here.
+
+11
+00:00:26,180 --> 00:00:28,670
+Okay, so what are we doing in this presentation?
+
+12
+00:00:28,670 --> 00:00:31,430
+We&#39;re gonna start off with some definitions of data quality,
+
+13
+00:00:31,430 --> 00:00:32,830
+many different definitions out there,
+
+14
+00:00:32,830 --> 00:00:34,780
+we&#39;re gonna kind of give you the textbook definition
+
+15
+00:00:34,780 --> 00:00:35,803
+as we understand it.
+
+16
+00:00:36,690 --> 00:00:39,720
+Some implications of different data quality checks,
+
+17
+00:00:39,720 --> 00:00:42,560
+some causes of some data quality issues,
+
+18
+00:00:42,560 --> 00:00:44,160
+and then I&#39;ll quickly just point out
+
+19
+00:00:44,160 --> 00:00:45,780
+some strategies to address them.
+
+20
+00:00:45,780 --> 00:00:47,380
+Certainly not a comprehensive overview
+
+21
+00:00:47,380 --> 00:00:48,920
+of every single thing about data quality,
+
+22
+00:00:48,920 --> 00:00:51,028
+but we are going to just lay the foundation
+
+23
+00:00:51,028 --> 00:00:52,653
+here in this presentation.
+
+24
+00:00:54,570 --> 00:00:56,830
+So why is it important to address data quality?
+
+25
+00:00:56,830 --> 00:01:00,730
+This is a no-brainer, hopefully rhetorical question,
+
+26
+00:01:00,730 --> 00:01:03,330
+but what I want you to appreciate
+
+27
+00:01:03,330 --> 00:01:06,490
+is that data quality
+
+28
+00:01:07,840 --> 00:01:10,060
+and data use are connected,
+
+29
+00:01:10,060 --> 00:01:13,500
+and we call this the virtuous data cycle, okay?
+
+30
+00:01:13,500 --> 00:01:15,780
+So we have data quality,
+
+31
+00:01:15,780 --> 00:01:18,574
+and we have poor data quality, we have good data quality.
+
+32
+00:01:18,574 --> 00:01:21,060
+You can see poor on the left, good on the right.
+
+33
+00:01:21,060 --> 00:01:22,640
+Then we also have data use,
+
+34
+00:01:22,640 --> 00:01:26,340
+we have low data use and high data use,
+
+35
+00:01:26,340 --> 00:01:28,840
+low on the left, high on the right.
+
+36
+00:01:28,840 --> 00:01:30,210
+And what we have to appreciate
+
+37
+00:01:30,210 --> 00:01:33,730
+is that these are completely linked together.
+
+38
+00:01:33,730 --> 00:01:36,850
+Data quality and data use are inseparable.
+
+39
+00:01:36,850 --> 00:01:40,860
+You cannot have high data use with poor data quality,
+
+40
+00:01:40,860 --> 00:01:41,900
+it&#39;s just not really possible,
+
+41
+00:01:41,900 --> 00:01:44,810
+we&#39;ve not seen any evidence that that is possible,
+
+42
+00:01:44,810 --> 00:01:48,030
+to have high data use and poor data quality.
+
+43
+00:01:48,030 --> 00:01:51,960
+We have seen examples where you have good data quality,
+
+44
+00:01:51,960 --> 00:01:53,950
+but low data use.
+
+45
+00:01:53,950 --> 00:01:54,850
+Now that is possible.
+
+46
+00:01:54,850 --> 00:01:59,610
+Unfortunately, you know, many countries or many projects
+
+47
+00:01:59,610 --> 00:02:02,400
+put a lot of emphasis on having high data quality,
+
+48
+00:02:02,400 --> 00:02:04,050
+but then ultimately people don&#39;t use the data.
+
+49
+00:02:04,050 --> 00:02:04,920
+That&#39;s a separate issue.
+
+50
+00:02:04,920 --> 00:02:06,860
+And there&#39;s another academy for that as well
+
+51
+00:02:06,860 --> 00:02:08,190
+on data use practices.
+
+52
+00:02:08,190 --> 00:02:10,780
+But the important thing to appreciate here
+
+53
+00:02:10,780 --> 00:02:12,470
+in this virtuous data cycle
+
+54
+00:02:12,470 --> 00:02:15,480
+is that we have to have good data quality
+
+55
+00:02:15,480 --> 00:02:17,340
+to have high data use.
+
+56
+00:02:17,340 --> 00:02:19,270
+We just won&#39;t ever get data use there
+
+57
+00:02:19,270 --> 00:02:20,800
+if we have poor data quality.
+
+58
+00:02:20,800 --> 00:02:22,680
+And if we do have good data quality
+
+59
+00:02:23,733 --> 00:02:25,210
+and we do have high data use,
+
+60
+00:02:25,210 --> 00:02:26,410
+we can start to do all these things
+
+61
+00:02:26,410 --> 00:02:28,130
+that everyone&#39;s always talking about:
+
+62
+00:02:28,130 --> 00:02:31,037
+data-driven actions and decisions,
+
+63
+00:02:31,037 --> 00:02:33,090
+ownership of data, data cultures,
+
+64
+00:02:33,090 --> 00:02:36,210
+data being actually used in our routine daily practices,
+
+65
+00:02:36,210 --> 00:02:38,800
+people consulting data prior to making decisions,
+
+66
+00:02:38,800 --> 00:02:40,660
+prior to planning processes.
+
+67
+00:02:40,660 --> 00:02:42,350
+And people are asking for data,
+
+68
+00:02:42,350 --> 00:02:46,600
+people want data throughout your entire hierarchy,
+
+69
+00:02:46,600 --> 00:02:49,400
+your organization, your project
+
+70
+00:02:49,400 --> 00:02:53,070
+because they know that it&#39;s good quality, it&#39;s reliable,
+
+71
+00:02:53,070 --> 00:02:55,190
+and it&#39;s going to make the decisions
+
+72
+00:02:55,190 --> 00:02:58,560
+that they have to have more impact.
+
+73
+00:02:58,560 --> 00:03:00,077
+So we get data demand.
+
+74
+00:03:04,870 --> 00:03:09,420
+So why do you think that data is of poor quality?
+
+75
+00:03:09,420 --> 00:03:11,770
+There are many, many reasons for this.
+
+76
+00:03:11,770 --> 00:03:13,480
+And actually one of your assignments later today
+
+77
+00:03:13,480 --> 00:03:14,650
+is to tell us some of the reasons
+
+78
+00:03:14,650 --> 00:03:16,350
+why in your country or your project,
+
+79
+00:03:16,350 --> 00:03:19,300
+you think that you have some data quality issues.
+
+80
+00:03:19,300 --> 00:03:20,220
+One of the major ones,
+
+81
+00:03:20,220 --> 00:03:22,620
+the first bullet point here is poor form design,
+
+82
+00:03:23,752 --> 00:03:24,940
+or poor system design,
+
+83
+00:03:24,940 --> 00:03:26,050
+or high reporting burden.
+
+84
+00:03:26,050 --> 00:03:30,060
+Just you put up many different kind of infrastructural,
+
+85
+00:03:30,060 --> 00:03:34,680
+or you make the tools that people need to use
+
+86
+00:03:34,680 --> 00:03:39,080
+to report data or to even visualize data hard to use.
+
+87
+00:03:39,080 --> 00:03:40,363
+If you make the tool itself hard to use
+
+88
+00:03:40,363 --> 00:03:41,760
+then people who don&#39;t use it,
+
+89
+00:03:41,760 --> 00:03:42,860
+if they don&#39;t use it,
+
+90
+00:03:42,860 --> 00:03:44,560
+then when they do have to use it,
+
+91
+00:03:44,560 --> 00:03:48,400
+they&#39;re going to struggle to understand it,
+
+92
+00:03:48,400 --> 00:03:50,810
+they&#39;re gonna struggle to fully utilize it,
+
+93
+00:03:50,810 --> 00:03:53,610
+and that&#39;s gonna result in oftentimes poor data quality.
+
+94
+00:03:55,040 --> 00:03:55,873
+The second bullet point,
+
+95
+00:03:55,873 --> 00:03:59,050
+and this is really very kind of pervasive
+
+96
+00:03:59,050 --> 00:04:00,410
+in many countries,
+
+97
+00:04:00,410 --> 00:04:03,520
+is that people do not feel accountable for their data.
+
+98
+00:04:03,520 --> 00:04:06,920
+People don&#39;t receive any feedback when they submit data,
+
+99
+00:04:06,920 --> 00:04:08,210
+they don&#39;t receive notifications
+
+100
+00:04:08,210 --> 00:04:11,110
+that their data is being used or being checked,
+
+101
+00:04:11,110 --> 00:04:13,210
+especially thinking about the folks at district level
+
+102
+00:04:13,210 --> 00:04:15,663
+or a health facility level,
+
+103
+00:04:16,560 --> 00:04:19,700
+how much feedback are they getting on data quality?
+
+104
+00:04:19,700 --> 00:04:22,330
+In many places, it&#39;s very, very little.
+
+105
+00:04:22,330 --> 00:04:24,250
+They&#39;re also seeing that their data is not being used,
+
+106
+00:04:24,250 --> 00:04:26,560
+they don&#39;t see any decisions coming from higher level,
+
+107
+00:04:26,560 --> 00:04:27,530
+they&#39;re not being encouraged
+
+108
+00:04:27,530 --> 00:04:28,760
+to make decisions off their data.
+
+109
+00:04:28,760 --> 00:04:30,080
+So people don&#39;t feel accountable for it,
+
+110
+00:04:30,080 --> 00:04:31,590
+people just kind of think that it&#39;s just a thing
+
+111
+00:04:31,590 --> 00:04:32,423
+that I have to do,
+
+112
+00:04:32,423 --> 00:04:35,410
+I just put it in and then it&#39;s gone, right?
+
+113
+00:04:35,410 --> 00:04:38,140
+Never to be concerned about it again.
+
+114
+00:04:38,140 --> 00:04:39,501
+And without accountability
+
+115
+00:04:39,501 --> 00:04:41,090
+people wouldn&#39;t put a lot of effort
+
+116
+00:04:41,090 --> 00:04:43,690
+into making sure that what they&#39;re doing is correct.
+
+117
+00:04:44,930 --> 00:04:45,763
+Third bullet point here,
+
+118
+00:04:45,763 --> 00:04:47,030
+and I already kind of touched on this
+
+119
+00:04:47,030 --> 00:04:49,107
+is that there&#39;s very little ownership of data.
+
+120
+00:04:49,107 --> 00:04:50,500
+And the ownership of the data
+
+121
+00:04:50,500 --> 00:04:52,960
+needs to be principally at the lowest levels,
+
+122
+00:04:52,960 --> 00:04:54,900
+the people who are actually generating the data,
+
+123
+00:04:54,900 --> 00:04:57,920
+community health workers, facility staff, district staff,
+
+124
+00:04:57,920 --> 00:05:00,560
+these are the people who are actually
+
+125
+00:05:00,560 --> 00:05:03,690
+providing the services, filling out the forms,
+
+126
+00:05:03,690 --> 00:05:07,710
+and in many countries, putting that data into DHIS2
+
+127
+00:05:07,710 --> 00:05:10,320
+or into the reporting tools.
+
+128
+00:05:10,320 --> 00:05:12,910
+And if they don&#39;t feel ownership of the data,
+
+129
+00:05:12,910 --> 00:05:15,490
+then they are not going to do a good job with this.
+
+130
+00:05:15,490 --> 00:05:17,030
+And that&#39;s kind of just the bottom line,
+
+131
+00:05:17,030 --> 00:05:19,320
+they have to appreciate why their data is important,
+
+132
+00:05:19,320 --> 00:05:22,640
+why collecting the data and putting it in is important,
+
+133
+00:05:22,640 --> 00:05:25,670
+and they need to say that, &quot;Yes, this is my data,
+
+134
+00:05:25,670 --> 00:05:29,360
+it represents the work that I do and I stand by it.
+
+135
+00:05:29,360 --> 00:05:32,100
+I say that it is accurate.&quot;
+
+136
+00:05:32,100 --> 00:05:34,000
+And in order to get to that place,
+
+137
+00:05:34,000 --> 00:05:35,820
+they need to see people using it,
+
+138
+00:05:35,820 --> 00:05:37,200
+they need to be encouraged to use it,
+
+139
+00:05:37,200 --> 00:05:39,020
+they need to be given the tools to use it,
+
+140
+00:05:39,020 --> 00:05:41,240
+they need to receive feedback.
+
+141
+00:05:41,240 --> 00:05:44,350
+That&#39;s how you generate a sense of ownership.
+
+142
+00:05:44,350 --> 00:05:45,320
+The last bullet point,
+
+143
+00:05:45,320 --> 00:05:46,760
+and this is probably one of the biggest reasons
+
+144
+00:05:46,760 --> 00:05:49,730
+that data is actually poor data quality
+
+145
+00:05:49,730 --> 00:05:51,743
+is that data is not trusted.
+
+146
+00:05:52,630 --> 00:05:54,420
+There&#39;s many countries that I&#39;ve worked in
+
+147
+00:05:54,420 --> 00:05:57,880
+where people just assume that the data quality is bad.
+
+148
+00:05:57,880 --> 00:05:59,340
+And they just assume this
+
+149
+00:05:59,340 --> 00:06:03,440
+because they don&#39;t actually have any insights into...
+
+150
+00:06:03,440 --> 00:06:04,830
+Or they&#39;re not able to see
+
+151
+00:06:04,830 --> 00:06:07,530
+where the data quality issues are.
+
+152
+00:06:07,530 --> 00:06:10,370
+They just know from some kind of anecdotal experience
+
+153
+00:06:10,370 --> 00:06:12,620
+or some kind of process they went through
+
+154
+00:06:12,620 --> 00:06:14,230
+that some data shouldn&#39;t be trusted,
+
+155
+00:06:14,230 --> 00:06:17,360
+and if we just don&#39;t worry about that data,
+
+156
+00:06:17,360 --> 00:06:19,600
+then we can kind of go about our lives.
+
+157
+00:06:19,600 --> 00:06:22,770
+Well, if we build a culture of data not being trusted,
+
+158
+00:06:22,770 --> 00:06:25,570
+then we are not gonna see any data quality improvements.
+
+159
+00:06:26,530 --> 00:06:29,620
+And one of the best ways to make sure
+
+160
+00:06:29,620 --> 00:06:33,520
+that we actually get to working on data trust issues
+
+161
+00:06:33,520 --> 00:06:34,920
+is we start to show people
+
+162
+00:06:34,920 --> 00:06:36,940
+where the data quality issues are.
+
+163
+00:06:36,940 --> 00:06:40,140
+We start to use tools, dashboards, alerts, notifications,
+
+164
+00:06:40,140 --> 00:06:42,170
+all the various things that we&#39;re gonna show you this week
+
+165
+00:06:42,170 --> 00:06:45,370
+to actually push data quality issues to the user
+
+166
+00:06:45,370 --> 00:06:48,440
+so that the data quality becomes very transparent.
+
+167
+00:06:48,440 --> 00:06:50,470
+People will say, &quot;Yes, there&#39;s a problem here,
+
+168
+00:06:50,470 --> 00:06:51,920
+I can do something about it.&quot;
+
+169
+00:06:56,294 --> 00:07:00,130
+And that&#39;s really fundamentally necessary
+
+170
+00:07:00,130 --> 00:07:01,970
+is that people see the data quality issues,
+
+171
+00:07:01,970 --> 00:07:03,680
+people feel that they can do something about it,
+
+172
+00:07:03,680 --> 00:07:05,593
+and that starts to build data trust.
+
+173
+00:07:09,500 --> 00:07:11,993
+How do we define good data quality?
+
+174
+00:07:12,840 --> 00:07:14,713
+Well, the most basic sense,
+
+175
+00:07:16,720 --> 00:07:20,323
+data is of high quality when it&#39;s fit for its intended use.
+
+176
+00:07:21,460 --> 00:07:23,030
+Can I use it for my operations,
+
+177
+00:07:23,030 --> 00:07:25,720
+my decision-making, my planning, my policies?
+
+178
+00:07:25,720 --> 00:07:27,480
+You know, do I have standard operating procedures
+
+179
+00:07:27,480 --> 00:07:28,710
+built around it?
+
+180
+00:07:28,710 --> 00:07:32,420
+You know, when data is routinely utilized in these ways,
+
+181
+00:07:32,420 --> 00:07:36,163
+we can say that your data is of high enough quality.
+
+182
+00:07:38,040 --> 00:07:42,320
+More often than not, it&#39;s just a data quality
+
+183
+00:07:42,320 --> 00:07:45,390
+is defined as good when we are able to make it fit,
+
+184
+00:07:45,390 --> 00:07:47,370
+make it fit for purpose, right?
+
+185
+00:07:47,370 --> 00:07:50,023
+Make it something that we can reliably depend upon.
+
+186
+00:07:52,470 --> 00:07:55,890
+Let&#39;s quickly cover some of the data quality dimensions now,
+
+187
+00:07:55,890 --> 00:07:58,933
+the first one that we want to go through is completeness.
+
+188
+00:08:00,086 --> 00:08:03,420
+Completeness is, did we get all the data in
+
+189
+00:08:03,420 --> 00:08:04,813
+that we needed to get in?
+
+190
+00:08:05,700 --> 00:08:08,300
+Do we have all the health facilities reporting this month?
+
+191
+00:08:08,300 --> 00:08:11,400
+And if we do is that data...
+
+192
+00:08:11,400 --> 00:08:14,430
+Is that enough to be able to use, to make a decision?
+
+193
+00:08:14,430 --> 00:08:16,980
+You know, you can&#39;t make decisions if you only have
+
+194
+00:08:16,980 --> 00:08:19,070
+let&#39;s say 50% of your health facilities
+
+195
+00:08:19,070 --> 00:08:21,070
+reporting every month, right?
+
+196
+00:08:21,070 --> 00:08:22,590
+You need to have high completeness,
+
+197
+00:08:22,590 --> 00:08:24,170
+you need to have all the data coming in
+
+198
+00:08:24,170 --> 00:08:25,490
+that you expect to come in.
+
+199
+00:08:25,490 --> 00:08:27,323
+This is easily measurable in DHIS2.
+
+200
+00:08:28,480 --> 00:08:30,320
+The next thing is timeliness,
+
+201
+00:08:30,320 --> 00:08:33,520
+is all the data there when we need it to be there,
+
+202
+00:08:33,520 --> 00:08:36,090
+when we expect it to be there?
+
+203
+00:08:36,090 --> 00:08:41,090
+If we are receiving data from many, many months ago,
+
+204
+00:08:41,429 --> 00:08:43,550
+maybe that data is not even relevant anymore,
+
+205
+00:08:43,549 --> 00:08:44,560
+maybe things have changed,
+
+206
+00:08:44,560 --> 00:08:48,800
+maybe you&#39;re getting malaria data before the rainy season.
+
+207
+00:08:48,800 --> 00:08:51,230
+Is that useful if you&#39;re in the middle of the raIny season?
+
+208
+00:08:51,230 --> 00:08:52,230
+Probably not.
+
+209
+00:08:52,230 --> 00:08:54,920
+So your immediate decisions and actions
+
+210
+00:08:54,920 --> 00:08:56,830
+are not gonna be based upon this old data.
+
+211
+00:08:56,830 --> 00:08:59,280
+So we need the data to be coming in
+
+212
+00:08:59,280 --> 00:09:00,680
+when it&#39;s supposed to be coming in,
+
+213
+00:09:00,680 --> 00:09:02,840
+and we need to build our operating procedures
+
+214
+00:09:02,840 --> 00:09:06,570
+and our processes around the most relevant
+
+215
+00:09:06,570 --> 00:09:07,573
+and up-to-date data.
+
+216
+00:09:08,470 --> 00:09:09,570
+Again, this is something
+
+217
+00:09:09,570 --> 00:09:11,370
+that we can easily measure in DHIS2.
+
+218
+00:09:12,390 --> 00:09:15,420
+Consistency, this is one that a lot of people
+
+219
+00:09:15,420 --> 00:09:17,070
+can easily forget about,
+
+220
+00:09:17,070 --> 00:09:22,060
+is our data reflected the same information
+
+221
+00:09:23,013 --> 00:09:25,890
+across all the various tools that we&#39;re using?
+
+222
+00:09:25,890 --> 00:09:29,520
+So if you go down to the facility, is that registry,
+
+223
+00:09:29,520 --> 00:09:31,660
+that number that&#39;s recorded in that registry,
+
+224
+00:09:31,660 --> 00:09:34,010
+is it also the number that I&#39;m seeing in DHIS2?
+
+225
+00:09:36,090 --> 00:09:39,510
+Maybe you have some kind of patient tracking system, right?
+
+226
+00:09:39,510 --> 00:09:41,530
+Is the data that&#39;s in that patient tracking system
+
+227
+00:09:41,530 --> 00:09:43,240
+also the same as the aggregated numbers
+
+228
+00:09:43,240 --> 00:09:45,360
+I&#39;m seeing in DHIS2?
+
+229
+00:09:45,360 --> 00:09:46,490
+We need to be able to check
+
+230
+00:09:46,490 --> 00:09:48,350
+all of these various reporting forms,
+
+231
+00:09:48,350 --> 00:09:49,183
+and we need to say,
+
+232
+00:09:49,183 --> 00:09:53,660
+&quot;Is the data consistent across all these various sources?&quot;
+
+233
+00:09:53,660 --> 00:09:56,240
+We also need to think about consistency over time,
+
+234
+00:09:56,240 --> 00:09:58,720
+is the data following a similar trend
+
+235
+00:09:58,720 --> 00:10:01,000
+that we expect to see year after year?
+
+236
+00:10:01,000 --> 00:10:02,960
+For example, with a lot of seasonal diseases,
+
+237
+00:10:02,960 --> 00:10:06,210
+we expect this very specific trend over time,
+
+238
+00:10:06,210 --> 00:10:07,470
+year after year, after year,
+
+239
+00:10:07,470 --> 00:10:09,140
+it is the data following that trend?
+
+240
+00:10:09,140 --> 00:10:10,590
+We consider that consistency.
+
+241
+00:10:12,030 --> 00:10:14,880
+Conformity, this is one that is easily...
+
+242
+00:10:14,880 --> 00:10:17,160
+We stumble over quite a lot.
+
+243
+00:10:17,160 --> 00:10:21,240
+So is the data following a set of standard definitions?
+
+244
+00:10:21,240 --> 00:10:26,100
+A good example of this is when it&#39;s in the form design
+
+245
+00:10:26,100 --> 00:10:27,823
+or system use,
+
+246
+00:10:29,490 --> 00:10:31,300
+many countries have a lot of different ways
+
+247
+00:10:31,300 --> 00:10:32,520
+of naming the same thing.
+
+248
+00:10:32,520 --> 00:10:36,470
+So malaria versus confirmed malaria, for example,
+
+249
+00:10:36,470 --> 00:10:38,320
+which one do we use?
+
+250
+00:10:38,320 --> 00:10:41,580
+Which one is the data that we should be consistently using?
+
+251
+00:10:41,580 --> 00:10:43,740
+Which one is the one that it&#39;s actually reported on?
+
+252
+00:10:43,740 --> 00:10:47,400
+Sometimes it&#39;s fairly not clear
+
+253
+00:10:48,380 --> 00:10:51,871
+on which data should be used.
+
+254
+00:10:51,871 --> 00:10:54,954
+(indistinct chatter)
+
+255
+00:10:57,090 --> 00:10:59,060
+The next one is accuracy,
+
+256
+00:10:59,060 --> 00:11:03,290
+does the data reflect the real-world events?
+
+257
+00:11:03,290 --> 00:11:07,970
+You know, is that number of patients that was actually seen
+
+258
+00:11:07,970 --> 00:11:10,150
+during the antenatal care visits,
+
+259
+00:11:10,150 --> 00:11:12,500
+is that the actual number that gets into DHIS2?
+
+260
+00:11:14,790 --> 00:11:18,030
+Integrity, so this is kind of our internal
+
+261
+00:11:18,030 --> 00:11:20,501
+consistency traceability.
+
+262
+00:11:20,501 --> 00:11:23,584
+(indistinct chatter)
+
+263
+00:11:26,950 --> 00:11:31,950
+So the integrity here is talking about can we...
+
+264
+00:11:32,490 --> 00:11:34,620
+Sorry, a little bit of disruption here in the room.
+
+265
+00:11:34,620 --> 00:11:36,790
+The integrity here is a little bit about,
+
+266
+00:11:36,790 --> 00:11:39,080
+can we look at the data over time
+
+267
+00:11:39,080 --> 00:11:42,780
+and making sure that we are able to trace it back
+
+268
+00:11:42,780 --> 00:11:44,420
+to its original source?
+
+269
+00:11:44,420 --> 00:11:45,253
+Right?
+
+270
+00:11:45,253 --> 00:11:47,270
+So we see the high level of data at the very top,
+
+271
+00:11:47,270 --> 00:11:48,620
+the outcome impact indicators,
+
+272
+00:11:48,620 --> 00:11:49,780
+can we go down the hierarchy?
+
+273
+00:11:49,780 --> 00:11:51,450
+Can we go down to the most granular place
+
+274
+00:11:51,450 --> 00:11:54,010
+and say, &quot;Yes, this is consistent
+
+275
+00:11:54,010 --> 00:11:55,510
+throughout the whole process.&quot;
+
+276
+00:11:56,420 --> 00:11:58,070
+One big example of this is like,
+
+277
+00:11:58,070 --> 00:12:00,420
+if you actually have patients in your database,
+
+278
+00:12:01,460 --> 00:12:05,880
+you are maybe into collecting individual patient data,
+
+279
+00:12:05,880 --> 00:12:08,780
+and do you have multiple patients for the same person
+
+280
+00:12:08,780 --> 00:12:09,800
+recorded in your database?
+
+281
+00:12:09,800 --> 00:12:12,450
+This is becoming increasingly common.
+
+282
+00:12:12,450 --> 00:12:13,900
+You need to be able to be able to perform
+
+283
+00:12:13,900 --> 00:12:15,720
+these kinds of data quality checks as well,
+
+284
+00:12:15,720 --> 00:12:17,780
+to make sure you&#39;re not like double counting patients,
+
+285
+00:12:17,780 --> 00:12:20,980
+which would then skew your aggregated data,
+
+286
+00:12:20,980 --> 00:12:24,390
+which ultimately can skew off your entire impact
+
+287
+00:12:24,390 --> 00:12:25,603
+and outcome indicators.
+
+288
+00:12:28,930 --> 00:12:31,880
+Let&#39;s just look at some quick examples from the real world.
+
+289
+00:12:33,950 --> 00:12:37,800
+So, first of all, on completeness,
+
+290
+00:12:37,800 --> 00:12:41,200
+this is the DHIS2 data set completeness app,
+
+291
+00:12:41,200 --> 00:12:42,400
+we&#39;re gonna cover this app,
+
+292
+00:12:42,400 --> 00:12:47,400
+but this is a picture of some Sierra Leone generated data.
+
+293
+00:12:48,210 --> 00:12:51,330
+And you can see that looking at completeness,
+
+294
+00:12:51,330 --> 00:12:55,590
+we have the actual reports divided by the expected reports.
+
+295
+00:12:55,590 --> 00:12:59,010
+And then we can see the number of...
+
+296
+00:12:59,010 --> 00:13:00,760
+And we can see what percentage of reports
+
+297
+00:13:00,760 --> 00:13:02,260
+are actually incomplete,
+
+298
+00:13:02,260 --> 00:13:04,140
+and we can see the number of reports
+
+299
+00:13:04,140 --> 00:13:06,913
+that reported on time as well.
+
+300
+00:13:07,930 --> 00:13:09,640
+This is the app that like I said, we&#39;ll go through,
+
+301
+00:13:09,640 --> 00:13:12,613
+and you can quickly start to see those facilities,
+
+302
+00:13:14,050 --> 00:13:16,080
+the completeness by different aggregation levels.
+
+303
+00:13:16,080 --> 00:13:18,580
+So national level, district level, regional level,
+
+304
+00:13:18,580 --> 00:13:20,870
+and go all the way down to individual facilities
+
+305
+00:13:20,870 --> 00:13:21,963
+if you need to.
+
+306
+00:13:24,450 --> 00:13:26,720
+Timeliness, DHIS2 has,
+
+307
+00:13:26,720 --> 00:13:28,970
+if you&#39;re reporting an aggregated data,
+
+308
+00:13:28,970 --> 00:13:31,180
+DHIS2 has a really good tool for timeliness,
+
+309
+00:13:31,180 --> 00:13:34,240
+and that is in the dataset configuration,
+
+310
+00:13:34,240 --> 00:13:36,900
+you can set the number of days after the period
+
+311
+00:13:36,900 --> 00:13:39,520
+that you wanna qualify that data for being timely.
+
+312
+00:13:39,520 --> 00:13:44,520
+So for example, you can say 15 days and what you see here,
+
+313
+00:13:45,330 --> 00:13:50,260
+and that says that this data has 15 days
+
+314
+00:13:53,170 --> 00:13:55,660
+to be entered for the previous period
+
+315
+00:13:55,660 --> 00:13:57,233
+for it to be considered timely.
+
+316
+00:13:58,593 --> 00:14:01,140
+And if it&#39;s entered after that 15 days,
+
+317
+00:14:01,140 --> 00:14:02,350
+then it&#39;s considered late,
+
+318
+00:14:02,350 --> 00:14:05,240
+it&#39;s not considered timely or current data.
+
+319
+00:14:05,240 --> 00:14:07,250
+And that can be a data quality check that you build in.
+
+320
+00:14:07,250 --> 00:14:09,390
+You can either say, &quot;Don&#39;t allow it,&quot;
+
+321
+00:14:09,390 --> 00:14:10,730
+or you can say, &quot;Allow it,&quot;
+
+322
+00:14:10,730 --> 00:14:12,980
+but flag it and we need to follow up on that.
+
+323
+00:14:14,890 --> 00:14:16,810
+Consistency is a good one here,
+
+324
+00:14:16,810 --> 00:14:17,780
+to give you a bit of an example,
+
+325
+00:14:17,780 --> 00:14:19,940
+we&#39;re actually not looking at DHIS2 data here,
+
+326
+00:14:19,940 --> 00:14:21,520
+but we&#39;re just looking at it from an example
+
+327
+00:14:21,520 --> 00:14:26,520
+from the 2016 Zambia population,
+
+328
+00:14:28,240 --> 00:14:29,990
+where there was an NGO, PATH,
+
+329
+00:14:29,990 --> 00:14:31,650
+that had population figures,
+
+330
+00:14:31,650 --> 00:14:33,370
+and then there was the District Health Office
+
+331
+00:14:33,370 --> 00:14:34,720
+that had population figures,
+
+332
+00:14:34,720 --> 00:14:36,670
+and then there was a population figure
+
+333
+00:14:36,670 --> 00:14:39,033
+provided by the Central Statistics Office.
+
+334
+00:14:42,340 --> 00:14:45,370
+And here you can actually see (clears throat) excuse me,
+
+335
+00:14:45,370 --> 00:14:48,280
+the District Health Office population figure
+
+336
+00:14:48,280 --> 00:14:51,920
+was significantly different than the NGOs population figure.
+
+337
+00:14:51,920 --> 00:14:53,410
+Now, which one is used?
+
+338
+00:14:53,410 --> 00:14:55,520
+Which one is used and which indicator?
+
+339
+00:14:55,520 --> 00:14:57,853
+How are we able to monitor and check for this?
+
+340
+00:15:00,010 --> 00:15:02,410
+It&#39;s important that we actually have some processes
+
+341
+00:15:02,410 --> 00:15:06,347
+to appreciate how the data is consistent,
+
+342
+00:15:06,347 --> 00:15:08,340
+like the same numbers should be consistent
+
+343
+00:15:08,340 --> 00:15:09,820
+across various sources,
+
+344
+00:15:09,820 --> 00:15:12,440
+and it should be relayed and communicated over time
+
+345
+00:15:12,440 --> 00:15:14,400
+and be consistent,
+
+346
+00:15:14,400 --> 00:15:17,090
+and again, following those trends over time.
+
+347
+00:15:17,090 --> 00:15:17,923
+The trends over time is something
+
+348
+00:15:17,923 --> 00:15:19,700
+that we&#39;re gonna really take a look at
+
+349
+00:15:19,700 --> 00:15:21,240
+in the WHO Data Quality App.
+
+350
+00:15:21,240 --> 00:15:22,340
+So consistency over time,
+
+351
+00:15:22,340 --> 00:15:23,900
+if it&#39;s a little bit bit vague now
+
+352
+00:15:23,900 --> 00:15:25,360
+it will become crystal clear to you
+
+353
+00:15:25,360 --> 00:15:26,623
+in the next few sessions.
+
+354
+00:15:28,220 --> 00:15:30,930
+Conformity, conformity is a good one here.
+
+355
+00:15:30,930 --> 00:15:32,040
+This is actually going back
+
+356
+00:15:32,040 --> 00:15:33,990
+to kind of our design considerations.
+
+357
+00:15:33,990 --> 00:15:34,960
+So here we&#39;re looking, actually,
+
+358
+00:15:34,960 --> 00:15:39,530
+a picture of a data entry form, right?
+
+359
+00:15:39,530 --> 00:15:41,780
+And you can see though, what we&#39;ve zoomed in on here
+
+360
+00:15:41,780 --> 00:15:43,160
+is the number of vaccine doses
+
+361
+00:15:43,160 --> 00:15:45,490
+discarded due to...
+
+362
+00:15:45,490 --> 00:15:48,830
+And then you have the various vaccines,
+
+363
+00:15:48,830 --> 00:15:50,890
+you have an expiration date, that&#39;s fine,
+
+364
+00:15:50,890 --> 00:15:53,503
+but then you have a VVM change.
+
+365
+00:15:54,400 --> 00:15:56,943
+And what is supposed to be entered here?
+
+366
+00:15:57,990 --> 00:15:58,933
+Is this clear?
+
+367
+00:16:00,390 --> 00:16:01,630
+Is anyone actually really sure?
+
+368
+00:16:01,630 --> 00:16:02,860
+So one person wrote no,
+
+369
+00:16:02,860 --> 00:16:04,260
+and then there&#39;s a bunch of tick marks.
+
+370
+00:16:04,260 --> 00:16:06,520
+Is this counting anything?
+
+371
+00:16:06,520 --> 00:16:09,250
+How is this going to be reported into the DHIS2?
+
+372
+00:16:09,250 --> 00:16:10,660
+This is very confusing.
+
+373
+00:16:10,660 --> 00:16:12,629
+And I think the important thing to appreciate
+
+374
+00:16:12,629 --> 00:16:15,840
+is that if you allow it to use...
+
+375
+00:16:15,840 --> 00:16:18,350
+You know, if the person entering the data
+
+376
+00:16:18,350 --> 00:16:20,150
+is making an interpretation about how the data
+
+377
+00:16:20,150 --> 00:16:23,260
+should actually be filled out on the original form,
+
+378
+00:16:23,260 --> 00:16:24,870
+then you&#39;re gonna have very poor conformity,
+
+379
+00:16:24,870 --> 00:16:27,020
+people are gonna be doing different things.
+
+380
+00:16:30,410 --> 00:16:34,010
+Accuracy, another example from the field,
+
+381
+00:16:34,010 --> 00:16:35,470
+a data entry form.
+
+382
+00:16:35,470 --> 00:16:39,700
+And let&#39;s take a look at that second row there,
+
+383
+00:16:39,700 --> 00:16:43,064
+which is IPT first doses.
+
+384
+00:16:43,064 --> 00:16:46,080
+And here you see that it&#39;s a tick form,
+
+385
+00:16:46,080 --> 00:16:49,010
+it was a common form you see out in the field
+
+386
+00:16:49,010 --> 00:16:49,880
+where they&#39;ve ticked off
+
+387
+00:16:49,880 --> 00:16:53,120
+one, two, three, four, five, six, seven.
+
+388
+00:16:53,120 --> 00:16:56,250
+But then they have to do a manual aggregation of this,
+
+389
+00:16:56,250 --> 00:16:59,240
+and if you follow that all the way over to the right,
+
+390
+00:16:59,240 --> 00:17:01,210
+you see they&#39;ve written two.
+
+391
+00:17:01,210 --> 00:17:02,910
+Well, they&#39;ve ticked off seven,
+
+392
+00:17:02,910 --> 00:17:05,070
+but they&#39;ve aggregated to two.
+
+393
+00:17:05,069 --> 00:17:05,993
+Is that accurate?
+
+394
+00:17:06,829 --> 00:17:07,940
+Who knows? (laughs)
+
+395
+00:17:07,940 --> 00:17:10,270
+I mean, it could be seven, it could be two,
+
+396
+00:17:10,270 --> 00:17:12,250
+it&#39;s probably seven if they&#39;ve filled out
+
+397
+00:17:12,250 --> 00:17:13,290
+the form correctly,
+
+398
+00:17:13,290 --> 00:17:15,500
+but somehow they did a manual aggregation to two,
+
+399
+00:17:15,500 --> 00:17:16,660
+and what goes into DHIS2?
+
+400
+00:17:16,660 --> 00:17:18,440
+Probably that two.
+
+401
+00:17:18,440 --> 00:17:20,200
+And so the accuracy needs to go down
+
+402
+00:17:20,200 --> 00:17:23,220
+all the way to the individual reporting forms.
+
+403
+00:17:23,220 --> 00:17:24,780
+And you need to be able to check for this
+
+404
+00:17:24,780 --> 00:17:26,080
+in your standard operating procedures
+
+405
+00:17:26,079 --> 00:17:27,730
+and your routine processes,
+
+406
+00:17:27,730 --> 00:17:29,320
+the supervision and support that you&#39;re giving
+
+407
+00:17:29,320 --> 00:17:31,730
+to health facilities and community health workers
+
+408
+00:17:31,730 --> 00:17:33,933
+to be able to check for these kinds of things.
+
+409
+00:17:36,520 --> 00:17:39,130
+Oh yeah, sorry, just highlighting the points here.
+
+410
+00:17:39,130 --> 00:17:39,970
+Another one here,
+
+411
+00:17:39,970 --> 00:17:42,310
+they&#39;ve got a total number of deliveries,
+
+412
+00:17:42,310 --> 00:17:44,080
+they&#39;ve ticked off four of these,
+
+413
+00:17:44,080 --> 00:17:44,913
+and then what do they do?
+
+414
+00:17:44,913 --> 00:17:45,746
+They put a zero.
+
+415
+00:17:49,610 --> 00:17:51,720
+Integrity is a very important...
+
+416
+00:17:51,720 --> 00:17:53,510
+Integrity is essentially are we able to track
+
+417
+00:17:53,510 --> 00:17:55,740
+the changes in the data over time
+
+418
+00:17:55,740 --> 00:17:57,890
+for a single data value?
+
+419
+00:17:57,890 --> 00:18:00,440
+And are we able to have processes
+
+420
+00:18:00,440 --> 00:18:05,440
+to be able to see if a value is changed,
+
+421
+00:18:05,440 --> 00:18:06,370
+who changed it,
+
+422
+00:18:06,370 --> 00:18:09,730
+and potentially follow up with them, why they changed it.
+
+423
+00:18:09,730 --> 00:18:11,010
+And here you can actually see,
+
+424
+00:18:11,010 --> 00:18:12,530
+and Nora is gonna take us through this
+
+425
+00:18:12,530 --> 00:18:15,100
+is the integrity checks
+
+426
+00:18:15,100 --> 00:18:17,570
+within DHIS2 that the audit trail
+
+427
+00:18:17,570 --> 00:18:21,750
+within each individual data element.
+
+428
+00:18:21,750 --> 00:18:25,193
+And here you are able to that change over time.
+
+429
+00:18:28,210 --> 00:18:29,980
+All right, a few key points here
+
+430
+00:18:29,980 --> 00:18:31,640
+to wrap us up on the session.
+
+431
+00:18:31,640 --> 00:18:34,150
+The first one is that data quality issues
+
+432
+00:18:34,150 --> 00:18:36,350
+are a fact of life.
+
+433
+00:18:36,350 --> 00:18:37,307
+Everyone is saying,
+
+434
+00:18:37,307 --> 00:18:40,040
+&quot;Oh, I&#39;ve got so many data quality issues,
+
+435
+00:18:40,040 --> 00:18:42,420
+how do I get rid of my data quality issues?&quot;
+
+436
+00:18:42,420 --> 00:18:44,130
+That&#39;s kind of the wrong question to ask.
+
+437
+00:18:44,130 --> 00:18:46,890
+We have to appreciate that data quality issues
+
+438
+00:18:46,890 --> 00:18:48,483
+are going to happen.
+
+439
+00:18:49,950 --> 00:18:52,660
+Every information system that I&#39;ve worked with,
+
+440
+00:18:52,660 --> 00:18:55,020
+I think that anyone here has worked with,
+
+441
+00:18:55,020 --> 00:18:56,100
+they have outliers,
+
+442
+00:18:56,100 --> 00:18:58,370
+people put in crazy numbers sometimes,
+
+443
+00:18:58,370 --> 00:19:00,143
+usually data entry mistakes.
+
+444
+00:19:00,990 --> 00:19:03,040
+Outliers happen, it&#39;s a fact of life,
+
+445
+00:19:03,040 --> 00:19:06,650
+data entry errors happen, absolute fact of life.
+
+446
+00:19:06,650 --> 00:19:09,130
+Validation alerts are going to be triggered,
+
+447
+00:19:09,130 --> 00:19:10,040
+you&#39;re never going to...
+
+448
+00:19:10,040 --> 00:19:13,360
+If you really have clear, well-defined validation rules,
+
+449
+00:19:13,360 --> 00:19:15,580
+there&#39;s probably never a week that will go by
+
+450
+00:19:15,580 --> 00:19:16,770
+that you don&#39;t have some validation
+
+451
+00:19:16,770 --> 00:19:18,710
+notifications being triggered.
+
+452
+00:19:18,710 --> 00:19:20,290
+Fact of life.
+
+453
+00:19:20,290 --> 00:19:24,410
+Fraudulent data, people make up data, it does happen.
+
+454
+00:19:24,410 --> 00:19:29,410
+Many countries incentivize data to be reported on time,
+
+455
+00:19:29,490 --> 00:19:33,210
+more than they incentivized data to be reported accurately.
+
+456
+00:19:33,210 --> 00:19:34,240
+What does that mean?
+
+457
+00:19:34,240 --> 00:19:36,210
+That means that people really feel a lot of pressure
+
+458
+00:19:36,210 --> 00:19:38,160
+to get their data in on time,
+
+459
+00:19:38,160 --> 00:19:39,730
+but because the data is not being used,
+
+460
+00:19:39,730 --> 00:19:42,980
+because data quality checks are not being performed,
+
+461
+00:19:42,980 --> 00:19:44,470
+they know that they can get by,
+
+462
+00:19:44,470 --> 00:19:45,823
+by just making up data.
+
+463
+00:19:47,459 --> 00:19:50,343
+They get it in on time by just making up some data.
+
+464
+00:19:51,200 --> 00:19:54,550
+This happens, this is a fact of life in many countries,
+
+465
+00:19:54,550 --> 00:19:56,340
+and it needs to be appreciated
+
+466
+00:19:56,340 --> 00:19:58,820
+and we need to have the controls to put it in.
+
+467
+00:19:58,820 --> 00:20:03,730
+So data quality issues are not a failure of the system,
+
+468
+00:20:03,730 --> 00:20:06,960
+they&#39;re a fact of any information system, really.
+
+469
+00:20:06,960 --> 00:20:09,170
+And what is the failure?
+
+470
+00:20:09,170 --> 00:20:12,090
+Is to not being able to address the data quality issues,
+
+471
+00:20:12,090 --> 00:20:14,780
+and specifically address them as they come in.
+
+472
+00:20:14,780 --> 00:20:16,220
+So I just wanna make the point is,
+
+473
+00:20:16,220 --> 00:20:18,570
+you know, no one here should be beating themselves up
+
+474
+00:20:18,570 --> 00:20:19,520
+that they have outliers,
+
+475
+00:20:19,520 --> 00:20:21,420
+or that they have data quality errors.
+
+476
+00:20:23,740 --> 00:20:25,160
+What they should be upset about
+
+477
+00:20:25,160 --> 00:20:26,700
+or what you should be upset about
+
+478
+00:20:26,700 --> 00:20:29,980
+is are you able to identify and address them?
+
+479
+00:20:29,980 --> 00:20:32,163
+And if you&#39;re not, that&#39;s a failure,
+
+480
+00:20:33,450 --> 00:20:35,863
+not the fact that they exist in the first place.
+
+481
+00:20:40,340 --> 00:20:43,983
+When we talk about data quality and data quality checks,
+
+482
+00:20:46,090 --> 00:20:48,870
+we like to think that it&#39;s some kind of race.
+
+483
+00:20:48,870 --> 00:20:51,350
+And here, I&#39;m kind of going back to an old analogy here
+
+484
+00:20:51,350 --> 00:20:53,040
+where the data quality issues
+
+485
+00:20:53,040 --> 00:20:55,480
+are like the rabbit or the hare,
+
+486
+00:20:55,480 --> 00:20:58,500
+and the data quality corrections are like the tortoise.
+
+487
+00:20:58,500 --> 00:21:00,330
+Usually in most country databases,
+
+488
+00:21:00,330 --> 00:21:04,010
+we see that data quality issues are coming in so fast,
+
+489
+00:21:04,010 --> 00:21:04,843
+they&#39;re constant,
+
+490
+00:21:04,843 --> 00:21:07,820
+everyday more and more data quality issues coming in.
+
+491
+00:21:07,820 --> 00:21:09,560
+And we&#39;re not able to keep up with them.
+
+492
+00:21:09,560 --> 00:21:11,730
+Our data quality correction processes,
+
+493
+00:21:11,730 --> 00:21:13,200
+if we have them even,
+
+494
+00:21:13,200 --> 00:21:15,700
+are very slow, they&#39;re very formal,
+
+495
+00:21:15,700 --> 00:21:16,710
+they&#39;re too cumbersome,
+
+496
+00:21:16,710 --> 00:21:18,820
+we can&#39;t keep up with the volume
+
+497
+00:21:18,820 --> 00:21:20,360
+of data quality issues coming in.
+
+498
+00:21:20,360 --> 00:21:21,290
+And what does that mean?
+
+499
+00:21:21,290 --> 00:21:24,120
+That means that we have low data trust,
+
+500
+00:21:24,120 --> 00:21:26,102
+we have low data ownership,
+
+501
+00:21:26,102 --> 00:21:29,350
+and ultimately we have low data use.
+
+502
+00:21:29,350 --> 00:21:31,630
+Remember it all goes back to data use.
+
+503
+00:21:31,630 --> 00:21:33,960
+And what we need to appreciate is
+
+504
+00:21:33,960 --> 00:21:38,010
+that we have to build a process where these move together.
+
+505
+00:21:38,010 --> 00:21:41,280
+So our data quality issues
+
+506
+00:21:41,280 --> 00:21:43,400
+are moving at the exact same speed,
+
+507
+00:21:43,400 --> 00:21:45,653
+like the rabbit on the tortoise,
+
+508
+00:21:47,000 --> 00:21:49,410
+at the same time as our data quality corrections.
+
+509
+00:21:49,410 --> 00:21:51,490
+We&#39;re talking about routine data quality corrections,
+
+510
+00:21:51,490 --> 00:21:53,490
+we&#39;re talking about standard operating procedures
+
+511
+00:21:53,490 --> 00:21:54,500
+that are built in,
+
+512
+00:21:54,500 --> 00:21:57,130
+that are integral to our entire operations
+
+513
+00:21:57,130 --> 00:21:58,870
+within our information system
+
+514
+00:21:58,870 --> 00:22:00,990
+that account for data quality.
+
+515
+00:22:00,990 --> 00:22:02,630
+Everything is moving together,
+
+516
+00:22:02,630 --> 00:22:04,092
+everybody knows their job
+
+517
+00:22:04,092 --> 00:22:05,750
+and we&#39;re utilizing all the tools
+
+518
+00:22:05,750 --> 00:22:08,350
+that we have available to us to stay on top of this.
+
+519
+00:22:11,660 --> 00:22:15,420
+Let&#39;s talk about some strategies to address
+
+520
+00:22:15,420 --> 00:22:17,180
+some data quality issues.
+
+521
+00:22:17,180 --> 00:22:19,580
+This is really what this whole academy is about,
+
+522
+00:22:19,580 --> 00:22:22,458
+is how do we actually start to get that hare
+
+523
+00:22:22,458 --> 00:22:23,700
+riding on that tortoise?
+
+524
+00:22:23,700 --> 00:22:25,010
+How do we actually get the data quality
+
+525
+00:22:25,010 --> 00:22:27,290
+correction processes moving at the same time
+
+526
+00:22:27,290 --> 00:22:30,053
+as our data quality issues as they come in?
+
+527
+00:22:31,100 --> 00:22:32,500
+A couple of points here,
+
+528
+00:22:32,500 --> 00:22:36,340
+the first one is that even before we get
+
+529
+00:22:36,340 --> 00:22:39,540
+any information system launched or implemented,
+
+530
+00:22:39,540 --> 00:22:42,560
+we need to appreciate how data quality affects design.
+
+531
+00:22:42,560 --> 00:22:44,730
+And again, we have an asynchronous session on this.
+
+532
+00:22:44,730 --> 00:22:48,250
+So we have an entire session on how to link up design
+
+533
+00:22:48,250 --> 00:22:49,530
+and data quality.
+
+534
+00:22:49,530 --> 00:22:51,130
+We need to make sure that the we have
+
+535
+00:22:51,130 --> 00:22:52,970
+the right training processes
+
+536
+00:22:52,970 --> 00:22:55,730
+and approaches to make sure that people understand
+
+537
+00:22:55,730 --> 00:22:58,930
+and are able to address data quality issues.
+
+538
+00:22:58,930 --> 00:23:02,230
+We need to make sure that everything is relevant,
+
+539
+00:23:02,230 --> 00:23:04,100
+that we&#39;ve taken into account
+
+540
+00:23:04,100 --> 00:23:05,500
+the various contexts
+
+541
+00:23:05,500 --> 00:23:07,770
+that the data quality checks will be performed.
+
+542
+00:23:07,770 --> 00:23:12,770
+For example, we can&#39;t, you know, potentially configure DHIS2
+
+543
+00:23:14,710 --> 00:23:16,500
+to send automated emails
+
+544
+00:23:16,500 --> 00:23:19,860
+whenever a data quality check is detected.
+
+545
+00:23:19,860 --> 00:23:21,660
+Well, is an automated email
+
+546
+00:23:21,660 --> 00:23:23,663
+relevant to a community health worker?
+
+547
+00:23:25,060 --> 00:23:27,360
+Most community health workers probably don&#39;t have emails,
+
+548
+00:23:27,360 --> 00:23:30,130
+at least in many countries throughout,
+
+549
+00:23:30,130 --> 00:23:31,770
+you know, Central and Southern Africa.
+
+550
+00:23:31,770 --> 00:23:34,150
+And maybe it&#39;s not appropriate
+
+551
+00:23:34,150 --> 00:23:35,530
+to start sending up email alerts
+
+552
+00:23:35,530 --> 00:23:36,790
+to community health workers,
+
+553
+00:23:36,790 --> 00:23:38,290
+maybe it&#39;s not relevant to them.
+
+554
+00:23:38,290 --> 00:23:39,680
+We have to find other ways,
+
+555
+00:23:39,680 --> 00:23:41,120
+other tools to be able to make sure
+
+556
+00:23:41,120 --> 00:23:42,920
+that they know about their data quality issues,
+
+557
+00:23:42,920 --> 00:23:44,420
+and they&#39;re able to address them.
+
+558
+00:23:44,420 --> 00:23:47,610
+And then finally have to give it sufficient resources.
+
+559
+00:23:47,610 --> 00:23:49,340
+If we&#39;re gonna take data quality seriously,
+
+560
+00:23:49,340 --> 00:23:51,500
+you have to give it the resources that it requires,
+
+561
+00:23:51,500 --> 00:23:56,500
+which is tools, staff, exercises, processes, routines,
+
+562
+00:23:56,520 --> 00:23:58,270
+meetings, workshops, trainings,
+
+563
+00:23:58,270 --> 00:24:01,490
+all of the things that you actually need
+
+564
+00:24:01,490 --> 00:24:04,220
+to actually get these kinds of things brought to life
+
+565
+00:24:04,220 --> 00:24:05,513
+requires resources.
+
+566
+00:24:07,740 --> 00:24:11,020
+When you actually have your system live and operating,
+
+567
+00:24:11,020 --> 00:24:12,893
+during data entry,
+
+568
+00:24:13,870 --> 00:24:16,740
+and kind of just in the routine processes,
+
+569
+00:24:16,740 --> 00:24:18,490
+you have to give yourself adequate time
+
+570
+00:24:18,490 --> 00:24:19,990
+to perform data quality checks.
+
+571
+00:24:19,990 --> 00:24:21,250
+It does take time,
+
+572
+00:24:21,250 --> 00:24:24,393
+it takes effort to be on top of the data quality.
+
+573
+00:24:25,440 --> 00:24:29,500
+You have to build data quality into your feedback,
+
+574
+00:24:29,500 --> 00:24:31,220
+and into your standard operating procedures.
+
+575
+00:24:31,220 --> 00:24:33,110
+Again, people need to see the data quality issues,
+
+576
+00:24:33,110 --> 00:24:36,410
+people need to be held accountable for their data.
+
+577
+00:24:36,410 --> 00:24:41,410
+That requires very intentional, very targeted feedback.
+
+578
+00:24:41,620 --> 00:24:43,320
+If you don&#39;t have feedback mechanisms
+
+579
+00:24:43,320 --> 00:24:46,290
+going down to district level to the facility level,
+
+580
+00:24:46,290 --> 00:24:47,640
+to community level,
+
+581
+00:24:47,640 --> 00:24:49,790
+there&#39;s a good chance that the data is not...
+
+582
+00:24:49,790 --> 00:24:52,870
+You have very low data accountability,
+
+583
+00:24:52,870 --> 00:24:55,560
+low ownership and poor data quality.
+
+584
+00:24:55,560 --> 00:24:57,790
+So the feedback has to be very intentional,
+
+585
+00:24:57,790 --> 00:25:00,360
+and you need too, to figure out how to develop this feedback
+
+586
+00:25:00,360 --> 00:25:02,400
+and what&#39;s appropriate to the person
+
+587
+00:25:02,400 --> 00:25:04,573
+that you&#39;re giving that feedback to, right?
+
+588
+00:25:06,330 --> 00:25:08,380
+Data quality checks need to be routine,
+
+589
+00:25:08,380 --> 00:25:10,020
+they need to have very much...
+
+590
+00:25:10,020 --> 00:25:11,690
+They need to have intention behind them.
+
+591
+00:25:11,690 --> 00:25:12,660
+They can&#39;t just be,
+
+592
+00:25:12,660 --> 00:25:14,970
+oh, when you have time check the data quality.
+
+593
+00:25:14,970 --> 00:25:18,540
+No, they need to be built into people&#39;s process,
+
+594
+00:25:18,540 --> 00:25:20,581
+into their day-to-day work.
+
+595
+00:25:20,581 --> 00:25:24,900
+And when possible, let&#39;s avoid manual aggregation.
+
+596
+00:25:24,900 --> 00:25:28,020
+Manual aggregation, as we saw in that reporting form
+
+597
+00:25:28,020 --> 00:25:29,880
+is a really easy place
+
+598
+00:25:29,880 --> 00:25:33,810
+to introduce a lot of data quality of issues.
+
+599
+00:25:33,810 --> 00:25:35,360
+We need less manual aggregation,
+
+600
+00:25:35,360 --> 00:25:37,560
+let DHIS2 do the aggregation for you,
+
+601
+00:25:37,560 --> 00:25:38,810
+capture the most granular data
+
+602
+00:25:38,810 --> 00:25:40,230
+that you feel comfortable with,
+
+603
+00:25:40,230 --> 00:25:43,030
+and then let it aggregate that throughout the hierarchy.
+
+604
+00:25:45,250 --> 00:25:47,510
+After you have your data quality...
+
+605
+00:25:48,840 --> 00:25:51,050
+I mean, after you have your data in the system,
+
+606
+00:25:51,050 --> 00:25:54,670
+we need to have very specific events,
+
+607
+00:25:54,670 --> 00:25:57,070
+activities built around data quality assessments
+
+608
+00:25:57,070 --> 00:25:58,650
+and data cleaning.
+
+609
+00:25:58,650 --> 00:26:00,010
+Nora is gonna go through some of these
+
+610
+00:26:00,010 --> 00:26:01,210
+and we&#39;ll have an example from,
+
+611
+00:26:01,210 --> 00:26:03,580
+I think one of the case studies presented,
+
+612
+00:26:03,580 --> 00:26:06,313
+on how do you actually build procedures,
+
+613
+00:26:07,980 --> 00:26:10,420
+activities around routine
+
+614
+00:26:10,420 --> 00:26:14,730
+or maybe periodic data quality assessments
+
+615
+00:26:14,730 --> 00:26:16,300
+and data quality checks.
+
+616
+00:26:16,300 --> 00:26:17,650
+Extremely useful exercises,
+
+617
+00:26:17,650 --> 00:26:21,410
+WHO has a lot of really good guidance on this.
+
+618
+00:26:21,410 --> 00:26:22,780
+But once you have the data in the system,
+
+619
+00:26:22,780 --> 00:26:24,070
+the work is not done,
+
+620
+00:26:24,070 --> 00:26:28,573
+you have to routinely review it and clean it.
+
+621
+00:26:31,390 --> 00:26:34,293
+All right, so let&#39;s take a look at a quick cycle here.
+
+622
+00:26:36,280 --> 00:26:38,860
+All right, so data quality,
+
+623
+00:26:38,860 --> 00:26:40,730
+I talked about this virtuous cycle
+
+624
+00:26:40,730 --> 00:26:43,153
+where data quality and data use are connected,
+
+625
+00:26:45,082 --> 00:26:47,120
+earlier in the presentation on my first or second slide.
+
+626
+00:26:47,120 --> 00:26:49,740
+Now I&#39;m gonna talk about what we call a vicious cycle
+
+627
+00:26:49,740 --> 00:26:51,740
+of poor data quality.
+
+628
+00:26:51,740 --> 00:26:54,660
+So we have poor data quality issues,
+
+629
+00:26:54,660 --> 00:26:57,350
+it results in data not being trusted,
+
+630
+00:26:57,350 --> 00:26:59,983
+this means that we have a weak demand for data.
+
+631
+00:27:01,550 --> 00:27:03,890
+A weak demand for data means that people
+
+632
+00:27:03,890 --> 00:27:07,180
+are not actually utilizing or valuing the HMIS,
+
+633
+00:27:07,180 --> 00:27:10,030
+they&#39;re not actually thinking that the information system
+
+634
+00:27:10,030 --> 00:27:13,300
+has any usefulness, has any utility,
+
+635
+00:27:13,300 --> 00:27:15,363
+if the data inside of it is just garbage.
+
+636
+00:27:17,260 --> 00:27:20,020
+That usually means that if people aren&#39;t appreciating
+
+637
+00:27:20,020 --> 00:27:23,020
+why the HMIS or information system is necessary,
+
+638
+00:27:23,020 --> 00:27:27,630
+that we end up having weak health information systems.
+
+639
+00:27:27,630 --> 00:27:29,880
+It&#39;s not updated, there&#39;s no one monitoring it,
+
+640
+00:27:29,880 --> 00:27:32,963
+no one is providing the admin support that it requires,
+
+641
+00:27:33,800 --> 00:27:36,210
+low data use, no one is really referring to it
+
+642
+00:27:36,210 --> 00:27:38,120
+when they&#39;re making decisions.
+
+643
+00:27:38,120 --> 00:27:40,970
+And that then feeds back into poor data quality.
+
+644
+00:27:40,970 --> 00:27:42,350
+This is a vicious cycle,
+
+645
+00:27:42,350 --> 00:27:44,650
+and it&#39;s something that you can spiral down
+
+646
+00:27:44,650 --> 00:27:47,510
+and you have to build in very specific activities,
+
+647
+00:27:47,510 --> 00:27:49,720
+exercises to enter our procedures, tools,
+
+648
+00:27:49,720 --> 00:27:52,430
+everything that we&#39;re gonna present to you in this academy,
+
+649
+00:27:52,430 --> 00:27:54,730
+to be able to break out of this vicious cycle.
+
+650
+00:27:56,000 --> 00:28:00,800
+One of the big outputs of this process breaking down,
+
+651
+00:28:00,800 --> 00:28:02,210
+and this is the arrow that&#39;s coming off
+
+652
+00:28:02,210 --> 00:28:03,810
+to the left of the screen here,
+
+653
+00:28:03,810 --> 00:28:06,960
+is that when the donors feel that they have lost
+
+654
+00:28:06,960 --> 00:28:09,020
+trust in the health information system,
+
+655
+00:28:09,020 --> 00:28:09,950
+what do they do?
+
+656
+00:28:09,950 --> 00:28:12,050
+They build their parallel systems
+
+657
+00:28:12,050 --> 00:28:14,650
+or programs or projects build parallel systems.
+
+658
+00:28:14,650 --> 00:28:16,310
+And then you end up in a situation
+
+659
+00:28:16,310 --> 00:28:19,910
+with many different information systems in one country,
+
+660
+00:28:19,910 --> 00:28:22,240
+some of which are reporting on the same thing,
+
+661
+00:28:22,240 --> 00:28:24,903
+a lot of redundant and parallel efforts,
+
+662
+00:28:26,731 --> 00:28:30,023
+and they can all go down this trap together or individually,
+
+663
+00:28:31,010 --> 00:28:33,100
+but it does weaken the infrastructure
+
+664
+00:28:33,100 --> 00:28:35,140
+or the idea of a health information system,
+
+665
+00:28:35,140 --> 00:28:36,530
+a national health information system,
+
+666
+00:28:36,530 --> 00:28:38,670
+where all data&#39;s in one place.
+
+667
+00:28:38,670 --> 00:28:40,290
+Yeah, exactly, so fragmentation,
+
+668
+00:28:40,290 --> 00:28:45,290
+which leads us back to weak health information systems.
+
+669
+00:28:45,350 --> 00:28:46,550
+So you can see that data quality
+
+670
+00:28:46,550 --> 00:28:51,220
+is not just like affects kind of perceptions
+
+671
+00:28:51,220 --> 00:28:53,840
+and feelings about, you know, how data can be used,
+
+672
+00:28:53,840 --> 00:28:55,760
+it actually means that a lot of times
+
+673
+00:28:55,760 --> 00:28:59,040
+parallel systems are built,
+
+674
+00:28:59,040 --> 00:29:04,040
+fragmentation happens within the country or the project,
+
+675
+00:29:06,660 --> 00:29:09,020
+and that then just kind of exacerbates
+
+676
+00:29:09,020 --> 00:29:11,453
+or makes the whole situation even worse.
+
+677
+00:29:13,790 --> 00:29:16,330
+Right, so weak demand, weak decisions making.
+
+678
+00:29:16,330 --> 00:29:19,100
+All right, so from this presentation,
+
+679
+00:29:19,100 --> 00:29:20,590
+you have two assignments,
+
+680
+00:29:20,590 --> 00:29:22,480
+and this is important that you complete these assignments,
+
+681
+00:29:22,480 --> 00:29:25,360
+they are graded for completion,
+
+682
+00:29:25,360 --> 00:29:26,870
+not necessarily for accuracy,
+
+683
+00:29:26,870 --> 00:29:28,650
+because we&#39;re asking your opinion.
+
+684
+00:29:28,650 --> 00:29:31,440
+The first assignment is that we want you
+
+685
+00:29:31,440 --> 00:29:35,320
+to list five reasons why you have poor data quality
+
+686
+00:29:35,320 --> 00:29:37,490
+in your country or project.
+
+687
+00:29:37,490 --> 00:29:38,460
+What are those?
+
+688
+00:29:38,460 --> 00:29:42,430
+Some examples, wrong use of data,
+
+689
+00:29:42,430 --> 00:29:44,420
+some weird issues with indicator,
+
+690
+00:29:44,420 --> 00:29:46,157
+like I don&#39;t understand
+
+691
+00:29:46,157 --> 00:29:48,470
+maternal mortality ratios at facilities.
+
+692
+00:29:48,470 --> 00:29:50,450
+You know, don&#39;t ask for ratios at facilities,
+
+693
+00:29:50,450 --> 00:29:52,350
+you know, you&#39;re asking for difficult data
+
+694
+00:29:52,350 --> 00:29:53,493
+at the lowest levels.
+
+695
+00:29:55,219 --> 00:29:56,550
+Another example could be
+
+696
+00:29:56,550 --> 00:29:57,940
+lack of standard operating procedures,
+
+697
+00:29:57,940 --> 00:30:00,500
+or you have a large manual aggregation process,
+
+698
+00:30:00,500 --> 00:30:02,680
+little to no use or feedback.
+
+699
+00:30:02,680 --> 00:30:06,320
+Just what are some reasons
+
+700
+00:30:06,320 --> 00:30:09,110
+that you have poor data quality in your country?
+
+701
+00:30:09,110 --> 00:30:11,340
+It&#39;s important to appreciate what these are,
+
+702
+00:30:11,340 --> 00:30:15,250
+it&#39;s important to again, realize that everyone has poor data
+
+703
+00:30:15,250 --> 00:30:16,913
+at some point in their system.
+
+704
+00:30:17,960 --> 00:30:19,023
+It&#39;s not something to be embarrassed about,
+
+705
+00:30:19,023 --> 00:30:20,880
+it&#39;s something to acknowledge
+
+706
+00:30:20,880 --> 00:30:24,563
+and to use as a motivation to improve.
+
+707
+00:30:26,070 --> 00:30:28,510
+So we are asking you to acknowledge
+
+708
+00:30:28,510 --> 00:30:31,020
+what are some of the issues that you have?
+
+709
+00:30:31,020 --> 00:30:34,670
+The second one is list five implications
+
+710
+00:30:34,670 --> 00:30:36,820
+of poor data quality in your country?
+
+711
+00:30:36,820 --> 00:30:38,120
+Having some poor data quality,
+
+712
+00:30:38,120 --> 00:30:39,810
+what does it actually mean?
+
+713
+00:30:39,810 --> 00:30:42,100
+What are the real-world consequences
+
+714
+00:30:42,100 --> 00:30:43,650
+of having poor data quality?
+
+715
+00:30:43,650 --> 00:30:45,973
+So wrong or no decisions are made,
+
+716
+00:30:47,360 --> 00:30:50,240
+lack of trust or use, weak accountability
+
+717
+00:30:50,240 --> 00:30:51,290
+and the vicious cycle.
+
+718
+00:30:51,290 --> 00:30:52,910
+So these are kind of broad ones.
+
+719
+00:30:52,910 --> 00:30:55,010
+But you can even be more specific than this.
+
+720
+00:30:55,010 --> 00:30:56,470
+You can say that we are not able
+
+721
+00:30:56,470 --> 00:30:58,770
+to do our monthly planning meetings,
+
+722
+00:30:58,770 --> 00:31:00,070
+or we&#39;re not able to use data
+
+723
+00:31:00,070 --> 00:31:01,240
+in our monthly planning meetings
+
+724
+00:31:01,240 --> 00:31:03,270
+because of poor data quality.
+
+725
+00:31:03,270 --> 00:31:06,450
+Or maybe you have like fragmented system,
+
+726
+00:31:06,450 --> 00:31:08,340
+so like the malaria project
+
+727
+00:31:08,340 --> 00:31:10,070
+decided to build their own information system
+
+728
+00:31:10,070 --> 00:31:13,180
+&#39;cause they didn&#39;t trust the malaria data in the HMIS.
+
+729
+00:31:13,180 --> 00:31:16,280
+Or a donor came in and built their own immunization system
+
+730
+00:31:16,280 --> 00:31:17,310
+because they couldn&#39;t trust
+
+731
+00:31:17,310 --> 00:31:19,410
+the immunization data in the HMIS.
+
+732
+00:31:19,410 --> 00:31:20,670
+You can be very specific here,
+
+733
+00:31:20,670 --> 00:31:22,400
+and we would like to hear those stories
+
+734
+00:31:22,400 --> 00:31:25,440
+and understand what are some of the outcomes
+
+735
+00:31:25,440 --> 00:31:27,290
+or consequences of poor data quality.
+
+736
+00:31:28,480 --> 00:31:32,770
+Okay, so this is the last slide here,
+
+737
+00:31:32,770 --> 00:31:35,150
+again, hopefully you&#39;ve been asking
+
+738
+00:31:35,150 --> 00:31:39,320
+any questions that you have on the Slack channel.
+
+739
+00:31:39,320 --> 00:31:41,640
+If not, please go ahead and post those there.
+
+740
+00:31:41,640 --> 00:31:43,603
+We are now going to take a,
+
+741
+00:31:45,790 --> 00:31:47,720
+I guess it&#39;ll be a 12-minute break.
+
+742
+00:31:47,720 --> 00:31:50,490
+So we are gonna come back at,
+
+743
+00:31:50,490 --> 00:31:54,430
+on my time, 12:15, which is...
+
+744
+00:31:54,430 --> 00:31:57,333
+Oh, sorry, yeah, 12:15, which is 12 minutes from now,
+
+745
+00:31:58,420 --> 00:32:00,590
+so please take this time,
+
+746
+00:32:00,590 --> 00:32:02,190
+get yourself a new cup of coffee,
+
+747
+00:32:02,190 --> 00:32:04,810
+or a glass of tea, or a cup of tea,
+
+748
+00:32:04,810 --> 00:32:06,720
+take a bathroom break,
+
+749
+00:32:06,720 --> 00:32:08,340
+whatever&#39;s it is you need to do,
+
+750
+00:32:08,340 --> 00:32:10,820
+and we are gonna come back here,
+
+751
+00:32:10,820 --> 00:32:14,543
+in yeah, 12 minutes at 12:15.
+

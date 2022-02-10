@@ -1,0 +1,120 @@
+{
+    "course/course": {
+        "advanced_modules": [
+            "lti_consumer", 
+            "survey", 
+            "poll", 
+            "word_cloud", 
+            "xblock-multimedia-carousel"
+        ], 
+        "catalog_visibility": "both", 
+        "cert_html_view_enabled": true, 
+        "cert_html_view_overrides": {
+            "optional_cert_text": "<br/>A self-paced DHIS2 Academy hosted by HISP-UiO ", 
+            "successfully_completed_text": "Has successfully completed"
+        }, 
+        "certificates": {
+            "certificates": [
+                {
+                    "course_title": "Data Quality Level 2", 
+                    "description": "Description of the certificate", 
+                    "id": 1048550871, 
+                    "is_active": true, 
+                    "name": "Name of the certificate", 
+                    "signatories": [
+                        {
+                            "certificate": 1048550871, 
+                            "id": 124106808, 
+                            "name": "Kristin Braa", 
+                            "organization": "University of Oslo", 
+                            "signature_image_path": "/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@cert-signature-kristin-braa.png", 
+                            "title": "Professor"
+                        }
+                    ], 
+                    "version": 1
+                }
+            ]
+        }, 
+        "certificates_display_behavior": "early_with_info", 
+        "certificates_show_before_end": true, 
+        "course_image": "DataQuality_Icon_V2.png", 
+        "days_early_for_beta": 100.0, 
+        "discussion_topics": {
+            "General": {
+                "id": "course"
+            }
+        }, 
+        "display_name": "Data Quality Level 2 Academy", 
+        "end": null, 
+        "enrollment_end": null, 
+        "enrollment_start": "2021-09-30T12:30:00Z", 
+        "entrance_exam_enabled": true, 
+        "entrance_exam_id": "block-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@chapter+block@e625ac21704b47159c7c26dc8ff39fd1", 
+        "entrance_exam_minimum_score_pct": 1.0, 
+        "graceperiod": "", 
+        "instructor_info": {
+            "instructors": []
+        }, 
+        "invitation_only": false, 
+        "is_new": true, 
+        "language": "en", 
+        "learning_info": [], 
+        "lti_passports": [
+            "zoom:xJcHGRAfQOyKEo5VvjFoFQ:YxQigXo6OdHvBfDkJ1Cd12XFrEbx6zy80GMi"
+        ], 
+        "minimum_grade_credit": 0.8, 
+        "self_paced": true, 
+        "start": "2021-09-30T12:30:00Z", 
+        "tabs": [
+            {
+                "course_staff_only": false, 
+                "name": "Home", 
+                "type": "course_info"
+            }, 
+            {
+                "course_staff_only": false, 
+                "name": "Course", 
+                "type": "courseware"
+            }, 
+            {
+                "course_staff_only": false, 
+                "name": "Textbooks", 
+                "type": "textbooks"
+            }, 
+            {
+                "course_staff_only": false, 
+                "name": "Discussion", 
+                "type": "discussion"
+            }, 
+            {
+                "course_staff_only": false, 
+                "is_hidden": true, 
+                "name": "Wiki", 
+                "type": "wiki"
+            }, 
+            {
+                "course_staff_only": false, 
+                "name": "Progress", 
+                "type": "progress"
+            }, 
+            {
+                "course_staff_only": false, 
+                "name": "FAQs", 
+                "type": "static_tab", 
+                "url_slug": "b1d7e7e6ba5c4df68a01db423ef670a8"
+            }, 
+            {
+                "course_staff_only": false, 
+                "name": "Participant's Guide", 
+                "type": "static_tab", 
+                "url_slug": "07d990114c554c89aef908026d0de1c9"
+            }
+        ], 
+        "xml_attributes": {
+            "filename": [
+                "course/course.xml", 
+                "course/course.xml"
+            ]
+        }
+    }
+}

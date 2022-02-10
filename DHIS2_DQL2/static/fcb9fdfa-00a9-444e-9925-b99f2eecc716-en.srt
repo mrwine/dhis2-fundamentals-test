@@ -1,0 +1,608 @@
+0
+00:00:00,140 --> 00:00:01,230
+- [Instructor] So, I&#39;ve brought up
+
+1
+00:00:01,230 --> 00:00:02,590
+a lot of different issues
+
+2
+00:00:02,590 --> 00:00:04,770
+that are potential challenges
+
+3
+00:00:04,770 --> 00:00:06,010
+dealing with system design
+
+4
+00:00:06,010 --> 00:00:08,480
+and resulting in poor data quality,
+
+5
+00:00:08,480 --> 00:00:11,400
+and also just frustration in terms of creating
+
+6
+00:00:11,400 --> 00:00:13,340
+our data outputs.
+
+7
+00:00:13,340 --> 00:00:15,070
+There are a number of different ways
+
+8
+00:00:15,070 --> 00:00:17,700
+we can actually review a lot of these issues.
+
+9
+00:00:17,700 --> 00:00:19,110
+And I think I&#39;ve touched upon
+
+10
+00:00:19,110 --> 00:00:23,330
+kind of identification of a number of these problems.
+
+11
+00:00:23,330 --> 00:00:25,560
+A lot of them are just manual processes
+
+12
+00:00:25,560 --> 00:00:27,060
+where we&#39;re looking at things
+
+13
+00:00:27,060 --> 00:00:30,100
+like trying to find problems with our forms,
+
+14
+00:00:30,100 --> 00:00:33,550
+trying to see if there are duplicate categories,
+
+15
+00:00:33,550 --> 00:00:35,480
+if there are duplicate data elements,
+
+16
+00:00:35,480 --> 00:00:36,800
+things of that nature.
+
+17
+00:00:36,800 --> 00:00:39,740
+So it&#39;s just kind of keeping a sense of our system,
+
+18
+00:00:39,740 --> 00:00:40,980
+mapping it out.
+
+19
+00:00:40,980 --> 00:00:45,760
+What might help in terms of eating these manual processes
+
+20
+00:00:45,760 --> 00:00:49,460
+is having a kind of mapping a layout of our system.
+
+21
+00:00:49,460 --> 00:00:50,820
+Things like data dictionaries,
+
+22
+00:00:50,820 --> 00:00:54,100
+for example, are kind of immensely helpful
+
+23
+00:00:54,100 --> 00:00:56,170
+in performing this type of manual review
+
+24
+00:00:56,170 --> 00:00:59,070
+and identifying if there is all kinds of issues
+
+25
+00:00:59,070 --> 00:01:01,550
+with desegregations and data elements
+
+26
+00:01:01,550 --> 00:01:03,220
+across our different programs,
+
+27
+00:01:03,220 --> 00:01:05,710
+whether it be for tracker or for aggregate data.
+
+28
+00:01:05,710 --> 00:01:06,710
+Now, if these are in place,
+
+29
+00:01:06,710 --> 00:01:10,330
+then it makes manual review of these systems a lot easier,
+
+30
+00:01:10,330 --> 00:01:11,390
+but there are some other things
+
+31
+00:01:11,390 --> 00:01:13,240
+that we can look at from kind of measuring
+
+32
+00:01:13,240 --> 00:01:16,260
+a quality perspective and just kind of highlighting
+
+33
+00:01:16,260 --> 00:01:19,120
+some of these sources of potentially
+
+34
+00:01:19,120 --> 00:01:22,790
+problematic errors within the system itself.
+
+35
+00:01:22,790 --> 00:01:24,900
+So we can look at things like the raw number
+
+36
+00:01:24,900 --> 00:01:27,030
+of data elements, indicators, and data sets,
+
+37
+00:01:27,030 --> 00:01:28,940
+and just kind of make counts
+
+38
+00:01:28,940 --> 00:01:31,820
+of this to see if this is in line
+
+39
+00:01:31,820 --> 00:01:34,480
+with what we would expect based upon
+
+40
+00:01:34,480 --> 00:01:38,000
+the different pieces of information that are collected.
+
+41
+00:01:38,000 --> 00:01:41,770
+We can also look at poorly defined metadata.
+
+42
+00:01:41,770 --> 00:01:44,470
+So I&#39;m going to share with you a document
+
+43
+00:01:44,470 --> 00:01:46,290
+on naming conventions that was written
+
+44
+00:01:46,290 --> 00:01:49,060
+for the WHO digital data packages.
+
+45
+00:01:49,060 --> 00:01:50,920
+And this is just to give you a flavor
+
+46
+00:01:50,920 --> 00:01:53,680
+for where you might want to institute
+
+47
+00:01:53,680 --> 00:01:56,300
+some naming conventions in the location
+
+48
+00:01:56,300 --> 00:01:57,550
+that you&#39;re working with.
+
+49
+00:01:57,550 --> 00:01:59,970
+This is something we can also have some effect
+
+50
+00:01:59,970 --> 00:02:03,710
+on as we can help people to do bulk updates of the names,
+
+51
+00:02:03,710 --> 00:02:05,270
+which is really difficult
+
+52
+00:02:05,270 --> 00:02:07,890
+through the DHIS2 user interface.
+
+53
+00:02:07,890 --> 00:02:09,940
+Once again, something like a data dictionary
+
+54
+00:02:09,940 --> 00:02:11,610
+would also be very helpful here
+
+55
+00:02:11,610 --> 00:02:13,930
+if it&#39;s available because things like definitions
+
+56
+00:02:13,930 --> 00:02:16,310
+and descriptions can be taken directly
+
+57
+00:02:16,310 --> 00:02:17,500
+from those data dictionaries
+
+58
+00:02:17,500 --> 00:02:20,980
+and added to our descriptions in DHIS2.
+
+59
+00:02:20,980 --> 00:02:23,130
+So if we want to see if two objects
+
+60
+00:02:23,130 --> 00:02:25,240
+are actually the same, we can refer back
+
+61
+00:02:25,240 --> 00:02:27,980
+to the description and seeing,
+
+62
+00:02:27,980 --> 00:02:30,350
+in order to see if this is actually representing
+
+63
+00:02:30,350 --> 00:02:32,870
+the same item and if they need to be collapsed
+
+64
+00:02:32,870 --> 00:02:34,063
+later on eventually.
+
+65
+00:02:35,690 --> 00:02:37,860
+We can also look at things like metadata duplicates.
+
+66
+00:02:37,860 --> 00:02:39,790
+And I&#39;ve talked about this already
+
+67
+00:02:39,790 --> 00:02:42,150
+in quite some detail just by going through
+
+68
+00:02:42,150 --> 00:02:44,830
+the user interface and trying to identify
+
+69
+00:02:44,830 --> 00:02:48,010
+if what we&#39;re seeing is duplicated in several places.
+
+70
+00:02:48,010 --> 00:02:49,600
+Things like indicators, data elements,
+
+71
+00:02:49,600 --> 00:02:51,960
+and all this stuff around categories
+
+72
+00:02:51,960 --> 00:02:54,410
+are some examples where we can just kind of go through
+
+73
+00:02:54,410 --> 00:02:57,770
+the user interface and do some type of assessment.
+
+74
+00:02:57,770 --> 00:03:00,500
+So we&#39;ll talk about this a little bit more
+
+75
+00:03:00,500 --> 00:03:02,820
+in terms of the results of this process.
+
+76
+00:03:02,820 --> 00:03:04,520
+And what we might need to do
+
+77
+00:03:04,520 --> 00:03:06,393
+when we find a lot of these errors.
+
+78
+00:03:07,490 --> 00:03:10,960
+We also want to describe some other tools
+
+79
+00:03:10,960 --> 00:03:13,940
+that could be used to assess DHIS2 design.
+
+80
+00:03:13,940 --> 00:03:16,640
+And this includes a data integrity checks
+
+81
+00:03:16,640 --> 00:03:19,360
+and a number of supplemental SQL scripts
+
+82
+00:03:19,360 --> 00:03:21,160
+that are also available to perform
+
+83
+00:03:21,160 --> 00:03:23,563
+some initial assessment of the database design.
+
+84
+00:03:25,260 --> 00:03:26,790
+Now I put here in the loop learning objectives
+
+85
+00:03:26,790 --> 00:03:28,330
+that we want you to be able to describe
+
+86
+00:03:28,330 --> 00:03:30,930
+the following only because if you&#39;re not comfortable
+
+87
+00:03:30,930 --> 00:03:33,040
+running an SQL script, for example,
+
+88
+00:03:33,040 --> 00:03:35,420
+all you need to know is that there are scripts available
+
+89
+00:03:35,420 --> 00:03:36,860
+and you can get the output of this
+
+90
+00:03:36,860 --> 00:03:38,680
+and maybe have one of your team members
+
+91
+00:03:38,680 --> 00:03:40,750
+kind of help you do these types of things.
+
+92
+00:03:40,750 --> 00:03:41,910
+So as long as you&#39;re aware
+
+93
+00:03:41,910 --> 00:03:44,800
+that some of these tools are available,
+
+94
+00:03:44,800 --> 00:03:46,190
+you can always kind of lean on them
+
+95
+00:03:46,190 --> 00:03:47,560
+and get someone else to kind of help you
+
+96
+00:03:47,560 --> 00:03:49,033
+implement them in practice.
+
+97
+00:03:52,010 --> 00:03:54,010
+So here&#39;s an example of the result
+
+98
+00:03:54,010 --> 00:03:57,120
+of a manual assessment in a live system.
+
+99
+00:03:57,120 --> 00:04:01,150
+And one thing that we have to be kind of cognizant of,
+
+100
+00:04:01,150 --> 00:04:02,520
+that we have to be thinking of,
+
+101
+00:04:02,520 --> 00:04:05,110
+basically whenever we&#39;re doing these types of reviews
+
+102
+00:04:05,110 --> 00:04:08,230
+is that there&#39;s often going to be significant pushback.
+
+103
+00:04:08,230 --> 00:04:12,203
+This type of activity is often difficult to explain,
+
+104
+00:04:13,040 --> 00:04:16,380
+but there is a huge impact on data quality
+
+105
+00:04:16,380 --> 00:04:18,530
+as we&#39;ve been discussing over the course
+
+106
+00:04:18,529 --> 00:04:20,350
+of these various sessions.
+
+107
+00:04:20,350 --> 00:04:24,050
+So what we see here is a number of metadata items.
+
+108
+00:04:24,050 --> 00:04:27,540
+And then in the first kind of significant column,
+
+109
+00:04:27,540 --> 00:04:32,087
+current system, is the actual system as it stands currently,
+
+110
+00:04:33,220 --> 00:04:35,160
+then what I have in the next box
+
+111
+00:04:35,160 --> 00:04:37,170
+is expected in new system.
+
+112
+00:04:37,170 --> 00:04:41,170
+So sometimes we have to actually rebuild
+
+113
+00:04:41,170 --> 00:04:42,870
+the database, you know?
+
+114
+00:04:42,870 --> 00:04:47,240
+And this is a big step and it&#39;s a very time consuming step
+
+115
+00:04:47,240 --> 00:04:50,390
+and it takes a lot of effort and resources to do,
+
+116
+00:04:50,390 --> 00:04:52,680
+but I wouldn&#39;t shy away necessarily
+
+117
+00:04:52,680 --> 00:04:54,600
+for making that recommendation.
+
+118
+00:04:54,600 --> 00:04:56,040
+If it is going to result
+
+119
+00:04:56,040 --> 00:04:58,950
+in significant usability changes
+
+120
+00:04:58,950 --> 00:05:01,200
+that would just make the system much easier to use,
+
+121
+00:05:01,200 --> 00:05:02,740
+make the data quality,
+
+122
+00:05:02,740 --> 00:05:04,500
+improve the data quality significantly
+
+123
+00:05:04,500 --> 00:05:07,590
+by collapsing various data elements
+
+124
+00:05:07,590 --> 00:05:09,890
+and getting the right value for them.
+
+125
+00:05:09,890 --> 00:05:13,190
+So now you&#39;re aware of what your source data elements are,
+
+126
+00:05:13,190 --> 00:05:15,520
+you&#39;re aware of what your desegregations are.
+
+127
+00:05:15,520 --> 00:05:17,620
+You&#39;re able to collapse these to be correct.
+
+128
+00:05:17,620 --> 00:05:20,380
+And users are only seeing one version
+
+129
+00:05:20,380 --> 00:05:21,320
+of these data elements,
+
+130
+00:05:21,320 --> 00:05:24,230
+of these desegregations in their system.
+
+131
+00:05:24,230 --> 00:05:25,840
+So they know they&#39;re can be confident
+
+132
+00:05:25,840 --> 00:05:27,750
+that they&#39;re selecting the right value
+
+133
+00:05:27,750 --> 00:05:30,020
+when they&#39;re making their outputs.
+
+134
+00:05:30,020 --> 00:05:32,510
+So this can be a bit challenging to go through
+
+135
+00:05:33,380 --> 00:05:34,700
+and actually come up with the results
+
+136
+00:05:34,700 --> 00:05:36,320
+and implement the solution,
+
+137
+00:05:36,320 --> 00:05:38,260
+but actually just going through it
+
+138
+00:05:38,260 --> 00:05:39,780
+and doing a manual review,
+
+139
+00:05:39,780 --> 00:05:41,427
+even without kind of saying,
+
+140
+00:05:41,427 --> 00:05:43,300
+&quot;Okay, now I&#39;m going to actually implement
+
+141
+00:05:43,300 --> 00:05:45,080
+all of these changes in practice.&quot;
+
+142
+00:05:45,080 --> 00:05:46,500
+But just being able to identify
+
+143
+00:05:46,500 --> 00:05:48,490
+some of these things and show people
+
+144
+00:05:48,490 --> 00:05:50,120
+how this can have an effect
+
+145
+00:05:50,120 --> 00:05:51,910
+on what they&#39;re doing and maybe ease
+
+146
+00:05:51,910 --> 00:05:54,110
+some of their frustration by implementing
+
+147
+00:05:54,110 --> 00:05:55,670
+even some of these bandaid solutions
+
+148
+00:05:55,670 --> 00:05:58,020
+like category option groups and group sets
+
+149
+00:05:58,020 --> 00:06:00,540
+that kind of mask things from the user itself
+
+150
+00:06:00,540 --> 00:06:03,820
+can be hugely beneficial just by going through the system
+
+151
+00:06:03,820 --> 00:06:06,820
+and kind of having a look at how it&#39;s been built and set up.
+

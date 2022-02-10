@@ -1,0 +1,784 @@
+0
+00:00:00,720 --> 00:00:03,370
+- [Narrator] So I wanted to spend a bit of time
+
+1
+00:00:03,370 --> 00:00:06,930
+discussing category options, categories,
+
+2
+00:00:06,930 --> 00:00:09,940
+category combinations, category option combinations,
+
+3
+00:00:09,940 --> 00:00:13,810
+category option groups and category option group sets.
+
+4
+00:00:13,810 --> 00:00:15,500
+Now that is a pretty big mouthful,
+
+5
+00:00:15,500 --> 00:00:20,060
+but actually, this model that we use to desegregate our data
+
+6
+00:00:20,060 --> 00:00:23,600
+has a lot of pitfalls if it&#39;s not managed correctly.
+
+7
+00:00:23,600 --> 00:00:25,170
+This is something I think a lot of us
+
+8
+00:00:25,170 --> 00:00:27,990
+have a direct impact in influencing
+
+9
+00:00:27,990 --> 00:00:31,060
+because we&#39;re often helping people set up their systems,
+
+10
+00:00:31,060 --> 00:00:33,880
+deal with this, set up standard operating procedures
+
+11
+00:00:33,880 --> 00:00:35,760
+to create their metadata and often
+
+12
+00:00:35,760 --> 00:00:38,180
+being the ones to have to fix this problem
+
+13
+00:00:38,180 --> 00:00:40,320
+when it is eventually noticed.
+
+14
+00:00:40,320 --> 00:00:42,140
+What you&#39;ll see here in this example
+
+15
+00:00:42,140 --> 00:00:43,830
+that I&#39;m going to go through with you
+
+16
+00:00:43,830 --> 00:00:45,800
+is that we have a category option
+
+17
+00:00:45,800 --> 00:00:47,400
+of five years and above
+
+18
+00:00:47,400 --> 00:00:49,833
+and a category option of five years plus.
+
+19
+00:00:51,020 --> 00:00:53,230
+So these individual category options
+
+20
+00:00:53,230 --> 00:00:55,650
+are duplicates of one another.
+
+21
+00:00:55,650 --> 00:00:58,420
+And this can create a lot of havoc later on,
+
+22
+00:00:58,420 --> 00:01:01,680
+as you&#39;ll see as we go through the model for this.
+
+23
+00:01:01,680 --> 00:01:03,380
+So what happens in this scenario?
+
+24
+00:01:03,380 --> 00:01:05,663
+So I have these two category options.
+
+25
+00:01:07,440 --> 00:01:10,980
+Now I&#39;m going to assign those to different categories,
+
+26
+00:01:10,980 --> 00:01:13,640
+to different category combinations.
+
+27
+00:01:13,640 --> 00:01:15,220
+This is going to result
+
+28
+00:01:15,220 --> 00:01:18,690
+in different category option combinations being generated
+
+29
+00:01:18,690 --> 00:01:21,960
+based upon those category options.
+
+30
+00:01:21,960 --> 00:01:24,320
+Now where this becomes challenging
+
+31
+00:01:24,320 --> 00:01:26,180
+is when they&#39;re completely different.
+
+32
+00:01:26,180 --> 00:01:28,180
+So they have different IDs.
+
+33
+00:01:28,180 --> 00:01:29,260
+So what you&#39;ll see here
+
+34
+00:01:29,260 --> 00:01:32,940
+is there&#39;s a group of category option combinations
+
+35
+00:01:32,940 --> 00:01:36,330
+in this green square that are the same,
+
+36
+00:01:36,330 --> 00:01:39,880
+but you can see the name is identical across all of them.
+
+37
+00:01:39,880 --> 00:01:42,280
+What has happened is a category option
+
+38
+00:01:42,280 --> 00:01:45,600
+is used in multiple category combinations essentially.
+
+39
+00:01:45,600 --> 00:01:47,960
+And this is generated, you still have to be
+
+40
+00:01:47,960 --> 00:01:50,620
+a bit careful here because you want to make sure
+
+41
+00:01:50,620 --> 00:01:53,490
+that you&#39;re storing your data in the right place.
+
+42
+00:01:53,490 --> 00:01:57,110
+So this has a big impact on data exchange for example,
+
+43
+00:01:57,110 --> 00:02:00,160
+when you wanna move data from maybe one system to another,
+
+44
+00:02:00,160 --> 00:02:03,160
+or you&#39;re importing data, whatever it is that you&#39;re doing,
+
+45
+00:02:03,160 --> 00:02:05,170
+because you wanna make sure that you&#39;re looking up
+
+46
+00:02:05,170 --> 00:02:07,640
+the appropriate category option combination
+
+47
+00:02:07,640 --> 00:02:10,630
+that&#39;s associated with the proper category combination
+
+48
+00:02:10,630 --> 00:02:12,930
+that&#39;s tied to your data element.
+
+49
+00:02:12,930 --> 00:02:14,340
+Now the reason you wanna get this right
+
+50
+00:02:14,340 --> 00:02:16,400
+is because when you bring in that data, you know,
+
+51
+00:02:16,400 --> 00:02:19,350
+if you bring it into the wrong category option combination,
+
+52
+00:02:20,300 --> 00:02:22,370
+then the data will not be correct at all.
+
+53
+00:02:22,370 --> 00:02:25,210
+And you will have to kind of go through a different process.
+
+54
+00:02:25,210 --> 00:02:26,820
+And of course, if you&#39;re always selecting
+
+55
+00:02:26,820 --> 00:02:28,990
+different category combinations
+
+56
+00:02:28,990 --> 00:02:32,150
+that are associated with category option combinations,
+
+57
+00:02:32,150 --> 00:02:34,090
+you&#39;ll have the same problem.
+
+58
+00:02:34,090 --> 00:02:37,490
+So let&#39;s stick with the orange bars, the orange boxes,
+
+59
+00:02:37,490 --> 00:02:40,540
+five years and above and five years plus.
+
+60
+00:02:40,540 --> 00:02:43,090
+Now what&#39;s in this green box, this is okay,
+
+61
+00:02:43,090 --> 00:02:45,390
+it&#39;s the exact same name, it&#39;s associated
+
+62
+00:02:45,390 --> 00:02:49,390
+with different category combinations essentially.
+
+63
+00:02:49,390 --> 00:02:52,200
+But these two ones in the orange boxes,
+
+64
+00:02:52,200 --> 00:02:54,870
+these are problematic, they&#39;re problematic,
+
+65
+00:02:54,870 --> 00:02:57,440
+both from any kind of data exchange standpoint,
+
+66
+00:02:57,440 --> 00:02:59,100
+where you&#39;re trying to bring in data
+
+67
+00:02:59,100 --> 00:03:01,120
+or even just store the data, you know,
+
+68
+00:03:01,120 --> 00:03:03,530
+because you might have then your data split
+
+69
+00:03:03,530 --> 00:03:06,020
+between these two, even though they should be
+
+70
+00:03:06,020 --> 00:03:07,343
+exactly the same.
+
+71
+00:03:08,370 --> 00:03:09,760
+And then they&#39;re also a problem
+
+72
+00:03:09,760 --> 00:03:11,730
+from the analysis point of view.
+
+73
+00:03:11,730 --> 00:03:15,130
+Which one do I select when I want to review my data?
+
+74
+00:03:15,130 --> 00:03:16,940
+Am I selecting the wrong one?
+
+75
+00:03:16,940 --> 00:03:20,120
+So on top of creating a host of data quality issues,
+
+76
+00:03:20,120 --> 00:03:23,990
+because now you&#39;re storing what is the similar object
+
+77
+00:03:23,990 --> 00:03:25,550
+in two different places basically,
+
+78
+00:03:25,550 --> 00:03:28,590
+the data is spread amongst these two
+
+79
+00:03:28,590 --> 00:03:30,313
+category option combinations.
+
+80
+00:03:31,290 --> 00:03:32,870
+Then you have this problem
+
+81
+00:03:32,870 --> 00:03:37,870
+where you&#39;re not even sure which one to select.
+
+82
+00:03:38,260 --> 00:03:40,350
+So what we can do, so I mentioned earlier
+
+83
+00:03:40,350 --> 00:03:43,290
+this concept of category option groups and group sets.
+
+84
+00:03:43,290 --> 00:03:46,800
+When I talked about desegregations collapsing,
+
+85
+00:03:46,800 --> 00:03:48,590
+that previous example was when zero
+
+86
+00:03:48,590 --> 00:03:52,460
+to one and one to four collapsed to less than five.
+
+87
+00:03:52,460 --> 00:03:54,710
+In this scenario, we can also take
+
+88
+00:03:54,710 --> 00:03:57,200
+our disparate category option combinations
+
+89
+00:03:57,200 --> 00:04:00,150
+and use category auction groups and group sets
+
+90
+00:04:00,150 --> 00:04:03,350
+in order to kind of at least for the user,
+
+91
+00:04:03,350 --> 00:04:04,973
+hide this problem.
+
+92
+00:04:07,270 --> 00:04:10,220
+So what we can do is we can create two
+
+93
+00:04:10,220 --> 00:04:14,820
+category option groups, one that is less than five
+
+94
+00:04:14,820 --> 00:04:18,160
+and one that is greater than or equal to five.
+
+95
+00:04:18,160 --> 00:04:21,150
+In our system, we&#39;re lucky enough that the under five years
+
+96
+00:04:21,149 --> 00:04:22,350
+does not have duplicates.
+
+97
+00:04:22,350 --> 00:04:25,370
+So there&#39;s no less than five something with a symbol
+
+98
+00:04:25,370 --> 00:04:27,890
+or something written out with the words less than,
+
+99
+00:04:27,890 --> 00:04:29,840
+and then five or whatever it might be.
+
+100
+00:04:29,840 --> 00:04:33,050
+There&#39;s only one under five, but for five years and above,
+
+101
+00:04:33,050 --> 00:04:35,820
+we have these two copies of each other.
+
+102
+00:04:35,820 --> 00:04:37,800
+And from the user&#39;s perspective,
+
+103
+00:04:37,800 --> 00:04:40,190
+what we can do is we can hide this entirely.
+
+104
+00:04:40,190 --> 00:04:43,640
+So this is something we can kind of help and support.
+
+105
+00:04:43,640 --> 00:04:46,220
+Now, maybe it was in the past this was done.
+
+106
+00:04:46,220 --> 00:04:48,010
+Maybe this is something that was, you know,
+
+107
+00:04:48,010 --> 00:04:50,890
+when we&#39;re supporting that configuration happened over time.
+
+108
+00:04:50,890 --> 00:04:52,640
+Maybe there was a lack of coordination,
+
+109
+00:04:52,640 --> 00:04:54,550
+whatever the reasoning behind this,
+
+110
+00:04:54,550 --> 00:04:55,860
+and this is often, you know,
+
+111
+00:04:55,860 --> 00:04:58,340
+something that does happen in practice,
+
+112
+00:04:58,340 --> 00:05:00,370
+there is a way at least to hide it from the user.
+
+113
+00:05:00,370 --> 00:05:02,560
+We just have to be very careful, of course,
+
+114
+00:05:02,560 --> 00:05:04,980
+when we&#39;re bringing in data or storing data
+
+115
+00:05:04,980 --> 00:05:06,900
+or whatever we&#39;re doing with that data
+
+116
+00:05:06,900 --> 00:05:08,030
+to make sure it&#39;s associated
+
+117
+00:05:08,030 --> 00:05:10,990
+with the right category option combination.
+
+118
+00:05:10,990 --> 00:05:13,530
+But let&#39;s have a look at this again, right?
+
+119
+00:05:13,530 --> 00:05:16,420
+So we create these two category option groups,
+
+120
+00:05:16,420 --> 00:05:18,310
+and this might be kind of a new concept
+
+121
+00:05:18,310 --> 00:05:21,090
+and I&#39;ll go over the actual example of this.
+
+122
+00:05:21,090 --> 00:05:23,460
+So we create these two category option groups,
+
+123
+00:05:23,460 --> 00:05:26,720
+and then we create what we call a category option group set,
+
+124
+00:05:26,720 --> 00:05:27,580
+which is comprised
+
+125
+00:05:27,580 --> 00:05:30,470
+of the category option groups that we create.
+
+126
+00:05:30,470 --> 00:05:32,310
+So let&#39;s actually go into DHIS2
+
+127
+00:05:32,310 --> 00:05:34,180
+so we can get a better idea
+
+128
+00:05:34,180 --> 00:05:35,830
+of what it is that we&#39;re talking.
+
+129
+00:05:36,920 --> 00:05:38,490
+Okay, let&#39;s have a look
+
+130
+00:05:38,490 --> 00:05:40,463
+at the example that I&#39;m discussing.
+
+131
+00:05:41,920 --> 00:05:43,320
+I&#39;m in the category option group
+
+132
+00:05:43,320 --> 00:05:46,120
+maintenance part of the app.
+
+133
+00:05:46,120 --> 00:05:48,960
+So I&#39;m going to go to less than five.
+
+134
+00:05:48,960 --> 00:05:51,893
+This is the first category option group that I created.
+
+135
+00:05:57,380 --> 00:06:01,380
+If I scroll down, we can see that I&#39;ve added
+
+136
+00:06:01,380 --> 00:06:04,840
+one category option, under five years,
+
+137
+00:06:04,840 --> 00:06:06,930
+this is basically a duplicate
+
+138
+00:06:06,930 --> 00:06:09,730
+of the under five years category option
+
+139
+00:06:09,730 --> 00:06:12,800
+that already exists in our system,
+
+140
+00:06:12,800 --> 00:06:16,480
+but we&#39;re not able to create category option group sets
+
+141
+00:06:16,480 --> 00:06:18,770
+based on category options alone.
+
+142
+00:06:18,770 --> 00:06:20,700
+So we have to kind of replicate it
+
+143
+00:06:20,700 --> 00:06:24,453
+in order to get the process to be the same as before.
+
+144
+00:06:25,620 --> 00:06:28,570
+I&#39;ll just go back and I&#39;ll go to my greater than
+
+145
+00:06:28,570 --> 00:06:29,653
+or equal to five.
+
+146
+00:06:32,210 --> 00:06:36,620
+So we can see here, I&#39;ve added the two category options
+
+147
+00:06:36,620 --> 00:06:38,340
+that are copies of each other.
+
+148
+00:06:38,340 --> 00:06:40,840
+These are duplicate category options.
+
+149
+00:06:40,840 --> 00:06:43,370
+And what I want to do is I basically want to hide
+
+150
+00:06:43,370 --> 00:06:46,600
+the fact that there are duplicate category options
+
+151
+00:06:46,600 --> 00:06:49,250
+in this particular system, right?
+
+152
+00:06:49,250 --> 00:06:53,380
+So I don&#39;t want the user to have any idea
+
+153
+00:06:53,380 --> 00:06:55,053
+that this exists basically.
+
+154
+00:06:58,340 --> 00:07:02,620
+So what I do, I create these two category option groups,
+
+155
+00:07:02,620 --> 00:07:05,743
+and then I create the category option group set.
+
+156
+00:07:08,900 --> 00:07:09,733
+So we can see here,
+
+157
+00:07:09,733 --> 00:07:13,143
+less than five and greater than or equal to five.
+
+158
+00:07:15,380 --> 00:07:18,220
+Okay, so I&#39;ll just go down here and we can see here,
+
+159
+00:07:18,220 --> 00:07:21,410
+you select from your available category option groups,
+
+160
+00:07:21,410 --> 00:07:23,420
+not your category options.
+
+161
+00:07:23,420 --> 00:07:24,970
+So that&#39;s why we have to create
+
+162
+00:07:24,970 --> 00:07:26,900
+individual category, option groups,
+
+163
+00:07:26,900 --> 00:07:29,390
+even if they contain same information
+
+164
+00:07:29,390 --> 00:07:32,120
+that&#39;s present in our category options.
+
+165
+00:07:32,120 --> 00:07:34,820
+You know, it&#39;s not the easiest process.
+
+166
+00:07:34,820 --> 00:07:37,710
+It&#39;s not the easiest process to understand certainly.
+
+167
+00:07:37,710 --> 00:07:39,830
+And you require a lot of experience
+
+168
+00:07:39,830 --> 00:07:42,970
+with the category model to understand this, but you know,
+
+169
+00:07:42,970 --> 00:07:45,110
+it&#39;s something we can do to help users
+
+170
+00:07:45,110 --> 00:07:47,560
+from seeing these particular problems
+
+171
+00:07:47,560 --> 00:07:49,680
+that exist in our database.
+
+172
+00:07:49,680 --> 00:07:52,823
+Now, because I&#39;ve selected this as a data dimension here,
+
+173
+00:07:54,500 --> 00:07:56,653
+let me just open up data visualizer.
+
+174
+00:07:59,340 --> 00:08:02,330
+Now you can see that I have this dimension here,
+
+175
+00:08:02,330 --> 00:08:05,070
+less than five, greater than or equal to five.
+
+176
+00:08:05,070 --> 00:08:07,560
+And when I click on this, you&#39;ll see
+
+177
+00:08:07,560 --> 00:08:09,530
+there&#39;s only two options there.
+
+178
+00:08:09,530 --> 00:08:11,520
+Even though we know in this group,
+
+179
+00:08:11,520 --> 00:08:13,320
+greater than or equal to five,
+
+180
+00:08:13,320 --> 00:08:17,000
+we actually have two category options,
+
+181
+00:08:17,000 --> 00:08:19,100
+two category option groups
+
+182
+00:08:19,100 --> 00:08:21,930
+associated with this particular group set.
+
+183
+00:08:21,930 --> 00:08:24,940
+So what we&#39;re seeing here is the group set, right?
+
+184
+00:08:24,940 --> 00:08:27,860
+And it&#39;s comprised of these kind of groups, right?
+
+185
+00:08:27,860 --> 00:08:30,420
+So this is a group set here, and these are our groups.
+
+186
+00:08:30,420 --> 00:08:32,640
+So this hides from the user completely,
+
+187
+00:08:32,640 --> 00:08:35,710
+the fact that there are two separate under five, or sorry,
+
+188
+00:08:35,710 --> 00:08:39,420
+two separate, greater than or equal to fives in our system.
+
+189
+00:08:39,419 --> 00:08:43,200
+And we can use this to then desegregate our data
+
+190
+00:08:43,200 --> 00:08:45,680
+without worrying about which one should I be using
+
+191
+00:08:45,680 --> 00:08:48,140
+for which data element, right?
+
+192
+00:08:48,140 --> 00:08:50,850
+It&#39;s something maybe that should be fixed in the future,
+
+193
+00:08:50,850 --> 00:08:53,430
+but this allows for a temporary fix to take place
+
+194
+00:08:53,430 --> 00:08:54,980
+in order to kind of hide this,
+
+195
+00:08:54,980 --> 00:08:57,133
+mask this from the user essentially.
+

@@ -1,0 +1,10 @@
+<video youtube="1.00:BsvaFEn6GYQ" url_name="51b1394edeca4d47b9bf703f51c2ccbe" sub="" transcripts="{&quot;en&quot;: &quot;c36dc3d2-8d1b-441d-b27d-2281f2b6972b-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="SQL Scripts" download_track="true" download_video="true" edx_video_id="c36dc3d2-8d1b-441d-b27d-2281f2b6972b" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.4_SQL_scripts.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/5.4.4+-+SQL+Scripts.mp4&quot;]" show_captions="false" youtube_id_1_0="BsvaFEn6GYQ">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/5.4.4+-+SQL+Scripts.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@5.4.4_SQL_scripts.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="c36dc3d2-8d1b-441d-b27d-2281f2b6972b-en.srt"/>
+</video>

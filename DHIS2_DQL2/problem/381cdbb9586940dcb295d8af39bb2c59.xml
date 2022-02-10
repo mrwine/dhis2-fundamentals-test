@@ -1,0 +1,20 @@
+<problem display_name="Graded question - Considerations when Configuring the WHO DQ Tool - Question 1" markdown="A data element must be in what for it to be able to be found when configuring the WHO DQ tool.&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts) &lt;&lt;&#10;&#10;( ) A. Data set&#10;(x) B. Data element group&#10;( ) C. Indicator&#10;( ) D. Category combination&#10;[explanation]&#10;Data Element Group is correct. &#10;[explanation]&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>A data element must be in what for it to be able to be found when configuring the WHO DQ tool.</p>
+<label>Select the one correct answer: (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Data set</choice>
+    <choice correct="true">B. Data element group</choice>
+    <choice correct="false">C. Indicator</choice>
+    <choice correct="false">D. Category combination</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Data Element Group is correct. </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

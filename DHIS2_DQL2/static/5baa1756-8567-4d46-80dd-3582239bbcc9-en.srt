@@ -1,0 +1,408 @@
+0
+00:00:00,146 --> 00:00:03,000
+And I am going to now give a quick introductory PowerPoint
+
+1
+00:00:03,000 --> 00:00:04,240
+just to walk us through
+
+2
+00:00:04,472 --> 00:00:06,400
+what we&#39;re actually gonna be doing this week.
+
+3
+00:00:07,284 --> 00:00:09,827
+What are the objectives of this academy?
+
+4
+00:00:10,047 --> 00:00:12,267
+Well, we really only have five main objectives.
+
+5
+00:00:12,267 --> 00:00:13,367
+These are quite broad.
+
+6
+00:00:14,259 --> 00:00:16,728
+But let&#39;s just go through these quickly.
+
+7
+00:00:16,728 --> 00:00:19,628
+We want you to be able to understand
+
+8
+00:00:19,628 --> 00:00:22,053
+all of the necessary components of data quality.
+
+9
+00:00:22,053 --> 00:00:23,273
+Many of you are experts.
+
+10
+00:00:23,803 --> 00:00:25,343
+Many of you could probably give
+
+11
+00:00:25,343 --> 00:00:29,053
+a lot of these presentations and lectures yourself.
+
+12
+00:00:29,053 --> 00:00:31,593
+We appreciate all the various skillsets that are coming in,
+
+13
+00:00:31,593 --> 00:00:33,023
+and we hope that you&#39;re able to communicate
+
+14
+00:00:33,264 --> 00:00:35,174
+and talk to each other throughout this week
+
+15
+00:00:35,174 --> 00:00:37,414
+to be able to share your own insights.
+
+16
+00:00:37,414 --> 00:00:40,774
+But there are some foundational components of data quality
+
+17
+00:00:40,774 --> 00:00:42,534
+that everyone needs to appreciate.
+
+18
+00:00:42,534 --> 00:00:44,504
+And if we collectively understand this,
+
+19
+00:00:44,504 --> 00:00:46,724
+we can have conversations and build each other up around it.
+
+20
+00:00:46,724 --> 00:00:48,152
+So that&#39;s a big part of today
+
+21
+00:00:48,152 --> 00:00:51,235
+is understanding these necessary components of data quality.
+
+22
+00:00:52,048 --> 00:00:54,278
+This exists outside of DHIS2.
+
+23
+00:00:54,278 --> 00:00:58,507
+This is everyday work, data quality kind of concepts.
+
+24
+00:00:59,392 --> 00:01:01,762
+The next objective is that we want you to be able
+
+25
+00:01:01,762 --> 00:01:06,431
+to know how to use all of the key DHIS2 functionalities
+
+26
+00:01:06,431 --> 00:01:07,851
+for data quality.
+
+27
+00:01:07,851 --> 00:01:10,181
+Our promise that there are many functionalities
+
+28
+00:01:10,181 --> 00:01:11,561
+that you&#39;re probably not using.
+
+29
+00:01:11,561 --> 00:01:14,921
+There&#39;s a lot of incredible features in DHIS2
+
+30
+00:01:14,921 --> 00:01:17,811
+that allow you to perform routine,
+
+31
+00:01:17,811 --> 00:01:21,664
+annual or even notifications and alerts,
+
+32
+00:01:21,664 --> 00:01:23,697
+automatic data quality checks.
+
+33
+00:01:25,877 --> 00:01:27,777
+It&#39;s important that you know how to use all of these,
+
+34
+00:01:27,777 --> 00:01:30,227
+know when to use them, know how to use them,
+
+35
+00:01:30,227 --> 00:01:32,607
+and then you&#39;re able to apply them to your own projects
+
+36
+00:01:32,607 --> 00:01:36,477
+and or country implementations.
+
+37
+00:01:36,477 --> 00:01:38,097
+And I think that&#39;s the third bullet point,
+
+38
+00:01:38,097 --> 00:01:39,647
+is we really want you to be able to take away
+
+39
+00:01:39,647 --> 00:01:41,447
+from this academy practical skills
+
+40
+00:01:41,447 --> 00:01:43,577
+that you can immediately apply.
+
+41
+00:01:43,577 --> 00:01:46,917
+We don&#39;t want this to just be apps, just theoretical.
+
+42
+00:01:46,917 --> 00:01:48,807
+We want you to actually be able to say,
+
+43
+00:01:48,807 --> 00:01:50,357
+hey, I can use that feature.
+
+44
+00:01:50,357 --> 00:01:53,127
+I can use that tool that Scott or Bob
+
+45
+00:01:53,127 --> 00:01:55,407
+or whoever just introduced to me,
+
+46
+00:01:55,407 --> 00:01:58,937
+and I&#39;m gonna be able to immediately use this
+
+47
+00:01:58,937 --> 00:02:03,915
+and start performing routine data quality checks next week,
+
+48
+00:02:03,915 --> 00:02:05,064
+later this week.&quot;
+
+49
+00:02:05,064 --> 00:02:07,034
+We want these things to be immediately implemented.
+
+50
+00:02:07,034 --> 00:02:08,074
+And we wanna hear about it.
+
+51
+00:02:08,074 --> 00:02:11,224
+We want to hear about the successes, the failures,
+
+52
+00:02:11,224 --> 00:02:14,874
+your user stories that you have in using DHIS2
+
+53
+00:02:14,874 --> 00:02:16,554
+for data quality checks.
+
+54
+00:02:16,554 --> 00:02:19,404
+But we&#39;re gonna incorporate all of this feedback,
+
+55
+00:02:19,404 --> 00:02:21,134
+as well as answer any of your questions
+
+56
+00:02:21,134 --> 00:02:23,874
+into some guidance documentations
+
+57
+00:02:23,874 --> 00:02:25,974
+and to improve this academy going forward.
+
+58
+00:02:27,099 --> 00:02:29,284
+The second to last bullet point here
+
+59
+00:02:29,284 --> 00:02:31,234
+is we wanna make sure that you are exposed
+
+60
+00:02:31,234 --> 00:02:33,264
+to a variety of use cases and examples.
+
+61
+00:02:33,457 --> 00:02:36,667
+There are many really wonderful examples
+
+62
+00:02:36,764 --> 00:02:39,994
+and stories that exist out there of people using DHIS2
+
+63
+00:02:39,994 --> 00:02:43,117
+for data quality checks,
+
+64
+00:02:43,117 --> 00:02:47,097
+and really utilizing the features to the max.
+
+65
+00:02:47,097 --> 00:02:48,897
+And that&#39;s what we wanna expose you to.
+
+66
+00:02:48,897 --> 00:02:51,057
+So it&#39;s one thing for me to kind of go through everything
+
+67
+00:02:51,057 --> 00:02:53,527
+in theory, it&#39;s a very different,
+
+68
+00:02:53,527 --> 00:02:57,727
+an extremely useful thing for you to be able to see people
+
+69
+00:02:57,727 --> 00:02:58,637
+actually doing it.
+
+70
+00:02:58,637 --> 00:03:00,527
+And so throughout the week,
+
+71
+00:03:00,527 --> 00:03:01,527
+you&#39;re going to be seeing
+
+72
+00:03:01,527 --> 00:03:07,154
+all of the several different data quality user stories,
+
+73
+00:03:07,154 --> 00:03:09,664
+and you can start to build up
+
+74
+00:03:09,664 --> 00:03:11,564
+your own data quality strategies and plans
+
+75
+00:03:11,564 --> 00:03:13,065
+around what other people have done.
+
+76
+00:03:13,440 --> 00:03:15,820
+There&#39;s a whole world of DHIS2 users out there,
+
+77
+00:03:15,820 --> 00:03:18,490
+many, many countries doing different things.
+
+78
+00:03:18,490 --> 00:03:19,700
+You don&#39;t have to reinvent the wheel.
+
+79
+00:03:19,700 --> 00:03:22,200
+You can just build on top of what good practices
+
+80
+00:03:22,200 --> 00:03:23,750
+other people have already done.
+
+81
+00:03:24,639 --> 00:03:26,189
+The final point, and this is the one
+
+82
+00:03:26,189 --> 00:03:28,849
+that I really wanna kind of drive home as much as possible
+
+83
+00:03:28,849 --> 00:03:30,719
+is we wanna build a DHIS2 community
+
+84
+00:03:30,719 --> 00:03:32,519
+of practice around data quality.
+
+85
+00:03:32,519 --> 00:03:35,579
+Everyone is talking about data use, data use, data use.
+
+86
+00:03:35,579 --> 00:03:39,142
+Lots of folks focus on individual disease programs,
+
+87
+00:03:39,142 --> 00:03:42,493
+patient tracking.
+
+88
+00:03:42,493 --> 00:03:44,581
+But there doesn&#39;t really exist
+
+89
+00:03:44,581 --> 00:03:47,861
+a strong DHIS2 community of practice
+
+90
+00:03:47,861 --> 00:03:50,041
+that&#39;s principally concerned with data quality.
+
+91
+00:03:50,041 --> 00:03:52,681
+And of course, we appreciate that without data quality,
+
+92
+00:03:52,681 --> 00:03:54,131
+people aren&#39;t gonna use data.
+
+93
+00:03:54,131 --> 00:03:56,078
+All of the data that&#39;s coming in
+
+94
+00:03:56,078 --> 00:03:58,968
+from these various disease programs and projects,
+
+95
+00:03:59,016 --> 00:04:01,064
+it&#39;s not gonna be useful, it&#39;s not gonna be reliable.
+
+96
+00:04:01,064 --> 00:04:04,020
+And so just as much as we focus on all the other aspects
+
+97
+00:04:04,020 --> 00:04:05,740
+of the different types of data we get in,
+
+98
+00:04:05,740 --> 00:04:08,770
+the different way to look at data and visualize data,
+
+99
+00:04:09,348 --> 00:04:11,368
+it&#39;s equally as important, if not more so,
+
+100
+00:04:11,561 --> 00:04:13,894
+to also have a group focused on data quality
+
+101
+00:04:13,894 --> 00:04:35,124
+and how do we address data quality in DHIS2?
+

@@ -1,0 +1,10 @@
+<video youtube="1.00:SPH4tl5Tj4w" url_name="346cd790aa034c508d35e497b90dbe05" sub="" transcripts="{&quot;en&quot;: &quot;38bbdbe7-4886-4a5d-9b9f-a873ef2aa3a6-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="The Data Quality App - Min/Max Values" download_track="true" download_video="true" edx_video_id="38bbdbe7-4886-4a5d-9b9f-a873ef2aa3a6" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@The_Data_Quality_App_-_MinMax_Values.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/3.4.3+The+Data+Quality+App+-+Min_Max+Values_+Pre-Recorded+Sessions_.mp4&quot;]" show_captions="false" youtube_id_1_0="SPH4tl5Tj4w">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/3.4.3+The+Data+Quality+App+-+Min_Max+Values_+Pre-Recorded+Sessions_.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@The_Data_Quality_App_-_MinMax_Values.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="38bbdbe7-4886-4a5d-9b9f-a873ef2aa3a6-en.srt"/>
+</video>

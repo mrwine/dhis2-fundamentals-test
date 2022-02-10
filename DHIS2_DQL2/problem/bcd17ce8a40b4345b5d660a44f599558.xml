@@ -1,0 +1,20 @@
+<problem display_name="Graded question - Numerator Relations - Question 1" markdown="Numerator relations appear where on the WHO DQ tool dashboard?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts) &lt;&lt;&#10;&#10;( ) A. The Completeness tab&#10;( ) B. The Consistency - Time Tab&#10;(x) C. The Consistency - Data Tab&#10;( ) D. The Outliers Tab&#10;[explanation]&#10;The Consistency - Data Tab is correct&#10;[explanation]&#10;&#10;" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Numerator relations appear where on the WHO DQ tool dashboard?</p>
+<label>Select the one correct answer: (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. The Completeness tab</choice>
+    <choice correct="false">B. The Consistency - Time Tab</choice>
+    <choice correct="true">C. The Consistency - Data Tab</choice>
+    <choice correct="false">D. The Outliers Tab</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The Consistency - Data Tab is correct</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

@@ -1,0 +1,10 @@
+<video youtube="1.00:ht2cB059dUk" url_name="290a9620e720476790c8640735701595" sub="" transcripts="{&quot;en&quot;: &quot;c165b6ad-0784-4280-a948-cd87e135b85c-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Data Quality Domains" download_track="true" download_video="true" edx_video_id="c165b6ad-0784-4280-a948-cd87e135b85c" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.2.2_-_Data_Quality_Domains.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/1.2.2+-+Data+quality+domains.mp4&quot;]" youtube_id_1_0="ht2cB059dUk">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/1.2.2+-+Data+quality+domains.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.2.2_-_Data_Quality_Domains.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="c165b6ad-0784-4280-a948-cd87e135b85c-en.srt"/>
+</video>

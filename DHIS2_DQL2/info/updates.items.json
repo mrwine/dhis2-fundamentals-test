@@ -1,0 +1,56 @@
+[
+    {
+        "content": "<p> Hi Everyone, </p> \n\n<p>We hope you enjoyed the first day of the course, and that you've managed to submit your assignment for today!</p> \n<p>Just to confirm the submission deadlines for the course, they are as follows:</p>\n<p><b>Week 1 (19th - 23rd October):</b>> Assignments are due on <b>Sunday 25th October, 23:30 UTC</b></p>\n<p><b>Week 2 (26th - 30th October):</b> Assignments are due on <b>Sunday 1st November, 23:30 UTC</b></p>\n<p><b>Asynchronous Assignments (Availble 22nd October) :</b> Assignments are due on <b>Sunday 1st November, 23:30 UTC</b></p>\n<p><b>Final Exam:</b> due on <b>Sunday 8th November, 23:30 UTC</b></p>\n<p>Kind Regards,</p>\n<p>Digital Academy Course Team</p>", 
+        "date": "October 19, 2020", 
+        "id": 1, 
+        "status": "deleted"
+    }, 
+    {
+        "content": "<p>Dear all</p>\n<p>We hope you are enjoying the Academy!</p>\n<p>Please note that Norway will switch to European winter time this weekend, and will set the clock backward one hour from Sunday 25 October. It means that you will need to make sure to login one hour later next week to match the new 11:00am Oslo time.</p>\n<p>To make sure you don't miss the beginning of the sessions on Monday 26 and Tuesday 27 October, we advise that you double-check the time conversion for your country on <a href=\"https://www.timeanddate.com/worldclock/converter.html?iso=20201026T100000&p1=187\" target=\"_blank\"> TimeandDate.com</a></p>\n<p>You'll see that Norway is already set up, you just need to add your city and the platform will show what time you need to join. Please make sure not to change the date already configured.</p>\n<p>Kind Regards,</p>\n<p>Your Digital Academy Team</p>", 
+        "date": "October 22, 2020", 
+        "id": 2, 
+        "status": "deleted"
+    }, 
+    {
+        "content": "<p>Dear Participants, </p> \n<p>We are in the process of uploading this weeks live sessions to the course page, as they will be removed from the zoom cloud over the next few days.</p> \n\n<p> You'll be able to find the recordings in in Todays Presentations <span>&#38;</span> Session Recordings subsection for each day.</p> \n\n<p>Kind regards, </p> \n\n<p>Your Academy Team </p> ", 
+        "date": "October 23, 2020", 
+        "id": 3, 
+        "status": "deleted"
+    }, 
+    {
+        "content": "<p>Dear Participants, </p> \n<p>Due to the end of Daylight Savings time in Norway, all course times will be in GMT+1</p> \n\n<p> If you don't have time zone change where you live, that means the Zoom sessions will start 1 hour later than last week</p> \n\n<p>Kind regards, </p> \n\n<p>Your Academy Team </p> ", 
+        "date": "October 26, 2020", 
+        "id": 4, 
+        "status": "deleted"
+    }, 
+    {
+        "content": "<p>Dear participants! </p>\n\n<p>We would like you to remind you of the deadline for the assignments and exam for Sunday at 23:30 UTC. Please do not wait until the last moment for submission!</p> \n\n<p>On another note, we now have all the live sessions available in YouTube format - you can watch these in the Presentation tab of each day on the Online Academy page - I definitely recommend watching parts you missed. You can also find the requested video by Norah about Min-Max values in DHIS2. </p>\n\n<p>Best of luck to you all! </p>", 
+        "date": "October 28, 2020", 
+        "id": 5, 
+        "status": "deleted"
+    }, 
+    {
+        "content": "<p>Dear Participant,</p>\n<p>Thank you for actively participating in the DHIS2 Data Quality Academy, Level 2. We had a great time walking you through. We appreciate the effort that you put into this course, and we hope that you enjoyed learning in the Data Quality Academy, Level 2 through this digital Academy. With or without a certificate, you should be proud of your accomplishments.</p>\n\n<p>If you qualify for a certificate (overall score 70% or higher), Progress tab (https://academy.dhis2.org/courses/course-v1:DHIS2+DHIS2_DQL2+10_2020/progress) includes a link to your certificate.</p>\n\n<p>As an enrolled student, you will have access to the lecture videos even after the course ends. Assessments will remain, but you will no longer be able to submit answers to any problem sets or exams with due dates.</p>\n<p>The Data Quality Slack workspace will close on Wednesday 2 December 10:00am.</p>\n\n<p>We hope that you will very soon apply what you learned during the Data Quality Academy, Level 2. </p>\n<p>Looking forward to meeting you in our next DHIS2 Academy.</p>\n\n<p>The DHIS2 Academy Core Team</p>\n", 
+        "date": "November 30, 2020", 
+        "id": 6, 
+        "status": "deleted"
+    }, 
+    {
+        "content": "<h3>Welcome to the DHIS2 Data Quality Academy and thank you for joining us!</h3>\n<p>This course is for advanced DHIS2 level users. To be successful in this course, prior experience with DHIS2 is required.</p>\n<p><b>NOTE:</b> This course is adapted from a live Level 2 Academy that took place in October 2020. While we have made considerable effort to adapt it to a self-paced Academy, you may notice references to dates and times in the video recordings that make up this course \u2013 please ignore these, as they are not relevant to the current version of the course.</p>\n<p>This course is still in the beta testing phase, which means that there may be some changes to the course appearance and content in the coming weeks. We do not expect these changes to affect your learning experience. If you observe any issues with the course material during the beta testing phase, please let us know using the surveys that are at the end of each module of the course, or by sending an email to the support address.</p>\n", 
+        "date": "September 30, 2021", 
+        "id": 7, 
+        "status": "deleted"
+    }, 
+    {
+        "content": "<h4>Email service error from DHIS2 training instances</h4>\n<p>Dear learners, </p>\n<p>We are currently experiencing problems with sending email from our training instances of DHIS2. This means that you may not be able to receive emails when registering accounts for DHIS2 training instances, or when requesting password resets for them.\nIf you already have an account you can still log in and work in the DHIS2 instances. The material from the course pages is still available, so feel free to continue the course by watching learning material and taking quizzes before returning to the assignments and exercises requiring Trainingland or Customization access when this issue has been resolved. </p>\n<p>We will notify you as soon as we are able to resolve the problem. Thank you for your patience. </p>\n<p>Regards, </p>\n<p> <b>The DHIS2 Academy Training Team</b></p>", 
+        "date": "October 26, 2021", 
+        "id": 8, 
+        "status": "visible"
+    }, 
+    {
+        "content": "<h3>Welcome to the DHIS2 Data Quality Academy and thank you for joining us!</h3>\n<p>In this course, you will learn how to identify good Data Quality, as well as learn about how to use some of the tools to identify data quality issues in your databases.  \nThis course is for advanced DHIS2 level users. To be successful in this course, prior experience with DHIS2 is required.</p>\n<p><b>NOTE:</b> This course is adapted from a live Level 2 Academy that took place in October 2020. While we have made considerable effort to adapt it to a self-paced Academy, you may notice references to dates and times in the video recordings that make up this course \u2013 please ignore these, as they are not relevant to the current version of the course.</p>\n<p> Throughout the academy, you will have the opportunity to provide feedback on the course material through short survey forms. If you encounter technical issues with the course, you can also contact us via email. We appreciate any feedback you provide.</p>\n", 
+        "date": "November 1, 2021", 
+        "id": 9, 
+        "status": "visible"
+    }
+]

@@ -1,0 +1,19 @@
+<problem display_name="Graded question - Manual Metadata Review" markdown="&gt;&gt;Fill in the remainder of the statement. &quot;Manual Metadata Review… (2 attempts)&lt;&lt;&#10;&#10;( ) A. Is not necessary as metadata review can be fully automated &#10;(x) B. Can be time consuming but often can result in significant usability improvements &#10;( ) C. Can have a negative effect on data quality&#10;&#10;[explanation] &#10;Option B is correct. Manual Metadata Review can be time consuming but often can result in significant usability improvements. This requires detailed knowledge of DHIS2 data models along with inputs from programs etc. regarding metadata that is no longer valid but can be very useful for long term maintenance, data use and data quality. Option A is incorrect because a number of tasks can be automated; however usually some manual review is also required. Option C is incorrect because reviewing the metadata from time to time is always a good practice and should be encouraged.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <label>Fill in the remainder of the statement. "Manual Metadata Review… (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Is not necessary as metadata review can be fully automated</choice>
+    <choice correct="true">B. Can be time consuming but often can result in significant usability improvements</choice>
+    <choice correct="false">C. Can have a negative effect on data quality</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p> </p>
+<p>Option B is correct. Manual Metadata Review can be time consuming but often can result in significant usability improvements. This requires detailed knowledge of DHIS2 data models along with inputs from programs etc. regarding metadata that is no longer valid but can be very useful for long term maintenance, data use and data quality. Option A is incorrect because a number of tasks can be automated; however usually some manual review is also required. Option C is incorrect because reviewing the metadata from time to time is always a good practice and should be encouraged.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

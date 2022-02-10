@@ -1,0 +1,18 @@
+<problem display_name=" Incorrect Disaggregations &amp; Duplication of Variables - Graded Exercise" markdown="null" max_attempts="2">
+<multiplechoiceresponse>
+  <label>What is the main issue that has the highest impact on data quality with the above form? (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. Clinical cases should not be grouped with testing and results.</choice>
+    <choice correct="false">B. The disaggregations are using a mix of months and years.</choice>
+    <choice correct="true">C. Pregnant Women is a subset of 15 years+.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p><b>Option C has the largest impact on data quality because totals will be incorrect for each data element</b>. Regarding disaggregations using a mix of months and years, as well as Clinical cases should not be grouped with testing and results, both may be a formatting issue, but is less likely to have a direct impact on data quality.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

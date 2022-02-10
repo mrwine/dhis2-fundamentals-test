@@ -1,0 +1,10 @@
+<video youtube="1.00:fBN5Uz3ZSAs" url_name="b49d0036229747c8bcca774687560697" sub="" transcripts="{&quot;en&quot;: &quot;d183ec43-94bf-40d1-a348-aee99ea18e14-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Use Case - South Africa" download_track="true" download_video="true" edx_video_id="d183ec43-94bf-40d1-a348-aee99ea18e14" handout="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.3.2_-_Use_Case_South_Africa.pdf" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/1.3.2+-+Use+Case_+South+Africa.mp4&quot;]" youtube_id_1_0="fBN5Uz3ZSAs">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/1.3.2+-+Use+Case_+South+Africa.mp4"/>
+  <handout src="/asset-v1:DHIS2+DHIS2_DQL2O+2021_Q1-4+type@asset+block@1.3.2_-_Use_Case_South_Africa.pdf"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="d183ec43-94bf-40d1-a348-aee99ea18e14-en.srt"/>
+</video>

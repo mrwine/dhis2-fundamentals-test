@@ -1,0 +1,19 @@
+<problem display_name="Knowledge Check: Question 1" markdown="Select the best description for the Completeness dimension: &#10;&#10;&gt;&gt;Select the one correct answer&lt;&lt;&#10;&#10;(x) A. Completeness is assessed by measuring whether all the entities that are supposed to report actually do so.&#10;( ) B. Completeness is assessed by measuring whether any entities report at all.&#10;( ) C. Completeness is assessed by measuring how consistently entities report their data.&#10;&#10;[explanation]&#10;Completeness is assessed by measuring whether all the entities that are supposed to report actually do so.&#10;[explanation]&#10;">
+<multiplechoiceresponse>
+  <p>Select the best description for the Completeness dimension: </p>
+<label>Select the one correct answer</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="true">A. Completeness is assessed by measuring whether all the entities that are supposed to report actually do so.</choice>
+    <choice correct="false">B. Completeness is assessed by measuring whether any entities report at all.</choice>
+    <choice correct="false">C. Completeness is assessed by measuring how consistently entities report their data.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>Completeness is assessed by measuring whether all the entities that are supposed to report actually do so.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

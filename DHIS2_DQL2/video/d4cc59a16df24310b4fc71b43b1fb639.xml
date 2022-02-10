@@ -1,0 +1,9 @@
+<video youtube="1.00:qZdbCqoZgcs" url_name="d4cc59a16df24310b4fc71b43b1fb639" sub="" transcripts="{&quot;en&quot;: &quot;89c94966-21b7-40c1-9af7-bd07bcaa70e1-en.srt&quot;}" license="creative-commons: ver=4.0 BY NC ND" display_name="Completeness " download_track="true" download_video="true" edx_video_id="89c94966-21b7-40c1-9af7-bd07bcaa70e1" html5_sources="[&quot;https://academy.downloads.dhis2.org/Data+Quality/2.1.2+-+Completeness.mp4&quot;]" youtube_id_1_0="qZdbCqoZgcs">
+  <source src="https://academy.downloads.dhis2.org/Data+Quality/2.1.2+-+Completeness.mp4"/>
+  <video_asset client_video_id="external video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="89c94966-21b7-40c1-9af7-bd07bcaa70e1-en.srt"/>
+</video>

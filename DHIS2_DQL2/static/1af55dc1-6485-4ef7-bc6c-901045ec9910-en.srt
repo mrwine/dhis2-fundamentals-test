@@ -1,0 +1,708 @@
+0
+00:00:00,130 --> 00:00:05,130
+- Let&#39;s push on and get to the actual configuration.
+
+1
+00:00:05,479 --> 00:00:07,880
+Okay, so it hasn&#39;t been configured.
+
+2
+00:00:07,880 --> 00:00:11,860
+We recognize that, and now
+
+3
+00:00:11,860 --> 00:00:16,023
+let&#39;s launch the administration, the configuration page.
+
+4
+00:00:16,930 --> 00:00:20,782
+This instance is really very efficiently designed
+
+5
+00:00:20,782 --> 00:00:24,690
+and our internet connectivity is good.
+
+6
+00:00:24,690 --> 00:00:29,690
+So we are instantly taken to this first page
+
+7
+00:00:30,220 --> 00:00:34,740
+on configuration, but what what you will often find
+
+8
+00:00:34,740 --> 00:00:39,740
+is that you&#39;ll get a message, even as a super user,
+
+9
+00:00:40,340 --> 00:00:44,240
+you&#39;ll get a message that says you do not have authority
+
+10
+00:00:44,240 --> 00:00:47,452
+to change the configuration.
+
+11
+00:00:47,452 --> 00:00:52,452
+And the issue may be just internet connectivity,
+
+12
+00:00:53,870 --> 00:00:58,630
+that it&#39;s not able to communicate with the app
+
+13
+00:00:58,630 --> 00:01:01,443
+because of internet connectivity issues.
+
+14
+00:01:01,443 --> 00:01:03,820
+And you may have to wait awhile
+
+15
+00:01:03,820 --> 00:01:06,732
+before the message disappears
+
+16
+00:01:06,732 --> 00:01:09,703
+that says you don&#39;t have access rights.
+
+17
+00:01:11,468 --> 00:01:15,850
+To be able to do the configuration
+
+18
+00:01:15,850 --> 00:01:18,580
+you have to have the level of authority
+
+19
+00:01:18,580 --> 00:01:22,440
+of someone who can define indicators
+
+20
+00:01:22,440 --> 00:01:27,210
+and the user roles which have that level of authority
+
+21
+00:01:27,210 --> 00:01:30,933
+are the ones which are able to do this configuration.
+
+22
+00:01:31,840 --> 00:01:35,240
+Now, what is it that we are configuring here?
+
+23
+00:01:35,240 --> 00:01:37,300
+You can use the analysis function
+
+24
+00:01:37,300 --> 00:01:40,280
+even without doing any configuration.
+
+25
+00:01:40,280 --> 00:01:44,830
+So anyone with access to the data quality tool
+
+26
+00:01:44,830 --> 00:01:48,470
+can go through the steps of selecting one data element
+
+27
+00:01:48,470 --> 00:01:51,590
+or one indicator and looking for outliers,
+
+28
+00:01:51,590 --> 00:01:53,090
+doing comparisons.
+
+29
+00:01:53,090 --> 00:01:56,480
+But what we are configuring here is really
+
+30
+00:01:56,480 --> 00:01:59,430
+the dashboard of the data quality tool.
+
+31
+00:01:59,430 --> 00:02:04,307
+These are the numerators which will appear on the dashboard.
+
+32
+00:02:04,307 --> 00:02:09,307
+We&#39;re also configuring at the same time, the annual report.
+
+33
+00:02:10,520 --> 00:02:14,070
+And we won&#39;t spend time in this internal training
+
+34
+00:02:14,070 --> 00:02:15,610
+discussing the annual report,
+
+35
+00:02:15,610 --> 00:02:19,781
+but those are the two things that are being configured
+
+36
+00:02:19,781 --> 00:02:23,360
+with this page here.
+
+37
+00:02:23,360 --> 00:02:26,040
+Actually, there&#39;s a series of six,
+
+38
+00:02:26,040 --> 00:02:30,510
+and what we&#39;d like to do is take you through
+
+39
+00:02:30,510 --> 00:02:34,758
+the first four of these, in this internal training,
+
+40
+00:02:34,758 --> 00:02:38,437
+starting of course, with the numerators
+
+41
+00:02:39,710 --> 00:02:42,210
+and you see the columns here, groups,
+
+42
+00:02:42,210 --> 00:02:45,480
+what is a group, a reference numerator?
+
+43
+00:02:45,480 --> 00:02:49,985
+What does this mean? Core and data element indicator.
+
+44
+00:02:49,985 --> 00:02:53,610
+The groups, if you scroll down,
+
+45
+00:02:53,610 --> 00:02:58,043
+you see the pre-assigned groups,
+
+46
+00:02:58,928 --> 00:03:03,780
+general service statistics like hospital admissions,
+
+47
+00:03:03,780 --> 00:03:05,420
+outpatient visits, HIV.
+
+48
+00:03:05,420 --> 00:03:10,300
+These are the rest of the groups are basically programs.
+
+49
+00:03:10,300 --> 00:03:12,610
+You can actually add a group.
+
+50
+00:03:12,610 --> 00:03:15,730
+Now, what&#39;s the point of a group?
+
+51
+00:03:15,730 --> 00:03:20,730
+The groups determine what you see in the dropdown menu
+
+52
+00:03:21,590 --> 00:03:26,590
+and we have to configure at least one numerator
+
+53
+00:03:26,840 --> 00:03:29,080
+before we&#39;ll see any group.
+
+54
+00:03:29,080 --> 00:03:31,550
+So let me show you,
+
+55
+00:03:31,550 --> 00:03:35,317
+let&#39;s go ahead and configure DPT 3,
+
+56
+00:03:35,317 --> 00:03:39,760
+and then we&#39;ll see the functions of a group.
+
+57
+00:03:39,760 --> 00:03:42,220
+So I click on DPT 3.
+
+58
+00:03:42,220 --> 00:03:47,220
+This is the name, that WHO is recommending
+
+59
+00:03:48,450 --> 00:03:53,140
+that this be a core, notice core is checked here,
+
+60
+00:03:53,140 --> 00:03:55,400
+they&#39;re recommending that you configure this
+
+61
+00:03:55,400 --> 00:03:59,560
+as a core indicator or data element.
+
+62
+00:03:59,560 --> 00:04:02,610
+And if I recall for the play instance,
+
+63
+00:04:02,610 --> 00:04:05,213
+DPT 3 is a data element.
+
+64
+00:04:06,340 --> 00:04:11,340
+It&#39;s in the data element group of immunization,
+
+65
+00:04:12,240 --> 00:04:14,283
+or is it EPI up here?
+
+66
+00:04:16,829 --> 00:04:18,270
+Let&#39;s see, yeah.
+
+67
+00:04:18,269 --> 00:04:22,960
+Immunization data element group, a comment,
+
+68
+00:04:22,960 --> 00:04:25,363
+notice in this dropdown list,
+
+69
+00:04:26,440 --> 00:04:30,943
+there&#39;s nothing comparable to all data elements.
+
+70
+00:04:31,951 --> 00:04:36,220
+When you configure a pivot table or a chart,
+
+71
+00:04:36,220 --> 00:04:38,760
+you&#39;re used to having a dropdown menu
+
+72
+00:04:38,760 --> 00:04:42,070
+that allows you to select from all data elements.
+
+73
+00:04:42,070 --> 00:04:46,230
+Well, that&#39;s not possible with the data quality tool,
+
+74
+00:04:46,230 --> 00:04:48,600
+this version of the data quality tool.
+
+75
+00:04:48,600 --> 00:04:51,925
+So, if the data element you want
+
+76
+00:04:51,925 --> 00:04:55,960
+is not in a data element group,
+
+77
+00:04:55,960 --> 00:04:59,470
+or if the indicator that you want to select
+
+78
+00:04:59,470 --> 00:05:03,710
+is not an indicator group, then you simply can&#39;t select it.
+
+79
+00:05:03,710 --> 00:05:08,210
+And what you have to do is exit the tool and assign
+
+80
+00:05:08,210 --> 00:05:10,850
+that data element to a data element group,
+
+81
+00:05:10,850 --> 00:05:14,350
+or assign the indicator to a data element group.
+
+82
+00:05:14,350 --> 00:05:17,826
+It&#39;s one of the clunky features of the tool
+
+83
+00:05:17,826 --> 00:05:20,250
+that you simply have to get used to,
+
+84
+00:05:20,250 --> 00:05:25,250
+but in this case, the DPT 3 is there.
+
+85
+00:05:25,980 --> 00:05:29,840
+And what I&#39;m doing is I&#39;m finding the exact name
+
+86
+00:05:29,840 --> 00:05:33,700
+in the play instance of the data element
+
+87
+00:05:33,700 --> 00:05:37,623
+that is equivalent to this WHO recommended
+
+88
+00:05:39,270 --> 00:05:42,150
+reference numerator of DPT 3.
+
+89
+00:05:42,150 --> 00:05:46,930
+So the comparable one I found on the list is Penta three.
+
+90
+00:05:46,930 --> 00:05:51,410
+And then you have to specify what data set is in there.
+
+91
+00:05:51,410 --> 00:05:54,721
+And this one is a bit curious,
+
+92
+00:05:54,721 --> 00:05:59,721
+you see the detailed data elements and it almost
+
+93
+00:06:01,330 --> 00:06:04,920
+doesn&#39;t matter a great deal which one you select,
+
+94
+00:06:04,920 --> 00:06:07,670
+this appears in the annual report.
+
+95
+00:06:07,670 --> 00:06:11,670
+It doesn&#39;t appear anywhere else on the data quality tool,
+
+96
+00:06:11,670 --> 00:06:14,330
+but the annual report makes use of this.
+
+97
+00:06:14,330 --> 00:06:19,330
+And the rule that I suggest is to take the data element
+
+98
+00:06:19,890 --> 00:06:23,440
+that probably has the largest value, in this case,
+
+99
+00:06:23,440 --> 00:06:26,123
+it is fixed immunization under one,
+
+100
+00:06:27,230 --> 00:06:30,090
+only after you have filled in all of these,
+
+101
+00:06:30,090 --> 00:06:34,720
+let&#39;s say that we hadn&#39;t filled this in, we left it blank.
+
+102
+00:06:34,720 --> 00:06:38,410
+Notice the save button is grayed out.
+
+103
+00:06:38,410 --> 00:06:42,480
+So it insists that you fill in all of these
+
+104
+00:06:42,480 --> 00:06:46,040
+and sometimes if internet connectivity is poor,
+
+105
+00:06:46,040 --> 00:06:49,840
+one of these, just simply won&#39;t allow you,
+
+106
+00:06:49,840 --> 00:06:52,390
+the app won&#39;t allow you to fill it in
+
+107
+00:06:52,390 --> 00:06:56,550
+and then you just have to wait a bit,
+
+108
+00:06:56,550 --> 00:06:59,610
+pause until you&#39;re allowed to fill in
+
+109
+00:06:59,610 --> 00:07:02,920
+every single field of this screen
+
+110
+00:07:02,920 --> 00:07:05,083
+and then you can save.
+
+111
+00:07:06,300 --> 00:07:08,460
+So I&#39;ve saved.
+
+112
+00:07:08,460 --> 00:07:10,370
+Okay, and now notice, okay,
+
+113
+00:07:10,370 --> 00:07:13,900
+we&#39;ve got, it&#39;s in the immunization group.
+
+114
+00:07:13,900 --> 00:07:18,170
+This is the WHO recommended name,
+
+115
+00:07:18,170 --> 00:07:20,930
+the name doesn&#39;t really matter a great deal,
+
+116
+00:07:20,930 --> 00:07:24,633
+core is checked here and I&#39;ll show you what core means.
+
+117
+00:07:25,670 --> 00:07:30,670
+And this is the name of that, what we have mapped the WHO
+
+118
+00:07:31,720 --> 00:07:35,230
+reference numerator to a specific data element
+
+119
+00:07:35,230 --> 00:07:39,670
+in the play instance and it&#39;s from the child health dataset.
+
+120
+00:07:39,670 --> 00:07:42,130
+Now, let me show you the function of the group.
+
+121
+00:07:42,130 --> 00:07:44,280
+If we go to the dashboard
+
+122
+00:07:45,570 --> 00:07:50,420
+and the settings window, we now have,
+
+123
+00:07:50,420 --> 00:07:53,720
+finally, the dashboard has something on it.
+
+124
+00:07:53,720 --> 00:07:56,410
+It&#39;s got the child health completeness
+
+125
+00:07:56,410 --> 00:07:58,070
+on the completeness page
+
+126
+00:07:58,070 --> 00:08:02,850
+and under data, if we look at the dropdown menu under data,
+
+127
+00:08:02,850 --> 00:08:04,833
+we have two groups,
+
+128
+00:08:06,090 --> 00:08:09,820
+DPT 3 was assigned to the core group
+
+129
+00:08:09,820 --> 00:08:13,130
+but it&#39;s also in the immunization group.
+
+130
+00:08:13,130 --> 00:08:15,785
+So these groups are
+
+131
+00:08:15,785 --> 00:08:20,785
+the selections that appear in the data window,
+
+132
+00:08:21,040 --> 00:08:25,210
+the data you&#39;re not selecting, unlike the app,
+
+133
+00:08:25,210 --> 00:08:28,410
+the pivot table app, or data visualizer,
+
+134
+00:08:28,410 --> 00:08:30,870
+you&#39;re not selecting a data element
+
+135
+00:08:30,870 --> 00:08:33,960
+or indicator or a dataset,
+
+136
+00:08:33,960 --> 00:08:36,700
+you&#39;re selecting between these groups.
+
+137
+00:08:36,700 --> 00:08:41,700
+And as we go on, we&#39;ll see how using this data window,
+
+138
+00:08:42,370 --> 00:08:47,150
+it allows you to do a data quality review
+
+139
+00:08:47,150 --> 00:08:51,060
+that is specific for one program
+
+140
+00:08:51,060 --> 00:08:56,060
+and a program might have a larger number of indicators
+
+141
+00:08:56,350 --> 00:08:59,060
+that are specific to immunization, okay?
+
+142
+00:08:59,060 --> 00:09:04,060
+So I&#39;m going to go back to the numerator configuration page
+
+143
+00:09:06,680 --> 00:09:09,008
+and show you one more
+
+144
+00:09:09,008 --> 00:09:10,208
+and then we&#39;re going to,
+
+145
+00:09:11,330 --> 00:09:13,983
+we&#39;re going to see if a volunteer can,
+
+146
+00:09:15,791 --> 00:09:20,791
+or perhaps we&#39;ll do that tomorrow at the same time
+
+147
+00:09:21,675 --> 00:09:24,950
+and get a volunteer to practice this
+
+148
+00:09:25,990 --> 00:09:29,020
+so that I can show you some more features of configuration.
+
+149
+00:09:29,020 --> 00:09:32,197
+I&#39;m going to do one more, DPT one,
+
+150
+00:09:33,680 --> 00:09:38,410
+actually, I&#39;m going to show you another limitation
+
+151
+00:09:38,410 --> 00:09:42,750
+or aspect of the tool that&#39;s less user-friendly,
+
+152
+00:09:42,750 --> 00:09:47,150
+let&#39;s say that we don&#39;t want this to be a core,
+
+153
+00:09:47,150 --> 00:09:50,760
+see these check marks are in the column for core
+
+154
+00:09:50,760 --> 00:09:54,070
+and this means it is one of the data elements
+
+155
+00:09:54,070 --> 00:09:59,010
+that you see on the dashboard if you set data to core.
+
+156
+00:09:59,010 --> 00:10:01,750
+So let&#39;s say that we&#39;ve changed our mind,
+
+157
+00:10:01,750 --> 00:10:06,020
+we don&#39;t want to have DPT 3 amongst the core indicators,
+
+158
+00:10:06,020 --> 00:10:08,230
+just as an immunization indicator,
+
+159
+00:10:08,230 --> 00:10:12,950
+so we click on edit and you can easily enough
+
+160
+00:10:13,830 --> 00:10:16,630
+de-select core but notice what has happened
+
+161
+00:10:16,630 --> 00:10:20,110
+to all of these other fields of the window,
+
+162
+00:10:20,110 --> 00:10:22,140
+they&#39;ve disappeared.
+
+163
+00:10:22,140 --> 00:10:25,281
+So the app has no memory.
+
+164
+00:10:25,281 --> 00:10:30,281
+If you go in to reconfigure DPT 3,
+
+165
+00:10:31,900 --> 00:10:34,739
+you&#39;ve got to start from scratch
+
+166
+00:10:34,739 --> 00:10:38,460
+and go through this process once again,
+
+167
+00:10:38,460 --> 00:10:42,630
+repeat everything, which is a bit tedious,
+
+168
+00:10:42,630 --> 00:10:45,670
+but that&#39;s for now what you have to do,
+
+169
+00:10:45,670 --> 00:10:50,530
+you have to reset everything before you can reconfigure it.
+
+170
+00:10:52,290 --> 00:10:56,093
+So now we have changed DPT 3,
+
+171
+00:10:56,093 --> 00:11:01,080
+so that it is no longer a core indicator.
+
+172
+00:11:01,080 --> 00:11:05,320
+And in fact, let&#39;s see what we find if we,
+
+173
+00:11:05,320 --> 00:11:09,970
+yeah see it&#39;s blank, there&#39;s no indicator in core,
+
+174
+00:11:09,970 --> 00:11:13,480
+but if we change this to immunization,
+
+175
+00:11:13,480 --> 00:11:18,480
+then the indicator DPT 3 is in the immunization group.
+
+176
+00:11:19,690 --> 00:11:24,690
+So the dashboard shows results for DPT 3.
+

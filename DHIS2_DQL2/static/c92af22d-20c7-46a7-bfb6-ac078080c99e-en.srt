@@ -1,0 +1,332 @@
+0
+00:00:00,130 --> 00:00:01,750
+- [Instructor] So this is the play instance,
+
+1
+00:00:01,750 --> 00:00:04,300
+which I think you&#39;re all familiar with.
+
+2
+00:00:04,300 --> 00:00:08,300
+And if we launch the data quality app,
+
+3
+00:00:08,300 --> 00:00:11,993
+are you all seeing that on your screen, by the way?
+
+4
+00:00:14,190 --> 00:00:16,100
+If we launch the data quality app
+
+5
+00:00:16,100 --> 00:00:21,010
+you immediately get this message that says that it&#39;s not,
+
+6
+00:00:21,010 --> 00:00:26,010
+hasn&#39;t been configured and this,
+
+7
+00:00:26,530 --> 00:00:29,790
+you&#39;ll see this as soon as it&#39;s installed,
+
+8
+00:00:29,790 --> 00:00:33,190
+but I&#39;m skipping ahead here because I wanted
+
+9
+00:00:33,190 --> 00:00:38,190
+to first comment a bit on the installation of the app.
+
+10
+00:00:40,580 --> 00:00:43,713
+It&#39;s like any app, if you go to app management,
+
+11
+00:00:45,700 --> 00:00:49,920
+you can find it in what used to be called the App Store.
+
+12
+00:00:49,920 --> 00:00:53,610
+Now it&#39;s in the App Hub under standard apps.
+
+13
+00:00:53,610 --> 00:00:56,910
+You see that the instance already has it installed,
+
+14
+00:00:56,910 --> 00:01:01,830
+but sometimes you want to re-install the latest version.
+
+15
+00:01:01,830 --> 00:01:04,720
+I find a number of national instances
+
+16
+00:01:04,720 --> 00:01:07,610
+where they have an outdated version
+
+17
+00:01:07,610 --> 00:01:09,450
+of the data quality tool.
+
+18
+00:01:09,450 --> 00:01:14,000
+The current one in the hub is version 1.2.3.
+
+19
+00:01:15,070 --> 00:01:16,793
+Let me move this out of the way.
+
+20
+00:01:18,080 --> 00:01:22,010
+And in some cases, it&#39;s best
+
+21
+00:01:22,010 --> 00:01:27,010
+to install this over the outdated version
+
+22
+00:01:27,450 --> 00:01:30,480
+that is on a national instance.
+
+23
+00:01:30,480 --> 00:01:32,680
+Fortunately, when you do that,
+
+24
+00:01:32,680 --> 00:01:35,640
+it&#39;s very user-friendly because it will preserve
+
+25
+00:01:35,640 --> 00:01:38,060
+whatever configuration has been done
+
+26
+00:01:38,060 --> 00:01:40,050
+with the previous national instance.
+
+27
+00:01:40,050 --> 00:01:42,960
+You don&#39;t have to worry about starting from scratch
+
+28
+00:01:42,960 --> 00:01:47,313
+when you re-install the latest version.
+
+29
+00:01:48,790 --> 00:01:52,043
+I think of it as rebooting the computer.
+
+30
+00:01:52,880 --> 00:01:57,520
+When the old version, there are issues with it.
+
+31
+00:01:57,520 --> 00:02:00,370
+Maybe there was some bugs, some incompatibility.
+
+32
+00:02:00,370 --> 00:02:03,300
+So it&#39;s often worth asking that question,
+
+33
+00:02:03,300 --> 00:02:06,053
+is the most recent version installed?
+
+34
+00:02:07,060 --> 00:02:11,060
+We also want to reassure you that installation
+
+35
+00:02:11,060 --> 00:02:15,930
+of this app on the production instance,
+
+36
+00:02:15,930 --> 00:02:19,510
+we, so far, have had absolutely no issues
+
+37
+00:02:19,510 --> 00:02:23,763
+with that disturbing the rest of the configuration.
+
+38
+00:02:24,771 --> 00:02:27,350
+So we used to tell people in data quality academies
+
+39
+00:02:27,350 --> 00:02:30,870
+that you should first do this on a training instance,
+
+40
+00:02:30,870 --> 00:02:32,230
+on a development instance.
+
+41
+00:02:32,230 --> 00:02:34,980
+And that&#39;s certainly good hygiene
+
+42
+00:02:36,833 --> 00:02:38,540
+to use a development instance first,
+
+43
+00:02:38,540 --> 00:02:41,720
+before you install new things.
+
+44
+00:02:41,720 --> 00:02:46,720
+But in this case, we feel rather confident that
+
+45
+00:02:47,540 --> 00:02:51,030
+this will not create problems, if it is installed
+
+46
+00:02:51,030 --> 00:02:53,410
+on the development instance.
+
+47
+00:02:53,410 --> 00:02:57,720
+Before, so installation, you click on there
+
+48
+00:02:57,720 --> 00:02:59,340
+and it will install,
+
+49
+00:02:59,340 --> 00:03:02,890
+then it will appear under the standard apps.
+
+50
+00:03:02,890 --> 00:03:05,400
+Now, the next thing I wanted to comment on
+
+51
+00:03:06,791 --> 00:03:10,370
+is access to the data quality tool.
+
+52
+00:03:10,370 --> 00:03:12,020
+In another number of cases,
+
+53
+00:03:12,020 --> 00:03:15,580
+even after the data quality academy,
+
+54
+00:03:15,580 --> 00:03:18,460
+some months after data quality academy,
+
+55
+00:03:18,460 --> 00:03:21,060
+I&#39;ve gone on to the production instance
+
+56
+00:03:21,060 --> 00:03:24,260
+and found that the tool is installed,
+
+57
+00:03:24,260 --> 00:03:26,533
+but it simply hasn&#39;t been shared.
+
+58
+00:03:28,684 --> 00:03:32,290
+So, I want to remind you that to work
+
+59
+00:03:32,290 --> 00:03:36,823
+with the national administrator and the authorities,
+
+60
+00:03:38,346 --> 00:03:43,346
+to come up with a good policy on who has access to the tool,
+
+61
+00:03:44,340 --> 00:03:48,320
+if the tool is there and it&#39;s hidden from folks,
+
+62
+00:03:48,320 --> 00:03:51,320
+then it&#39;s really not that useful.
+
+63
+00:03:51,320 --> 00:03:53,863
+And of course, this is a governance issue,
+
+64
+00:03:55,475 --> 00:03:58,320
+but I prefer that everybody have access
+
+65
+00:03:58,320 --> 00:03:59,840
+to the data quality tools.
+
+66
+00:03:59,840 --> 00:04:01,260
+So in this case,
+
+67
+00:04:01,260 --> 00:04:04,353
+I&#39;m even going into the user role of guests,
+
+68
+00:04:05,688 --> 00:04:09,770
+and I&#39;m going to assign this to the guests, even,
+
+69
+00:04:09,770 --> 00:04:14,593
+so that even they have access and saving it.
+
+70
+00:04:15,680 --> 00:04:20,680
+This isn&#39;t a necessary step when you use the play instance,
+
+71
+00:04:21,204 --> 00:04:24,820
+because you are automatically given the super user role
+
+72
+00:04:24,820 --> 00:04:26,630
+when you log on to the play instance.
+
+73
+00:04:26,630 --> 00:04:30,950
+But again, this is one bottleneck
+
+74
+00:04:30,950 --> 00:04:33,560
+that you&#39;ll find on national instances,
+
+75
+00:04:33,560 --> 00:04:38,560
+and they need to feel comfortable with transparently showing
+
+76
+00:04:39,230 --> 00:04:43,783
+to people the issues of data quality.
+
+77
+00:04:44,670 --> 00:04:46,973
+This is obviously a governance issue.
+
+78
+00:04:47,860 --> 00:04:48,693
+Okay.
+
+79
+00:04:49,765 --> 00:04:51,090
+And one which
+
+80
+00:04:52,130 --> 00:04:55,960
+we might discuss further,
+
+81
+00:04:55,960 --> 00:04:58,310
+the issue of who has access,
+
+82
+00:04:58,310 --> 00:05:00,387
+but in the interest of time, let&#39;s.
+

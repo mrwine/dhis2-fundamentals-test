@@ -1,0 +1,756 @@
+0
+00:00:00,418 --> 00:00:03,001
+(upbeat music)
+
+1
+00:00:05,285 --> 00:00:08,610
+- [Bob] WHO defines four dimensions
+
+2
+00:00:08,610 --> 00:00:10,740
+or domains of data quality
+
+3
+00:00:10,740 --> 00:00:13,020
+which you see presented here,
+
+4
+00:00:13,020 --> 00:00:16,370
+completeness, internal consistency,
+
+5
+00:00:16,370 --> 00:00:20,230
+which means do even the data agree with each other?
+
+6
+00:00:20,230 --> 00:00:22,580
+External consistency,
+
+7
+00:00:22,580 --> 00:00:25,720
+does the data reported by health facilities
+
+8
+00:00:25,720 --> 00:00:28,050
+agree with data from other sources,
+
+9
+00:00:28,050 --> 00:00:30,930
+such as a health facility survey,
+
+10
+00:00:30,930 --> 00:00:35,310
+and finally a review of the consistency of the denominators
+
+11
+00:00:35,310 --> 00:00:36,880
+of the population estimates
+
+12
+00:00:36,880 --> 00:00:39,460
+that are used to calculate coverage.
+
+13
+00:00:39,460 --> 00:00:43,683
+So I&#39;m going to review each of these four domains in turn.
+
+14
+00:00:46,600 --> 00:00:51,080
+You see here a chart that is showing the trend
+
+15
+00:00:51,080 --> 00:00:52,710
+over the last 12 months
+
+16
+00:00:52,710 --> 00:00:56,893
+in the reporting completeness for two different datasets.
+
+17
+00:00:57,990 --> 00:01:00,540
+It&#39;s possible with a single chart like this,
+
+18
+00:01:00,540 --> 00:01:04,693
+to show the trend for multiple datasets,
+
+19
+00:01:05,580 --> 00:01:07,700
+completeness, reporting rates,
+
+20
+00:01:07,700 --> 00:01:11,200
+this is the most fundamental aspect of data quality.
+
+21
+00:01:11,200 --> 00:01:15,090
+And before you attempt to interpret any trend
+
+22
+00:01:15,090 --> 00:01:16,920
+in the data themselves,
+
+23
+00:01:16,920 --> 00:01:19,907
+you have to look at what is the trend
+
+24
+00:01:19,907 --> 00:01:24,907
+and the percentage of completeness of the data.
+
+25
+00:01:27,360 --> 00:01:31,170
+Internal consistency, what do we mean by that?
+
+26
+00:01:31,170 --> 00:01:34,710
+Well, you could think of this internal consistency
+
+27
+00:01:34,710 --> 00:01:37,890
+as the apparent accuracy of the data
+
+28
+00:01:37,890 --> 00:01:40,220
+comparing one aspect of the data
+
+29
+00:01:40,220 --> 00:01:44,230
+with another aspect of the same dataset.
+
+30
+00:01:44,230 --> 00:01:46,530
+And there are several different ways
+
+31
+00:01:46,530 --> 00:01:49,210
+of measuring this internal consistency
+
+32
+00:01:49,210 --> 00:01:52,863
+at a way of measuring is here referred to as a metric.
+
+33
+00:01:53,917 --> 00:01:57,300
+If there&#39;s one metric which is the consistency over time
+
+34
+00:01:57,300 --> 00:02:01,333
+that is our data that consistent from month to month.
+
+35
+00:02:02,600 --> 00:02:07,600
+B, the second metric is consistency between indicators
+
+36
+00:02:08,199 --> 00:02:12,660
+that are related and the commonest example of this
+
+37
+00:02:12,660 --> 00:02:17,660
+is to assess what we refer to as the DPT dropout rates
+
+38
+00:02:19,440 --> 00:02:24,210
+are the reported numbers of first doses of Penta vaccine,
+
+39
+00:02:24,210 --> 00:02:28,840
+consistent with the numbers of third doses of Penta vaccine.
+
+40
+00:02:28,840 --> 00:02:32,780
+And we&#39;ll provide some other examples of related indicators.
+
+41
+00:02:32,780 --> 00:02:36,620
+And finally, there&#39;s a form of internal consistency,
+
+42
+00:02:36,620 --> 00:02:40,380
+which can only be measured by visiting the health facility
+
+43
+00:02:40,380 --> 00:02:42,490
+as I&#39;ve referred to.
+
+44
+00:02:42,490 --> 00:02:45,800
+And that is the consistency between clinic registers
+
+45
+00:02:45,800 --> 00:02:48,290
+and reported data and in that way,
+
+46
+00:02:48,290 --> 00:02:51,923
+we can measure something called the verification factor.
+
+47
+00:02:54,160 --> 00:02:56,640
+This is an example of the type of chart
+
+48
+00:02:56,640 --> 00:03:01,350
+which we can use to look at to month consistency of data.
+
+49
+00:03:01,350 --> 00:03:02,183
+In this case,
+
+50
+00:03:02,183 --> 00:03:05,603
+the number of reported third doses of Penta vaccine,
+
+51
+00:03:06,620 --> 00:03:09,340
+and each of these lines represents
+
+52
+00:03:09,340 --> 00:03:12,820
+the trend over the 12 month period.
+
+53
+00:03:12,820 --> 00:03:16,760
+And the Penta 3 doses for one region.
+
+54
+00:03:16,760 --> 00:03:19,373
+The blue line is region one.
+
+55
+00:03:20,790 --> 00:03:24,860
+And the blue line in particular has this hump here,
+
+56
+00:03:24,860 --> 00:03:28,700
+which unlike the data front of the other regions
+
+57
+00:03:28,700 --> 00:03:31,690
+suggests there&#39;s a certain inconsistency
+
+58
+00:03:31,690 --> 00:03:32,940
+from month to month
+
+59
+00:03:32,940 --> 00:03:36,870
+that this has jumped up in a way that we don&#39;t quite see
+
+60
+00:03:36,870 --> 00:03:39,360
+with the data from the other regions.
+
+61
+00:03:39,360 --> 00:03:41,080
+However, when we&#39;re looking at data
+
+62
+00:03:41,080 --> 00:03:44,000
+at the level of a region, we can&#39;t be sure,
+
+63
+00:03:44,000 --> 00:03:46,910
+is this due to a data quality issue
+
+64
+00:03:46,910 --> 00:03:51,200
+or does it represent an actual increase in services?
+
+65
+00:03:51,200 --> 00:03:52,640
+But look what happens
+
+66
+00:03:52,640 --> 00:03:55,570
+when we actually look at these trend lines
+
+67
+00:03:55,570 --> 00:03:57,593
+for individual districts?
+
+68
+00:03:58,840 --> 00:04:02,580
+So here we see the data from the same country
+
+69
+00:04:02,580 --> 00:04:05,260
+and from region one, but in this case,
+
+70
+00:04:05,260 --> 00:04:09,370
+there&#39;s one line for each of the districts of region one.
+
+71
+00:04:09,370 --> 00:04:13,220
+And there&#39;s a certain amount of instability
+
+72
+00:04:13,220 --> 00:04:15,600
+from month to month in the indicators.
+
+73
+00:04:15,600 --> 00:04:20,600
+But look at this line for district number 12,
+
+74
+00:04:21,180 --> 00:04:23,580
+where in the month of June
+
+75
+00:04:23,580 --> 00:04:27,510
+the reported third doses of Penta has more than doubled
+
+76
+00:04:27,510 --> 00:04:30,020
+and then it drops back down again.
+
+77
+00:04:30,020 --> 00:04:32,550
+This is highly suspicious.
+
+78
+00:04:32,550 --> 00:04:34,020
+And the lesson here is that
+
+79
+00:04:34,020 --> 00:04:37,210
+when you&#39;re looking for month to month inconsistency,
+
+80
+00:04:37,210 --> 00:04:40,750
+it&#39;s best to look at the data that are desegregated
+
+81
+00:04:40,750 --> 00:04:43,140
+to the level of the district.
+
+82
+00:04:43,140 --> 00:04:45,310
+And then you&#39;re more likely to pick up
+
+83
+00:04:45,310 --> 00:04:47,390
+these quite suspicious numbers
+
+84
+00:04:47,390 --> 00:04:51,410
+and have confidence that it is a data quality issue.
+
+85
+00:04:51,410 --> 00:04:56,100
+In fact, with DHIS 2, it&#39;s possible to drill down,
+
+86
+00:04:56,100 --> 00:04:59,080
+to go down to an even lower level
+
+87
+00:04:59,080 --> 00:05:02,540
+and identify the specific health facility,
+
+88
+00:05:02,540 --> 00:05:06,440
+which has reported this suspicious number.
+
+89
+00:05:06,440 --> 00:05:08,090
+And I think you would agree with me
+
+90
+00:05:08,090 --> 00:05:12,720
+that when we look at these lines for each of the doses
+
+91
+00:05:12,720 --> 00:05:17,720
+of a vaccine for this health center number two
+
+92
+00:05:18,300 --> 00:05:21,200
+of the same district of the same region,
+
+93
+00:05:21,200 --> 00:05:24,760
+we see that this jump in the value for the region
+
+94
+00:05:24,760 --> 00:05:27,770
+is actually due to a single number
+
+95
+00:05:27,770 --> 00:05:31,080
+reported by this health center in June.
+
+96
+00:05:31,080 --> 00:05:35,760
+And we can also see that this is almost certainly an error.
+
+97
+00:05:35,760 --> 00:05:38,320
+This is due to a data quality issue.
+
+98
+00:05:38,320 --> 00:05:43,320
+Not only has the typical value of less than a hundred
+
+99
+00:05:44,950 --> 00:05:49,950
+of the typical value of Penta 3 jumped to 3,749,
+
+100
+00:05:52,560 --> 00:05:56,110
+but we see that this health center in the same month
+
+101
+00:05:56,110 --> 00:05:59,500
+has reported normal consistent values
+
+102
+00:05:59,500 --> 00:06:01,410
+for the other data elements.
+
+103
+00:06:01,410 --> 00:06:04,910
+So here we see an example of an erroneous value
+
+104
+00:06:04,910 --> 00:06:07,683
+that has been reported for one health facility.
+
+105
+00:06:10,340 --> 00:06:14,720
+This slide shows you the table that is generated
+
+106
+00:06:14,720 --> 00:06:17,700
+by the WHO data quality tool
+
+107
+00:06:17,700 --> 00:06:22,430
+to automatically identify facilities and values like this
+
+108
+00:06:22,430 --> 00:06:24,780
+that are extremely suspicious,
+
+109
+00:06:24,780 --> 00:06:28,430
+and which are almost certainly due to errors
+
+110
+00:06:28,430 --> 00:06:32,750
+that have been entered into the DHIS two.
+
+111
+00:06:32,750 --> 00:06:36,510
+In this case, it has sorted these values
+
+112
+00:06:36,510 --> 00:06:40,350
+and put up at the top of our table,
+
+113
+00:06:40,350 --> 00:06:45,350
+the 12 months of data for Kawe Dispensary
+
+114
+00:06:46,850 --> 00:06:50,030
+data on Penta vaccine doses given
+
+115
+00:06:50,030 --> 00:06:52,180
+in females under one dose three.
+
+116
+00:06:52,180 --> 00:06:57,180
+And it has found that this number is the most extreme
+
+117
+00:06:59,110 --> 00:07:01,420
+and most suspicious value of all
+
+118
+00:07:01,420 --> 00:07:05,200
+in all of the immunization datasets,
+
+119
+00:07:05,200 --> 00:07:09,590
+and we&#39;ll practice with this WHO data quality tool
+
+120
+00:07:09,590 --> 00:07:12,170
+and see how it can be used to rapidly
+
+121
+00:07:12,170 --> 00:07:15,053
+and automatically identify such outliers.
+
+122
+00:07:17,280 --> 00:07:19,770
+The next type of internal consistency
+
+123
+00:07:19,770 --> 00:07:22,340
+that we will be reviewing is
+
+124
+00:07:22,340 --> 00:07:26,420
+as I said, consistency of related indicators.
+
+125
+00:07:26,420 --> 00:07:30,160
+And here&#39;s some other examples of related indicators.
+
+126
+00:07:30,160 --> 00:07:33,200
+In addition to looking at the dropout rate
+
+127
+00:07:33,200 --> 00:07:35,930
+between Penta 1 and Penta 3.
+
+128
+00:07:35,930 --> 00:07:40,930
+We could also compare the values of the first doses of Penta
+
+129
+00:07:41,240 --> 00:07:45,660
+to values of the first doses of OPV vaccine.
+
+130
+00:07:45,660 --> 00:07:49,310
+Both of these are typically administered on the same visit.
+
+131
+00:07:49,310 --> 00:07:53,150
+So we expect the values of these two indicators
+
+132
+00:07:53,150 --> 00:07:55,820
+to be roughly the same.
+
+133
+00:07:55,820 --> 00:07:58,000
+And then a final example.
+
+134
+00:07:58,000 --> 00:08:01,990
+The data on confirmed cases are frequently reported
+
+135
+00:08:01,990 --> 00:08:06,950
+both in the monthly outpatient department report
+
+136
+00:08:06,950 --> 00:08:11,880
+and reported in the malaria lab test report
+
+137
+00:08:11,880 --> 00:08:14,050
+that is submitted each month.
+
+138
+00:08:14,050 --> 00:08:17,770
+So we could compare confirmed outpatient cases
+
+139
+00:08:17,770 --> 00:08:22,770
+to the total number of positive RDT and microscopy tests
+
+140
+00:08:23,460 --> 00:08:25,923
+that were reported in a given month.
+
+141
+00:08:27,940 --> 00:08:32,940
+The slide here shows how the WHO data quality tool
+
+142
+00:08:33,460 --> 00:08:38,460
+analyzes for the dropout rate between DPT 1 and DPT 3
+
+143
+00:08:40,150 --> 00:08:42,680
+and it generates this type of chart
+
+144
+00:08:42,679 --> 00:08:45,640
+showing that there&#39;s one particular district,
+
+145
+00:08:45,640 --> 00:08:48,200
+which had a negative dropout rate,
+
+146
+00:08:48,200 --> 00:08:51,140
+which if reported for a full year
+
+147
+00:08:51,140 --> 00:08:54,283
+is usually a sign of a data quality problem.
+
+148
+00:08:55,750 --> 00:08:58,100
+External consistency,
+
+149
+00:08:58,100 --> 00:09:02,370
+I&#39;ll just quickly review these last two dimensions,
+
+150
+00:09:02,370 --> 00:09:05,630
+which aren&#39;t a major focus of this workshop.
+
+151
+00:09:05,630 --> 00:09:10,170
+Here&#39;s an example of how the WHO data quality tool
+
+152
+00:09:10,170 --> 00:09:12,500
+has compared the values
+
+153
+00:09:12,500 --> 00:09:16,140
+reported on a house household survey.
+
+154
+00:09:16,140 --> 00:09:19,870
+In this case, this was a demographic health survey,
+
+155
+00:09:19,870 --> 00:09:23,740
+the values for anti-natal care first visit coverage
+
+156
+00:09:24,750 --> 00:09:28,290
+reported on the survey versus what was estimated
+
+157
+00:09:28,290 --> 00:09:32,020
+based upon the data reported by health facilities.
+
+158
+00:09:32,020 --> 00:09:34,660
+And in this case, there&#39;s a striking difference
+
+159
+00:09:34,660 --> 00:09:38,700
+between what is called the routine estimated coverage
+
+160
+00:09:38,700 --> 00:09:42,140
+coverage that is calculated with health facility data
+
+161
+00:09:42,140 --> 00:09:45,663
+and the estimates based on the household survey.
+
+162
+00:09:47,240 --> 00:09:50,780
+And finally, consistency of population estimates
+
+163
+00:09:50,780 --> 00:09:53,290
+or denominator estimates.
+
+164
+00:09:53,290 --> 00:09:56,330
+There&#39;s a couple of things that should be assessed
+
+165
+00:09:56,330 --> 00:09:58,450
+about the denominators.
+
+166
+00:09:58,450 --> 00:10:02,230
+One is whether they are consistent from year to year,
+
+167
+00:10:02,230 --> 00:10:05,050
+and the second is whether related denominators,
+
+168
+00:10:05,050 --> 00:10:07,140
+such as the number of pregnancies,
+
+169
+00:10:07,140 --> 00:10:10,410
+the number of live births, the number of infants
+
+170
+00:10:10,410 --> 00:10:13,490
+are consistent between each other.
+
+171
+00:10:13,490 --> 00:10:16,840
+So here&#39;s a chart giving an example of a country,
+
+172
+00:10:16,840 --> 00:10:20,270
+which has not had year to year consistency
+
+173
+00:10:20,270 --> 00:10:25,140
+and the growth rate of the number of surviving infants
+
+174
+00:10:25,140 --> 00:10:26,810
+the population under one.
+
+175
+00:10:26,810 --> 00:10:31,810
+In fact, that estimated number under population under one
+
+176
+00:10:31,820 --> 00:10:36,820
+is seem to have dropped from 2015 to 2016,
+
+177
+00:10:37,120 --> 00:10:42,120
+and then it increased dramatically from 2017 to 2018.
+
+178
+00:10:42,850 --> 00:10:45,670
+So this estimated value
+
+179
+00:10:45,670 --> 00:10:49,180
+is not showing year to year consistency.
+
+180
+00:10:49,180 --> 00:10:53,000
+And similarly, if you think about it,
+
+181
+00:10:53,000 --> 00:10:56,580
+it is a bit unusual that we would find
+
+182
+00:10:56,580 --> 00:11:01,580
+that the estimated number of surviving infants
+
+183
+00:11:01,670 --> 00:11:06,670
+in 2018 and 2019, was estimated to be actually greater
+
+184
+00:11:07,560 --> 00:11:10,760
+than the estimated number of live births
+
+185
+00:11:10,760 --> 00:11:14,040
+that really should not happen at national level
+
+186
+00:11:14,040 --> 00:11:17,920
+and suggests that we had some errors in the denominators
+
+187
+00:11:17,920 --> 00:11:19,835
+used to calculate coverage.
+
+188
+00:11:19,835 --> 00:11:22,418
+(upbeat music)
+

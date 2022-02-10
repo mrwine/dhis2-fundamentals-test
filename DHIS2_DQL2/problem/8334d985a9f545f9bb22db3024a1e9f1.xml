@@ -1,0 +1,20 @@
+<problem display_name="Consistency - Time Exercise 3" markdown="&gt;&gt;Has ANC 1 had a consistent value from year-to-year and from month-to-month? (2 attempts) &lt;&lt;&#10;&#10;( ) A. ANC 1 has been inconsistent from year-to-year and month-to-month.&#10;( ) B. ANC 1 has been consistent from year-to-year and month-to-month, except for rises in June and February.&#10;(x) C. ANC 1 has been consistent from year-to-year and month-to-month, except for rises in May and January.&#10;( ) D. ANC 1 has been consistent from year-to-year and month-to-month. &#10;&#10;[explanation] &#10;The values of ANC 1 have been consistent from year-to-year and month-to-month, except for rises in May of last year and January of this year.     &#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <label>Has ANC 1 had a consistent value from year-to-year and from month-to-month? (2 attempts) </label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. ANC 1 has been inconsistent from year-to-year and month-to-month.</choice>
+    <choice correct="false">B. ANC 1 has been consistent from year-to-year and month-to-month, except for rises in June and February.</choice>
+    <choice correct="true">C. ANC 1 has been consistent from year-to-year and month-to-month, except for rises in May and January.</choice>
+    <choice correct="false">D. ANC 1 has been consistent from year-to-year and month-to-month.</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p> </p>
+<p>The values of ANC 1 have been consistent from year-to-year and month-to-month, except for rises in May of last year and January of this year.     </p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>

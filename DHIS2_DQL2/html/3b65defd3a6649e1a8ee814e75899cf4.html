@@ -1,0 +1,7 @@
+<p class= "text"><i>Instructions for using a live DHIS2 system instead of the DHIS2 Data Quality Config server:</i></p>
+  <p class= "text">
+<ol>
+    <li>Schedule your predictors to run in the scheduler application. Call your job: <i>ANC1 Outlier Threshold Predictor Calculation – YourName</i>
+      <li>Schedule your validation rule monitoring job. Call this job: <i>ANC1 Outlier Threshold Alerts – YourName</i>
+        <li>Ensure that your predictor runs before your validation rule monitoring job, otherwise you may not have generated outliers to compare your actual value to when running your validation rule analysis.
+  </ol>

@@ -1,0 +1,528 @@
+0
+00:00:00,210 --> 00:00:01,043
+- [Instructor] Okay.
+
+1
+00:00:01,043 --> 00:00:05,180
+Another item to discuss is the data integrity checks,
+
+2
+00:00:05,180 --> 00:00:06,970
+and it&#39;s called data integrity checks,
+
+3
+00:00:06,970 --> 00:00:09,910
+but it&#39;s actually more of a metadata integrity check.
+
+4
+00:00:09,910 --> 00:00:13,398
+It&#39;s not really checking the integrity of the data itself,
+
+5
+00:00:13,398 --> 00:00:17,280
+but, because it kind of looks at the metadata,
+
+6
+00:00:17,280 --> 00:00:20,680
+there is some link then to, you know,
+
+7
+00:00:20,680 --> 00:00:23,263
+how this reflects upon the data quality itself.
+
+8
+00:00:25,520 --> 00:00:29,440
+So this is a function in DHIS2, that&#39;s built right in,
+
+9
+00:00:29,440 --> 00:00:33,670
+that you can run in order to kind of see the results of.
+
+10
+00:00:33,670 --> 00:00:35,980
+So, resolving these integrity violations
+
+11
+00:00:35,980 --> 00:00:39,520
+is quite an important aspect of both data quality
+
+12
+00:00:39,520 --> 00:00:42,050
+and data usability.
+
+13
+00:00:42,050 --> 00:00:45,136
+If a lot of their, a lot of these violations,
+
+14
+00:00:45,136 --> 00:00:48,069
+when they&#39;re resolved, really help people kind of select
+
+15
+00:00:48,069 --> 00:00:52,100
+the right, the certain, the right items when they&#39;re
+
+16
+00:00:52,100 --> 00:00:53,310
+creating their analysis.
+
+17
+00:00:53,310 --> 00:00:56,010
+And then obviously, if you&#39;re reviewing these items
+
+18
+00:00:56,010 --> 00:00:58,670
+routinely, it also allows you to kind of assess
+
+19
+00:00:58,670 --> 00:01:00,690
+the data quality more appropriately.
+
+20
+00:01:00,690 --> 00:01:05,100
+But, in practice, this is often a very low priority
+
+21
+00:01:05,099 --> 00:01:06,970
+resolving these issues.
+
+22
+00:01:06,970 --> 00:01:09,500
+This becomes quite challenging if you want the data quality
+
+23
+00:01:09,500 --> 00:01:11,220
+of your system to be improved.
+
+24
+00:01:11,220 --> 00:01:13,640
+As well as just kind of, you know,
+
+25
+00:01:13,640 --> 00:01:16,543
+improve the amount of data that is being used routinely.
+
+26
+00:01:19,730 --> 00:01:21,990
+The reasoning behind this, this link to data quality,
+
+27
+00:01:21,990 --> 00:01:25,660
+is because these data integrity check violations,
+
+28
+00:01:25,660 --> 00:01:29,283
+they tend to result in incorrect data itself.
+
+29
+00:01:30,320 --> 00:01:35,160
+So, there&#39;s kind of a direct, I will say correlation,
+
+30
+00:01:35,160 --> 00:01:37,330
+between the two and it doesn&#39;t necessarily mean
+
+31
+00:01:37,330 --> 00:01:38,950
+it&#39;s causing this problem,
+
+32
+00:01:38,950 --> 00:01:43,950
+but often it can be directly affecting at least what we see
+
+33
+00:01:44,820 --> 00:01:46,050
+in terms of our outputs.
+
+34
+00:01:46,050 --> 00:01:51,050
+And because it&#39;s causing problems with incorrect outputs,
+
+35
+00:01:51,260 --> 00:01:54,600
+then you know, the data quality itself might be reflected
+
+36
+00:01:54,600 --> 00:01:56,395
+on this because we&#39;re not really sure what kind of
+
+37
+00:01:56,395 --> 00:01:58,230
+assumptions to make.
+
+38
+00:01:58,230 --> 00:02:01,600
+We might think that we need to clean certain pieces of data,
+
+39
+00:02:01,600 --> 00:02:04,350
+but we&#39;re not really sure because we&#39;re not really sure what
+
+40
+00:02:04,350 --> 00:02:07,560
+that metadata should be pointing to.
+
+41
+00:02:07,560 --> 00:02:09,570
+And that&#39;s where the kind of problem lies, right?
+
+42
+00:02:09,570 --> 00:02:11,050
+The linkage between that metadata
+
+43
+00:02:11,050 --> 00:02:12,600
+and the data that we&#39;re seeing.
+
+44
+00:02:16,530 --> 00:02:19,900
+So, data integrity checks, or metadata integrity checks,
+
+45
+00:02:19,900 --> 00:02:23,380
+as I like to call them, they run a series of queries
+
+46
+00:02:23,380 --> 00:02:25,700
+that look at various aspects of the database.
+
+47
+00:02:25,700 --> 00:02:28,370
+And this is true for both aggregate datasets
+
+48
+00:02:28,370 --> 00:02:30,490
+and tracker programs.
+
+49
+00:02:30,490 --> 00:02:33,120
+So as an example, they could look at things like, you know,
+
+50
+00:02:33,120 --> 00:02:35,280
+all organization units should belong
+
+51
+00:02:35,280 --> 00:02:37,560
+to an organization unit group, right?
+
+52
+00:02:37,560 --> 00:02:40,798
+So when you add up all your organization unit groups
+
+53
+00:02:40,798 --> 00:02:43,740
+within a group set in particular, you know,
+
+54
+00:02:43,740 --> 00:02:45,180
+you should be getting the total number
+
+55
+00:02:45,180 --> 00:02:47,890
+of organization units at that particular level
+
+56
+00:02:47,890 --> 00:02:49,690
+that you&#39;re creating that group for.
+
+57
+00:02:51,780 --> 00:02:53,530
+You should also, you know, it also looks at things
+
+58
+00:02:53,530 --> 00:02:56,200
+like indicators with identical formulas.
+
+59
+00:02:56,200 --> 00:02:58,490
+So, you know, if there&#39;s several indicators
+
+60
+00:02:58,490 --> 00:03:01,740
+that have the same exact data elements in their formula,
+
+61
+00:03:01,740 --> 00:03:04,820
+you know, why do those duplicates exist?
+
+62
+00:03:04,820 --> 00:03:08,280
+So a total of 32 checks are run and we can access
+
+63
+00:03:08,280 --> 00:03:10,280
+this via data administration.
+
+64
+00:03:10,280 --> 00:03:12,723
+So let&#39;s have a quick look at this in practice.
+
+65
+00:03:14,350 --> 00:03:19,210
+So, if we navigate to data administration within DHIS2,
+
+66
+00:03:19,210 --> 00:03:21,540
+we can run data integrity,
+
+67
+00:03:21,540 --> 00:03:24,230
+even though it&#39;s metadata integrity, really,
+
+68
+00:03:24,230 --> 00:03:27,790
+but we can run this integrity check by clicking on this
+
+69
+00:03:27,790 --> 00:03:30,453
+first box here, checking data integrity.
+
+70
+00:03:31,520 --> 00:03:35,510
+And we just click on the item, run integrity checks.
+
+71
+00:03:35,510 --> 00:03:37,550
+So, this actually takes a little bit of time
+
+72
+00:03:37,550 --> 00:03:40,950
+because it&#39;s assessing your whole system essentially.
+
+73
+00:03:40,950 --> 00:03:43,590
+So, I&#39;m just going to come back when this is complete,
+
+74
+00:03:43,590 --> 00:03:45,410
+essentially, so you don&#39;t have to stare
+
+75
+00:03:45,410 --> 00:03:47,280
+at the screen loading.
+
+76
+00:03:47,280 --> 00:03:50,960
+Okay. So the data integrity check has completed running,
+
+77
+00:03:50,960 --> 00:03:52,530
+and I&#39;m just going to scroll through.
+
+78
+00:03:52,530 --> 00:03:56,690
+Any of these red violations are sorry, any of this in red
+
+79
+00:03:56,690 --> 00:03:58,850
+text are indicating violations.
+
+80
+00:03:58,850 --> 00:04:01,260
+And then when they&#39;re in green, it&#39;s saying, you know,
+
+81
+00:04:01,260 --> 00:04:03,020
+there&#39;s a check box next to it because it&#39;s passed
+
+82
+00:04:03,020 --> 00:04:05,190
+the integrity check, essentially.
+
+83
+00:04:05,190 --> 00:04:07,910
+So, any of these green items, I can&#39;t click on them
+
+84
+00:04:07,910 --> 00:04:10,980
+and expand and actually see because the database
+
+85
+00:04:10,980 --> 00:04:12,910
+has met the criteria essentially.
+
+86
+00:04:12,910 --> 00:04:16,440
+And we see that there&#39;s a mix of aggregate and tracker
+
+87
+00:04:16,440 --> 00:04:19,300
+being included here. You know, so things like program rules
+
+88
+00:04:19,300 --> 00:04:24,300
+and are also being checked during this process.
+
+89
+00:04:24,310 --> 00:04:29,310
+So if I go up here and I&#39;ll just click on one of these
+
+90
+00:04:29,430 --> 00:04:31,223
+data elements without a dataset.
+
+91
+00:04:32,100 --> 00:04:34,128
+Right? So I expand this and it actually gives me the list
+
+92
+00:04:34,128 --> 00:04:38,240
+of data elements that don&#39;t have a data set.
+
+93
+00:04:38,240 --> 00:04:41,420
+And, you know, what is the purpose of these data elements?
+
+94
+00:04:41,420 --> 00:04:43,713
+Did they exist in a data set before?
+
+95
+00:04:44,640 --> 00:04:47,660
+You know, so the whole idea is to identify these
+
+96
+00:04:47,660 --> 00:04:49,000
+and then work through them individually
+
+97
+00:04:49,000 --> 00:04:50,923
+and see how we can fix them.
+
+98
+00:04:52,120 --> 00:04:53,630
+So we can look at a couple other ones.
+
+99
+00:04:53,630 --> 00:04:57,020
+Indicators without groups. You know, same thing.
+
+100
+00:04:57,020 --> 00:05:01,820
+So all of this is kind of a mix of usability
+
+101
+00:05:01,820 --> 00:05:03,880
+and also kind of effecting our data quality.
+
+102
+00:05:03,880 --> 00:05:06,593
+Indicators with identical formulas, you know?
+
+103
+00:05:07,450 --> 00:05:10,070
+So, why are these things kind of there?
+
+104
+00:05:10,070 --> 00:05:13,400
+You know, it doesn&#39;t really make a lot of sense
+
+105
+00:05:13,400 --> 00:05:15,284
+when these things are violated.
+
+106
+00:05:15,284 --> 00:05:18,342
+And there can be some implications that result directly
+
+107
+00:05:18,342 --> 00:05:20,790
+in issues with our data.
+
+108
+00:05:20,790 --> 00:05:23,260
+So we have to be kind of careful when we see this.
+
+109
+00:05:23,260 --> 00:05:26,360
+Now, once again, as I mentioned, the priority to fix
+
+110
+00:05:26,360 --> 00:05:28,130
+these is often low,
+
+111
+00:05:28,130 --> 00:05:31,264
+but if we have a look at all the things it assesses,
+
+112
+00:05:31,264 --> 00:05:34,730
+we should really consider fixing some of these things
+
+113
+00:05:34,730 --> 00:05:37,429
+because it can have a direct impact on how we&#39;re kind of,
+
+114
+00:05:37,429 --> 00:05:40,190
+you know, seeing our information
+
+115
+00:05:40,190 --> 00:05:43,543
+and also what effect this has on the outputs that we create.
+
+116
+00:05:44,845 --> 00:05:47,710
+So, what I would recommend is that you actually
+
+117
+00:05:47,710 --> 00:05:50,030
+log in to one of the demo systems we have.
+
+118
+00:05:50,030 --> 00:05:54,360
+I put the link here for you and just run the data
+
+119
+00:05:54,360 --> 00:05:57,380
+integrity check, the metadata integrity check.
+
+120
+00:05:57,380 --> 00:05:59,880
+See, as you can see, it&#39;s not checking any data.
+
+121
+00:05:59,880 --> 00:06:03,490
+This is running purely checks against the metadata.
+
+122
+00:06:03,490 --> 00:06:06,234
+And just think about how you would potentially fix
+
+123
+00:06:06,234 --> 00:06:09,370
+some of these problems. You know, some of them have
+
+124
+00:06:09,370 --> 00:06:11,450
+immediate solutions when you look at them,
+
+125
+00:06:11,450 --> 00:06:13,600
+others might not be so clear.
+
+126
+00:06:13,600 --> 00:06:16,980
+So, just click on the database link below,
+
+127
+00:06:16,980 --> 00:06:20,120
+use the login that you created for that particular database.
+
+128
+00:06:20,120 --> 00:06:22,210
+It&#39;s the same as the data quality app
+
+129
+00:06:22,210 --> 00:06:23,910
+configuration exercise,
+
+130
+00:06:23,910 --> 00:06:26,000
+and just run the data integrity check
+
+131
+00:06:26,000 --> 00:06:27,573
+and see what you come up with.
+

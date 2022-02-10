@@ -1,0 +1,24 @@
+<problem display_name="Question 6" markdown="Review the Outliers dashboard. Reset the dashboard configuration as follows: &#10;&#10;Data - Immunisation, Period - August 2021, Boundary - National, Disaggregation - District&#10;&#10;Set the Options as follows: &#10;Under &quot;Display Columns&quot; select Outliers, then select Include Z-Score. Next,  under the Outlier Filter, select the Modified Z-Score and set to Extreme. &#10;&#10;Sort the data table by modified z-score. Based on the modified z-score which district has suspicious values with the highest deviation from the non-supicious values for BCG given less then 1?&#10;&#10;&gt;&gt;Select the one correct answer: (2 attempts)&lt;&lt;&#10;&#10;( ) A. C-5&#10;( ) B. B-4&#10;(x) C. C-6&#10;( ) D. C-1 &#10;&#10;[explanation]&#10;The correct answer is C-6. From the data table, we see that this has a higher modified z-score then other districts that have identified outliers for BCG given less then 1. This z-scores help us determine how much these outlier valies deviate from the other reported values within a given period. The higher the z-score, the higher the deviation.&#10;[explanation]" max_attempts="2">
+<multiplechoiceresponse>
+  <p>Review the Outliers dashboard. Reset the dashboard configuration as follows: </p>
+<p>Data - Immunisation, Period - August 2021, Boundary - National, Disaggregation - District</p>
+<p>Set the Options as follows: </p>
+<p>Under "Display Columns" select Outliers, then select Include Z-Score. Next,  under the Outlier Filter, select the Modified Z-Score and set to Extreme. </p>
+<p>Sort the data table by modified z-score. Based on the modified z-score which district has suspicious values with the highest deviation from the non-supicious values for BCG given less then 1?</p>
+<label>Select the one correct answer: (2 attempts)</label>
+<choicegroup type="MultipleChoice">
+    <choice correct="false">A. C-5</choice>
+    <choice correct="false">B. B-4</choice>
+    <choice correct="true">C. C-6</choice>
+    <choice correct="false">D. C-1</choice>
+  </choicegroup>
+<solution>
+<div class="detailed-solution">
+<p>Explanation</p>
+
+<p>The correct answer is C-6. From the data table, we see that this has a higher modified z-score then other districts that have identified outliers for BCG given less then 1. This z-scores help us determine how much these outlier valies deviate from the other reported values within a given period. The higher the z-score, the higher the deviation.</p>
+
+</div>
+</solution>
+</multiplechoiceresponse>
+</problem>
